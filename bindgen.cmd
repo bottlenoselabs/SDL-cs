@@ -2,7 +2,7 @@
 setlocal
 
 call:download_C2CS_windows
-call:bindgen_windows_64
+call:bindgen_windows
 EXIT /B %errorlevel%
 
 :exit_if_last_command_failed
@@ -19,8 +19,8 @@ if not exist ".\C2CS.exe" (
 )
 goto:eof
 
-:bindgen_windows_64
-    .\C2CS ast -i .\ext\SDL\include\SDL.h -o .\ast\SDL.win64.json -s .\ext\SDL\include -b 64 -g SDL_main.h -d ^
+:bindgen_windows
+    .\C2CS ast -i .\ext\SDL\include\SDL.h -o .\ast\SDL.win.json -s .\ext\SDL\include -b 64 -g SDL_main.h -d ^
 SDL_DISABLE_MM3DNOW_H ^
 SDL_DISABLE_IMMINTRIN_H ^
 SDL_DISABLE_MMINTRIN_H ^
@@ -28,29 +28,7 @@ SDL_DISABLE_XMMINTRIN_H ^
 SDL_DISABLE_EMMINTRIN_H ^
 SDL_DISABLE_PMMINTRIN_H
     call:exit_if_last_command_failed
-    .\C2CS cs -i .\ast\SDL.win64.json -o .\src\cs\production\SDL-cs\SDL.win64.cs -l "SDL2" -c "SDL" -g "SDL_bool" -a ^
- "SDL_bool -> CBool"^
- "Uint8 -> byte"^
- "Uint16 -> ushort"^
- "Uint32 -> uint"^
- "Uint64 -> ulong"^
- "Sint8 -> sbyte"^
- "Sint16 -> short"^
- "Sint32 -> int"^
- "Sint64 -> long"
-    call:exit_if_last_command_failed
-
-
-:bindgen_windows_32
-    .\C2CS ast -i .\ext\SDL\include\SDL.h -o .\ast\SDL.win32.json -s .\ext\SDL\include -b 32 -g SDL_main.h -d ^
-SDL_DISABLE_MM3DNOW_H ^
-SDL_DISABLE_IMMINTRIN_H ^
-SDL_DISABLE_MMINTRIN_H ^
-SDL_DISABLE_XMMINTRIN_H ^
-SDL_DISABLE_EMMINTRIN_H ^
-SDL_DISABLE_PMMINTRIN_H
-    call:exit_if_last_command_failed
-    .\C2CS cs -i .\ast\SDL.win32.json -o .\src\cs\production\SDL-cs\SDL.win32.cs -l "SDL2" -c "SDL" -g "SDL_bool" -a ^
+    .\C2CS cs -i .\ast\SDL.win.json -o .\src\cs\production\SDL-cs\SDL.win.cs -l "SDL2" -c "SDL" -g "SDL_bool" -a ^
  "SDL_bool -> CBool"^
  "Uint8 -> byte"^
  "Uint16 -> ushort"^
