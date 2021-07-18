@@ -5,6 +5,9 @@
 /bin/
 /obj/
 
+# C# packages
+/nupkg/
+
 # Native libraries
 /lib/
 
