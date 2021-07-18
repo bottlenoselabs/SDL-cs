@@ -1,0 +1,93 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <!-- MSBuild settings -->
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <!-- NuGet package references -->
+    <ItemGroup>
+      <PackageReference Include="C2CS.Runtime" Version="0.5.0-alpha0122" />
+    </ItemGroup>
+
+    <!-- SDL bindings for Windows -->
+    <ItemGroup Condition="'$(IsWindows)' == 'true' AND '$(Architecture)' == 'x64'">
+        <Compile Remove="SDL.win32.cs" />
+        <Compile Update="SDL.win64.cs" />
+    </ItemGroup>
+    <ItemGroup Condition="'$(IsWindows)' == 'true' AND '$(Architecture)' == 'x86'">
+        <Compile Update="SDL.win32.cs" />
+        <Compile Remove="SDL.win64.cs" />
+    </ItemGroup>
+    <ItemGroup Condition="'$(IsWindows)' != 'true'">
+        <Compile Remove="SDL.win32.cs" />
+        <Compile Remove="SDL.win64.cs" />
+    </ItemGroup>
+
+    <!-- SDL bindings for macOS -->
+    <ItemGroup Condition="'$(IsMacOS)' == 'true' AND '$(Architecture)' == 'x64'">
+        <Compile Remove="SDL.osx32.cs" />
+        <Compile Update="SDL.osx64.cs" />
+    </ItemGroup>
+    <ItemGroup Condition="'$(IsMacOS)' == 'true' AND '$(Architecture)' == 'x86'">
+        <Compile Update="SDL.osx32.cs" />
+        <Compile Remove="SDL.osx64.cs" />
+    </ItemGroup>
+    <ItemGroup Condition="'$(IsMacOS)' != 'true'">
+        <Compile Remove="SDL.osx32.cs" />
+        <Compile Remove="SDL.osx64.cs" />
+    </ItemGroup>
+    
+    <!-- SDL bindings for Ubuntu -->
+    <ItemGroup Condition="'$(IsLinux)' == 'true' AND '$(Architecture)' == 'x64'">
+        <Compile Remove="SDL.linux32.cs" />
+        <Compile Update="SDL.linux64.cs" />
+    </ItemGroup>
+    <ItemGroup Condition="'$(IsLinux)' == 'true' AND '$(Architecture)' == 'x86'">
+        <Compile Update="SDL.linux32.cs" />
+        <Compile Remove="SDL.linux64.cs" />
+    </ItemGroup>
+    <ItemGroup Condition="'$(IsLinux)' != 'true'">
+        <Compile Remove="SDL.linux32.cs" />
+        <Compile Remove="SDL.linux64.cs" />
+    </ItemGroup>
+
+    <!-- Dynamic link libraries -->
+    <ItemGroup Condition="'$(AheadOfTimeCompilation)' != 'true'">
+        <Content Include="$(GitRepositoryPath)lib/*.dll" Condition="'$(IsWindows)' == 'true'">
+            <Link>%(Filename)%(Extension)</Link>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(GitRepositoryPath)lib/*.dylib" Condition="'$(IsMacOS)' == 'true'">
+            <Link>%(Filename)%(Extension)</Link>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(GitRepositoryPath)lib/*.so" Condition="'$(IsLinux)' == 'true'">
+            <Link>%(Filename)%(Extension)</Link>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+    <!-- Static link libraries -->
+    <ItemGroup Condition="'$(AheadOfTimeCompilation)' == 'true'">
+        <Content Include="$(GitRepositoryPath)lib/*.lib" Condition="'$(IsWindows)' == 'true'">
+            <Link>%(Filename)%(Extension)</Link>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(GitRepositoryPath)lib/*.a" Condition="'$(IsMacOS)' == 'true'">
+            <Link>%(Filename)%(Extension)</Link>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(GitRepositoryPath)lib/*.a" Condition="'$(IsLinux)' == 'true'">
+            <Link>%(Filename)%(Extension)</Link>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+</Project>
