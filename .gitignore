@@ -1,0 +1,13 @@
+# JetBrains
+/.idea/
+
+# C# build artifacts
+/bin/
+/obj/
+
+# Native libraries
+/lib/
+
+# C2CS
+/C2CS
+/C2CS.exe
