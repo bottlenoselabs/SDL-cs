@@ -5,67 +5,82 @@
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
+    <!-- RuntimeIdentifier -->
+    <PropertyGroup Condition="'$(RuntimeIdentifier)' == ''">
+        <RuntimeIdentifier Condition="'$(IsWindows)' == 'true' AND '$(Architecture)' == 'x64'">win-x64</RuntimeIdentifier>
+        <RuntimeIdentifier Condition="'$(IsWindows)' == 'true' AND '$(Architecture)' == 'x86'">win-x86</RuntimeIdentifier>
+        <RuntimeIdentifier Condition="'$(IsMacOS)' == 'true' AND '$(Architecture)' == 'x64'">osx-x64</RuntimeIdentifier>
+        <RuntimeIdentifier Condition="'$(IsLinux)' == 'true' AND '$(Architecture)' == 'x64'">linux-x64</RuntimeIdentifier>
+        <RuntimeIdentifiaer Condition="'$(IsLinux)' == 'true' AND '$(Architecture)' == 'x86'">linux-x86</RuntimeIdentifiaer>
+        <Is32Bit Condition="'$(Architecture)' == 'x86' OR '$(Architecture)' == 'arm32'">true</Is32Bit>
+        <Is32Bit Condition="'$(Architecture)' != 'x86' AND '$(Architecture)' != 'arm32'">false</Is32Bit>
+        <Is64Bit Condition="'$(Architecture)' == 'x64' OR '$(Architecture)' == 'arm64'">true</Is64Bit>
+        <Is64Bit Condition="'$(Architecture)' != 'x64' AND '$(Architecture)' != 'arm64'">false</Is64Bit>
+    </PropertyGroup>
+    <Target Name="CheckRuntimeIdentifier" AfterTargets="Restore" BeforeTargets="BeforeBuild">
+        <Error Condition="'$(RuntimeIdentifier)' == ''" Text="'RuntimeIdentifier' was not set in the csproj." />
+        <Error Condition="'$(Is32Bit)' == 'true'" Text="'$(RuntimeIdentifier)' is 32-bit which is not supported." />
+    </Target>
+
+    <!-- NuGet -->
+    <PropertyGroup>
+        <Version Condition="'$(Version)' == ''">0.0.0-pre</Version>
+        <IsPackable>true</IsPackable>
+        <RepositoryUrl>https://github.com/lithiumtoast/sdl2-cs</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageDescription>Automatically updated C# bindings for SDL2 with native dynamic link libraries.</PackageDescription>
+        <NoWarn>NU5101</NoWarn>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(RuntimeIdentifier)' != ''">
+        <PackageId>SDL.$(RuntimeIdentifier)</PackageId>
+    </PropertyGroup>
+
     <!-- NuGet package references -->
     <ItemGroup>
-      <PackageReference Include="C2CS.Runtime" Version="0.5.0-alpha0122" />
+      <PackageReference Include="C2CS.Runtime" Version="1.*-*" />
     </ItemGroup>
 
     <!-- SDL bindings for Windows -->
-    <ItemGroup Condition="'$(IsWindows)' == 'true' AND '$(Architecture)' == 'x64'">
-        <Compile Remove="SDL.win32.cs" />
-        <Compile Update="SDL.win64.cs" />
-    </ItemGroup>
-    <ItemGroup Condition="'$(IsWindows)' == 'true' AND '$(Architecture)' == 'x86'">
-        <Compile Update="SDL.win32.cs" />
-        <Compile Remove="SDL.win64.cs" />
+    <ItemGroup Condition="'$(IsWindows)' == 'true'">
+        <Compile Update="SDL.win.cs" />
     </ItemGroup>
     <ItemGroup Condition="'$(IsWindows)' != 'true'">
-        <Compile Remove="SDL.win32.cs" />
-        <Compile Remove="SDL.win64.cs" />
+        <Compile Remove="SDL.win.cs" />
     </ItemGroup>
 
     <!-- SDL bindings for macOS -->
-    <ItemGroup Condition="'$(IsMacOS)' == 'true' AND '$(Architecture)' == 'x64'">
-        <Compile Remove="SDL.osx32.cs" />
-        <Compile Update="SDL.osx64.cs" />
-    </ItemGroup>
-    <ItemGroup Condition="'$(IsMacOS)' == 'true' AND '$(Architecture)' == 'x86'">
-        <Compile Update="SDL.osx32.cs" />
-        <Compile Remove="SDL.osx64.cs" />
+    <ItemGroup Condition="'$(IsMacOS)' == 'true'">
+        <Compile Update="SDL.osx.cs" />
     </ItemGroup>
     <ItemGroup Condition="'$(IsMacOS)' != 'true'">
-        <Compile Remove="SDL.osx32.cs" />
-        <Compile Remove="SDL.osx64.cs" />
+        <Compile Remove="SDL.osx.cs" />
     </ItemGroup>
     
-    <!-- SDL bindings for Ubuntu -->
-    <ItemGroup Condition="'$(IsLinux)' == 'true' AND '$(Architecture)' == 'x64'">
-        <Compile Remove="SDL.linux32.cs" />
-        <Compile Update="SDL.linux64.cs" />
-    </ItemGroup>
-    <ItemGroup Condition="'$(IsLinux)' == 'true' AND '$(Architecture)' == 'x86'">
-        <Compile Update="SDL.linux32.cs" />
-        <Compile Remove="SDL.linux64.cs" />
+    <!-- SDL bindings for Linux -->
+    <ItemGroup Condition="'$(IsLinux)' == 'true'">
+        <Compile Update="SDL.linux.cs" />
     </ItemGroup>
     <ItemGroup Condition="'$(IsLinux)' != 'true'">
-        <Compile Remove="SDL.linux32.cs" />
-        <Compile Remove="SDL.linux64.cs" />
+        <Compile Remove="SDL.linux.cs" />
     </ItemGroup>
 
     <!-- Dynamic link libraries -->
     <ItemGroup>
         <Content Include="$(GitRepositoryPath)lib/*.dll" Condition="'$(IsWindows)' == 'true'">
             <Link>%(Filename)%(Extension)</Link>
+            <PackagePath>lib/%(Filename)%(Extension)</PackagePath>
             <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
         <Content Include="$(GitRepositoryPath)lib/*.dylib" Condition="'$(IsMacOS)' == 'true'">
             <Link>%(Filename)%(Extension)</Link>
+            <PackagePath>lib/%(Filename)%(Extension)</PackagePath>
             <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
         <Content Include="$(GitRepositoryPath)lib/*.so" Condition="'$(IsLinux)' == 'true'">
             <Link>%(Filename)%(Extension)</Link>
+            <PackagePath>lib/%(Filename)%(Extension)</PackagePath>
             <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
