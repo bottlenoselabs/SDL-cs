@@ -11,6 +11,9 @@ fi
 if [ -f "./lib/libSDL2main.a" ]; then
     rm "./lib/libSDL2main.a"
 fi
+if [ -f "./lib/libSDL2.a" ]; then
+    rm "./lib/libSDL2.a"
+fi
 if [ ! -f "./lib/libSDL2-2.0.so.*" ]; then
     for x in ./lib/libSDL2-2.0.so*; do
         mv "$x" "./lib/libSDL2.so"

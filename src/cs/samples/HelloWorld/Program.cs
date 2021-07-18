@@ -4,7 +4,7 @@
 using System;
 using static SDL;
 
-namespace hello_world
+namespace HelloWorld
 {
     internal static unsafe class Program
     {

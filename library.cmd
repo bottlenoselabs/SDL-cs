@@ -11,6 +11,6 @@ if exist ".\lib\SDL2main.lib" (
     del /q ".\lib\SDL2main.lib"
 )
 if exist ".\lib\SDL2-static.lib" (
-    move ".\lib\SDL2-static.lib" ".\lib\SDL2.lib"
+    del ".\lib\SDL2-static.lib"
 )
 rmdir /s /q .\cmake-build-release
