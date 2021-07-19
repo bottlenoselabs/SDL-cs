@@ -146,11 +146,22 @@ jobs:
         name: nuget-packages-packed-${{ env.DOTNET_RID }}
         path: './nuget-packages-packed'
 
-    - name: "Upload NuGet Packages: GitHub"
+    - name: "Upload NuGet Packages: GitHub (Unix)"
+      if: matrix.os != 'windows-latest'
       run: dotnet nuget push './**/*.nupkg' --api-key '${{ secrets.GITHUB_TOKEN }}' --source 'https://nuget.pkg.github.com/${{ github.repository_owner }}' --skip-duplicate
+
+    - name: "Upload NuGet Packages: GitHub (Windows)"
+      if: matrix.os != 'windows-latest'
+      run: dotnet nuget push '.\**\*.nupkg' --api-key '${{ secrets.GITHUB_TOKEN }}' --source 'https://nuget.pkg.github.com/${{ github.repository_owner }}' --skip-duplicate
 
     - name: "Add packages source: MyGet"
       run: dotnet nuget add source $MYGET_SOURCE_URL --name "MyGet"
 
-    - name: "Upload Packages: MyGet"
+    - name: "Upload Packages: MyGet (Unix)"
+      if: matrix.os != 'windows-latest'
       run: dotnet nuget push "./**/*.nupkg" --source "MyGet" --skip-duplicate --api-key $MYGET_ACCESS_TOKEN 
+
+    - name: "Upload Packages: MyGet (Windows)"
+      if: matrix.os == 'windows-latest'
+      run: dotnet nuget push ".\**\*.nupkg" --source "MyGet" --skip-duplicate --api-key $MYGET_ACCESS_TOKEN 
+
