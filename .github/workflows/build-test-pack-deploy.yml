@@ -146,9 +146,6 @@ jobs:
         name: nuget-packages-packed-${{ env.DOTNET_RID }}
         path: './nuget-packages-packed'
 
-    - name: "Echo Packages"
-      run: find ./nuget-packages-packed/ -not -type d -exec basename {} \;
-
     - name: "Upload NuGet Packages: GitHub"
       run: dotnet nuget push './**/*.nupkg' --api-key '${{ secrets.GITHUB_TOKEN }}' --source 'https://nuget.pkg.github.com/${{ github.repository_owner }}' --skip-duplicate
 
