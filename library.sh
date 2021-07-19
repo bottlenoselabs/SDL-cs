@@ -14,9 +14,14 @@ fi
 if [ -f "./lib/libSDL2.a" ]; then
     rm "./lib/libSDL2.a"
 fi
-if [ ! -f "./lib/libSDL2-2.0.so.*" ]; then
-    for x in ./lib/libSDL2-2.0.so*; do
+for x in ./lib/libSDL2-2.0.so*; do
+    if [ -f "$x" ]; then
         mv "$x" "./lib/libSDL2.so"
-    done
-fi
+    fi
+done
+for x in ./lib/libSDL2-2.0.dylib*; do
+    if [ -f "$x" ]; then
+        mv "$x" "./lib/libSDL2.dylib"
+    fi
+done
 rm -r ./cmake-build-release

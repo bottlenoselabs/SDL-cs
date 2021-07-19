@@ -47,12 +47,35 @@ SDL_DISABLE_PMMINTRIN_H \
     exit_if_last_command_failed
 }
 
+function bindgen_osx {
+    ./C2CS ast -i ./ext/SDL/include/SDL.h -o ./ast/SDL.osx.json -s ./ext/SDL/include -b 64 -g SDL_main.h -d \
+SDL_DISABLE_MM3DNOW_H \
+SDL_DISABLE_IMMINTRIN_H \
+SDL_DISABLE_MMINTRIN_H \
+SDL_DISABLE_XMMINTRIN_H \
+SDL_DISABLE_EMMINTRIN_H \
+SDL_DISABLE_PMMINTRIN_H \
+    exit_if_last_command_failed
+    ./C2CS cs -i ./ast/SDL.osx.json -o ./src/cs/production/SDL-cs/SDL.osx.cs -l "SDL2" -c "SDL" -g SDL_bool -a \
+"SDL_bool -> CBool" \
+"Uint8 -> byte" \
+"Uint16 -> ushort" \
+"Uint32 -> uint" \
+"Uint64 -> ulong" \
+"Sint8 -> sbyte" \
+"Sint16 -> short" \
+"Sint32 -> int" \
+"Sint64 -> long" \
+    exit_if_last_command_failed
+}
+
 unamestr="$(uname | tr '[:upper:]' '[:lower:]')"
 if [[ "$unamestr" == "linux" ]]; then
     download_C2CS_ubuntu
     bindgen_linux
 elif [[ "$unamestr" == "darwin" ]]; then
     download_C2CS_osx
+    bindgen_osx
 else
     echo "Unknown platform: '$unamestr'."
 fi
