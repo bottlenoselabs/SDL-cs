@@ -38,7 +38,13 @@ jobs:
     - name: "Use GitVersion"
       uses: gittools/actions/gitversion/execute@v0.9.6
 
-    - run: echo "$(./version.sh)-$GITVERSION_NUGETPRERELEASETAGV2" >> version.txt
+    - name: "Print version artifact"
+      shell: bash
+      run: |
+        ./version.sh
+
+    - name: "Write version to disk"
+      run: echo "$(./version.sh)-$GITVERSION_NUGETPRERELEASETAGV2" >> version.txt
 
     - name: 'Upload version artifact'
       uses: actions/upload-artifact@v2
