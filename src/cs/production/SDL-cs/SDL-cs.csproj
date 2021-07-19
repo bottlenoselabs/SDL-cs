@@ -21,10 +21,9 @@
         <Error Condition="'$(RuntimeIdentifier)' == ''" Text="'RuntimeIdentifier' was not set in the csproj." />
         <Error Condition="'$(Is32Bit)' == 'true'" Text="'$(RuntimeIdentifier)' is 32-bit which is not supported." />
     </Target>
-
+    
     <!-- NuGet -->
     <PropertyGroup>
-        <Version Condition="'$(Version)' == ''">0.0.0-pre</Version>
         <IsPackable>true</IsPackable>
         <RepositoryUrl>https://github.com/lithiumtoast/sdl2-cs</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
@@ -37,7 +36,7 @@
 
     <!-- NuGet package references -->
     <ItemGroup>
-      <PackageReference Include="C2CS.Runtime" Version="1.*-*" />
+      <PackageReference Include="C2CS.Runtime" Version="*-*" />
     </ItemGroup>
 
     <!-- SDL bindings for Windows -->
