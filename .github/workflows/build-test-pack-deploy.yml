@@ -109,7 +109,6 @@ jobs:
       run: dotnet pack '${{ env.SOLUTION_PATH }}' --nologo --output "./nuget-packages-packed" --verbosity minimal --configuration Release --no-build -p:PackageVersion='${{ env.VERSION }}' --runtime ${{ env.DOTNET_RID }}
 
     - name: "Upload packages"
-      if: matrix.os == 'ubuntu-latest'
       uses: actions/upload-artifact@v2
       with:
         name: nuget-packages-packed-${{ env.DOTNET_RID }}
@@ -118,13 +117,28 @@ jobs:
   deploy-job:
     name: "Deploy"
     needs: [build-test-pack-job]
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
     steps:
 
     - name: "Install .NET"
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '${{ env.DOTNET_SDK_VERSION }}'
+
+    - name: ".NET runtime identifier (Windows)"
+      if: matrix.os == 'windows-latest'
+      run: echo "DOTNET_RID=win-x64" >> $env:GITHUB_ENV
+
+    - name: ".NET runtime identifier (macOS)"
+      if: matrix.os == 'macos-latest'
+      run: echo "DOTNET_RID=osx-x64" >> $GITHUB_ENV
+
+    - name: ".NET runtime identifier (Ubuntu)"
+      if: matrix.os == 'ubuntu-latest'
+      run: echo "DOTNET_RID=ubuntu.20.04-x64" >> $GITHUB_ENV
 
     - name: "Download NuGet Packages"
       uses: actions/download-artifact@v1
