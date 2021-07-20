@@ -1,5 +1,5 @@
 #!/bin/bash
-script_dir="$(dirname $0)"
+script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 echo "Started building native library... Directory: $script_dir"
 
 cmake -S $script_dir/ext/SDL -B $script_dir/cmake-build-release
