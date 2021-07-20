@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.16)
 project(sdl C)
 
 set(CMAKE_POLICY_DEFAULT_CMP0054 NEW)
+set(CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION 10.0.19041.0)
 set(CMAKE_C_STANDARD 11)
 
 # Change the output directories for artifacts.
