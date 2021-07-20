@@ -18,13 +18,15 @@ dotnet new nuget
 <add key="lithiumtoast" value="https://www.myget.org/F/lithiumtoast/api/v3/index.json" />
 ```
 
-3. Install the package for your runtime identifier. (See the [RID catalog](https://docs.microsoft.com/en-us/dotnet/core/rid-catalog#using-rids).) Runtime identifiers currently available include: `win-x64`, `osx-x64`, `linux-x64`. If you need an other runtime identifier create an issue and I'll set it up.
+3. Install the package for your runtime identifier.
 
 Windows: `SDL.win-x64`
 
 macOS: `SDL.osx-x64` 
 
 Linux: `SDL.linux-x64` 
+
+For more information on runtime identifiers see the [RID catalog](https://docs.microsoft.com/en-us/dotnet/core/rid-catalog#using-rids). Runtime identifiers currently made available for NuGet packages for this project include: `win-x64`, `osx-x64`, `linux-x64`. If you need an other runtime identifier create an issue and I'll set it up.
 
 ### Git submodule
 
