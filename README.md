@@ -39,6 +39,6 @@ Bindings are generated for C# using https://github.com/lithiumtoast/c2cs. At any
 
 ## License
 
-`SDL2-cs` is licensed under the MIT License (`MIT`).
+`SDL-cs` is licensed under the MIT License (`MIT`).
 
-`SDL2` itself is licensed under ZLib (`zlib`), see https://github.com/libsdl-org/SDL/blob/main/LICENSE.txt for more details.
+`SDL` itself is licensed under ZLib (`zlib`), see https://github.com/libsdl-org/SDL/blob/main/LICENSE.txt for more details.
