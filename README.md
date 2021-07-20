@@ -1,6 +1,6 @@
-# sdl2-cs
+# sdl-cs
 
-Automatically updated C# bindings for https://github.com/libsdl-org/SDL with native dynamic link libraries. C# bindings are *exactly* how they are found in the C headers, and thus require enabling usage of the `unsafe` keyword.
+Automatically updated C# bindings for https://github.com/libsdl-org/SDL with native dynamic link libraries. C# bindings are *exactly* how they are found in the C headers.
 
 ## How to use
 
