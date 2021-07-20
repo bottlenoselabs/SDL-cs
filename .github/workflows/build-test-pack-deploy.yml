@@ -109,6 +109,11 @@ jobs:
         name: native-libraries-${{ matrix.os }}
         path: ${{ github.workspace }}/lib
 
+    - name: "Print native libraries"
+      shell: bash
+      run: |
+        ls -a ${{ github.workspace }}/lib
+
     - name: "Clone Git repository"
       uses: actions/checkout@master
       with:
