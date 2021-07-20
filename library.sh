@@ -13,7 +13,8 @@ cmake --build ./cmake-build-release --config Release
 
 mkdir -p "./lib/"
 if [[ "$unamestr" == "linux" ]]; then
-    echo "TODO"
+    sharedobject="$(readlink -f ./cmake-build-release/libSDL2-2.0.so)"
+    mv "$sharedobject" "./lib/libSDL2.so"
 elif [[ "$unamestr" == "darwin" ]]; then
     if [ -f "./cmake-build-release/libSDL2-2.0.dylib" ]; then
         mv "./cmake-build-release/libSDL2-2.0.dylib" "./lib/libSDL2.dylib"
