@@ -1,19 +1,8 @@
 @echo off
 setlocal
 
-if exist "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat" (
-    call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
-) else (
-    if exist "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat" (
-        call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"
-    ) else (
-        echo "Visual Studio 2019 is not installed."
-        exit 1
-    )
-)
-
-cmake -S .\src\c\sdl -B .\cmake-build-release -G "Visual Studio 16 2019" -DCMAKE_CONFIGURATION_TYPES=Release
-devenv .\cmake-build-release\sdl.sln /build
+cmake -S .\src\c\sdl -B .\cmake-build-release -A x64
+cmake --build .\cmake-build-release --config Release
 if exist ".\lib\SDL2.exp" (
     del /q ".\lib\SDL2.exp"
 )
