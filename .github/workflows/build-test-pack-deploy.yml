@@ -23,7 +23,7 @@ jobs:
     - name: "Clone Git repository"
       uses: actions/checkout@v2
       with:
-        submodules: 'true'
+        submodules: true
 
     - name: "Git fetch all history for all tags and branches"
       run: git fetch --prune --unshallow
@@ -46,10 +46,35 @@ jobs:
       with:
         name: version
         path: version.txt
-
-  build-test-pack-job:
-    name: "Build"
+  
+  native-build-library:
+    name: ".NET: build, test, & pack"
     needs: [version-job]
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+    
+    steps:
+      
+    - name: "Clone Git repository"
+      uses: actions/checkout@master
+      with:
+        submodules: true
+
+    - name: "Build SDL (Unix)"
+      if: matrix.os != 'windows-latest'
+      shell: bash
+      run: ./library.sh
+
+    - name: "Build SDL (Windows)"
+      if: matrix.os == 'windows-latest'
+      shell: pwsh
+      run: .\library.cmd
+
+  dotnet-build-test-pack-job:
+    name: ".NET: build, test, & pack"
+    needs: [native-build-library]
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -63,7 +88,6 @@ jobs:
         name: version
 
     - name: "Read version artifact"
-      id: version
       shell: bash
       run: |
         echo "VERSION=$(cat version.txt)" >> $GITHUB_ENV
@@ -77,7 +101,6 @@ jobs:
       uses: actions/checkout@master
       with:
         submodules: true
-        lfs: true
 
     - name: "Install .NET"
       uses: actions/setup-dotnet@v1
@@ -99,16 +122,16 @@ jobs:
       if: matrix.os == 'ubuntu-latest'
       run: echo "DOTNET_RID=ubuntu.20.04-x64" >> $GITHUB_ENV
 
-    - name: "Build solution"
+    - name: "Build .NET solution"
       run: dotnet build '${{ env.SOLUTION_PATH }}' --nologo --verbosity minimal --configuration Release /p:Version='${{ env.VERSION }}'
 
-    - name: "Test solution"
+    - name: "Test .NET solution"
       run: dotnet test '${{ env.SOLUTION_PATH }}' --nologo --verbosity normal --configuration Release --no-build
 
-    - name: "Pack solution"
+    - name: "Pack .NET solution"
       run: dotnet pack '${{ env.SOLUTION_PATH }}' --nologo --output "./nuget-packages-packed" --verbosity minimal --configuration Release --no-build -p:PackageVersion='${{ env.VERSION }}' --runtime ${{ env.DOTNET_RID }}
 
-    - name: "Upload packages"
+    - name: "Upload .NET built packages"
       uses: actions/upload-artifact@v2
       with:
         name: nuget-packages-packed-${{ env.DOTNET_RID }}
@@ -116,7 +139,7 @@ jobs:
 
   deploy-job:
     name: "Deploy"
-    needs: [build-test-pack-job]
+    needs: [dotnet-build-test-pack-job]
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
