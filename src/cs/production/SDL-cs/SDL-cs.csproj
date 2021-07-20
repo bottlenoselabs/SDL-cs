@@ -84,5 +84,9 @@
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
     </ItemGroup>
+    <Target Name="Print native libraries" BeforeTargets="Build,Pack">
+        <Exec Command="ls $(GitRepositoryPath)lib" Condition="'$(OS)' != 'Windows_NT'"  />
+        <Exec Command="dir $(GitRepositoryPath)lib" Condition="'$(OS)' == 'Windows_NT'"  />
+    </Target>
 
 </Project>
