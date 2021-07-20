@@ -48,7 +48,7 @@ jobs:
         path: version.txt
   
   native-build-library:
-    name: ".NET: build, test, & pack"
+    name: "Native: build SDL2 library"
     needs: [version-job]
     runs-on: ${{ matrix.os }}
     strategy:
