@@ -76,7 +76,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: native-libraries-${{ matrix.os }}
-        path: ./libs/
+        path: ${{ github.workspace }}/libs/**/*.*
 
   dotnet-build-test-pack-job:
     name: ".NET: build, test, & pack"
@@ -107,7 +107,7 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: native-libraries-${{ matrix.os }}
-        path: ./lib/
+        path: ${{ github.workspace }}/lib
 
     - name: "Clone Git repository"
       uses: actions/checkout@master
