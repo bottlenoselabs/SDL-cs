@@ -67,19 +67,19 @@
     <ItemGroup>
         <Content Include="$(GitRepositoryPath)lib/*.dll" Condition="'$(IsWindows)' == 'true'">
             <Link>%(Filename)%(Extension)</Link>
-            <PackagePath>lib/%(Filename)%(Extension)</PackagePath>
+            <PackagePath>runtimes/$(RuntimeIdentifier)/native/%(Filename)%(Extension)</PackagePath>
             <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
         <Content Include="$(GitRepositoryPath)lib/*.dylib" Condition="'$(IsMacOS)' == 'true'">
             <Link>%(Filename)%(Extension)</Link>
-            <PackagePath>lib/%(Filename)%(Extension)</PackagePath>
+            <PackagePath>runtimes/$(RuntimeIdentifier)/native/%(Filename)%(Extension)</PackagePath>
             <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
         <Content Include="$(GitRepositoryPath)lib/*.so" Condition="'$(IsLinux)' == 'true'">
             <Link>%(Filename)%(Extension)</Link>
-            <PackagePath>lib/%(Filename)%(Extension)</PackagePath>
+            <PackagePath>runtimes/$(RuntimeIdentifier)/native/%(Filename)%(Extension)</PackagePath>
             <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
