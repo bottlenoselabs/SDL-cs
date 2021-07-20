@@ -62,6 +62,11 @@ jobs:
       with:
         submodules: true
 
+    - name: "Install Linux build dependencies for SDL2"
+      if: matrix.os == 'ubuntu-latest'
+      shell: bash
+      run: ./.github/scripts/dependencies.sh
+
     - name: "Build SDL (Unix)"
       if: matrix.os != 'windows-latest'
       shell: bash
