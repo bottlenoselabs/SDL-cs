@@ -76,7 +76,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: native-libraries-${{ matrix.os }}
-        path: ${{ github.workspace }}/libs/**/*.*
+        path: ${{ github.workspace }}/lib/
 
   dotnet-build-test-pack-job:
     name: ".NET: build, test, & pack"
