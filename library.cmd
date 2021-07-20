@@ -6,6 +6,9 @@ if exist "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxi
 ) else (
     if exist "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat" (
         call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"
+    ) else (
+        echo "Visual Studio 2019 is not installed."
+        exit 1
     )
 )
 
