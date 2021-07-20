@@ -41,7 +41,7 @@ jobs:
     - name: "Write version to disk"
       run: echo "$(./.github/scripts/version.sh)-$GITVERSION_NUGETPRERELEASETAGV2" >> version.txt
 
-    - name: 'Upload version artifact'
+    - name: "Upload version artifact"
       uses: actions/upload-artifact@v2
       with:
         name: version
@@ -72,6 +72,12 @@ jobs:
       shell: pwsh
       run: .\library.cmd
 
+    - name: "Upload native libraries"
+      uses: actions/upload-artifact@v2
+      with:
+        name: native-libraries-${{ matrix.os }}
+        path: libs/
+
   dotnet-build-test-pack-job:
     name: ".NET: build, test, & pack"
     needs: [native-build-library]
@@ -96,6 +102,12 @@ jobs:
       shell: bash
       run: |
         echo $VERSION
+
+    - name: "Download native libraries"
+      uses: actions/download-artifact@v2
+      with:
+        name: native-libraries-${{ matrix.os }}
+        path: lib/
 
     - name: "Clone Git repository"
       uses: actions/checkout@master
