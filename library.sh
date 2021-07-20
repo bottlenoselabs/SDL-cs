@@ -1,17 +1,10 @@
 #!/bin/bash
 
-unamestr="$(uname | tr '[:upper:]' '[:lower:]')"
-if [[ "$unamestr" == "linux" ]]; then
-    cmake -S ./ext/SDL -B ./cmake-build-release -G 'Ninja'
-elif [[ "$unamestr" == "darwin" ]]; then
-    cmake -S ./ext/SDL -B ./cmake-build-release
-else
-    echo "Unknown platform: '$unamestr'."
-fi
-
+cmake -S ./ext/SDL -B ./cmake-build-release
 cmake --build ./cmake-build-release --config Release
-
 mkdir -p "./lib/"
+
+unamestr="$(uname | tr '[:upper:]' '[:lower:]')"
 if [[ "$unamestr" == "linux" ]]; then
     sharedobject="$(readlink -f ./cmake-build-release/libSDL2-2.0.so)"
     mv "$sharedobject" "./lib/libSDL2.so"
