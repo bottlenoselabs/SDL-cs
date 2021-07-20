@@ -2,9 +2,8 @@
 
 unamestr="$(uname | tr '[:upper:]' '[:lower:]')"
 if [[ "$unamestr" == "linux" ]]; then
-    sudo apt-get update \ 
-    sudo apt-get install \ 
-        wayland-protocols \
+    sudo apt-get update -y
+    sudo apt-get install wayland-protocols \ 
         pkg-config \
         ninja-build \
         libasound2-dev \
