@@ -68,7 +68,7 @@
     <ItemGroup>
         <Content Include="$(GitRepositoryPath)lib/*.dll" Condition="'$(IsWindows)' == 'true'">
             <Link>%(Filename)%(Extension)</Link>
-            <PackagePath>runtimes\$(RuntimeIdentifier)\native\%(Filename)%(Extension)</PackagePath>
+            <PackagePath>runtimes/$(RuntimeIdentifier)\native\%(Filename)%(Extension)</PackagePath>
             <Pack>true</Pack>
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>

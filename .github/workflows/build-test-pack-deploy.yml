@@ -103,24 +103,6 @@ jobs:
       run: |
         echo $VERSION
 
-    - name: "Download native libraries"
-      uses: actions/download-artifact@v2
-      with:
-        name: native-libraries-${{ matrix.os }}
-        path: ${{ github.workspace }}/lib
-
-    - name: "Print native libraries (Unix)"
-      if: matrix.os != 'windows-latest'
-      shell: bash
-      run: |
-        ls -a ${{ github.workspace }}/lib
-
-    - name: "Print native libraries (Windows)"
-      if: matrix.os == 'windows-latest'
-      shell: pwsh
-      run: |
-        Get-ChildItem ${{ github.workspace }}\lib
-
     - name: "Clone Git repository"
       uses: actions/checkout@master
       with:
@@ -145,6 +127,24 @@ jobs:
     - name: ".NET runtime identifier (Ubuntu)"
       if: matrix.os == 'ubuntu-latest'
       run: echo "DOTNET_RID=ubuntu.20.04-x64" >> $GITHUB_ENV
+
+    - name: "Download native libraries"
+      uses: actions/download-artifact@v2
+      with:
+        name: native-libraries-${{ matrix.os }}
+        path: ${{ github.workspace }}/lib
+
+    - name: "Print native libraries (Unix)"
+      if: matrix.os != 'windows-latest'
+      shell: bash
+      run: |
+        ls -a ${{ github.workspace }}/lib
+
+    - name: "Print native libraries (Windows)"
+      if: matrix.os == 'windows-latest'
+      shell: pwsh
+      run: |
+        Get-ChildItem ${{ github.workspace }}\lib
 
     - name: "Build .NET solution"
       run: dotnet build '${{ env.SOLUTION_PATH }}' --nologo --verbosity minimal --configuration Release /p:Version='${{ env.VERSION }}'
