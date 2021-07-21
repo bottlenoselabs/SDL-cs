@@ -2,6 +2,8 @@ name: "Bindgen"
 on:
   schedule:
     - cron:  0 0 * * * # https://crontab.guru/
+  push:
+    branches: [develop]
 
 jobs:
 
