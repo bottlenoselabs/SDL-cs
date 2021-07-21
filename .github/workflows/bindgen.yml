@@ -7,7 +7,7 @@ on:
 
 jobs:
 
-  bindgen:
+  bindgen-job:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -35,8 +35,12 @@ jobs:
       with:
         default_author: user_info
 
-    - name: Repository Dispatch
+  build-test-pack-deploy-job:
+    needs: [bindgen-job]
+    runs-on: ubuntu-latest
+
+    - name: "Dispatch 'build-test-pack-deploy.yml'"
       uses: peter-evans/repository-dispatch@v1
       with:
         token: ${{ secrets.REPO_ACCESS_TOKEN }}
-        event-type: bindgen
+        event-type: build-test-pack-deploy
