@@ -6,14 +6,14 @@ Automatically updated C# bindings for https://github.com/libsdl-org/SDL with nat
 
 ### NuGet package
 
-NuGet is not recommended long term but it's simple enough to try things out.
-
 1. Create a new `nuget.config` file if you don't have one already. Put it beside your `.sln`. If you don't have a `.sln` put it beside your `.csproj`.
+
 ```bash
 dotnet new nuget
 ```
 
 2. Add the following NuGet package source to the file.
+
 ```xml
 <add key="lithiumtoast" value="https://www.myget.org/F/lithiumtoast/api/v3/index.json" />
 ```
@@ -31,7 +31,15 @@ For more information on runtime identifiers see the [RID catalog](https://docs.m
 ### Git submodule
 
 Git submodules are recommended over NuGet packages because you get the actual source code of the bindgen with all the comments.
-You will however need to build the native library yourself and copy it to correct place at runtime. The good news is that is made easy with the `library.sh` script for Unix and the `library.cmd` script for Windows.
+You will however need to build the native library yourself. The good news is that is made easy with the `library.sh` script for Unix and the `library.cmd` script for Windows to which the native libraries will then automatically be placed in the `lib` folder. 
+
+From there you can import the `SDL-cs.csproj` which the native libraries will automatically be copied by adding the following to your `.csproj`:
+
+```xml
+<ItemGroup>
+    <ProjectReference Include="path/to/SDL-cs/src/cs/production/SDL-cs/SDL-cs.csproj" />
+</ItemGroup>
+```
 
 ## Bindgen
 
