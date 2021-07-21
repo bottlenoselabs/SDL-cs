@@ -3,7 +3,7 @@ on:
   push:
     branches: [develop]
     paths: ['ext/SDL/**']
-
+    paths-ignore: ['**/*.md']
 
 jobs:
 
@@ -34,3 +34,9 @@ jobs:
       uses: EndBug/add-and-commit@v7
       with:
         default_author: user_info
+
+    - name: Repository Dispatch
+      uses: peter-evans/repository-dispatch@v1
+      with:
+        token: ${{ secrets.REPO_ACCESS_TOKEN }}
+        event-type: bindgen
