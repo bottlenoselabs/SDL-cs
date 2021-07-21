@@ -1,0 +1,34 @@
+name: "Bindgen"
+on:
+  schedule:
+    - cron:  0 0 * * * # https://crontab.guru/
+
+jobs:
+
+  bindgen:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+
+    steps:
+
+    - name: "Clone Git repository"
+      uses: actions/checkout@master
+      with:
+        submodules: true
+
+    - name: "Bindgen"
+      if: matrix.os != 'windows-latest'
+      shell: bash
+      run: ./bindgen.sh
+
+    - name: "Bindgen"
+      if: matrix.os == 'windows-latest'
+      shell: pwsh
+      run: .\bindgen.cmd
+
+    - name: "Commit"
+      uses: EndBug/add-and-commit@v7
+        with:
+          message: "Update bindings"
