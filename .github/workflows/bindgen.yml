@@ -8,6 +8,7 @@ on:
 jobs:
 
   bindgen-job:
+    name: "Bindgen"
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -35,11 +36,12 @@ jobs:
         default_author: user_info
 
   build-test-pack-deploy-job:
+    name: "Dispatch 'build-test-pack-deploy.yml'"
     needs: [bindgen-job]
     runs-on: ubuntu-latest
     steps:
     
-    - name: "Dispatch 'build-test-pack-deploy.yml'"
+    - name: "Dispatch"
       uses: peter-evans/repository-dispatch@v1
       with:
         token: ${{ secrets.REPO_ACCESS_TOKEN }}
