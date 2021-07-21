@@ -1,8 +1,8 @@
 name: "Bindgen"
+
 on:
   push:
     branches: [develop]
-    paths: ['ext/SDL/**']
     paths-ignore: ['**/*.md']
 
 jobs:
