@@ -1,9 +1,9 @@
 name: "Bindgen"
 on:
-  schedule:
-    - cron:  0 0 * * * # https://crontab.guru/
   push:
     branches: [develop]
+    paths: ['ext/SDL/**']
+
 
 jobs:
 
@@ -20,15 +20,17 @@ jobs:
       with:
         submodules: true
 
-    - name: "Bindgen"
+    - name: "Bindgen (Unix)"
       if: matrix.os != 'windows-latest'
       shell: bash
       run: ./bindgen.sh
 
-    - name: "Bindgen"
+    - name: "Bindgen (Windows)"
       if: matrix.os == 'windows-latest'
       shell: pwsh
       run: .\bindgen.cmd
 
-    - name: "Commit"
+    - name: "Add + commit + push (if necessary)"
       uses: EndBug/add-and-commit@v7
+      with:
+        default_author: user_info
