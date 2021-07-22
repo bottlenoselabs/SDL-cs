@@ -32,7 +32,7 @@
         <NoWarn>NU5101</NoWarn>
     </PropertyGroup>
     <PropertyGroup Condition="'$(RuntimeIdentifier)' != ''">
-        <PackageId>SDL.$(RuntimeIdentifier)</PackageId>
+        <PackageId>SDL-cs.$(RuntimeIdentifier)</PackageId>
     </PropertyGroup>
 
     <!-- NuGet package references -->
