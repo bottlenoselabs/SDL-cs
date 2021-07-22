@@ -18,7 +18,7 @@ dotnet new nuget
 <add key="lithiumtoast" value="https://www.myget.org/F/lithiumtoast/api/v3/index.json" />
 ```
 
-3. Install the package for your runtime identifier. The version is that of SDL and then the commit number on the *this* repository, e.g. (2.0.14.alpha0123). If you want to always use the latest version change your `.csproj` to use "*-*" as the version.
+3. Install the package for your runtime identifier. The version is that of SDL and then the commit number on *this* repository, e.g. (2.0.14.alpha0123). If you want to always use the latest version change your `.csproj` to use "*-*" as the version.
 
 Windows: `SDL-cs.win-x64`
 
