@@ -4,7 +4,7 @@ env:
   DOTNET_CLI_TELEMETRY_OPTOUT: 1
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
   DOTNET_SDK_VERSION: 5.0.301
-  SOLUTION_PATH: './SDL.sln'
+  DOTNET_PROJECT_PATH: './src/cs/production/stb_image-cs/stb_image-cs.csproj'
   MYGET_ACCESS_TOKEN: ${{ secrets.MYGET_ACCESS_TOKEN }}
   MYGET_SOURCE_URL: 'https://www.myget.org/F/lithiumtoast/api/v3/index.json'
 
@@ -129,14 +129,8 @@ jobs:
       with:
         dotnet-version: '${{ env.DOTNET_SDK_VERSION }}'
 
-    - name: "Clean solution"
-      run: dotnet clean '${{ env.SOLUTION_PATH }}' --configuration Release && dotnet nuget locals all --clear
-
-    - name: "Build .NET solution"
-      run: dotnet build '${{ env.SOLUTION_PATH }}' --nologo --verbosity minimal --configuration Release /p:Version='${{ env.VERSION }}'
-
     - name: "Pack .NET solution"
-      run: dotnet pack '${{ env.SOLUTION_PATH }}' --nologo --output "./nupkg" --verbosity minimal --configuration Release --no-build -p:PackageVersion='${{ env.VERSION }}' --runtime ${{ matrix.platform.rid }}
+      run: dotnet pack '${{ env.DOTNET_PROJECT_PATH }}' --nologo --output "./nupkg" --verbosity minimal --configuration Release -p:PackageVersion='${{ env.VERSION }}' --runtime ${{ matrix.platform.rid }}
 
     - name: "Upload NuGet packages: MyGet (Unix)"
       if: ${{ startsWith(matrix.platform.rid, 'win') }}
