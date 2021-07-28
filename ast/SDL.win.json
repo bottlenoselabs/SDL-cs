@@ -706,7 +706,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1614,
+        "line": 1615,
         "column": 31
       }
     },
@@ -728,7 +728,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1600,
+        "line": 1601,
         "column": 31
       }
     },
@@ -750,7 +750,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1586,
+        "line": 1587,
         "column": 29
       }
     },
@@ -774,7 +774,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1573,
+            "line": 1574,
             "column": 77
           }
         },
@@ -784,7 +784,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1573,
+            "line": 1574,
             "column": 90
           }
         }
@@ -792,7 +792,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1573,
+        "line": 1574,
         "column": 29
       }
     },
@@ -814,7 +814,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1535,
+        "line": 1536,
         "column": 29
       }
     },
@@ -836,7 +836,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1504,
+        "line": 1505,
         "column": 30
       }
     },
@@ -858,7 +858,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1495,
+        "line": 1496,
         "column": 30
       }
     },
@@ -880,7 +880,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1482,
+        "line": 1483,
         "column": 30
       }
     },
@@ -924,7 +924,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1447,
+            "line": 1448,
             "column": 56
           }
         },
@@ -934,7 +934,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1447,
+            "line": 1448,
             "column": 68,
             "isBuiltin": true
           }
@@ -943,7 +943,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1444,
+        "line": 1445,
         "column": 29
       }
     },
@@ -997,7 +997,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1417,
+            "line": 1418,
             "column": 58,
             "isBuiltin": true
           }
@@ -1026,7 +1026,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1413,
+        "line": 1414,
         "column": 29
       }
     },
@@ -1078,7 +1078,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1389,
+        "line": 1390,
         "column": 29
       }
     },
@@ -1112,7 +1112,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1375,
+            "line": 1376,
             "column": 54,
             "isBuiltin": true
           }
@@ -1121,7 +1121,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1373,
+        "line": 1374,
         "column": 29
       }
     },
@@ -1153,7 +1153,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1361,
+        "line": 1362,
         "column": 29
       }
     },
@@ -1187,7 +1187,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1350,
+            "line": 1351,
             "column": 54,
             "isBuiltin": true
           }
@@ -1196,7 +1196,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1348,
+        "line": 1349,
         "column": 29
       }
     },
@@ -1228,7 +1228,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1336,
+        "line": 1337,
         "column": 29
       }
     },
@@ -1262,7 +1262,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1326,
+            "line": 1327,
             "column": 54,
             "isBuiltin": true
           }
@@ -1271,7 +1271,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1324,
+        "line": 1325,
         "column": 29
       }
     },
@@ -1295,7 +1295,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1313,
+            "line": 1314,
             "column": 55,
             "isBuiltin": true
           }
@@ -1306,7 +1306,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1313,
+            "line": 1314,
             "column": 65,
             "isBuiltin": true
           }
@@ -1317,7 +1317,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1313,
+            "line": 1314,
             "column": 75,
             "isBuiltin": true
           }
@@ -1328,7 +1328,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1313,
+            "line": 1314,
             "column": 85,
             "isBuiltin": true
           }
@@ -1337,7 +1337,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1312,
+        "line": 1313,
         "column": 29
       }
     },
@@ -1371,7 +1371,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1300,
+            "line": 1301,
             "column": 55,
             "isBuiltin": true
           }
@@ -1380,7 +1380,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1298,
+        "line": 1299,
         "column": 29
       }
     },
@@ -1404,7 +1404,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1288,
+            "line": 1289,
             "column": 56,
             "isBuiltin": true
           }
@@ -1415,7 +1415,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1288,
+            "line": 1289,
             "column": 65,
             "isBuiltin": true
           }
@@ -1424,7 +1424,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1287,
+        "line": 1288,
         "column": 29
       }
     },
@@ -1478,7 +1478,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1274,
+            "line": 1275,
             "column": 57,
             "isBuiltin": true
           }
@@ -1507,7 +1507,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1270,
+        "line": 1271,
         "column": 29
       }
     },
@@ -1559,7 +1559,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1228,
+        "line": 1229,
         "column": 29
       }
     },
@@ -1593,7 +1593,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1200,
+            "line": 1201,
             "column": 53,
             "isBuiltin": true
           }
@@ -1602,7 +1602,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1198,
+        "line": 1199,
         "column": 29
       }
     },
@@ -1634,7 +1634,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1175,
+        "line": 1176,
         "column": 29
       }
     },
@@ -1668,7 +1668,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1149,
+            "line": 1150,
             "column": 53,
             "isBuiltin": true
           }
@@ -1677,7 +1677,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1147,
+        "line": 1148,
         "column": 29
       }
     },
@@ -1709,7 +1709,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1123,
+        "line": 1124,
         "column": 29
       }
     },
@@ -1743,7 +1743,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1101,
+            "line": 1102,
             "column": 53,
             "isBuiltin": true
           }
@@ -1752,7 +1752,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1099,
+        "line": 1100,
         "column": 29
       }
     },
@@ -1776,7 +1776,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1074,
+            "line": 1075,
             "column": 52,
             "isBuiltin": true
           }
@@ -1787,7 +1787,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1074,
+            "line": 1075,
             "column": 60,
             "isBuiltin": true
           }
@@ -1798,7 +1798,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1074,
+            "line": 1075,
             "column": 68,
             "isBuiltin": true
           }
@@ -1809,7 +1809,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1074,
+            "line": 1075,
             "column": 76,
             "isBuiltin": true
           }
@@ -1818,7 +1818,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1073,
+        "line": 1074,
         "column": 29
       }
     },
@@ -1852,7 +1852,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1044,
+            "line": 1045,
             "column": 54,
             "isBuiltin": true
           }
@@ -1861,7 +1861,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1042,
+        "line": 1043,
         "column": 29
       }
     },
@@ -1885,7 +1885,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1019,
+            "line": 1020,
             "column": 53,
             "isBuiltin": true
           }
@@ -1896,7 +1896,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 1019,
+            "line": 1020,
             "column": 60,
             "isBuiltin": true
           }
@@ -1905,7 +1905,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 1018,
+        "line": 1019,
         "column": 29
       }
     },
@@ -1927,7 +1927,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 993,
+        "line": 994,
         "column": 29
       }
     },
@@ -1959,7 +1959,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 976,
+        "line": 977,
         "column": 29
       }
     },
@@ -1991,7 +1991,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 963,
+        "line": 964,
         "column": 29
       }
     },
@@ -2053,7 +2053,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 939,
+        "line": 940,
         "column": 29
       }
     },
@@ -2115,7 +2115,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 918,
+        "line": 919,
         "column": 29
       }
     },
@@ -2139,7 +2139,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 889,
+            "line": 890,
             "column": 55
           }
         },
@@ -2149,7 +2149,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 889,
+            "line": 890,
             "column": 70
           }
         }
@@ -2157,7 +2157,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 888,
+        "line": 889,
         "column": 30
       }
     },
@@ -2181,7 +2181,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 875,
+            "line": 876,
             "column": 54,
             "isBuiltin": true
           }
@@ -2192,7 +2192,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 875,
+            "line": 876,
             "column": 68,
             "isBuiltin": true
           }
@@ -2201,7 +2201,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 874,
+        "line": 875,
         "column": 29
       }
     },
@@ -2223,7 +2223,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 849,
+        "line": 850,
         "column": 34
       }
     },
@@ -2255,7 +2255,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 834,
+        "line": 835,
         "column": 30
       }
     },
@@ -2287,7 +2287,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 820,
+        "line": 821,
         "column": 29
       }
     },
@@ -2319,7 +2319,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 804,
+        "line": 805,
         "column": 30
       }
     },
@@ -2351,7 +2351,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 793,
+        "line": 794,
         "column": 29
       }
     },
@@ -2373,7 +2373,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 777,
+        "line": 778,
         "column": 34
       }
     },
@@ -2405,7 +2405,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 763,
+        "line": 764,
         "column": 29
       }
     },
@@ -2429,7 +2429,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 744,
+            "line": 745,
             "column": 85
           }
         },
@@ -2439,7 +2439,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 744,
+            "line": 745,
             "column": 93
           }
         }
@@ -2447,7 +2447,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 744,
+        "line": 745,
         "column": 30
       }
     },
@@ -2471,7 +2471,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 727,
+            "line": 728,
             "column": 83,
             "isBuiltin": true
           }
@@ -2482,7 +2482,7 @@
           "location": {
             "fileName": "SDL_render.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-            "line": 727,
+            "line": 728,
             "column": 90,
             "isBuiltin": true
           }
@@ -2491,7 +2491,7 @@
       "location": {
         "fileName": "SDL_render.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_render.h",
-        "line": 727,
+        "line": 728,
         "column": 29
       }
     },
@@ -4409,7 +4409,7 @@
       "location": {
         "fileName": "SDL_hints.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-        "line": 1805,
+        "line": 1818,
         "column": 30
       }
     },
@@ -4423,7 +4423,7 @@
           "location": {
             "fileName": "SDL_hints.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-            "line": 1796,
+            "line": 1809,
             "column": 62
           }
         },
@@ -4433,7 +4433,7 @@
           "location": {
             "fileName": "SDL_hints.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-            "line": 1766,
+            "line": 1779,
             "column": 24
           }
         },
@@ -4443,7 +4443,7 @@
           "location": {
             "fileName": "SDL_hints.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-            "line": 1798,
+            "line": 1811,
             "column": 56
           }
         }
@@ -4451,7 +4451,7 @@
       "location": {
         "fileName": "SDL_hints.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-        "line": 1796,
+        "line": 1809,
         "column": 30
       }
     },
@@ -4465,7 +4465,7 @@
           "location": {
             "fileName": "SDL_hints.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-            "line": 1780,
+            "line": 1793,
             "column": 62
           }
         },
@@ -4475,7 +4475,7 @@
           "location": {
             "fileName": "SDL_hints.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-            "line": 1766,
+            "line": 1779,
             "column": 24
           }
         },
@@ -4485,7 +4485,7 @@
           "location": {
             "fileName": "SDL_hints.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-            "line": 1782,
+            "line": 1795,
             "column": 56
           }
         }
@@ -4493,7 +4493,7 @@
       "location": {
         "fileName": "SDL_hints.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-        "line": 1780,
+        "line": 1793,
         "column": 30
       }
     },
@@ -4507,7 +4507,7 @@
           "location": {
             "fileName": "SDL_hints.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-            "line": 1756,
+            "line": 1769,
             "column": 65
           }
         },
@@ -4525,7 +4525,7 @@
       "location": {
         "fileName": "SDL_hints.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-        "line": 1756,
+        "line": 1769,
         "column": 34
       }
     },
@@ -4539,7 +4539,7 @@
           "location": {
             "fileName": "SDL_hints.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-            "line": 1741,
+            "line": 1754,
             "column": 62
           }
         }
@@ -4547,7 +4547,7 @@
       "location": {
         "fileName": "SDL_hints.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-        "line": 1741,
+        "line": 1754,
         "column": 38
       }
     },
@@ -4561,7 +4561,7 @@
           "location": {
             "fileName": "SDL_hints.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-            "line": 1729,
+            "line": 1742,
             "column": 58
           }
         },
@@ -4571,7 +4571,7 @@
           "location": {
             "fileName": "SDL_hints.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-            "line": 1730,
+            "line": 1743,
             "column": 58
           }
         }
@@ -4579,7 +4579,7 @@
       "location": {
         "fileName": "SDL_hints.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-        "line": 1729,
+        "line": 1742,
         "column": 34
       }
     },
@@ -4593,7 +4593,7 @@
           "location": {
             "fileName": "SDL_hints.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-            "line": 1711,
+            "line": 1724,
             "column": 70
           }
         },
@@ -4603,7 +4603,7 @@
           "location": {
             "fileName": "SDL_hints.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-            "line": 1712,
+            "line": 1725,
             "column": 70
           }
         },
@@ -4613,7 +4613,7 @@
           "location": {
             "fileName": "SDL_hints.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-            "line": 1693,
+            "line": 1706,
             "column": 3
           }
         }
@@ -4621,7 +4621,7 @@
       "location": {
         "fileName": "SDL_hints.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-        "line": 1711,
+        "line": 1724,
         "column": 34
       }
     },
@@ -6170,7 +6170,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 844,
+        "line": 850,
         "column": 30
       }
     },
@@ -6194,7 +6194,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 834,
+            "line": 840,
             "column": 106
           }
         },
@@ -6204,7 +6204,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 834,
+            "line": 840,
             "column": 116,
             "isBuiltin": true
           }
@@ -6213,7 +6213,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 834,
+        "line": 840,
         "column": 29
       }
     },
@@ -6265,7 +6265,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 823,
+        "line": 829,
         "column": 29
       }
     },
@@ -6287,7 +6287,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 812,
+        "line": 818,
         "column": 34
       }
     },
@@ -6339,7 +6339,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 803,
+        "line": 809,
         "column": 29
       }
     },
@@ -6391,7 +6391,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 783,
+        "line": 789,
         "column": 29
       }
     },
@@ -6425,7 +6425,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 767,
+            "line": 773,
             "column": 125
           }
         },
@@ -6435,7 +6435,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 767,
+            "line": 773,
             "column": 135,
             "isBuiltin": true
           }
@@ -6444,7 +6444,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 767,
+        "line": 773,
         "column": 29
       }
     },
@@ -6476,7 +6476,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 753,
+        "line": 759,
         "column": 34
       }
     },
@@ -6518,7 +6518,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 744,
+        "line": 750,
         "column": 29
       }
     },
@@ -6550,7 +6550,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 734,
+        "line": 740,
         "column": 34
       }
     },
@@ -6574,7 +6574,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 725,
+            "line": 731,
             "column": 105,
             "isBuiltin": true
           }
@@ -6585,7 +6585,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 725,
+            "line": 731,
             "column": 119,
             "isBuiltin": true
           }
@@ -6606,7 +6606,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 725,
+            "line": 731,
             "column": 148
           }
         },
@@ -6616,7 +6616,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 725,
+            "line": 731,
             "column": 158
           }
         },
@@ -6626,7 +6626,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 725,
+            "line": 731,
             "column": 168
           }
         }
@@ -6634,7 +6634,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 725,
+        "line": 731,
         "column": 29
       }
     },
@@ -6658,7 +6658,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 720,
+            "line": 726,
             "column": 109,
             "isBuiltin": true
           }
@@ -6667,7 +6667,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 720,
+        "line": 726,
         "column": 29
       }
     },
@@ -6689,7 +6689,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 714,
+        "line": 720,
         "column": 29
       }
     },
@@ -6713,7 +6713,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 634,
+            "line": 640,
             "column": 3
           }
         }
@@ -6721,7 +6721,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 708,
+        "line": 714,
         "column": 31
       }
     },
@@ -6745,7 +6745,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 634,
+            "line": 640,
             "column": 3
           }
         }
@@ -6753,7 +6753,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 693,
+        "line": 699,
         "column": 34
       }
     },
@@ -6777,7 +6777,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 634,
+            "line": 640,
             "column": 3
           }
         }
@@ -6785,7 +6785,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 680,
+        "line": 686,
         "column": 1
       }
     },
@@ -6799,7 +6799,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 634,
+            "line": 640,
             "column": 3
           }
         }
@@ -6807,7 +6807,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 664,
+        "line": 670,
         "column": 37
       }
     },
@@ -6821,7 +6821,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 648,
+            "line": 654,
             "column": 100
           }
         }
@@ -6829,7 +6829,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 648,
+        "line": 654,
         "column": 50
       }
     },
@@ -6853,7 +6853,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 524,
+            "line": 526,
             "column": 3
           }
         }
@@ -6861,7 +6861,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 604,
+        "line": 610,
         "column": 1
       }
     },
@@ -6885,7 +6885,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 524,
+            "line": 526,
             "column": 3
           }
         }
@@ -6893,7 +6893,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 584,
+        "line": 590,
         "column": 1
       }
     },
@@ -6917,7 +6917,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 524,
+            "line": 526,
             "column": 3
           }
         }
@@ -6925,7 +6925,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 570,
+        "line": 576,
         "column": 1
       }
     },
@@ -6939,7 +6939,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 524,
+            "line": 526,
             "column": 3
           }
         }
@@ -6947,7 +6947,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 554,
+        "line": 560,
         "column": 37
       }
     },
@@ -6961,7 +6961,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 540,
+            "line": 546,
             "column": 96
           }
         }
@@ -6969,7 +6969,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 540,
+        "line": 546,
         "column": 48
       }
     },
@@ -6980,7 +6980,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 502,
+        "line": 504,
         "column": 30
       }
     },
@@ -6994,7 +6994,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 493,
+            "line": 495,
             "column": 62,
             "isBuiltin": true
           }
@@ -7003,7 +7003,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 493,
+        "line": 495,
         "column": 29
       }
     },
@@ -7025,7 +7025,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 473,
+        "line": 475,
         "column": 39
       }
     },
@@ -7047,7 +7047,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 454,
+        "line": 456,
         "column": 34
       }
     },
@@ -7069,7 +7069,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 441,
+        "line": 443,
         "column": 38
       }
     },
@@ -7091,7 +7091,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 430,
+        "line": 432,
         "column": 32
       }
     },
@@ -7113,7 +7113,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 420,
+        "line": 422,
         "column": 32
       }
     },
@@ -7135,7 +7135,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 410,
+        "line": 412,
         "column": 32
       }
     },
@@ -7159,7 +7159,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 400,
+            "line": 402,
             "column": 103,
             "isBuiltin": true
           }
@@ -7168,7 +7168,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 400,
+        "line": 402,
         "column": 30
       }
     },
@@ -7190,7 +7190,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 392,
+        "line": 394,
         "column": 29
       }
     },
@@ -7212,7 +7212,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 382,
+        "line": 384,
         "column": 48
       }
     },
@@ -7234,7 +7234,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 371,
+        "line": 373,
         "column": 37
       }
     },
@@ -7248,7 +7248,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 353,
+            "line": 355,
             "column": 83,
             "isBuiltin": true
           }
@@ -7257,7 +7257,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 353,
+        "line": 355,
         "column": 45
       }
     },
@@ -7279,7 +7279,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 338,
+        "line": 340,
         "column": 45
       }
     },
@@ -7293,7 +7293,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 327,
+            "line": 329,
             "column": 72,
             "isBuiltin": true
           }
@@ -7302,7 +7302,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 327,
+        "line": 329,
         "column": 45
       }
     },
@@ -7316,7 +7316,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 303,
+            "line": 305,
             "column": 75,
             "isBuiltin": true
           }
@@ -7325,7 +7325,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 303,
+        "line": 305,
         "column": 31
       }
     },
@@ -7339,7 +7339,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 291,
+            "line": 293,
             "column": 83,
             "isBuiltin": true
           }
@@ -7348,7 +7348,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 291,
+        "line": 293,
         "column": 48
       }
     },
@@ -7362,7 +7362,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 280,
+            "line": 282,
             "column": 72,
             "isBuiltin": true
           }
@@ -7371,7 +7371,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 280,
+        "line": 282,
         "column": 37
       }
     },
@@ -7385,7 +7385,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 259,
+            "line": 261,
             "column": 59,
             "isBuiltin": true
           }
@@ -7394,7 +7394,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 259,
+        "line": 261,
         "column": 34
       }
     },
@@ -7416,7 +7416,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 241,
+        "line": 243,
         "column": 32
       }
     },
@@ -7438,7 +7438,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 222,
+        "line": 224,
         "column": 32
       }
     },
@@ -7452,7 +7452,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 208,
+            "line": 210,
             "column": 70,
             "isBuiltin": true
           }
@@ -7461,7 +7461,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 208,
+        "line": 210,
         "column": 32
       }
     },
@@ -7472,7 +7472,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 200,
+        "line": 202,
         "column": 29
       }
     },
@@ -7486,7 +7486,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 193,
+            "line": 195,
             "column": 70
           }
         }
@@ -7494,7 +7494,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 193,
+        "line": 195,
         "column": 29
       }
     },
@@ -7518,7 +7518,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 159,
+            "line": 161,
             "column": 85,
             "isBuiltin": true
           }
@@ -7527,7 +7527,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 159,
+        "line": 161,
         "column": 29
       }
     },
@@ -9290,7 +9290,7 @@
           "location": {
             "fileName": "SDL_mouse.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_mouse.h",
-            "line": 393,
+            "line": 403,
             "column": 48,
             "isBuiltin": true
           }
@@ -9299,7 +9299,7 @@
       "location": {
         "fileName": "SDL_mouse.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_mouse.h",
-        "line": 393,
+        "line": 403,
         "column": 29
       }
     },
@@ -9321,7 +9321,7 @@
       "location": {
         "fileName": "SDL_mouse.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_mouse.h",
-        "line": 373,
+        "line": 383,
         "column": 30
       }
     },
@@ -9332,7 +9332,7 @@
       "location": {
         "fileName": "SDL_mouse.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_mouse.h",
-        "line": 359,
+        "line": 369,
         "column": 37
       }
     },
@@ -9343,7 +9343,7 @@
       "location": {
         "fileName": "SDL_mouse.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_mouse.h",
-        "line": 348,
+        "line": 358,
         "column": 37
       }
     },
@@ -9365,7 +9365,7 @@
       "location": {
         "fileName": "SDL_mouse.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_mouse.h",
-        "line": 336,
+        "line": 346,
         "column": 30
       }
     },
@@ -9387,7 +9387,7 @@
       "location": {
         "fileName": "SDL_mouse.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_mouse.h",
-        "line": 320,
+        "line": 330,
         "column": 37
       }
     },
@@ -9411,7 +9411,7 @@
           "location": {
             "fileName": "SDL_mouse.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_mouse.h",
-            "line": 306,
+            "line": 316,
             "column": 63,
             "isBuiltin": true
           }
@@ -9422,7 +9422,7 @@
           "location": {
             "fileName": "SDL_mouse.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_mouse.h",
-            "line": 307,
+            "line": 317,
             "column": 63,
             "isBuiltin": true
           }
@@ -9431,7 +9431,7 @@
       "location": {
         "fileName": "SDL_mouse.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_mouse.h",
-        "line": 305,
+        "line": 315,
         "column": 37
       }
     },
@@ -9465,7 +9465,7 @@
           "location": {
             "fileName": "SDL_mouse.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_mouse.h",
-            "line": 288,
+            "line": 298,
             "column": 58,
             "isBuiltin": true
           }
@@ -9476,7 +9476,7 @@
           "location": {
             "fileName": "SDL_mouse.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_mouse.h",
-            "line": 288,
+            "line": 298,
             "column": 65,
             "isBuiltin": true
           }
@@ -9487,7 +9487,7 @@
           "location": {
             "fileName": "SDL_mouse.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_mouse.h",
-            "line": 288,
+            "line": 298,
             "column": 72,
             "isBuiltin": true
           }
@@ -9498,7 +9498,7 @@
           "location": {
             "fileName": "SDL_mouse.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_mouse.h",
-            "line": 289,
+            "line": 299,
             "column": 58,
             "isBuiltin": true
           }
@@ -9507,7 +9507,7 @@
       "location": {
         "fileName": "SDL_mouse.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_mouse.h",
-        "line": 286,
+        "line": 296,
         "column": 37
       }
     },
@@ -9518,7 +9518,7 @@
       "location": {
         "fileName": "SDL_mouse.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_mouse.h",
-        "line": 245,
+        "line": 255,
         "column": 34
       }
     },
@@ -9540,7 +9540,7 @@
       "location": {
         "fileName": "SDL_mouse.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_mouse.h",
-        "line": 236,
+        "line": 246,
         "column": 29
       }
     },
@@ -9562,7 +9562,7 @@
       "location": {
         "fileName": "SDL_mouse.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_mouse.h",
-        "line": 199,
+        "line": 209,
         "column": 29
       }
     },
@@ -9576,7 +9576,7 @@
           "location": {
             "fileName": "SDL_mouse.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_mouse.h",
-            "line": 180,
+            "line": 186,
             "column": 53,
             "isBuiltin": true
           }
@@ -9587,7 +9587,7 @@
           "location": {
             "fileName": "SDL_mouse.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_mouse.h",
-            "line": 180,
+            "line": 186,
             "column": 60,
             "isBuiltin": true
           }
@@ -9596,7 +9596,7 @@
       "location": {
         "fileName": "SDL_mouse.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_mouse.h",
-        "line": 180,
+        "line": 186,
         "column": 29
       }
     },
@@ -9620,7 +9620,7 @@
           "location": {
             "fileName": "SDL_mouse.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_mouse.h",
-            "line": 161,
+            "line": 164,
             "column": 56,
             "isBuiltin": true
           }
@@ -9631,7 +9631,7 @@
           "location": {
             "fileName": "SDL_mouse.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_mouse.h",
-            "line": 161,
+            "line": 164,
             "column": 63,
             "isBuiltin": true
           }
@@ -9640,7 +9640,7 @@
       "location": {
         "fileName": "SDL_mouse.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_mouse.h",
-        "line": 160,
+        "line": 163,
         "column": 30
       }
     },
@@ -10047,7 +10047,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 203,
+            "line": 216,
             "column": 15
           }
         }
@@ -10055,7 +10055,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1876,
+        "line": 1888,
         "column": 30
       }
     },
@@ -10077,7 +10077,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1867,
+        "line": 1879,
         "column": 30
       }
     },
@@ -10088,7 +10088,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1853,
+        "line": 1865,
         "column": 29
       }
     },
@@ -10102,7 +10102,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1836,
+            "line": 1848,
             "column": 56,
             "isBuiltin": true
           }
@@ -10111,7 +10111,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1836,
+        "line": 1848,
         "column": 29
       }
     },
@@ -10135,7 +10135,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1801,
+            "line": 1813,
             "column": 79
           }
         },
@@ -10145,7 +10145,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1802,
+            "line": 1814,
             "column": 58
           }
         }
@@ -10153,7 +10153,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1801,
+        "line": 1813,
         "column": 30
       }
     },
@@ -10164,7 +10164,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1779,
+        "line": 1791,
         "column": 39
       }
     },
@@ -10175,7 +10175,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1767,
+        "line": 1779,
         "column": 37
       }
     },
@@ -10199,7 +10199,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 203,
+            "line": 216,
             "column": 15
           }
         }
@@ -10207,7 +10207,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1756,
+        "line": 1768,
         "column": 29
       }
     },
@@ -10229,7 +10229,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1741,
+        "line": 1753,
         "column": 39
       }
     },
@@ -10243,7 +10243,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 237,
+            "line": 250,
             "column": 3
           }
         },
@@ -10253,7 +10253,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1721,
+            "line": 1733,
             "column": 71
           }
         }
@@ -10261,7 +10261,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1721,
+        "line": 1733,
         "column": 29
       }
     },
@@ -10275,7 +10275,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 237,
+            "line": 250,
             "column": 3
           }
         },
@@ -10285,7 +10285,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1708,
+            "line": 1720,
             "column": 70,
             "isBuiltin": true
           }
@@ -10294,7 +10294,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1708,
+        "line": 1720,
         "column": 29
       }
     },
@@ -10305,7 +10305,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1690,
+        "line": 1702,
         "column": 30
       }
     },
@@ -10319,7 +10319,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1680,
+            "line": 1692,
             "column": 61
           }
         }
@@ -10327,7 +10327,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1679,
+        "line": 1691,
         "column": 34
       }
     },
@@ -10338,7 +10338,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1658,
+        "line": 1670,
         "column": 30
       }
     },
@@ -10352,7 +10352,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1651,
+            "line": 1663,
             "column": 65
           }
         }
@@ -10360,7 +10360,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1651,
+        "line": 1663,
         "column": 31
       }
     },
@@ -10374,7 +10374,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1600,
+            "line": 1612,
             "column": 60
           }
         }
@@ -10382,7 +10382,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1600,
+        "line": 1612,
         "column": 29
       }
     },
@@ -10393,7 +10393,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1574,
+        "line": 1586,
         "column": 30
       }
     },
@@ -10404,7 +10404,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1561,
+        "line": 1573,
         "column": 30
       }
     },
@@ -10415,7 +10415,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1551,
+        "line": 1563,
         "column": 34
       }
     },
@@ -10437,7 +10437,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1532,
+        "line": 1544,
         "column": 30
       }
     },
@@ -10456,20 +10456,20 @@
           }
         },
         {
-          "name": "flash_count",
-          "type": "Uint32",
+          "name": "operation",
+          "type": "SDL_FlashOperation",
           "location": {
-            "fileName": "SDL_stdinc.h",
-            "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_stdinc.h",
-            "line": 209,
-            "column": 18
+            "fileName": "SDL_video.h",
+            "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
+            "line": 211,
+            "column": 3
           }
         }
       ],
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1519,
+        "line": 1531,
         "column": 29
       }
     },
@@ -10493,7 +10493,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1461,
+            "line": 1475,
             "column": 37
           }
         },
@@ -10503,7 +10503,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1507,
+            "line": 1521,
             "column": 56
           }
         }
@@ -10511,7 +10511,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1505,
+        "line": 1519,
         "column": 29
       }
     },
@@ -10563,7 +10563,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1427,
+        "line": 1441,
         "column": 29
       }
     },
@@ -10615,7 +10615,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1401,
+        "line": 1415,
         "column": 29
       }
     },
@@ -10637,7 +10637,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1372,
+        "line": 1385,
         "column": 29
       }
     },
@@ -10669,7 +10669,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1355,
+        "line": 1368,
         "column": 29
       }
     },
@@ -10693,7 +10693,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1343,
+            "line": 1356,
             "column": 79
           }
         }
@@ -10701,7 +10701,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1343,
+        "line": 1356,
         "column": 29
       }
     },
@@ -10725,7 +10725,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1322,
+            "line": 1335,
             "column": 77,
             "isBuiltin": true
           }
@@ -10734,7 +10734,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1322,
+        "line": 1335,
         "column": 29
       }
     },
@@ -10756,7 +10756,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1303,
+        "line": 1316,
         "column": 31
       }
     },
@@ -10780,7 +10780,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1286,
+            "line": 1299,
             "column": 80,
             "isBuiltin": true
           }
@@ -10789,7 +10789,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1286,
+        "line": 1299,
         "column": 29
       }
     },
@@ -10800,7 +10800,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1260,
+        "line": 1273,
         "column": 38
       }
     },
@@ -10822,7 +10822,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1248,
+        "line": 1261,
         "column": 34
       }
     },
@@ -10844,7 +10844,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1237,
+        "line": 1250,
         "column": 34
       }
     },
@@ -10866,7 +10866,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1226,
+        "line": 1239,
         "column": 34
       }
     },
@@ -10898,7 +10898,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1215,
+        "line": 1228,
         "column": 30
       }
     },
@@ -10930,7 +10930,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1203,
+        "line": 1216,
         "column": 30
       }
     },
@@ -10962,7 +10962,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1187,
+        "line": 1200,
         "column": 30
       }
     },
@@ -10996,7 +10996,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1171,
+            "line": 1184,
             "column": 62,
             "isBuiltin": true
           }
@@ -11005,7 +11005,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1169,
+        "line": 1182,
         "column": 29
       }
     },
@@ -11027,7 +11027,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1149,
+        "line": 1162,
         "column": 29
       }
     },
@@ -11049,7 +11049,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1132,
+        "line": 1145,
         "column": 39
       }
     },
@@ -11081,7 +11081,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1108,
+        "line": 1121,
         "column": 29
       }
     },
@@ -11103,7 +11103,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1089,
+        "line": 1102,
         "column": 30
       }
     },
@@ -11125,7 +11125,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1079,
+        "line": 1092,
         "column": 30
       }
     },
@@ -11147,7 +11147,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1069,
+        "line": 1082,
         "column": 30
       }
     },
@@ -11169,7 +11169,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1059,
+        "line": 1072,
         "column": 30
       }
     },
@@ -11191,7 +11191,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1052,
+        "line": 1065,
         "column": 30
       }
     },
@@ -11213,7 +11213,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1043,
+        "line": 1056,
         "column": 30
       }
     },
@@ -11245,7 +11245,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1033,
+        "line": 1046,
         "column": 30
       }
     },
@@ -11277,7 +11277,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1017,
+        "line": 1030,
         "column": 30
       }
     },
@@ -11309,7 +11309,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 998,
+        "line": 1011,
         "column": 30
       }
     },
@@ -11333,7 +11333,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 980,
+            "line": 993,
             "column": 60
           }
         },
@@ -11343,7 +11343,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 980,
+            "line": 993,
             "column": 68
           }
         }
@@ -11351,7 +11351,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 979,
+        "line": 992,
         "column": 30
       }
     },
@@ -11375,7 +11375,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 965,
+            "line": 978,
             "column": 59,
             "isBuiltin": true
           }
@@ -11386,7 +11386,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 965,
+            "line": 978,
             "column": 70,
             "isBuiltin": true
           }
@@ -11395,7 +11395,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 964,
+        "line": 977,
         "column": 30
       }
     },
@@ -11419,7 +11419,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 952,
+            "line": 965,
             "column": 60
           }
         },
@@ -11429,7 +11429,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 952,
+            "line": 965,
             "column": 68
           }
         }
@@ -11437,7 +11437,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 951,
+        "line": 964,
         "column": 30
       }
     },
@@ -11461,7 +11461,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 937,
+            "line": 950,
             "column": 59,
             "isBuiltin": true
           }
@@ -11472,7 +11472,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 937,
+            "line": 950,
             "column": 70,
             "isBuiltin": true
           }
@@ -11481,7 +11481,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 936,
+        "line": 949,
         "column": 30
       }
     },
@@ -11505,7 +11505,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 923,
+            "line": 936,
             "column": 59
           }
         },
@@ -11515,7 +11515,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 923,
+            "line": 936,
             "column": 69
           }
         },
@@ -11525,7 +11525,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 924,
+            "line": 937,
             "column": 59
           }
         },
@@ -11535,7 +11535,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 924,
+            "line": 937,
             "column": 72
           }
         }
@@ -11543,7 +11543,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 922,
+        "line": 935,
         "column": 29
       }
     },
@@ -11567,7 +11567,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 887,
+            "line": 900,
             "column": 74
           }
         },
@@ -11577,7 +11577,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 888,
+            "line": 901,
             "column": 53
           }
         }
@@ -11585,7 +11585,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 887,
+        "line": 900,
         "column": 30
       }
     },
@@ -11609,7 +11609,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 862,
+            "line": 875,
             "column": 73,
             "isBuiltin": true
           }
@@ -11620,7 +11620,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 863,
+            "line": 876,
             "column": 52,
             "isBuiltin": true
           }
@@ -11629,7 +11629,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 862,
+        "line": 875,
         "column": 30
       }
     },
@@ -11653,7 +11653,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 840,
+            "line": 853,
             "column": 57
           }
         },
@@ -11663,7 +11663,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 840,
+            "line": 853,
             "column": 65
           }
         }
@@ -11671,7 +11671,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 839,
+        "line": 852,
         "column": 30
       }
     },
@@ -11695,7 +11695,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 823,
+            "line": 836,
             "column": 56,
             "isBuiltin": true
           }
@@ -11706,7 +11706,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 823,
+            "line": 836,
             "column": 63,
             "isBuiltin": true
           }
@@ -11715,7 +11715,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 822,
+        "line": 835,
         "column": 30
       }
     },
@@ -11739,7 +11739,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 807,
+            "line": 820,
             "column": 61
           }
         }
@@ -11747,7 +11747,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 806,
+        "line": 819,
         "column": 31
       }
     },
@@ -11771,7 +11771,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 794,
+            "line": 807,
             "column": 61
           }
         },
@@ -11781,7 +11781,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 795,
+            "line": 808,
             "column": 55
           }
         }
@@ -11789,7 +11789,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 793,
+        "line": 806,
         "column": 31
       }
     },
@@ -11821,7 +11821,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 778,
+        "line": 791,
         "column": 30
       }
     },
@@ -11843,7 +11843,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 770,
+        "line": 783,
         "column": 37
       }
     },
@@ -11867,7 +11867,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 759,
+            "line": 772,
             "column": 61
           }
         }
@@ -11875,7 +11875,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 758,
+        "line": 771,
         "column": 30
       }
     },
@@ -11897,7 +11897,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 746,
+        "line": 759,
         "column": 32
       }
     },
@@ -11919,7 +11919,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 730,
+        "line": 743,
         "column": 38
       }
     },
@@ -11941,7 +11941,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 716,
+        "line": 729,
         "column": 32
       }
     },
@@ -11955,7 +11955,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 700,
+            "line": 713,
             "column": 71
           }
         }
@@ -11963,7 +11963,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 700,
+        "line": 713,
         "column": 38
       }
     },
@@ -11977,7 +11977,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 681,
+            "line": 694,
             "column": 67
           }
         },
@@ -11987,7 +11987,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 682,
+            "line": 695,
             "column": 59,
             "isBuiltin": true
           }
@@ -11998,7 +11998,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 682,
+            "line": 695,
             "column": 66,
             "isBuiltin": true
           }
@@ -12009,7 +12009,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 682,
+            "line": 695,
             "column": 73,
             "isBuiltin": true
           }
@@ -12020,7 +12020,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 683,
+            "line": 696,
             "column": 59,
             "isBuiltin": true
           }
@@ -12039,7 +12039,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 681,
+        "line": 694,
         "column": 38
       }
     },
@@ -12061,7 +12061,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 611,
+        "line": 624,
         "column": 32
       }
     },
@@ -12093,7 +12093,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 600,
+        "line": 613,
         "column": 29
       }
     },
@@ -12125,7 +12125,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 585,
+        "line": 598,
         "column": 29
       }
     },
@@ -12147,7 +12147,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 566,
+        "line": 579,
         "column": 29
       }
     },
@@ -12161,7 +12161,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 553,
+            "line": 566,
             "column": 73,
             "isBuiltin": true
           }
@@ -12190,7 +12190,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 553,
+        "line": 566,
         "column": 43
       }
     },
@@ -12204,7 +12204,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 529,
+            "line": 542,
             "column": 59,
             "isBuiltin": true
           }
@@ -12223,7 +12223,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 529,
+        "line": 542,
         "column": 29
       }
     },
@@ -12237,7 +12237,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 508,
+            "line": 521,
             "column": 59,
             "isBuiltin": true
           }
@@ -12256,7 +12256,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 508,
+        "line": 521,
         "column": 29
       }
     },
@@ -12270,7 +12270,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 487,
+            "line": 500,
             "column": 52,
             "isBuiltin": true
           }
@@ -12281,7 +12281,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 487,
+            "line": 500,
             "column": 70,
             "isBuiltin": true
           }
@@ -12300,7 +12300,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 487,
+        "line": 500,
         "column": 29
       }
     },
@@ -12314,7 +12314,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 465,
+            "line": 478,
             "column": 56,
             "isBuiltin": true
           }
@@ -12323,7 +12323,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 465,
+        "line": 478,
         "column": 29
       }
     },
@@ -12337,7 +12337,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 448,
+            "line": 461,
             "column": 78,
             "isBuiltin": true
           }
@@ -12346,7 +12346,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 448,
+        "line": 461,
         "column": 48
       }
     },
@@ -12360,7 +12360,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 437,
+            "line": 450,
             "column": 51,
             "isBuiltin": true
           }
@@ -12371,7 +12371,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 437,
+            "line": 450,
             "column": 73
           }
         },
@@ -12381,7 +12381,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 437,
+            "line": 450,
             "column": 87
           }
         },
@@ -12391,7 +12391,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 437,
+            "line": 450,
             "column": 101
           }
         }
@@ -12399,7 +12399,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 437,
+        "line": 450,
         "column": 29
       }
     },
@@ -12413,7 +12413,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 411,
+            "line": 424,
             "column": 60,
             "isBuiltin": true
           }
@@ -12432,7 +12432,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 411,
+        "line": 424,
         "column": 29
       }
     },
@@ -12446,7 +12446,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 380,
+            "line": 393,
             "column": 54,
             "isBuiltin": true
           }
@@ -12465,7 +12465,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 380,
+        "line": 393,
         "column": 29
       }
     },
@@ -12479,7 +12479,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 366,
+            "line": 379,
             "column": 61,
             "isBuiltin": true
           }
@@ -12488,7 +12488,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 366,
+        "line": 379,
         "column": 38
       }
     },
@@ -12499,7 +12499,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 352,
+        "line": 365,
         "column": 29
       }
     },
@@ -12510,7 +12510,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 340,
+        "line": 353,
         "column": 37
       }
     },
@@ -12521,7 +12521,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 327,
+        "line": 340,
         "column": 30
       }
     },
@@ -12535,7 +12535,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 318,
+            "line": 331,
             "column": 55
           }
         }
@@ -12543,7 +12543,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 318,
+        "line": 331,
         "column": 29
       }
     },
@@ -12557,7 +12557,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 289,
+            "line": 302,
             "column": 60,
             "isBuiltin": true
           }
@@ -12566,7 +12566,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 289,
+        "line": 302,
         "column": 37
       }
     },
@@ -12577,7 +12577,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 276,
+        "line": 289,
         "column": 29
       }
     },
@@ -22801,7 +22801,7 @@
           "location": {
             "fileName": "SDL_hints.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-            "line": 1766,
+            "line": 1779,
             "column": 48
           }
         },
@@ -22811,7 +22811,7 @@
           "location": {
             "fileName": "SDL_hints.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-            "line": 1766,
+            "line": 1779,
             "column": 70
           }
         },
@@ -22821,7 +22821,7 @@
           "location": {
             "fileName": "SDL_hints.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-            "line": 1766,
+            "line": 1779,
             "column": 88
           }
         },
@@ -22831,7 +22831,7 @@
           "location": {
             "fileName": "SDL_hints.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-            "line": 1766,
+            "line": 1779,
             "column": 110
           }
         }
@@ -22839,7 +22839,7 @@
       "location": {
         "fileName": "SDL_hints.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-        "line": 1766,
+        "line": 1779,
         "column": 24
       }
     },
@@ -23050,7 +23050,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1463,
+            "line": 1477,
             "column": 56
           }
         }
@@ -23058,7 +23058,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1461,
+        "line": 1475,
         "column": 37
       }
     },
@@ -28615,7 +28615,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 79,
+            "line": 81,
             "column": 3
           }
         },
@@ -28626,7 +28626,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 87,
+            "line": 89,
             "column": 5
           }
         }
@@ -28642,7 +28642,7 @@
               "location": {
                 "fileName": "SDL_gamecontroller.h",
                 "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-                "line": 89,
+                "line": 91,
                 "column": 13,
                 "isBuiltin": true
               }
@@ -28653,7 +28653,7 @@
               "location": {
                 "fileName": "SDL_gamecontroller.h",
                 "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-                "line": 90,
+                "line": 92,
                 "column": 13,
                 "isBuiltin": true
               }
@@ -28664,7 +28664,7 @@
               "location": {
                 "fileName": "SDL_gamecontroller.h",
                 "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-                "line": 91,
+                "line": 93,
                 "column": 9
               }
             }
@@ -28679,7 +28679,7 @@
                   "location": {
                     "fileName": "SDL_gamecontroller.h",
                     "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-                    "line": 92,
+                    "line": 94,
                     "column": 17,
                     "isBuiltin": true
                   }
@@ -28691,7 +28691,7 @@
                   "location": {
                     "fileName": "SDL_gamecontroller.h",
                     "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-                    "line": 93,
+                    "line": 95,
                     "column": 17,
                     "isBuiltin": true
                   }
@@ -28701,7 +28701,7 @@
               "location": {
                 "fileName": "SDL_gamecontroller.h",
                 "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-                "line": 91,
+                "line": 93,
                 "column": 9
               }
             }
@@ -28709,7 +28709,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 87,
+            "line": 89,
             "column": 5
           }
         }
@@ -28717,7 +28717,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 97,
+        "line": 99,
         "column": 3
       }
     },
@@ -29606,7 +29606,7 @@
           "location": {
             "fileName": "SDL_hints.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-            "line": 1690,
+            "line": 1703,
             "column": 5,
             "isBuiltin": true
           }
@@ -29617,7 +29617,7 @@
           "location": {
             "fileName": "SDL_hints.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-            "line": 1691,
+            "line": 1704,
             "column": 5,
             "isBuiltin": true
           }
@@ -29628,7 +29628,7 @@
           "location": {
             "fileName": "SDL_hints.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-            "line": 1692,
+            "line": 1705,
             "column": 5,
             "isBuiltin": true
           }
@@ -29637,7 +29637,7 @@
       "location": {
         "fileName": "SDL_hints.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-        "line": 1693,
+        "line": 1706,
         "column": 3
       }
     },
@@ -32505,7 +32505,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 611,
+            "line": 617,
             "column": 5,
             "isBuiltin": true
           }
@@ -32515,7 +32515,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 612,
+            "line": 618,
             "column": 5,
             "isBuiltin": true
           }
@@ -32526,7 +32526,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 613,
+            "line": 619,
             "column": 5,
             "isBuiltin": true
           }
@@ -32537,7 +32537,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 614,
+            "line": 620,
             "column": 5,
             "isBuiltin": true
           }
@@ -32548,7 +32548,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 615,
+            "line": 621,
             "column": 5,
             "isBuiltin": true
           }
@@ -32559,7 +32559,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 616,
+            "line": 622,
             "column": 5,
             "isBuiltin": true
           }
@@ -32570,7 +32570,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 617,
+            "line": 623,
             "column": 5,
             "isBuiltin": true
           }
@@ -32581,7 +32581,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 618,
+            "line": 624,
             "column": 5,
             "isBuiltin": true
           }
@@ -32592,7 +32592,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 619,
+            "line": 625,
             "column": 5,
             "isBuiltin": true
           }
@@ -32603,7 +32603,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 620,
+            "line": 626,
             "column": 5,
             "isBuiltin": true
           }
@@ -32614,7 +32614,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 621,
+            "line": 627,
             "column": 5,
             "isBuiltin": true
           }
@@ -32625,7 +32625,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 622,
+            "line": 628,
             "column": 5,
             "isBuiltin": true
           }
@@ -32636,7 +32636,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 623,
+            "line": 629,
             "column": 5,
             "isBuiltin": true
           }
@@ -32647,7 +32647,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 624,
+            "line": 630,
             "column": 5,
             "isBuiltin": true
           }
@@ -32658,7 +32658,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 625,
+            "line": 631,
             "column": 5,
             "isBuiltin": true
           }
@@ -32669,7 +32669,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 626,
+            "line": 632,
             "column": 5,
             "isBuiltin": true
           }
@@ -32680,7 +32680,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 627,
+            "line": 633,
             "column": 5,
             "isBuiltin": true
           }
@@ -32691,7 +32691,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 628,
+            "line": 634,
             "column": 5,
             "isBuiltin": true
           }
@@ -32702,7 +32702,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 629,
+            "line": 635,
             "column": 5,
             "isBuiltin": true
           }
@@ -32713,7 +32713,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 630,
+            "line": 636,
             "column": 5,
             "isBuiltin": true
           }
@@ -32724,7 +32724,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 631,
+            "line": 637,
             "column": 5,
             "isBuiltin": true
           }
@@ -32735,7 +32735,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 632,
+            "line": 638,
             "column": 5,
             "isBuiltin": true
           }
@@ -32746,7 +32746,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 633,
+            "line": 639,
             "column": 5,
             "isBuiltin": true
           }
@@ -32755,7 +32755,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 634,
+        "line": 640,
         "column": 3
       }
     },
@@ -32769,7 +32769,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 75,
+            "line": 77,
             "column": 5,
             "isBuiltin": true
           }
@@ -32780,7 +32780,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 76,
+            "line": 78,
             "column": 5,
             "isBuiltin": true
           }
@@ -32791,7 +32791,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 77,
+            "line": 79,
             "column": 5,
             "isBuiltin": true
           }
@@ -32802,7 +32802,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 78,
+            "line": 80,
             "column": 5,
             "isBuiltin": true
           }
@@ -32811,7 +32811,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 79,
+        "line": 81,
         "column": 3
       }
     },
@@ -32826,7 +32826,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 516,
+            "line": 518,
             "column": 5,
             "isBuiltin": true
           }
@@ -32836,7 +32836,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 517,
+            "line": 519,
             "column": 5,
             "isBuiltin": true
           }
@@ -32847,7 +32847,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 518,
+            "line": 520,
             "column": 5,
             "isBuiltin": true
           }
@@ -32858,7 +32858,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 519,
+            "line": 521,
             "column": 5,
             "isBuiltin": true
           }
@@ -32869,7 +32869,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 520,
+            "line": 522,
             "column": 5,
             "isBuiltin": true
           }
@@ -32880,7 +32880,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 521,
+            "line": 523,
             "column": 5,
             "isBuiltin": true
           }
@@ -32891,7 +32891,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 522,
+            "line": 524,
             "column": 5,
             "isBuiltin": true
           }
@@ -32902,7 +32902,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-            "line": 523,
+            "line": 525,
             "column": 5,
             "isBuiltin": true
           }
@@ -32911,7 +32911,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 524,
+        "line": 526,
         "column": 3
       }
     },
@@ -33006,12 +33006,34 @@
             "column": 5,
             "isBuiltin": true
           }
+        },
+        {
+          "name": "SDL_CONTROLLER_TYPE_AMAZON_LUNA",
+          "value": 8,
+          "location": {
+            "fileName": "SDL_gamecontroller.h",
+            "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
+            "line": 71,
+            "column": 5,
+            "isBuiltin": true
+          }
+        },
+        {
+          "name": "SDL_CONTROLLER_TYPE_GOOGLE_STADIA",
+          "value": 9,
+          "location": {
+            "fileName": "SDL_gamecontroller.h",
+            "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
+            "line": 72,
+            "column": 5,
+            "isBuiltin": true
+          }
         }
       ],
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 71,
+        "line": 73,
         "column": 3
       }
     },
@@ -33590,7 +33612,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 210,
+            "line": 223,
             "column": 5,
             "isBuiltin": true
           }
@@ -33601,7 +33623,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 211,
+            "line": 224,
             "column": 5,
             "isBuiltin": true
           }
@@ -33612,7 +33634,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 212,
+            "line": 225,
             "column": 5,
             "isBuiltin": true
           }
@@ -33623,7 +33645,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 213,
+            "line": 226,
             "column": 5,
             "isBuiltin": true
           }
@@ -33634,7 +33656,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 214,
+            "line": 227,
             "column": 5,
             "isBuiltin": true
           }
@@ -33645,7 +33667,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 215,
+            "line": 228,
             "column": 5,
             "isBuiltin": true
           }
@@ -33656,7 +33678,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 216,
+            "line": 229,
             "column": 5,
             "isBuiltin": true
           }
@@ -33667,7 +33689,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 217,
+            "line": 230,
             "column": 5,
             "isBuiltin": true
           }
@@ -33678,7 +33700,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 218,
+            "line": 231,
             "column": 5,
             "isBuiltin": true
           }
@@ -33689,7 +33711,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 219,
+            "line": 232,
             "column": 5,
             "isBuiltin": true
           }
@@ -33700,7 +33722,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 220,
+            "line": 233,
             "column": 5,
             "isBuiltin": true
           }
@@ -33711,7 +33733,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 221,
+            "line": 234,
             "column": 5,
             "isBuiltin": true
           }
@@ -33722,7 +33744,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 222,
+            "line": 235,
             "column": 5,
             "isBuiltin": true
           }
@@ -33733,7 +33755,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 223,
+            "line": 236,
             "column": 5,
             "isBuiltin": true
           }
@@ -33744,7 +33766,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 224,
+            "line": 237,
             "column": 5,
             "isBuiltin": true
           }
@@ -33755,7 +33777,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 225,
+            "line": 238,
             "column": 5,
             "isBuiltin": true
           }
@@ -33766,7 +33788,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 226,
+            "line": 239,
             "column": 5,
             "isBuiltin": true
           }
@@ -33777,7 +33799,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 227,
+            "line": 240,
             "column": 5,
             "isBuiltin": true
           }
@@ -33788,7 +33810,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 228,
+            "line": 241,
             "column": 5,
             "isBuiltin": true
           }
@@ -33799,7 +33821,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 229,
+            "line": 242,
             "column": 5,
             "isBuiltin": true
           }
@@ -33810,7 +33832,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 230,
+            "line": 243,
             "column": 5,
             "isBuiltin": true
           }
@@ -33821,7 +33843,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 231,
+            "line": 244,
             "column": 5,
             "isBuiltin": true
           }
@@ -33832,7 +33854,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 232,
+            "line": 245,
             "column": 5,
             "isBuiltin": true
           }
@@ -33843,7 +33865,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 233,
+            "line": 246,
             "column": 5,
             "isBuiltin": true
           }
@@ -33854,7 +33876,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 234,
+            "line": 247,
             "column": 5,
             "isBuiltin": true
           }
@@ -33865,7 +33887,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 235,
+            "line": 248,
             "column": 5,
             "isBuiltin": true
           }
@@ -33876,7 +33898,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 236,
+            "line": 249,
             "column": 5,
             "isBuiltin": true
           }
@@ -33885,7 +33907,52 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 237,
+        "line": 250,
+        "column": 3
+      }
+    },
+    {
+      "name": "SDL_FlashOperation",
+      "type": "SDL_FlashOperation",
+      "typeInteger": "unsigned int",
+      "values": [
+        {
+          "name": "SDL_FLASH_CANCEL",
+          "location": {
+            "fileName": "SDL_video.h",
+            "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
+            "line": 208,
+            "column": 5,
+            "isBuiltin": true
+          }
+        },
+        {
+          "name": "SDL_FLASH_BRIEFLY",
+          "value": 1,
+          "location": {
+            "fileName": "SDL_video.h",
+            "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
+            "line": 209,
+            "column": 5,
+            "isBuiltin": true
+          }
+        },
+        {
+          "name": "SDL_FLASH_UNTIL_FOCUSED",
+          "value": 2,
+          "location": {
+            "fileName": "SDL_video.h",
+            "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
+            "line": 210,
+            "column": 5,
+            "isBuiltin": true
+          }
+        }
+      ],
+      "location": {
+        "fileName": "SDL_video.h",
+        "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
+        "line": 211,
         "column": 3
       }
     },
@@ -33899,7 +33966,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1439,
+            "line": 1453,
             "column": 5,
             "isBuiltin": true
           }
@@ -33910,7 +33977,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1440,
+            "line": 1454,
             "column": 5,
             "isBuiltin": true
           }
@@ -33921,7 +33988,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1441,
+            "line": 1455,
             "column": 5,
             "isBuiltin": true
           }
@@ -33932,7 +33999,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1442,
+            "line": 1456,
             "column": 5,
             "isBuiltin": true
           }
@@ -33943,7 +34010,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1443,
+            "line": 1457,
             "column": 5,
             "isBuiltin": true
           }
@@ -33954,7 +34021,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1444,
+            "line": 1458,
             "column": 5,
             "isBuiltin": true
           }
@@ -33965,7 +34032,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1445,
+            "line": 1459,
             "column": 5,
             "isBuiltin": true
           }
@@ -33976,7 +34043,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1446,
+            "line": 1460,
             "column": 5,
             "isBuiltin": true
           }
@@ -33987,7 +34054,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1447,
+            "line": 1461,
             "column": 5,
             "isBuiltin": true
           }
@@ -33998,7 +34065,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 1448,
+            "line": 1462,
             "column": 5,
             "isBuiltin": true
           }
@@ -34007,7 +34074,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1449,
+        "line": 1463,
         "column": 3
       }
     },
@@ -34021,7 +34088,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 193,
+            "line": 196,
             "column": 5,
             "isBuiltin": true
           }
@@ -34032,7 +34099,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 194,
+            "line": 197,
             "column": 5,
             "isBuiltin": true
           }
@@ -34043,7 +34110,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 195,
+            "line": 198,
             "column": 5,
             "isBuiltin": true
           }
@@ -34054,7 +34121,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 196,
+            "line": 199,
             "column": 5,
             "isBuiltin": true
           }
@@ -34065,7 +34132,7 @@
           "location": {
             "fileName": "SDL_video.h",
             "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-            "line": 197,
+            "line": 200,
             "column": 5,
             "isBuiltin": true
           }
@@ -34074,7 +34141,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 198,
+        "line": 201,
         "column": 3
       }
     },
@@ -34893,7 +34960,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 203,
+        "line": 216,
         "column": 15
       }
     },
@@ -35934,7 +36001,7 @@
       "location": {
         "fileName": "SDL_hints.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-        "line": 1766,
+        "line": 1779,
         "column": 24
       }
     },
@@ -35946,7 +36013,7 @@
       "location": {
         "fileName": "SDL_hints.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_hints.h",
-        "line": 1693,
+        "line": 1706,
         "column": 3
       }
     },
@@ -36973,7 +37040,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 634,
+        "line": 640,
         "column": 3
       }
     },
@@ -36985,7 +37052,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 97,
+        "line": 99,
         "column": 3
       }
     },
@@ -36997,7 +37064,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 79,
+        "line": 81,
         "column": 3
       }
     },
@@ -37009,7 +37076,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 87,
+        "line": 89,
         "column": 5
       }
     },
@@ -37021,7 +37088,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 91,
+        "line": 93,
         "column": 9
       }
     },
@@ -37033,7 +37100,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 524,
+        "line": 526,
         "column": 3
       }
     },
@@ -37045,7 +37112,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_gamecontroller.h",
-        "line": 71,
+        "line": 73,
         "column": 3
       }
     },
@@ -37199,7 +37266,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 203,
+        "line": 216,
         "column": 15
       }
     },
@@ -37211,7 +37278,19 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 237,
+        "line": 250,
+        "column": 3
+      }
+    },
+    {
+      "name": "SDL_FlashOperation",
+      "kind": "typedef",
+      "sizeOf": 4,
+      "alignOf": 4,
+      "location": {
+        "fileName": "SDL_video.h",
+        "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
+        "line": 211,
         "column": 3
       }
     },
@@ -37223,7 +37302,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1461,
+        "line": 1475,
         "column": 37
       }
     },
@@ -37235,7 +37314,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 1449,
+        "line": 1463,
         "column": 3
       }
     },
@@ -37271,7 +37350,7 @@
       "location": {
         "fileName": "SDL_video.h",
         "filePath": "D:\\a\\sdl-cs\\sdl-cs\\ext\\SDL\\include\\SDL_video.h",
-        "line": 198,
+        "line": 201,
         "column": 3
       }
     },

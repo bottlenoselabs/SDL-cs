@@ -149,183 +149,183 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern SDL_Window* SDL_CreateShapedWindow(CString title, uint x, uint y, uint w, uint h, uint flags);
 
-    // Function @ SDL_render.h:1614:31 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1615:31 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void* SDL_RenderGetMetalCommandEncoder(SDL_Renderer* renderer);
 
-    // Function @ SDL_render.h:1600:31 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1601:31 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void* SDL_RenderGetMetalLayer(SDL_Renderer* renderer);
 
-    // Function @ SDL_render.h:1586:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1587:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GL_UnbindTexture(SDL_Texture* texture);
 
-    // Function @ SDL_render.h:1573:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1574:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GL_BindTexture(SDL_Texture* texture, float* texw, float* texh);
 
-    // Function @ SDL_render.h:1535:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1536:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderFlush(SDL_Renderer* renderer);
 
-    // Function @ SDL_render.h:1504:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1505:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void SDL_DestroyRenderer(SDL_Renderer* renderer);
 
-    // Function @ SDL_render.h:1495:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1496:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void SDL_DestroyTexture(SDL_Texture* texture);
 
-    // Function @ SDL_render.h:1482:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1483:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void SDL_RenderPresent(SDL_Renderer* renderer);
 
-    // Function @ SDL_render.h:1444:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1445:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderReadPixels(SDL_Renderer* renderer, SDL_Rect* rect, uint format, void* pixels, int pitch);
 
-    // Function @ SDL_render.h:1413:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1414:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderCopyExF(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect* srcrect, SDL_FRect* dstrect, double angle, SDL_FPoint* center, SDL_RendererFlip flip);
 
-    // Function @ SDL_render.h:1389:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1390:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderCopyF(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect* srcrect, SDL_FRect* dstrect);
 
-    // Function @ SDL_render.h:1373:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1374:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderFillRectsF(SDL_Renderer* renderer, SDL_FRect* rects, int count);
 
-    // Function @ SDL_render.h:1361:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1362:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderFillRectF(SDL_Renderer* renderer, SDL_FRect* rect);
 
-    // Function @ SDL_render.h:1348:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1349:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawRectsF(SDL_Renderer* renderer, SDL_FRect* rects, int count);
 
-    // Function @ SDL_render.h:1336:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1337:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawRectF(SDL_Renderer* renderer, SDL_FRect* rect);
 
-    // Function @ SDL_render.h:1324:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1325:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawLinesF(SDL_Renderer* renderer, SDL_FPoint* points, int count);
 
-    // Function @ SDL_render.h:1312:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1313:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawLineF(SDL_Renderer* renderer, float x1, float y1, float x2, float y2);
 
-    // Function @ SDL_render.h:1298:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1299:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawPointsF(SDL_Renderer* renderer, SDL_FPoint* points, int count);
 
-    // Function @ SDL_render.h:1287:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1288:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawPointF(SDL_Renderer* renderer, float x, float y);
 
-    // Function @ SDL_render.h:1270:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1271:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderCopyEx(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect* srcrect, SDL_Rect* dstrect, double angle, SDL_Point* center, SDL_RendererFlip flip);
 
-    // Function @ SDL_render.h:1228:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1229:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderCopy(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect* srcrect, SDL_Rect* dstrect);
 
-    // Function @ SDL_render.h:1198:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1199:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderFillRects(SDL_Renderer* renderer, SDL_Rect* rects, int count);
 
-    // Function @ SDL_render.h:1175:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1176:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderFillRect(SDL_Renderer* renderer, SDL_Rect* rect);
 
-    // Function @ SDL_render.h:1147:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1148:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawRects(SDL_Renderer* renderer, SDL_Rect* rects, int count);
 
-    // Function @ SDL_render.h:1123:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1124:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawRect(SDL_Renderer* renderer, SDL_Rect* rect);
 
-    // Function @ SDL_render.h:1099:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1100:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawLines(SDL_Renderer* renderer, SDL_Point* points, int count);
 
-    // Function @ SDL_render.h:1073:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1074:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawLine(SDL_Renderer* renderer, int x1, int y1, int x2, int y2);
 
-    // Function @ SDL_render.h:1042:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1043:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawPoints(SDL_Renderer* renderer, SDL_Point* points, int count);
 
-    // Function @ SDL_render.h:1018:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:1019:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawPoint(SDL_Renderer* renderer, int x, int y);
 
-    // Function @ SDL_render.h:993:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:994:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderClear(SDL_Renderer* renderer);
 
-    // Function @ SDL_render.h:976:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:977:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetRenderDrawBlendMode(SDL_Renderer* renderer, SDL_BlendMode* blendMode);
 
-    // Function @ SDL_render.h:963:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:964:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetRenderDrawBlendMode(SDL_Renderer* renderer, SDL_BlendMode blendMode);
 
-    // Function @ SDL_render.h:939:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:940:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetRenderDrawColor(SDL_Renderer* renderer, byte* r, byte* g, byte* b, byte* a);
 
-    // Function @ SDL_render.h:918:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:919:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetRenderDrawColor(SDL_Renderer* renderer, byte r, byte g, byte b, byte a);
 
-    // Function @ SDL_render.h:888:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:889:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void SDL_RenderGetScale(SDL_Renderer* renderer, float* scaleX, float* scaleY);
 
-    // Function @ SDL_render.h:874:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:875:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderSetScale(SDL_Renderer* renderer, float scaleX, float scaleY);
 
-    // Function @ SDL_render.h:849:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:850:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_RenderIsClipEnabled(SDL_Renderer* renderer);
 
-    // Function @ SDL_render.h:834:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:835:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void SDL_RenderGetClipRect(SDL_Renderer* renderer, SDL_Rect* rect);
 
-    // Function @ SDL_render.h:820:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:821:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderSetClipRect(SDL_Renderer* renderer, SDL_Rect* rect);
 
-    // Function @ SDL_render.h:804:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:805:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void SDL_RenderGetViewport(SDL_Renderer* renderer, SDL_Rect* rect);
 
-    // Function @ SDL_render.h:793:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:794:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderSetViewport(SDL_Renderer* renderer, SDL_Rect* rect);
 
-    // Function @ SDL_render.h:777:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:778:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_RenderGetIntegerScale(SDL_Renderer* renderer);
 
-    // Function @ SDL_render.h:763:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:764:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderSetIntegerScale(SDL_Renderer* renderer, CBool enable);
 
-    // Function @ SDL_render.h:744:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:745:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void SDL_RenderGetLogicalSize(SDL_Renderer* renderer, long* w, long* h);
 
-    // Function @ SDL_render.h:727:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
+    // Function @ SDL_render.h:728:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderSetLogicalSize(SDL_Renderer* renderer, int w, int h);
 
@@ -541,31 +541,31 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern void* SDL_LoadObject(CString sofile);
 
-    // Function @ SDL_hints.h:1805:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_hints.h)
+    // Function @ SDL_hints.h:1818:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_hints.h)
     [DllImport(LibraryName)]
     public static extern void SDL_ClearHints();
 
-    // Function @ SDL_hints.h:1796:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_hints.h)
+    // Function @ SDL_hints.h:1809:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_hints.h)
     [DllImport(LibraryName)]
     public static extern void SDL_DelHintCallback(CString name, SDL_HintCallback callback, void* userdata);
 
-    // Function @ SDL_hints.h:1780:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_hints.h)
+    // Function @ SDL_hints.h:1793:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_hints.h)
     [DllImport(LibraryName)]
     public static extern void SDL_AddHintCallback(CString name, SDL_HintCallback callback, void* userdata);
 
-    // Function @ SDL_hints.h:1756:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_hints.h)
+    // Function @ SDL_hints.h:1769:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_hints.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_GetHintBoolean(CString name, CBool default_value);
 
-    // Function @ SDL_hints.h:1741:38 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_hints.h)
+    // Function @ SDL_hints.h:1754:38 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_hints.h)
     [DllImport(LibraryName)]
     public static extern CString SDL_GetHint(CString name);
 
-    // Function @ SDL_hints.h:1729:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_hints.h)
+    // Function @ SDL_hints.h:1742:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_hints.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_SetHint(CString name, CString value);
 
-    // Function @ SDL_hints.h:1711:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_hints.h)
+    // Function @ SDL_hints.h:1724:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_hints.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_SetHintWithPriority(CString name, CString value, SDL_HintPriority priority);
 
@@ -801,195 +801,195 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern int SDL_GetNumTouchDevices();
 
-    // Function @ SDL_gamecontroller.h:844:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:850:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern void SDL_GameControllerClose(SDL_GameController* gamecontroller);
 
-    // Function @ SDL_gamecontroller.h:834:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:840:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GameControllerSendEffect(SDL_GameController* gamecontroller, void* data, int size);
 
-    // Function @ SDL_gamecontroller.h:823:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:829:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GameControllerSetLED(SDL_GameController* gamecontroller, byte red, byte green, byte blue);
 
-    // Function @ SDL_gamecontroller.h:812:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:818:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_GameControllerHasLED(SDL_GameController* gamecontroller);
 
-    // Function @ SDL_gamecontroller.h:803:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:809:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GameControllerRumbleTriggers(SDL_GameController* gamecontroller, ushort left_rumble, ushort right_rumble, uint duration_ms);
 
-    // Function @ SDL_gamecontroller.h:783:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:789:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GameControllerRumble(SDL_GameController* gamecontroller, ushort low_frequency_rumble, ushort high_frequency_rumble, uint duration_ms);
 
-    // Function @ SDL_gamecontroller.h:767:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:773:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GameControllerGetSensorData(SDL_GameController* gamecontroller, SDL_SensorType type, float* data, int num_values);
 
-    // Function @ SDL_gamecontroller.h:753:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:759:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_GameControllerIsSensorEnabled(SDL_GameController* gamecontroller, SDL_SensorType type);
 
-    // Function @ SDL_gamecontroller.h:744:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:750:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GameControllerSetSensorEnabled(SDL_GameController* gamecontroller, SDL_SensorType type, CBool enabled);
 
-    // Function @ SDL_gamecontroller.h:734:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:740:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_GameControllerHasSensor(SDL_GameController* gamecontroller, SDL_SensorType type);
 
-    // Function @ SDL_gamecontroller.h:725:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:731:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GameControllerGetTouchpadFinger(SDL_GameController* gamecontroller, int touchpad, int finger, byte* state, float* x, float* y, float* pressure);
 
-    // Function @ SDL_gamecontroller.h:720:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:726:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GameControllerGetNumTouchpadFingers(SDL_GameController* gamecontroller, int touchpad);
 
-    // Function @ SDL_gamecontroller.h:714:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:720:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GameControllerGetNumTouchpads(SDL_GameController* gamecontroller);
 
-    // Function @ SDL_gamecontroller.h:708:31 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:714:31 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern byte SDL_GameControllerGetButton(SDL_GameController* gamecontroller, SDL_GameControllerButton button);
 
-    // Function @ SDL_gamecontroller.h:693:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:699:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_GameControllerHasButton(SDL_GameController* gamecontroller, SDL_GameControllerButton button);
 
-    // Function @ SDL_gamecontroller.h:680:1 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:686:1 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern SDL_GameControllerButtonBind SDL_GameControllerGetBindForButton(SDL_GameController* gamecontroller, SDL_GameControllerButton button);
 
-    // Function @ SDL_gamecontroller.h:664:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:670:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern CString SDL_GameControllerGetStringForButton(SDL_GameControllerButton button);
 
-    // Function @ SDL_gamecontroller.h:648:50 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:654:50 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern SDL_GameControllerButton SDL_GameControllerGetButtonFromString(CString str);
 
-    // Function @ SDL_gamecontroller.h:604:1 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:610:1 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern short SDL_GameControllerGetAxis(SDL_GameController* gamecontroller, SDL_GameControllerAxis axis);
 
-    // Function @ SDL_gamecontroller.h:584:1 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:590:1 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_GameControllerHasAxis(SDL_GameController* gamecontroller, SDL_GameControllerAxis axis);
 
-    // Function @ SDL_gamecontroller.h:570:1 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:576:1 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern SDL_GameControllerButtonBind SDL_GameControllerGetBindForAxis(SDL_GameController* gamecontroller, SDL_GameControllerAxis axis);
 
-    // Function @ SDL_gamecontroller.h:554:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:560:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern CString SDL_GameControllerGetStringForAxis(SDL_GameControllerAxis axis);
 
-    // Function @ SDL_gamecontroller.h:540:48 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:546:48 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern SDL_GameControllerAxis SDL_GameControllerGetAxisFromString(CString str);
 
-    // Function @ SDL_gamecontroller.h:502:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:504:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern void SDL_GameControllerUpdate();
 
-    // Function @ SDL_gamecontroller.h:493:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:495:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GameControllerEventState(int state);
 
-    // Function @ SDL_gamecontroller.h:473:39 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:475:39 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern SDL_Joystick* SDL_GameControllerGetJoystick(SDL_GameController* gamecontroller);
 
-    // Function @ SDL_gamecontroller.h:454:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:456:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_GameControllerGetAttached(SDL_GameController* gamecontroller);
 
-    // Function @ SDL_gamecontroller.h:441:38 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:443:38 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern CString SDL_GameControllerGetSerial(SDL_GameController* gamecontroller);
 
-    // Function @ SDL_gamecontroller.h:430:32 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:432:32 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern ushort SDL_GameControllerGetProductVersion(SDL_GameController* gamecontroller);
 
-    // Function @ SDL_gamecontroller.h:420:32 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:422:32 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern ushort SDL_GameControllerGetProduct(SDL_GameController* gamecontroller);
 
-    // Function @ SDL_gamecontroller.h:410:32 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:412:32 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern ushort SDL_GameControllerGetVendor(SDL_GameController* gamecontroller);
 
-    // Function @ SDL_gamecontroller.h:400:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:402:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern void SDL_GameControllerSetPlayerIndex(SDL_GameController* gamecontroller, int player_index);
 
-    // Function @ SDL_gamecontroller.h:392:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:394:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GameControllerGetPlayerIndex(SDL_GameController* gamecontroller);
 
-    // Function @ SDL_gamecontroller.h:382:48 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:384:48 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern SDL_GameControllerType SDL_GameControllerGetType(SDL_GameController* gamecontroller);
 
-    // Function @ SDL_gamecontroller.h:371:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:373:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern CString SDL_GameControllerName(SDL_GameController* gamecontroller);
 
-    // Function @ SDL_gamecontroller.h:353:45 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:355:45 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern SDL_GameController* SDL_GameControllerFromPlayerIndex(int player_index);
 
-    // Function @ SDL_gamecontroller.h:338:45 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:340:45 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern SDL_GameController* SDL_GameControllerFromInstanceID(SDL_JoystickID joyid);
 
-    // Function @ SDL_gamecontroller.h:327:45 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:329:45 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern SDL_GameController* SDL_GameControllerOpen(int joystick_index);
 
-    // Function @ SDL_gamecontroller.h:303:31 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:305:31 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern CString SDL_GameControllerMappingForDeviceIndex(int joystick_index);
 
-    // Function @ SDL_gamecontroller.h:291:48 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:293:48 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern SDL_GameControllerType SDL_GameControllerTypeForIndex(int joystick_index);
 
-    // Function @ SDL_gamecontroller.h:280:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:282:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern CString SDL_GameControllerNameForIndex(int joystick_index);
 
-    // Function @ SDL_gamecontroller.h:259:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:261:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_IsGameController(int joystick_index);
 
-    // Function @ SDL_gamecontroller.h:241:32 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:243:32 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern CString SDL_GameControllerMapping(SDL_GameController* gamecontroller);
 
-    // Function @ SDL_gamecontroller.h:222:32 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:224:32 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern CString SDL_GameControllerMappingForGUID(SDL_JoystickGUID guid);
 
-    // Function @ SDL_gamecontroller.h:208:32 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:210:32 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern CString SDL_GameControllerMappingForIndex(int mapping_index);
 
-    // Function @ SDL_gamecontroller.h:200:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:202:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GameControllerNumMappings();
 
-    // Function @ SDL_gamecontroller.h:193:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:195:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GameControllerAddMapping(CString mappingString);
 
-    // Function @ SDL_gamecontroller.h:159:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Function @ SDL_gamecontroller.h:161:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GameControllerAddMappingsFromRW(SDL_RWops* rw, int freerw);
 
@@ -1261,55 +1261,55 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern void SDL_LockJoysticks();
 
-    // Function @ SDL_mouse.h:393:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
+    // Function @ SDL_mouse.h:403:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
     [DllImport(LibraryName)]
     public static extern int SDL_ShowCursor(int toggle);
 
-    // Function @ SDL_mouse.h:373:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
+    // Function @ SDL_mouse.h:383:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
     [DllImport(LibraryName)]
     public static extern void SDL_FreeCursor(SDL_Cursor* cursor);
 
-    // Function @ SDL_mouse.h:359:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
+    // Function @ SDL_mouse.h:369:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
     [DllImport(LibraryName)]
     public static extern SDL_Cursor* SDL_GetDefaultCursor();
 
-    // Function @ SDL_mouse.h:348:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
+    // Function @ SDL_mouse.h:358:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
     [DllImport(LibraryName)]
     public static extern SDL_Cursor* SDL_GetCursor();
 
-    // Function @ SDL_mouse.h:336:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
+    // Function @ SDL_mouse.h:346:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
     [DllImport(LibraryName)]
     public static extern void SDL_SetCursor(SDL_Cursor* cursor);
 
-    // Function @ SDL_mouse.h:320:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
+    // Function @ SDL_mouse.h:330:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
     [DllImport(LibraryName)]
     public static extern SDL_Cursor* SDL_CreateSystemCursor(SDL_SystemCursor id);
 
-    // Function @ SDL_mouse.h:305:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
+    // Function @ SDL_mouse.h:315:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
     [DllImport(LibraryName)]
     public static extern SDL_Cursor* SDL_CreateColorCursor(SDL_Surface* surface, int hot_x, int hot_y);
 
-    // Function @ SDL_mouse.h:286:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
+    // Function @ SDL_mouse.h:296:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
     [DllImport(LibraryName)]
     public static extern SDL_Cursor* SDL_CreateCursor(byte* data, byte* mask, int w, int h, int hot_x, int hot_y);
 
-    // Function @ SDL_mouse.h:245:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
+    // Function @ SDL_mouse.h:255:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_GetRelativeMouseMode();
 
-    // Function @ SDL_mouse.h:236:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
+    // Function @ SDL_mouse.h:246:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
     [DllImport(LibraryName)]
     public static extern int SDL_CaptureMouse(CBool enabled);
 
-    // Function @ SDL_mouse.h:199:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
+    // Function @ SDL_mouse.h:209:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetRelativeMouseMode(CBool enabled);
 
-    // Function @ SDL_mouse.h:180:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
+    // Function @ SDL_mouse.h:186:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
     [DllImport(LibraryName)]
     public static extern int SDL_WarpMouseGlobal(int x, int y);
 
-    // Function @ SDL_mouse.h:160:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
+    // Function @ SDL_mouse.h:163:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_mouse.h)
     [DllImport(LibraryName)]
     public static extern void SDL_WarpMouseInWindow(SDL_Window* window, int x, int y);
 
@@ -1393,359 +1393,359 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern SDL_Window* SDL_GetKeyboardFocus();
 
-    // Function @ SDL_video.h:1876:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1888:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_GL_DeleteContext(SDL_GLContext context);
 
-    // Function @ SDL_video.h:1867:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1879:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_GL_SwapWindow(SDL_Window* window);
 
-    // Function @ SDL_video.h:1853:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1865:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GL_GetSwapInterval();
 
-    // Function @ SDL_video.h:1836:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1848:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GL_SetSwapInterval(int interval);
 
-    // Function @ SDL_video.h:1801:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1813:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_GL_GetDrawableSize(SDL_Window* window, long* w, long* h);
 
-    // Function @ SDL_video.h:1779:39 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1791:39 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern SDL_GLContext SDL_GL_GetCurrentContext();
 
-    // Function @ SDL_video.h:1767:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1779:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern SDL_Window* SDL_GL_GetCurrentWindow();
 
-    // Function @ SDL_video.h:1756:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1768:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GL_MakeCurrent(SDL_Window* window, SDL_GLContext context);
 
-    // Function @ SDL_video.h:1741:39 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1753:39 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern SDL_GLContext SDL_GL_CreateContext(SDL_Window* window);
 
-    // Function @ SDL_video.h:1721:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1733:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GL_GetAttribute(SDL_GLattr attr, long* value);
 
-    // Function @ SDL_video.h:1708:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1720:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GL_SetAttribute(SDL_GLattr attr, int value);
 
-    // Function @ SDL_video.h:1690:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1702:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_GL_ResetAttributes();
 
-    // Function @ SDL_video.h:1679:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1691:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_GL_ExtensionSupported(CString extension);
 
-    // Function @ SDL_video.h:1658:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1670:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_GL_UnloadLibrary();
 
-    // Function @ SDL_video.h:1651:31 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1663:31 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void* SDL_GL_GetProcAddress(CString proc);
 
-    // Function @ SDL_video.h:1600:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1612:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GL_LoadLibrary(CString path);
 
-    // Function @ SDL_video.h:1574:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1586:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_DisableScreenSaver();
 
-    // Function @ SDL_video.h:1561:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1573:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_EnableScreenSaver();
 
-    // Function @ SDL_video.h:1551:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1563:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_IsScreenSaverEnabled();
 
-    // Function @ SDL_video.h:1532:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1544:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_DestroyWindow(SDL_Window* window);
 
-    // Function @ SDL_video.h:1519:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1531:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
-    public static extern int SDL_FlashWindow(SDL_Window* window, uint flash_count);
+    public static extern int SDL_FlashWindow(SDL_Window* window, SDL_FlashOperation operation);
 
-    // Function @ SDL_video.h:1505:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1519:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetWindowHitTest(SDL_Window* window, SDL_HitTest callback, void* callback_data);
 
-    // Function @ SDL_video.h:1427:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1441:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetWindowGammaRamp(SDL_Window* window, ushort* red, ushort* green, ushort* blue);
 
-    // Function @ SDL_video.h:1401:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1415:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetWindowGammaRamp(SDL_Window* window, ushort* red, ushort* green, ushort* blue);
 
-    // Function @ SDL_video.h:1372:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1385:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetWindowInputFocus(SDL_Window* window);
 
-    // Function @ SDL_video.h:1355:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1368:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetWindowModalFor(SDL_Window* modal_window, SDL_Window* parent_window);
 
-    // Function @ SDL_video.h:1343:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1356:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetWindowOpacity(SDL_Window* window, float* out_opacity);
 
-    // Function @ SDL_video.h:1322:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1335:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetWindowOpacity(SDL_Window* window, float opacity);
 
-    // Function @ SDL_video.h:1303:31 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1316:31 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern float SDL_GetWindowBrightness(SDL_Window* window);
 
-    // Function @ SDL_video.h:1286:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1299:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetWindowBrightness(SDL_Window* window, float brightness);
 
-    // Function @ SDL_video.h:1260:38 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1273:38 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern SDL_Window* SDL_GetGrabbedWindow();
 
-    // Function @ SDL_video.h:1248:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1261:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_GetWindowMouseGrab(SDL_Window* window);
 
-    // Function @ SDL_video.h:1237:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1250:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_GetWindowKeyboardGrab(SDL_Window* window);
 
-    // Function @ SDL_video.h:1226:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1239:34 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_GetWindowGrab(SDL_Window* window);
 
-    // Function @ SDL_video.h:1215:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1228:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_SetWindowMouseGrab(SDL_Window* window, CBool grabbed);
 
-    // Function @ SDL_video.h:1203:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1216:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_SetWindowKeyboardGrab(SDL_Window* window, CBool grabbed);
 
-    // Function @ SDL_video.h:1187:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1200:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_SetWindowGrab(SDL_Window* window, CBool grabbed);
 
-    // Function @ SDL_video.h:1169:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1182:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_UpdateWindowSurfaceRects(SDL_Window* window, SDL_Rect* rects, int numrects);
 
-    // Function @ SDL_video.h:1149:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1162:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_UpdateWindowSurface(SDL_Window* window);
 
-    // Function @ SDL_video.h:1132:39 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1145:39 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern SDL_Surface* SDL_GetWindowSurface(SDL_Window* window);
 
-    // Function @ SDL_video.h:1108:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1121:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetWindowFullscreen(SDL_Window* window, uint flags);
 
-    // Function @ SDL_video.h:1089:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1102:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_RestoreWindow(SDL_Window* window);
 
-    // Function @ SDL_video.h:1079:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1092:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_MinimizeWindow(SDL_Window* window);
 
-    // Function @ SDL_video.h:1069:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1082:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_MaximizeWindow(SDL_Window* window);
 
-    // Function @ SDL_video.h:1059:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1072:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_RaiseWindow(SDL_Window* window);
 
-    // Function @ SDL_video.h:1052:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1065:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_HideWindow(SDL_Window* window);
 
-    // Function @ SDL_video.h:1043:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1056:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_ShowWindow(SDL_Window* window);
 
-    // Function @ SDL_video.h:1033:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1046:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_SetWindowAlwaysOnTop(SDL_Window* window, CBool on_top);
 
-    // Function @ SDL_video.h:1017:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1030:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_SetWindowResizable(SDL_Window* window, CBool resizable);
 
-    // Function @ SDL_video.h:998:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:1011:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_SetWindowBordered(SDL_Window* window, CBool bordered);
 
-    // Function @ SDL_video.h:979:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:992:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_GetWindowMaximumSize(SDL_Window* window, long* w, long* h);
 
-    // Function @ SDL_video.h:964:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:977:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_SetWindowMaximumSize(SDL_Window* window, int max_w, int max_h);
 
-    // Function @ SDL_video.h:951:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:964:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_GetWindowMinimumSize(SDL_Window* window, long* w, long* h);
 
-    // Function @ SDL_video.h:936:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:949:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_SetWindowMinimumSize(SDL_Window* window, int min_w, int min_h);
 
-    // Function @ SDL_video.h:922:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:935:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetWindowBordersSize(SDL_Window* window, long* top, long* left, long* bottom, long* right);
 
-    // Function @ SDL_video.h:887:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:900:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_GetWindowSize(SDL_Window* window, long* w, long* h);
 
-    // Function @ SDL_video.h:862:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:875:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_SetWindowSize(SDL_Window* window, int w, int h);
 
-    // Function @ SDL_video.h:839:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:852:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_GetWindowPosition(SDL_Window* window, long* x, long* y);
 
-    // Function @ SDL_video.h:822:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:835:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_SetWindowPosition(SDL_Window* window, int x, int y);
 
-    // Function @ SDL_video.h:806:31 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:819:31 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void* SDL_GetWindowData(SDL_Window* window, CString name);
 
-    // Function @ SDL_video.h:793:31 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:806:31 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void* SDL_SetWindowData(SDL_Window* window, CString name, void* userdata);
 
-    // Function @ SDL_video.h:778:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:791:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_SetWindowIcon(SDL_Window* window, SDL_Surface* icon);
 
-    // Function @ SDL_video.h:770:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:783:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern CString SDL_GetWindowTitle(SDL_Window* window);
 
-    // Function @ SDL_video.h:758:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:771:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_SetWindowTitle(SDL_Window* window, CString title);
 
-    // Function @ SDL_video.h:746:32 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:759:32 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern uint SDL_GetWindowFlags(SDL_Window* window);
 
-    // Function @ SDL_video.h:730:38 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:743:38 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern SDL_Window* SDL_GetWindowFromID(uint id);
 
-    // Function @ SDL_video.h:716:32 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:729:32 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern uint SDL_GetWindowID(SDL_Window* window);
 
-    // Function @ SDL_video.h:700:38 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:713:38 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern SDL_Window* SDL_CreateWindowFrom(void* data);
 
-    // Function @ SDL_video.h:681:38 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:694:38 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern SDL_Window* SDL_CreateWindow(CString title, int x, int y, int w, int h, uint flags);
 
-    // Function @ SDL_video.h:611:32 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:624:32 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern uint SDL_GetWindowPixelFormat(SDL_Window* window);
 
-    // Function @ SDL_video.h:600:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:613:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetWindowDisplayMode(SDL_Window* window, SDL_DisplayMode* mode);
 
-    // Function @ SDL_video.h:585:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:598:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetWindowDisplayMode(SDL_Window* window, SDL_DisplayMode* mode);
 
-    // Function @ SDL_video.h:566:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:579:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetWindowDisplayIndex(SDL_Window* window);
 
-    // Function @ SDL_video.h:553:43 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:566:43 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern SDL_DisplayMode* SDL_GetClosestDisplayMode(int displayIndex, SDL_DisplayMode* mode, SDL_DisplayMode* closest);
 
-    // Function @ SDL_video.h:529:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:542:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetCurrentDisplayMode(int displayIndex, SDL_DisplayMode* mode);
 
-    // Function @ SDL_video.h:508:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:521:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetDesktopDisplayMode(int displayIndex, SDL_DisplayMode* mode);
 
-    // Function @ SDL_video.h:487:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:500:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetDisplayMode(int displayIndex, int modeIndex, SDL_DisplayMode* mode);
 
-    // Function @ SDL_video.h:465:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:478:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetNumDisplayModes(int displayIndex);
 
-    // Function @ SDL_video.h:448:48 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:461:48 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern SDL_DisplayOrientation SDL_GetDisplayOrientation(int displayIndex);
 
-    // Function @ SDL_video.h:437:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:450:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetDisplayDPI(int displayIndex, float* ddpi, float* hdpi, float* vdpi);
 
-    // Function @ SDL_video.h:411:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:424:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetDisplayUsableBounds(int displayIndex, SDL_Rect* rect);
 
-    // Function @ SDL_video.h:380:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:393:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetDisplayBounds(int displayIndex, SDL_Rect* rect);
 
-    // Function @ SDL_video.h:366:38 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:379:38 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern CString SDL_GetDisplayName(int displayIndex);
 
-    // Function @ SDL_video.h:352:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:365:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetNumVideoDisplays();
 
-    // Function @ SDL_video.h:340:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:353:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern CString SDL_GetCurrentVideoDriver();
 
-    // Function @ SDL_video.h:327:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:340:30 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_VideoQuit();
 
-    // Function @ SDL_video.h:318:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:331:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_VideoInit(CString driver_name);
 
-    // Function @ SDL_video.h:289:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:302:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern CString SDL_GetVideoDriver(int index);
 
-    // Function @ SDL_video.h:276:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Function @ SDL_video.h:289:29 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetNumVideoDrivers();
 
@@ -3078,7 +3078,7 @@ public static unsafe partial class SDL
         public delegate* unmanaged<void*, int, SDL_LogPriority, CString, void> Pointer;
     }
 
-    // FunctionPointer @ SDL_hints.h:1766:24 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_hints.h)
+    // FunctionPointer @ SDL_hints.h:1779:24 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_hints.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct SDL_HintCallback
     {
@@ -3120,7 +3120,7 @@ public static unsafe partial class SDL
         public delegate* unmanaged<SDL_RWops*, long> Pointer;
     }
 
-    // FunctionPointer @ SDL_video.h:1461:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // FunctionPointer @ SDL_video.h:1475:37 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct SDL_HitTest
     {
@@ -4924,7 +4924,7 @@ public static unsafe partial class SDL
         public float pressure;
     }
 
-    // Struct @ SDL_gamecontroller.h:97:3 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Struct @ SDL_gamecontroller.h:99:3 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     [StructLayout(LayoutKind.Explicit, Size = 12, Pack = 4)]
     public struct SDL_GameControllerButtonBind
     {
@@ -4934,7 +4934,7 @@ public static unsafe partial class SDL
         [FieldOffset(4)] // size = 8, padding = 0
         public SDL_GameControllerButtonBind_value value;
 
-        // Union @ SDL_gamecontroller.h:87:5 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+        // Union @ SDL_gamecontroller.h:89:5 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
         [StructLayout(LayoutKind.Explicit, Size = 8, Pack = 4)]
         public struct SDL_GameControllerButtonBind_value
         {
@@ -4947,7 +4947,7 @@ public static unsafe partial class SDL
             [FieldOffset(0)] // size = 8, padding = 0
             public SDL_GameControllerButtonBind_value_hat hat;
 
-            // Struct @ SDL_gamecontroller.h:91:9 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+            // Struct @ SDL_gamecontroller.h:93:9 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
             [StructLayout(LayoutKind.Explicit, Size = 8, Pack = 4)]
             public struct SDL_GameControllerButtonBind_value_hat
             {
@@ -5314,7 +5314,7 @@ public static unsafe partial class SDL
         public static implicit operator SDL_SensorID(int data) => new() { Data = data };
     }
 
-    // Typedef @ SDL_video.h:203:15 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Typedef @ SDL_video.h:216:15 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     [StructLayout(LayoutKind.Explicit, Size = 8, Pack = 8)]
     public struct SDL_GLContext
     {
@@ -5460,7 +5460,7 @@ public static unsafe partial class SDL
         SDL_NUM_LOG_PRIORITIES = 7U
     }
 
-    // Enum @ SDL_hints.h:1693:3 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_hints.h)
+    // Enum @ SDL_hints.h:1706:3 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_hints.h)
     public enum SDL_HintPriority : uint
     {
         SDL_HINT_DEFAULT = 0U,
@@ -5743,7 +5743,7 @@ public static unsafe partial class SDL
         SDL_SENSOR_GYRO = 2U
     }
 
-    // Enum @ SDL_gamecontroller.h:634:3 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Enum @ SDL_gamecontroller.h:640:3 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     public enum SDL_GameControllerButton : uint
     {
         SDL_CONTROLLER_BUTTON_INVALID = 4294967295U,
@@ -5771,7 +5771,7 @@ public static unsafe partial class SDL
         SDL_CONTROLLER_BUTTON_MAX = 21U
     }
 
-    // Enum @ SDL_gamecontroller.h:79:3 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Enum @ SDL_gamecontroller.h:81:3 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     public enum SDL_GameControllerBindType : uint
     {
         SDL_CONTROLLER_BINDTYPE_NONE = 0U,
@@ -5780,7 +5780,7 @@ public static unsafe partial class SDL
         SDL_CONTROLLER_BINDTYPE_HAT = 3U
     }
 
-    // Enum @ SDL_gamecontroller.h:524:3 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Enum @ SDL_gamecontroller.h:526:3 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     public enum SDL_GameControllerAxis : uint
     {
         SDL_CONTROLLER_AXIS_INVALID = 4294967295U,
@@ -5793,7 +5793,7 @@ public static unsafe partial class SDL
         SDL_CONTROLLER_AXIS_MAX = 6U
     }
 
-    // Enum @ SDL_gamecontroller.h:71:3 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
+    // Enum @ SDL_gamecontroller.h:73:3 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_gamecontroller.h)
     public enum SDL_GameControllerType : uint
     {
         SDL_CONTROLLER_TYPE_UNKNOWN = 0U,
@@ -5803,7 +5803,9 @@ public static unsafe partial class SDL
         SDL_CONTROLLER_TYPE_PS4 = 4U,
         SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_PRO = 5U,
         SDL_CONTROLLER_TYPE_VIRTUAL = 6U,
-        SDL_CONTROLLER_TYPE_PS5 = 7U
+        SDL_CONTROLLER_TYPE_PS5 = 7U,
+        SDL_CONTROLLER_TYPE_AMAZON_LUNA = 8U,
+        SDL_CONTROLLER_TYPE_GOOGLE_STADIA = 9U
     }
 
     // Enum @ SDL_joystick.h:108:3 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_joystick.h)
@@ -5873,7 +5875,7 @@ public static unsafe partial class SDL
         KMOD_GUI = 3072U
     }
 
-    // Enum @ SDL_video.h:237:3 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Enum @ SDL_video.h:250:3 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     public enum SDL_GLattr : uint
     {
         SDL_GL_RED_SIZE = 0U,
@@ -5905,7 +5907,15 @@ public static unsafe partial class SDL
         SDL_GL_CONTEXT_NO_ERROR = 26U
     }
 
-    // Enum @ SDL_video.h:1449:3 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Enum @ SDL_video.h:211:3 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    public enum SDL_FlashOperation : uint
+    {
+        SDL_FLASH_CANCEL = 0U,
+        SDL_FLASH_BRIEFLY = 1U,
+        SDL_FLASH_UNTIL_FOCUSED = 2U
+    }
+
+    // Enum @ SDL_video.h:1463:3 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     public enum SDL_HitTestResult : uint
     {
         SDL_HITTEST_NORMAL = 0U,
@@ -5920,7 +5930,7 @@ public static unsafe partial class SDL
         SDL_HITTEST_RESIZE_LEFT = 9U
     }
 
-    // Enum @ SDL_video.h:198:3 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
+    // Enum @ SDL_video.h:201:3 (D:\a\sdl-cs\sdl-cs\ext\SDL\include\SDL_video.h)
     public enum SDL_DisplayOrientation : uint
     {
         SDL_ORIENTATION_UNKNOWN = 0U,
