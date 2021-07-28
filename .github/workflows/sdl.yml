@@ -4,7 +4,7 @@ env:
   DOTNET_CLI_TELEMETRY_OPTOUT: 1
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
   DOTNET_SDK_VERSION: 5.0.301
-  DOTNET_PROJECT_PATH: './src/cs/production/stb_image-cs/stb_image-cs.csproj'
+  DOTNET_PROJECT_PATH: './src/cs/production/SDL-cs/SDL-cs.csproj'
   MYGET_ACCESS_TOKEN: ${{ secrets.MYGET_ACCESS_TOKEN }}
   MYGET_SOURCE_URL: 'https://www.myget.org/F/lithiumtoast/api/v3/index.json'
 
