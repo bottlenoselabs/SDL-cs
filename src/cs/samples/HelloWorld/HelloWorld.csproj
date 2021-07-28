@@ -4,6 +4,9 @@
         <OutputType>Exe</OutputType>
         <TargetFramework>net5.0</TargetFramework>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <RuntimeIdentifier Condition="$([MSBuild]::IsOSPlatform('Linux'))" >linux-x64</RuntimeIdentifier>
+        <RuntimeIdentifier Condition="$([MSBuild]::IsOSPlatform('OSX'))" >osx-x64</RuntimeIdentifier>
+        <RuntimeIdentifier Condition="$([MSBuild]::IsOSPlatform('Windows'))" >win-x64</RuntimeIdentifier>
     </PropertyGroup>
 
     <ItemGroup>
