@@ -133,10 +133,10 @@ jobs:
       run: dotnet pack '${{ env.DOTNET_PROJECT_PATH }}' --nologo --output "./nupkg" --verbosity minimal --configuration Release -p:PackageVersion='${{ env.VERSION }}' --runtime ${{ matrix.platform.rid }}
 
     - name: "Upload NuGet packages: MyGet (Unix)"
-      if: ${{ startsWith(matrix.platform.rid, 'win') }}
+      if: ${{ !startsWith(matrix.platform.rid, 'win') }}
       run: dotnet nuget push "./**/*.nupkg" --source ${{ env.MYGET_SOURCE_URL }} --skip-duplicate --api-key ${{ env.MYGET_ACCESS_TOKEN }} 
 
     - name: "Upload NuGet packages: MyGet (Windows)"
-      if: ${{ !startsWith(matrix.platform.rid, 'win') }}
+      if: ${{ startsWith(matrix.platform.rid, 'win') }}
       run: dotnet nuget push ".\**\*.nupkg" --source ${{ env.MYGET_SOURCE_URL }} --skip-duplicate --api-key ${{ env.MYGET_ACCESS_TOKEN }} 
 
