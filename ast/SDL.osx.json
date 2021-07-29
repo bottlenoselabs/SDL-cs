@@ -12449,7 +12449,7 @@
           "location": {
             "fileName": "SDL_surface.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-            "line": 874,
+            "line": 877,
             "column": 91,
             "isBuiltin": true
           }
@@ -12460,7 +12460,7 @@
           "location": {
             "fileName": "SDL_surface.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-            "line": 874,
+            "line": 877,
             "column": 102,
             "isBuiltin": true
           }
@@ -12469,7 +12469,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 874,
+        "line": 877,
         "column": 49
       }
     },
@@ -12480,7 +12480,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 868,
+        "line": 871,
         "column": 49
       }
     },
@@ -12502,7 +12502,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 863,
+        "line": 866,
         "column": 30
       }
     },
@@ -12554,7 +12554,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 856,
+        "line": 859,
         "column": 29
       }
     },
@@ -12606,7 +12606,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 835,
+        "line": 838,
         "column": 29
       }
     },
@@ -12658,7 +12658,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 819,
+        "line": 822,
         "column": 29
       }
     },
@@ -12710,7 +12710,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 811,
+        "line": 814,
         "column": 29
       }
     },
@@ -12762,7 +12762,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 800,
+        "line": 803,
         "column": 29
       }
     },
@@ -12814,7 +12814,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 776,
+        "line": 779,
         "column": 29
       }
     },
@@ -12848,7 +12848,7 @@
           "location": {
             "fileName": "SDL_surface.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-            "line": 706,
+            "line": 709,
             "column": 53,
             "isBuiltin": true
           }
@@ -12867,7 +12867,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 705,
+        "line": 708,
         "column": 29
       }
     },
@@ -12909,7 +12909,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 681,
+        "line": 684,
         "column": 29
       }
     },
@@ -12923,7 +12923,7 @@
           "location": {
             "fileName": "SDL_surface.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-            "line": 654,
+            "line": 657,
             "column": 51,
             "isBuiltin": true
           }
@@ -12934,7 +12934,7 @@
           "location": {
             "fileName": "SDL_surface.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-            "line": 654,
+            "line": 657,
             "column": 62,
             "isBuiltin": true
           }
@@ -12955,7 +12955,7 @@
           "location": {
             "fileName": "SDL_surface.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-            "line": 656,
+            "line": 659,
             "column": 60
           }
         },
@@ -12965,7 +12965,7 @@
           "location": {
             "fileName": "SDL_surface.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-            "line": 656,
+            "line": 659,
             "column": 69,
             "isBuiltin": true
           }
@@ -12986,7 +12986,7 @@
           "location": {
             "fileName": "SDL_surface.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-            "line": 658,
+            "line": 661,
             "column": 54
           }
         },
@@ -12996,7 +12996,7 @@
           "location": {
             "fileName": "SDL_surface.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-            "line": 658,
+            "line": 661,
             "column": 63,
             "isBuiltin": true
           }
@@ -13005,7 +13005,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 654,
+        "line": 657,
         "column": 29
       }
     },
@@ -13047,7 +13047,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 637,
+        "line": 640,
         "column": 38
       }
     },
@@ -13089,7 +13089,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 614,
+        "line": 617,
         "column": 38
       }
     },
@@ -13111,7 +13111,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 592,
+        "line": 595,
         "column": 38
       }
     },
@@ -13143,7 +13143,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 580,
+        "line": 583,
         "column": 30
       }
     },
@@ -13175,7 +13175,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 563,
+        "line": 566,
         "column": 34
       }
     },
@@ -13207,7 +13207,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 542,
+        "line": 545,
         "column": 29
       }
     },
@@ -13239,7 +13239,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 529,
+        "line": 532,
         "column": 29
       }
     },
@@ -13271,7 +13271,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 512,
+        "line": 515,
         "column": 29
       }
     },
@@ -13303,7 +13303,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 498,
+        "line": 501,
         "column": 29
       }
     },
@@ -13355,7 +13355,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 478,
+        "line": 481,
         "column": 29
       }
     },
@@ -13407,7 +13407,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 461,
+        "line": 464,
         "column": 29
       }
     },
@@ -13439,7 +13439,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 439,
+        "line": 442,
         "column": 29
       }
     },
@@ -13461,7 +13461,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 421,
+        "line": 424,
         "column": 34
       }
     },
@@ -13485,7 +13485,7 @@
           "location": {
             "fileName": "SDL_surface.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-            "line": 408,
+            "line": 411,
             "column": 49,
             "isBuiltin": true
           }
@@ -13504,7 +13504,7 @@
       "location": {
         "fileName": "SDL_surface.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h",
-        "line": 407,
+        "line": 410,
         "column": 29
       }
     },
