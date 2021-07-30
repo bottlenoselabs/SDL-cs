@@ -5304,7 +5304,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 1082,
+            "line": 1088,
             "column": 55,
             "isBuiltin": true
           }
@@ -5313,7 +5313,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 1082,
+        "line": 1088,
         "column": 32
       }
     },
@@ -5337,7 +5337,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 1060,
+            "line": 1066,
             "column": 63,
             "isBuiltin": true
           }
@@ -5346,7 +5346,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 1060,
+        "line": 1066,
         "column": 31
       }
     },
@@ -5360,7 +5360,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 918,
+            "line": 924,
             "column": 24
           }
         },
@@ -5370,7 +5370,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 1035,
+            "line": 1041,
             "column": 53
           }
         }
@@ -5378,7 +5378,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 1034,
+        "line": 1040,
         "column": 30
       }
     },
@@ -5392,7 +5392,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 918,
+            "line": 924,
             "column": 24
           }
         },
@@ -5402,7 +5402,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 1018,
+            "line": 1024,
             "column": 54
           }
         }
@@ -5410,7 +5410,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 1017,
+        "line": 1023,
         "column": 30
       }
     },
@@ -5424,7 +5424,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 918,
+            "line": 924,
             "column": 24
           }
         },
@@ -5434,7 +5434,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 1004,
+            "line": 1010,
             "column": 54
           }
         }
@@ -5442,7 +5442,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 1003,
+        "line": 1009,
         "column": 30
       }
     },
@@ -5456,7 +5456,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 918,
+            "line": 924,
             "column": 24
           }
         },
@@ -5466,7 +5466,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 977,
+            "line": 983,
             "column": 60
           }
         }
@@ -5474,7 +5474,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 976,
+        "line": 982,
         "column": 34
       }
     },
@@ -5488,7 +5488,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 918,
+            "line": 924,
             "column": 24
           }
         },
@@ -5498,7 +5498,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 961,
+            "line": 967,
             "column": 55
           }
         }
@@ -5506,7 +5506,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 960,
+        "line": 966,
         "column": 30
       }
     },
@@ -5520,7 +5520,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 631,
+            "line": 637,
             "column": 3
           }
         }
@@ -5528,7 +5528,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 904,
+        "line": 910,
         "column": 29
       }
     },
@@ -5542,7 +5542,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 631,
+            "line": 637,
             "column": 3
           }
         },
@@ -5552,7 +5552,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 872,
+            "line": 878,
             "column": 54,
             "isBuiltin": true
           }
@@ -5561,7 +5561,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 871,
+        "line": 877,
         "column": 29
       }
     },
@@ -5575,7 +5575,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 631,
+            "line": 637,
             "column": 3
           }
         }
@@ -5583,7 +5583,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 847,
+        "line": 853,
         "column": 29
       }
     },
@@ -5597,7 +5597,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 631,
+            "line": 637,
             "column": 3
           }
         }
@@ -5605,7 +5605,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 827,
+        "line": 833,
         "column": 29
       }
     },
@@ -5637,7 +5637,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 782,
+        "line": 788,
         "column": 30
       }
     },
@@ -5659,7 +5659,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 759,
+        "line": 765,
         "column": 30
       }
     },
@@ -5691,7 +5691,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 739,
+        "line": 745,
         "column": 34
       }
     },
@@ -5713,7 +5713,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 722,
+        "line": 728,
         "column": 34
       }
     },
@@ -5727,7 +5727,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 631,
+            "line": 637,
             "column": 3
           }
         },
@@ -5737,7 +5737,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 705,
+            "line": 711,
             "column": 68,
             "isBuiltin": true
           }
@@ -5748,7 +5748,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 667,
+            "line": 673,
             "column": 3
           }
         },
@@ -5776,7 +5776,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 705,
+        "line": 711,
         "column": 29
       }
     },
@@ -5787,7 +5787,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 659,
+        "line": 665,
         "column": 30
       }
     },
@@ -6028,7 +6028,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_gamecontroller.h",
-        "line": 850,
+        "line": 860,
         "column": 30
       }
     },
@@ -6052,7 +6052,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_gamecontroller.h",
-            "line": 840,
+            "line": 850,
             "column": 106
           }
         },
@@ -6062,7 +6062,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_gamecontroller.h",
-            "line": 840,
+            "line": 850,
             "column": 116,
             "isBuiltin": true
           }
@@ -6071,7 +6071,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_gamecontroller.h",
-        "line": 840,
+        "line": 850,
         "column": 29
       }
     },
@@ -6123,7 +6123,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_gamecontroller.h",
-        "line": 829,
+        "line": 839,
         "column": 29
       }
     },
@@ -6145,7 +6145,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_gamecontroller.h",
-        "line": 818,
+        "line": 828,
         "column": 34
       }
     },
@@ -6197,7 +6197,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_gamecontroller.h",
-        "line": 809,
+        "line": 819,
         "column": 29
       }
     },
@@ -6249,7 +6249,7 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_gamecontroller.h",
-        "line": 789,
+        "line": 799,
         "column": 29
       }
     },
@@ -6283,7 +6283,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_gamecontroller.h",
-            "line": 773,
+            "line": 783,
             "column": 125
           }
         },
@@ -6293,7 +6293,7 @@
           "location": {
             "fileName": "SDL_gamecontroller.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_gamecontroller.h",
-            "line": 773,
+            "line": 783,
             "column": 135,
             "isBuiltin": true
           }
@@ -6302,8 +6302,40 @@
       "location": {
         "fileName": "SDL_gamecontroller.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_gamecontroller.h",
-        "line": 773,
+        "line": 783,
         "column": 29
+      }
+    },
+    {
+      "name": "SDL_GameControllerGetSensorDataRate",
+      "returnType": "float",
+      "parameters": [
+        {
+          "name": "gamecontroller",
+          "type": "SDL_GameController*",
+          "location": {
+            "fileName": "SDL_gamecontroller.h",
+            "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_gamecontroller.h",
+            "line": 59,
+            "column": 36
+          }
+        },
+        {
+          "name": "type",
+          "type": "SDL_SensorType",
+          "location": {
+            "fileName": "SDL_sensor.h",
+            "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_sensor.h",
+            "line": 75,
+            "column": 3
+          }
+        }
+      ],
+      "location": {
+        "fileName": "SDL_gamecontroller.h",
+        "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_gamecontroller.h",
+        "line": 769,
+        "column": 31
       }
     },
     {
@@ -15323,7 +15355,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 344,
+            "line": 347,
             "column": 16
           }
         }
@@ -15331,7 +15363,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 1151,
+        "line": 1154,
         "column": 30
       }
     },
@@ -15342,7 +15374,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 1150,
+        "line": 1153,
         "column": 30
       }
     },
@@ -15356,7 +15388,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 344,
+            "line": 347,
             "column": 16
           }
         }
@@ -15364,7 +15396,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 1134,
+        "line": 1137,
         "column": 30
       }
     },
@@ -15375,7 +15407,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 1133,
+        "line": 1136,
         "column": 30
       }
     },
@@ -15389,7 +15421,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 344,
+            "line": 347,
             "column": 16
           }
         }
@@ -15397,7 +15429,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 1132,
+        "line": 1135,
         "column": 30
       }
     },
@@ -15408,7 +15440,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 1131,
+        "line": 1134,
         "column": 30
       }
     },
@@ -15422,7 +15454,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 344,
+            "line": 347,
             "column": 16
           }
         }
@@ -15430,7 +15462,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 1119,
+        "line": 1122,
         "column": 30
       }
     },
@@ -15444,7 +15476,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 344,
+            "line": 347,
             "column": 16
           }
         }
@@ -15452,7 +15484,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 1085,
+        "line": 1088,
         "column": 32
       }
     },
@@ -15466,7 +15498,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 344,
+            "line": 347,
             "column": 16
           }
         },
@@ -15476,7 +15508,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 1051,
+            "line": 1054,
             "column": 78
           }
         },
@@ -15494,7 +15526,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 1051,
+        "line": 1054,
         "column": 32
       }
     },
@@ -15508,7 +15540,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 344,
+            "line": 347,
             "column": 16
           }
         },
@@ -15518,7 +15550,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 1003,
+            "line": 1006,
             "column": 79
           }
         },
@@ -15536,7 +15568,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 1003,
+        "line": 1006,
         "column": 29
       }
     },
@@ -15590,7 +15622,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 954,
+            "line": 957,
             "column": 65,
             "isBuiltin": true
           }
@@ -15599,7 +15631,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 951,
+        "line": 954,
         "column": 30
       }
     },
@@ -15643,7 +15675,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 921,
+            "line": 924,
             "column": 59,
             "isBuiltin": true
           }
@@ -15652,7 +15684,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 920,
+        "line": 923,
         "column": 30
       }
     },
@@ -15666,7 +15698,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 781,
+            "line": 784,
             "column": 33
           }
         }
@@ -15674,7 +15706,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 897,
+        "line": 900,
         "column": 30
       }
     },
@@ -15688,7 +15720,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 781,
+            "line": 784,
             "column": 33
           }
         }
@@ -15696,7 +15728,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 885,
+        "line": 888,
         "column": 30
       }
     },
@@ -15710,7 +15742,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 781,
+            "line": 784,
             "column": 33
           }
         }
@@ -15718,7 +15750,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 873,
+        "line": 876,
         "column": 29
       }
     },
@@ -15732,7 +15764,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 781,
+            "line": 784,
             "column": 33
           }
         }
@@ -15740,7 +15772,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 856,
+        "line": 859,
         "column": 29
       }
     },
@@ -15754,7 +15786,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 781,
+            "line": 784,
             "column": 33
           }
         },
@@ -15764,7 +15796,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 840,
+            "line": 843,
             "column": 79
           }
         },
@@ -15774,7 +15806,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 840,
+            "line": 843,
             "column": 88,
             "isBuiltin": true
           }
@@ -15783,7 +15815,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 840,
+        "line": 843,
         "column": 29
       }
     },
@@ -15797,7 +15829,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 781,
+            "line": 784,
             "column": 33
           }
         },
@@ -15807,7 +15839,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 823,
+            "line": 826,
             "column": 85
           }
         },
@@ -15817,7 +15849,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 823,
+            "line": 826,
             "column": 94,
             "isBuiltin": true
           }
@@ -15826,7 +15858,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 823,
+        "line": 826,
         "column": 29
       }
     },
@@ -15860,7 +15892,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 803,
+            "line": 806,
             "column": 54,
             "isBuiltin": true
           }
@@ -15891,7 +15923,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 806,
+            "line": 809,
             "column": 54,
             "isBuiltin": true
           }
@@ -15900,7 +15932,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 801,
+        "line": 804,
         "column": 43
       }
     },
@@ -15914,7 +15946,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 241,
+            "line": 244,
             "column": 23
           }
         }
@@ -15922,7 +15954,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 770,
+        "line": 773,
         "column": 29
       }
     },
@@ -15936,7 +15968,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 241,
+            "line": 244,
             "column": 23
           }
         },
@@ -15966,7 +15998,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 729,
+            "line": 732,
             "column": 51,
             "isBuiltin": true
           }
@@ -15997,7 +16029,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 732,
+            "line": 735,
             "column": 51,
             "isBuiltin": true
           }
@@ -16006,7 +16038,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 726,
+        "line": 729,
         "column": 29
       }
     },
@@ -16028,7 +16060,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 694,
+        "line": 697,
         "column": 30
       }
     },
@@ -16052,7 +16084,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 669,
+            "line": 672,
             "column": 59,
             "isBuiltin": true
           }
@@ -16091,7 +16123,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 668,
+        "line": 671,
         "column": 40
       }
     },
@@ -16105,7 +16137,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 344,
+            "line": 347,
             "column": 16
           }
         },
@@ -16115,7 +16147,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 586,
+            "line": 589,
             "column": 55,
             "isBuiltin": true
           }
@@ -16124,7 +16156,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 585,
+        "line": 588,
         "column": 30
       }
     },
@@ -16138,7 +16170,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 584,
+            "line": 587,
             "column": 49,
             "isBuiltin": true
           }
@@ -16147,7 +16179,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 584,
+        "line": 587,
         "column": 30
       }
     },
@@ -16161,7 +16193,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 344,
+            "line": 347,
             "column": 16
           }
         }
@@ -16169,7 +16201,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 571,
+        "line": 574,
         "column": 41
       }
     },
@@ -16180,7 +16212,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 570,
+        "line": 573,
         "column": 41
       }
     },
@@ -16194,7 +16226,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 550,
+            "line": 553,
             "column": 63
           }
         },
@@ -16204,7 +16236,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 551,
+            "line": 554,
             "column": 55,
             "isBuiltin": true
           }
@@ -16235,7 +16267,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 554,
+            "line": 557,
             "column": 55,
             "isBuiltin": true
           }
@@ -16244,7 +16276,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 549,
+        "line": 552,
         "column": 43
       }
     },
@@ -16258,7 +16290,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 439,
+            "line": 442,
             "column": 56,
             "isBuiltin": true
           }
@@ -16269,7 +16301,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 440,
+            "line": 443,
             "column": 56,
             "isBuiltin": true
           }
@@ -16288,7 +16320,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 439,
+        "line": 442,
         "column": 29
       }
     },
@@ -16302,7 +16334,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 414,
+            "line": 417,
             "column": 64,
             "isBuiltin": true
           }
@@ -16313,7 +16345,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 415,
+            "line": 418,
             "column": 64,
             "isBuiltin": true
           }
@@ -16322,7 +16354,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 414,
+        "line": 417,
         "column": 37
       }
     },
@@ -16336,7 +16368,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 390,
+            "line": 393,
             "column": 56,
             "isBuiltin": true
           }
@@ -16345,7 +16377,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 390,
+        "line": 393,
         "column": 29
       }
     },
@@ -16377,7 +16409,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 332,
+        "line": 335,
         "column": 29
       }
     },
@@ -16388,7 +16420,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 285,
+        "line": 288,
         "column": 37
       }
     },
@@ -16399,7 +16431,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 266,
+        "line": 269,
         "column": 30
       }
     },
@@ -16413,7 +16445,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 265,
+            "line": 268,
             "column": 55
           }
         }
@@ -16421,7 +16453,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 265,
+        "line": 268,
         "column": 29
       }
     },
@@ -16435,7 +16467,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 254,
+            "line": 257,
             "column": 60,
             "isBuiltin": true
           }
@@ -16444,7 +16476,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 254,
+        "line": 257,
         "column": 37
       }
     },
@@ -16455,7 +16487,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 253,
+        "line": 256,
         "column": 29
       }
     },
@@ -22404,7 +22436,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 918,
+            "line": 924,
             "column": 48
           }
         },
@@ -22414,7 +22446,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 631,
+            "line": 637,
             "column": 3
           }
         }
@@ -22422,7 +22454,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 918,
+        "line": 924,
         "column": 24
       }
     },
@@ -22623,7 +22655,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 228,
+            "line": 231,
             "column": 16
           }
         },
@@ -25243,7 +25275,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 630,
+            "line": 636,
             "column": 11
           }
         }
@@ -25252,7 +25284,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 631,
+        "line": 637,
         "column": 3
       }
     },
@@ -28170,7 +28202,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 230,
+            "line": 233,
             "column": 9,
             "isBuiltin": true
           }
@@ -28204,7 +28236,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 233,
+            "line": 236,
             "column": 12,
             "isBuiltin": true
           }
@@ -28227,7 +28259,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 235,
+            "line": 238,
             "column": 9,
             "isBuiltin": true
           }
@@ -28239,7 +28271,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 236,
+            "line": 239,
             "column": 9,
             "isBuiltin": true
           }
@@ -28251,7 +28283,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 237,
+            "line": 240,
             "column": 9,
             "isBuiltin": true
           }
@@ -28263,7 +28295,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 238,
+            "line": 241,
             "column": 12,
             "isBuiltin": true
           }
@@ -28275,7 +28307,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 239,
+            "line": 242,
             "column": 21
           }
         },
@@ -28286,7 +28318,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 240,
+            "line": 243,
             "column": 9,
             "isBuiltin": true
           }
@@ -28296,7 +28328,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 241,
+        "line": 244,
         "column": 23
       }
     },
@@ -31694,7 +31726,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 664,
+            "line": 670,
             "column": 5,
             "isBuiltin": true
           }
@@ -31705,7 +31737,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 665,
+            "line": 671,
             "column": 5,
             "isBuiltin": true
           }
@@ -31716,7 +31748,7 @@
           "location": {
             "fileName": "SDL_events.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-            "line": 666,
+            "line": 672,
             "column": 5,
             "isBuiltin": true
           }
@@ -31725,7 +31757,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 667,
+        "line": 673,
         "column": 3
       }
     },
@@ -33749,7 +33781,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 566,
+            "line": 569,
             "column": 5,
             "isBuiltin": true
           }
@@ -33760,7 +33792,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 567,
+            "line": 570,
             "column": 5,
             "isBuiltin": true
           }
@@ -33771,7 +33803,7 @@
           "location": {
             "fileName": "SDL_audio.h",
             "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-            "line": 568,
+            "line": 571,
             "column": 5,
             "isBuiltin": true
           }
@@ -33780,7 +33812,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 569,
+        "line": 572,
         "column": 3
       }
     },
@@ -34082,7 +34114,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 781,
+        "line": 784,
         "column": 33
       }
     },
@@ -34299,7 +34331,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 344,
+        "line": 347,
         "column": 16
       }
     },
@@ -35552,7 +35584,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 918,
+        "line": 924,
         "column": 24
       }
     },
@@ -35564,7 +35596,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 631,
+        "line": 637,
         "column": 3
       }
     },
@@ -35576,7 +35608,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 631,
+        "line": 637,
         "column": 3
       }
     },
@@ -35926,7 +35958,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 630,
+        "line": 636,
         "column": 11
       }
     },
@@ -36090,7 +36122,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 918,
+        "line": 924,
         "column": 24
       }
     },
@@ -36102,7 +36134,7 @@
       "location": {
         "fileName": "SDL_events.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h",
-        "line": 667,
+        "line": 673,
         "column": 3
       }
     },
@@ -36683,7 +36715,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 344,
+        "line": 347,
         "column": 16
       }
     },
@@ -36707,7 +36739,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 781,
+        "line": 784,
         "column": 33
       }
     },
@@ -36717,7 +36749,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 781,
+        "line": 784,
         "column": 33
       }
     },
@@ -36729,7 +36761,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 241,
+        "line": 244,
         "column": 23
       }
     },
@@ -36741,7 +36773,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 241,
+        "line": 244,
         "column": 23
       }
     },
@@ -36755,7 +36787,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 239,
+        "line": 242,
         "column": 21
       }
     },
@@ -36827,7 +36859,7 @@
       "location": {
         "fileName": "SDL_audio.h",
         "filePath": "/Users/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h",
-        "line": 569,
+        "line": 572,
         "column": 3
       }
     },
