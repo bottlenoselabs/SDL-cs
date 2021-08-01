@@ -1,5 +1,5 @@
 {
-  "fileName": "SDL.h",
+  "fileName": "./ext/SDL/include/SDL.h",
   "bitness": 64,
   "functions": [
     {
