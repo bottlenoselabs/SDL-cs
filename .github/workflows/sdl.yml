@@ -42,6 +42,7 @@ jobs:
       uses: EndBug/add-and-commit@v7
       with:
         default_author: user_info
+        message: "Update bindings"
 
   version-job:
     name: "Version"
