@@ -16,11 +16,14 @@ on:
 jobs:
 
   bindgen-job:
-    name: "Bindgen"
-    runs-on: ${{ matrix.os }}
+    name: "${{ matrix.platform.rid }}"
+    runs-on: ${{ matrix.platform.os }}
     strategy:
       matrix:
-        os: [windows-latest, macos-latest, ubuntu-latest]
+        platform:
+        - { name: Windows (x64), os: windows-latest, rid: win-x64 }
+        - { name: Linux (x64), os: ubuntu-latest, rid: linux-x64 }
+        - { name: macOS (x64), os: macos-latest, rid: osx-x64 }
     steps:
 
     - name: "Clone Git repository"
@@ -29,12 +32,12 @@ jobs:
         submodules: true
 
     - name: "Bindgen (Unix)"
-      if: matrix.os != 'windows-latest'
+      if: ${{ matrix.platform.rid }} != 'win-x64'
       shell: bash
       run: ./bindgen.sh
 
     - name: "Bindgen (Windows)"
-      if: matrix.os == 'windows-latest'
+      if: ${{ matrix.platform.rid }} == 'win-x64'
       shell: pwsh
       run: .\bindgen.cmd
 
@@ -42,7 +45,7 @@ jobs:
       uses: EndBug/add-and-commit@v7
       with:
         default_author: user_info
-        message: "Update bindings"
+        message: "Update bindings (${{ matrix.platform.rid }})"
 
   version-job:
     name: "Version"
