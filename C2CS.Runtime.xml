@@ -1,0 +1,442 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C2CS.Runtime</name>
+    </assembly>
+    <members>
+        <member name="T:C2CS.CBool">
+            <summary>
+                A boolean value type with the same memory layout as a <see cref="T:System.Byte" /> in both managed and unmanaged contexts;
+                equivalent to a standard bool found in C/C++/ObjC where <c>0</c> is <c>false</c> and any other value is
+                <c>true</c>.
+            </summary>
+        </member>
+        <member name="M:C2CS.CBool.op_Implicit(System.Boolean)~C2CS.CBool">
+            <summary>
+                Converts the specified <see cref="T:System.Boolean" /> to a <see cref="T:C2CS.CBool" />.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:C2CS.CBool" />.</returns>
+        </member>
+        <member name="M:C2CS.CBool.op_Implicit(C2CS.CBool)~System.Boolean">
+            <summary>
+                Converts the specified <see cref="T:C2CS.CBool" /> to a <see cref="T:System.Boolean" />.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:System.Boolean" />.</returns>
+        </member>
+        <member name="M:C2CS.CBool.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:C2CS.CString16U">
+            <summary>
+                A pointer value type; represents the 16-bit C type `char16_t*`.
+            </summary>
+        </member>
+        <member name="P:C2CS.CString16U.IsNull">
+            <summary>
+                Gets a <see cref="T:System.Boolean" /> value indicating whether this <see cref="T:C2CS.CString16U" /> is a null pointer.
+            </summary>
+        </member>
+        <member name="M:C2CS.CString16U.#ctor(System.Byte*)">
+            <summary>
+                Initializes a new instance of the <see cref="T:C2CS.CString16U" /> struct.
+            </summary>
+            <param name="ptr">The pointer value.</param>
+        </member>
+        <member name="M:C2CS.CString16U.#ctor(System.IntPtr)">
+            <summary>
+                Initializes a new instance of the <see cref="T:C2CS.CString16U" /> struct.
+            </summary>
+            <param name="ptr">The pointer value.</param>
+        </member>
+        <member name="M:C2CS.CString16U.#ctor(System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:C2CS.CString16U" /> struct.
+            </summary>
+            <param name="s">The string value.</param>
+        </member>
+        <member name="M:C2CS.CString16U.op_Explicit(System.IntPtr)~C2CS.CString16U">
+            <summary>
+                Performs an explicit conversion from a <see cref="T:System.IntPtr" /> to a <see cref="T:C2CS.CString16U" />.
+            </summary>
+            <param name="ptr">The pointer.</param>
+            <returns>
+                The resulting <see cref="T:C2CS.CString16U" />.
+            </returns>
+        </member>
+        <member name="M:C2CS.CString16U.op_Implicit(System.Byte*)~C2CS.CString16U">
+            <summary>
+                Performs an implicit conversion from a byte pointer to a <see cref="T:C2CS.CString16U" />.
+            </summary>
+            <param name="ptr">The pointer.</param>
+            <returns>
+                The resulting <see cref="T:C2CS.CString16U" />.
+            </returns>
+        </member>
+        <member name="M:C2CS.CString16U.op_Implicit(C2CS.CString16U)~System.IntPtr">
+            <summary>
+                Performs an implicit conversion from a <see cref="T:C2CS.CString16U" /> to a <see cref="T:System.IntPtr" />.
+            </summary>
+            <param name="value">The pointer.</param>
+            <returns>
+                The resulting <see cref="T:System.IntPtr" />.
+            </returns>
+        </member>
+        <member name="M:C2CS.CString16U.op_Implicit(C2CS.CString16U)~System.String">
+            <summary>
+                Performs an implicit conversion from a <see cref="T:C2CS.CString16U" /> to a <see cref="T:System.String" />.
+            </summary>
+            <param name="value">The <see cref="T:C2CS.CString16U" />.</param>
+            <returns>
+                The resulting <see cref="T:System.String" />.
+            </returns>
+        </member>
+        <member name="M:C2CS.CString16U.op_Implicit(System.String)~C2CS.CString16U">
+            <summary>
+                Performs an implicit conversion from a <see cref="T:System.String" /> to a <see cref="T:C2CS.CString16U" />.
+            </summary>
+            <param name="s">The <see cref="T:System.String" />.</param>
+            <returns>
+                The resulting <see cref="T:C2CS.CString16U" />.
+            </returns>
+        </member>
+        <member name="M:C2CS.CString16U.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:C2CS.CString16U.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:C2CS.CString8U">
+            <summary>
+                A pointer value type; represents the 8-bit C type `char*`.
+            </summary>
+        </member>
+        <member name="P:C2CS.CString8U.IsNull">
+            <summary>
+                Gets a <see cref="T:System.Boolean" /> value indicating whether this <see cref="T:C2CS.CString8U" /> is a null pointer.
+            </summary>
+        </member>
+        <member name="M:C2CS.CString8U.#ctor(System.Byte*)">
+            <summary>
+                Initializes a new instance of the <see cref="T:C2CS.CString8U" /> struct.
+            </summary>
+            <param name="ptr">The pointer value.</param>
+        </member>
+        <member name="M:C2CS.CString8U.#ctor(System.IntPtr)">
+            <summary>
+                Initializes a new instance of the <see cref="T:C2CS.CString8U" /> struct.
+            </summary>
+            <param name="ptr">The pointer value.</param>
+        </member>
+        <member name="M:C2CS.CString8U.#ctor(System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:C2CS.CString8U" /> struct.
+            </summary>
+            <param name="s">The string.</param>
+        </member>
+        <member name="M:C2CS.CString8U.op_Explicit(System.IntPtr)~C2CS.CString8U">
+            <summary>
+                Performs an explicit conversion from a <see cref="T:System.IntPtr" /> to a <see cref="T:C2CS.CString8U" />.
+            </summary>
+            <param name="ptr">The pointer.</param>
+            <returns>
+                The resulting <see cref="T:C2CS.CString8U" />.
+            </returns>
+        </member>
+        <member name="M:C2CS.CString8U.op_Implicit(System.Byte*)~C2CS.CString8U">
+            <summary>
+                Performs an implicit conversion from a byte pointer to a <see cref="T:C2CS.CString8U" />.
+            </summary>
+            <param name="ptr">The pointer.</param>
+            <returns>
+                The resulting <see cref="T:C2CS.CString8U" />.
+            </returns>
+        </member>
+        <member name="M:C2CS.CString8U.op_Implicit(C2CS.CString8U)~System.IntPtr">
+            <summary>
+                Performs an implicit conversion from a <see cref="T:C2CS.CString8U" /> to a <see cref="T:System.IntPtr" />.
+            </summary>
+            <param name="ptr">The <see cref="T:C2CS.CString8U" />.</param>
+            <returns>
+                The resulting <see cref="T:System.IntPtr" />.
+            </returns>
+        </member>
+        <member name="M:C2CS.CString8U.op_Implicit(C2CS.CString8U)~System.String">
+            <summary>
+                Performs an implicit conversion from a <see cref="T:C2CS.CString8U" /> to a <see cref="T:System.String" />.
+            </summary>
+            <param name="value">The <see cref="T:C2CS.CString8U" />.</param>
+            <returns>
+                The resulting <see cref="T:System.String" />.
+            </returns>
+        </member>
+        <member name="M:C2CS.CString8U.op_Implicit(System.String)~C2CS.CString8U">
+            <summary>
+                Performs an implicit conversion from a <see cref="T:System.String" /> to a <see cref="T:C2CS.CString8U" />.
+            </summary>
+            <param name="s">The <see cref="T:System.String" />.</param>
+            <returns>
+                The resulting <see cref="T:C2CS.CString8U" />.
+            </returns>
+        </member>
+        <member name="M:C2CS.CString8U.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:C2CS.CString8U.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:C2CS.Runtime">
+            <summary>
+                The collection of utilities for interoperability with native libraries in C#. Used by code which is generated
+                using the C2CS tool: https://github.com/lithiumtoast/c2cs.
+            </summary>
+        </member>
+        <member name="M:C2CS.Runtime.AllocateMemory(System.Int32)">
+            <summary>
+                C equivalent of `malloc`; allocates a specified size of memory in bytes.
+            </summary>
+            <param name="byteCount">The numbers of bytes to allocate.</param>
+            <returns>A pointer to the allocated memory.</returns>
+        </member>
+        <member name="M:C2CS.Runtime.FreeMemory(System.Void*)">
+            <summary>
+                C equivalent of `free`; deallocates previously allocated memory.
+            </summary>
+            <param name="pointer">The pointer to the allocated memory.</param>
+        </member>
+        <member name="M:C2CS.Runtime.ReadMemory``1(System.IntPtr)">
+            <summary>
+                Reads a blittable value type of <see cref="M:C2CS.Runtime.ReadMemory``1(System.IntPtr)" /> from the memory address.
+            </summary>
+            <param name="address">The memory address.</param>
+            <typeparam name="T">The blittable value type.</typeparam>
+            <returns>The read blittable value type <see cref="M:C2CS.Runtime.ReadMemory``1(System.IntPtr)" /> from memory.</returns>
+        </member>
+        <member name="P:C2CS.Runtime.OperatingSystem">
+            <summary>
+                Gets the current <see cref="T:C2CS.RuntimeOperatingSystem" />.
+            </summary>
+        </member>
+        <member name="P:C2CS.Runtime.Architecture">
+            <summary>
+                Gets the current <see cref="T:C2CS.RuntimeArchitecture" />.
+            </summary>
+        </member>
+        <member name="M:C2CS.Runtime.LibraryFileNameExtension(C2CS.RuntimeOperatingSystem)">
+            <summary>
+                Gets the library file name extension given a <see cref="T:C2CS.RuntimeOperatingSystem" />.
+            </summary>
+            <param name="operatingSystem">The runtime platform.</param>
+            <returns>A <see cref="T:System.String" /> containing the library file name extension for the <paramref name="operatingSystem" />.</returns>
+            <exception cref="T:System.NotImplementedException"><paramref name="operatingSystem" /> is not available yet with .NET 5.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="operatingSystem"/> is not a known valid value.</exception>
+        </member>
+        <member name="M:C2CS.Runtime.LibraryFileNamePrefix(C2CS.RuntimeOperatingSystem)">
+            <summary>
+                Gets the library file name prefix for a <see cref="T:C2CS.RuntimeOperatingSystem" />.
+            </summary>
+            <param name="targetOperatingSystem">The runtime platform.</param>
+            <returns>A <see cref="T:System.String" /> containing the library file name prefix for the <paramref name="targetOperatingSystem" />.</returns>
+            <exception cref="T:System.NotImplementedException"><paramref name="targetOperatingSystem" /> is not available yet with .NET 5.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="targetOperatingSystem"/> is not a known valid value.</exception>
+        </member>
+        <member name="M:C2CS.Runtime.String8U(C2CS.CString8U)">
+            <summary>
+                Converts a <see cref="T:System.String" /> from a C style string of type `char` (one dimensional byte array
+                terminated by a <c>0x0</c>) by allocating and copying.
+            </summary>
+            <param name="ptr">A pointer to the C string.</param>
+            <returns>A <see cref="T:System.String" /> equivalent of <paramref name="ptr" />.</returns>
+        </member>
+        <member name="M:C2CS.Runtime.String16U(C2CS.CString16U)">
+            <summary>
+                Converts a <see cref="T:System.String" /> from a C style string of type `wchar_t` (one dimensional ushort array
+                terminated by a <c>0x0</c>) by allocating and copying.
+            </summary>
+            <param name="ptr">A pointer to the C string.</param>
+            <returns>A <see cref="T:System.String" /> equivalent of <paramref name="ptr" />.</returns>
+        </member>
+        <member name="M:C2CS.Runtime.CString8U(System.String)">
+            <summary>
+                Converts a C string pointer (one dimensional byte array terminated by a
+                <c>0x0</c>) for a specified <see cref="T:System.String" /> by allocating and copying.
+            </summary>
+            <param name="str">The <see cref="T:System.String" />.</param>
+            <returns>A C string pointer.</returns>
+        </member>
+        <member name="M:C2CS.Runtime.CString16U(System.String)">
+            <summary>
+                Converts a C string pointer (one dimensional byte array terminated by a
+                <c>0x0</c>) for a specified <see cref="T:System.String" /> by allocating and copying.
+            </summary>
+            <param name="str">The <see cref="T:System.String" />.</param>
+            <returns>A C string pointer.</returns>
+        </member>
+        <member name="M:C2CS.Runtime.CString8UArray(System.ReadOnlySpan{System.String})">
+            <summary>
+                Converts an array of strings to an array of C strings of type `char` (multi-dimensional array of one
+                dimensional byte arrays each terminated by a <c>0x0</c>) by allocating and copying.
+            </summary>
+            <remarks>
+                <para>Calls <see cref="M:C2CS.Runtime.CString8U(System.String)" />.</para>
+            </remarks>
+            <param name="values">The strings.</param>
+            <returns>An array pointer of C string pointers. You are responsible for freeing the returned pointer.</returns>
+        </member>
+        <member name="M:C2CS.Runtime.CString16UArray(System.ReadOnlySpan{System.String})">
+            <summary>
+                Converts an array of strings to an array of C strings of type `wchar_t` (multi-dimensional array of one
+                dimensional ushort arrays each terminated by a <c>0x0</c>) by allocating and copying.
+            </summary>
+            <remarks>
+                <para>Calls <see cref="M:C2CS.Runtime.CString8U(System.String)" />.</para>
+            </remarks>
+            <param name="values">The strings.</param>
+            <returns>An array pointer of C string pointers. You are responsible for freeing the returned pointer.</returns>
+        </member>
+        <member name="M:C2CS.Runtime.FreeAllStrings">
+            <summary>
+                Frees the memory for all previously allocated C strings and releases references to all <see cref="T:System.String" />
+                objects which happened during <see cref="M:C2CS.Runtime.String8U(C2CS.CString8U)" />, <see cref="M:C2CS.Runtime.String16U(C2CS.CString16U)"/>, <see cref="M:C2CS.Runtime.CString8U(System.String)"/>
+                or <see cref="M:C2CS.Runtime.CString16U(System.String)" />. Does <b>not</b> garbage collect.
+            </summary>
+        </member>
+        <member name="M:C2CS.Runtime.FreeCStrings(C2CS.CString8U*,System.Int32)">
+            <summary>
+                Frees the memory for specific previously allocated C strings and releases associated references to
+                <see cref="T:System.String" /> objects which happened during <see cref="M:C2CS.Runtime.String8U(C2CS.CString8U)" /> or
+                <see cref="M:C2CS.Runtime.CString8U(System.String)" />. Does <b>not</b> garbage collect.
+            </summary>
+            <param name="ptrs">The C string pointers.</param>
+            <param name="count">The number of C string pointers.</param>
+        </member>
+        <member name="M:C2CS.Runtime.FreeCString8U(C2CS.CString8U)">
+            <summary>
+                Frees the memory for the previously allocated C string and releases reference to the
+                <see cref="T:System.String" /> object which happened during <see cref="M:C2CS.Runtime.String8U(C2CS.CString8U)" /> or <see cref="M:C2CS.Runtime.CString8U(System.String)" />.
+                Does <b>not</b> garbage collect.
+            </summary>
+            <param name="ptr">The string.</param>
+        </member>
+        <member name="M:C2CS.Runtime.FreeCString16U(C2CS.CString16U)">
+            <summary>
+                Frees the memory for the previously allocated C string and releases reference to the
+                <see cref="T:System.String" /> object which happened during <see cref="M:C2CS.Runtime.String16U(C2CS.CString16U)" /> or <see cref="M:C2CS.Runtime.CString16U(System.String)" />.
+                Does <b>not</b> garbage collect.
+            </summary>
+            <param name="ptr">The string.</param>
+        </member>
+        <member name="T:C2CS.RuntimeArchitecture">
+            <summary>
+                Defines the native computer architectures.
+            </summary>
+        </member>
+        <member name="F:C2CS.RuntimeArchitecture.Unknown">
+            <summary>
+                Unknown computer architecture.
+            </summary>
+        </member>
+        <member name="F:C2CS.RuntimeArchitecture.X64">
+            <summary>
+                Intel x86_x64 64-bit computing architecture. Commonly found in modern desktop platforms such as Windows
+                10 with power users such as the general gamer audience for PC. Also commonly found in some eighth
+                generation consoles such as Xbox One and PlayStation 4.
+            </summary>
+        </member>
+        <member name="F:C2CS.RuntimeArchitecture.X86">
+            <summary>
+                Intel x86 32-bit computing architecture. Commonly found in legacy desktop platforms.
+            </summary>
+        </member>
+        <member name="F:C2CS.RuntimeArchitecture.ARM64">
+            <summary>
+                ARM (Advanced RISC (Reduced Instruction Set Computer) Machines) 64-bit computing architecture. Commonly
+                found in modern mobile or some modern console platforms such as iOS, Nintendo Switch, etc. Also observed
+                in some modern laptops such as the M1 from Apple.
+            </summary>
+        </member>
+        <member name="F:C2CS.RuntimeArchitecture.ARM32">
+            <summary>
+                ARM (Advanced RISC (Reduced Instruction Set Computer) Machines) 32-bit computing architecture. Commonly
+                found in legacy mobile or legacy console platforms.
+            </summary>
+        </member>
+        <member name="T:C2CS.RuntimeOperatingSystem">
+            <summary>
+                Defines the native runtime operating systems.
+            </summary>
+        </member>
+        <member name="F:C2CS.RuntimeOperatingSystem.Unknown">
+            <summary>
+                Unknown operating system.
+            </summary>
+        </member>
+        <member name="F:C2CS.RuntimeOperatingSystem.Windows">
+            <summary>
+                Versions of Windows operating system.
+            </summary>
+        </member>
+        <member name="F:C2CS.RuntimeOperatingSystem.macOS">
+            <summary>
+                Versions of macOS operating system.
+            </summary>
+        </member>
+        <member name="F:C2CS.RuntimeOperatingSystem.Linux">
+            <summary>
+                Distributions of the Linux operating system.
+            </summary>
+        </member>
+        <member name="F:C2CS.RuntimeOperatingSystem.FreeBSD">
+            <summary>
+                Versions of FreeBSD operating system.
+            </summary>
+        </member>
+        <member name="F:C2CS.RuntimeOperatingSystem.Android">
+            <summary>
+                Mobile versions of Android operating system.
+            </summary>
+        </member>
+        <member name="F:C2CS.RuntimeOperatingSystem.iOS">
+            <summary>
+                Mobile versions of iOS operating system.
+            </summary>
+        </member>
+        <member name="F:C2CS.RuntimeOperatingSystem.tvOS">
+            <summary>
+                Micro console versions of tvOS operating system.
+            </summary>
+        </member>
+        <member name="F:C2CS.RuntimeOperatingSystem.Browser">
+            <summary>
+                Not really an operating system, but rather versions of WebAssembly on some WASI
+                (WebAssembly System Interface) compliant host program such as a modern web browser.
+            </summary>
+        </member>
+        <member name="F:C2CS.RuntimeOperatingSystem.PlayStation">
+            <summary>
+                Versions of the PlayStation operating system. Otherwise known as "Orbis OS". Based on <see cref="F:C2CS.RuntimeOperatingSystem.FreeBSD" />.
+            </summary>
+        </member>
+        <member name="F:C2CS.RuntimeOperatingSystem.Xbox">
+            <summary>
+                Versions of the Xbox operating system.
+            </summary>
+        </member>
+        <member name="F:C2CS.RuntimeOperatingSystem.Switch">
+            <summary>
+                TODO. Subject to change.
+            </summary>
+        </member>
+        <member name="T:C2CS.DIR">
+            <summary>
+            TODO: Remove.
+            </summary>
+        </member>
+        <member name="T:C2CS.FILE">
+            <summary>
+            TODO: Remove.
+            </summary>
+        </member>
+    </members>
+</doc>
