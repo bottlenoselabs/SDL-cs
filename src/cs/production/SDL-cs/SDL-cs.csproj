@@ -8,32 +8,13 @@
     <!-- RuntimeIdentifier -->
     <PropertyGroup Condition="'$(RuntimeIdentifier)' == ''">
         <RuntimeIdentifier Condition="'$(IsWindows)' == 'true' AND '$(Architecture)' == 'x64'">win-x64</RuntimeIdentifier>
-        <RuntimeIdentifier Condition="'$(IsWindows)' == 'true' AND '$(Architecture)' == 'x86'">win-x86</RuntimeIdentifier>
         <RuntimeIdentifier Condition="'$(IsMacOS)' == 'true' AND '$(Architecture)' == 'x64'">osx-x64</RuntimeIdentifier>
         <RuntimeIdentifier Condition="'$(IsLinux)' == 'true' AND '$(Architecture)' == 'x64'">linux-x64</RuntimeIdentifier>
-        <RuntimeIdentifiaer Condition="'$(IsLinux)' == 'true' AND '$(Architecture)' == 'x86'">linux-x86</RuntimeIdentifiaer>
-        <Is32Bit Condition="'$(Architecture)' == 'x86' OR '$(Architecture)' == 'arm32'">true</Is32Bit>
-        <Is32Bit Condition="'$(Architecture)' != 'x86' AND '$(Architecture)' != 'arm32'">false</Is32Bit>
-        <Is64Bit Condition="'$(Architecture)' == 'x64' OR '$(Architecture)' == 'arm64'">true</Is64Bit>
-        <Is64Bit Condition="'$(Architecture)' != 'x64' AND '$(Architecture)' != 'arm64'">false</Is64Bit>
     </PropertyGroup>
     <Target Name="CheckRuntimeIdentifier" AfterTargets="Restore" BeforeTargets="BeforeBuild">
-        <Error Condition="'$(RuntimeIdentifier)' == ''" Text="'RuntimeIdentifier' was not set in the csproj." />
         <Error Condition="'$(Is32Bit)' == 'true'" Text="'$(RuntimeIdentifier)' is 32-bit which is not supported." />
+        <Error Condition="'$(RuntimeIdentifier)' == ''" Text="'RuntimeIdentifier' was not set in the csproj." />
     </Target>
-    
-    <!-- NuGet -->
-    <PropertyGroup>
-        <Version Condition="'$(Version)' == ''">0.0.0.0-pre</Version>
-        <IsPackable>true</IsPackable>
-        <RepositoryUrl>https://github.com/lithiumtoast/sdl2-cs</RepositoryUrl>
-        <RepositoryType>git</RepositoryType>
-        <PackageDescription>Automatically updated C# bindings for SDL2 with native dynamic link libraries.</PackageDescription>
-        <NoWarn>NU5101</NoWarn>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(RuntimeIdentifier)' != ''">
-        <PackageId>SDL-cs.$(RuntimeIdentifier)</PackageId>
-    </PropertyGroup>
 
     <!-- NuGet package references -->
     <ItemGroup>
@@ -85,9 +66,5 @@
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
     </ItemGroup>
-    <Target Name="Print native libraries" BeforeTargets="BeforeBuild">
-        <Exec Command="ls $(GitRepositoryPath)lib" Condition="'$(OS)' != 'Windows_NT'"  />
-        <Exec Command="dir $(GitRepositoryPath)lib" Condition="'$(OS)' == 'Windows_NT'"  />
-    </Target>
 
 </Project>

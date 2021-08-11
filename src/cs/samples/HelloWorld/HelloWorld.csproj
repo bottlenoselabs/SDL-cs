@@ -4,15 +4,13 @@
         <OutputType>Exe</OutputType>
         <TargetFramework>net5.0</TargetFramework>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-        <RuntimeIdentifier Condition="$([MSBuild]::IsOSPlatform('Linux'))" >linux-x64</RuntimeIdentifier>
-        <RuntimeIdentifier Condition="$([MSBuild]::IsOSPlatform('OSX'))" >osx-x64</RuntimeIdentifier>
-        <RuntimeIdentifier Condition="$([MSBuild]::IsOSPlatform('Windows'))" >win-x64</RuntimeIdentifier>
+        <RuntimeIdentifier Condition="$([MSBuild]::IsOSPlatform('Linux'))">linux-x64</RuntimeIdentifier>
+        <RuntimeIdentifier Condition="$([MSBuild]::IsOSPlatform('OSX'))">osx-x64</RuntimeIdentifier>
+        <RuntimeIdentifier Condition="$([MSBuild]::IsOSPlatform('Windows'))">win-x64</RuntimeIdentifier>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="sdl-cs.linux-x64" Version="*-*" Condition="$([MSBuild]::IsOSPlatform('Linux'))" />
-        <PackageReference Include="sdl-cs.osx-x64" Version="*-*" Condition="$([MSBuild]::IsOSPlatform('OSX'))" />
-        <PackageReference Include="sdl-cs.win-x64" Version="*-*" Condition="$([MSBuild]::IsOSPlatform('Windows'))" />
+      <ProjectReference Include="../../production\SDL-cs\SDL-cs.csproj" />
     </ItemGroup>
 
 </Project>
