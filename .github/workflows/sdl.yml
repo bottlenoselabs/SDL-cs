@@ -66,5 +66,5 @@ jobs:
         dotnet-version: '${{ env.DOTNET_SDK_VERSION }}'
 
     - name: "Build .NET solution"
-      run: dotnet build  --nologo --verbosity minimal --configuration Release --runtime ${{ matrix.platform.rid }}
+      run: dotnet build  --nologo --verbosity minimal --configuration Release
 
