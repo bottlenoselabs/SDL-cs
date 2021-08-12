@@ -21,30 +21,6 @@
       <PackageReference Include="C2CS.Runtime" Version="*-*" />
     </ItemGroup>
 
-    <!-- SDL bindings for Windows -->
-    <ItemGroup Condition="'$(IsWindows)' == 'true'">
-        <Compile Update="SDL.win.cs" />
-    </ItemGroup>
-    <ItemGroup Condition="'$(IsWindows)' != 'true'">
-        <Compile Remove="SDL.win.cs" />
-    </ItemGroup>
-
-    <!-- SDL bindings for macOS -->
-    <ItemGroup Condition="'$(IsMacOS)' == 'true'">
-        <Compile Update="SDL.osx.cs" />
-    </ItemGroup>
-    <ItemGroup Condition="'$(IsMacOS)' != 'true'">
-        <Compile Remove="SDL.osx.cs" />
-    </ItemGroup>
-    
-    <!-- SDL bindings for Linux -->
-    <ItemGroup Condition="'$(IsLinux)' == 'true'">
-        <Compile Update="SDL.linux.cs" />
-    </ItemGroup>
-    <ItemGroup Condition="'$(IsLinux)' != 'true'">
-        <Compile Remove="SDL.linux.cs" />
-    </ItemGroup>
-
     <!-- Dynamic link libraries -->
     <ItemGroup>
         <Content Include="$(GitRepositoryPath)lib/*.dll" Condition="'$(IsWindows)' == 'true'">
