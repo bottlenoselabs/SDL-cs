@@ -20,7 +20,13 @@ if not exist ".\C2CS.exe" (
 goto:eof
 
 :bindgen
-    .\C2CS ast -i .\ext\SDL\include\SDL.h -o .\ast\SDL.json -s .\ext\SDL\include -b 64 -w .\api.txt
+    .\C2CS ast -i .\ext\SDL\include\SDL.h -o .\ast\SDL.json -s .\ext\SDL\include -b 64 -w .\api.txt -d ^
+ SDL_DISABLE_MM3DNOW_H ^
+ SDL_DISABLE_IMMINTRIN_H ^
+ SDL_DISABLE_MMINTRIN_H ^
+ SDL_DISABLE_XMMINTRIN_H ^
+ SDL_DISABLE_EMMINTRIN_H ^
+ SDL_DISABLE_PMMINTRIN_H
     call:exit_if_last_command_failed
     .\C2CS cs -i .\ast\SDL.json -o .\src\cs\production\SDL-cs\SDL.cs -l "SDL2" -c "SDL" -g "SDL_bool" -a ^
  "SDL_bool -> CBool"^

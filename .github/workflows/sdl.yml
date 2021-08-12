@@ -29,14 +29,9 @@ jobs:
         submodules: true
 
     - name: "Bindgen (Unix)"
-      if: ${{ matrix.platform.rid }} != 'win-x64'
+      if: ${{ matrix.platform.rid }} == 'linux-x64'
       shell: bash
       run: ./bindgen.sh
-
-    - name: "Bindgen (Windows)"
-      if: ${{ matrix.platform.rid }} == 'win-x64'
-      shell: pwsh
-      run: .\bindgen.cmd
 
     - name: "Add + commit + push (if necessary)"
       uses: EndBug/add-and-commit@v7

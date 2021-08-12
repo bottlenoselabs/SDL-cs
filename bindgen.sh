@@ -26,7 +26,12 @@ function download_C2CS_osx() {
 }
 
 function bindgen {
-    ./C2CS ast -i ./ext/SDL/include/SDL.h -o ./ast/SDL.osx.json -s ./ext/SDL/include -b 64 -w ./api.txt
+    ./C2CS ast -i ./ext/SDL/include/SDL.h -o ./ast/SDL.osx.json -s ./ext/SDL/include -b 64 -w ./api.txt -d \
+ SDL_DISABLE_IMMINTRIN_H \
+ SDL_DISABLE_MMINTRIN_H \
+ SDL_DISABLE_XMMINTRIN_H \
+ SDL_DISABLE_EMMINTRIN_H \
+ SDL_DISABLE_PMMINTRIN_H \
     exit_if_last_command_failed
     ./C2CS cs -i ./ast/SDL.json -o ./src/cs/production/SDL-cs/SDL.cs -l "SDL2" -c "SDL" -g SDL_bool -a \
 "SDL_bool -> CBool" \
