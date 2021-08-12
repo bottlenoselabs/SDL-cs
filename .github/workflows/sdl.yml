@@ -28,13 +28,14 @@ jobs:
       with:
         submodules: true
 
-    - name: "Bindgen (Unix)"
+    - name: "Bindgen"
       if: ${{ matrix.platform.rid }} == 'linux-x64'
       shell: bash
       run: ./bindgen.sh
 
-    - name: "Add + commit + push (if necessary)"
+    - name: "Bindgen: add + commit + push (if necessary)"
       uses: EndBug/add-and-commit@v7
+      if: ${{ matrix.platform.rid }} == 'linux-x64'
       with:
         default_author: user_info
         message: "Update bindings (${{ matrix.platform.rid }})"
@@ -48,12 +49,6 @@ jobs:
       if: ${{ !startsWith(matrix.platform.rid, 'win') }}
       shell: bash
       run: ./library.sh
-
-    - name: "Upload"
-      uses: actions/upload-artifact@v2
-      with:
-        name: native-libraries-${{ matrix.platform.rid }}
-        path: ${{ github.workspace }}/lib/
 
     - name: "Install .NET"
       uses: actions/setup-dotnet@v1
