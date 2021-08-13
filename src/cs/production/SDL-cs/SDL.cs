@@ -2130,15 +2130,15 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern void SDL_SetMainReady();
 
-    // Function @ SDL_stdinc.h:503:31 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_stdinc.h)
+    // Function @ SDL_stdinc.h:514:31 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_stdinc.h)
     [DllImport(LibraryName)]
     public static extern void* SDL_memcpy(void* dst, void* src, ulong len);
 
-    // Function @ SDL_stdinc.h:398:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_stdinc.h)
+    // Function @ SDL_stdinc.h:409:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_stdinc.h)
     [DllImport(LibraryName)]
     public static extern void SDL_free(void* mem);
 
-    // Function @ SDL_stdinc.h:395:31 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_stdinc.h)
+    // Function @ SDL_stdinc.h:406:31 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_stdinc.h)
     [DllImport(LibraryName)]
     public static extern void* SDL_malloc(ulong size);
 
@@ -4694,7 +4694,7 @@ public static unsafe partial class SDL
         SDL_AUDIO_PAUSED = 2U
     }
 
-    // Pseudo enum 'SDL_DUMMY_ENUM' @ SDL_stdinc.h:371:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_stdinc.h)
+    // Pseudo enum 'SDL_DUMMY_ENUM' @ SDL_stdinc.h:382:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_stdinc.h)
     public const uint DUMMY_ENUM_VALUE = 0;
 
     // Pseudo enum 'SDL_AssertState' @ SDL_assert.h:106:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_assert.h)
