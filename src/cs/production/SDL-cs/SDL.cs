@@ -2130,7 +2130,7 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern void SDL_SetMainReady();
 
-    // Function @ SDL_stdinc.h:514:31 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_stdinc.h)
+    // Function @ SDL_stdinc.h:515:31 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_stdinc.h)
     [DllImport(LibraryName)]
     public static extern void* SDL_memcpy(void* dst, void* src, ulong len);
 
@@ -4582,7 +4582,7 @@ public static unsafe partial class SDL
         SDL_NUM_SYSTEM_CURSORS = 12U
     }
 
-    // Enum @ SDL_keycode.h:347:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_keycode.h)
+    // Enum @ SDL_keycode.h:349:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_keycode.h)
     public enum SDL_Keymod : uint
     {
         KMOD_NONE = 0U,
@@ -4601,7 +4601,8 @@ public static unsafe partial class SDL
         KMOD_CTRL = 192U,
         KMOD_SHIFT = 3U,
         KMOD_ALT = 768U,
-        KMOD_GUI = 3072U
+        KMOD_GUI = 3072U,
+        KMOD_RESERVED = 32768U
     }
 
     // Enum @ SDL_video.h:250:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
