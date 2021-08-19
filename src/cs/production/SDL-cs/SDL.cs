@@ -90,279 +90,279 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern CBool SDL_IsTablet();
 
-    // Function @ SDL_render.h:1610:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1667:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GL_UnbindTexture(SDL_Texture* texture);
 
-    // Function @ SDL_render.h:1597:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1654:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GL_BindTexture(SDL_Texture* texture, float* texw, float* texh);
 
-    // Function @ SDL_render.h:1559:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1616:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderFlush(SDL_Renderer* renderer);
 
-    // Function @ SDL_render.h:1528:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1585:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void SDL_DestroyRenderer(SDL_Renderer* renderer);
 
-    // Function @ SDL_render.h:1519:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1576:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void SDL_DestroyTexture(SDL_Texture* texture);
 
-    // Function @ SDL_render.h:1506:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1563:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void SDL_RenderPresent(SDL_Renderer* renderer);
 
-    // Function @ SDL_render.h:1468:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1525:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderReadPixels(SDL_Renderer* renderer, SDL_Rect* rect, uint format, void* pixels, int pitch);
 
-    // Function @ SDL_render.h:1437:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1446:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderCopyExF(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect* srcrect, SDL_FRect* dstrect, double angle, SDL_FPoint* center, SDL_RendererFlip flip);
 
-    // Function @ SDL_render.h:1413:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1422:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderCopyF(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect* srcrect, SDL_FRect* dstrect);
 
-    // Function @ SDL_render.h:1397:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1406:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderFillRectsF(SDL_Renderer* renderer, SDL_FRect* rects, int count);
 
-    // Function @ SDL_render.h:1385:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1394:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderFillRectF(SDL_Renderer* renderer, SDL_FRect* rect);
 
-    // Function @ SDL_render.h:1372:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1381:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawRectsF(SDL_Renderer* renderer, SDL_FRect* rects, int count);
 
-    // Function @ SDL_render.h:1360:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1369:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawRectF(SDL_Renderer* renderer, SDL_FRect* rect);
 
-    // Function @ SDL_render.h:1348:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1357:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawLinesF(SDL_Renderer* renderer, SDL_FPoint* points, int count);
 
-    // Function @ SDL_render.h:1336:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1345:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawLineF(SDL_Renderer* renderer, float x1, float y1, float x2, float y2);
 
-    // Function @ SDL_render.h:1322:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1331:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawPointsF(SDL_Renderer* renderer, SDL_FPoint* points, int count);
 
-    // Function @ SDL_render.h:1311:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1320:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawPointF(SDL_Renderer* renderer, float x, float y);
 
-    // Function @ SDL_render.h:1294:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1303:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderCopyEx(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect* srcrect, SDL_Rect* dstrect, double angle, SDL_Point* center, SDL_RendererFlip flip);
 
-    // Function @ SDL_render.h:1252:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1261:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderCopy(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect* srcrect, SDL_Rect* dstrect);
 
-    // Function @ SDL_render.h:1222:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1231:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderFillRects(SDL_Renderer* renderer, SDL_Rect* rects, int count);
 
-    // Function @ SDL_render.h:1199:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1208:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderFillRect(SDL_Renderer* renderer, SDL_Rect* rect);
 
-    // Function @ SDL_render.h:1171:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1180:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawRects(SDL_Renderer* renderer, SDL_Rect* rects, int count);
 
-    // Function @ SDL_render.h:1147:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1156:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawRect(SDL_Renderer* renderer, SDL_Rect* rect);
 
-    // Function @ SDL_render.h:1123:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1132:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawLines(SDL_Renderer* renderer, SDL_Point* points, int count);
 
-    // Function @ SDL_render.h:1097:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1106:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawLine(SDL_Renderer* renderer, int x1, int y1, int x2, int y2);
 
-    // Function @ SDL_render.h:1066:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1075:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawPoints(SDL_Renderer* renderer, SDL_Point* points, int count);
 
-    // Function @ SDL_render.h:1042:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1051:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawPoint(SDL_Renderer* renderer, int x, int y);
 
-    // Function @ SDL_render.h:1017:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1026:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderClear(SDL_Renderer* renderer);
 
-    // Function @ SDL_render.h:1000:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1009:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetRenderDrawBlendMode(SDL_Renderer* renderer, SDL_BlendMode* blendMode);
 
-    // Function @ SDL_render.h:987:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:996:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetRenderDrawBlendMode(SDL_Renderer* renderer, SDL_BlendMode blendMode);
 
-    // Function @ SDL_render.h:963:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:972:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetRenderDrawColor(SDL_Renderer* renderer, byte* r, byte* g, byte* b, byte* a);
 
-    // Function @ SDL_render.h:942:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:951:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetRenderDrawColor(SDL_Renderer* renderer, byte r, byte g, byte b, byte a);
 
-    // Function @ SDL_render.h:912:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:921:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void SDL_RenderGetScale(SDL_Renderer* renderer, float* scaleX, float* scaleY);
 
-    // Function @ SDL_render.h:898:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:907:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderSetScale(SDL_Renderer* renderer, float scaleX, float scaleY);
 
-    // Function @ SDL_render.h:873:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:882:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_RenderIsClipEnabled(SDL_Renderer* renderer);
 
-    // Function @ SDL_render.h:858:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:867:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void SDL_RenderGetClipRect(SDL_Renderer* renderer, SDL_Rect* rect);
 
-    // Function @ SDL_render.h:844:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:853:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderSetClipRect(SDL_Renderer* renderer, SDL_Rect* rect);
 
-    // Function @ SDL_render.h:828:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:837:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void SDL_RenderGetViewport(SDL_Renderer* renderer, SDL_Rect* rect);
 
-    // Function @ SDL_render.h:817:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:826:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderSetViewport(SDL_Renderer* renderer, SDL_Rect* rect);
 
-    // Function @ SDL_render.h:787:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:796:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderSetIntegerScale(SDL_Renderer* renderer, CBool enable);
 
-    // Function @ SDL_render.h:768:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:777:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void SDL_RenderGetLogicalSize(SDL_Renderer* renderer, long* w, long* h);
 
-    // Function @ SDL_render.h:751:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:760:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderSetLogicalSize(SDL_Renderer* renderer, int w, int h);
 
-    // Function @ SDL_render.h:723:39 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:732:39 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern SDL_Texture* SDL_GetRenderTarget(SDL_Renderer* renderer);
 
-    // Function @ SDL_render.h:707:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:716:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetRenderTarget(SDL_Renderer* renderer, SDL_Texture* texture);
 
-    // Function @ SDL_render.h:683:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:692:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_RenderTargetSupported(SDL_Renderer* renderer);
 
-    // Function @ SDL_render.h:671:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:680:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void SDL_UnlockTexture(SDL_Texture* texture);
 
-    // Function @ SDL_render.h:652:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:661:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_LockTextureToSurface(SDL_Texture* texture, SDL_Rect* rect, SDL_Surface** surface);
 
-    // Function @ SDL_render.h:618:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:627:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_LockTexture(SDL_Texture* texture, SDL_Rect* rect, void** pixels, long* pitch);
 
-    // Function @ SDL_render.h:564:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:573:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_UpdateYUVTexture(SDL_Texture* texture, SDL_Rect* rect, byte* Yplane, int Ypitch, byte* Uplane, int Upitch, byte* Vplane, int Vpitch);
 
-    // Function @ SDL_render.h:533:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:542:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_UpdateTexture(SDL_Texture* texture, SDL_Rect* rect, void* pixels, int pitch);
 
-    // Function @ SDL_render.h:480:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:489:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetTextureScaleMode(SDL_Texture* texture, SDL_ScaleMode* scaleMode);
 
-    // Function @ SDL_render.h:468:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:477:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetTextureScaleMode(SDL_Texture* texture, SDL_ScaleMode scaleMode);
 
-    // Function @ SDL_render.h:454:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:463:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetTextureBlendMode(SDL_Texture* texture, SDL_BlendMode* blendMode);
 
-    // Function @ SDL_render.h:441:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:450:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetTextureBlendMode(SDL_Texture* texture, SDL_BlendMode blendMode);
 
-    // Function @ SDL_render.h:424:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:433:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetTextureAlphaMod(SDL_Texture* texture, byte* alpha);
 
-    // Function @ SDL_render.h:410:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:419:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetTextureAlphaMod(SDL_Texture* texture, byte alpha);
 
-    // Function @ SDL_render.h:387:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:396:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetTextureColorMod(SDL_Texture* texture, byte* r, byte* g, byte* b);
 
-    // Function @ SDL_render.h:370:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:379:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetTextureColorMod(SDL_Texture* texture, byte r, byte g, byte b);
 
-    // Function @ SDL_render.h:344:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:353:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_QueryTexture(SDL_Texture* texture, uint* format, long* access, long* w, long* h);
 
-    // Function @ SDL_render.h:326:39 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:335:39 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern SDL_Texture* SDL_CreateTextureFromSurface(SDL_Renderer* renderer, SDL_Surface* surface);
 
-    // Function @ SDL_render.h:299:39 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:308:39 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern SDL_Texture* SDL_CreateTexture(SDL_Renderer* renderer, uint format, int access, int w, int h);
 
-    // Function @ SDL_render.h:276:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:285:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetRendererOutputSize(SDL_Renderer* renderer, long* w, long* h);
 
-    // Function @ SDL_render.h:256:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:265:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetRendererInfo(SDL_Renderer* renderer, SDL_RendererInfo* info);
 
-    // Function @ SDL_render.h:243:40 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:252:40 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern SDL_Renderer* SDL_GetRenderer(SDL_Window* window);
 
-    // Function @ SDL_render.h:232:40 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:241:40 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern SDL_Renderer* SDL_CreateSoftwareRenderer(SDL_Surface* surface);
 
-    // Function @ SDL_render.h:212:40 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:221:40 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern SDL_Renderer* SDL_CreateRenderer(SDL_Window* window, int index, uint flags);
 
-    // Function @ SDL_render.h:192:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:201:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_CreateWindowAndRenderer(int width, int height, uint window_flags, SDL_Window** window, SDL_Renderer** renderer);
 
-    // Function @ SDL_render.h:174:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:183:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetRenderDriverInfo(int index, SDL_RendererInfo* info);
 
-    // Function @ SDL_render.h:160:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:169:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetNumRenderDrivers();
 
@@ -3964,13 +3964,13 @@ public static unsafe partial class SDL
         }
     }
 
-    // OpaqueType @ SDL_render.h:138:28 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // OpaqueType @ SDL_render.h:148:28 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct SDL_Texture
     {
     }
 
-    // OpaqueType @ SDL_render.h:132:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // OpaqueType @ SDL_render.h:142:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct SDL_Renderer
     {
@@ -4140,7 +4140,7 @@ public static unsafe partial class SDL
         public static implicit operator SDL_AudioFormat(ushort data) => new() { Data = data };
     }
 
-    // Enum @ SDL_render.h:126:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Enum @ SDL_render.h:136:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     public enum SDL_RendererFlip : uint
     {
         SDL_FLIP_NONE = 0U,
@@ -4159,7 +4159,7 @@ public static unsafe partial class SDL
         SDL_BLENDMODE_INVALID = 2147483647U
     }
 
-    // Enum @ SDL_render.h:96:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Enum @ SDL_render.h:106:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     public enum SDL_ScaleMode : uint
     {
         SDL_ScaleModeNearest = 0U,
@@ -5253,12 +5253,12 @@ public static unsafe partial class SDL
     public const uint SDL_RENDERER_PRESENTVSYNC = 4;
     public const uint SDL_RENDERER_TARGETTEXTURE = 8;
 
-    // Pseudo enum 'SDL_TextureAccess' @ SDL_render.h:101:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Pseudo enum 'SDL_TextureAccess' @ SDL_render.h:111:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     public const uint SDL_TEXTUREACCESS_STATIC = 0;
     public const uint SDL_TEXTUREACCESS_STREAMING = 1;
     public const uint SDL_TEXTUREACCESS_TARGET = 2;
 
-    // Pseudo enum 'SDL_TextureModulate' @ SDL_render.h:111:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Pseudo enum 'SDL_TextureModulate' @ SDL_render.h:121:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     public const uint SDL_TEXTUREMODULATE_NONE = 0;
     public const uint SDL_TEXTUREMODULATE_COLOR = 1;
     public const uint SDL_TEXTUREMODULATE_ALPHA = 2;
