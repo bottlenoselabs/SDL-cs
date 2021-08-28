@@ -28,7 +28,7 @@ goto:eof
  SDL_DISABLE_EMMINTRIN_H ^
  SDL_DISABLE_PMMINTRIN_H
     call:exit_if_last_command_failed
-    .\C2CS cs -i .\ast\SDL.json -o .\src\cs\production\SDL-cs\SDL.cs -l "SDL2" -c "SDL" -g "SDL_bool" -a ^
+    .\C2CS cs -i .\ast\SDL.json -o .\src\cs\production\SDL-cs\SDL.cs -l "SDL2" -c "SDL" -g .\ignored.txt -a ^
  "SDL_bool -> CBool"^
  "Uint8 -> byte"^
  "Uint16 -> ushort"^
