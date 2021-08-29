@@ -17,7 +17,7 @@ namespace HelloWorld
 
         private static int Main()
         {
-            var errorCode = SDL_Init(0x20); // 0x20 = SDL_INIT_VIDEO
+            var errorCode = SDL_Init(SDL_INIT_VIDEO);
             CheckError(errorCode);
 
             CreateWindow();
@@ -30,8 +30,7 @@ namespace HelloWorld
                 {
                     Frame();
 
-                    // 0x100 = SDL_QUIT
-                    if (e.type == 0x100)
+                    if (e.type == SDL_QUIT)
                     {
                         // Break out of the loop on quit
                         break;
@@ -110,7 +109,7 @@ namespace HelloWorld
             }
 
             string error = SDL_GetError();
-            Console.Error.WriteLine($"could not initialize SDL2: {error}");
+            Console.Error.WriteLine($"SDL2 error: {error}");
             Environment.Exit(1);
         }
     }
