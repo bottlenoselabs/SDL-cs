@@ -20,7 +20,19 @@ if not exist ".\C2CS.exe" (
 goto:eof
 
 :bindgen
-    .\C2CS ast -i .\ext\SDL\include\SDL.h -o .\ast\SDL.json -s .\ext\SDL\include -b 64 -w .\api.txt -d ^
+    .\C2CS ast -i .\ext\SDL\include\SDL.h -o .\ast\SDL.json -s .\ext\SDL\include -b 64 -w .\api.txt -g ^
+ "SDL_endian.h"^
+ "SDL_config_android.h"^
+ "SDL_config_macosx.h"^
+ "SDL_config_iphoneos.h"^
+ "SDL_config_minimal.h"^
+ "SDL_config_os2.h"^
+ "SDL_config_pandora.h"^
+ "SDL_config_psp.h"^
+ "SDL_config_windows.h"^
+ "SDL_config_winrt.h"^
+ "SDL_config_wiz.h"^
+ -d ^
  SDL_DISABLE_MM3DNOW_H ^
  SDL_DISABLE_IMMINTRIN_H ^
  SDL_DISABLE_MMINTRIN_H ^
