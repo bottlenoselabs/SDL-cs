@@ -6,9 +6,9 @@ env:
   DOTNET_SDK_VERSION: 5.0.301
 
 on:
-  push:
+  pull_request:
     branches: [develop]
-    paths-ignore: ['**/*.md']
+    types: [assigned, opened, synchronize, reopened]
 
 jobs:
 
@@ -20,6 +20,7 @@ jobs:
     - name: "Clone Git repository"
       uses: actions/checkout@master
       with:
+        ref: ${{ github.event.pull_request.head.sha }}
         submodules: true
 
     - name: "Bindgen"
@@ -47,6 +48,7 @@ jobs:
     - name: "Clone Git repository"
       uses: actions/checkout@master
       with:
+        ref: ${{ github.event.pull_request.head.sha }}
         submodules: true
 
     - name: "Build native library: Windows"
