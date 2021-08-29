@@ -27,6 +27,7 @@ function download_C2CS_osx() {
 
 function bindgen {
     ./C2CS ast -i ./ext/SDL/include/SDL.h -o ./ast/SDL.json -s ./ext/SDL/include -b 64 -w ./api.txt -g \
+"SDL_begincode.h" \
 "SDL_endian.h" \
 "SDL_config_android.h" \
 "SDL_config_macosx.h" \
