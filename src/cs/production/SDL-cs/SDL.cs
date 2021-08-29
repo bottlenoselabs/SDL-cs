@@ -5269,9 +5269,6 @@ public static unsafe partial class SDL
     public const int ShapeModeReverseBinarizeAlpha = 2;
     public const int ShapeModeColorKey = 3;
 
-    // MacroObjectLike @ begin_code.h:163:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/begin_code.h)
-    public const void* NULL = (void*)0;
-
     // MacroObjectLike @ SDL_mutex.h:44:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_mutex.h)
     public const int SDL_MUTEX_TIMEDOUT = 1;
 
