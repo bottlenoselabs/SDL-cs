@@ -198,99 +198,99 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern CString8U SDL_GetAudioDeviceName(int index, int iscapture);
 
-    // Function @ SDL_audio.h:552:43 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:501:43 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern SDL_AudioDeviceID SDL_OpenAudioDevice(CString8U device, int iscapture, SDL_AudioSpec* desired, SDL_AudioSpec* obtained, int allowed_changes);
 
-    // Function @ SDL_audio.h:573:41 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:522:41 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern SDL_AudioStatus SDL_GetAudioStatus();
 
-    // Function @ SDL_audio.h:574:41 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:523:41 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern SDL_AudioStatus SDL_GetAudioDeviceStatus(SDL_AudioDeviceID dev);
 
-    // Function @ SDL_audio.h:587:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:536:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern void SDL_PauseAudio(int pause_on);
 
-    // Function @ SDL_audio.h:588:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:537:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern void SDL_PauseAudioDevice(SDL_AudioDeviceID dev, int pause_on);
 
-    // Function @ SDL_audio.h:697:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:646:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern void SDL_FreeWAV(byte* audio_buf);
 
-    // Function @ SDL_audio.h:804:43 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:753:43 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern SDL_AudioStream* SDL_NewAudioStream(SDL_AudioFormat src_format, byte src_channels, int src_rate, SDL_AudioFormat dst_format, byte dst_channels, int dst_rate);
 
-    // Function @ SDL_audio.h:826:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:775:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern int SDL_AudioStreamPut(SDL_AudioStream* stream, void* buf, int len);
 
-    // Function @ SDL_audio.h:843:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:792:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern int SDL_AudioStreamGet(SDL_AudioStream* stream, void* buf, int len);
 
-    // Function @ SDL_audio.h:859:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:808:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern int SDL_AudioStreamAvailable(SDL_AudioStream* stream);
 
-    // Function @ SDL_audio.h:888:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:837:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern void SDL_AudioStreamClear(SDL_AudioStream* stream);
 
-    // Function @ SDL_audio.h:900:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:849:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern void SDL_FreeAudioStream(SDL_AudioStream* stream);
 
-    // Function @ SDL_audio.h:923:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:872:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern void SDL_MixAudio(byte* dst, byte* src, uint len, int volume);
 
-    // Function @ SDL_audio.h:954:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:903:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern void SDL_MixAudioFormat(byte* dst, byte* src, SDL_AudioFormat format, uint len, int volume);
 
-    // Function @ SDL_audio.h:1006:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:955:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern int SDL_QueueAudio(SDL_AudioDeviceID dev, void* data, uint len);
 
-    // Function @ SDL_audio.h:1054:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:1003:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern uint SDL_DequeueAudio(SDL_AudioDeviceID dev, void* data, uint len);
 
-    // Function @ SDL_audio.h:1088:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:1037:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern uint SDL_GetQueuedAudioSize(SDL_AudioDeviceID dev);
 
-    // Function @ SDL_audio.h:1122:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:1071:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern void SDL_ClearQueuedAudio(SDL_AudioDeviceID dev);
 
-    // Function @ SDL_audio.h:1134:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:1083:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern void SDL_LockAudio();
 
-    // Function @ SDL_audio.h:1135:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:1084:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern void SDL_LockAudioDevice(SDL_AudioDeviceID dev);
 
-    // Function @ SDL_audio.h:1136:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:1085:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern void SDL_UnlockAudio();
 
-    // Function @ SDL_audio.h:1137:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:1086:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern void SDL_UnlockAudioDevice(SDL_AudioDeviceID dev);
 
-    // Function @ SDL_audio.h:1153:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:1102:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern void SDL_CloseAudio();
 
-    // Function @ SDL_audio.h:1175:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:1124:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern void SDL_CloseAudioDevice(SDL_AudioDeviceID dev);
 
@@ -3964,7 +3964,7 @@ public static unsafe partial class SDL
         public byte b;
     }
 
-    // OpaqueType @ SDL_audio.h:784:33 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // OpaqueType @ SDL_audio.h:733:33 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct SDL_AudioStream
     {
@@ -4140,7 +4140,7 @@ public static unsafe partial class SDL
         public static implicit operator SDL_GestureID(long data) => new() { Data = data };
     }
 
-    // Enum @ SDL_audio.h:572:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Enum @ SDL_audio.h:521:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     public enum SDL_AudioStatus : int
     {
         SDL_AUDIO_STOPPED = 0,
@@ -5332,7 +5332,7 @@ public static unsafe partial class SDL
     // MacroObjectLike @ SDL_audio.h:205:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     public const int SDL_AUDIOCVT_MAX_FILTERS = 9;
 
-    // MacroObjectLike @ SDL_audio.h:902:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // MacroObjectLike @ SDL_audio.h:851:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     public const int SDL_MIX_MAXVOLUME = 128;
 
     // MacroObjectLike @ SDL_cpuinfo.h:129:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_cpuinfo.h)
