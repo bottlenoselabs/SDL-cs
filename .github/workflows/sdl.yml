@@ -22,7 +22,6 @@ jobs:
     - name: "Clone Git repository"
       uses: actions/checkout@master
       with:
-        ref: ${{ env.GITHUB_REF#refs/heads/ }}
         submodules: true
 
     - name: "Bindgen"
@@ -50,7 +49,6 @@ jobs:
     - name: "Clone Git repository"
       uses: actions/checkout@master
       with:
-        ref: ${{ env.GITHUB_REF#refs/heads/ }}
         submodules: true
 
     - name: "Build native library: Windows"
