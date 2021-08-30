@@ -9,7 +9,7 @@ on:
   push:
     branches: [develop]
     paths-ignore: ['**/*.md']
-  pull_request:
+  pull_request_target:
     branches: [develop]
 
 jobs:
