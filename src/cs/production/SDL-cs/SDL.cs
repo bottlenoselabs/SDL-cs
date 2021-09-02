@@ -5318,6 +5318,60 @@ public static unsafe partial class SDL
     // MacroObjectLike @ SDL_audio.h:76:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     public const int SDL_AUDIO_MASK_SIGNED = 1 << 15;
 
+    // MacroObjectLike @ SDL_audio.h:91:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    public const int AUDIO_U8 = 0x0008;
+
+    // MacroObjectLike @ SDL_audio.h:92:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    public const int AUDIO_S8 = 0x8008;
+
+    // MacroObjectLike @ SDL_audio.h:93:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    public const int AUDIO_U16LSB = 0x0010;
+
+    // MacroObjectLike @ SDL_audio.h:94:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    public const int AUDIO_S16LSB = 0x8010;
+
+    // MacroObjectLike @ SDL_audio.h:95:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    public const int AUDIO_U16MSB = 0x1010;
+
+    // MacroObjectLike @ SDL_audio.h:96:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    public const int AUDIO_S16MSB = 0x9010;
+
+    // MacroObjectLike @ SDL_audio.h:97:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    public const int AUDIO_U16 = AUDIO_U16LSB;
+
+    // MacroObjectLike @ SDL_audio.h:98:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    public const int AUDIO_S16 = AUDIO_S16LSB;
+
+    // MacroObjectLike @ SDL_audio.h:105:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    public const int AUDIO_S32LSB = 0x8020;
+
+    // MacroObjectLike @ SDL_audio.h:106:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    public const int AUDIO_S32MSB = 0x9020;
+
+    // MacroObjectLike @ SDL_audio.h:107:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    public const int AUDIO_S32 = AUDIO_S32LSB;
+
+    // MacroObjectLike @ SDL_audio.h:114:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    public const int AUDIO_F32LSB = 0x8120;
+
+    // MacroObjectLike @ SDL_audio.h:115:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    public const int AUDIO_F32MSB = 0x9120;
+
+    // MacroObjectLike @ SDL_audio.h:116:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    public const int AUDIO_F32 = AUDIO_F32LSB;
+
+    // MacroObjectLike @ SDL_audio.h:124:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    public const int AUDIO_U16SYS = AUDIO_U16LSB;
+
+    // MacroObjectLike @ SDL_audio.h:125:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    public const int AUDIO_S16SYS = AUDIO_S16LSB;
+
+    // MacroObjectLike @ SDL_audio.h:126:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    public const int AUDIO_S32SYS = AUDIO_S32LSB;
+
+    // MacroObjectLike @ SDL_audio.h:127:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    public const int AUDIO_F32SYS = AUDIO_F32LSB;
+
     // MacroObjectLike @ SDL_audio.h:142:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     public const int SDL_AUDIO_ALLOW_FREQUENCY_CHANGE = 0x00000001;
 
