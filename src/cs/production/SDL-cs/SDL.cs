@@ -1314,6 +1314,10 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern void SDL_SensorUpdate();
 
+    // Function @ SDL_gamecontroller.h:161:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_gamecontroller.h)
+    [DllImport(LibraryName)]
+    public static extern int SDL_GameControllerAddMappingsFromRW(SDL_RWops* rw, int freerw);
+
     // Function @ SDL_gamecontroller.h:195:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_gamecontroller.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GameControllerAddMapping(CString8U mappingString);
