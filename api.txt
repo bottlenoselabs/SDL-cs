@@ -92,6 +92,7 @@ SDL2!SDL_SensorClose
 SDL2!SDL_SensorUpdate
 SDL2!SDL_LockSensors
 SDL2!SDL_UnlockSensors
+SDL2!SDL_GameControllerAddMappingsFromRW
 SDL2!SDL_GameControllerHasButton
 SDL2!SDL_GameControllerGetNumTouchpads
 SDL2!SDL_GameControllerGetNumTouchpadFingers
