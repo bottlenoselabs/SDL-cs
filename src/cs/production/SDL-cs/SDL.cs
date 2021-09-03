@@ -1714,23 +1714,23 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern int SDL_HapticRumbleStop(SDL_Haptic* haptic);
 
-    // Function @ SDL_hints.h:1789:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // Function @ SDL_hints.h:1798:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_SetHintWithPriority(CString8U name, CString8U value, SDL_HintPriority priority);
 
-    // Function @ SDL_hints.h:1807:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // Function @ SDL_hints.h:1816:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_SetHint(CString8U name, CString8U value);
 
-    // Function @ SDL_hints.h:1819:38 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // Function @ SDL_hints.h:1828:38 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     [DllImport(LibraryName)]
     public static extern CString8U SDL_GetHint(CString8U name);
 
-    // Function @ SDL_hints.h:1834:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // Function @ SDL_hints.h:1843:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_GetHintBoolean(CString8U name, CBool default_value);
 
-    // Function @ SDL_hints.h:1883:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // Function @ SDL_hints.h:1892:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     [DllImport(LibraryName)]
     public static extern void SDL_ClearHints();
 
@@ -4629,7 +4629,7 @@ public static unsafe partial class SDL
         SDL_GETEVENT = 2
     }
 
-    // Enum @ SDL_hints.h:1771:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // Enum @ SDL_hints.h:1780:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public enum SDL_HintPriority : int
     {
         SDL_HINT_DEFAULT = 0,
@@ -5672,274 +5672,277 @@ public static unsafe partial class SDL
     // MacroObjectLike @ SDL_hints.h:558:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_IME_INTERNAL_EDITING = "SDL_IME_INTERNAL_EDITING";
 
-    // MacroObjectLike @ SDL_hints.h:569:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:567:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    public const string SDL_HINT_IME_SHOW_UI = "SDL_IME_SHOW_UI";
+
+    // MacroObjectLike @ SDL_hints.h:578:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_IOS_HIDE_HOME_INDICATOR = "SDL_IOS_HIDE_HOME_INDICATOR";
 
-    // MacroObjectLike @ SDL_hints.h:582:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:591:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS = "SDL_JOYSTICK_ALLOW_BACKGROUND_EVENTS";
 
-    // MacroObjectLike @ SDL_hints.h:593:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:602:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_JOYSTICK_HIDAPI = "SDL_JOYSTICK_HIDAPI";
 
-    // MacroObjectLike @ SDL_hints.h:604:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:613:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_JOYSTICK_HIDAPI_GAMECUBE = "SDL_JOYSTICK_HIDAPI_GAMECUBE";
 
-    // MacroObjectLike @ SDL_hints.h:615:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:624:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_JOYSTICK_HIDAPI_JOY_CONS = "SDL_JOYSTICK_HIDAPI_JOY_CONS";
 
-    // MacroObjectLike @ SDL_hints.h:626:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:635:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_JOYSTICK_HIDAPI_LUNA = "SDL_JOYSTICK_HIDAPI_LUNA";
 
-    // MacroObjectLike @ SDL_hints.h:637:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:646:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_JOYSTICK_HIDAPI_PS4 = "SDL_JOYSTICK_HIDAPI_PS4";
 
-    // MacroObjectLike @ SDL_hints.h:657:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:666:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_JOYSTICK_HIDAPI_PS4_RUMBLE = "SDL_JOYSTICK_HIDAPI_PS4_RUMBLE";
 
-    // MacroObjectLike @ SDL_hints.h:668:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:677:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_JOYSTICK_HIDAPI_PS5 = "SDL_JOYSTICK_HIDAPI_PS5";
 
-    // MacroObjectLike @ SDL_hints.h:677:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:686:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_JOYSTICK_HIDAPI_PS5_PLAYER_LED = "SDL_JOYSTICK_HIDAPI_PS5_PLAYER_LED";
 
-    // MacroObjectLike @ SDL_hints.h:696:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:705:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_JOYSTICK_HIDAPI_PS5_RUMBLE = "SDL_JOYSTICK_HIDAPI_PS5_RUMBLE";
 
-    // MacroObjectLike @ SDL_hints.h:707:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:716:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_JOYSTICK_HIDAPI_STADIA = "SDL_JOYSTICK_HIDAPI_STADIA";
 
-    // MacroObjectLike @ SDL_hints.h:718:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:727:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_JOYSTICK_HIDAPI_STEAM = "SDL_JOYSTICK_HIDAPI_STEAM";
 
-    // MacroObjectLike @ SDL_hints.h:729:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:738:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_JOYSTICK_HIDAPI_SWITCH = "SDL_JOYSTICK_HIDAPI_SWITCH";
 
-    // MacroObjectLike @ SDL_hints.h:740:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:749:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_JOYSTICK_HIDAPI_SWITCH_HOME_LED = "SDL_JOYSTICK_HIDAPI_SWITCH_HOME_LED";
 
-    // MacroObjectLike @ SDL_hints.h:751:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:760:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_JOYSTICK_HIDAPI_XBOX = "SDL_JOYSTICK_HIDAPI_XBOX";
 
-    // MacroObjectLike @ SDL_hints.h:761:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:770:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_JOYSTICK_RAWINPUT = "SDL_JOYSTICK_RAWINPUT";
 
-    // MacroObjectLike @ SDL_hints.h:774:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:783:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_JOYSTICK_RAWINPUT_CORRELATE_XINPUT = "SDL_JOYSTICK_RAWINPUT_CORRELATE_XINPUT";
 
-    // MacroObjectLike @ SDL_hints.h:785:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:794:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_JOYSTICK_THREAD = "SDL_JOYSTICK_THREAD";
 
-    // MacroObjectLike @ SDL_hints.h:808:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:817:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_KMSDRM_REQUIRE_DRM_MASTER = "SDL_KMSDRM_REQUIRE_DRM_MASTER";
 
-    // MacroObjectLike @ SDL_hints.h:817:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:826:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_LINUX_JOYSTICK_DEADZONES = "SDL_LINUX_JOYSTICK_DEADZONES";
 
-    // MacroObjectLike @ SDL_hints.h:825:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:834:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_MAC_BACKGROUND_APP = "SDL_MAC_BACKGROUND_APP";
 
-    // MacroObjectLike @ SDL_hints.h:833:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:842:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_MAC_CTRL_CLICK_EMULATE_RIGHT_CLICK = "SDL_MAC_CTRL_CLICK_EMULATE_RIGHT_CLICK";
 
-    // MacroObjectLike @ SDL_hints.h:838:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:847:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_MOUSE_DOUBLE_CLICK_RADIUS = "SDL_MOUSE_DOUBLE_CLICK_RADIUS";
 
-    // MacroObjectLike @ SDL_hints.h:843:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:852:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_MOUSE_DOUBLE_CLICK_TIME = "SDL_MOUSE_DOUBLE_CLICK_TIME";
 
-    // MacroObjectLike @ SDL_hints.h:854:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:863:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_MOUSE_FOCUS_CLICKTHROUGH = "SDL_MOUSE_FOCUS_CLICKTHROUGH";
 
-    // MacroObjectLike @ SDL_hints.h:859:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:868:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_MOUSE_NORMAL_SPEED_SCALE = "SDL_MOUSE_NORMAL_SPEED_SCALE";
 
-    // MacroObjectLike @ SDL_hints.h:870:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:879:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_MOUSE_RELATIVE_MODE_WARP = "SDL_MOUSE_RELATIVE_MODE_WARP";
 
-    // MacroObjectLike @ SDL_hints.h:881:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:890:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_MOUSE_RELATIVE_SCALING = "SDL_MOUSE_RELATIVE_SCALING";
 
-    // MacroObjectLike @ SDL_hints.h:886:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:895:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_MOUSE_RELATIVE_SPEED_SCALE = "SDL_MOUSE_RELATIVE_SPEED_SCALE";
 
-    // MacroObjectLike @ SDL_hints.h:895:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:904:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_MOUSE_TOUCH_EVENTS = "SDL_MOUSE_TOUCH_EVENTS";
 
-    // MacroObjectLike @ SDL_hints.h:908:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:917:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_NO_SIGNAL_HANDLERS = "SDL_NO_SIGNAL_HANDLERS";
 
-    // MacroObjectLike @ SDL_hints.h:939:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:948:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_OPENGL_ES_DRIVER = "SDL_OPENGL_ES_DRIVER";
 
-    // MacroObjectLike @ SDL_hints.h:950:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:959:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_ORIENTATIONS = "SDL_IOS_ORIENTATIONS";
 
-    // MacroObjectLike @ SDL_hints.h:964:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:973:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_PREFERRED_LOCALES = "SDL_PREFERRED_LOCALES";
 
-    // MacroObjectLike @ SDL_hints.h:981:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:990:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_QTWAYLAND_CONTENT_ORIENTATION = "SDL_QTWAYLAND_CONTENT_ORIENTATION";
 
-    // MacroObjectLike @ SDL_hints.h:992:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1001:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_QTWAYLAND_WINDOW_FLAGS = "SDL_QTWAYLAND_WINDOW_FLAGS";
 
-    // MacroObjectLike @ SDL_hints.h:1016:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1025:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_RENDER_BATCHING = "SDL_RENDER_BATCHING";
 
-    // MacroObjectLike @ SDL_hints.h:1029:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1038:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_RENDER_DIRECT3D11_DEBUG = "SDL_RENDER_DIRECT3D11_DEBUG";
 
-    // MacroObjectLike @ SDL_hints.h:1040:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1049:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_RENDER_DIRECT3D_THREADSAFE = "SDL_RENDER_DIRECT3D_THREADSAFE";
 
-    // MacroObjectLike @ SDL_hints.h:1060:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1069:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_RENDER_DRIVER = "SDL_RENDER_DRIVER";
 
-    // MacroObjectLike @ SDL_hints.h:1071:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1080:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_RENDER_LOGICAL_SIZE_MODE = "SDL_RENDER_LOGICAL_SIZE_MODE";
 
-    // MacroObjectLike @ SDL_hints.h:1082:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1091:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_RENDER_OPENGL_SHADERS = "SDL_RENDER_OPENGL_SHADERS";
 
-    // MacroObjectLike @ SDL_hints.h:1094:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1103:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_RENDER_SCALE_QUALITY = "SDL_RENDER_SCALE_QUALITY";
 
-    // MacroObjectLike @ SDL_hints.h:1105:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1114:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_RENDER_VSYNC = "SDL_RENDER_VSYNC";
 
-    // MacroObjectLike @ SDL_hints.h:1117:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1126:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_RETURN_KEY_HIDES_IME = "SDL_RETURN_KEY_HIDES_IME";
 
-    // MacroObjectLike @ SDL_hints.h:1125:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1134:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_RPI_VIDEO_LAYER = "SDL_RPI_VIDEO_LAYER";
 
-    // MacroObjectLike @ SDL_hints.h:1145:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1154:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_SCREENSAVER_INHIBIT_ACTIVITY_NAME = "SDL_SCREENSAVER_INHIBIT_ACTIVITY_NAME";
 
-    // MacroObjectLike @ SDL_hints.h:1164:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1173:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_THREAD_FORCE_REALTIME_TIME_CRITICAL = "SDL_THREAD_FORCE_REALTIME_TIME_CRITICAL";
 
-    // MacroObjectLike @ SDL_hints.h:1181:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1190:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_THREAD_PRIORITY_POLICY = "SDL_THREAD_PRIORITY_POLICY";
 
-    // MacroObjectLike @ SDL_hints.h:1195:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1204:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_THREAD_STACK_SIZE = "SDL_THREAD_STACK_SIZE";
 
-    // MacroObjectLike @ SDL_hints.h:1211:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1220:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_TIMER_RESOLUTION = "SDL_TIMER_RESOLUTION";
 
-    // MacroObjectLike @ SDL_hints.h:1222:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1231:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_TOUCH_MOUSE_EVENTS = "SDL_TOUCH_MOUSE_EVENTS";
 
-    // MacroObjectLike @ SDL_hints.h:1232:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1241:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_TV_REMOTE_AS_JOYSTICK = "SDL_TV_REMOTE_AS_JOYSTICK";
 
-    // MacroObjectLike @ SDL_hints.h:1243:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1252:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_ALLOW_SCREENSAVER = "SDL_VIDEO_ALLOW_SCREENSAVER";
 
-    // MacroObjectLike @ SDL_hints.h:1262:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1271:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_DOUBLE_BUFFER = "SDL_VIDEO_DOUBLE_BUFFER";
 
-    // MacroObjectLike @ SDL_hints.h:1273:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1282:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_EGL_ALLOW_TRANSPARENCY = "SDL_VIDEO_EGL_ALLOW_TRANSPARENCY";
 
-    // MacroObjectLike @ SDL_hints.h:1288:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1297:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_EXTERNAL_CONTEXT = "SDL_VIDEO_EXTERNAL_CONTEXT";
 
-    // MacroObjectLike @ SDL_hints.h:1293:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1302:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_HIGHDPI_DISABLED = "SDL_VIDEO_HIGHDPI_DISABLED";
 
-    // MacroObjectLike @ SDL_hints.h:1312:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1321:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_MAC_FULLSCREEN_SPACES = "SDL_VIDEO_MAC_FULLSCREEN_SPACES";
 
-    // MacroObjectLike @ SDL_hints.h:1320:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1329:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_MINIMIZE_ON_FOCUS_LOSS = "SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS";
 
-    // MacroObjectLike @ SDL_hints.h:1331:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1340:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_WAYLAND_ALLOW_LIBDECOR = "SDL_VIDEO_WAYLAND_ALLOW_LIBDECOR";
 
-    // MacroObjectLike @ SDL_hints.h:1350:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1359:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_WINDOW_SHARE_PIXEL_FORMAT = "SDL_VIDEO_WINDOW_SHARE_PIXEL_FORMAT";
 
-    // MacroObjectLike @ SDL_hints.h:1366:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1375:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_WIN_D3DCOMPILER = "SDL_VIDEO_WIN_D3DCOMPILER";
 
-    // MacroObjectLike @ SDL_hints.h:1377:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1386:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_X11_FORCE_EGL = "SDL_VIDEO_X11_FORCE_EGL";
 
-    // MacroObjectLike @ SDL_hints.h:1389:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1398:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR = "SDL_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR";
 
-    // MacroObjectLike @ SDL_hints.h:1403:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1412:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_X11_NET_WM_PING = "SDL_VIDEO_X11_NET_WM_PING";
 
-    // MacroObjectLike @ SDL_hints.h:1409:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1418:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_X11_WINDOW_VISUALID = "SDL_VIDEO_X11_WINDOW_VISUALID";
 
-    // MacroObjectLike @ SDL_hints.h:1420:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1429:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_X11_XINERAMA = "SDL_VIDEO_X11_XINERAMA";
 
-    // MacroObjectLike @ SDL_hints.h:1431:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1440:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_X11_XRANDR = "SDL_VIDEO_X11_XRANDR";
 
-    // MacroObjectLike @ SDL_hints.h:1442:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1451:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_X11_XVIDMODE = "SDL_VIDEO_X11_XVIDMODE";
 
-    // MacroObjectLike @ SDL_hints.h:1469:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1478:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WAVE_FACT_CHUNK = "SDL_WAVE_FACT_CHUNK";
 
-    // MacroObjectLike @ SDL_hints.h:1490:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1499:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WAVE_RIFF_CHUNK_SIZE = "SDL_WAVE_RIFF_CHUNK_SIZE";
 
-    // MacroObjectLike @ SDL_hints.h:1506:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1515:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WAVE_TRUNCATION = "SDL_WAVE_TRUNCATION";
 
-    // MacroObjectLike @ SDL_hints.h:1522:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1531:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINDOWS_DISABLE_THREAD_NAMING = "SDL_WINDOWS_DISABLE_THREAD_NAMING";
 
-    // MacroObjectLike @ SDL_hints.h:1533:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1542:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINDOWS_ENABLE_MESSAGELOOP = "SDL_WINDOWS_ENABLE_MESSAGELOOP";
 
-    // MacroObjectLike @ SDL_hints.h:1550:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1559:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINDOWS_FORCE_MUTEX_CRITICAL_SECTIONS = "SDL_WINDOWS_FORCE_MUTEX_CRITICAL_SECTIONS";
 
-    // MacroObjectLike @ SDL_hints.h:1566:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1575:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINDOWS_FORCE_SEMAPHORE_KERNEL = "SDL_WINDOWS_FORCE_SEMAPHORE_KERNEL";
 
-    // MacroObjectLike @ SDL_hints.h:1571:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1580:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINDOWS_INTRESOURCE_ICON = "SDL_WINDOWS_INTRESOURCE_ICON";
 
-    // MacroObjectLike @ SDL_hints.h:1572:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1581:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINDOWS_INTRESOURCE_ICON_SMALL = "SDL_WINDOWS_INTRESOURCE_ICON_SMALL";
 
-    // MacroObjectLike @ SDL_hints.h:1581:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1590:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINDOWS_NO_CLOSE_ON_ALT_F4 = "SDL_WINDOWS_NO_CLOSE_ON_ALT_F4";
 
-    // MacroObjectLike @ SDL_hints.h:1601:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1610:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINDOWS_USE_D3D9EX = "SDL_WINDOWS_USE_D3D9EX";
 
-    // MacroObjectLike @ SDL_hints.h:1612:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1621:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINDOW_FRAME_USABLE_WHILE_CURSOR_HIDDEN = "SDL_WINDOW_FRAME_USABLE_WHILE_CURSOR_HIDDEN";
 
-    // MacroObjectLike @ SDL_hints.h:1664:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1673:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINRT_HANDLE_BACK_BUTTON = "SDL_WINRT_HANDLE_BACK_BUTTON";
 
-    // MacroObjectLike @ SDL_hints.h:1685:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1694:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINRT_PRIVACY_POLICY_LABEL = "SDL_WINRT_PRIVACY_POLICY_LABEL";
 
-    // MacroObjectLike @ SDL_hints.h:1711:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1720:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINRT_PRIVACY_POLICY_URL = "SDL_WINRT_PRIVACY_POLICY_URL";
 
-    // MacroObjectLike @ SDL_hints.h:1723:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1732:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_X11_FORCE_OVERRIDE_REDIRECT = "SDL_X11_FORCE_OVERRIDE_REDIRECT";
 
-    // MacroObjectLike @ SDL_hints.h:1732:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1741:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_XINPUT_ENABLED = "SDL_XINPUT_ENABLED";
 
-    // MacroObjectLike @ SDL_hints.h:1741:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1750:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_XINPUT_USE_OLD_JOYSTICK_MAPPING = "SDL_XINPUT_USE_OLD_JOYSTICK_MAPPING";
 
-    // MacroObjectLike @ SDL_hints.h:1760:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1769:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_AUDIO_INCLUDE_MONITORS = "SDL_AUDIO_INCLUDE_MONITORS";
 
     // MacroObjectLike @ SDL_log.h:54:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_log.h)
