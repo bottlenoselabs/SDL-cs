@@ -62,7 +62,7 @@ function exit_if_last_command_failed() {
     fi
 }
 
-function build_sokol() {
+function build_sdl() {
     echo "Building SDL..."
     SDL_BUILD_DIR="$DIR/cmake-build-release"
     cmake $CMAKE_TOOLCHAIN_ARGS -S $DIR/ext/SDL -B $SDL_BUILD_DIR -DSDL_STATIC=OFF -DSDL_TEST=OFF
@@ -94,7 +94,7 @@ function build_sokol() {
     echo "Building sokol finished!"
 }
 
-build_sokol
+build_sdl
 ls -d "$LIB_DIR"/*
 
 echo "Finished '$0'!"
