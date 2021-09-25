@@ -6,7 +6,7 @@ Automatically updated C# bindings for https://github.com/libsdl-org/SDL with nat
 
 ### From source
 
-1. Download and install [.NET 5](https://dotnet.microsoft.com/download).
+1. Download and install [.NET 6](https://dotnet.microsoft.com/download).
 2. Fork the repository using GitHub or clone the repository manually with submodules: `git clone --recurse-submodules git@github.com:lithiumtoast/sdl-cs.git`.
 3. Build the native library by running `bash ./library.sh`. (Windows requires Windows Subsystem for Linux with Ubuntu).
 4. Add the C# project `./src/cs/production/SDL-cs/SDL-cs.csproj` to your solution:

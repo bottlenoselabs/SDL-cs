@@ -2,7 +2,9 @@
 
     <!-- MSBuild settings -->
     <PropertyGroup>
-        <TargetFramework>net5.0</TargetFramework>
+        <TargetFramework>net6.0</TargetFramework>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <RootNamespace />
     </PropertyGroup>
 
     <!-- RuntimeIdentifier -->
