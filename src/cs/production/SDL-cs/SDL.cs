@@ -502,99 +502,99 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern void SDL_UnlockSurface(SDL_Surface* surface);
 
-    // Function @ SDL_surface.h:373:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
+    // Function @ SDL_surface.h:379:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetSurfaceRLE(SDL_Surface* surface, int flag);
 
-    // Function @ SDL_surface.h:386:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
+    // Function @ SDL_surface.h:392:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_HasSurfaceRLE(SDL_Surface* surface);
 
-    // Function @ SDL_surface.h:410:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
+    // Function @ SDL_surface.h:416:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetColorKey(SDL_Surface* surface, int flag, uint key);
 
-    // Function @ SDL_surface.h:424:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
+    // Function @ SDL_surface.h:430:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_HasColorKey(SDL_Surface* surface);
 
-    // Function @ SDL_surface.h:442:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
+    // Function @ SDL_surface.h:448:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetColorKey(SDL_Surface* surface, uint* key);
 
-    // Function @ SDL_surface.h:464:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
+    // Function @ SDL_surface.h:470:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetSurfaceColorMod(SDL_Surface* surface, byte r, byte g, byte b);
 
-    // Function @ SDL_surface.h:481:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
+    // Function @ SDL_surface.h:487:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetSurfaceColorMod(SDL_Surface* surface, byte* r, byte* g, byte* b);
 
-    // Function @ SDL_surface.h:501:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
+    // Function @ SDL_surface.h:507:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetSurfaceAlphaMod(SDL_Surface* surface, byte alpha);
 
-    // Function @ SDL_surface.h:515:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
+    // Function @ SDL_surface.h:521:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetSurfaceAlphaMod(SDL_Surface* surface, byte* alpha);
 
-    // Function @ SDL_surface.h:532:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
+    // Function @ SDL_surface.h:538:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetSurfaceBlendMode(SDL_Surface* surface, SDL_BlendMode blendMode);
 
-    // Function @ SDL_surface.h:545:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
+    // Function @ SDL_surface.h:551:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetSurfaceBlendMode(SDL_Surface* surface, SDL_BlendMode* blendMode);
 
-    // Function @ SDL_surface.h:566:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
+    // Function @ SDL_surface.h:572:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_SetClipRect(SDL_Surface* surface, SDL_Rect* rect);
 
-    // Function @ SDL_surface.h:583:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
+    // Function @ SDL_surface.h:589:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
     [DllImport(LibraryName)]
     public static extern void SDL_GetClipRect(SDL_Surface* surface, SDL_Rect* rect);
 
-    // Function @ SDL_surface.h:595:38 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
+    // Function @ SDL_surface.h:601:38 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
     [DllImport(LibraryName)]
     public static extern SDL_Surface* SDL_DuplicateSurface(SDL_Surface* surface);
 
-    // Function @ SDL_surface.h:617:38 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
+    // Function @ SDL_surface.h:623:38 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
     [DllImport(LibraryName)]
     public static extern SDL_Surface* SDL_ConvertSurface(SDL_Surface* src, SDL_PixelFormat* fmt, uint flags);
 
-    // Function @ SDL_surface.h:640:38 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
+    // Function @ SDL_surface.h:646:38 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
     [DllImport(LibraryName)]
     public static extern SDL_Surface* SDL_ConvertSurfaceFormat(SDL_Surface* src, uint pixel_format, uint flags);
 
-    // Function @ SDL_surface.h:657:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
+    // Function @ SDL_surface.h:663:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
     [DllImport(LibraryName)]
     public static extern int SDL_ConvertPixels(int width, int height, uint src_format, void* src, int src_pitch, uint dst_format, void* dst, int dst_pitch);
 
-    // Function @ SDL_surface.h:684:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
+    // Function @ SDL_surface.h:690:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
     [DllImport(LibraryName)]
     public static extern int SDL_FillRect(SDL_Surface* dst, SDL_Rect* rect, uint color);
 
-    // Function @ SDL_surface.h:708:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
+    // Function @ SDL_surface.h:714:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
     [DllImport(LibraryName)]
     public static extern int SDL_FillRects(SDL_Surface* dst, SDL_Rect* rects, int count, uint color);
 
-    // Function @ SDL_surface.h:779:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
+    // Function @ SDL_surface.h:785:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
     [DllImport(LibraryName)]
     public static extern int SDL_UpperBlit(SDL_Surface* src, SDL_Rect* srcrect, SDL_Surface* dst, SDL_Rect* dstrect);
 
-    // Function @ SDL_surface.h:803:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
+    // Function @ SDL_surface.h:809:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
     [DllImport(LibraryName)]
     public static extern int SDL_LowerBlit(SDL_Surface* src, SDL_Rect* srcrect, SDL_Surface* dst, SDL_Rect* dstrect);
 
-    // Function @ SDL_surface.h:814:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
+    // Function @ SDL_surface.h:820:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SoftStretch(SDL_Surface* src, SDL_Rect* srcrect, SDL_Surface* dst, SDL_Rect* dstrect);
 
-    // Function @ SDL_surface.h:840:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
+    // Function @ SDL_surface.h:846:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
     [DllImport(LibraryName)]
     public static extern int SDL_UpperBlitScaled(SDL_Surface* src, SDL_Rect* srcrect, SDL_Surface* dst, SDL_Rect* dstrect);
 
-    // Function @ SDL_surface.h:861:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
+    // Function @ SDL_surface.h:867:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_surface.h)
     [DllImport(LibraryName)]
     public static extern int SDL_LowerBlitScaled(SDL_Surface* src, SDL_Rect* srcrect, SDL_Surface* dst, SDL_Rect* dstrect);
 
