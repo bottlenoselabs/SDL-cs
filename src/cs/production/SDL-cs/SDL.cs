@@ -254,43 +254,43 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern void SDL_MixAudioFormat(byte* dst, byte* src, SDL_AudioFormat format, uint len, int volume);
 
-    // Function @ SDL_audio.h:1013:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:1012:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern int SDL_QueueAudio(SDL_AudioDeviceID dev, void* data, uint len);
 
-    // Function @ SDL_audio.h:1061:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:1060:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern uint SDL_DequeueAudio(SDL_AudioDeviceID dev, void* data, uint len);
 
-    // Function @ SDL_audio.h:1095:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:1094:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern uint SDL_GetQueuedAudioSize(SDL_AudioDeviceID dev);
 
-    // Function @ SDL_audio.h:1129:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:1128:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern void SDL_ClearQueuedAudio(SDL_AudioDeviceID dev);
 
-    // Function @ SDL_audio.h:1141:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:1140:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern void SDL_LockAudio();
 
-    // Function @ SDL_audio.h:1142:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:1141:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern void SDL_LockAudioDevice(SDL_AudioDeviceID dev);
 
-    // Function @ SDL_audio.h:1143:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:1142:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern void SDL_UnlockAudio();
 
-    // Function @ SDL_audio.h:1144:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:1143:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern void SDL_UnlockAudioDevice(SDL_AudioDeviceID dev);
 
-    // Function @ SDL_audio.h:1160:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:1159:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern void SDL_CloseAudio();
 
-    // Function @ SDL_audio.h:1182:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
+    // Function @ SDL_audio.h:1181:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_audio.h)
     [DllImport(LibraryName)]
     public static extern void SDL_CloseAudioDevice(SDL_AudioDeviceID dev);
 
@@ -298,11 +298,11 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern int SDL_SetClipboardText(CString8U text);
 
-    // Function @ SDL_clipboard.h:66:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_clipboard.h)
+    // Function @ SDL_clipboard.h:67:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_clipboard.h)
     [DllImport(LibraryName)]
     public static extern CString8U SDL_GetClipboardText();
 
-    // Function @ SDL_clipboard.h:78:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_clipboard.h)
+    // Function @ SDL_clipboard.h:79:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_clipboard.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_HasClipboardText();
 
