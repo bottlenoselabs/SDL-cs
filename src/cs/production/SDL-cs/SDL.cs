@@ -2090,23 +2090,23 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern uint SDL_GetTicks();
 
-    // Function @ SDL_timer.h:79:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
+    // Function @ SDL_timer.h:83:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
     [DllImport(LibraryName)]
     public static extern ulong SDL_GetPerformanceCounter();
 
-    // Function @ SDL_timer.h:90:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
+    // Function @ SDL_timer.h:94:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
     [DllImport(LibraryName)]
     public static extern ulong SDL_GetPerformanceFrequency();
 
-    // Function @ SDL_timer.h:101:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
+    // Function @ SDL_timer.h:105:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
     [DllImport(LibraryName)]
     public static extern void SDL_Delay(uint ms);
 
-    // Function @ SDL_timer.h:148:37 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
+    // Function @ SDL_timer.h:152:37 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
     [DllImport(LibraryName)]
     public static extern SDL_TimerID SDL_AddTimer(uint interval, SDL_TimerCallback callback, void* param);
 
-    // Function @ SDL_timer.h:161:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
+    // Function @ SDL_timer.h:165:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_RemoveTimer(SDL_TimerID id);
 
@@ -2171,7 +2171,7 @@ public static unsafe partial class SDL
         public delegate* unmanaged<void*, int, SDL_LogPriority, CString8U, void> Pointer;
     }
 
-    // FunctionPointer @ SDL_timer.h:111:27 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
+    // FunctionPointer @ SDL_timer.h:115:27 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct SDL_TimerCallback
     {
@@ -4111,7 +4111,7 @@ public static unsafe partial class SDL
         public static implicit operator SDL_TouchID(long data) => new() { Data = data };
     }
 
-    // Typedef @ SDL_timer.h:116:13 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
+    // Typedef @ SDL_timer.h:120:13 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
     [StructLayout(LayoutKind.Explicit, Size = 4, Pack = 4)]
     public struct SDL_TimerID
     {
