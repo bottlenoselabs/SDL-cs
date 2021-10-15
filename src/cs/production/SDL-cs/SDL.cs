@@ -1714,23 +1714,23 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern int SDL_HapticRumbleStop(SDL_Haptic* haptic);
 
-    // Function @ SDL_hints.h:1795:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // Function @ SDL_hints.h:1806:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_SetHintWithPriority(CString8U name, CString8U value, SDL_HintPriority priority);
 
-    // Function @ SDL_hints.h:1813:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // Function @ SDL_hints.h:1824:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_SetHint(CString8U name, CString8U value);
 
-    // Function @ SDL_hints.h:1825:38 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // Function @ SDL_hints.h:1836:38 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     [DllImport(LibraryName)]
     public static extern CString8U SDL_GetHint(CString8U name);
 
-    // Function @ SDL_hints.h:1840:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // Function @ SDL_hints.h:1851:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_GetHintBoolean(CString8U name, CBool default_value);
 
-    // Function @ SDL_hints.h:1889:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // Function @ SDL_hints.h:1900:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     [DllImport(LibraryName)]
     public static extern void SDL_ClearHints();
 
@@ -4629,7 +4629,7 @@ public static unsafe partial class SDL
         SDL_GETEVENT = 2
     }
 
-    // Enum @ SDL_hints.h:1777:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // Enum @ SDL_hints.h:1788:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public enum SDL_HintPriority : int
     {
         SDL_HINT_DEFAULT = 0,
@@ -5924,25 +5924,28 @@ public static unsafe partial class SDL
     // MacroObjectLike @ SDL_hints.h:1618:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINDOW_FRAME_USABLE_WHILE_CURSOR_HIDDEN = "SDL_WINDOW_FRAME_USABLE_WHILE_CURSOR_HIDDEN";
 
-    // MacroObjectLike @ SDL_hints.h:1670:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1629:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    public const string SDL_HINT_WINDOW_NO_ACTIVATION_WHEN_SHOWN = "SDL_WINDOW_NO_ACTIVATION_WHEN_SHOWN";
+
+    // MacroObjectLike @ SDL_hints.h:1681:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINRT_HANDLE_BACK_BUTTON = "SDL_WINRT_HANDLE_BACK_BUTTON";
 
-    // MacroObjectLike @ SDL_hints.h:1691:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1702:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINRT_PRIVACY_POLICY_LABEL = "SDL_WINRT_PRIVACY_POLICY_LABEL";
 
-    // MacroObjectLike @ SDL_hints.h:1717:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1728:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINRT_PRIVACY_POLICY_URL = "SDL_WINRT_PRIVACY_POLICY_URL";
 
-    // MacroObjectLike @ SDL_hints.h:1729:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1740:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_X11_FORCE_OVERRIDE_REDIRECT = "SDL_X11_FORCE_OVERRIDE_REDIRECT";
 
-    // MacroObjectLike @ SDL_hints.h:1738:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1749:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_XINPUT_ENABLED = "SDL_XINPUT_ENABLED";
 
-    // MacroObjectLike @ SDL_hints.h:1747:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1758:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_XINPUT_USE_OLD_JOYSTICK_MAPPING = "SDL_XINPUT_USE_OLD_JOYSTICK_MAPPING";
 
-    // MacroObjectLike @ SDL_hints.h:1766:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1777:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_AUDIO_INCLUDE_MONITORS = "SDL_AUDIO_INCLUDE_MONITORS";
 
     // MacroObjectLike @ SDL_log.h:54:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_log.h)
