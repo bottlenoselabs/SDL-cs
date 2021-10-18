@@ -1518,71 +1518,71 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern SDL_Finger* SDL_GetTouchFinger(SDL_TouchID touchID, int index);
 
-    // Function @ SDL_events.h:665:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Function @ SDL_events.h:668:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [DllImport(LibraryName)]
     public static extern void SDL_PumpEvents();
 
-    // Function @ SDL_events.h:711:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Function @ SDL_events.h:714:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [DllImport(LibraryName)]
     public static extern int SDL_PeepEvents(SDL_Event* events, int numevents, SDL_eventaction action, uint minType, uint maxType);
 
-    // Function @ SDL_events.h:728:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Function @ SDL_events.h:731:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_HasEvent(uint type);
 
-    // Function @ SDL_events.h:745:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Function @ SDL_events.h:748:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_HasEvents(uint minType, uint maxType);
 
-    // Function @ SDL_events.h:765:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Function @ SDL_events.h:768:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [DllImport(LibraryName)]
     public static extern void SDL_FlushEvent(uint type);
 
-    // Function @ SDL_events.h:788:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Function @ SDL_events.h:791:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [DllImport(LibraryName)]
     public static extern void SDL_FlushEvents(uint minType, uint maxType);
 
-    // Function @ SDL_events.h:833:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Function @ SDL_events.h:836:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [DllImport(LibraryName)]
     public static extern int SDL_PollEvent(SDL_Event* @event);
 
-    // Function @ SDL_events.h:853:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Function @ SDL_events.h:856:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [DllImport(LibraryName)]
     public static extern int SDL_WaitEvent(SDL_Event* @event);
 
-    // Function @ SDL_events.h:877:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Function @ SDL_events.h:880:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [DllImport(LibraryName)]
     public static extern int SDL_WaitEventTimeout(SDL_Event* @event, int timeout);
 
-    // Function @ SDL_events.h:910:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Function @ SDL_events.h:913:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [DllImport(LibraryName)]
     public static extern int SDL_PushEvent(SDL_Event* @event);
 
-    // Function @ SDL_events.h:966:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Function @ SDL_events.h:969:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [DllImport(LibraryName)]
     public static extern void SDL_SetEventFilter(SDL_EventFilter filter, void* userdata);
 
-    // Function @ SDL_events.h:982:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Function @ SDL_events.h:985:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_GetEventFilter(SDL_EventFilter* filter, void** userdata);
 
-    // Function @ SDL_events.h:1009:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Function @ SDL_events.h:1012:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [DllImport(LibraryName)]
     public static extern void SDL_AddEventWatch(SDL_EventFilter filter, void* userdata);
 
-    // Function @ SDL_events.h:1023:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Function @ SDL_events.h:1026:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [DllImport(LibraryName)]
     public static extern void SDL_DelEventWatch(SDL_EventFilter filter, void* userdata);
 
-    // Function @ SDL_events.h:1040:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Function @ SDL_events.h:1043:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [DllImport(LibraryName)]
     public static extern void SDL_FilterEvents(SDL_EventFilter filter, void* userdata);
 
-    // Function @ SDL_events.h:1066:31 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Function @ SDL_events.h:1069:31 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [DllImport(LibraryName)]
     public static extern byte SDL_EventState(uint type, int state);
 
-    // Function @ SDL_events.h:1088:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Function @ SDL_events.h:1091:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [DllImport(LibraryName)]
     public static extern uint SDL_RegisterEvents(int numevents);
 
@@ -1714,23 +1714,23 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern int SDL_HapticRumbleStop(SDL_Haptic* haptic);
 
-    // Function @ SDL_hints.h:1806:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // Function @ SDL_hints.h:1822:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_SetHintWithPriority(CString8U name, CString8U value, SDL_HintPriority priority);
 
-    // Function @ SDL_hints.h:1824:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // Function @ SDL_hints.h:1840:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_SetHint(CString8U name, CString8U value);
 
-    // Function @ SDL_hints.h:1836:38 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // Function @ SDL_hints.h:1852:38 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     [DllImport(LibraryName)]
     public static extern CString8U SDL_GetHint(CString8U name);
 
-    // Function @ SDL_hints.h:1851:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // Function @ SDL_hints.h:1867:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_GetHintBoolean(CString8U name, CBool default_value);
 
-    // Function @ SDL_hints.h:1900:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // Function @ SDL_hints.h:1916:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     [DllImport(LibraryName)]
     public static extern void SDL_ClearHints();
 
@@ -2157,7 +2157,7 @@ public static unsafe partial class SDL
         public delegate* unmanaged<SDL_Window*, SDL_Point*, void*, SDL_HitTestResult> Pointer;
     }
 
-    // FunctionPointer @ SDL_events.h:924:24 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // FunctionPointer @ SDL_events.h:927:24 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct SDL_EventFilter
     {
@@ -2579,7 +2579,7 @@ public static unsafe partial class SDL
         public float pressure;
     }
 
-    // Struct @ SDL_events.h:637:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:640:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 56, Pack = 8)]
     public struct SDL_Event
     {
@@ -2828,7 +2828,7 @@ public static unsafe partial class SDL
         public CString8U country;
     }
 
-    // Struct @ SDL_events.h:181:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:184:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 8, Pack = 4)]
     public struct SDL_CommonEvent
     {
@@ -2839,7 +2839,7 @@ public static unsafe partial class SDL
         public uint timestamp;
     }
 
-    // Struct @ SDL_events.h:196:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:199:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 20, Pack = 4)]
     public struct SDL_DisplayEvent
     {
@@ -2868,7 +2868,7 @@ public static unsafe partial class SDL
         public int data1;
     }
 
-    // Struct @ SDL_events.h:212:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:215:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 24, Pack = 4)]
     public struct SDL_WindowEvent
     {
@@ -2900,7 +2900,7 @@ public static unsafe partial class SDL
         public int data2;
     }
 
-    // Struct @ SDL_events.h:227:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:230:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 32, Pack = 4)]
     public struct SDL_KeyboardEvent
     {
@@ -2929,7 +2929,7 @@ public static unsafe partial class SDL
         public SDL_Keysym keysym;
     }
 
-    // Struct @ SDL_events.h:241:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:244:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 52, Pack = 4)]
     public struct SDL_TextEditingEvent
     {
@@ -2965,7 +2965,7 @@ public static unsafe partial class SDL
         public int length;
     }
 
-    // Struct @ SDL_events.h:254:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:257:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 44, Pack = 4)]
     public struct SDL_TextInputEvent
     {
@@ -2995,7 +2995,7 @@ public static unsafe partial class SDL
         }
     }
 
-    // Struct @ SDL_events.h:270:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:273:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 36, Pack = 4)]
     public struct SDL_MouseMotionEvent
     {
@@ -3027,7 +3027,7 @@ public static unsafe partial class SDL
         public int yrel;
     }
 
-    // Struct @ SDL_events.h:287:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:290:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 28, Pack = 4)]
     public struct SDL_MouseButtonEvent
     {
@@ -3062,7 +3062,7 @@ public static unsafe partial class SDL
         public int y;
     }
 
-    // Struct @ SDL_events.h:301:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:304:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 28, Pack = 4)]
     public struct SDL_MouseWheelEvent
     {
@@ -3088,7 +3088,7 @@ public static unsafe partial class SDL
         public uint direction;
     }
 
-    // Struct @ SDL_events.h:317:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:320:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 20, Pack = 4)]
     public struct SDL_JoyAxisEvent
     {
@@ -3120,7 +3120,7 @@ public static unsafe partial class SDL
         public ushort padding4;
     }
 
-    // Struct @ SDL_events.h:333:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:336:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 20, Pack = 4)]
     public struct SDL_JoyBallEvent
     {
@@ -3152,7 +3152,7 @@ public static unsafe partial class SDL
         public short yrel;
     }
 
-    // Struct @ SDL_events.h:353:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:356:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 16, Pack = 4)]
     public struct SDL_JoyHatEvent
     {
@@ -3178,7 +3178,7 @@ public static unsafe partial class SDL
         public byte padding2;
     }
 
-    // Struct @ SDL_events.h:367:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:370:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 16, Pack = 4)]
     public struct SDL_JoyButtonEvent
     {
@@ -3204,7 +3204,7 @@ public static unsafe partial class SDL
         public byte padding2;
     }
 
-    // Struct @ SDL_events.h:377:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:380:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 12, Pack = 4)]
     public struct SDL_JoyDeviceEvent
     {
@@ -3218,7 +3218,7 @@ public static unsafe partial class SDL
         public int which;
     }
 
-    // Struct @ SDL_events.h:394:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:397:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 20, Pack = 4)]
     public struct SDL_ControllerAxisEvent
     {
@@ -3250,7 +3250,7 @@ public static unsafe partial class SDL
         public ushort padding4;
     }
 
-    // Struct @ SDL_events.h:409:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:412:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 16, Pack = 4)]
     public struct SDL_ControllerButtonEvent
     {
@@ -3276,7 +3276,7 @@ public static unsafe partial class SDL
         public byte padding2;
     }
 
-    // Struct @ SDL_events.h:420:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:423:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 12, Pack = 4)]
     public struct SDL_ControllerDeviceEvent
     {
@@ -3290,7 +3290,7 @@ public static unsafe partial class SDL
         public int which;
     }
 
-    // Struct @ SDL_events.h:435:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:438:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 32, Pack = 4)]
     public struct SDL_ControllerTouchpadEvent
     {
@@ -3319,7 +3319,7 @@ public static unsafe partial class SDL
         public float pressure;
     }
 
-    // Struct @ SDL_events.h:447:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:450:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 28, Pack = 4)]
     public struct SDL_ControllerSensorEvent
     {
@@ -3352,7 +3352,7 @@ public static unsafe partial class SDL
         }
     }
 
-    // Struct @ SDL_events.h:461:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:464:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 16, Pack = 4)]
     public struct SDL_AudioDeviceEvent
     {
@@ -3378,7 +3378,7 @@ public static unsafe partial class SDL
         public byte padding3;
     }
 
-    // Struct @ SDL_events.h:538:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:541:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 36, Pack = 4)]
     public struct SDL_SensorEvent
     {
@@ -3408,7 +3408,7 @@ public static unsafe partial class SDL
         }
     }
 
-    // Struct @ SDL_events.h:547:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:550:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 8, Pack = 4)]
     public struct SDL_QuitEvent
     {
@@ -3419,7 +3419,7 @@ public static unsafe partial class SDL
         public uint timestamp;
     }
 
-    // Struct @ SDL_events.h:569:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:572:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 32, Pack = 8)]
     public struct SDL_UserEvent
     {
@@ -3442,7 +3442,7 @@ public static unsafe partial class SDL
         public void* data2;
     }
 
-    // Struct @ SDL_events.h:586:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:589:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 16, Pack = 8)]
     public struct SDL_SysWMEvent
     {
@@ -3456,7 +3456,7 @@ public static unsafe partial class SDL
         public SDL_SysWMmsg* msg;
     }
 
-    // Struct @ SDL_events.h:479:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:482:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 48, Pack = 8)]
     public struct SDL_TouchFingerEvent
     {
@@ -3491,7 +3491,7 @@ public static unsafe partial class SDL
         public uint windowID;
     }
 
-    // Struct @ SDL_events.h:496:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:499:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 40, Pack = 8)]
     public struct SDL_MultiGestureEvent
     {
@@ -3523,7 +3523,7 @@ public static unsafe partial class SDL
         public ushort padding;
     }
 
-    // Struct @ SDL_events.h:512:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:515:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 40, Pack = 8)]
     public struct SDL_DollarGestureEvent
     {
@@ -3552,7 +3552,7 @@ public static unsafe partial class SDL
         public float y;
     }
 
-    // Struct @ SDL_events.h:526:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Struct @ SDL_events.h:529:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Explicit, Size = 24, Pack = 8)]
     public struct SDL_DropEvent
     {
@@ -4028,7 +4028,7 @@ public static unsafe partial class SDL
     {
     }
 
-    // OpaqueType @ SDL_events.h:573:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // OpaqueType @ SDL_events.h:576:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct SDL_SysWMmsg
     {
@@ -4621,7 +4621,7 @@ public static unsafe partial class SDL
         SDL_TOUCH_DEVICE_INDIRECT_RELATIVE = 2
     }
 
-    // Enum @ SDL_events.h:673:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // Enum @ SDL_events.h:676:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     public enum SDL_eventaction : int
     {
         SDL_ADDEVENT = 0,
@@ -4629,7 +4629,7 @@ public static unsafe partial class SDL
         SDL_GETEVENT = 2
     }
 
-    // Enum @ SDL_hints.h:1788:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // Enum @ SDL_hints.h:1804:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public enum SDL_HintPriority : int
     {
         SDL_HINT_DEFAULT = 0,
@@ -5207,6 +5207,7 @@ public static unsafe partial class SDL
     public const int SDL_SENSORUPDATE = 4608;
     public const int SDL_RENDER_TARGETS_RESET = 8192;
     public const int SDL_RENDER_DEVICE_RESET = 8193;
+    public const int SDL_POLLSENTINEL = 32512;
     public const int SDL_USEREVENT = 32768;
     public const int SDL_LASTEVENT = 65535;
 
@@ -5492,22 +5493,22 @@ public static unsafe partial class SDL
     // MacroObjectLike @ SDL_events.h:50:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     public const int SDL_PRESSED = 1;
 
-    // MacroObjectLike @ SDL_events.h:229:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // MacroObjectLike @ SDL_events.h:232:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     public const int SDL_TEXTEDITINGEVENT_TEXT_SIZE = 32;
 
-    // MacroObjectLike @ SDL_events.h:244:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // MacroObjectLike @ SDL_events.h:247:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     public const int SDL_TEXTINPUTEVENT_TEXT_SIZE = 32;
 
-    // MacroObjectLike @ SDL_events.h:1044:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // MacroObjectLike @ SDL_events.h:1047:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     public const int SDL_QUERY = -1;
 
-    // MacroObjectLike @ SDL_events.h:1045:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // MacroObjectLike @ SDL_events.h:1048:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     public const int SDL_IGNORE = 0;
 
-    // MacroObjectLike @ SDL_events.h:1046:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // MacroObjectLike @ SDL_events.h:1049:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     public const int SDL_DISABLE = 0;
 
-    // MacroObjectLike @ SDL_events.h:1047:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
+    // MacroObjectLike @ SDL_events.h:1050:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_events.h)
     public const int SDL_ENABLE = 1;
 
     // MacroObjectLike @ SDL_haptic.h:163:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_haptic.h)
@@ -5777,175 +5778,178 @@ public static unsafe partial class SDL
     // MacroObjectLike @ SDL_hints.h:959:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_ORIENTATIONS = "SDL_IOS_ORIENTATIONS";
 
-    // MacroObjectLike @ SDL_hints.h:973:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:975:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    public const string SDL_HINT_POLL_SENTINEL = "SDL_POLL_SENTINEL";
+
+    // MacroObjectLike @ SDL_hints.h:989:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_PREFERRED_LOCALES = "SDL_PREFERRED_LOCALES";
 
-    // MacroObjectLike @ SDL_hints.h:990:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1006:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_QTWAYLAND_CONTENT_ORIENTATION = "SDL_QTWAYLAND_CONTENT_ORIENTATION";
 
-    // MacroObjectLike @ SDL_hints.h:1001:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1017:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_QTWAYLAND_WINDOW_FLAGS = "SDL_QTWAYLAND_WINDOW_FLAGS";
 
-    // MacroObjectLike @ SDL_hints.h:1025:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1041:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_RENDER_BATCHING = "SDL_RENDER_BATCHING";
 
-    // MacroObjectLike @ SDL_hints.h:1038:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1054:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_RENDER_DIRECT3D11_DEBUG = "SDL_RENDER_DIRECT3D11_DEBUG";
 
-    // MacroObjectLike @ SDL_hints.h:1049:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1065:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_RENDER_DIRECT3D_THREADSAFE = "SDL_RENDER_DIRECT3D_THREADSAFE";
 
-    // MacroObjectLike @ SDL_hints.h:1069:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1085:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_RENDER_DRIVER = "SDL_RENDER_DRIVER";
 
-    // MacroObjectLike @ SDL_hints.h:1080:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1096:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_RENDER_LOGICAL_SIZE_MODE = "SDL_RENDER_LOGICAL_SIZE_MODE";
 
-    // MacroObjectLike @ SDL_hints.h:1091:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1107:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_RENDER_OPENGL_SHADERS = "SDL_RENDER_OPENGL_SHADERS";
 
-    // MacroObjectLike @ SDL_hints.h:1103:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1119:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_RENDER_SCALE_QUALITY = "SDL_RENDER_SCALE_QUALITY";
 
-    // MacroObjectLike @ SDL_hints.h:1114:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1130:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_RENDER_VSYNC = "SDL_RENDER_VSYNC";
 
-    // MacroObjectLike @ SDL_hints.h:1126:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1142:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_RETURN_KEY_HIDES_IME = "SDL_RETURN_KEY_HIDES_IME";
 
-    // MacroObjectLike @ SDL_hints.h:1134:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1150:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_RPI_VIDEO_LAYER = "SDL_RPI_VIDEO_LAYER";
 
-    // MacroObjectLike @ SDL_hints.h:1154:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1170:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_SCREENSAVER_INHIBIT_ACTIVITY_NAME = "SDL_SCREENSAVER_INHIBIT_ACTIVITY_NAME";
 
-    // MacroObjectLike @ SDL_hints.h:1173:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1189:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_THREAD_FORCE_REALTIME_TIME_CRITICAL = "SDL_THREAD_FORCE_REALTIME_TIME_CRITICAL";
 
-    // MacroObjectLike @ SDL_hints.h:1190:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1206:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_THREAD_PRIORITY_POLICY = "SDL_THREAD_PRIORITY_POLICY";
 
-    // MacroObjectLike @ SDL_hints.h:1204:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1220:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_THREAD_STACK_SIZE = "SDL_THREAD_STACK_SIZE";
 
-    // MacroObjectLike @ SDL_hints.h:1220:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1236:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_TIMER_RESOLUTION = "SDL_TIMER_RESOLUTION";
 
-    // MacroObjectLike @ SDL_hints.h:1231:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1247:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_TOUCH_MOUSE_EVENTS = "SDL_TOUCH_MOUSE_EVENTS";
 
-    // MacroObjectLike @ SDL_hints.h:1241:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1257:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_TV_REMOTE_AS_JOYSTICK = "SDL_TV_REMOTE_AS_JOYSTICK";
 
-    // MacroObjectLike @ SDL_hints.h:1252:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1268:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_ALLOW_SCREENSAVER = "SDL_VIDEO_ALLOW_SCREENSAVER";
 
-    // MacroObjectLike @ SDL_hints.h:1271:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1287:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_DOUBLE_BUFFER = "SDL_VIDEO_DOUBLE_BUFFER";
 
-    // MacroObjectLike @ SDL_hints.h:1282:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1298:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_EGL_ALLOW_TRANSPARENCY = "SDL_VIDEO_EGL_ALLOW_TRANSPARENCY";
 
-    // MacroObjectLike @ SDL_hints.h:1297:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1313:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_EXTERNAL_CONTEXT = "SDL_VIDEO_EXTERNAL_CONTEXT";
 
-    // MacroObjectLike @ SDL_hints.h:1302:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1318:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_HIGHDPI_DISABLED = "SDL_VIDEO_HIGHDPI_DISABLED";
 
-    // MacroObjectLike @ SDL_hints.h:1321:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1337:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_MAC_FULLSCREEN_SPACES = "SDL_VIDEO_MAC_FULLSCREEN_SPACES";
 
-    // MacroObjectLike @ SDL_hints.h:1329:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1345:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_MINIMIZE_ON_FOCUS_LOSS = "SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS";
 
-    // MacroObjectLike @ SDL_hints.h:1340:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1356:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_WAYLAND_ALLOW_LIBDECOR = "SDL_VIDEO_WAYLAND_ALLOW_LIBDECOR";
 
-    // MacroObjectLike @ SDL_hints.h:1359:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1375:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_WINDOW_SHARE_PIXEL_FORMAT = "SDL_VIDEO_WINDOW_SHARE_PIXEL_FORMAT";
 
-    // MacroObjectLike @ SDL_hints.h:1375:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1391:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_WIN_D3DCOMPILER = "SDL_VIDEO_WIN_D3DCOMPILER";
 
-    // MacroObjectLike @ SDL_hints.h:1386:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1402:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_X11_FORCE_EGL = "SDL_VIDEO_X11_FORCE_EGL";
 
-    // MacroObjectLike @ SDL_hints.h:1398:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1414:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR = "SDL_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR";
 
-    // MacroObjectLike @ SDL_hints.h:1412:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1428:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_X11_NET_WM_PING = "SDL_VIDEO_X11_NET_WM_PING";
 
-    // MacroObjectLike @ SDL_hints.h:1418:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1434:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_X11_WINDOW_VISUALID = "SDL_VIDEO_X11_WINDOW_VISUALID";
 
-    // MacroObjectLike @ SDL_hints.h:1429:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1445:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_X11_XINERAMA = "SDL_VIDEO_X11_XINERAMA";
 
-    // MacroObjectLike @ SDL_hints.h:1440:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1456:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_X11_XRANDR = "SDL_VIDEO_X11_XRANDR";
 
-    // MacroObjectLike @ SDL_hints.h:1451:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1467:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_VIDEO_X11_XVIDMODE = "SDL_VIDEO_X11_XVIDMODE";
 
-    // MacroObjectLike @ SDL_hints.h:1478:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1494:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WAVE_FACT_CHUNK = "SDL_WAVE_FACT_CHUNK";
 
-    // MacroObjectLike @ SDL_hints.h:1499:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1515:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WAVE_RIFF_CHUNK_SIZE = "SDL_WAVE_RIFF_CHUNK_SIZE";
 
-    // MacroObjectLike @ SDL_hints.h:1515:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1531:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WAVE_TRUNCATION = "SDL_WAVE_TRUNCATION";
 
-    // MacroObjectLike @ SDL_hints.h:1531:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1547:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINDOWS_DISABLE_THREAD_NAMING = "SDL_WINDOWS_DISABLE_THREAD_NAMING";
 
-    // MacroObjectLike @ SDL_hints.h:1542:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1558:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINDOWS_ENABLE_MESSAGELOOP = "SDL_WINDOWS_ENABLE_MESSAGELOOP";
 
-    // MacroObjectLike @ SDL_hints.h:1556:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1572:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINDOWS_FORCE_MUTEX_CRITICAL_SECTIONS = "SDL_WINDOWS_FORCE_MUTEX_CRITICAL_SECTIONS";
 
-    // MacroObjectLike @ SDL_hints.h:1572:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1588:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINDOWS_FORCE_SEMAPHORE_KERNEL = "SDL_WINDOWS_FORCE_SEMAPHORE_KERNEL";
 
-    // MacroObjectLike @ SDL_hints.h:1577:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1593:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINDOWS_INTRESOURCE_ICON = "SDL_WINDOWS_INTRESOURCE_ICON";
 
-    // MacroObjectLike @ SDL_hints.h:1578:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1594:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINDOWS_INTRESOURCE_ICON_SMALL = "SDL_WINDOWS_INTRESOURCE_ICON_SMALL";
 
-    // MacroObjectLike @ SDL_hints.h:1587:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1603:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINDOWS_NO_CLOSE_ON_ALT_F4 = "SDL_WINDOWS_NO_CLOSE_ON_ALT_F4";
 
-    // MacroObjectLike @ SDL_hints.h:1607:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1623:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINDOWS_USE_D3D9EX = "SDL_WINDOWS_USE_D3D9EX";
 
-    // MacroObjectLike @ SDL_hints.h:1618:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1634:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINDOW_FRAME_USABLE_WHILE_CURSOR_HIDDEN = "SDL_WINDOW_FRAME_USABLE_WHILE_CURSOR_HIDDEN";
 
-    // MacroObjectLike @ SDL_hints.h:1629:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1645:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINDOW_NO_ACTIVATION_WHEN_SHOWN = "SDL_WINDOW_NO_ACTIVATION_WHEN_SHOWN";
 
-    // MacroObjectLike @ SDL_hints.h:1681:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1697:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINRT_HANDLE_BACK_BUTTON = "SDL_WINRT_HANDLE_BACK_BUTTON";
 
-    // MacroObjectLike @ SDL_hints.h:1702:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1718:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINRT_PRIVACY_POLICY_LABEL = "SDL_WINRT_PRIVACY_POLICY_LABEL";
 
-    // MacroObjectLike @ SDL_hints.h:1728:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1744:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_WINRT_PRIVACY_POLICY_URL = "SDL_WINRT_PRIVACY_POLICY_URL";
 
-    // MacroObjectLike @ SDL_hints.h:1740:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1756:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_X11_FORCE_OVERRIDE_REDIRECT = "SDL_X11_FORCE_OVERRIDE_REDIRECT";
 
-    // MacroObjectLike @ SDL_hints.h:1749:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1765:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_XINPUT_ENABLED = "SDL_XINPUT_ENABLED";
 
-    // MacroObjectLike @ SDL_hints.h:1758:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1774:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_XINPUT_USE_OLD_JOYSTICK_MAPPING = "SDL_XINPUT_USE_OLD_JOYSTICK_MAPPING";
 
-    // MacroObjectLike @ SDL_hints.h:1777:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
+    // MacroObjectLike @ SDL_hints.h:1793:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_hints.h)
     public const string SDL_HINT_AUDIO_INCLUDE_MONITORS = "SDL_AUDIO_INCLUDE_MONITORS";
 
     // MacroObjectLike @ SDL_log.h:54:9 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_log.h)
