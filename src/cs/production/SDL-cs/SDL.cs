@@ -2082,7 +2082,7 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern int SDL_GL_UnbindTexture(SDL_Texture* texture);
 
-    // Function @ SDL_system.h:526:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_system.h)
+    // Function @ SDL_system.h:539:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_system.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_IsTablet();
 
