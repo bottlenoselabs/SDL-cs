@@ -674,259 +674,259 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern int SDL_GetWindowDisplayMode(SDL_Window* window, SDL_DisplayMode* mode);
 
-    // Function @ SDL_video.h:669:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:668:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern uint SDL_GetWindowPixelFormat(SDL_Window* window);
 
-    // Function @ SDL_video.h:739:38 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:738:38 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern SDL_Window* SDL_CreateWindow(CString8U title, int x, int y, int w, int h, uint flags);
 
-    // Function @ SDL_video.h:760:38 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:759:38 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern SDL_Window* SDL_CreateWindowFrom(void* data);
 
-    // Function @ SDL_video.h:776:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:775:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern uint SDL_GetWindowID(SDL_Window* window);
 
-    // Function @ SDL_video.h:792:38 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:791:38 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern SDL_Window* SDL_GetWindowFromID(uint id);
 
-    // Function @ SDL_video.h:810:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:809:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern uint SDL_GetWindowFlags(SDL_Window* window);
 
-    // Function @ SDL_video.h:824:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:823:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_SetWindowTitle(SDL_Window* window, CString8U title);
 
-    // Function @ SDL_video.h:838:37 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:837:37 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern CString8U SDL_GetWindowTitle(SDL_Window* window);
 
-    // Function @ SDL_video.h:848:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:847:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_SetWindowIcon(SDL_Window* window, SDL_Surface* icon);
 
-    // Function @ SDL_video.h:865:31 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:864:31 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void* SDL_SetWindowData(SDL_Window* window, CString8U name, void* userdata);
 
-    // Function @ SDL_video.h:880:31 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:879:31 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void* SDL_GetWindowData(SDL_Window* window, CString8U name);
 
-    // Function @ SDL_video.h:898:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:897:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_SetWindowPosition(SDL_Window* window, int x, int y);
 
-    // Function @ SDL_video.h:917:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:916:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_GetWindowPosition(SDL_Window* window, long* x, long* y);
 
-    // Function @ SDL_video.h:942:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:941:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_SetWindowSize(SDL_Window* window, int w, int h);
 
-    // Function @ SDL_video.h:969:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:968:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_GetWindowSize(SDL_Window* window, long* w, long* h);
 
-    // Function @ SDL_video.h:1004:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1003:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetWindowBordersSize(SDL_Window* window, long* top, long* left, long* bottom, long* right);
 
-    // Function @ SDL_video.h:1020:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1019:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_SetWindowMinimumSize(SDL_Window* window, int min_w, int min_h);
 
-    // Function @ SDL_video.h:1037:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1036:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_GetWindowMinimumSize(SDL_Window* window, long* w, long* h);
 
-    // Function @ SDL_video.h:1052:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1051:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_SetWindowMaximumSize(SDL_Window* window, int max_w, int max_h);
 
-    // Function @ SDL_video.h:1069:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1068:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_GetWindowMaximumSize(SDL_Window* window, long* w, long* h);
 
-    // Function @ SDL_video.h:1088:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1087:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_SetWindowBordered(SDL_Window* window, CBool bordered);
 
-    // Function @ SDL_video.h:1107:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1106:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_SetWindowResizable(SDL_Window* window, CBool resizable);
 
-    // Function @ SDL_video.h:1137:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1136:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_ShowWindow(SDL_Window* window);
 
-    // Function @ SDL_video.h:1148:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1147:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_HideWindow(SDL_Window* window);
 
-    // Function @ SDL_video.h:1157:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1156:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_RaiseWindow(SDL_Window* window);
 
-    // Function @ SDL_video.h:1169:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1168:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_MaximizeWindow(SDL_Window* window);
 
-    // Function @ SDL_video.h:1181:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1180:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_MinimizeWindow(SDL_Window* window);
 
-    // Function @ SDL_video.h:1193:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1192:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_RestoreWindow(SDL_Window* window);
 
-    // Function @ SDL_video.h:1212:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1211:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetWindowFullscreen(SDL_Window* window, uint flags);
 
-    // Function @ SDL_video.h:1238:39 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1237:39 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern SDL_Surface* SDL_GetWindowSurface(SDL_Window* window);
 
-    // Function @ SDL_video.h:1257:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1256:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_UpdateWindowSurface(SDL_Window* window);
 
-    // Function @ SDL_video.h:1279:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1278:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_UpdateWindowSurfaceRects(SDL_Window* window, SDL_Rect* rects, int numrects);
 
-    // Function @ SDL_video.h:1299:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1298:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_SetWindowGrab(SDL_Window* window, CBool grabbed);
 
-    // Function @ SDL_video.h:1344:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1343:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_GetWindowGrab(SDL_Window* window);
 
-    // Function @ SDL_video.h:1382:38 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1381:38 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern SDL_Window* SDL_GetGrabbedWindow();
 
-    // Function @ SDL_video.h:1410:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1441:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetWindowBrightness(SDL_Window* window, float brightness);
 
-    // Function @ SDL_video.h:1429:31 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1460:31 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern float SDL_GetWindowBrightness(SDL_Window* window);
 
-    // Function @ SDL_video.h:1448:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1479:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetWindowOpacity(SDL_Window* window, float opacity);
 
-    // Function @ SDL_video.h:1469:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1500:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetWindowOpacity(SDL_Window* window, float* out_opacity);
 
-    // Function @ SDL_video.h:1481:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1512:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetWindowModalFor(SDL_Window* modal_window, SDL_Window* parent_window);
 
-    // Function @ SDL_video.h:1498:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1529:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetWindowInputFocus(SDL_Window* window);
 
-    // Function @ SDL_video.h:1547:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1561:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetWindowGammaRamp(SDL_Window* window, ushort* red, ushort* green, ushort* blue);
 
-    // Function @ SDL_video.h:1575:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1589:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetWindowGammaRamp(SDL_Window* window, ushort* red, ushort* green, ushort* blue);
 
-    // Function @ SDL_video.h:1653:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1667:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetWindowHitTest(SDL_Window* window, SDL_HitTest callback, void* callback_data);
 
-    // Function @ SDL_video.h:1682:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1696:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_DestroyWindow(SDL_Window* window);
 
-    // Function @ SDL_video.h:1701:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1715:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_IsScreenSaverEnabled();
 
-    // Function @ SDL_video.h:1711:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1725:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_EnableScreenSaver();
 
-    // Function @ SDL_video.h:1724:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1738:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_DisableScreenSaver();
 
-    // Function @ SDL_video.h:1752:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1766:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GL_LoadLibrary(CString8U path);
 
-    // Function @ SDL_video.h:1805:31 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1819:31 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void* SDL_GL_GetProcAddress(CString8U proc);
 
-    // Function @ SDL_video.h:1814:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1828:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_GL_UnloadLibrary();
 
-    // Function @ SDL_video.h:1835:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1849:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_GL_ExtensionSupported(CString8U extension);
 
-    // Function @ SDL_video.h:1846:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1860:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_GL_ResetAttributes();
 
-    // Function @ SDL_video.h:1866:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1880:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GL_SetAttribute(SDL_GLattr attr, int value);
 
-    // Function @ SDL_video.h:1881:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1895:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GL_GetAttribute(SDL_GLattr attr, long* value);
 
-    // Function @ SDL_video.h:1903:39 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1917:39 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern SDL_GLContext SDL_GL_CreateContext(SDL_Window* window);
 
-    // Function @ SDL_video.h:1920:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1934:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GL_MakeCurrent(SDL_Window* window, SDL_GLContext context);
 
-    // Function @ SDL_video.h:1931:37 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1945:37 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern SDL_Window* SDL_GL_GetCurrentWindow();
 
-    // Function @ SDL_video.h:1943:39 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1957:39 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern SDL_GLContext SDL_GL_GetCurrentContext();
 
-    // Function @ SDL_video.h:1965:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:1979:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_GL_GetDrawableSize(SDL_Window* window, long* w, long* h);
 
-    // Function @ SDL_video.h:2000:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:2014:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GL_SetSwapInterval(int interval);
 
-    // Function @ SDL_video.h:2017:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:2031:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GL_GetSwapInterval();
 
-    // Function @ SDL_video.h:2033:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:2047:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_GL_SwapWindow(SDL_Window* window);
 
-    // Function @ SDL_video.h:2044:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Function @ SDL_video.h:2058:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [DllImport(LibraryName)]
     public static extern void SDL_GL_DeleteContext(SDL_GLContext context);
 
@@ -1882,207 +1882,207 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern int SDL_GetTextureScaleMode(SDL_Texture* texture, SDL_ScaleMode* scaleMode);
 
-    // Function @ SDL_render.h:584:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:582:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_UpdateTexture(SDL_Texture* texture, SDL_Rect* rect, void* pixels, int pitch);
 
-    // Function @ SDL_render.h:615:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:613:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_UpdateYUVTexture(SDL_Texture* texture, SDL_Rect* rect, byte* Yplane, int Ypitch, byte* Uplane, int Upitch, byte* Vplane, int Vpitch);
 
-    // Function @ SDL_render.h:673:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:671:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_LockTexture(SDL_Texture* texture, SDL_Rect* rect, void** pixels, long* pitch);
 
-    // Function @ SDL_render.h:709:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:707:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_LockTextureToSurface(SDL_Texture* texture, SDL_Rect* rect, SDL_Surface** surface);
 
-    // Function @ SDL_render.h:730:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:728:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void SDL_UnlockTexture(SDL_Texture* texture);
 
-    // Function @ SDL_render.h:742:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:740:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_RenderTargetSupported(SDL_Renderer* renderer);
 
-    // Function @ SDL_render.h:766:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:764:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetRenderTarget(SDL_Renderer* renderer, SDL_Texture* texture);
 
-    // Function @ SDL_render.h:782:39 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:780:39 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern SDL_Texture* SDL_GetRenderTarget(SDL_Renderer* renderer);
 
-    // Function @ SDL_render.h:810:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:808:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderSetLogicalSize(SDL_Renderer* renderer, int w, int h);
 
-    // Function @ SDL_render.h:827:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:825:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void SDL_RenderGetLogicalSize(SDL_Renderer* renderer, long* w, long* h);
 
-    // Function @ SDL_render.h:846:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:844:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderSetIntegerScale(SDL_Renderer* renderer, CBool enable);
 
-    // Function @ SDL_render.h:878:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:876:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderSetViewport(SDL_Renderer* renderer, SDL_Rect* rect);
 
-    // Function @ SDL_render.h:891:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:889:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void SDL_RenderGetViewport(SDL_Renderer* renderer, SDL_Rect* rect);
 
-    // Function @ SDL_render.h:909:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:907:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderSetClipRect(SDL_Renderer* renderer, SDL_Rect* rect);
 
-    // Function @ SDL_render.h:925:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:923:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void SDL_RenderGetClipRect(SDL_Renderer* renderer, SDL_Rect* rect);
 
-    // Function @ SDL_render.h:940:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:938:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_RenderIsClipEnabled(SDL_Renderer* renderer);
 
-    // Function @ SDL_render.h:965:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:963:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderSetScale(SDL_Renderer* renderer, float scaleX, float scaleY);
 
-    // Function @ SDL_render.h:979:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:977:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void SDL_RenderGetScale(SDL_Renderer* renderer, float* scaleX, float* scaleY);
 
-    // Function @ SDL_render.h:1011:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1056:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetRenderDrawColor(SDL_Renderer* renderer, byte r, byte g, byte b, byte a);
 
-    // Function @ SDL_render.h:1034:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1079:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetRenderDrawColor(SDL_Renderer* renderer, byte* r, byte* g, byte* b, byte* a);
 
-    // Function @ SDL_render.h:1060:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1105:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_SetRenderDrawBlendMode(SDL_Renderer* renderer, SDL_BlendMode blendMode);
 
-    // Function @ SDL_render.h:1075:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1120:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GetRenderDrawBlendMode(SDL_Renderer* renderer, SDL_BlendMode* blendMode);
 
-    // Function @ SDL_render.h:1092:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1137:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderClear(SDL_Renderer* renderer);
 
-    // Function @ SDL_render.h:1119:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1164:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawPoint(SDL_Renderer* renderer, int x, int y);
 
-    // Function @ SDL_render.h:1145:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1190:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawPoints(SDL_Renderer* renderer, SDL_Point* points, int count);
 
-    // Function @ SDL_render.h:1176:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1221:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawLine(SDL_Renderer* renderer, int x1, int y1, int x2, int y2);
 
-    // Function @ SDL_render.h:1202:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1247:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawLines(SDL_Renderer* renderer, SDL_Point* points, int count);
 
-    // Function @ SDL_render.h:1228:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1273:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawRect(SDL_Renderer* renderer, SDL_Rect* rect);
 
-    // Function @ SDL_render.h:1254:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1299:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawRects(SDL_Renderer* renderer, SDL_Rect* rects, int count);
 
-    // Function @ SDL_render.h:1284:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1329:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderFillRect(SDL_Renderer* renderer, SDL_Rect* rect);
 
-    // Function @ SDL_render.h:1309:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1354:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderFillRects(SDL_Renderer* renderer, SDL_Rect* rects, int count);
 
-    // Function @ SDL_render.h:1341:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1386:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderCopy(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect* srcrect, SDL_Rect* dstrect);
 
-    // Function @ SDL_render.h:1385:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1430:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderCopyEx(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect* srcrect, SDL_Rect* dstrect, double angle, SDL_Point* center, SDL_RendererFlip flip);
 
-    // Function @ SDL_render.h:1404:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1449:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawPointF(SDL_Renderer* renderer, float x, float y);
 
-    // Function @ SDL_render.h:1417:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1462:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawPointsF(SDL_Renderer* renderer, SDL_FPoint* points, int count);
 
-    // Function @ SDL_render.h:1433:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1478:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawLineF(SDL_Renderer* renderer, float x1, float y1, float x2, float y2);
 
-    // Function @ SDL_render.h:1447:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1492:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawLinesF(SDL_Renderer* renderer, SDL_FPoint* points, int count);
 
-    // Function @ SDL_render.h:1461:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1506:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawRectF(SDL_Renderer* renderer, SDL_FRect* rect);
 
-    // Function @ SDL_render.h:1475:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1520:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderDrawRectsF(SDL_Renderer* renderer, SDL_FRect* rects, int count);
 
-    // Function @ SDL_render.h:1490:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1535:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderFillRectF(SDL_Renderer* renderer, SDL_FRect* rect);
 
-    // Function @ SDL_render.h:1504:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1549:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderFillRectsF(SDL_Renderer* renderer, SDL_FRect* rects, int count);
 
-    // Function @ SDL_render.h:1522:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1567:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderCopyF(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect* srcrect, SDL_FRect* dstrect);
 
-    // Function @ SDL_render.h:1548:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1593:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderCopyExF(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect* srcrect, SDL_FRect* dstrect, double angle, SDL_FPoint* center, SDL_RendererFlip flip);
 
-    // Function @ SDL_render.h:1635:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1678:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderReadPixels(SDL_Renderer* renderer, SDL_Rect* rect, uint format, void* pixels, int pitch);
 
-    // Function @ SDL_render.h:1675:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1718:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void SDL_RenderPresent(SDL_Renderer* renderer);
 
-    // Function @ SDL_render.h:1690:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1733:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void SDL_DestroyTexture(SDL_Texture* texture);
 
-    // Function @ SDL_render.h:1701:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1744:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern void SDL_DestroyRenderer(SDL_Renderer* renderer);
 
-    // Function @ SDL_render.h:1732:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1775:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_RenderFlush(SDL_Renderer* renderer);
 
-    // Function @ SDL_render.h:1770:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1813:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GL_BindTexture(SDL_Texture* texture, float* texw, float* texh);
 
-    // Function @ SDL_render.h:1785:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
+    // Function @ SDL_render.h:1828:29 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_render.h)
     [DllImport(LibraryName)]
     public static extern int SDL_GL_UnbindTexture(SDL_Texture* texture);
 
-    // Function @ SDL_system.h:539:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_system.h)
+    // Function @ SDL_system.h:542:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_system.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_IsTablet();
 
@@ -2090,23 +2090,23 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern uint SDL_GetTicks();
 
-    // Function @ SDL_timer.h:121:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
+    // Function @ SDL_timer.h:123:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
     [DllImport(LibraryName)]
     public static extern ulong SDL_GetPerformanceCounter();
 
-    // Function @ SDL_timer.h:132:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
+    // Function @ SDL_timer.h:134:32 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
     [DllImport(LibraryName)]
     public static extern ulong SDL_GetPerformanceFrequency();
 
-    // Function @ SDL_timer.h:145:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
+    // Function @ SDL_timer.h:147:30 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
     [DllImport(LibraryName)]
     public static extern void SDL_Delay(uint ms);
 
-    // Function @ SDL_timer.h:194:37 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
+    // Function @ SDL_timer.h:196:37 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
     [DllImport(LibraryName)]
     public static extern SDL_TimerID SDL_AddTimer(uint interval, SDL_TimerCallback callback, void* param);
 
-    // Function @ SDL_timer.h:209:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
+    // Function @ SDL_timer.h:211:34 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
     [DllImport(LibraryName)]
     public static extern CBool SDL_RemoveTimer(SDL_TimerID id);
 
@@ -2150,7 +2150,7 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern void SDL_Quit();
 
-    // FunctionPointer @ SDL_video.h:1609:37 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // FunctionPointer @ SDL_video.h:1623:37 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct SDL_HitTest
     {
@@ -2171,7 +2171,7 @@ public static unsafe partial class SDL
         public delegate* unmanaged<void*, int, SDL_LogPriority, CString8U, void> Pointer;
     }
 
-    // FunctionPointer @ SDL_timer.h:155:27 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
+    // FunctionPointer @ SDL_timer.h:157:27 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct SDL_TimerCallback
     {
@@ -4117,7 +4117,7 @@ public static unsafe partial class SDL
         public static implicit operator SDL_TouchID(long data) => new() { Data = data };
     }
 
-    // Typedef @ SDL_timer.h:160:13 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
+    // Typedef @ SDL_timer.h:162:13 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_timer.h)
     [StructLayout(LayoutKind.Explicit, Size = 4, Pack = 4)]
     public struct SDL_TimerID
     {
@@ -4681,7 +4681,7 @@ public static unsafe partial class SDL
         SDL_FLIP_VERTICAL = 2
     }
 
-    // Enum @ SDL_video.h:1597:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
+    // Enum @ SDL_video.h:1611:3 (/home/runner/work/sdl-cs/sdl-cs/ext/SDL/include/SDL_video.h)
     public enum SDL_HitTestResult : int
     {
         SDL_HITTEST_NORMAL = 0,
