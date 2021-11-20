@@ -24,8 +24,8 @@ jobs:
   bindgen-results-job:
     name: "Download + save bindgen results"
     runs-on: ubuntu-latest
-    if: > # Trigger after bindgen.yml which was the pull_request event
-      ${{ github.event_name == 'push' || (github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.conclusion == 'success') }}
+    # Trigger after bindgen.yml which was the pull_request event
+    if: github.event_name == 'push' || (github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.conclusion == 'success')
 
     - name: "Clone Git repository"
       uses: actions/checkout@master
