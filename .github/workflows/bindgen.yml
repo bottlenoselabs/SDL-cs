@@ -7,8 +7,6 @@ env:
 
 on:
   pull_request:
-    branches:
-      - 'dependabot/**'
     types:
       - assigned
       - opened
