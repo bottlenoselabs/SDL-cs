@@ -39,6 +39,6 @@ jobs:
 
     - name: "Upload bindgen results"
       uses: actions/upload-artifact@v2
-        with:
-          name: bindgen-results
-          path: src/cs/production/SDL-cs/SDL.cs
+      with:
+        name: bindgen-results
+        path: src/cs/production/SDL-cs/SDL.cs
