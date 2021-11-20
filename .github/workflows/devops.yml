@@ -27,6 +27,7 @@ jobs:
     # Trigger after bindgen.yml which was the pull_request event
     if: github.event_name == 'push' || (github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.conclusion == 'success')
 
+    steps:
     - name: "Clone Git repository"
       uses: actions/checkout@master
 
