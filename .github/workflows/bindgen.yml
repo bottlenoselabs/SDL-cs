@@ -6,13 +6,6 @@ env:
   DOTNET_SDK_VERSION: 6.0.x
 
 on:
-  push:
-    tags:
-      - v*
-    branches:
-      - main
-    paths-ignore:
-      - '**.md'
   pull_request:
     branches:
       - 'dependabot/*'
