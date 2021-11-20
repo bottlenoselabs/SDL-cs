@@ -1,6 +1,6 @@
 mode: ContinuousDeployment
 next-version: 2.0.17
-tag: ''
+tag: 'prerelease'
 ignore:
   sha: []
 merge-message-formats: {}
