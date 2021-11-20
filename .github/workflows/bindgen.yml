@@ -23,11 +23,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - name: "Clone Git repository"
-      uses: actions/checkout@master
-      with:
-        submodules: true
-
     - name: "Install .NET"
       uses: actions/setup-dotnet@v1
       with:
@@ -38,23 +33,12 @@ jobs:
       shell: bash
       run: dotnet tool install c2cs --global --add-source https://www.myget.org/F/bottlenoselabs/api/v3/index.json --version "*-*"
 
-    - name: "Bindgen"
+    - name: "bindgen"
       shell: bash
       run: ./bindgen.sh
 
-    - name: "Add + commit + push (if necessary)"
-      uses: EndBug/add-and-commit@v7
-      with:
-        default_author: user_info
-        message: "Update bindings"
-
-  devops-job:
-    name: "devops"
-    runs-on: ubuntu-latest
-    steps:
-
-    - name: "Trigger devops.yml"
-      uses: wei/curl@v1
-      with:
-        args: "--request POST --header 'Accept: application/vnd.github.v3+json' https://api.github.com/repos/bottlenoselabs/sdl-cs/actions/workflows/devops/dispatches --data '{\"ref\":\"{{ github.head_ref }}\"}'"
-
+    - name: "Upload bindgen results"
+      uses: actions/upload-artifact@v2
+        with:
+          name: bindgen-results
+          path: src/cs/production/SDL-cs/SDL.cs

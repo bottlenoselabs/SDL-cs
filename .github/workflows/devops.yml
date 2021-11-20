@@ -14,12 +14,37 @@ on:
     paths-ignore:
       - '**.md'
       - '**.yml'
-  workflow_dispatch:
+  workflow_run:
+    workflows: ["bindgen"]
+    types:
+      - completed
 
 jobs:
 
+  bindgen-results-job:
+    name: "Download + save bindgen results"
+    runs-on: ubuntu-latest
+    if: > # Trigger after bindgen.yml which was the pull_request event
+      ${{ github.event_name == 'push' || (github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.conclusion == 'success') }}
+
+    - name: "Clone Git repository"
+      uses: actions/checkout@master
+
+    - name: "Add + commit + push (if necessary)"
+      uses: EndBug/add-and-commit@v7
+      with:
+        default_author: user_info
+        message: "Update bindings"
+
+    - name: "Upload bindgen results"
+      uses: actions/download-artifact@v2
+      with:
+        name: "bindgen-results"
+        path: src/cs/production/SDL-cs/SDL.cs
+
   version-job:
     name: "Calculate version"
+    needs: [bindgen-results-job]
     runs-on: ubuntu-latest
 
     steps:
@@ -41,7 +66,7 @@ jobs:
 
     - run: echo "$GITVERSION_NUGETVERSIONV2" >> version.txt
 
-    - name: 'Upload version artifact'
+    - name: "Upload version artifact"
       uses: actions/upload-artifact@v2
       with:
         name: version
