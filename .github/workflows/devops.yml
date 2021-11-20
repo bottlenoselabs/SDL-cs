@@ -37,7 +37,7 @@ jobs:
         message: "Update bindings"
 
     - name: "Upload bindgen results"
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v1
       with:
         name: bindgen-results
         path: src/cs/production/SDL-cs/SDL.cs
