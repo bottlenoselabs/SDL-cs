@@ -1,5 +1,5 @@
-assembly-versioning-scheme: None
-mode: Mainline
+mode: ContinuousDeployment
+next-version: 2.0.17
 branches: {}
 ignore:
   sha: []
