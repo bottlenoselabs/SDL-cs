@@ -48,3 +48,12 @@ jobs:
         default_author: user_info
         message: "Update bindings"
 
+  devops-job:
+    name: "devops"
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: "Trigger devops.yml"
+      shell: bash
+      run: curl -X POST -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/bottlenoselabs/sdl-cs/actions/workflows/devops/dispatches -d '{"ref":"{{ env.GITHUB_REF }}"}'
+

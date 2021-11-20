@@ -6,7 +6,7 @@ env:
   DOTNET_SDK_VERSION: 6.0.x
 
 on:
-  push:
+  push: 
     tags:
       - v*
     branches:
@@ -14,15 +14,7 @@ on:
     paths-ignore:
       - '**.md'
       - '**.yml'
-  pull_request:
-    types:
-      - assigned
-      - opened
-      - synchronize
-      - reopened
-    paths-ignore:
-      - '**.md'
-      - '**.yml'
+  workflow_dispatch
 
 jobs:
 
