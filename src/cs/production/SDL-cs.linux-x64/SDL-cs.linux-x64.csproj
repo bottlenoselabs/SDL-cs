@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <!-- MSBuild settings -->
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <RootNamespace />
+    </PropertyGroup>
+
+    <!-- NuGet -->
+    <PropertyGroup>
+        <IsPackable>true</IsPackable>
+        <PackageId>bottlenoselabs.SDL2.runtime.linux-x64</PackageId>
+        <RepositoryUrl>https://github.com/bottlenoselabs/SDL-cs</RepositoryUrl>
+        <PackageDescription>Native SDL2 binaries for the .NET 6 runtime identifier `linux-x64`.</PackageDescription>
+        <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <IncludeSymbols>false</IncludeSymbols>
+        <CopyBuildOutputToOutputDirectory>true</CopyBuildOutputToOutputDirectory>
+        <CopyOutputSymbolsToOutputDirectory>true</CopyOutputSymbolsToOutputDirectory>
+    </PropertyGroup>
+
+    <!-- Dynamic link libraries -->
+    <ItemGroup>
+        <Content Include="$(GitRepositoryPath)/lib/*.so">
+            <Link>%(Filename)%(Extension)</Link>
+            <PackagePath>runtimes/linux-x64/native/%(Filename)%(Extension)</PackagePath>
+            <Pack>true</Pack>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+</Project>

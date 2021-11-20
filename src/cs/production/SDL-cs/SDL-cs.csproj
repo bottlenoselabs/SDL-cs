@@ -3,46 +3,21 @@
     <!-- MSBuild settings -->
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <AllowxUnsafeBlocks>true</AllowxUnsafeBlocks>
         <RootNamespace />
     </PropertyGroup>
 
-    <!-- RuntimeIdentifier -->
-    <PropertyGroup Condition="'$(RuntimeIdentifier)' == ''">
-        <RuntimeIdentifier Condition="'$(IsWindows)' == 'true' AND '$(Architecture)' == 'x64'">win-x64</RuntimeIdentifier>
-        <RuntimeIdentifier Condition="'$(IsMacOS)' == 'true' AND '$(Architecture)' == 'x64'">osx-x64</RuntimeIdentifier>
-        <RuntimeIdentifier Condition="'$(IsLinux)' == 'true' AND '$(Architecture)' == 'x64'">linux-x64</RuntimeIdentifier>
-    </PropertyGroup>
-    <Target Name="CheckRuntimeIdentifier" AfterTargets="Restore" BeforeTargets="BeforeBuild">
-        <Error Condition="'$(Is32Bit)' == 'true'" Text="'$(RuntimeIdentifier)' is 32-bit which is not supported." />
-        <Error Condition="'$(RuntimeIdentifier)' == ''" Text="'RuntimeIdentifier' was not set in the csproj." />
-    </Target>
-
     <!-- NuGet package references -->
     <ItemGroup>
-      <PackageReference Include="C2CS.Runtime" Version="*-*" />
+        <PackageReference Include="C2CS.Runtime" Version="1.6.2" />
     </ItemGroup>
 
-    <!-- Dynamic link libraries -->
-    <ItemGroup>
-        <Content Include="$(GitRepositoryPath)lib/*.dll" Condition="'$(IsWindows)' == 'true'">
-            <Link>%(Filename)%(Extension)</Link>
-            <PackagePath>runtimes/$(RuntimeIdentifier)\native\%(Filename)%(Extension)</PackagePath>
-            <Pack>true</Pack>
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="$(GitRepositoryPath)lib/*.dylib" Condition="'$(IsMacOS)' == 'true'">
-            <Link>%(Filename)%(Extension)</Link>
-            <PackagePath>runtimes/$(RuntimeIdentifier)/native/%(Filename)%(Extension)</PackagePath>
-            <Pack>true</Pack>
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="$(GitRepositoryPath)lib/*.so" Condition="'$(IsLinux)' == 'true'">
-            <Link>%(Filename)%(Extension)</Link>
-            <PackagePath>runtimes/$(RuntimeIdentifier)/native/%(Filename)%(Extension)</PackagePath>
-            <Pack>true</Pack>
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-    </ItemGroup>
+    <!-- NuGet -->
+    <PropertyGroup>
+        <IsPackable>true</IsPackable>
+        <PackageId>bottlenoselabs.SDL2</PackageId>
+        <RepositoryUrl>https://github.com/bottlenoselabs/SDL-cs</RepositoryUrl>
+        <PackageDescription>Native C# bindings for SDL2. Does not include any native library.</PackageDescription>
+    </PropertyGroup>
 
 </Project>

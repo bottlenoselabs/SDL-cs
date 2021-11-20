@@ -19,7 +19,6 @@ namespace HelloWorld
         {
             var errorCode = SDL_Init(SDL_INIT_VIDEO);
             CheckError(errorCode);
-
             CreateWindow();
 
             while (true)
