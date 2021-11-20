@@ -12,8 +12,6 @@ on:
       - opened
       - synchronize
       - reopened
-    branches:
-      - dependabot/submodules/ext/*
     paths-ignore:
       - '**.md'
       - '**.yml'
