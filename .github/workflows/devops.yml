@@ -58,7 +58,7 @@ jobs:
 
   version-job:
     name: "Calculate version"
-    needs: [check-start-job]
+    needs: [check-in-progress-job]
     runs-on: ubuntu-latest
     steps:
       - name: "Clone Git repository"
