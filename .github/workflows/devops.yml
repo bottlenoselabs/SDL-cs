@@ -19,11 +19,6 @@ on:
     types:
       - completed
 
-steps:
-      - uses: haya14busa/action-workflow_run-status@v1
-      - uses: actions/checkout@v2
-      - run: exit 0
-
 jobs:
   version-job:
     name: "Calculate version"
