@@ -46,7 +46,7 @@ jobs:
           sha: ${{ env.SHA }}
           token: ${{ secrets.GITHUB_TOKEN }}
           name: "devops"
-          status: in_progresss
+          status: in_progress
 
       - run: echo "${{ steps.sharef.outputs.sha }}" >> sha.txt
 
