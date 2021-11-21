@@ -20,10 +20,55 @@ on:
       - completed
 
 jobs:
+
+  sha-job:
+    name: "Get SHA for workflow"
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: "Recognize sha ref"
+      id: sharef
+      env:
+        EVENT_NAME: ${{ github.event_name }}
+        REF: ${{ github.ref }}
+      run: |
+        if [[ "$EVENT_NAME" == 'pull_request' ]]; then
+          echo "::set-output name=sha::$(echo ${{ github.event.pull_request.head.sha }})"
+        elif [[ "$EVENT_NAME" == 'workflow_run' ]]; then
+          echo "::set-output name=sha::$(echo ${{ github.event.workflow_run.head_sha }})"
+        else
+          echo "::set-output name=sha::$(echo $GITHUB_SHA)"
+        fi
+
+      - run: echo "${{ steps.sharef.outputs.sha }}" >> sha.txt
+
+      - name: "Upload sha artifact"
+        uses: actions/upload-artifact@v2
+        with:
+          name: sha
+          path: sha.txt
+
   version-job:
     name: "Calculate version"
     runs-on: ubuntu-latest
     steps:
+      - name: "Download sha artifact"
+        uses: actions/download-artifact@v2
+        with:
+          name: sha
+      - name: "Read sha artifact"
+        id: sha
+        shell: bash
+        run: |
+          echo "SHA=$(cat sha.txt)" >> $GITHUB_ENV
+      - name: "Version status: in-progress"
+        uses: LouisBrunner/checks-action@v1.1.1
+        with:
+          sha: ${{ env.SHA }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          name: "Version"
+          status: in_progress
+
       - name: "Clone Git repository"
         uses: actions/checkout@v2
         with:
@@ -50,11 +95,21 @@ jobs:
           name: version
           path: version.txt
 
+      - name: "Version status: completed"
+        uses: LouisBrunner/checks-action@v1.1.1
+        with:
+          sha: ${{ env.SHA }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          name: "Version"
+          status: completed
+          conclusion: ${{ job.status }}
+
   build-native-job:
     name: "Build native libraries: ${{ matrix.platform.rid }}"
     needs: [version-job]
     runs-on: ${{ matrix.platform.os }}
     strategy:
+      fail-fast: false
       matrix:
         platform:
           - { name: Windows (x64), os: ubuntu-latest, rid: win-x64 }
