@@ -6,17 +6,14 @@ env:
   DOTNET_SDK_VERSION: 6.0.x
 
 on:
-  pull_request_target
-
-permissions:
-  pull-requests: write
-
-on:
   pull_request_target:
     types: [assigned, opened, synchronize, reopened]
     paths-ignore:
       - '**.md'
       - '**.yml'
+
+permissions:
+  pull-requests: write
 
 jobs:
   dependabot-job:
