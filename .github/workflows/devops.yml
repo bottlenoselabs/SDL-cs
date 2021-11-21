@@ -21,28 +21,6 @@ on:
 
 jobs:
 
-  bindgen-results-job:
-    name: "Download + save bindgen results"
-    runs-on: ubuntu-latest
-    # Trigger after bindgen.yml which was the pull_request event
-    if: github.event_name == 'push' || (github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.conclusion == 'success')
-
-    steps:
-    - name: "Clone Git repository"
-      uses: actions/checkout@master
-
-    - name: "Add + commit + push (if necessary)"
-      uses: EndBug/add-and-commit@v7
-      with:
-        default_author: user_info
-        message: "Update bindings"
-
-    - name: "Upload bindgen results"
-      uses: actions/download-artifact@v1
-      with:
-        name: bindgen-results
-        path: src/cs/production/SDL-cs/SDL.cs
-
   version-job:
     name: "Calculate version"
     needs: [bindgen-results-job]
