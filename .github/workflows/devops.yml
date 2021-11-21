@@ -21,8 +21,8 @@ on:
 
 jobs:
 
-  sha-job:
-    name: "Get SHA for workflow"
+  check-in-progress-job:
+    name: "Update check: in progress"
     runs-on: ubuntu-latest
     steps:
 
@@ -40,6 +40,14 @@ jobs:
             echo "::set-output name=sha::$(echo $GITHUB_SHA)"
           fi
 
+      - name: "Update check"
+        uses: LouisBrunner/checks-action@v1.1.1
+        with:
+          sha: ${{ env.SHA }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          name: "devops"
+          status: in_progresss
+
       - run: echo "${{ steps.sharef.outputs.sha }}" >> sha.txt
 
       - name: "Upload sha artifact"
@@ -50,25 +58,9 @@ jobs:
 
   version-job:
     name: "Calculate version"
+    needs: [check-start-job]
     runs-on: ubuntu-latest
     steps:
-      - name: "Download sha artifact"
-        uses: actions/download-artifact@v2
-        with:
-          name: sha
-      - name: "Read sha artifact"
-        id: sha
-        shell: bash
-        run: |
-          echo "SHA=$(cat sha.txt)" >> $GITHUB_ENV
-      - name: "Version status: in-progress"
-        uses: LouisBrunner/checks-action@v1.1.1
-        with:
-          sha: ${{ env.SHA }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          name: "Version"
-          status: in_progress
-
       - name: "Clone Git repository"
         uses: actions/checkout@v2
         with:
@@ -94,15 +86,6 @@ jobs:
         with:
           name: version
           path: version.txt
-
-      - name: "Version status: completed"
-        uses: LouisBrunner/checks-action@v1.1.1
-        with:
-          sha: ${{ env.SHA }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          name: "Version"
-          status: completed
-          conclusion: ${{ job.status }}
 
   build-native-job:
     name: "Build native libraries: ${{ matrix.platform.rid }}"
@@ -232,3 +215,30 @@ jobs:
 
       - name: "Upload Packages"
         run: dotnet nuget push "./**/*.nupkg" --source $NUGET_SOURCE_URL --skip-duplicate --api-key $NUGET_ACCESS_TOKEN
+
+  check-complete-job:
+    name: "Update check: complete"
+    needs: [deploy-job]
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+
+      - name: "Download sha artifact"
+        uses: actions/download-artifact@v2
+        with:
+          name: sha
+
+      - name: "Read sha artifact"
+        id: sha
+        shell: bash
+        run: |
+          echo "SHA=$(cat sha.txt)" >> $GITHUB_ENV
+
+      - name: "Update check"
+        uses: LouisBrunner/checks-action@v1.1.1
+        with:
+          sha: ${{ env.SHA }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          name: "devops"
+          status: completed
+          conclusion: ${{ job.status }}
