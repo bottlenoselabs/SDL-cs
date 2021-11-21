@@ -17,9 +17,6 @@ on:
     paths-ignore:
       - '**.md'
       - '**.yml'
-    branches:
-      - 'dependabot/submodules/ext/SDL-*'
-
 
 jobs:
   dependabot-job:
