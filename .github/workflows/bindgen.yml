@@ -18,10 +18,10 @@ on:
       - '**.md'
       - '**.yml'
     branches:
-      - dependabot/submodules/ext/SDL-*
+      - 'dependabot/submodules/ext/SDL-*'
 
 jobs:
-  dependabot:
+  dependabot-job:
     name: "dependabot"
     runs-on: ubuntu-latest
     if: ${{ github.actor == 'dependabot[bot]' }}
