@@ -20,11 +20,13 @@ on:
     branches:
       - 'dependabot/submodules/ext/SDL-*'
 
+
 jobs:
   dependabot-job:
     name: "dependabot"
     runs-on: ubuntu-latest
     if: ${{ github.actor == 'dependabot[bot]' }}
+    steps:
 
     - name: "Clone Git repository"
       uses: actions/checkout@master
