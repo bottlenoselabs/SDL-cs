@@ -35,7 +35,7 @@ jobs:
         uses: LouisBrunner/checks-action@v1.1.1
         if: always()
         with:
-          sha: ${{ steps.sharef.outputs.sha }}"
+          sha: ${{ steps.sharef.outputs.sha }}
           token: ${{ secrets.GITHUB_TOKEN }}
           name: "bindgen"
           status: in_progress
@@ -70,7 +70,8 @@ jobs:
         uses: LouisBrunner/checks-action@v1.1.1
         if: always()
         with:
-          sha: ${{ steps.sharef.outputs.sha }}"
+          sha: ${{ steps.sharef.outputs.sha }}
           token: ${{ secrets.GITHUB_TOKEN }}
           name: "bindgen"
           status: completed
+          conclusion: ${{ job.status }}

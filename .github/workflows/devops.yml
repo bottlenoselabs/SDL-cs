@@ -44,7 +44,7 @@ jobs:
       - name: "Update check"
         uses: LouisBrunner/checks-action@v1.1.1
         with:
-          sha: ${{ steps.sharef.outputs.sha }}"
+          sha: ${{ steps.sharef.outputs.sha }}
           token: ${{ secrets.GITHUB_TOKEN }}
           name: "devops"
           status: in_progress
