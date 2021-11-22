@@ -1,0 +1,31 @@
+name: "pr"
+
+on:
+  pull_request:
+    types: [assigned, opened, synchronize, reopened]
+    paths-ignore:
+      - '**.md'
+      - '**.yml'
+
+jobs:
+
+  checks-job:
+    name: "Update checks"
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: "update check: bindgen"
+      uses: LouisBrunner/checks-action@v1.1.1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        name: "bindgen"
+        status: queued
+
+    - name: "update check: devops"
+      uses: LouisBrunner/checks-action@v1.1.1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        name: "devops"
+        status: queued
+
+  
