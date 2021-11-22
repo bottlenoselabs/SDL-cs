@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - name: "Recognize sha ref"
+      - name: "Recognize sha ref"
         id: sharef
         env:
           EVENT_NAME: ${{ github.event_name }}
@@ -31,7 +31,7 @@ jobs:
             echo "::set-output name=sha::$(echo $GITHUB_SHA)"
           fi
 
-    - name: "Update check"
+      - name: "Update check"
         uses: LouisBrunner/checks-action@v1.1.1
         if: always()
         with:
@@ -40,33 +40,33 @@ jobs:
           name: "bindgen"
           status: in_progress
 
-    - name: "Clone Git repository"
-      uses: actions/checkout@master
-      with:
-        submodules: 'true'
+      - name: "Clone Git repository"
+        uses: actions/checkout@master
+        with:
+          submodules: 'true'
 
-    - name: "Install .NET"
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: '${{ env.DOTNET_SDK_VERSION }}'
-        include-prerelease: true
+      - name: "Install .NET"
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '${{ env.DOTNET_SDK_VERSION }}'
+          include-prerelease: true
 
-    - name: "Install C2CS"
-      shell: bash
-      run: dotnet tool install c2cs --global --add-source https://www.myget.org/F/bottlenoselabs/api/v3/index.json --version "*-*"
+      - name: "Install C2CS"
+        shell: bash
+        run: dotnet tool install c2cs --global --add-source https://www.myget.org/F/bottlenoselabs/api/v3/index.json --version "*-*"
 
-    - name: "bindgen"
-      shell: bash
-      run: ./bindgen.sh
+      - name: "bindgen"
+        shell: bash
+        run: ./bindgen.sh
 
-    - name: "Add + commit + push (if necessary)"
-      uses: EndBug/add-and-commit@v7
-      with:
-        default_author: user_info
-        message: "Update bindings"
-        branch: ${{ steps.sharef.outputs.sha }}"
+      - name: "Add + commit + push (if necessary)"
+        uses: EndBug/add-and-commit@v7
+        with:
+          default_author: user_info
+          message: "Update bindings"
+          branch: ${{ steps.sharef.outputs.sha }}"
     
-    - name: "Update check"
+      - name: "Update check"
         uses: LouisBrunner/checks-action@v1.1.1
         if: always()
         with:
