@@ -44,6 +44,7 @@ jobs:
         uses: actions/checkout@master
         with:
           submodules: 'true'
+          ref: ${{ steps.sharef.outputs.sha }}
 
       - name: "Install .NET"
         uses: actions/setup-dotnet@v1

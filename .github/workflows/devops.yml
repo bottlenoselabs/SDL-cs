@@ -26,45 +26,23 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'workflow_run'
     steps:
-
-      - name: "Recognize sha ref"
-        id: sharef
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-          REF: ${{ github.ref }}
-        run: |
-          if [[ "$EVENT_NAME" == 'pull_request' ]]; then
-            echo "::set-output name=sha::$(echo ${{ github.event.pull_request.head.sha }})"
-          elif [[ "$EVENT_NAME" == 'workflow_run' ]]; then
-            echo "::set-output name=sha::$(echo ${{ github.event.workflow_run.head_sha }})"
-          else
-            echo "::set-output name=sha::$(echo $GITHUB_SHA)"
-          fi
-
       - name: "Update check"
         uses: LouisBrunner/checks-action@v1.1.1
         with:
-          sha: ${{ steps.sharef.outputs.sha }}
+          sha: ${{ github.event.workflow_run.head_sha }}
           token: ${{ secrets.GITHUB_TOKEN }}
           name: "devops"
           status: in_progress
-
-      - run: echo "${{ steps.sharef.outputs.sha }}" >> sha.txt
-
-      - name: "Upload sha artifact"
-        uses: actions/upload-artifact@v2
-        with:
-          name: sha
-          path: sha.txt
 
   version-job:
     name: "Calculate version"
     runs-on: ubuntu-latest
     steps:
+
       - name: "Clone Git repository"
         uses: actions/checkout@v2
         with:
-          ref: ${{ github.event.workflow_run.head_branch }}
+          ref: ${{ github.event.workflow_run.head_sha || $GITHUB_SHA }}
 
       - name: "Git fetch all history for all tags and branches"
         run: git fetch --prune --unshallow
@@ -103,6 +81,7 @@ jobs:
         uses: actions/checkout@master
         with:
           submodules: "recursive"
+          ref: ${{ github.event.workflow_run.head_sha || $GITHUB_SHA }}
 
       - name: "Build native libraries (Windows)"
         if: ${{ startsWith(matrix.platform.rid, 'win') }}
@@ -140,6 +119,7 @@ jobs:
         uses: actions/checkout@master
         with:
           submodules: "true"
+          ref: ${{ github.event.workflow_run.head_sha || $GITHUB_SHA }}
 
       - name: "Install .NET"
         uses: actions/setup-dotnet@v1
@@ -223,21 +203,11 @@ jobs:
     if: always()
     steps:
 
-      - name: "Download sha artifact"
-        uses: actions/download-artifact@v2
-        with:
-          name: sha
-
-      - name: "Read sha artifact"
-        id: sha
-        shell: bash
-        run: |
-          echo "SHA=$(cat sha.txt)" >> $GITHUB_ENV
-
       - name: "Update check"
         uses: LouisBrunner/checks-action@v1.1.1
+        if: github.event_name == 'workflow_run'
         with:
-          sha: ${{ env.SHA }}
+          sha: ${{ github.event.workflow_run.head_sha }}
           token: ${{ secrets.GITHUB_TOKEN }}
           name: "devops"
           status: completed
