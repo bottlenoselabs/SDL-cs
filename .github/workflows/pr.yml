@@ -17,6 +17,7 @@ jobs:
     - name: "update check: bindgen"
       uses: LouisBrunner/checks-action@v1.1.1
       with:
+        sha: ${{ github.event.pull_request.head.sha }}
         token: ${{ secrets.GITHUB_TOKEN }}
         name: "bindgen"
         status: queued
@@ -24,6 +25,7 @@ jobs:
     - name: "update check: devops"
       uses: LouisBrunner/checks-action@v1.1.1
       with:
+        sha: ${{ github.event.pull_request.head.sha }}
         token: ${{ secrets.GITHUB_TOKEN }}
         name: "devops"
         status: queued
