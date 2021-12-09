@@ -56,7 +56,7 @@ jobs:
         if: ${{ startsWith(matrix.platform.rid, 'win') }}
         uses: msys2/setup-msys2@v2
         with:
-          msystem: ${{ matrix.platform.msystem }}
+          msystem: mingw64
           install: >-
             mingw-w64-x86_64-gcc
             mingw-w64-x86_64-cmake
