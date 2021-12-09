@@ -50,7 +50,7 @@ jobs:
         uses: actions/checkout@master
         with:
           submodules: "recursive"
-          ref: ${{ github.event.workflow_run.head_sha || $GITHUB_SHA }}
+          ref: ${{ github.event.workflow_run.head_sha }}
 
       - name: "Build native libraries (Windows)"
         if: ${{ startsWith(matrix.platform.rid, 'win') }}
@@ -92,7 +92,7 @@ jobs:
       - uses: bottlenoselabs/github-actions-dotnet@v1
         with:
           repository: '${{ github.repository }}'
-          ref: ${{ github.event.workflow_run.head_sha || $GITHUB_SHA }}
+          ref: ${{ github.event.workflow_run.head_sha }}
           dotnet-sdk-version: '6.0.x'
           is-enabled-pack: 'true'
           publish-environment: 'staging'
