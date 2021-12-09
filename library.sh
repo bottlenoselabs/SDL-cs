@@ -73,9 +73,7 @@ fi
 if [[ "$TARGET_BUILD_OS" == "macos" ]]; then
     CMAKE_ARCH_ARGS="-DCMAKE_OSX_ARCHITECTURES=$TARGET_BUILD_ARCH"
 elif [[ "$TARGET_BUILD_OS" == "windows" ]]; then
-    if [[ "$TARGET_BUILD_ARCH" == "x86_64" ]]; then
-        CMAKE_TOOLCHAIN_ARGS="-DCMAKE_TOOLCHAIN_FILE=$DIR/mingw-w64-x86_64.cmake"
-    else
+    if [[ "$TARGET_BUILD_ARCH" != "x86_64" ]]; then
         echo "Unknown target build CPU architecture for Windows: $TARGET_BUILD_ARCH"
         exit 1
     fi
