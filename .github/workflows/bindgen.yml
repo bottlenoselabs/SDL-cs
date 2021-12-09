@@ -17,25 +17,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: "Recognize sha ref"
-        id: sharef
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-          REF: ${{ github.ref }}
-        run: |
-          if [[ "$EVENT_NAME" == 'pull_request' ]]; then
-            echo "::set-output name=sha::$(echo ${{ github.event.pull_request.head.sha }})"
-          elif [[ "$EVENT_NAME" == 'workflow_run' ]]; then
-            echo "::set-output name=sha::$(echo ${{ github.event.workflow_run.head_sha }})"
-          else
-            echo "::set-output name=sha::$(echo $GITHUB_SHA)"
-          fi
-
       - name: "Update check"
         uses: LouisBrunner/checks-action@v1.1.1
         if: always()
         with:
-          sha: ${{ steps.sharef.outputs.sha }}
+          sha: ${{ github.event.workflow_run.head_sha }}
           token: ${{ secrets.GITHUB_TOKEN }}
           name: "bindgen"
           status: in_progress
@@ -44,7 +30,7 @@ jobs:
         uses: actions/checkout@master
         with:
           submodules: 'true'
-          ref: ${{ steps.sharef.outputs.sha }}
+          ref: ${{ github.event.workflow_run.head_sha }}
 
       - name: "Install .NET"
         uses: actions/setup-dotnet@v1
@@ -65,13 +51,13 @@ jobs:
         with:
           default_author: user_info
           message: "Update bindings"
-          branch: ${{ steps.sharef.outputs.sha }}"
+          branch: ${{ github.event.workflow_run.head_sha }}"
     
       - name: "Update check"
         uses: LouisBrunner/checks-action@v1.1.1
         if: always()
         with:
-          sha: ${{ steps.sharef.outputs.sha }}
+          sha: ${{ github.event.workflow_run.head_sha }}
           token: ${{ secrets.GITHUB_TOKEN }}
           name: "bindgen"
           status: completed

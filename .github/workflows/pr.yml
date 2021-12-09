@@ -22,12 +22,12 @@ jobs:
         name: "bindgen"
         status: queued
 
-    - name: "update check: devops"
+    - name: "update check: build"
       uses: LouisBrunner/checks-action@v1.1.1
       with:
         sha: ${{ github.event.pull_request.head.sha }}
         token: ${{ secrets.GITHUB_TOKEN }}
-        name: "devops"
+        name: "build+deploy"
         status: queued
 
   
