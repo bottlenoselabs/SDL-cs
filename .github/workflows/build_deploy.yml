@@ -41,7 +41,7 @@ jobs:
       fail-fast: false
       matrix:
         platform:
-          - { name: Windows (x64), os: ubuntu-latest, rid: win-x64 }
+          - { name: Windows (x64), os: windows-latest, rid: win-x64 }
           - { name: macOS (x64 + arm64), os: macos-latest, rid: osx }
           - { name: Linux (x64), os: ubuntu-latest, rid: linux-x64 }
     steps:
@@ -52,10 +52,21 @@ jobs:
           submodules: "recursive"
           ref: ${{ github.event.workflow_run.head_sha }}
 
+      - name: "Set up MSYS2"
+        if: ${{ startsWith(matrix.platform.rid, 'win') }}
+        uses: msys2/setup-msys2@v2
+        with:
+          msystem: ${{ matrix.platform.msystem }}
+          install: >-
+            mingw-w64-x86_64-gcc
+            mingw-w64-x86_64-cmake
+            mingw-w64-x86_64-ninja
+            mingw-w64-x86_64-pkg-config
+
       - name: "Build native libraries (Windows)"
         if: ${{ startsWith(matrix.platform.rid, 'win') }}
-        shell: bash
-        run: sudo apt-get update -y && sudo apt-get install -y mingw-w64 && ./library.sh windows
+        shell: msys2 {0}
+        run: ./library.sh windows
 
       - name: "Build native libraries (Unix)"
         if: ${{ !(startsWith(matrix.platform.rid, 'win')) }}
