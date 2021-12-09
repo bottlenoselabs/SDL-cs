@@ -66,7 +66,7 @@ jobs:
       - name: "Build native libraries (Windows)"
         if: ${{ startsWith(matrix.platform.rid, 'win') }}
         shell: msys2 {0}
-        run: ./library.sh windows
+        run: ./library.sh
 
       - name: "Build native libraries (Unix)"
         if: ${{ !(startsWith(matrix.platform.rid, 'win')) }}
