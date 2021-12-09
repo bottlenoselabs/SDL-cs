@@ -13,7 +13,6 @@ on:
       - main
     paths-ignore:
       - "**.md"
-      - "**.yml"
   workflow_run:
     workflows: ["pr"]
     types:
