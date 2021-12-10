@@ -8,9 +8,9 @@
 
     <ItemGroup>
         <ProjectReference Include="../../production/SDL-cs/SDL-cs.csproj" />
-        <ProjectReference Condition="$([MSBuild]::IsOSPlatform('Windows'))" Include="../../production/SDL-cs.win-x64/SDL-cs.win-x64.csproj" />
-        <ProjectReference Condition="$([MSBuild]::IsOSPlatform('OSX'))" Include="..\..\production\SDL-cs.osx\SDL-cs.osx.csproj" />
-        <ProjectReference Condition="$([MSBuild]::IsOSPlatform('Linux'))" Include="../../production/SDL-cs.linux-x64/SDL-cs.linux-x64.csproj" />
+        <ProjectReference Include="../../production/SDL-cs.win-x64/SDL-cs.win-x64.csproj" />
+        <ProjectReference Include="../../production/SDL-cs.osx/SDL-cs.osx.csproj" />
+        <ProjectReference Include="../../production/SDL-cs.linux-x64/SDL-cs.linux-x64.csproj" />
     </ItemGroup>
 
 </Project>
