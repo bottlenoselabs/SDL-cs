@@ -8,6 +8,7 @@ on:
 
 jobs:
   bindgen-job:
+    if: github.actor == 'dependabot[bot]'
     name: "bindgen"
     runs-on: ubuntu-latest
 
@@ -16,6 +17,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: 'true'
+          ref: ${{ github.event.pull_request.head.sha }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: "Install .NET"
         uses: actions/setup-dotnet@v1
