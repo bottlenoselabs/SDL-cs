@@ -40,7 +40,7 @@ jobs:
 
       - name: "Install C2CS"
         shell: bash
-        run: dotnet tool install c2cs --global --add-source https://www.myget.org/F/bottlenoselabs/api/v3/index.json --version "*-*"
+        run: dotnet tool install bottlenoselabs.C2CS --global --add-source https://www.myget.org/F/bottlenoselabs/api/v3/index.json --version "*-*"
 
       - name: "bindgen"
         shell: bash
