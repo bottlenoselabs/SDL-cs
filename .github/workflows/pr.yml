@@ -1,33 +1,39 @@
 name: "pr"
 
 on:
-  pull_request_target:
+  pull_request:
     types: [assigned, opened, synchronize, reopened]
     paths-ignore:
       - '**.md'
-      - '**.yml'
 
 jobs:
-
-  checks-job:
-    name: "Update checks"
+  bindgen-job:
+    name: "bindgen"
     runs-on: ubuntu-latest
+
     steps:
+      - name: "Clone Git repository"
+        uses: actions/checkout@master
+        with:
+          submodules: 'true'
 
-    - name: "update check: bindgen"
-      uses: LouisBrunner/checks-action@v1.1.1
-      with:
-        sha: ${{ github.event.pull_request.head.sha }}
-        token: ${{ secrets.GITHUB_TOKEN }}
-        name: "bindgen"
-        status: queued
+      - name: "Install .NET"
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '${{ env.DOTNET_SDK_VERSION }}'
+          include-prerelease: true
 
-    - name: "update check: build"
-      uses: LouisBrunner/checks-action@v1.1.1
-      with:
-        sha: ${{ github.event.pull_request.head.sha }}
-        token: ${{ secrets.GITHUB_TOKEN }}
-        name: "build+deploy"
-        status: queued
+      - name: "Install C2CS"
+        shell: bash
+        run: dotnet tool install bottlenoselabs.C2CS --global --add-source https://www.myget.org/F/bottlenoselabs/api/v3/index.json --version "*-*"
 
+      - name: "bindgen"
+        shell: bash
+        run: ./bindgen.sh
+
+      - name: "Add + commit + push (if necessary)"
+        uses: EndBug/add-and-commit@v7
+        with:
+          default_author: user_info
+          message: "Update bindings"
   
