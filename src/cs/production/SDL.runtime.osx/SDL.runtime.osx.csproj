@@ -5,13 +5,13 @@
         <TargetFramework>netstandard2.0</TargetFramework>
         <RootNamespace />
     </PropertyGroup>
-    
+
     <!-- NuGet -->
     <PropertyGroup>
         <IsPackable>true</IsPackable>
-        <PackageId>bottlenoselabs.SDL2.runtime.win-x64</PackageId>
+        <PackageId>bottlenoselabs.SDL2.runtime.osx</PackageId>
         <RepositoryUrl>https://github.com/bottlenoselabs/SDL-cs</RepositoryUrl>
-        <PackageDescription>Native SDL2 binaries for the .NET 6 runtime identifier `win-x64`.</PackageDescription>
+        <PackageDescription>Native SDL binaries for the runtime identifier `osx`.</PackageDescription>
         <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
         <IncludeBuildOutput>false</IncludeBuildOutput>
         <IncludeSymbols>false</IncludeSymbols>
@@ -21,9 +21,9 @@
 
     <!-- Dynamic link libraries -->
     <ItemGroup>
-        <Content Include="$(GitRepositoryPath)/lib/*.dll">
+        <Content Include="$(GitRepositoryPath)/lib/*.dylib">
             <Link>%(Filename)%(Extension)</Link>
-            <PackagePath>runtimes/win-x64/native/%(Filename)%(Extension)</PackagePath>
+            <PackagePath>runtimes/osx/native/%(Filename)%(Extension)</PackagePath>
             <Pack>true</Pack>
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>

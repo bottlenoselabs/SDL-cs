@@ -7,10 +7,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="../../production/SDL-cs/SDL-cs.csproj" />
-        <ProjectReference Include="../../production/SDL-cs.win-x64/SDL-cs.win-x64.csproj" />
-        <ProjectReference Include="../../production/SDL-cs.osx/SDL-cs.osx.csproj" />
-        <ProjectReference Include="../../production/SDL-cs.linux-x64/SDL-cs.linux-x64.csproj" />
+        <ProjectReference Include="..\..\production\SDL\SDL.csproj" />
+        <ProjectReference Include="..\..\production\SDL.runtime.win-x64\SDL.runtime.win-x64.csproj" />
+        <ProjectReference Include="..\..\production\SDL.runtime.osx\SDL.runtime.osx.csproj" />
+        <ProjectReference Include="..\..\production\SDL.runtime.linux-x64\SDL.runtime.linux-x64.csproj" />
     </ItemGroup>
 
 </Project>

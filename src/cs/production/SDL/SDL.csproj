@@ -12,9 +12,8 @@
     <!-- NuGet -->
     <PropertyGroup>
         <IsPackable>true</IsPackable>
-        <PackageId>bottlenoselabs.SDL2</PackageId>
         <RepositoryUrl>https://github.com/bottlenoselabs/SDL-cs</RepositoryUrl>
-        <PackageDescription>Native C# bindings for SDL2. Does not include any native library.</PackageDescription>
+        <PackageDescription>C# bindings for SDL. This package only includes C# code; it does not include any native library.</PackageDescription>
     </PropertyGroup>
     
     <!-- NuGet package references -->

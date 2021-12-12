@@ -6,13 +6,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "src\cs\sample
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Production", "Production", "{39423871-7923-4AFB-A756-35E17FCBA274}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDL-cs", "src\cs\production\SDL-cs\SDL-cs.csproj", "{AC4DED33-B654-45A9-AF61-C2897809E2C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDL", "src\cs\production\SDL\SDL.csproj", "{AC4DED33-B654-45A9-AF61-C2897809E2C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDL-cs.win-x64", "src\cs\production\SDL-cs.win-x64\SDL-cs.win-x64.csproj", "{5A803F2B-5268-44EE-9627-97A638A59C55}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDL.runtime.win-x64", "src\cs\production\SDL.runtime.win-x64\SDL.runtime.win-x64.csproj", "{5A803F2B-5268-44EE-9627-97A638A59C55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDL-cs.osx", "src\cs\production\SDL-cs.osx\SDL-cs.osx.csproj", "{B3CDD2E4-A0EA-433F-89A1-776764CFB39E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDL.runtime.osx", "src\cs\production\SDL.runtime.osx\SDL.runtime.osx.csproj", "{B3CDD2E4-A0EA-433F-89A1-776764CFB39E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDL-cs.linux-x64", "src\cs\production\SDL-cs.linux-x64\SDL-cs.linux-x64.csproj", "{96876547-3507-4E1F-B756-819BF1772393}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDL.runtime.linux-x64", "src\cs\production\SDL.runtime.linux-x64\SDL.runtime.linux-x64.csproj", "{96876547-3507-4E1F-B756-819BF1772393}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
