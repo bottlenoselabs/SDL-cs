@@ -8,9 +8,6 @@
     </PropertyGroup>
 
     <!-- NuGet package references -->
-    <ItemGroup>
-        <PackageReference Include="C2CS.Runtime" Version="1.6.2" />
-    </ItemGroup>
 
     <!-- NuGet -->
     <PropertyGroup>
@@ -19,5 +16,10 @@
         <RepositoryUrl>https://github.com/bottlenoselabs/SDL-cs</RepositoryUrl>
         <PackageDescription>Native C# bindings for SDL2. Does not include any native library.</PackageDescription>
     </PropertyGroup>
+    
+    <!-- NuGet package references -->
+    <ItemGroup>
+      <PackageReference Include="bottlenoselabs.C2CS.Runtime" Version="1.6.32" PrivateAssets="all" />
+    </ItemGroup>
 
 </Project>
