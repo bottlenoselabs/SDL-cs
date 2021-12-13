@@ -3,7 +3,7 @@
     <!-- MSBuild settings -->
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <AllowxUnsafeBlocks>true</AllowxUnsafeBlocks>
+        <ImplicitUsings>enable</ImplicitUsings>
         <RootNamespace />
     </PropertyGroup>
 
@@ -12,6 +12,7 @@
         <IsPackable>true</IsPackable>
         <RepositoryUrl>https://github.com/bottlenoselabs/SDL-cs</RepositoryUrl>
         <PackageDescription>C# bindings for SDL. This package only includes C# code; it does not include any native library.</PackageDescription>
+        <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
         <IncludeBuildOutput>false</IncludeBuildOutput>
         <IncludeSymbols>false</IncludeSymbols>
         <CopyBuildOutputToOutputDirectory>true</CopyBuildOutputToOutputDirectory>
@@ -23,5 +24,7 @@
     <ItemGroup>
       <PackageReference Include="bottlenoselabs.C2CS.Runtime" Version="1.6.32" PrivateAssets="all" />
     </ItemGroup>
+
+    <Import Project="$(MSBuildThisFileDirectory)/bottlenoselabs.SDL.props" />
 
 </Project>
