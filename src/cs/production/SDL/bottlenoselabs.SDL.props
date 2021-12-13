@@ -1,0 +1,45 @@
+<Project>
+  
+  <PropertyGroup>
+    <_IsNuGetPackage Condition=" Exists('$(MSBuildThisFileDirectory)/SDL.cs')" >false</_IsNuGetPackage>
+    <_IsNuGetPackage Condition=" Exists('$(MSBuildThisFileDirectory)/../content/SDL.cs') ">true</_IsNuGetPackage>
+    
+    <BottlenoseLabsSDLDirectoryPath Condition=" $(_IsNuGetPackage) == 'false' ">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))</BottlenoseLabsSDLDirectoryPath>
+    <BottlenoseLabsSDLDirectoryPath Condition=" $(_IsNuGetPackage) == 'true' ">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)/..'))</BottlenoseLabsSDLDirectoryPath>
+    <BottlenoseLabsSDLContentDirectoryPath Condition=" $(_IsNuGetPackage) == 'false' ">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))</BottlenoseLabsSDLContentDirectoryPath>
+    <BottlenoseLabsSDLContentDirectoryPath Condition=" $(_IsNuGetPackage) == 'true' ">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)/../content'))</BottlenoseLabsSDLContentDirectoryPath>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" $(_IsNuGetPackage) == 'true' ">
+    
+    <Compile Include="$(BottlenoseLabsSDLContentDirectoryPath)/**/*.cs" >
+      <Pack>false</Pack>
+      <Link>bottlenoselabs/uv/%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </Compile>
+    <Compile Remove="$(BottlenoseLabsSDLContentDirectoryPath)/obj/**/*.cs" />
+    <Compile Remove="$(BottlenoseLabsSDLContentDirectoryPath)/bin/**/*.cs" />
+    
+  </ItemGroup>
+  
+  <ItemGroup Condition=" $(_IsNuGetPackage) == 'false' ">
+    
+    <Content Include="$(BottlenoseLabsSDLContentDirectoryPath)/**/*.cs" >
+      <Pack>true</Pack>
+      <PackagePath>content/</PackagePath>
+      <Link>bottlenoselabs/uv/%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </Content>
+    <Content Remove="$(BottlenoseLabsSDLContentDirectoryPath)/obj/**/*.cs" />
+    <Content Remove="$(BottlenoseLabsSDLContentDirectoryPath)/bin/**/*.cs" />
+    
+    <None Include="$(MSBuildThisFileDirectory)/bottlenoselabs.SDL.props">
+      <PackagePath>build/</PackagePath>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)/bottlenoselabs.SDL.targets">
+      <PackagePath>build/</PackagePath>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+    </None>
+    
+  </ItemGroup>
+
+</Project>
