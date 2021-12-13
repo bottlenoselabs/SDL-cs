@@ -6,6 +6,12 @@
         <MSBuildProjectExtensionsPath>$(BaseIntermediateOutputPath)</MSBuildProjectExtensionsPath>
     </PropertyGroup>
 
+    <!-- MSBuild.Tools settings -->
+    <PropertyGroup>
+        <EnableAnalyzers>true</EnableAnalyzers>
+        <EnableAnalyzersStyleCop>true</EnableAnalyzersStyleCop>
+    </PropertyGroup>
+
     <ItemGroup>
         <PackageReference Include="bottlenoselabs.MSBuild.Tools" Version="0.1.128" >
             <PrivateAssets>all</PrivateAssets>

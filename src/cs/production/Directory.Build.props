@@ -2,10 +2,4 @@
 
     <Import Project="../Directory.Build.props" />
 
-    <!-- My-MSBuild project settings -->
-    <PropertyGroup>
-        <EnableAnalyzers>true</EnableAnalyzers>
-        <EnableAnalyzersStyleCop>true</EnableAnalyzersStyleCop>
-    </PropertyGroup>
-
 </Project>

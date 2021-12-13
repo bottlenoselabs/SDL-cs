@@ -9,7 +9,6 @@
     <!-- NuGet -->
     <PropertyGroup>
         <IsPackable>true</IsPackable>
-        <PackageId>bottlenoselabs.SDL2.runtime.osx</PackageId>
         <RepositoryUrl>https://github.com/bottlenoselabs/SDL-cs</RepositoryUrl>
         <PackageDescription>Native SDL binaries for the runtime identifier `osx`.</PackageDescription>
         <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>

@@ -31,7 +31,7 @@ SDL_DISABLE_XMMINTRIN_H \
 SDL_DISABLE_EMMINTRIN_H \
 SDL_DISABLE_PMMINTRIN_H \
     exit_if_last_command_failed
-    c2cs cs -i ./ast/SDL.json -o ./src/cs/production/SDL-cs/SDL.cs -l "SDL2" -c "SDL" -g ./ignored.txt \
+    c2cs cs -i ./ast/SDL.json -o ./src/cs/production/SDL/SDL.cs -l "SDL2" -c "SDL" -g ./ignored.txt \
 -a \
 "_SDL_iconv_t* -> nint" \
 "SDL_bool -> CBool" \

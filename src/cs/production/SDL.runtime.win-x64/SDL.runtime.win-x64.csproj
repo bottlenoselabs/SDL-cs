@@ -9,9 +9,8 @@
     <!-- NuGet -->
     <PropertyGroup>
         <IsPackable>true</IsPackable>
-        <PackageId>bottlenoselabs.SDL2.runtime.win-x64</PackageId>
         <RepositoryUrl>https://github.com/bottlenoselabs/SDL-cs</RepositoryUrl>
-        <PackageDescription>Native SDL2 binaries for the runtime identifier `win-x64`.</PackageDescription>
+        <PackageDescription>Native SDL binaries for the runtime identifier `win-x64`.</PackageDescription>
         <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
         <IncludeBuildOutput>false</IncludeBuildOutput>
         <IncludeSymbols>false</IncludeSymbols>

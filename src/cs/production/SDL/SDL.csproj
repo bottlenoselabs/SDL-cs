@@ -7,8 +7,6 @@
         <RootNamespace />
     </PropertyGroup>
 
-    <!-- NuGet package references -->
-
     <!-- NuGet -->
     <PropertyGroup>
         <IsPackable>true</IsPackable>
