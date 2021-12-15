@@ -1086,59 +1086,59 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern void SDL_SIMDFree(void* ptr);
 
-    // Function @ SDL_pixels.h:356:37
+    // Function @ SDL_pixels.h:361:37
     [DllImport(LibraryName)]
     public static extern CString SDL_GetPixelFormatName(uint format);
 
-    // Function @ SDL_pixels.h:374:34
+    // Function @ SDL_pixels.h:379:34
     [DllImport(LibraryName)]
     public static extern CBool SDL_PixelFormatEnumToMasks(uint format, long* bpp, uint* Rmask, uint* Gmask, uint* Bmask, uint* Amask);
 
-    // Function @ SDL_pixels.h:398:32
+    // Function @ SDL_pixels.h:403:32
     [DllImport(LibraryName)]
     public static extern uint SDL_MasksToPixelFormatEnum(int bpp, uint Rmask, uint Gmask, uint Bmask, uint Amask);
 
-    // Function @ SDL_pixels.h:419:43
+    // Function @ SDL_pixels.h:424:43
     [DllImport(LibraryName)]
     public static extern SDL_PixelFormat* SDL_AllocFormat(uint pixel_format);
 
-    // Function @ SDL_pixels.h:430:30
+    // Function @ SDL_pixels.h:435:30
     [DllImport(LibraryName)]
     public static extern void SDL_FreeFormat(SDL_PixelFormat* format);
 
-    // Function @ SDL_pixels.h:446:38
+    // Function @ SDL_pixels.h:451:38
     [DllImport(LibraryName)]
     public static extern SDL_Palette* SDL_AllocPalette(int ncolors);
 
-    // Function @ SDL_pixels.h:461:29
+    // Function @ SDL_pixels.h:466:29
     [DllImport(LibraryName)]
     public static extern int SDL_SetPixelFormatPalette(SDL_PixelFormat* format, SDL_Palette* palette);
 
-    // Function @ SDL_pixels.h:479:29
+    // Function @ SDL_pixels.h:484:29
     [DllImport(LibraryName)]
     public static extern int SDL_SetPaletteColors(SDL_Palette* palette, SDL_Color* colors, int firstcolor, int ncolors);
 
-    // Function @ SDL_pixels.h:492:30
+    // Function @ SDL_pixels.h:497:30
     [DllImport(LibraryName)]
     public static extern void SDL_FreePalette(SDL_Palette* palette);
 
-    // Function @ SDL_pixels.h:524:32
+    // Function @ SDL_pixels.h:529:32
     [DllImport(LibraryName)]
     public static extern uint SDL_MapRGB(SDL_PixelFormat* format, byte r, byte g, byte b);
 
-    // Function @ SDL_pixels.h:559:32
+    // Function @ SDL_pixels.h:564:32
     [DllImport(LibraryName)]
     public static extern uint SDL_MapRGBA(SDL_PixelFormat* format, byte r, byte g, byte b, byte a);
 
-    // Function @ SDL_pixels.h:584:30
+    // Function @ SDL_pixels.h:589:30
     [DllImport(LibraryName)]
     public static extern void SDL_GetRGB(uint pixel, SDL_PixelFormat* format, byte* r, byte* g, byte* b);
 
-    // Function @ SDL_pixels.h:613:30
+    // Function @ SDL_pixels.h:618:30
     [DllImport(LibraryName)]
     public static extern void SDL_GetRGBA(uint pixel, SDL_PixelFormat* format, byte* r, byte* g, byte* b, byte* a);
 
-    // Function @ SDL_pixels.h:628:30
+    // Function @ SDL_pixels.h:633:30
     [DllImport(LibraryName)]
     public static extern void SDL_CalculateGammaRamp(float gamma, ushort* ramp);
 
@@ -3024,7 +3024,7 @@ public static unsafe partial class SDL
 
     // Function @ SDL_render.h:1645:29
     [DllImport(LibraryName)]
-    public static extern int SDL_RenderGeometryRaw(SDL_Renderer* renderer, SDL_Texture* texture, float* xy, int xy_stride, long* color, int color_stride, float* uv, int uv_stride, int num_vertices, void* indices, int num_indices, int size_indices);
+    public static extern int SDL_RenderGeometryRaw(SDL_Renderer* renderer, SDL_Texture* texture, float* xy, int xy_stride, SDL_Color* color, int color_stride, float* uv, int uv_stride, int num_vertices, void* indices, int num_indices, int size_indices);
 
     // Function @ SDL_render.h:1678:29
     [DllImport(LibraryName)]
@@ -3498,7 +3498,7 @@ public static unsafe partial class SDL
         public int filter_index;
     }
 
-    // Struct @ SDL_pixels.h:345:3
+    // Struct @ SDL_pixels.h:350:3
     [StructLayout(LayoutKind.Explicit, Size = 56, Pack = 8)]
     public struct SDL_PixelFormat
     {
@@ -3573,7 +3573,7 @@ public static unsafe partial class SDL
         public SDL_PixelFormat* next;
     }
 
-    // Struct @ SDL_pixels.h:319:3
+    // Struct @ SDL_pixels.h:324:3
     [StructLayout(LayoutKind.Explicit, Size = 24, Pack = 8)]
     public struct SDL_Palette
     {
@@ -3590,7 +3590,7 @@ public static unsafe partial class SDL
         public int refcount;
     }
 
-    // Struct @ SDL_pixels.h:310:3
+    // Struct @ SDL_pixels.h:315:3
     [StructLayout(LayoutKind.Explicit, Size = 4, Pack = 1)]
     public struct SDL_Color
     {
