@@ -1,8 +1,12 @@
 version: 2
 updates:
+  — package-ecosystem: “nuget”
+    directory: “/”
+    schedule: 
+      interval: “daily"
+      time: "00:15" # 8:15pm EDT
   - package-ecosystem: "gitsubmodule"
     directory: "/"
-    # Check the npm registry for updates at 2am UTC
     schedule:
       interval: "daily"
       time: "00:15" # 8:15pm EDT
