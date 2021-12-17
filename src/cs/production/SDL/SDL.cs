@@ -731,118 +731,6 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern void SDL_TLSCleanup();
 
-    // Function @ SDL_rwops.h:220:36
-    [DllImport(LibraryName)]
-    public static extern SDL_RWops* SDL_RWFromFile(CString file, CString mode);
-
-    // Function @ SDL_rwops.h:225:36
-    [DllImport(LibraryName)]
-    public static extern SDL_RWops* SDL_RWFromFP(nint fp, CBool autoclose);
-
-    // Function @ SDL_rwops.h:294:36
-    [DllImport(LibraryName)]
-    public static extern SDL_RWops* SDL_RWFromMem(void* mem, int size);
-
-    // Function @ SDL_rwops.h:328:36
-    [DllImport(LibraryName)]
-    public static extern SDL_RWops* SDL_RWFromConstMem(void* mem, int size);
-
-    // Function @ SDL_rwops.h:357:36
-    [DllImport(LibraryName)]
-    public static extern SDL_RWops* SDL_AllocRW();
-
-    // Function @ SDL_rwops.h:381:30
-    [DllImport(LibraryName)]
-    public static extern void SDL_FreeRW(SDL_RWops* area);
-
-    // Function @ SDL_rwops.h:399:32
-    [DllImport(LibraryName)]
-    public static extern long SDL_RWsize(SDL_RWops* context);
-
-    // Function @ SDL_rwops.h:436:32
-    [DllImport(LibraryName)]
-    public static extern long SDL_RWseek(SDL_RWops* context, long offset, int whence);
-
-    // Function @ SDL_rwops.h:464:32
-    [DllImport(LibraryName)]
-    public static extern long SDL_RWtell(SDL_RWops* context);
-
-    // Function @ SDL_rwops.h:496:32
-    [DllImport(LibraryName)]
-    public static extern ulong SDL_RWread(SDL_RWops* context, void* ptr, ulong size, ulong maxnum);
-
-    // Function @ SDL_rwops.h:530:32
-    [DllImport(LibraryName)]
-    public static extern ulong SDL_RWwrite(SDL_RWops* context, void* ptr, ulong size, ulong num);
-
-    // Function @ SDL_rwops.h:561:29
-    [DllImport(LibraryName)]
-    public static extern int SDL_RWclose(SDL_RWops* context);
-
-    // Function @ SDL_rwops.h:579:31
-    [DllImport(LibraryName)]
-    public static extern void* SDL_LoadFile_RW(SDL_RWops* src, ulong* datasize, int freesrc);
-
-    // Function @ SDL_rwops.h:601:31
-    [DllImport(LibraryName)]
-    public static extern void* SDL_LoadFile(CString file, ulong* datasize);
-
-    // Function @ SDL_rwops.h:621:31
-    [DllImport(LibraryName)]
-    public static extern byte SDL_ReadU8(SDL_RWops* src);
-
-    // Function @ SDL_rwops.h:637:32
-    [DllImport(LibraryName)]
-    public static extern ushort SDL_ReadLE16(SDL_RWops* src);
-
-    // Function @ SDL_rwops.h:653:32
-    [DllImport(LibraryName)]
-    public static extern ushort SDL_ReadBE16(SDL_RWops* src);
-
-    // Function @ SDL_rwops.h:669:32
-    [DllImport(LibraryName)]
-    public static extern uint SDL_ReadLE32(SDL_RWops* src);
-
-    // Function @ SDL_rwops.h:685:32
-    [DllImport(LibraryName)]
-    public static extern uint SDL_ReadBE32(SDL_RWops* src);
-
-    // Function @ SDL_rwops.h:701:32
-    [DllImport(LibraryName)]
-    public static extern ulong SDL_ReadLE64(SDL_RWops* src);
-
-    // Function @ SDL_rwops.h:717:32
-    [DllImport(LibraryName)]
-    public static extern ulong SDL_ReadBE64(SDL_RWops* src);
-
-    // Function @ SDL_rwops.h:739:32
-    [DllImport(LibraryName)]
-    public static extern ulong SDL_WriteU8(SDL_RWops* dst, byte value);
-
-    // Function @ SDL_rwops.h:757:32
-    [DllImport(LibraryName)]
-    public static extern ulong SDL_WriteLE16(SDL_RWops* dst, ushort value);
-
-    // Function @ SDL_rwops.h:774:32
-    [DllImport(LibraryName)]
-    public static extern ulong SDL_WriteBE16(SDL_RWops* dst, ushort value);
-
-    // Function @ SDL_rwops.h:792:32
-    [DllImport(LibraryName)]
-    public static extern ulong SDL_WriteLE32(SDL_RWops* dst, uint value);
-
-    // Function @ SDL_rwops.h:809:32
-    [DllImport(LibraryName)]
-    public static extern ulong SDL_WriteBE32(SDL_RWops* dst, uint value);
-
-    // Function @ SDL_rwops.h:827:32
-    [DllImport(LibraryName)]
-    public static extern ulong SDL_WriteLE64(SDL_RWops* dst, ulong value);
-
-    // Function @ SDL_rwops.h:844:32
-    [DllImport(LibraryName)]
-    public static extern ulong SDL_WriteBE64(SDL_RWops* dst, ulong value);
-
     // Function @ SDL_audio.h:276:29
     [DllImport(LibraryName)]
     public static extern int SDL_GetNumAudioDrivers();
@@ -3270,34 +3158,6 @@ public static unsafe partial class SDL
         public delegate* unmanaged<uint, void*, uint> Pointer;
     }
 
-    // FunctionPointer @ SDL_rwops.h:60:23
-    [StructLayout(LayoutKind.Sequential)]
-    public struct FnPtr_SDL_SDL_RWopsPtr_Long
-    {
-        public delegate* unmanaged<SDL_RWops*, long> Pointer;
-    }
-
-    // FunctionPointer @ SDL_rwops.h:68:23
-    [StructLayout(LayoutKind.Sequential)]
-    public struct FnPtr_SDL_SDL_RWopsPtr_Long_Int_Long
-    {
-        public delegate* unmanaged<SDL_RWops*, long, int, long> Pointer;
-    }
-
-    // FunctionPointer @ SDL_rwops.h:77:23
-    [StructLayout(LayoutKind.Sequential)]
-    public struct FnPtr_SDL_SDL_RWopsPtr_VoidPtr_Ulong_Ulong_Ulong
-    {
-        public delegate* unmanaged<SDL_RWops*, void*, ulong, ulong, ulong> Pointer;
-    }
-
-    // FunctionPointer @ SDL_rwops.h:94:20
-    [StructLayout(LayoutKind.Sequential)]
-    public struct FnPtr_SDL_SDL_RWopsPtr_Int
-    {
-        public delegate* unmanaged<SDL_RWops*, int> Pointer;
-    }
-
     // FunctionPointer @ SDL_audio.h:165:25
     [StructLayout(LayoutKind.Sequential)]
     public struct SDL_AudioCallback
@@ -3344,82 +3204,6 @@ public static unsafe partial class SDL
     {
         [FieldOffset(0)] // size = 4, padding = 0
         public int value;
-    }
-
-    // Struct @ SDL_rwops.h:149:3
-    [StructLayout(LayoutKind.Explicit, Size = 72, Pack = 8)]
-    public struct SDL_RWops
-    {
-        [FieldOffset(0)] // size = 8, padding = 0
-        public FnPtr_SDL_SDL_RWopsPtr_Long size;
-
-        [FieldOffset(8)] // size = 8, padding = 0
-        public FnPtr_SDL_SDL_RWopsPtr_Long_Int_Long seek;
-
-        [FieldOffset(16)] // size = 8, padding = 0
-        public FnPtr_SDL_SDL_RWopsPtr_VoidPtr_Ulong_Ulong_Ulong read;
-
-        [FieldOffset(24)] // size = 8, padding = 0
-        public FnPtr_SDL_SDL_RWopsPtr_VoidPtr_Ulong_Ulong_Ulong write;
-
-        [FieldOffset(32)] // size = 8, padding = 0
-        public FnPtr_SDL_SDL_RWopsPtr_Int close;
-
-        [FieldOffset(40)] // size = 4, padding = 4
-        public uint type;
-
-        [FieldOffset(48)] // size = 24, padding = 0
-        public SDL_RWops_hidden hidden;
-
-        // Union @ SDL_rwops.h:97:5
-        [StructLayout(LayoutKind.Explicit, Size = 24, Pack = 8)]
-        public struct SDL_RWops_hidden
-        {
-            [FieldOffset(0)] // size = 16, padding = 0
-            public SDL_RWops_hidden_stdio stdio;
-
-            [FieldOffset(0)] // size = 24, padding = 0
-            public SDL_RWops_hidden_mem mem;
-
-            [FieldOffset(0)] // size = 16, padding = 8
-            public SDL_RWops_hidden_unknown unknown;
-
-            // Struct @ SDL_rwops.h:130:9
-            [StructLayout(LayoutKind.Explicit, Size = 16, Pack = 8)]
-            public struct SDL_RWops_hidden_stdio
-            {
-                [FieldOffset(0)] // size = 4, padding = 4
-                public CBool autoclose;
-
-                [FieldOffset(8)] // size = 8, padding = 0
-                public nint fp;
-            }
-
-            // Struct @ SDL_rwops.h:136:9
-            [StructLayout(LayoutKind.Explicit, Size = 24, Pack = 8)]
-            public struct SDL_RWops_hidden_mem
-            {
-                [FieldOffset(0)] // size = 8, padding = 0
-                public byte* @base;
-
-                [FieldOffset(8)] // size = 8, padding = 0
-                public byte* here;
-
-                [FieldOffset(16)] // size = 8, padding = 0
-                public byte* stop;
-            }
-
-            // Struct @ SDL_rwops.h:142:9
-            [StructLayout(LayoutKind.Explicit, Size = 16, Pack = 8)]
-            public struct SDL_RWops_hidden_unknown
-            {
-                [FieldOffset(0)] // size = 8, padding = 0
-                public void* data1;
-
-                [FieldOffset(8)] // size = 8, padding = 0
-                public void* data2;
-            }
-        }
     }
 
     // Struct @ SDL_audio.h:191:3
@@ -6677,33 +6461,6 @@ public static unsafe partial class SDL
 
     // MacroDefinition @ SDL_mutex.h:49:9
     public const uint SDL_MUTEX_MAXWAIT = ~(uint)0;
-
-    // MacroDefinition @ SDL_rwops.h:42:9
-    public const uint SDL_RWOPS_UNKNOWN = 0U;
-
-    // MacroDefinition @ SDL_rwops.h:43:9
-    public const uint SDL_RWOPS_WINFILE = 1U;
-
-    // MacroDefinition @ SDL_rwops.h:44:9
-    public const uint SDL_RWOPS_STDFILE = 2U;
-
-    // MacroDefinition @ SDL_rwops.h:45:9
-    public const uint SDL_RWOPS_JNIFILE = 3U;
-
-    // MacroDefinition @ SDL_rwops.h:46:9
-    public const uint SDL_RWOPS_MEMORY = 4U;
-
-    // MacroDefinition @ SDL_rwops.h:47:9
-    public const uint SDL_RWOPS_MEMORY_RO = 5U;
-
-    // MacroDefinition @ SDL_rwops.h:383:9
-    public const int RW_SEEK_SET = 0;
-
-    // MacroDefinition @ SDL_rwops.h:384:9
-    public const int RW_SEEK_CUR = 1;
-
-    // MacroDefinition @ SDL_rwops.h:385:9
-    public const int RW_SEEK_END = 2;
 
     // MacroDefinition @ SDL_audio.h:73:9
     public const int SDL_AUDIO_MASK_BITSIZE = 0xFF;

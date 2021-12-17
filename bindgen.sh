@@ -12,6 +12,7 @@ function bindgen {
 "begin_code.h" \
 "end_code.h" \
 "SDL_endian.h" \
+"SDL_rwops.h" \
 "SDL_config_android.h" \
 "SDL_config_emscripten.h" \
 "SDL_config_iphoneos.h" \
