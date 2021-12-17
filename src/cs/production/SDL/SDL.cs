@@ -735,9 +735,9 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern SDL_RWops* SDL_RWFromFile(CString file, CString mode);
 
-    // Function @ SDL_rwops.h:225:36
+    // Function @ SDL_rwops.h:259:36
     [DllImport(LibraryName)]
-    public static extern SDL_RWops* SDL_RWFromFP(nint fp, CBool autoclose);
+    public static extern SDL_RWops* SDL_RWFromFP(void* fp, CBool autoclose);
 
     // Function @ SDL_rwops.h:294:36
     [DllImport(LibraryName)]
