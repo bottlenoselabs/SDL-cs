@@ -14,7 +14,7 @@
     
     <Compile Include="$(BottlenoseLabsSDLContentDirectoryPath)/**/*.cs" >
       <Pack>false</Pack>
-      <Link>bottlenoselabs/uv/%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <Link>bottlenoselabs/SDL/%(RecursiveDir)%(Filename)%(Extension)</Link>
     </Compile>
     <Compile Remove="$(BottlenoseLabsSDLContentDirectoryPath)/obj/**/*.cs" />
     <Compile Remove="$(BottlenoseLabsSDLContentDirectoryPath)/bin/**/*.cs" />
@@ -26,19 +26,19 @@
     <Content Include="$(BottlenoseLabsSDLContentDirectoryPath)/**/*.cs" >
       <Pack>true</Pack>
       <PackagePath>content/</PackagePath>
-      <Link>bottlenoselabs/uv/%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <Link>bottlenoselabs/SDL/%(RecursiveDir)%(Filename)%(Extension)</Link>
     </Content>
     <Content Remove="$(BottlenoseLabsSDLContentDirectoryPath)/obj/**/*.cs" />
     <Content Remove="$(BottlenoseLabsSDLContentDirectoryPath)/bin/**/*.cs" />
     
-    <None Include="$(MSBuildThisFileDirectory)/bottlenoselabs.SDL.props">
+    <Content Include="$(MSBuildThisFileDirectory)/bottlenoselabs.SDL.props">
       <PackagePath>build/</PackagePath>
       <PackageCopyToOutput>true</PackageCopyToOutput>
-    </None>
-    <None Include="$(MSBuildThisFileDirectory)/bottlenoselabs.SDL.targets">
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)/bottlenoselabs.SDL.targets">
       <PackagePath>build/</PackagePath>
       <PackageCopyToOutput>true</PackageCopyToOutput>
-    </None>
+    </Content>
     
   </ItemGroup>
 
