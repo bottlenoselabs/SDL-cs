@@ -735,9 +735,9 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern SDL_RWops* SDL_RWFromFile(CString file, CString mode);
 
-    // Function @ SDL_rwops.h:225:36
+    // Function @ SDL_rwops.h:259:36
     [DllImport(LibraryName)]
-    public static extern SDL_RWops* SDL_RWFromFP(nint fp, CBool autoclose);
+    public static extern SDL_RWops* SDL_RWFromFP(void* fp, CBool autoclose);
 
     // Function @ SDL_rwops.h:294:36
     [DllImport(LibraryName)]
@@ -3082,6 +3082,14 @@ public static unsafe partial class SDL
     // Function @ SDL_shape.h:147:29
     [DllImport(LibraryName)]
     public static extern int SDL_GetShapedWindowMode(SDL_Window* window, SDL_WindowShapeMode* shape_mode);
+
+    // Function @ SDL_system.h:142:29
+    [DllImport(LibraryName)]
+    public static extern int SDL_LinuxSetThreadPriority(long threadID, int priority);
+
+    // Function @ SDL_system.h:157:29
+    [DllImport(LibraryName)]
+    public static extern int SDL_LinuxSetThreadPriorityAndPolicy(long threadID, int sdlPriority, int schedPolicy);
 
     // Function @ SDL_system.h:542:34
     [DllImport(LibraryName)]
