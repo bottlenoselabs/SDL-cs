@@ -2971,6 +2971,14 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern int SDL_GetShapedWindowMode(SDL_Window* window, SDL_WindowShapeMode* shape_mode);
 
+    // Function @ SDL_system.h:142:29
+    [DllImport(LibraryName)]
+    public static extern int SDL_LinuxSetThreadPriority(long threadID, int priority);
+
+    // Function @ SDL_system.h:157:29
+    [DllImport(LibraryName)]
+    public static extern int SDL_LinuxSetThreadPriorityAndPolicy(long threadID, int sdlPriority, int schedPolicy);
+
     // Function @ SDL_system.h:542:34
     [DllImport(LibraryName)]
     public static extern CBool SDL_IsTablet();
