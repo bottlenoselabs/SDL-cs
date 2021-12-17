@@ -24,6 +24,7 @@ function bindgen {
 "SDL_config_winrt.h" \
 "SDL_config_wiz.h" \
 "SDL_config.h" \
+"SDL_system.h" \
 -d \
 SDL_DISABLE_IMMINTRIN_H \
 SDL_DISABLE_MMINTRIN_H \

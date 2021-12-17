@@ -3083,34 +3083,6 @@ public static unsafe partial class SDL
     [DllImport(LibraryName)]
     public static extern int SDL_GetShapedWindowMode(SDL_Window* window, SDL_WindowShapeMode* shape_mode);
 
-    // Function @ SDL_system.h:542:34
-    [DllImport(LibraryName)]
-    public static extern CBool SDL_IsTablet();
-
-    // Function @ SDL_system.h:545:30
-    [DllImport(LibraryName)]
-    public static extern void SDL_OnApplicationWillTerminate();
-
-    // Function @ SDL_system.h:546:30
-    [DllImport(LibraryName)]
-    public static extern void SDL_OnApplicationDidReceiveMemoryWarning();
-
-    // Function @ SDL_system.h:547:30
-    [DllImport(LibraryName)]
-    public static extern void SDL_OnApplicationWillResignActive();
-
-    // Function @ SDL_system.h:548:30
-    [DllImport(LibraryName)]
-    public static extern void SDL_OnApplicationDidEnterBackground();
-
-    // Function @ SDL_system.h:549:30
-    [DllImport(LibraryName)]
-    public static extern void SDL_OnApplicationWillEnterForeground();
-
-    // Function @ SDL_system.h:550:30
-    [DllImport(LibraryName)]
-    public static extern void SDL_OnApplicationDidBecomeActive();
-
     // Function @ SDL_timer.h:58:32
     [DllImport(LibraryName)]
     public static extern uint SDL_GetTicks();
