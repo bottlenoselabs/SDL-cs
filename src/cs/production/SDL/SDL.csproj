@@ -19,11 +19,6 @@
         <CopyOutputSymbolsToOutputDirectory>false</CopyOutputSymbolsToOutputDirectory>
         <DevelopmentDependency>true</DevelopmentDependency>
     </PropertyGroup>
-    
-    <!-- NuGet package references -->
-    <ItemGroup>
-      <PackageReference Include="bottlenoselabs.C2CS.Runtime" Version="1.6.32" PrivateAssets="all" />
-    </ItemGroup>
 
     <Import Project="$(MSBuildThisFileDirectory)/bottlenoselabs.SDL.props" />
 
