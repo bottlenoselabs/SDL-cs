@@ -8,11 +8,10 @@ function exit_if_last_command_failed() {
 }
 
 function bindgen {
-    c2cs ast -i ./ext/SDL/include/SDL.h -o ./ast/SDL.json -s ./ext/SDL/include -b 64 -g \
+    c2cs ast -i ./ext/SDL/include/SDL.h -o ./ast/SDL.json -s ./ext/SDL/include -b 64 -p "SDL_RWops" -g \
 "begin_code.h" \
 "end_code.h" \
 "SDL_endian.h" \
-"SDL_rwops.h" \
 "SDL_config_android.h" \
 "SDL_config_emscripten.h" \
 "SDL_config_iphoneos.h" \
