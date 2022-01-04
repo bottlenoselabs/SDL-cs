@@ -1,0 +1,80 @@
+{
+    "inputFilePath": "ext/SDL/include/SDL.h",
+    "excludedHeaderFiles": [
+      "begin_code.h",
+      "end_code.h",
+      "SDL_endian.h",
+      "SDL_config_android.h",
+      "SDL_config_emscripten.h",
+      "SDL_config_iphoneos.h",
+      "SDL_config_macosx.h",
+      "SDL_config_minimal.h",
+      "SDL_config_os2.h",
+      "SDL_config_pandora.h",
+      "SDL_config_psp.h",
+      "SDL_config_windows.h",
+      "SDL_config_winrt.h",
+      "SDL_config_wiz.h",
+      "SDL_config.h",
+      "SDL_system.h"
+    ],
+    "outputFilePath": "src/cs/production/SDL/SDL.cs",
+    "libraryName": "SDL2",
+    "machineBitWidth": 64,
+    "headerCodeRegionFilePath": null,
+    "footerCodeRegionFilePath": null,
+    "defines": [
+      "SDL_DISABLE_IMMINTRIN_H",
+      "SDL_DISABLE_MMINTRIN_H",
+      "SDL_DISABLE_XMMINTRIN_H",
+      "SDL_DISABLE_EMMINTRIN_H",
+      "SDL_DISABLE_PMMINTRIN_H"
+    ],
+    "mappedTypeNames": [
+      {
+        "source": "SDL_bool",
+        "target": "CBool"
+      }
+    ],
+    "ignoredTypeNames": [
+      "SDL_bool",
+      "SDL_PRIs64",
+      "SDL_PRIu64",
+      "SDL_PRIx64",
+      "SDL_PRIX64",
+      "SDL_PRIs32",
+      "SDL_PRIu32",
+      "SDL_PRIx32",
+      "SDL_PRIX32",
+      "SDL_ICONV_ERROR",
+      "SDL_ICONV_E2BIG",
+      "SDL_ICONV_EILSEQ",
+      "SDL_ICONV_EINVAL",
+      "SDL_ASSERT_LEVEL",
+      "SDL_NULL_WHILE_LOOP_CONDITION",
+      "SDL_LIL_ENDIAN",
+      "SDL_BIG_ENDIAN",
+      "SDL_BYTEORDER",
+      "SDL_HAPTIC_STATUS",
+      "SDL_MAX_SINT8",
+      "SDL_MIN_SINT8",
+      "SDL_MAX_UINT8",
+      "SDL_MIN_UINT8",
+      "SDL_MAX_SINT16",
+      "SDL_MIN_SINT16",
+      "SDL_MAX_UINT16",
+      "SDL_MIN_UINT16",
+      "SDL_MAX_SINT32",
+      "SDL_MIN_SINT32",
+      "SDL_MAX_UINT32",
+      "SDL_MIN_UINT32",
+      "SDL_MAX_SINT64",
+      "SDL_MIN_SINT64",
+      "SDL_MAX_UINT64",
+      "SDL_MIN_UINT64"
+    ],
+    "opaqueTypeNames": [
+      "SDL_RWops"
+    ],
+    "clangArguments": null
+  }

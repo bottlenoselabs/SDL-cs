@@ -2,7 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the Git repository root directory for full license information.
 
 using System;
-using static SDL;
+using static SDL2.SDL;
 
 namespace HelloWorld
 {
