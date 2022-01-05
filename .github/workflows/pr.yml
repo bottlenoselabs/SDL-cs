@@ -32,7 +32,7 @@ jobs:
 
       - name: "bindgen"
         shell: bash
-        run: ./bindgen.sh
+        run: c2cs
 
       - name: "Add + commit + push (if necessary)"
         uses: EndBug/add-and-commit@v7
