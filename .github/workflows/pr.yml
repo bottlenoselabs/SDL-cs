@@ -18,7 +18,7 @@ jobs:
         with:
           submodules: 'true'
           ref: ${{ github.event.pull_request.head.sha }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: "Install .NET"
         uses: actions/setup-dotnet@v1
