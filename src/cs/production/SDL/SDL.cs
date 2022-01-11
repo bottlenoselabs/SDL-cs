@@ -2620,31 +2620,31 @@ namespace SDL2
         [DllImport(LibraryName)]
         public static extern void SDL_hid_ble_scan(CBool active);
 
-        // Function @ SDL_hints.h:1843:34
+        // Function @ SDL_hints.h:1856:34
         [DllImport(LibraryName)]
         public static extern CBool SDL_SetHintWithPriority(CString name, CString value, SDL_HintPriority priority);
 
-        // Function @ SDL_hints.h:1863:34
+        // Function @ SDL_hints.h:1876:34
         [DllImport(LibraryName)]
         public static extern CBool SDL_SetHint(CString name, CString value);
 
-        // Function @ SDL_hints.h:1877:38
+        // Function @ SDL_hints.h:1890:38
         [DllImport(LibraryName)]
         public static extern CString SDL_GetHint(CString name);
 
-        // Function @ SDL_hints.h:1892:34
+        // Function @ SDL_hints.h:1905:34
         [DllImport(LibraryName)]
         public static extern CBool SDL_GetHintBoolean(CString name, CBool default_value);
 
-        // Function @ SDL_hints.h:1916:30
+        // Function @ SDL_hints.h:1929:30
         [DllImport(LibraryName)]
         public static extern void SDL_AddHintCallback(CString name, SDL_HintCallback callback, void* userdata);
 
-        // Function @ SDL_hints.h:1932:30
+        // Function @ SDL_hints.h:1945:30
         [DllImport(LibraryName)]
         public static extern void SDL_DelHintCallback(CString name, SDL_HintCallback callback, void* userdata);
 
-        // Function @ SDL_hints.h:1943:30
+        // Function @ SDL_hints.h:1956:30
         [DllImport(LibraryName)]
         public static extern void SDL_ClearHints();
 
@@ -3222,7 +3222,7 @@ namespace SDL2
             public delegate* unmanaged<void*, SDL_Event*, int> Pointer;
         }
 
-        // FunctionPointer @ SDL_hints.h:1902:24
+        // FunctionPointer @ SDL_hints.h:1915:24
         [StructLayout(LayoutKind.Sequential)]
         public struct SDL_HintCallback
         {
@@ -5929,7 +5929,7 @@ namespace SDL2
             SDL_GETEVENT = 2
         }
 
-        // Enum @ SDL_hints.h:1823:3
+        // Enum @ SDL_hints.h:1836:3
         public enum SDL_HintPriority : int
         {
             SDL_HINT_DEFAULT = 0,
@@ -7076,162 +7076,165 @@ namespace SDL2
         public const string SDL_HINT_RENDER_BATCHING = "SDL_RENDER_BATCHING";
 
         // MacroDefinition @ SDL_hints.h:1073:9
+        public const string SDL_HINT_RENDER_LINE_METHOD = "SDL_RENDER_LINE_METHOD";
+
+        // MacroDefinition @ SDL_hints.h:1086:9
         public const string SDL_HINT_RENDER_DIRECT3D11_DEBUG = "SDL_RENDER_DIRECT3D11_DEBUG";
 
-        // MacroDefinition @ SDL_hints.h:1084:9
+        // MacroDefinition @ SDL_hints.h:1097:9
         public const string SDL_HINT_RENDER_DIRECT3D_THREADSAFE = "SDL_RENDER_DIRECT3D_THREADSAFE";
 
-        // MacroDefinition @ SDL_hints.h:1104:9
+        // MacroDefinition @ SDL_hints.h:1117:9
         public const string SDL_HINT_RENDER_DRIVER = "SDL_RENDER_DRIVER";
 
-        // MacroDefinition @ SDL_hints.h:1115:9
+        // MacroDefinition @ SDL_hints.h:1128:9
         public const string SDL_HINT_RENDER_LOGICAL_SIZE_MODE = "SDL_RENDER_LOGICAL_SIZE_MODE";
 
-        // MacroDefinition @ SDL_hints.h:1126:9
+        // MacroDefinition @ SDL_hints.h:1139:9
         public const string SDL_HINT_RENDER_OPENGL_SHADERS = "SDL_RENDER_OPENGL_SHADERS";
 
-        // MacroDefinition @ SDL_hints.h:1138:9
+        // MacroDefinition @ SDL_hints.h:1151:9
         public const string SDL_HINT_RENDER_SCALE_QUALITY = "SDL_RENDER_SCALE_QUALITY";
 
-        // MacroDefinition @ SDL_hints.h:1149:9
+        // MacroDefinition @ SDL_hints.h:1162:9
         public const string SDL_HINT_RENDER_VSYNC = "SDL_RENDER_VSYNC";
 
-        // MacroDefinition @ SDL_hints.h:1161:9
+        // MacroDefinition @ SDL_hints.h:1174:9
         public const string SDL_HINT_RETURN_KEY_HIDES_IME = "SDL_RETURN_KEY_HIDES_IME";
 
-        // MacroDefinition @ SDL_hints.h:1169:9
+        // MacroDefinition @ SDL_hints.h:1182:9
         public const string SDL_HINT_RPI_VIDEO_LAYER = "SDL_RPI_VIDEO_LAYER";
 
-        // MacroDefinition @ SDL_hints.h:1189:9
+        // MacroDefinition @ SDL_hints.h:1202:9
         public const string SDL_HINT_SCREENSAVER_INHIBIT_ACTIVITY_NAME = "SDL_SCREENSAVER_INHIBIT_ACTIVITY_NAME";
 
-        // MacroDefinition @ SDL_hints.h:1208:9
+        // MacroDefinition @ SDL_hints.h:1221:9
         public const string SDL_HINT_THREAD_FORCE_REALTIME_TIME_CRITICAL = "SDL_THREAD_FORCE_REALTIME_TIME_CRITICAL";
 
-        // MacroDefinition @ SDL_hints.h:1225:9
+        // MacroDefinition @ SDL_hints.h:1238:9
         public const string SDL_HINT_THREAD_PRIORITY_POLICY = "SDL_THREAD_PRIORITY_POLICY";
 
-        // MacroDefinition @ SDL_hints.h:1239:9
+        // MacroDefinition @ SDL_hints.h:1252:9
         public const string SDL_HINT_THREAD_STACK_SIZE = "SDL_THREAD_STACK_SIZE";
 
-        // MacroDefinition @ SDL_hints.h:1255:9
+        // MacroDefinition @ SDL_hints.h:1268:9
         public const string SDL_HINT_TIMER_RESOLUTION = "SDL_TIMER_RESOLUTION";
 
-        // MacroDefinition @ SDL_hints.h:1266:9
+        // MacroDefinition @ SDL_hints.h:1279:9
         public const string SDL_HINT_TOUCH_MOUSE_EVENTS = "SDL_TOUCH_MOUSE_EVENTS";
 
-        // MacroDefinition @ SDL_hints.h:1276:9
+        // MacroDefinition @ SDL_hints.h:1289:9
         public const string SDL_HINT_TV_REMOTE_AS_JOYSTICK = "SDL_TV_REMOTE_AS_JOYSTICK";
 
-        // MacroDefinition @ SDL_hints.h:1287:9
+        // MacroDefinition @ SDL_hints.h:1300:9
         public const string SDL_HINT_VIDEO_ALLOW_SCREENSAVER = "SDL_VIDEO_ALLOW_SCREENSAVER";
 
-        // MacroDefinition @ SDL_hints.h:1306:9
+        // MacroDefinition @ SDL_hints.h:1319:9
         public const string SDL_HINT_VIDEO_DOUBLE_BUFFER = "SDL_VIDEO_DOUBLE_BUFFER";
 
-        // MacroDefinition @ SDL_hints.h:1317:9
+        // MacroDefinition @ SDL_hints.h:1330:9
         public const string SDL_HINT_VIDEO_EGL_ALLOW_TRANSPARENCY = "SDL_VIDEO_EGL_ALLOW_TRANSPARENCY";
 
-        // MacroDefinition @ SDL_hints.h:1332:9
+        // MacroDefinition @ SDL_hints.h:1345:9
         public const string SDL_HINT_VIDEO_EXTERNAL_CONTEXT = "SDL_VIDEO_EXTERNAL_CONTEXT";
 
-        // MacroDefinition @ SDL_hints.h:1337:9
+        // MacroDefinition @ SDL_hints.h:1350:9
         public const string SDL_HINT_VIDEO_HIGHDPI_DISABLED = "SDL_VIDEO_HIGHDPI_DISABLED";
 
-        // MacroDefinition @ SDL_hints.h:1356:9
+        // MacroDefinition @ SDL_hints.h:1369:9
         public const string SDL_HINT_VIDEO_MAC_FULLSCREEN_SPACES = "SDL_VIDEO_MAC_FULLSCREEN_SPACES";
 
-        // MacroDefinition @ SDL_hints.h:1364:9
+        // MacroDefinition @ SDL_hints.h:1377:9
         public const string SDL_HINT_VIDEO_MINIMIZE_ON_FOCUS_LOSS = "SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS";
 
-        // MacroDefinition @ SDL_hints.h:1375:9
+        // MacroDefinition @ SDL_hints.h:1388:9
         public const string SDL_HINT_VIDEO_WAYLAND_ALLOW_LIBDECOR = "SDL_VIDEO_WAYLAND_ALLOW_LIBDECOR";
 
-        // MacroDefinition @ SDL_hints.h:1394:9
+        // MacroDefinition @ SDL_hints.h:1407:9
         public const string SDL_HINT_VIDEO_WINDOW_SHARE_PIXEL_FORMAT = "SDL_VIDEO_WINDOW_SHARE_PIXEL_FORMAT";
 
-        // MacroDefinition @ SDL_hints.h:1410:9
+        // MacroDefinition @ SDL_hints.h:1423:9
         public const string SDL_HINT_VIDEO_WIN_D3DCOMPILER = "SDL_VIDEO_WIN_D3DCOMPILER";
 
-        // MacroDefinition @ SDL_hints.h:1421:9
+        // MacroDefinition @ SDL_hints.h:1434:9
         public const string SDL_HINT_VIDEO_X11_FORCE_EGL = "SDL_VIDEO_X11_FORCE_EGL";
 
-        // MacroDefinition @ SDL_hints.h:1433:9
+        // MacroDefinition @ SDL_hints.h:1446:9
         public const string SDL_HINT_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR = "SDL_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR";
 
-        // MacroDefinition @ SDL_hints.h:1447:9
+        // MacroDefinition @ SDL_hints.h:1460:9
         public const string SDL_HINT_VIDEO_X11_NET_WM_PING = "SDL_VIDEO_X11_NET_WM_PING";
 
-        // MacroDefinition @ SDL_hints.h:1453:9
+        // MacroDefinition @ SDL_hints.h:1466:9
         public const string SDL_HINT_VIDEO_X11_WINDOW_VISUALID = "SDL_VIDEO_X11_WINDOW_VISUALID";
 
-        // MacroDefinition @ SDL_hints.h:1464:9
+        // MacroDefinition @ SDL_hints.h:1477:9
         public const string SDL_HINT_VIDEO_X11_XINERAMA = "SDL_VIDEO_X11_XINERAMA";
 
-        // MacroDefinition @ SDL_hints.h:1475:9
+        // MacroDefinition @ SDL_hints.h:1488:9
         public const string SDL_HINT_VIDEO_X11_XRANDR = "SDL_VIDEO_X11_XRANDR";
 
-        // MacroDefinition @ SDL_hints.h:1486:9
+        // MacroDefinition @ SDL_hints.h:1499:9
         public const string SDL_HINT_VIDEO_X11_XVIDMODE = "SDL_VIDEO_X11_XVIDMODE";
 
-        // MacroDefinition @ SDL_hints.h:1513:9
+        // MacroDefinition @ SDL_hints.h:1526:9
         public const string SDL_HINT_WAVE_FACT_CHUNK = "SDL_WAVE_FACT_CHUNK";
 
-        // MacroDefinition @ SDL_hints.h:1534:9
+        // MacroDefinition @ SDL_hints.h:1547:9
         public const string SDL_HINT_WAVE_RIFF_CHUNK_SIZE = "SDL_WAVE_RIFF_CHUNK_SIZE";
 
-        // MacroDefinition @ SDL_hints.h:1550:9
+        // MacroDefinition @ SDL_hints.h:1563:9
         public const string SDL_HINT_WAVE_TRUNCATION = "SDL_WAVE_TRUNCATION";
 
-        // MacroDefinition @ SDL_hints.h:1566:9
+        // MacroDefinition @ SDL_hints.h:1579:9
         public const string SDL_HINT_WINDOWS_DISABLE_THREAD_NAMING = "SDL_WINDOWS_DISABLE_THREAD_NAMING";
 
-        // MacroDefinition @ SDL_hints.h:1577:9
+        // MacroDefinition @ SDL_hints.h:1590:9
         public const string SDL_HINT_WINDOWS_ENABLE_MESSAGELOOP = "SDL_WINDOWS_ENABLE_MESSAGELOOP";
 
-        // MacroDefinition @ SDL_hints.h:1591:9
+        // MacroDefinition @ SDL_hints.h:1604:9
         public const string SDL_HINT_WINDOWS_FORCE_MUTEX_CRITICAL_SECTIONS = "SDL_WINDOWS_FORCE_MUTEX_CRITICAL_SECTIONS";
 
-        // MacroDefinition @ SDL_hints.h:1607:9
+        // MacroDefinition @ SDL_hints.h:1620:9
         public const string SDL_HINT_WINDOWS_FORCE_SEMAPHORE_KERNEL = "SDL_WINDOWS_FORCE_SEMAPHORE_KERNEL";
 
-        // MacroDefinition @ SDL_hints.h:1612:9
+        // MacroDefinition @ SDL_hints.h:1625:9
         public const string SDL_HINT_WINDOWS_INTRESOURCE_ICON = "SDL_WINDOWS_INTRESOURCE_ICON";
 
-        // MacroDefinition @ SDL_hints.h:1613:9
+        // MacroDefinition @ SDL_hints.h:1626:9
         public const string SDL_HINT_WINDOWS_INTRESOURCE_ICON_SMALL = "SDL_WINDOWS_INTRESOURCE_ICON_SMALL";
 
-        // MacroDefinition @ SDL_hints.h:1622:9
+        // MacroDefinition @ SDL_hints.h:1635:9
         public const string SDL_HINT_WINDOWS_NO_CLOSE_ON_ALT_F4 = "SDL_WINDOWS_NO_CLOSE_ON_ALT_F4";
 
-        // MacroDefinition @ SDL_hints.h:1642:9
+        // MacroDefinition @ SDL_hints.h:1655:9
         public const string SDL_HINT_WINDOWS_USE_D3D9EX = "SDL_WINDOWS_USE_D3D9EX";
 
-        // MacroDefinition @ SDL_hints.h:1653:9
+        // MacroDefinition @ SDL_hints.h:1666:9
         public const string SDL_HINT_WINDOW_FRAME_USABLE_WHILE_CURSOR_HIDDEN = "SDL_WINDOW_FRAME_USABLE_WHILE_CURSOR_HIDDEN";
 
-        // MacroDefinition @ SDL_hints.h:1664:9
+        // MacroDefinition @ SDL_hints.h:1677:9
         public const string SDL_HINT_WINDOW_NO_ACTIVATION_WHEN_SHOWN = "SDL_WINDOW_NO_ACTIVATION_WHEN_SHOWN";
 
-        // MacroDefinition @ SDL_hints.h:1716:9
+        // MacroDefinition @ SDL_hints.h:1729:9
         public const string SDL_HINT_WINRT_HANDLE_BACK_BUTTON = "SDL_WINRT_HANDLE_BACK_BUTTON";
 
-        // MacroDefinition @ SDL_hints.h:1737:9
+        // MacroDefinition @ SDL_hints.h:1750:9
         public const string SDL_HINT_WINRT_PRIVACY_POLICY_LABEL = "SDL_WINRT_PRIVACY_POLICY_LABEL";
 
-        // MacroDefinition @ SDL_hints.h:1763:9
+        // MacroDefinition @ SDL_hints.h:1776:9
         public const string SDL_HINT_WINRT_PRIVACY_POLICY_URL = "SDL_WINRT_PRIVACY_POLICY_URL";
 
-        // MacroDefinition @ SDL_hints.h:1775:9
+        // MacroDefinition @ SDL_hints.h:1788:9
         public const string SDL_HINT_X11_FORCE_OVERRIDE_REDIRECT = "SDL_X11_FORCE_OVERRIDE_REDIRECT";
 
-        // MacroDefinition @ SDL_hints.h:1784:9
+        // MacroDefinition @ SDL_hints.h:1797:9
         public const string SDL_HINT_XINPUT_ENABLED = "SDL_XINPUT_ENABLED";
 
-        // MacroDefinition @ SDL_hints.h:1793:9
+        // MacroDefinition @ SDL_hints.h:1806:9
         public const string SDL_HINT_XINPUT_USE_OLD_JOYSTICK_MAPPING = "SDL_XINPUT_USE_OLD_JOYSTICK_MAPPING";
 
-        // MacroDefinition @ SDL_hints.h:1812:9
+        // MacroDefinition @ SDL_hints.h:1825:9
         public const string SDL_HINT_AUDIO_INCLUDE_MONITORS = "SDL_AUDIO_INCLUDE_MONITORS";
 
         // MacroDefinition @ SDL_log.h:54:9
@@ -7253,7 +7256,7 @@ namespace SDL2
         public const int SDL_MINOR_VERSION = 0;
 
         // MacroDefinition @ SDL_version.h:62:9
-        public const int SDL_PATCHLEVEL = 19;
+        public const int SDL_PATCHLEVEL = 20;
 
         // MacroDefinition @ SDL.h:81:9
         public const uint SDL_INIT_TIMER = 0x00000001u;
