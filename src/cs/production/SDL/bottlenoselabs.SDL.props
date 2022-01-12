@@ -1,41 +1,42 @@
 <Project>
   
   <PropertyGroup>
-    <_IsNuGetPackage Condition=" Exists('$(MSBuildThisFileDirectory)/SDL.cs')" >false</_IsNuGetPackage>
-    <_IsNuGetPackage Condition=" Exists('$(MSBuildThisFileDirectory)/../content/SDL.cs') ">true</_IsNuGetPackage>
+    <_LibraryName>SDL</_LibraryName>
+    <_IsNuGetPackage Condition=" Exists('$(MSBuildThisFileDirectory)/$(_LibraryName).cs')" >false</_IsNuGetPackage>
+    <_IsNuGetPackage Condition=" Exists('$(MSBuildThisFileDirectory)/../content/$(_LibraryName).cs') ">true</_IsNuGetPackage>
     
-    <BottlenoseLabsSDLDirectoryPath Condition=" $(_IsNuGetPackage) == 'false' ">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))</BottlenoseLabsSDLDirectoryPath>
-    <BottlenoseLabsSDLDirectoryPath Condition=" $(_IsNuGetPackage) == 'true' ">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)/..'))</BottlenoseLabsSDLDirectoryPath>
-    <BottlenoseLabsSDLContentDirectoryPath Condition=" $(_IsNuGetPackage) == 'false' ">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))</BottlenoseLabsSDLContentDirectoryPath>
-    <BottlenoseLabsSDLContentDirectoryPath Condition=" $(_IsNuGetPackage) == 'true' ">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)/../content'))</BottlenoseLabsSDLContentDirectoryPath>
+    <_DirectoryPath Condition=" $(_IsNuGetPackage) == 'false' ">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))</_DirectoryPath>
+    <_DirectoryPath Condition=" $(_IsNuGetPackage) == 'true' ">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)/..'))</_DirectoryPath>
+    <_ContentDirectoryPath Condition=" $(_IsNuGetPackage) == 'false' ">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))</_ContentDirectoryPath>
+    <_ContentDirectoryPath Condition=" $(_IsNuGetPackage) == 'true' ">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)/../content'))</_ContentDirectoryPath>
   </PropertyGroup>
 
   <ItemGroup Condition=" $(_IsNuGetPackage) == 'true' ">
     
-    <Compile Include="$(BottlenoseLabsSDLContentDirectoryPath)/**/*.cs" >
+    <Compile Include="$(_ContentDirectoryPath)/**/*.cs" >
       <Pack>false</Pack>
-      <Link>bottlenoselabs/SDL/%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <Link>bottlenoselabs/$(_LibraryName)/%(RecursiveDir)%(Filename)%(Extension)</Link>
     </Compile>
-    <Compile Remove="$(BottlenoseLabsSDLContentDirectoryPath)/obj/**/*.cs" />
-    <Compile Remove="$(BottlenoseLabsSDLContentDirectoryPath)/bin/**/*.cs" />
+    <Compile Remove="$(_ContentDirectoryPath)/obj/**/*.cs" />
+    <Compile Remove="$(_ContentDirectoryPath)/bin/**/*.cs" />
     
   </ItemGroup>
   
   <ItemGroup Condition=" $(_IsNuGetPackage) == 'false' ">
     
-    <Content Include="$(BottlenoseLabsSDLContentDirectoryPath)/**/*.cs" >
+    <Content Include="$(_ContentDirectoryPath)/**/*.cs" >
       <Pack>true</Pack>
       <PackagePath>content/</PackagePath>
-      <Link>bottlenoselabs/SDL/%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <Link>bottlenoselabs/$(_LibraryName)/%(RecursiveDir)%(Filename)%(Extension)</Link>
     </Content>
-    <Content Remove="$(BottlenoseLabsSDLContentDirectoryPath)/obj/**/*.cs" />
-    <Content Remove="$(BottlenoseLabsSDLContentDirectoryPath)/bin/**/*.cs" />
+    <Content Remove="$(_ContentDirectoryPath)/obj/**/*.cs" />
+    <Content Remove="$(_ContentDirectoryPath)/bin/**/*.cs" />
     
-    <Content Include="$(MSBuildThisFileDirectory)/bottlenoselabs.SDL.props">
+    <Content Include="$(MSBuildThisFileDirectory)/bottlenoselabs.$(_LibraryName).props">
       <PackagePath>build/</PackagePath>
       <PackageCopyToOutput>true</PackageCopyToOutput>
     </Content>
-    <Content Include="$(MSBuildThisFileDirectory)/bottlenoselabs.SDL.targets">
+    <Content Include="$(MSBuildThisFileDirectory)/bottlenoselabs.$(_LibraryName).targets">
       <PackagePath>build/</PackagePath>
       <PackageCopyToOutput>true</PackageCopyToOutput>
     </Content>
