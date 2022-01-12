@@ -1,8 +1,9 @@
 mode: ContinuousDeployment
-next-version: 2.0.20
+tag-prefix: "release-*"
 branches:
   main:
-    tag: prerelease
+    regex: "^main$"
+    tag: 'commit'
 ignore:
   sha: []
 merge-message-formats: {}
