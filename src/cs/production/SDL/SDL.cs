@@ -3020,51 +3020,51 @@ namespace SDL2
         [DllImport(LibraryName)]
         public static extern int SDL_RenderCopyExF(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect* srcrect, SDL_FRect* dstrect, double angle, SDL_FPoint* center, SDL_RendererFlip flip);
 
-        // Function @ SDL_render.h:1619:29
+        // Function @ SDL_render.h:1620:29
         [DllImport(LibraryName)]
         public static extern int SDL_RenderGeometry(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Vertex* vertices, int num_vertices, long* indices, int num_indices);
 
-        // Function @ SDL_render.h:1645:29
+        // Function @ SDL_render.h:1649:29
         [DllImport(LibraryName)]
         public static extern int SDL_RenderGeometryRaw(SDL_Renderer* renderer, SDL_Texture* texture, float* xy, int xy_stride, SDL_Color* color, int color_stride, float* uv, int uv_stride, int num_vertices, void* indices, int num_indices, int size_indices);
 
-        // Function @ SDL_render.h:1678:29
+        // Function @ SDL_render.h:1682:29
         [DllImport(LibraryName)]
         public static extern int SDL_RenderReadPixels(SDL_Renderer* renderer, SDL_Rect* rect, uint format, void* pixels, int pitch);
 
-        // Function @ SDL_render.h:1718:30
+        // Function @ SDL_render.h:1722:30
         [DllImport(LibraryName)]
         public static extern void SDL_RenderPresent(SDL_Renderer* renderer);
 
-        // Function @ SDL_render.h:1733:30
+        // Function @ SDL_render.h:1737:30
         [DllImport(LibraryName)]
         public static extern void SDL_DestroyTexture(SDL_Texture* texture);
 
-        // Function @ SDL_render.h:1744:30
+        // Function @ SDL_render.h:1748:30
         [DllImport(LibraryName)]
         public static extern void SDL_DestroyRenderer(SDL_Renderer* renderer);
 
-        // Function @ SDL_render.h:1775:29
+        // Function @ SDL_render.h:1779:29
         [DllImport(LibraryName)]
         public static extern int SDL_RenderFlush(SDL_Renderer* renderer);
 
-        // Function @ SDL_render.h:1813:29
+        // Function @ SDL_render.h:1817:29
         [DllImport(LibraryName)]
         public static extern int SDL_GL_BindTexture(SDL_Texture* texture, float* texw, float* texh);
 
-        // Function @ SDL_render.h:1828:29
+        // Function @ SDL_render.h:1832:29
         [DllImport(LibraryName)]
         public static extern int SDL_GL_UnbindTexture(SDL_Texture* texture);
 
-        // Function @ SDL_render.h:1844:31
+        // Function @ SDL_render.h:1848:31
         [DllImport(LibraryName)]
         public static extern void* SDL_RenderGetMetalLayer(SDL_Renderer* renderer);
 
-        // Function @ SDL_render.h:1865:31
+        // Function @ SDL_render.h:1869:31
         [DllImport(LibraryName)]
         public static extern void* SDL_RenderGetMetalCommandEncoder(SDL_Renderer* renderer);
 
-        // Function @ SDL_render.h:1876:29
+        // Function @ SDL_render.h:1880:29
         [DllImport(LibraryName)]
         public static extern int SDL_RenderSetVSync(SDL_Renderer* renderer, int vsync);
 
