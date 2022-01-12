@@ -28,24 +28,7 @@ jobs:
         with:
           submodules: "recursive"
 
-      - name: "Set up MSYS2"
-        if: ${{ startsWith(matrix.platform.rid, 'win') }}
-        uses: msys2/setup-msys2@v2
-        with:
-          msystem: mingw64
-          install: >-
-            mingw-w64-x86_64-gcc
-            mingw-w64-x86_64-cmake
-            mingw-w64-x86_64-ninja
-            mingw-w64-x86_64-pkg-config
-
-      - name: "Build native libraries (Windows)"
-        if: ${{ startsWith(matrix.platform.rid, 'win') }}
-        shell: msys2 {0}
-        run: ./library.sh
-
-      - name: "Build native libraries (Unix)"
-        if: ${{ !(startsWith(matrix.platform.rid, 'win')) }}
+      - name: "Build native libraries"
         shell: bash
         run: ./library.sh
 
