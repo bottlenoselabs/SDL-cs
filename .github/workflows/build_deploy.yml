@@ -73,4 +73,3 @@ jobs:
           upload-nuget-org: "${{ startsWith(github.ref, 'refs/tags/v') }}"
           myget-access-token: '${{ secrets.MYGET_ACCESS_TOKEN }}'
           nuget-access-token: '${{ secrets.NUGET_ACCESS_TOKEN }}'
-          gitversion-target-path: './ext/SDL/'
