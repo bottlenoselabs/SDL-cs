@@ -90,7 +90,11 @@ function exit_if_last_command_failed() {
 function build_sdl() {
     echo "Building SDL..."
     SDL_BUILD_DIR="$DIR/cmake-build-release"
-    cmake -S $DIR/ext/SDL -B $SDL_BUILD_DIR $CMAKE_ARCH_ARGS -DSDL_STATIC=OFF -DSDL_TEST=OFF -DSDL_LEAN_AND_MEAN=1
+    cmake -S $DIR/ext/SDL -B $SDL_BUILD_DIR $CMAKE_ARCH_ARGS \
+        `#Change output directories` \
+        -DCMAKE_ARCHIVE_OUTPUT_DIRECTORY=$SDL_BUILD_DIR -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=$SDL_BUILD_DIR -DCMAKE_RUNTIME_OUTPUT_DIRECTORY=$SDL_BUILD_DIR -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE=$SDL_BUILD_DIR \
+        `# project specific` \
+        -DSDL_STATIC=OFF -DSDL_TEST=OFF -DSDL_LEAN_AND_MEAN=1
     cmake --build $SDL_BUILD_DIR --config Release
 
     if [[ "$TARGET_BUILD_OS" == "linux" ]]; then
