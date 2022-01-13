@@ -2620,31 +2620,31 @@ namespace SDL2
         [DllImport(LibraryName)]
         public static extern void SDL_hid_ble_scan(CBool active);
 
-        // Function @ SDL_hints.h:1856:34
+        // Function @ SDL_hints.h:1877:34
         [DllImport(LibraryName)]
         public static extern CBool SDL_SetHintWithPriority(CString name, CString value, SDL_HintPriority priority);
 
-        // Function @ SDL_hints.h:1876:34
+        // Function @ SDL_hints.h:1897:34
         [DllImport(LibraryName)]
         public static extern CBool SDL_SetHint(CString name, CString value);
 
-        // Function @ SDL_hints.h:1890:38
+        // Function @ SDL_hints.h:1911:38
         [DllImport(LibraryName)]
         public static extern CString SDL_GetHint(CString name);
 
-        // Function @ SDL_hints.h:1905:34
+        // Function @ SDL_hints.h:1926:34
         [DllImport(LibraryName)]
         public static extern CBool SDL_GetHintBoolean(CString name, CBool default_value);
 
-        // Function @ SDL_hints.h:1929:30
+        // Function @ SDL_hints.h:1950:30
         [DllImport(LibraryName)]
         public static extern void SDL_AddHintCallback(CString name, SDL_HintCallback callback, void* userdata);
 
-        // Function @ SDL_hints.h:1945:30
+        // Function @ SDL_hints.h:1966:30
         [DllImport(LibraryName)]
         public static extern void SDL_DelHintCallback(CString name, SDL_HintCallback callback, void* userdata);
 
-        // Function @ SDL_hints.h:1956:30
+        // Function @ SDL_hints.h:1977:30
         [DllImport(LibraryName)]
         public static extern void SDL_ClearHints();
 
@@ -3222,7 +3222,7 @@ namespace SDL2
             public delegate* unmanaged<void*, SDL_Event*, int> Pointer;
         }
 
-        // FunctionPointer @ SDL_hints.h:1915:24
+        // FunctionPointer @ SDL_hints.h:1936:24
         [StructLayout(LayoutKind.Sequential)]
         public struct SDL_HintCallback
         {
@@ -5929,7 +5929,7 @@ namespace SDL2
             SDL_GETEVENT = 2
         }
 
-        // Enum @ SDL_hints.h:1836:3
+        // Enum @ SDL_hints.h:1857:3
         public enum SDL_HintPriority : int
         {
             SDL_HINT_DEFAULT = 0,
@@ -7236,6 +7236,9 @@ namespace SDL2
 
         // MacroDefinition @ SDL_hints.h:1825:9
         public const string SDL_HINT_AUDIO_INCLUDE_MONITORS = "SDL_AUDIO_INCLUDE_MONITORS";
+
+        // MacroDefinition @ SDL_hints.h:1846:9
+        public const string SDL_HINT_X11_WINDOW_TYPE = "SDL_X11_WINDOW_TYPE";
 
         // MacroDefinition @ SDL_log.h:54:9
         public const int SDL_MAX_LOG_MESSAGE = 4096;
