@@ -4,31 +4,26 @@ Automatically updated C# bindings for https://github.com/libsdl-org/SDL with nat
 
 ## How to use
 
-### NuGet packages
-
-1. Install the `bottlenoselabs.SDL` NuGet package. This package contains only the C# bindings. To get the pre-release development packages, use the NuGet package feed: `https://www.myget.org/F/bottlenoselabs/api/v3/index.json`.
-2. Install one of the following packages which contain the native library for the runtime identifier. More than one these packages can be installed at once if desired but is not strictly required and will waste disk space unnecessarily. 
-   -  `bottlenoselabs.SDL.runtime.win-x64`: The `SDL.dll` native binary for Windows (64-bit).
-   -  `bottlenoselabs.SDL.runtime.osx`: The `libSDL.dylib` for macOS Intel (`osx-x64`) + macOS Apple Silicon (`osx-arm64`).
-   -  `bottlenoselabs.SDL.runtime.linux-x64`: The `libSDL.so` for Linux x64.
-
 ### From source
 
 1. Download and install [.NET 6](https://dotnet.microsoft.com/download).
-2. Fork the repository using GitHub or clone the repository manually with submodules: `git clone --recurse-submodules https://github.com/bottlenoselabs/libuv-cs`.
-3. Build the native library by running `bash ./library.sh`. (Building for Windows requires MSYS2 or Windows Subsystem for Linux with Ubuntu).
-4. Add the C# project `./src/cs/production/SDL/SDL.csproj` to your solution.
-5. Add one of the C# shim projects for the native binary in the same way as `SDL.csproj`.
-   -  `SDL.win-x64`: The `SDL.dll` native binary for Windows x64.
-   -  `SDL.osx`: The `libSDL.dylib` for macOS Intel (`osx-x64`) + macOS Apple Silicon (`osx-arm64`).
-   -  `SDL.linux-x64`: The `libSDL.so` for Linux x64.
+2. Fork the repository using GitHub or clone the repository manually with submodules: `git clone --recurse-submodules https://github.com/bottlenoselabs/flecs-cs`.
+3. Build the native library by running `library.sh`. To execute `.sh` scripts on Windows, use Git Bash which can be installed with Git itself: https://git-scm.com/download/win. The `library.sh` script requires that CMake is installed and in your path.
+4. Import the MSBuild `SDL.props` file which is located in the root of this directory to your `.csproj` file to setup everything you need. See the [hello world sample](src/cs/samples/HelloWorld/HelloWorld.csproj) for an example of how to do this.
+```xml
+<!-- flecs: bindings + native library -->
+<Import Project="$([System.IO.Path]::GetFullPath('path/to/SDL.props'))" />
+```
 
-If you wish to re-generate the bindings, simple run `bash ./bindgen.sh`.
+#### Bindgen
+
+If you wish to re-generate the bindings, run [`c2cs`](https://github.com/lithiumtoast/c2cs) from this directory.
 
 ## Developers: Documentation
 
-- For more information on how C# bindings work, see [`C2CS`](https://github.com/bottlenoselabs/c2cs), the tool that generates the bindings for `SDL` and other C libraries.
-- To learn how to use `SDL`, check out the [Lazy Foo' Production](https://lazyfoo.net/tutorials/SDL).
+For more information on how C# bindings work, see [`C2CS`](https://github.com/lithiumtoast/c2cs), the tool that generates the bindings for `SDL` and other C libraries.
+
+To learn how to use `SDL`, check out the [Lazy Foo' Production](https://lazyfoo.net/tutorials/SDL).
 
 ## License
 

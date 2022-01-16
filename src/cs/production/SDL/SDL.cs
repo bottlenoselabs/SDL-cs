@@ -16,9 +16,9 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
-using static SDL2.SDL.Runtime;
+using static bottlenoselabs.SDL.Runtime;
 
-namespace SDL2
+namespace bottlenoselabs
 {
     public static unsafe partial class SDL
     {
@@ -736,9 +736,9 @@ namespace SDL2
         [DllImport(LibraryName)]
         public static extern SDL_RWops* SDL_RWFromFile(CString file, CString mode);
 
-        // Function @ SDL_rwops.h:259:36
+        // Function @ SDL_rwops.h:225:36
         [DllImport(LibraryName)]
-        public static extern SDL_RWops* SDL_RWFromFP(void* fp, CBool autoclose);
+        public static extern SDL_RWops* SDL_RWFromFP(nint fp, CBool autoclose);
 
         // Function @ SDL_rwops.h:294:36
         [DllImport(LibraryName)]
@@ -6547,9 +6547,6 @@ namespace SDL2
         public const int SDL_TEXTUREMODULATE_COLOR = 1;
         public const int SDL_TEXTUREMODULATE_ALPHA = 2;
 
-        // MacroDefinition @ SDL_stdinc.h:568:9
-        public const double M_PI = 3.14159265358979323846264338327950288;
-
         // MacroDefinition @ SDL_mutex.h:44:9
         public const int SDL_MUTEX_TIMEDOUT = 1;
 
@@ -7345,7 +7342,7 @@ namespace SDL2
                 /// <returns>A <see cref="bool" />.</returns>
                 public static bool ToBoolean(CBool value)
                 {
-                    return Convert.ToBoolean(value);
+                    return Convert.ToBoolean(value._value);
                 }
 
                 /// <inheritdoc />

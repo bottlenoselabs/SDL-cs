@@ -6,11 +6,7 @@
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
 
-    <ItemGroup>
-        <ProjectReference Include="..\..\production\SDL\SDL.csproj" />
-        <ProjectReference Include="..\..\production\SDL.runtime.win-x64\SDL.runtime.win-x64.csproj" />
-        <ProjectReference Include="..\..\production\SDL.runtime.osx\SDL.runtime.osx.csproj" />
-        <ProjectReference Include="..\..\production\SDL.runtime.linux-x64\SDL.runtime.linux-x64.csproj" />
-    </ItemGroup>
+    <!-- SDL: bindings + native library -->
+    <Import Project="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)/../../../../SDL.props'))" />
 
 </Project>

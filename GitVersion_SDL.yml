@@ -1,9 +1,0 @@
-mode: ContinuousDeployment
-tag-prefix: "release-*"
-branches:
-  main:
-    regex: "^main$"
-    tag: 'commit'
-ignore:
-  sha: []
-merge-message-formats: {}

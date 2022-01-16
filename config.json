@@ -20,6 +20,7 @@
     ],
     "outputFilePath": "src/cs/production/SDL/SDL.cs",
     "libraryName": "SDL2",
+    "namespaceName": "bottlenoselabs",
     "machineBitWidth": 64,
     "headerCodeRegionFilePath": null,
     "footerCodeRegionFilePath": null,

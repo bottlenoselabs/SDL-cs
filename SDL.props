@@ -1,0 +1,40 @@
+<Project>
+  
+  <PropertyGroup>
+    <_LibraryName>SDL</_LibraryName>
+    <_GitDirectoryPath>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), .gitignore))/</_GitDirectoryPath>
+    <_LibraryDirectoryPath>$(_GitDirectoryPath)/lib</_LibraryDirectoryPath>
+    <_SourceCodeDirectoryPath>$(_GitDirectoryPath)/src/cs/production/$(_LibraryName)/</_SourceCodeDirectoryPath>
+    <_LinkDirectoryPath>$(_LibraryName)/</_LinkDirectoryPath>
+  </PropertyGroup>
+
+  <!-- C# source code-->
+  <ItemGroup>
+    <Compile Include="$(_SourceCodeDirectoryPath)/**/*.cs" >
+      <Pack>false</Pack>
+      <Link>$(_LinkDirectoryPath)/%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </Compile>
+    <Compile Remove="$(_SourceCodeDirectoryPath)/obj/**/*.cs" />
+    <Compile Remove="$(_SourceCodeDirectoryPath)/bin/**/*.cs" />
+  </ItemGroup>
+
+  <!-- Dynamic link libraries -->
+  <ItemGroup>
+    <Content Include="$(_LibraryDirectoryPath)/*.dll">
+        <Link>%(Filename)%(Extension)</Link>
+        <Pack>false</Pack>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(_LibraryDirectoryPath)/*.dylib">
+        <Link>%(Filename)%(Extension)</Link>
+        <Pack>false</Pack>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(_LibraryDirectoryPath)/*.so">
+        <Link>%(Filename)%(Extension)</Link>
+        <Pack>false</Pack>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

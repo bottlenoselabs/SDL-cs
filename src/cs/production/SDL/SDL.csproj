@@ -7,19 +7,6 @@
         <RootNamespace />
     </PropertyGroup>
 
-    <!-- NuGet -->
-    <PropertyGroup>
-        <IsPackable>true</IsPackable>
-        <RepositoryUrl>https://github.com/bottlenoselabs/SDL-cs</RepositoryUrl>
-        <PackageDescription>C# bindings for SDL. This package only includes C# code; it does not include any native library.</PackageDescription>
-        <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
-        <IncludeBuildOutput>false</IncludeBuildOutput>
-        <IncludeSymbols>false</IncludeSymbols>
-        <CopyBuildOutputToOutputDirectory>true</CopyBuildOutputToOutputDirectory>
-        <CopyOutputSymbolsToOutputDirectory>false</CopyOutputSymbolsToOutputDirectory>
-        <DevelopmentDependency>true</DevelopmentDependency>
-    </PropertyGroup>
-
-    <Import Project="$(MSBuildThisFileDirectory)/bottlenoselabs.SDL.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../../../../SDL.props" />
 
 </Project>
