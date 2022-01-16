@@ -736,9 +736,9 @@ namespace bottlenoselabs
         [DllImport(LibraryName)]
         public static extern SDL_RWops* SDL_RWFromFile(CString file, CString mode);
 
-        // Function @ SDL_rwops.h:225:36
+        // Function @ SDL_rwops.h:259:36
         [DllImport(LibraryName)]
-        public static extern SDL_RWops* SDL_RWFromFP(nint fp, CBool autoclose);
+        public static extern SDL_RWops* SDL_RWFromFP(void* fp, CBool autoclose);
 
         // Function @ SDL_rwops.h:294:36
         [DllImport(LibraryName)]
@@ -2620,31 +2620,31 @@ namespace bottlenoselabs
         [DllImport(LibraryName)]
         public static extern void SDL_hid_ble_scan(CBool active);
 
-        // Function @ SDL_hints.h:1856:34
+        // Function @ SDL_hints.h:1877:34
         [DllImport(LibraryName)]
         public static extern CBool SDL_SetHintWithPriority(CString name, CString value, SDL_HintPriority priority);
 
-        // Function @ SDL_hints.h:1876:34
+        // Function @ SDL_hints.h:1897:34
         [DllImport(LibraryName)]
         public static extern CBool SDL_SetHint(CString name, CString value);
 
-        // Function @ SDL_hints.h:1890:38
+        // Function @ SDL_hints.h:1911:38
         [DllImport(LibraryName)]
         public static extern CString SDL_GetHint(CString name);
 
-        // Function @ SDL_hints.h:1905:34
+        // Function @ SDL_hints.h:1926:34
         [DllImport(LibraryName)]
         public static extern CBool SDL_GetHintBoolean(CString name, CBool default_value);
 
-        // Function @ SDL_hints.h:1929:30
+        // Function @ SDL_hints.h:1950:30
         [DllImport(LibraryName)]
         public static extern void SDL_AddHintCallback(CString name, SDL_HintCallback callback, void* userdata);
 
-        // Function @ SDL_hints.h:1945:30
+        // Function @ SDL_hints.h:1966:30
         [DllImport(LibraryName)]
         public static extern void SDL_DelHintCallback(CString name, SDL_HintCallback callback, void* userdata);
 
-        // Function @ SDL_hints.h:1956:30
+        // Function @ SDL_hints.h:1977:30
         [DllImport(LibraryName)]
         public static extern void SDL_ClearHints();
 
@@ -3222,7 +3222,7 @@ namespace bottlenoselabs
             public delegate* unmanaged<void*, SDL_Event*, int> Pointer;
         }
 
-        // FunctionPointer @ SDL_hints.h:1915:24
+        // FunctionPointer @ SDL_hints.h:1936:24
         [StructLayout(LayoutKind.Sequential)]
         public struct SDL_HintCallback
         {
@@ -5929,7 +5929,7 @@ namespace bottlenoselabs
             SDL_GETEVENT = 2
         }
 
-        // Enum @ SDL_hints.h:1836:3
+        // Enum @ SDL_hints.h:1857:3
         public enum SDL_HintPriority : int
         {
             SDL_HINT_DEFAULT = 0,
@@ -6546,6 +6546,9 @@ namespace bottlenoselabs
         public const int SDL_TEXTUREMODULATE_NONE = 0;
         public const int SDL_TEXTUREMODULATE_COLOR = 1;
         public const int SDL_TEXTUREMODULATE_ALPHA = 2;
+
+        // MacroDefinition @ SDL_stdinc.h:568:9
+        public const double M_PI = 3.14159265358979323846264338327950288;
 
         // MacroDefinition @ SDL_mutex.h:44:9
         public const int SDL_MUTEX_TIMEDOUT = 1;
@@ -7233,6 +7236,9 @@ namespace bottlenoselabs
 
         // MacroDefinition @ SDL_hints.h:1825:9
         public const string SDL_HINT_AUDIO_INCLUDE_MONITORS = "SDL_AUDIO_INCLUDE_MONITORS";
+
+        // MacroDefinition @ SDL_hints.h:1846:9
+        public const string SDL_HINT_X11_WINDOW_TYPE = "SDL_X11_WINDOW_TYPE";
 
         // MacroDefinition @ SDL_log.h:54:9
         public const int SDL_MAX_LOG_MESSAGE = 4096;
