@@ -1,10 +1,5 @@
 version: 2
 updates:
-  — package-ecosystem: “nuget”
-    directory: “/”
-    schedule: 
-      interval: “daily"
-      time: "00:15" # 8:15pm EDT
   - package-ecosystem: "gitsubmodule"
     directory: "/"
     schedule:

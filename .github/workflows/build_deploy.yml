@@ -66,10 +66,3 @@ jobs:
         with:
           repository: '${{ github.repository }}'
           dotnet-sdk-version: '6.0.x'
-          gitversion-working-directory: './ext/SDL'
-          gitversion-config-file-path: '../../GitVersion_SDL.yml'
-          is-enabled-pack: 'true'
-          upload-myget-org: "${{ github.event_name == 'push' || startsWith(github.ref, 'refs/tags/v') }}"
-          upload-nuget-org: "${{ startsWith(github.ref, 'refs/tags/v') }}"
-          myget-access-token: '${{ secrets.MYGET_ACCESS_TOKEN }}'
-          nuget-access-token: '${{ secrets.NUGET_ACCESS_TOKEN }}'
