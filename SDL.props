@@ -5,7 +5,7 @@
     <_GitDirectoryPath>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), .gitignore))/</_GitDirectoryPath>
     <_LibraryDirectoryPath>$(_GitDirectoryPath)/lib</_LibraryDirectoryPath>
     <_SourceCodeDirectoryPath>$(_GitDirectoryPath)/src/cs/production/$(_LibraryName)/</_SourceCodeDirectoryPath>
-    <_LinkDirectoryPath>$(_LibraryName)/</_LinkDirectoryPath>
+    <_LinkDirectoryPath>bottlenoselabs/$(_LibraryName)/</_LinkDirectoryPath>
   </PropertyGroup>
 
   <!-- C# source code-->
