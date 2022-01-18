@@ -7259,7 +7259,7 @@ namespace bottlenoselabs
         public const int SDL_MINOR_VERSION = 0;
 
         // MacroDefinition @ SDL_version.h:62:9
-        public const int SDL_PATCHLEVEL = 20;
+        public const int SDL_PATCHLEVEL = 21;
 
         // MacroDefinition @ SDL.h:81:9
         public const uint SDL_INIT_TIMER = 0x00000001u;
