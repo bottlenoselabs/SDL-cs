@@ -66,7 +66,7 @@ namespace bottlenoselabs
 
         // Function @ SDL_stdinc.h:446:30
         [DllImport(LibraryName)]
-        public static extern void SDL_qsort(void* @base, ulong nmemb, ulong size, FnPtr_SDL_VoidPtr_VoidPtr_Int compare);
+        public static extern void SDL_qsort(void* @base, ulong nmemb, ulong size, FnPtr_VoidPtr_VoidPtr_Int compare);
 
         // Function @ SDL_stdinc.h:448:29
         [DllImport(LibraryName)]
@@ -726,7 +726,7 @@ namespace bottlenoselabs
 
         // Function @ SDL_thread.h:447:29
         [DllImport(LibraryName)]
-        public static extern int SDL_TLSSet(SDL_TLSID id, void* value, FnPtr_SDL_VoidPtr_Void destructor);
+        public static extern int SDL_TLSSet(SDL_TLSID id, void* value, FnPtr_VoidPtr_Void destructor);
 
         // Function @ SDL_thread.h:454:30
         [DllImport(LibraryName)]
@@ -3182,7 +3182,7 @@ namespace bottlenoselabs
 
         // FunctionPointer @ SDL_stdinc.h:446:85
         [StructLayout(LayoutKind.Sequential)]
-        public struct FnPtr_SDL_VoidPtr_VoidPtr_Int
+        public struct FnPtr_VoidPtr_VoidPtr_Int
         {
             public delegate* unmanaged<void*, void*, int> Pointer;
         }
@@ -3203,7 +3203,7 @@ namespace bottlenoselabs
 
         // FunctionPointer @ SDL_thread.h:447:88
         [StructLayout(LayoutKind.Sequential)]
-        public struct FnPtr_SDL_VoidPtr_Void
+        public struct FnPtr_VoidPtr_Void
         {
             public delegate* unmanaged<void*, void> Pointer;
         }
