@@ -876,119 +876,119 @@ namespace bottlenoselabs
         [DllImport(LibraryName)]
         public static extern CString SDL_GetAudioDeviceName(int index, int iscapture);
 
-        // Function @ SDL_audio.h:518:29
+        // Function @ SDL_audio.h:516:29
         [DllImport(LibraryName)]
         public static extern int SDL_GetAudioDeviceSpec(int index, int iscapture, SDL_AudioSpec* spec);
 
-        // Function @ SDL_audio.h:633:43
+        // Function @ SDL_audio.h:631:43
         [DllImport(LibraryName)]
         public static extern SDL_AudioDeviceID SDL_OpenAudioDevice(CString device, int iscapture, SDL_AudioSpec* desired, SDL_AudioSpec* obtained, int allowed_changes);
 
-        // Function @ SDL_audio.h:673:41
+        // Function @ SDL_audio.h:671:41
         [DllImport(LibraryName)]
         public static extern SDL_AudioStatus SDL_GetAudioStatus();
 
-        // Function @ SDL_audio.h:686:41
+        // Function @ SDL_audio.h:684:41
         [DllImport(LibraryName)]
         public static extern SDL_AudioStatus SDL_GetAudioDeviceStatus(SDL_AudioDeviceID dev);
 
-        // Function @ SDL_audio.h:719:30
+        // Function @ SDL_audio.h:717:30
         [DllImport(LibraryName)]
         public static extern void SDL_PauseAudio(int pause_on);
 
-        // Function @ SDL_audio.h:749:30
+        // Function @ SDL_audio.h:747:30
         [DllImport(LibraryName)]
         public static extern void SDL_PauseAudioDevice(SDL_AudioDeviceID dev, int pause_on);
 
-        // Function @ SDL_audio.h:834:40
+        // Function @ SDL_audio.h:832:40
         [DllImport(LibraryName)]
         public static extern SDL_AudioSpec* SDL_LoadWAV_RW(SDL_RWops* src, int freesrc, SDL_AudioSpec* spec, byte** audio_buf, uint* audio_len);
 
-        // Function @ SDL_audio.h:862:30
+        // Function @ SDL_audio.h:860:30
         [DllImport(LibraryName)]
         public static extern void SDL_FreeWAV(byte* audio_buf);
 
-        // Function @ SDL_audio.h:896:29
+        // Function @ SDL_audio.h:894:29
         [DllImport(LibraryName)]
         public static extern int SDL_BuildAudioCVT(SDL_AudioCVT* cvt, SDL_AudioFormat src_format, byte src_channels, int src_rate, SDL_AudioFormat dst_format, byte dst_channels, int dst_rate);
 
-        // Function @ SDL_audio.h:942:29
+        // Function @ SDL_audio.h:940:29
         [DllImport(LibraryName)]
         public static extern int SDL_ConvertAudio(SDL_AudioCVT* cvt);
 
-        // Function @ SDL_audio.h:975:43
+        // Function @ SDL_audio.h:973:43
         [DllImport(LibraryName)]
         public static extern SDL_AudioStream* SDL_NewAudioStream(SDL_AudioFormat src_format, byte src_channels, int src_rate, SDL_AudioFormat dst_format, byte dst_channels, int dst_rate);
 
-        // Function @ SDL_audio.h:999:29
+        // Function @ SDL_audio.h:997:29
         [DllImport(LibraryName)]
         public static extern int SDL_AudioStreamPut(SDL_AudioStream* stream, void* buf, int len);
 
-        // Function @ SDL_audio.h:1018:29
+        // Function @ SDL_audio.h:1016:29
         [DllImport(LibraryName)]
         public static extern int SDL_AudioStreamGet(SDL_AudioStream* stream, void* buf, int len);
 
-        // Function @ SDL_audio.h:1036:29
+        // Function @ SDL_audio.h:1034:29
         [DllImport(LibraryName)]
         public static extern int SDL_AudioStreamAvailable(SDL_AudioStream* stream);
 
-        // Function @ SDL_audio.h:1055:29
+        // Function @ SDL_audio.h:1053:29
         [DllImport(LibraryName)]
         public static extern int SDL_AudioStreamFlush(SDL_AudioStream* stream);
 
-        // Function @ SDL_audio.h:1069:30
+        // Function @ SDL_audio.h:1067:30
         [DllImport(LibraryName)]
         public static extern void SDL_AudioStreamClear(SDL_AudioStream* stream);
 
-        // Function @ SDL_audio.h:1083:30
+        // Function @ SDL_audio.h:1081:30
         [DllImport(LibraryName)]
         public static extern void SDL_FreeAudioStream(SDL_AudioStream* stream);
 
-        // Function @ SDL_audio.h:1109:30
+        // Function @ SDL_audio.h:1107:30
         [DllImport(LibraryName)]
         public static extern void SDL_MixAudio(byte* dst, byte* src, uint len, int volume);
 
-        // Function @ SDL_audio.h:1142:30
+        // Function @ SDL_audio.h:1140:30
         [DllImport(LibraryName)]
         public static extern void SDL_MixAudioFormat(byte* dst, byte* src, SDL_AudioFormat format, uint len, int volume);
 
-        // Function @ SDL_audio.h:1193:29
+        // Function @ SDL_audio.h:1191:29
         [DllImport(LibraryName)]
         public static extern int SDL_QueueAudio(SDL_AudioDeviceID dev, void* data, uint len);
 
-        // Function @ SDL_audio.h:1241:32
+        // Function @ SDL_audio.h:1239:32
         [DllImport(LibraryName)]
         public static extern uint SDL_DequeueAudio(SDL_AudioDeviceID dev, void* data, uint len);
 
-        // Function @ SDL_audio.h:1275:32
+        // Function @ SDL_audio.h:1273:32
         [DllImport(LibraryName)]
         public static extern uint SDL_GetQueuedAudioSize(SDL_AudioDeviceID dev);
 
-        // Function @ SDL_audio.h:1309:30
+        // Function @ SDL_audio.h:1307:30
         [DllImport(LibraryName)]
         public static extern void SDL_ClearQueuedAudio(SDL_AudioDeviceID dev);
 
-        // Function @ SDL_audio.h:1340:30
+        // Function @ SDL_audio.h:1338:30
         [DllImport(LibraryName)]
         public static extern void SDL_LockAudio();
 
-        // Function @ SDL_audio.h:1379:30
+        // Function @ SDL_audio.h:1377:30
         [DllImport(LibraryName)]
         public static extern void SDL_LockAudioDevice(SDL_AudioDeviceID dev);
 
-        // Function @ SDL_audio.h:1398:30
+        // Function @ SDL_audio.h:1396:30
         [DllImport(LibraryName)]
         public static extern void SDL_UnlockAudio();
 
-        // Function @ SDL_audio.h:1412:30
+        // Function @ SDL_audio.h:1410:30
         [DllImport(LibraryName)]
         public static extern void SDL_UnlockAudioDevice(SDL_AudioDeviceID dev);
 
-        // Function @ SDL_audio.h:1430:30
+        // Function @ SDL_audio.h:1428:30
         [DllImport(LibraryName)]
         public static extern void SDL_CloseAudio();
 
-        // Function @ SDL_audio.h:1454:30
+        // Function @ SDL_audio.h:1452:30
         [DllImport(LibraryName)]
         public static extern void SDL_CloseAudioDevice(SDL_AudioDeviceID dev);
 
@@ -5154,7 +5154,7 @@ namespace bottlenoselabs
         {
         }
 
-        // OpaqueType @ SDL_audio.h:953:33
+        // OpaqueType @ SDL_audio.h:951:33
         [StructLayout(LayoutKind.Sequential)]
         public struct SDL_AudioStream
         {
@@ -5427,7 +5427,7 @@ namespace bottlenoselabs
             SDL_THREAD_PRIORITY_TIME_CRITICAL = 3
         }
 
-        // Enum @ SDL_audio.h:653:3
+        // Enum @ SDL_audio.h:651:3
         public enum SDL_AudioStatus : int
         {
             SDL_AUDIO_STOPPED = 0,
@@ -6667,7 +6667,7 @@ namespace bottlenoselabs
         // MacroDefinition @ SDL_audio.h:205:9
         public const int SDL_AUDIOCVT_MAX_FILTERS = 9;
 
-        // MacroDefinition @ SDL_audio.h:1085:9
+        // MacroDefinition @ SDL_audio.h:1083:9
         public const int SDL_MIX_MAXVOLUME = 128;
 
         // MacroDefinition @ SDL_cpuinfo.h:129:9
