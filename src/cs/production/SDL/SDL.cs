@@ -1744,15 +1744,15 @@ namespace bottlenoselabs
         [DllImport(LibraryName)]
         public static extern void SDL_StopTextInput();
 
-        // Function @ SDL_keyboard.h:281:30
+        // Function @ SDL_keyboard.h:285:30
         [DllImport(LibraryName)]
         public static extern void SDL_SetTextInputRect(SDL_Rect* rect);
 
-        // Function @ SDL_keyboard.h:294:34
+        // Function @ SDL_keyboard.h:298:34
         [DllImport(LibraryName)]
         public static extern CBool SDL_HasScreenKeyboardSupport();
 
-        // Function @ SDL_keyboard.h:306:34
+        // Function @ SDL_keyboard.h:310:34
         [DllImport(LibraryName)]
         public static extern CBool SDL_IsScreenKeyboardShown(SDL_Window* window);
 
@@ -2624,31 +2624,31 @@ namespace bottlenoselabs
         [DllImport(LibraryName)]
         public static extern void SDL_hid_ble_scan(CBool active);
 
-        // Function @ SDL_hints.h:1898:34
+        // Function @ SDL_hints.h:1913:34
         [DllImport(LibraryName)]
         public static extern CBool SDL_SetHintWithPriority(CString name, CString value, SDL_HintPriority priority);
 
-        // Function @ SDL_hints.h:1918:34
+        // Function @ SDL_hints.h:1933:34
         [DllImport(LibraryName)]
         public static extern CBool SDL_SetHint(CString name, CString value);
 
-        // Function @ SDL_hints.h:1932:38
+        // Function @ SDL_hints.h:1947:38
         [DllImport(LibraryName)]
         public static extern CString SDL_GetHint(CString name);
 
-        // Function @ SDL_hints.h:1947:34
+        // Function @ SDL_hints.h:1962:34
         [DllImport(LibraryName)]
         public static extern CBool SDL_GetHintBoolean(CString name, CBool default_value);
 
-        // Function @ SDL_hints.h:1971:30
+        // Function @ SDL_hints.h:1986:30
         [DllImport(LibraryName)]
         public static extern void SDL_AddHintCallback(CString name, SDL_HintCallback callback, void* userdata);
 
-        // Function @ SDL_hints.h:1987:30
+        // Function @ SDL_hints.h:2002:30
         [DllImport(LibraryName)]
         public static extern void SDL_DelHintCallback(CString name, SDL_HintCallback callback, void* userdata);
 
-        // Function @ SDL_hints.h:1998:30
+        // Function @ SDL_hints.h:2013:30
         [DllImport(LibraryName)]
         public static extern void SDL_ClearHints();
 
@@ -3226,7 +3226,7 @@ namespace bottlenoselabs
             public delegate* unmanaged<void*, SDL_Event*, int> Pointer;
         }
 
-        // FunctionPointer @ SDL_hints.h:1957:24
+        // FunctionPointer @ SDL_hints.h:1972:24
         [StructLayout(LayoutKind.Sequential)]
         public struct SDL_HintCallback
         {
@@ -5933,7 +5933,7 @@ namespace bottlenoselabs
             SDL_GETEVENT = 2
         }
 
-        // Enum @ SDL_hints.h:1878:3
+        // Enum @ SDL_hints.h:1893:3
         public enum SDL_HintPriority : int
         {
             SDL_HINT_DEFAULT = 0,
@@ -6971,283 +6971,286 @@ namespace bottlenoselabs
         // MacroDefinition @ SDL_hints.h:626:9
         public const string SDL_HINT_JOYSTICK_HIDAPI_GAMECUBE = "SDL_JOYSTICK_HIDAPI_GAMECUBE";
 
-        // MacroDefinition @ SDL_hints.h:637:9
+        // MacroDefinition @ SDL_hints.h:641:9
+        public const string SDL_HINT_JOYSTICK_GAMECUBE_RUMBLE_BRAKE = "SDL_JOYSTICK_GAMECUBE_RUMBLE_BRAKE";
+
+        // MacroDefinition @ SDL_hints.h:652:9
         public const string SDL_HINT_JOYSTICK_HIDAPI_JOY_CONS = "SDL_JOYSTICK_HIDAPI_JOY_CONS";
 
-        // MacroDefinition @ SDL_hints.h:648:9
+        // MacroDefinition @ SDL_hints.h:663:9
         public const string SDL_HINT_JOYSTICK_HIDAPI_LUNA = "SDL_JOYSTICK_HIDAPI_LUNA";
 
-        // MacroDefinition @ SDL_hints.h:659:9
+        // MacroDefinition @ SDL_hints.h:674:9
         public const string SDL_HINT_JOYSTICK_HIDAPI_PS4 = "SDL_JOYSTICK_HIDAPI_PS4";
 
-        // MacroDefinition @ SDL_hints.h:679:9
+        // MacroDefinition @ SDL_hints.h:694:9
         public const string SDL_HINT_JOYSTICK_HIDAPI_PS4_RUMBLE = "SDL_JOYSTICK_HIDAPI_PS4_RUMBLE";
 
-        // MacroDefinition @ SDL_hints.h:690:9
+        // MacroDefinition @ SDL_hints.h:705:9
         public const string SDL_HINT_JOYSTICK_HIDAPI_PS5 = "SDL_JOYSTICK_HIDAPI_PS5";
 
-        // MacroDefinition @ SDL_hints.h:699:9
+        // MacroDefinition @ SDL_hints.h:714:9
         public const string SDL_HINT_JOYSTICK_HIDAPI_PS5_PLAYER_LED = "SDL_JOYSTICK_HIDAPI_PS5_PLAYER_LED";
 
-        // MacroDefinition @ SDL_hints.h:718:9
+        // MacroDefinition @ SDL_hints.h:733:9
         public const string SDL_HINT_JOYSTICK_HIDAPI_PS5_RUMBLE = "SDL_JOYSTICK_HIDAPI_PS5_RUMBLE";
 
-        // MacroDefinition @ SDL_hints.h:729:9
+        // MacroDefinition @ SDL_hints.h:744:9
         public const string SDL_HINT_JOYSTICK_HIDAPI_STADIA = "SDL_JOYSTICK_HIDAPI_STADIA";
 
-        // MacroDefinition @ SDL_hints.h:741:9
+        // MacroDefinition @ SDL_hints.h:756:9
         public const string SDL_HINT_JOYSTICK_HIDAPI_STEAM = "SDL_JOYSTICK_HIDAPI_STEAM";
 
-        // MacroDefinition @ SDL_hints.h:752:9
+        // MacroDefinition @ SDL_hints.h:767:9
         public const string SDL_HINT_JOYSTICK_HIDAPI_SWITCH = "SDL_JOYSTICK_HIDAPI_SWITCH";
 
-        // MacroDefinition @ SDL_hints.h:763:9
+        // MacroDefinition @ SDL_hints.h:778:9
         public const string SDL_HINT_JOYSTICK_HIDAPI_SWITCH_HOME_LED = "SDL_JOYSTICK_HIDAPI_SWITCH_HOME_LED";
 
-        // MacroDefinition @ SDL_hints.h:774:9
+        // MacroDefinition @ SDL_hints.h:789:9
         public const string SDL_HINT_JOYSTICK_HIDAPI_XBOX = "SDL_JOYSTICK_HIDAPI_XBOX";
 
-        // MacroDefinition @ SDL_hints.h:783:9
+        // MacroDefinition @ SDL_hints.h:798:9
         public const string SDL_HINT_JOYSTICK_RAWINPUT = "SDL_JOYSTICK_RAWINPUT";
 
-        // MacroDefinition @ SDL_hints.h:796:9
+        // MacroDefinition @ SDL_hints.h:811:9
         public const string SDL_HINT_JOYSTICK_RAWINPUT_CORRELATE_XINPUT = "SDL_JOYSTICK_RAWINPUT_CORRELATE_XINPUT";
 
-        // MacroDefinition @ SDL_hints.h:805:9
+        // MacroDefinition @ SDL_hints.h:820:9
         public const string SDL_HINT_JOYSTICK_ROG_CHAKRAM = "SDL_JOYSTICK_ROG_CHAKRAM";
 
-        // MacroDefinition @ SDL_hints.h:816:9
+        // MacroDefinition @ SDL_hints.h:831:9
         public const string SDL_HINT_JOYSTICK_THREAD = "SDL_JOYSTICK_THREAD";
 
-        // MacroDefinition @ SDL_hints.h:839:9
+        // MacroDefinition @ SDL_hints.h:854:9
         public const string SDL_HINT_KMSDRM_REQUIRE_DRM_MASTER = "SDL_KMSDRM_REQUIRE_DRM_MASTER";
 
-        // MacroDefinition @ SDL_hints.h:846:9
+        // MacroDefinition @ SDL_hints.h:861:9
         public const string SDL_HINT_JOYSTICK_DEVICE = "SDL_JOYSTICK_DEVICE";
 
-        // MacroDefinition @ SDL_hints.h:857:9
+        // MacroDefinition @ SDL_hints.h:872:9
         public const string SDL_HINT_LINUX_JOYSTICK_CLASSIC = "SDL_LINUX_JOYSTICK_CLASSIC";
 
-        // MacroDefinition @ SDL_hints.h:866:9
+        // MacroDefinition @ SDL_hints.h:881:9
         public const string SDL_HINT_LINUX_JOYSTICK_DEADZONES = "SDL_LINUX_JOYSTICK_DEADZONES";
 
-        // MacroDefinition @ SDL_hints.h:874:9
+        // MacroDefinition @ SDL_hints.h:889:9
         public const string SDL_HINT_MAC_BACKGROUND_APP = "SDL_MAC_BACKGROUND_APP";
 
-        // MacroDefinition @ SDL_hints.h:882:9
+        // MacroDefinition @ SDL_hints.h:897:9
         public const string SDL_HINT_MAC_CTRL_CLICK_EMULATE_RIGHT_CLICK = "SDL_MAC_CTRL_CLICK_EMULATE_RIGHT_CLICK";
 
-        // MacroDefinition @ SDL_hints.h:887:9
+        // MacroDefinition @ SDL_hints.h:902:9
         public const string SDL_HINT_MOUSE_DOUBLE_CLICK_RADIUS = "SDL_MOUSE_DOUBLE_CLICK_RADIUS";
 
-        // MacroDefinition @ SDL_hints.h:892:9
+        // MacroDefinition @ SDL_hints.h:907:9
         public const string SDL_HINT_MOUSE_DOUBLE_CLICK_TIME = "SDL_MOUSE_DOUBLE_CLICK_TIME";
 
-        // MacroDefinition @ SDL_hints.h:903:9
+        // MacroDefinition @ SDL_hints.h:918:9
         public const string SDL_HINT_MOUSE_FOCUS_CLICKTHROUGH = "SDL_MOUSE_FOCUS_CLICKTHROUGH";
 
-        // MacroDefinition @ SDL_hints.h:908:9
+        // MacroDefinition @ SDL_hints.h:923:9
         public const string SDL_HINT_MOUSE_NORMAL_SPEED_SCALE = "SDL_MOUSE_NORMAL_SPEED_SCALE";
 
-        // MacroDefinition @ SDL_hints.h:919:9
+        // MacroDefinition @ SDL_hints.h:934:9
         public const string SDL_HINT_MOUSE_RELATIVE_MODE_WARP = "SDL_MOUSE_RELATIVE_MODE_WARP";
 
-        // MacroDefinition @ SDL_hints.h:930:9
+        // MacroDefinition @ SDL_hints.h:945:9
         public const string SDL_HINT_MOUSE_RELATIVE_SCALING = "SDL_MOUSE_RELATIVE_SCALING";
 
-        // MacroDefinition @ SDL_hints.h:935:9
+        // MacroDefinition @ SDL_hints.h:950:9
         public const string SDL_HINT_MOUSE_RELATIVE_SPEED_SCALE = "SDL_MOUSE_RELATIVE_SPEED_SCALE";
 
-        // MacroDefinition @ SDL_hints.h:944:9
+        // MacroDefinition @ SDL_hints.h:959:9
         public const string SDL_HINT_MOUSE_TOUCH_EVENTS = "SDL_MOUSE_TOUCH_EVENTS";
 
-        // MacroDefinition @ SDL_hints.h:957:9
+        // MacroDefinition @ SDL_hints.h:972:9
         public const string SDL_HINT_NO_SIGNAL_HANDLERS = "SDL_NO_SIGNAL_HANDLERS";
 
-        // MacroDefinition @ SDL_hints.h:988:9
+        // MacroDefinition @ SDL_hints.h:1003:9
         public const string SDL_HINT_OPENGL_ES_DRIVER = "SDL_OPENGL_ES_DRIVER";
 
-        // MacroDefinition @ SDL_hints.h:999:9
+        // MacroDefinition @ SDL_hints.h:1014:9
         public const string SDL_HINT_ORIENTATIONS = "SDL_IOS_ORIENTATIONS";
 
-        // MacroDefinition @ SDL_hints.h:1015:9
+        // MacroDefinition @ SDL_hints.h:1030:9
         public const string SDL_HINT_POLL_SENTINEL = "SDL_POLL_SENTINEL";
 
-        // MacroDefinition @ SDL_hints.h:1029:9
+        // MacroDefinition @ SDL_hints.h:1044:9
         public const string SDL_HINT_PREFERRED_LOCALES = "SDL_PREFERRED_LOCALES";
 
-        // MacroDefinition @ SDL_hints.h:1046:9
+        // MacroDefinition @ SDL_hints.h:1061:9
         public const string SDL_HINT_QTWAYLAND_CONTENT_ORIENTATION = "SDL_QTWAYLAND_CONTENT_ORIENTATION";
 
-        // MacroDefinition @ SDL_hints.h:1057:9
+        // MacroDefinition @ SDL_hints.h:1072:9
         public const string SDL_HINT_QTWAYLAND_WINDOW_FLAGS = "SDL_QTWAYLAND_WINDOW_FLAGS";
 
-        // MacroDefinition @ SDL_hints.h:1081:9
+        // MacroDefinition @ SDL_hints.h:1096:9
         public const string SDL_HINT_RENDER_BATCHING = "SDL_RENDER_BATCHING";
 
-        // MacroDefinition @ SDL_hints.h:1094:9
+        // MacroDefinition @ SDL_hints.h:1109:9
         public const string SDL_HINT_RENDER_LINE_METHOD = "SDL_RENDER_LINE_METHOD";
 
-        // MacroDefinition @ SDL_hints.h:1107:9
+        // MacroDefinition @ SDL_hints.h:1122:9
         public const string SDL_HINT_RENDER_DIRECT3D11_DEBUG = "SDL_RENDER_DIRECT3D11_DEBUG";
 
-        // MacroDefinition @ SDL_hints.h:1118:9
+        // MacroDefinition @ SDL_hints.h:1133:9
         public const string SDL_HINT_RENDER_DIRECT3D_THREADSAFE = "SDL_RENDER_DIRECT3D_THREADSAFE";
 
-        // MacroDefinition @ SDL_hints.h:1138:9
+        // MacroDefinition @ SDL_hints.h:1153:9
         public const string SDL_HINT_RENDER_DRIVER = "SDL_RENDER_DRIVER";
 
-        // MacroDefinition @ SDL_hints.h:1149:9
+        // MacroDefinition @ SDL_hints.h:1164:9
         public const string SDL_HINT_RENDER_LOGICAL_SIZE_MODE = "SDL_RENDER_LOGICAL_SIZE_MODE";
 
-        // MacroDefinition @ SDL_hints.h:1160:9
+        // MacroDefinition @ SDL_hints.h:1175:9
         public const string SDL_HINT_RENDER_OPENGL_SHADERS = "SDL_RENDER_OPENGL_SHADERS";
 
-        // MacroDefinition @ SDL_hints.h:1172:9
+        // MacroDefinition @ SDL_hints.h:1187:9
         public const string SDL_HINT_RENDER_SCALE_QUALITY = "SDL_RENDER_SCALE_QUALITY";
 
-        // MacroDefinition @ SDL_hints.h:1183:9
+        // MacroDefinition @ SDL_hints.h:1198:9
         public const string SDL_HINT_RENDER_VSYNC = "SDL_RENDER_VSYNC";
 
-        // MacroDefinition @ SDL_hints.h:1195:9
+        // MacroDefinition @ SDL_hints.h:1210:9
         public const string SDL_HINT_RETURN_KEY_HIDES_IME = "SDL_RETURN_KEY_HIDES_IME";
 
-        // MacroDefinition @ SDL_hints.h:1203:9
+        // MacroDefinition @ SDL_hints.h:1218:9
         public const string SDL_HINT_RPI_VIDEO_LAYER = "SDL_RPI_VIDEO_LAYER";
 
-        // MacroDefinition @ SDL_hints.h:1223:9
+        // MacroDefinition @ SDL_hints.h:1238:9
         public const string SDL_HINT_SCREENSAVER_INHIBIT_ACTIVITY_NAME = "SDL_SCREENSAVER_INHIBIT_ACTIVITY_NAME";
 
-        // MacroDefinition @ SDL_hints.h:1242:9
+        // MacroDefinition @ SDL_hints.h:1257:9
         public const string SDL_HINT_THREAD_FORCE_REALTIME_TIME_CRITICAL = "SDL_THREAD_FORCE_REALTIME_TIME_CRITICAL";
 
-        // MacroDefinition @ SDL_hints.h:1259:9
+        // MacroDefinition @ SDL_hints.h:1274:9
         public const string SDL_HINT_THREAD_PRIORITY_POLICY = "SDL_THREAD_PRIORITY_POLICY";
 
-        // MacroDefinition @ SDL_hints.h:1273:9
+        // MacroDefinition @ SDL_hints.h:1288:9
         public const string SDL_HINT_THREAD_STACK_SIZE = "SDL_THREAD_STACK_SIZE";
 
-        // MacroDefinition @ SDL_hints.h:1289:9
+        // MacroDefinition @ SDL_hints.h:1304:9
         public const string SDL_HINT_TIMER_RESOLUTION = "SDL_TIMER_RESOLUTION";
 
-        // MacroDefinition @ SDL_hints.h:1300:9
+        // MacroDefinition @ SDL_hints.h:1315:9
         public const string SDL_HINT_TOUCH_MOUSE_EVENTS = "SDL_TOUCH_MOUSE_EVENTS";
 
-        // MacroDefinition @ SDL_hints.h:1310:9
+        // MacroDefinition @ SDL_hints.h:1325:9
         public const string SDL_HINT_TV_REMOTE_AS_JOYSTICK = "SDL_TV_REMOTE_AS_JOYSTICK";
 
-        // MacroDefinition @ SDL_hints.h:1321:9
+        // MacroDefinition @ SDL_hints.h:1336:9
         public const string SDL_HINT_VIDEO_ALLOW_SCREENSAVER = "SDL_VIDEO_ALLOW_SCREENSAVER";
 
-        // MacroDefinition @ SDL_hints.h:1340:9
+        // MacroDefinition @ SDL_hints.h:1355:9
         public const string SDL_HINT_VIDEO_DOUBLE_BUFFER = "SDL_VIDEO_DOUBLE_BUFFER";
 
-        // MacroDefinition @ SDL_hints.h:1351:9
+        // MacroDefinition @ SDL_hints.h:1366:9
         public const string SDL_HINT_VIDEO_EGL_ALLOW_TRANSPARENCY = "SDL_VIDEO_EGL_ALLOW_TRANSPARENCY";
 
-        // MacroDefinition @ SDL_hints.h:1366:9
+        // MacroDefinition @ SDL_hints.h:1381:9
         public const string SDL_HINT_VIDEO_EXTERNAL_CONTEXT = "SDL_VIDEO_EXTERNAL_CONTEXT";
 
-        // MacroDefinition @ SDL_hints.h:1371:9
+        // MacroDefinition @ SDL_hints.h:1386:9
         public const string SDL_HINT_VIDEO_HIGHDPI_DISABLED = "SDL_VIDEO_HIGHDPI_DISABLED";
 
-        // MacroDefinition @ SDL_hints.h:1390:9
+        // MacroDefinition @ SDL_hints.h:1405:9
         public const string SDL_HINT_VIDEO_MAC_FULLSCREEN_SPACES = "SDL_VIDEO_MAC_FULLSCREEN_SPACES";
 
-        // MacroDefinition @ SDL_hints.h:1398:9
+        // MacroDefinition @ SDL_hints.h:1413:9
         public const string SDL_HINT_VIDEO_MINIMIZE_ON_FOCUS_LOSS = "SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS";
 
-        // MacroDefinition @ SDL_hints.h:1409:9
+        // MacroDefinition @ SDL_hints.h:1424:9
         public const string SDL_HINT_VIDEO_WAYLAND_ALLOW_LIBDECOR = "SDL_VIDEO_WAYLAND_ALLOW_LIBDECOR";
 
-        // MacroDefinition @ SDL_hints.h:1428:9
+        // MacroDefinition @ SDL_hints.h:1443:9
         public const string SDL_HINT_VIDEO_WINDOW_SHARE_PIXEL_FORMAT = "SDL_VIDEO_WINDOW_SHARE_PIXEL_FORMAT";
 
-        // MacroDefinition @ SDL_hints.h:1444:9
+        // MacroDefinition @ SDL_hints.h:1459:9
         public const string SDL_HINT_VIDEO_WIN_D3DCOMPILER = "SDL_VIDEO_WIN_D3DCOMPILER";
 
-        // MacroDefinition @ SDL_hints.h:1455:9
+        // MacroDefinition @ SDL_hints.h:1470:9
         public const string SDL_HINT_VIDEO_X11_FORCE_EGL = "SDL_VIDEO_X11_FORCE_EGL";
 
-        // MacroDefinition @ SDL_hints.h:1467:9
+        // MacroDefinition @ SDL_hints.h:1482:9
         public const string SDL_HINT_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR = "SDL_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR";
 
-        // MacroDefinition @ SDL_hints.h:1481:9
+        // MacroDefinition @ SDL_hints.h:1496:9
         public const string SDL_HINT_VIDEO_X11_NET_WM_PING = "SDL_VIDEO_X11_NET_WM_PING";
 
-        // MacroDefinition @ SDL_hints.h:1487:9
+        // MacroDefinition @ SDL_hints.h:1502:9
         public const string SDL_HINT_VIDEO_X11_WINDOW_VISUALID = "SDL_VIDEO_X11_WINDOW_VISUALID";
 
-        // MacroDefinition @ SDL_hints.h:1498:9
+        // MacroDefinition @ SDL_hints.h:1513:9
         public const string SDL_HINT_VIDEO_X11_XINERAMA = "SDL_VIDEO_X11_XINERAMA";
 
-        // MacroDefinition @ SDL_hints.h:1509:9
+        // MacroDefinition @ SDL_hints.h:1524:9
         public const string SDL_HINT_VIDEO_X11_XRANDR = "SDL_VIDEO_X11_XRANDR";
 
-        // MacroDefinition @ SDL_hints.h:1520:9
+        // MacroDefinition @ SDL_hints.h:1535:9
         public const string SDL_HINT_VIDEO_X11_XVIDMODE = "SDL_VIDEO_X11_XVIDMODE";
 
-        // MacroDefinition @ SDL_hints.h:1547:9
+        // MacroDefinition @ SDL_hints.h:1562:9
         public const string SDL_HINT_WAVE_FACT_CHUNK = "SDL_WAVE_FACT_CHUNK";
 
-        // MacroDefinition @ SDL_hints.h:1568:9
+        // MacroDefinition @ SDL_hints.h:1583:9
         public const string SDL_HINT_WAVE_RIFF_CHUNK_SIZE = "SDL_WAVE_RIFF_CHUNK_SIZE";
 
-        // MacroDefinition @ SDL_hints.h:1584:9
+        // MacroDefinition @ SDL_hints.h:1599:9
         public const string SDL_HINT_WAVE_TRUNCATION = "SDL_WAVE_TRUNCATION";
 
-        // MacroDefinition @ SDL_hints.h:1600:9
+        // MacroDefinition @ SDL_hints.h:1615:9
         public const string SDL_HINT_WINDOWS_DISABLE_THREAD_NAMING = "SDL_WINDOWS_DISABLE_THREAD_NAMING";
 
-        // MacroDefinition @ SDL_hints.h:1611:9
+        // MacroDefinition @ SDL_hints.h:1626:9
         public const string SDL_HINT_WINDOWS_ENABLE_MESSAGELOOP = "SDL_WINDOWS_ENABLE_MESSAGELOOP";
 
-        // MacroDefinition @ SDL_hints.h:1625:9
+        // MacroDefinition @ SDL_hints.h:1640:9
         public const string SDL_HINT_WINDOWS_FORCE_MUTEX_CRITICAL_SECTIONS = "SDL_WINDOWS_FORCE_MUTEX_CRITICAL_SECTIONS";
 
-        // MacroDefinition @ SDL_hints.h:1641:9
+        // MacroDefinition @ SDL_hints.h:1656:9
         public const string SDL_HINT_WINDOWS_FORCE_SEMAPHORE_KERNEL = "SDL_WINDOWS_FORCE_SEMAPHORE_KERNEL";
 
-        // MacroDefinition @ SDL_hints.h:1646:9
+        // MacroDefinition @ SDL_hints.h:1661:9
         public const string SDL_HINT_WINDOWS_INTRESOURCE_ICON = "SDL_WINDOWS_INTRESOURCE_ICON";
 
-        // MacroDefinition @ SDL_hints.h:1647:9
+        // MacroDefinition @ SDL_hints.h:1662:9
         public const string SDL_HINT_WINDOWS_INTRESOURCE_ICON_SMALL = "SDL_WINDOWS_INTRESOURCE_ICON_SMALL";
 
-        // MacroDefinition @ SDL_hints.h:1656:9
+        // MacroDefinition @ SDL_hints.h:1671:9
         public const string SDL_HINT_WINDOWS_NO_CLOSE_ON_ALT_F4 = "SDL_WINDOWS_NO_CLOSE_ON_ALT_F4";
 
-        // MacroDefinition @ SDL_hints.h:1676:9
+        // MacroDefinition @ SDL_hints.h:1691:9
         public const string SDL_HINT_WINDOWS_USE_D3D9EX = "SDL_WINDOWS_USE_D3D9EX";
 
-        // MacroDefinition @ SDL_hints.h:1687:9
+        // MacroDefinition @ SDL_hints.h:1702:9
         public const string SDL_HINT_WINDOW_FRAME_USABLE_WHILE_CURSOR_HIDDEN = "SDL_WINDOW_FRAME_USABLE_WHILE_CURSOR_HIDDEN";
 
-        // MacroDefinition @ SDL_hints.h:1698:9
+        // MacroDefinition @ SDL_hints.h:1713:9
         public const string SDL_HINT_WINDOW_NO_ACTIVATION_WHEN_SHOWN = "SDL_WINDOW_NO_ACTIVATION_WHEN_SHOWN";
 
-        // MacroDefinition @ SDL_hints.h:1750:9
+        // MacroDefinition @ SDL_hints.h:1765:9
         public const string SDL_HINT_WINRT_HANDLE_BACK_BUTTON = "SDL_WINRT_HANDLE_BACK_BUTTON";
 
-        // MacroDefinition @ SDL_hints.h:1771:9
+        // MacroDefinition @ SDL_hints.h:1786:9
         public const string SDL_HINT_WINRT_PRIVACY_POLICY_LABEL = "SDL_WINRT_PRIVACY_POLICY_LABEL";
 
-        // MacroDefinition @ SDL_hints.h:1797:9
+        // MacroDefinition @ SDL_hints.h:1812:9
         public const string SDL_HINT_WINRT_PRIVACY_POLICY_URL = "SDL_WINRT_PRIVACY_POLICY_URL";
 
-        // MacroDefinition @ SDL_hints.h:1809:9
+        // MacroDefinition @ SDL_hints.h:1824:9
         public const string SDL_HINT_X11_FORCE_OVERRIDE_REDIRECT = "SDL_X11_FORCE_OVERRIDE_REDIRECT";
 
-        // MacroDefinition @ SDL_hints.h:1818:9
+        // MacroDefinition @ SDL_hints.h:1833:9
         public const string SDL_HINT_XINPUT_ENABLED = "SDL_XINPUT_ENABLED";
 
-        // MacroDefinition @ SDL_hints.h:1827:9
+        // MacroDefinition @ SDL_hints.h:1842:9
         public const string SDL_HINT_XINPUT_USE_OLD_JOYSTICK_MAPPING = "SDL_XINPUT_USE_OLD_JOYSTICK_MAPPING";
 
-        // MacroDefinition @ SDL_hints.h:1846:9
+        // MacroDefinition @ SDL_hints.h:1861:9
         public const string SDL_HINT_AUDIO_INCLUDE_MONITORS = "SDL_AUDIO_INCLUDE_MONITORS";
 
-        // MacroDefinition @ SDL_hints.h:1867:9
+        // MacroDefinition @ SDL_hints.h:1882:9
         public const string SDL_HINT_X11_WINDOW_TYPE = "SDL_X11_WINDOW_TYPE";
 
         // MacroDefinition @ SDL_log.h:54:9
