@@ -25,3135 +25,3135 @@ namespace bottlenoselabs
         private const string LibraryName = "SDL2";
 
         // Function @ SDL_platform.h:225:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GetPlatform();
 
         // Function @ SDL_stdinc.h:406:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_malloc(ulong size);
 
         // Function @ SDL_stdinc.h:407:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_calloc(ulong nmemb, ulong size);
 
         // Function @ SDL_stdinc.h:408:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_realloc(void* mem, ulong size);
 
         // Function @ SDL_stdinc.h:409:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_free(void* mem);
 
         // Function @ SDL_stdinc.h:421:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_GetMemoryFunctions(SDL_malloc_func* malloc_func, SDL_calloc_func* calloc_func, SDL_realloc_func* realloc_func, SDL_free_func* free_func);
 
         // Function @ SDL_stdinc.h:431:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetMemoryFunctions(SDL_malloc_func malloc_func, SDL_calloc_func calloc_func, SDL_realloc_func realloc_func, SDL_free_func free_func);
 
         // Function @ SDL_stdinc.h:441:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetNumAllocations();
 
         // Function @ SDL_stdinc.h:443:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_getenv(CString name);
 
         // Function @ SDL_stdinc.h:444:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_setenv(CString name, CString value, int overwrite);
 
         // Function @ SDL_stdinc.h:446:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_qsort(void* @base, ulong nmemb, ulong size, FnPtr_VoidPtr_VoidPtr_Int compare);
 
         // Function @ SDL_stdinc.h:448:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_abs(int x);
 
         // Function @ SDL_stdinc.h:455:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_isalpha(int x);
 
         // Function @ SDL_stdinc.h:456:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_isalnum(int x);
 
         // Function @ SDL_stdinc.h:457:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_isblank(int x);
 
         // Function @ SDL_stdinc.h:458:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_iscntrl(int x);
 
         // Function @ SDL_stdinc.h:459:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_isdigit(int x);
 
         // Function @ SDL_stdinc.h:460:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_isxdigit(int x);
 
         // Function @ SDL_stdinc.h:461:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_ispunct(int x);
 
         // Function @ SDL_stdinc.h:462:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_isspace(int x);
 
         // Function @ SDL_stdinc.h:463:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_isupper(int x);
 
         // Function @ SDL_stdinc.h:464:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_islower(int x);
 
         // Function @ SDL_stdinc.h:465:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_isprint(int x);
 
         // Function @ SDL_stdinc.h:466:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_isgraph(int x);
 
         // Function @ SDL_stdinc.h:467:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_toupper(int x);
 
         // Function @ SDL_stdinc.h:468:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_tolower(int x);
 
         // Function @ SDL_stdinc.h:470:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint SDL_crc32(uint crc, void* data, ulong len);
 
         // Function @ SDL_stdinc.h:472:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_memset(void* dst, int c, ulong len);
 
         // Function @ SDL_stdinc.h:509:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_memcpy(void* dst, void* src, ulong len);
 
         // Function @ SDL_stdinc.h:511:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_memmove(void* dst, void* src, ulong len);
 
         // Function @ SDL_stdinc.h:512:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_memcmp(void* s1, void* s2, ulong len);
 
         // Function @ SDL_stdinc.h:514:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_wcslen(CStringWide wstr);
 
         // Function @ SDL_stdinc.h:515:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_wcslcpy(CStringWide dst, CStringWide src, ulong maxlen);
 
         // Function @ SDL_stdinc.h:516:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_wcslcat(CStringWide dst, CStringWide src, ulong maxlen);
 
         // Function @ SDL_stdinc.h:517:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CStringWide SDL_wcsdup(CStringWide wstr);
 
         // Function @ SDL_stdinc.h:518:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CStringWide SDL_wcsstr(CStringWide haystack, CStringWide needle);
 
         // Function @ SDL_stdinc.h:520:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_wcscmp(CStringWide str1, CStringWide str2);
 
         // Function @ SDL_stdinc.h:521:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_wcsncmp(CStringWide str1, CStringWide str2, ulong maxlen);
 
         // Function @ SDL_stdinc.h:522:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_wcscasecmp(CStringWide str1, CStringWide str2);
 
         // Function @ SDL_stdinc.h:523:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_wcsncasecmp(CStringWide str1, CStringWide str2, ulong len);
 
         // Function @ SDL_stdinc.h:525:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_strlen(CString str);
 
         // Function @ SDL_stdinc.h:526:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_strlcpy(CString dst, CString src, ulong maxlen);
 
         // Function @ SDL_stdinc.h:527:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_utf8strlcpy(CString dst, CString src, ulong dst_bytes);
 
         // Function @ SDL_stdinc.h:528:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_strlcat(CString dst, CString src, ulong maxlen);
 
         // Function @ SDL_stdinc.h:529:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_strdup(CString str);
 
         // Function @ SDL_stdinc.h:530:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_strrev(CString str);
 
         // Function @ SDL_stdinc.h:531:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_strupr(CString str);
 
         // Function @ SDL_stdinc.h:532:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_strlwr(CString str);
 
         // Function @ SDL_stdinc.h:533:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_strchr(CString str, int c);
 
         // Function @ SDL_stdinc.h:534:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_strrchr(CString str, int c);
 
         // Function @ SDL_stdinc.h:535:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_strstr(CString haystack, CString needle);
 
         // Function @ SDL_stdinc.h:536:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_strtokr(CString s1, CString s2, CString* saveptr);
 
         // Function @ SDL_stdinc.h:537:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_utf8strlen(CString str);
 
         // Function @ SDL_stdinc.h:539:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_itoa(int value, CString str, int radix);
 
         // Function @ SDL_stdinc.h:540:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_uitoa(uint value, CString str, int radix);
 
         // Function @ SDL_stdinc.h:541:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_ltoa(long value, CString str, int radix);
 
         // Function @ SDL_stdinc.h:542:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_ultoa(ulong value, CString str, int radix);
 
         // Function @ SDL_stdinc.h:543:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_lltoa(long value, CString str, int radix);
 
         // Function @ SDL_stdinc.h:544:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_ulltoa(ulong value, CString str, int radix);
 
         // Function @ SDL_stdinc.h:546:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_atoi(CString str);
 
         // Function @ SDL_stdinc.h:547:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_atof(CString str);
 
         // Function @ SDL_stdinc.h:548:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern long SDL_strtol(CString str, CString* endp, int @base);
 
         // Function @ SDL_stdinc.h:549:39
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_strtoul(CString str, CString* endp, int @base);
 
         // Function @ SDL_stdinc.h:550:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern long SDL_strtoll(CString str, CString* endp, int @base);
 
         // Function @ SDL_stdinc.h:551:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_strtoull(CString str, CString* endp, int @base);
 
         // Function @ SDL_stdinc.h:552:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_strtod(CString str, CString* endp);
 
         // Function @ SDL_stdinc.h:554:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_strcmp(CString str1, CString str2);
 
         // Function @ SDL_stdinc.h:555:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_strncmp(CString str1, CString str2, ulong maxlen);
 
         // Function @ SDL_stdinc.h:556:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_strcasecmp(CString str1, CString str2);
 
         // Function @ SDL_stdinc.h:557:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_strncasecmp(CString str1, CString str2, ulong len);
 
         // Function @ SDL_stdinc.h:559:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_sscanf(CString text, CString fmt);
 
         // Function @ SDL_stdinc.h:560:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_vsscanf(CString text, CString fmt, nint ap);
 
         // Function @ SDL_stdinc.h:561:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_snprintf(CString text, ulong maxlen, CString fmt);
 
         // Function @ SDL_stdinc.h:562:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_vsnprintf(CString text, ulong maxlen, CString fmt, nint ap);
 
         // Function @ SDL_stdinc.h:563:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_asprintf(CString* strp, CString fmt);
 
         // Function @ SDL_stdinc.h:564:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_vasprintf(CString* strp, CString fmt, nint ap);
 
         // Function @ SDL_stdinc.h:586:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_acos(double x);
 
         // Function @ SDL_stdinc.h:587:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_acosf(float x);
 
         // Function @ SDL_stdinc.h:588:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_asin(double x);
 
         // Function @ SDL_stdinc.h:589:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_asinf(float x);
 
         // Function @ SDL_stdinc.h:590:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_atan(double x);
 
         // Function @ SDL_stdinc.h:591:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_atanf(float x);
 
         // Function @ SDL_stdinc.h:592:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_atan2(double y, double x);
 
         // Function @ SDL_stdinc.h:593:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_atan2f(float y, float x);
 
         // Function @ SDL_stdinc.h:594:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_ceil(double x);
 
         // Function @ SDL_stdinc.h:595:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_ceilf(float x);
 
         // Function @ SDL_stdinc.h:596:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_copysign(double x, double y);
 
         // Function @ SDL_stdinc.h:597:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_copysignf(float x, float y);
 
         // Function @ SDL_stdinc.h:598:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_cos(double x);
 
         // Function @ SDL_stdinc.h:599:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_cosf(float x);
 
         // Function @ SDL_stdinc.h:600:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_exp(double x);
 
         // Function @ SDL_stdinc.h:601:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_expf(float x);
 
         // Function @ SDL_stdinc.h:602:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_fabs(double x);
 
         // Function @ SDL_stdinc.h:603:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_fabsf(float x);
 
         // Function @ SDL_stdinc.h:604:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_floor(double x);
 
         // Function @ SDL_stdinc.h:605:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_floorf(float x);
 
         // Function @ SDL_stdinc.h:606:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_trunc(double x);
 
         // Function @ SDL_stdinc.h:607:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_truncf(float x);
 
         // Function @ SDL_stdinc.h:608:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_fmod(double x, double y);
 
         // Function @ SDL_stdinc.h:609:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_fmodf(float x, float y);
 
         // Function @ SDL_stdinc.h:610:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_log(double x);
 
         // Function @ SDL_stdinc.h:611:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_logf(float x);
 
         // Function @ SDL_stdinc.h:612:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_log10(double x);
 
         // Function @ SDL_stdinc.h:613:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_log10f(float x);
 
         // Function @ SDL_stdinc.h:614:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_pow(double x, double y);
 
         // Function @ SDL_stdinc.h:615:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_powf(float x, float y);
 
         // Function @ SDL_stdinc.h:616:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_round(double x);
 
         // Function @ SDL_stdinc.h:617:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_roundf(float x);
 
         // Function @ SDL_stdinc.h:618:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern long SDL_lround(double x);
 
         // Function @ SDL_stdinc.h:619:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern long SDL_lroundf(float x);
 
         // Function @ SDL_stdinc.h:620:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_scalbn(double x, int n);
 
         // Function @ SDL_stdinc.h:621:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_scalbnf(float x, int n);
 
         // Function @ SDL_stdinc.h:622:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_sin(double x);
 
         // Function @ SDL_stdinc.h:623:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_sinf(float x);
 
         // Function @ SDL_stdinc.h:624:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_sqrt(double x);
 
         // Function @ SDL_stdinc.h:625:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_sqrtf(float x);
 
         // Function @ SDL_stdinc.h:626:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_tan(double x);
 
         // Function @ SDL_stdinc.h:627:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_tanf(float x);
 
         // Function @ SDL_stdinc.h:637:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_iconv_t SDL_iconv_open(CString tocode, CString fromcode);
 
         // Function @ SDL_stdinc.h:639:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_iconv_close(SDL_iconv_t cd);
 
         // Function @ SDL_stdinc.h:640:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_iconv(SDL_iconv_t cd, CString* inbuf, ulong* inbytesleft, CString* outbuf, ulong* outbytesleft);
 
         // Function @ SDL_stdinc.h:650:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_iconv_string(CString tocode, CString fromcode, CString inbuf, ulong inbytesleft);
 
         // Function @ SDL_main.h:130:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_main(int argc, CString* argv);
 
         // Function @ SDL_main.h:146:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_SetMainReady();
 
         // Function @ SDL_assert.h:129:41
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_AssertState SDL_ReportAssertion(SDL_AssertData* param, CString param2, CString param3, int param4);
 
         // Function @ SDL_assert.h:224:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_SetAssertionHandler(SDL_AssertionHandler handler, void* userdata);
 
         // Function @ SDL_assert.h:243:46
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_AssertionHandler SDL_GetDefaultAssertionHandler();
 
         // Function @ SDL_assert.h:266:46
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_AssertionHandler SDL_GetAssertionHandler(void** puserdata);
 
         // Function @ SDL_assert.h:294:48
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_AssertData* SDL_GetAssertionReport();
 
         // Function @ SDL_assert.h:308:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_ResetAssertionReport();
 
         // Function @ SDL_atomic.h:106:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_AtomicTryLock(SDL_SpinLock* @lock);
 
         // Function @ SDL_atomic.h:121:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_AtomicLock(SDL_SpinLock* @lock);
 
         // Function @ SDL_atomic.h:138:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_AtomicUnlock(SDL_SpinLock* @lock);
 
         // Function @ SDL_atomic.h:183:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_MemoryBarrierReleaseFunction();
 
         // Function @ SDL_atomic.h:184:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_MemoryBarrierAcquireFunction();
 
         // Function @ SDL_atomic.h:263:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_AtomicCAS(SDL_atomic_t* a, int oldval, int newval);
 
         // Function @ SDL_atomic.h:281:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_AtomicSet(SDL_atomic_t* a, int v);
 
         // Function @ SDL_atomic.h:296:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_AtomicGet(SDL_atomic_t* a);
 
         // Function @ SDL_atomic.h:315:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_AtomicAdd(SDL_atomic_t* a, int v);
 
         // Function @ SDL_atomic.h:351:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_AtomicCASPtr(void** a, void* oldval, void* newval);
 
         // Function @ SDL_atomic.h:368:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_AtomicSetPtr(void** a, void* v);
 
         // Function @ SDL_atomic.h:384:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_AtomicGetPtr(void** a);
 
         // Function @ SDL_error.h:66:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetError(CString fmt);
 
         // Function @ SDL_error.h:103:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GetError();
 
         // Function @ SDL_error.h:120:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GetErrorMsg(CString errstr, int maxlen);
 
         // Function @ SDL_error.h:130:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_ClearError();
 
         // Function @ SDL_error.h:152:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_Error(SDL_errorcode code);
 
         // Function @ SDL_mutex.h:81:36
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_mutex* SDL_CreateMutex();
 
         // Function @ SDL_mutex.h:99:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_LockMutex(SDL_mutex* mutex);
 
         // Function @ SDL_mutex.h:122:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_TryLockMutex(SDL_mutex* mutex);
 
         // Function @ SDL_mutex.h:141:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_UnlockMutex(SDL_mutex* mutex);
 
         // Function @ SDL_mutex.h:162:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_DestroyMutex(SDL_mutex* mutex);
 
         // Function @ SDL_mutex.h:198:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_sem* SDL_CreateSemaphore(uint initial_value);
 
         // Function @ SDL_mutex.h:217:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_DestroySemaphore(SDL_sem* sem);
 
         // Function @ SDL_mutex.h:244:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SemWait(SDL_sem* sem);
 
         // Function @ SDL_mutex.h:268:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SemTryWait(SDL_sem* sem);
 
         // Function @ SDL_mutex.h:293:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SemWaitTimeout(SDL_sem* sem, uint ms);
 
         // Function @ SDL_mutex.h:311:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SemPost(SDL_sem* sem);
 
         // Function @ SDL_mutex.h:323:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint SDL_SemValue(SDL_sem* sem);
 
         // Function @ SDL_mutex.h:351:35
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_cond* SDL_CreateCond();
 
         // Function @ SDL_mutex.h:366:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_DestroyCond(SDL_cond* cond);
 
         // Function @ SDL_mutex.h:383:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_CondSignal(SDL_cond* cond);
 
         // Function @ SDL_mutex.h:400:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_CondBroadcast(SDL_cond* cond);
 
         // Function @ SDL_mutex.h:428:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_CondWait(SDL_cond* cond, SDL_mutex* mutex);
 
         // Function @ SDL_mutex.h:457:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_CondWaitTimeout(SDL_cond* cond, SDL_mutex* mutex, uint ms);
 
         // Function @ SDL_thread.h:208:1
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Thread* SDL_CreateThread(SDL_ThreadFunction fn, CString name, void* data);
 
         // Function @ SDL_thread.h:254:1
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Thread* SDL_CreateThreadWithStackSize(SDL_ThreadFunction fn, CString name, ulong stacksize, void* data);
 
         // Function @ SDL_thread.h:272:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GetThreadName(SDL_Thread* thread);
 
         // Function @ SDL_thread.h:290:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_threadID SDL_ThreadID();
 
         // Function @ SDL_thread.h:307:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_threadID SDL_GetThreadID(SDL_Thread* thread);
 
         // Function @ SDL_thread.h:322:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetThreadPriority(SDL_ThreadPriority priority);
 
         // Function @ SDL_thread.h:357:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_WaitThread(SDL_Thread* thread, long* status);
 
         // Function @ SDL_thread.h:393:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_DetachThread(SDL_Thread* thread);
 
         // Function @ SDL_thread.h:408:35
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_TLSID SDL_TLSCreate();
 
         // Function @ SDL_thread.h:422:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_TLSGet(SDL_TLSID id);
 
         // Function @ SDL_thread.h:447:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_TLSSet(SDL_TLSID id, void* value, FnPtr_VoidPtr_Void destructor);
 
         // Function @ SDL_thread.h:454:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_TLSCleanup();
 
         // Function @ SDL_rwops.h:220:36
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_RWops* SDL_RWFromFile(CString file, CString mode);
 
         // Function @ SDL_rwops.h:259:36
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_RWops* SDL_RWFromFP(void* fp, CBool autoclose);
 
         // Function @ SDL_rwops.h:294:36
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_RWops* SDL_RWFromMem(void* mem, int size);
 
         // Function @ SDL_rwops.h:328:36
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_RWops* SDL_RWFromConstMem(void* mem, int size);
 
         // Function @ SDL_rwops.h:357:36
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_RWops* SDL_AllocRW();
 
         // Function @ SDL_rwops.h:381:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_FreeRW(SDL_RWops* area);
 
         // Function @ SDL_rwops.h:399:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern long SDL_RWsize(SDL_RWops* context);
 
         // Function @ SDL_rwops.h:436:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern long SDL_RWseek(SDL_RWops* context, long offset, int whence);
 
         // Function @ SDL_rwops.h:464:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern long SDL_RWtell(SDL_RWops* context);
 
         // Function @ SDL_rwops.h:496:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_RWread(SDL_RWops* context, void* ptr, ulong size, ulong maxnum);
 
         // Function @ SDL_rwops.h:530:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_RWwrite(SDL_RWops* context, void* ptr, ulong size, ulong num);
 
         // Function @ SDL_rwops.h:561:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RWclose(SDL_RWops* context);
 
         // Function @ SDL_rwops.h:579:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_LoadFile_RW(SDL_RWops* src, ulong* datasize, int freesrc);
 
         // Function @ SDL_rwops.h:601:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_LoadFile(CString file, ulong* datasize);
 
         // Function @ SDL_rwops.h:621:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern byte SDL_ReadU8(SDL_RWops* src);
 
         // Function @ SDL_rwops.h:637:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ushort SDL_ReadLE16(SDL_RWops* src);
 
         // Function @ SDL_rwops.h:653:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ushort SDL_ReadBE16(SDL_RWops* src);
 
         // Function @ SDL_rwops.h:669:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint SDL_ReadLE32(SDL_RWops* src);
 
         // Function @ SDL_rwops.h:685:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint SDL_ReadBE32(SDL_RWops* src);
 
         // Function @ SDL_rwops.h:701:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_ReadLE64(SDL_RWops* src);
 
         // Function @ SDL_rwops.h:717:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_ReadBE64(SDL_RWops* src);
 
         // Function @ SDL_rwops.h:739:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_WriteU8(SDL_RWops* dst, byte value);
 
         // Function @ SDL_rwops.h:757:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_WriteLE16(SDL_RWops* dst, ushort value);
 
         // Function @ SDL_rwops.h:774:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_WriteBE16(SDL_RWops* dst, ushort value);
 
         // Function @ SDL_rwops.h:792:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_WriteLE32(SDL_RWops* dst, uint value);
 
         // Function @ SDL_rwops.h:809:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_WriteBE32(SDL_RWops* dst, uint value);
 
         // Function @ SDL_rwops.h:827:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_WriteLE64(SDL_RWops* dst, ulong value);
 
         // Function @ SDL_rwops.h:844:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_WriteBE64(SDL_RWops* dst, ulong value);
 
         // Function @ SDL_audio.h:276:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetNumAudioDrivers();
 
         // Function @ SDL_audio.h:298:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GetAudioDriver(int index);
 
         // Function @ SDL_audio.h:325:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_AudioInit(CString driver_name);
 
         // Function @ SDL_audio.h:339:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_AudioQuit();
 
         // Function @ SDL_audio.h:358:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GetCurrentAudioDriver();
 
         // Function @ SDL_audio.h:407:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_OpenAudio(SDL_AudioSpec* desired, SDL_AudioSpec* obtained);
 
         // Function @ SDL_audio.h:465:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetNumAudioDevices(int iscapture);
 
         // Function @ SDL_audio.h:491:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GetAudioDeviceName(int index, int iscapture);
 
         // Function @ SDL_audio.h:516:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetAudioDeviceSpec(int index, int iscapture, SDL_AudioSpec* spec);
 
         // Function @ SDL_audio.h:631:43
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_AudioDeviceID SDL_OpenAudioDevice(CString device, int iscapture, SDL_AudioSpec* desired, SDL_AudioSpec* obtained, int allowed_changes);
 
         // Function @ SDL_audio.h:671:41
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_AudioStatus SDL_GetAudioStatus();
 
         // Function @ SDL_audio.h:684:41
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_AudioStatus SDL_GetAudioDeviceStatus(SDL_AudioDeviceID dev);
 
         // Function @ SDL_audio.h:717:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_PauseAudio(int pause_on);
 
         // Function @ SDL_audio.h:747:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_PauseAudioDevice(SDL_AudioDeviceID dev, int pause_on);
 
         // Function @ SDL_audio.h:832:40
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_AudioSpec* SDL_LoadWAV_RW(SDL_RWops* src, int freesrc, SDL_AudioSpec* spec, byte** audio_buf, uint* audio_len);
 
         // Function @ SDL_audio.h:860:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_FreeWAV(byte* audio_buf);
 
         // Function @ SDL_audio.h:894:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_BuildAudioCVT(SDL_AudioCVT* cvt, SDL_AudioFormat src_format, byte src_channels, int src_rate, SDL_AudioFormat dst_format, byte dst_channels, int dst_rate);
 
         // Function @ SDL_audio.h:940:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_ConvertAudio(SDL_AudioCVT* cvt);
 
         // Function @ SDL_audio.h:973:43
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_AudioStream* SDL_NewAudioStream(SDL_AudioFormat src_format, byte src_channels, int src_rate, SDL_AudioFormat dst_format, byte dst_channels, int dst_rate);
 
         // Function @ SDL_audio.h:997:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_AudioStreamPut(SDL_AudioStream* stream, void* buf, int len);
 
         // Function @ SDL_audio.h:1016:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_AudioStreamGet(SDL_AudioStream* stream, void* buf, int len);
 
         // Function @ SDL_audio.h:1034:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_AudioStreamAvailable(SDL_AudioStream* stream);
 
         // Function @ SDL_audio.h:1053:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_AudioStreamFlush(SDL_AudioStream* stream);
 
         // Function @ SDL_audio.h:1067:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_AudioStreamClear(SDL_AudioStream* stream);
 
         // Function @ SDL_audio.h:1081:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_FreeAudioStream(SDL_AudioStream* stream);
 
         // Function @ SDL_audio.h:1107:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_MixAudio(byte* dst, byte* src, uint len, int volume);
 
         // Function @ SDL_audio.h:1140:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_MixAudioFormat(byte* dst, byte* src, SDL_AudioFormat format, uint len, int volume);
 
         // Function @ SDL_audio.h:1191:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_QueueAudio(SDL_AudioDeviceID dev, void* data, uint len);
 
         // Function @ SDL_audio.h:1239:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint SDL_DequeueAudio(SDL_AudioDeviceID dev, void* data, uint len);
 
         // Function @ SDL_audio.h:1273:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint SDL_GetQueuedAudioSize(SDL_AudioDeviceID dev);
 
         // Function @ SDL_audio.h:1307:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_ClearQueuedAudio(SDL_AudioDeviceID dev);
 
         // Function @ SDL_audio.h:1338:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_LockAudio();
 
         // Function @ SDL_audio.h:1377:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_LockAudioDevice(SDL_AudioDeviceID dev);
 
         // Function @ SDL_audio.h:1396:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_UnlockAudio();
 
         // Function @ SDL_audio.h:1410:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_UnlockAudioDevice(SDL_AudioDeviceID dev);
 
         // Function @ SDL_audio.h:1428:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_CloseAudio();
 
         // Function @ SDL_audio.h:1452:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_CloseAudioDevice(SDL_AudioDeviceID dev);
 
         // Function @ SDL_clipboard.h:53:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetClipboardText(CString text);
 
         // Function @ SDL_clipboard.h:71:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GetClipboardText();
 
         // Function @ SDL_clipboard.h:83:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_HasClipboardText();
 
         // Function @ SDL_cpuinfo.h:140:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetCPUCount();
 
         // Function @ SDL_cpuinfo.h:152:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetCPUCacheLineSize();
 
         // Function @ SDL_cpuinfo.h:174:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_HasRDTSC();
 
         // Function @ SDL_cpuinfo.h:197:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_HasAltiVec();
 
         // Function @ SDL_cpuinfo.h:219:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_HasMMX();
 
         // Function @ SDL_cpuinfo.h:241:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_Has3DNow();
 
         // Function @ SDL_cpuinfo.h:263:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_HasSSE();
 
         // Function @ SDL_cpuinfo.h:285:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_HasSSE2();
 
         // Function @ SDL_cpuinfo.h:307:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_HasSSE3();
 
         // Function @ SDL_cpuinfo.h:329:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_HasSSE41();
 
         // Function @ SDL_cpuinfo.h:351:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_HasSSE42();
 
         // Function @ SDL_cpuinfo.h:373:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_HasAVX();
 
         // Function @ SDL_cpuinfo.h:395:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_HasAVX2();
 
         // Function @ SDL_cpuinfo.h:408:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_HasAVX512F();
 
         // Function @ SDL_cpuinfo.h:423:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_HasARMSIMD();
 
         // Function @ SDL_cpuinfo.h:434:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_HasNEON();
 
         // Function @ SDL_cpuinfo.h:443:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetSystemRAM();
 
         // Function @ SDL_cpuinfo.h:462:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_SIMDGetAlignment();
 
         // Function @ SDL_cpuinfo.h:501:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_SIMDAlloc(ulong len);
 
         // Function @ SDL_cpuinfo.h:525:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_SIMDRealloc(void* mem, ulong len);
 
         // Function @ SDL_cpuinfo.h:549:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_SIMDFree(void* ptr);
 
         // Function @ SDL_pixels.h:361:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GetPixelFormatName(uint format);
 
         // Function @ SDL_pixels.h:379:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_PixelFormatEnumToMasks(uint format, long* bpp, uint* Rmask, uint* Gmask, uint* Bmask, uint* Amask);
 
         // Function @ SDL_pixels.h:403:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint SDL_MasksToPixelFormatEnum(int bpp, uint Rmask, uint Gmask, uint Bmask, uint Amask);
 
         // Function @ SDL_pixels.h:424:43
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_PixelFormat* SDL_AllocFormat(uint pixel_format);
 
         // Function @ SDL_pixels.h:435:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_FreeFormat(SDL_PixelFormat* format);
 
         // Function @ SDL_pixels.h:451:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Palette* SDL_AllocPalette(int ncolors);
 
         // Function @ SDL_pixels.h:466:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetPixelFormatPalette(SDL_PixelFormat* format, SDL_Palette* palette);
 
         // Function @ SDL_pixels.h:484:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetPaletteColors(SDL_Palette* palette, SDL_Color* colors, int firstcolor, int ncolors);
 
         // Function @ SDL_pixels.h:497:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_FreePalette(SDL_Palette* palette);
 
         // Function @ SDL_pixels.h:529:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint SDL_MapRGB(SDL_PixelFormat* format, byte r, byte g, byte b);
 
         // Function @ SDL_pixels.h:564:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint SDL_MapRGBA(SDL_PixelFormat* format, byte r, byte g, byte b, byte a);
 
         // Function @ SDL_pixels.h:589:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_GetRGB(uint pixel, SDL_PixelFormat* format, byte* r, byte* g, byte* b);
 
         // Function @ SDL_pixels.h:618:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_GetRGBA(uint pixel, SDL_PixelFormat* format, byte* r, byte* g, byte* b, byte* a);
 
         // Function @ SDL_pixels.h:633:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_CalculateGammaRamp(float gamma, ushort* ramp);
 
         // Function @ SDL_rect.h:135:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_HasIntersection(SDL_Rect* A, SDL_Rect* B);
 
         // Function @ SDL_rect.h:153:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_IntersectRect(SDL_Rect* A, SDL_Rect* B, SDL_Rect* result);
 
         // Function @ SDL_rect.h:167:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_UnionRect(SDL_Rect* A, SDL_Rect* B, SDL_Rect* result);
 
         // Function @ SDL_rect.h:188:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_EnclosePoints(SDL_Point* points, int count, SDL_Rect* clip, SDL_Rect* result);
 
         // Function @ SDL_rect.h:211:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_IntersectRectAndLine(SDL_Rect* rect, long* X1, long* Y1, long* X2, long* Y2);
 
         // Function @ SDL_blendmode.h:185:39
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_BlendMode SDL_ComposeCustomBlendMode(SDL_BlendFactor srcColorFactor, SDL_BlendFactor dstColorFactor, SDL_BlendOperation colorOperation, SDL_BlendFactor srcAlphaFactor, SDL_BlendFactor dstAlphaFactor, SDL_BlendOperation alphaOperation);
 
         // Function @ SDL_surface.h:158:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Surface* SDL_CreateRGBSurface(uint flags, int width, int height, int depth, uint Rmask, uint Gmask, uint Bmask, uint Amask);
 
         // Function @ SDL_surface.h:186:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Surface* SDL_CreateRGBSurfaceWithFormat(uint flags, int width, int height, int depth, uint format);
 
         // Function @ SDL_surface.h:217:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Surface* SDL_CreateRGBSurfaceFrom(void* pixels, int width, int height, int depth, int pitch, uint Rmask, uint Gmask, uint Bmask, uint Amask);
 
         // Function @ SDL_surface.h:255:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Surface* SDL_CreateRGBSurfaceWithFormatFrom(void* pixels, int width, int height, int depth, int pitch, uint format);
 
         // Function @ SDL_surface.h:272:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_FreeSurface(SDL_Surface* surface);
 
         // Function @ SDL_surface.h:286:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetSurfacePalette(SDL_Surface* surface, SDL_Palette* palette);
 
         // Function @ SDL_surface.h:310:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_LockSurface(SDL_Surface* surface);
 
         // Function @ SDL_surface.h:321:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_UnlockSurface(SDL_Surface* surface);
 
         // Function @ SDL_surface.h:345:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Surface* SDL_LoadBMP_RW(SDL_RWops* src, int freesrc);
 
         // Function @ SDL_surface.h:375:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SaveBMP_RW(SDL_Surface* surface, SDL_RWops* dst, int freedst);
 
         // Function @ SDL_surface.h:403:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetSurfaceRLE(SDL_Surface* surface, int flag);
 
         // Function @ SDL_surface.h:418:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_HasSurfaceRLE(SDL_Surface* surface);
 
         // Function @ SDL_surface.h:444:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetColorKey(SDL_Surface* surface, int flag, uint key);
 
         // Function @ SDL_surface.h:460:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_HasColorKey(SDL_Surface* surface);
 
         // Function @ SDL_surface.h:480:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetColorKey(SDL_Surface* surface, uint* key);
 
         // Function @ SDL_surface.h:504:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetSurfaceColorMod(SDL_Surface* surface, byte r, byte g, byte b);
 
         // Function @ SDL_surface.h:523:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetSurfaceColorMod(SDL_Surface* surface, byte* r, byte* g, byte* b);
 
         // Function @ SDL_surface.h:545:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetSurfaceAlphaMod(SDL_Surface* surface, byte alpha);
 
         // Function @ SDL_surface.h:561:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetSurfaceAlphaMod(SDL_Surface* surface, byte* alpha);
 
         // Function @ SDL_surface.h:580:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetSurfaceBlendMode(SDL_Surface* surface, SDL_BlendMode blendMode);
 
         // Function @ SDL_surface.h:595:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetSurfaceBlendMode(SDL_Surface* surface, SDL_BlendMode* blendMode);
 
         // Function @ SDL_surface.h:618:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_SetClipRect(SDL_Surface* surface, SDL_Rect* rect);
 
         // Function @ SDL_surface.h:637:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_GetClipRect(SDL_Surface* surface, SDL_Rect* rect);
 
         // Function @ SDL_surface.h:649:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Surface* SDL_DuplicateSurface(SDL_Surface* surface);
 
         // Function @ SDL_surface.h:673:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Surface* SDL_ConvertSurface(SDL_Surface* src, SDL_PixelFormat* fmt, uint flags);
 
         // Function @ SDL_surface.h:698:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Surface* SDL_ConvertSurfaceFormat(SDL_Surface* src, uint pixel_format, uint flags);
 
         // Function @ SDL_surface.h:717:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_ConvertPixels(int width, int height, uint src_format, void* src, int src_pitch, uint dst_format, void* dst, int dst_pitch);
 
         // Function @ SDL_surface.h:743:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_PremultiplyAlpha(int width, int height, uint src_format, void* src, int src_pitch, uint dst_format, void* dst, int dst_pitch);
 
         // Function @ SDL_surface.h:772:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_FillRect(SDL_Surface* dst, SDL_Rect* rect, uint color);
 
         // Function @ SDL_surface.h:798:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_FillRects(SDL_Surface* dst, SDL_Rect* rects, int count, uint color);
 
         // Function @ SDL_surface.h:871:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_UpperBlit(SDL_Surface* src, SDL_Rect* srcrect, SDL_Surface* dst, SDL_Rect* dstrect);
 
         // Function @ SDL_surface.h:897:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_LowerBlit(SDL_Surface* src, SDL_Rect* srcrect, SDL_Surface* dst, SDL_Rect* dstrect);
 
         // Function @ SDL_surface.h:910:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SoftStretch(SDL_Surface* src, SDL_Rect* srcrect, SDL_Surface* dst, SDL_Rect* dstrect);
 
         // Function @ SDL_surface.h:920:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SoftStretchLinear(SDL_Surface* src, SDL_Rect* srcrect, SDL_Surface* dst, SDL_Rect* dstrect);
 
         // Function @ SDL_surface.h:938:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_UpperBlitScaled(SDL_Surface* src, SDL_Rect* srcrect, SDL_Surface* dst, SDL_Rect* dstrect);
 
         // Function @ SDL_surface.h:961:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_LowerBlitScaled(SDL_Surface* src, SDL_Rect* srcrect, SDL_Surface* dst, SDL_Rect* dstrect);
 
         // Function @ SDL_surface.h:970:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_SetYUVConversionMode(SDL_YUV_CONVERSION_MODE mode);
 
         // Function @ SDL_surface.h:977:49
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_YUV_CONVERSION_MODE SDL_GetYUVConversionMode();
 
         // Function @ SDL_surface.h:985:49
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_YUV_CONVERSION_MODE SDL_GetYUVConversionModeForResolution(int width, int height);
 
         // Function @ SDL_video.h:293:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetNumVideoDrivers();
 
         // Function @ SDL_video.h:308:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GetVideoDriver(int index);
 
         // Function @ SDL_video.h:339:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_VideoInit(CString driver_name);
 
         // Function @ SDL_video.h:350:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_VideoQuit();
 
         // Function @ SDL_video.h:363:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GetCurrentVideoDriver();
 
         // Function @ SDL_video.h:375:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetNumVideoDisplays();
 
         // Function @ SDL_video.h:389:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GetDisplayName(int displayIndex);
 
         // Function @ SDL_video.h:405:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetDisplayBounds(int displayIndex, SDL_Rect* rect);
 
         // Function @ SDL_video.h:436:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetDisplayUsableBounds(int displayIndex, SDL_Rect* rect);
 
         // Function @ SDL_video.h:462:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetDisplayDPI(int displayIndex, float* ddpi, float* hdpi, float* vdpi);
 
         // Function @ SDL_video.h:475:48
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_DisplayOrientation SDL_GetDisplayOrientation(int displayIndex);
 
         // Function @ SDL_video.h:492:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetNumDisplayModes(int displayIndex);
 
         // Function @ SDL_video.h:516:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetDisplayMode(int displayIndex, int modeIndex, SDL_DisplayMode* mode);
 
         // Function @ SDL_video.h:539:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetDesktopDisplayMode(int displayIndex, SDL_DisplayMode* mode);
 
         // Function @ SDL_video.h:562:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetCurrentDisplayMode(int displayIndex, SDL_DisplayMode* mode);
 
         // Function @ SDL_video.h:588:43
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_DisplayMode* SDL_GetClosestDisplayMode(int displayIndex, SDL_DisplayMode* mode, SDL_DisplayMode* closest);
 
         // Function @ SDL_video.h:603:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetWindowDisplayIndex(SDL_Window* window);
 
         // Function @ SDL_video.h:624:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetWindowDisplayMode(SDL_Window* window, SDL_DisplayMode* mode);
 
         // Function @ SDL_video.h:641:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetWindowDisplayMode(SDL_Window* window, SDL_DisplayMode* mode);
 
         // Function @ SDL_video.h:656:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_GetWindowICCProfile(SDL_Window* window, ulong* size);
 
         // Function @ SDL_video.h:668:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint SDL_GetWindowPixelFormat(SDL_Window* window);
 
         // Function @ SDL_video.h:738:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Window* SDL_CreateWindow(CString title, int x, int y, int w, int h, uint flags);
 
         // Function @ SDL_video.h:759:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Window* SDL_CreateWindowFrom(void* data);
 
         // Function @ SDL_video.h:775:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint SDL_GetWindowID(SDL_Window* window);
 
         // Function @ SDL_video.h:791:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Window* SDL_GetWindowFromID(uint id);
 
         // Function @ SDL_video.h:809:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint SDL_GetWindowFlags(SDL_Window* window);
 
         // Function @ SDL_video.h:823:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_SetWindowTitle(SDL_Window* window, CString title);
 
         // Function @ SDL_video.h:837:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GetWindowTitle(SDL_Window* window);
 
         // Function @ SDL_video.h:847:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_SetWindowIcon(SDL_Window* window, SDL_Surface* icon);
 
         // Function @ SDL_video.h:864:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_SetWindowData(SDL_Window* window, CString name, void* userdata);
 
         // Function @ SDL_video.h:879:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_GetWindowData(SDL_Window* window, CString name);
 
         // Function @ SDL_video.h:897:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_SetWindowPosition(SDL_Window* window, int x, int y);
 
         // Function @ SDL_video.h:916:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_GetWindowPosition(SDL_Window* window, long* x, long* y);
 
         // Function @ SDL_video.h:941:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_SetWindowSize(SDL_Window* window, int w, int h);
 
         // Function @ SDL_video.h:968:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_GetWindowSize(SDL_Window* window, long* w, long* h);
 
         // Function @ SDL_video.h:1003:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetWindowBordersSize(SDL_Window* window, long* top, long* left, long* bottom, long* right);
 
         // Function @ SDL_video.h:1019:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_SetWindowMinimumSize(SDL_Window* window, int min_w, int min_h);
 
         // Function @ SDL_video.h:1036:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_GetWindowMinimumSize(SDL_Window* window, long* w, long* h);
 
         // Function @ SDL_video.h:1051:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_SetWindowMaximumSize(SDL_Window* window, int max_w, int max_h);
 
         // Function @ SDL_video.h:1068:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_GetWindowMaximumSize(SDL_Window* window, long* w, long* h);
 
         // Function @ SDL_video.h:1087:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_SetWindowBordered(SDL_Window* window, CBool bordered);
 
         // Function @ SDL_video.h:1106:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_SetWindowResizable(SDL_Window* window, CBool resizable);
 
         // Function @ SDL_video.h:1123:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_SetWindowAlwaysOnTop(SDL_Window* window, CBool on_top);
 
         // Function @ SDL_video.h:1136:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_ShowWindow(SDL_Window* window);
 
         // Function @ SDL_video.h:1147:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_HideWindow(SDL_Window* window);
 
         // Function @ SDL_video.h:1156:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_RaiseWindow(SDL_Window* window);
 
         // Function @ SDL_video.h:1168:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_MaximizeWindow(SDL_Window* window);
 
         // Function @ SDL_video.h:1180:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_MinimizeWindow(SDL_Window* window);
 
         // Function @ SDL_video.h:1192:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_RestoreWindow(SDL_Window* window);
 
         // Function @ SDL_video.h:1211:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetWindowFullscreen(SDL_Window* window, uint flags);
 
         // Function @ SDL_video.h:1237:39
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Surface* SDL_GetWindowSurface(SDL_Window* window);
 
         // Function @ SDL_video.h:1256:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_UpdateWindowSurface(SDL_Window* window);
 
         // Function @ SDL_video.h:1278:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_UpdateWindowSurfaceRects(SDL_Window* window, SDL_Rect* rects, int numrects);
 
         // Function @ SDL_video.h:1300:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_SetWindowGrab(SDL_Window* window, CBool grabbed);
 
         // Function @ SDL_video.h:1331:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_SetWindowKeyboardGrab(SDL_Window* window, CBool grabbed);
 
         // Function @ SDL_video.h:1347:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_SetWindowMouseGrab(SDL_Window* window, CBool grabbed);
 
         // Function @ SDL_video.h:1360:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_GetWindowGrab(SDL_Window* window);
 
         // Function @ SDL_video.h:1373:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_GetWindowKeyboardGrab(SDL_Window* window);
 
         // Function @ SDL_video.h:1386:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_GetWindowMouseGrab(SDL_Window* window);
 
         // Function @ SDL_video.h:1398:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Window* SDL_GetGrabbedWindow();
 
         // Function @ SDL_video.h:1417:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetWindowMouseRect(SDL_Window* window, SDL_Rect* rect);
 
         // Function @ SDL_video.h:1430:42
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Rect* SDL_GetWindowMouseRect(SDL_Window* window);
 
         // Function @ SDL_video.h:1458:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetWindowBrightness(SDL_Window* window, float brightness);
 
         // Function @ SDL_video.h:1477:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_GetWindowBrightness(SDL_Window* window);
 
         // Function @ SDL_video.h:1496:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetWindowOpacity(SDL_Window* window, float opacity);
 
         // Function @ SDL_video.h:1517:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetWindowOpacity(SDL_Window* window, float* out_opacity);
 
         // Function @ SDL_video.h:1529:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetWindowModalFor(SDL_Window* modal_window, SDL_Window* parent_window);
 
         // Function @ SDL_video.h:1546:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetWindowInputFocus(SDL_Window* window);
 
         // Function @ SDL_video.h:1578:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetWindowGammaRamp(SDL_Window* window, ushort* red, ushort* green, ushort* blue);
 
         // Function @ SDL_video.h:1606:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetWindowGammaRamp(SDL_Window* window, ushort* red, ushort* green, ushort* blue);
 
         // Function @ SDL_video.h:1684:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetWindowHitTest(SDL_Window* window, SDL_HitTest callback, void* callback_data);
 
         // Function @ SDL_video.h:1698:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_FlashWindow(SDL_Window* window, SDL_FlashOperation operation);
 
         // Function @ SDL_video.h:1713:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_DestroyWindow(SDL_Window* window);
 
         // Function @ SDL_video.h:1732:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_IsScreenSaverEnabled();
 
         // Function @ SDL_video.h:1742:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_EnableScreenSaver();
 
         // Function @ SDL_video.h:1755:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_DisableScreenSaver();
 
         // Function @ SDL_video.h:1783:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GL_LoadLibrary(CString path);
 
         // Function @ SDL_video.h:1836:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_GL_GetProcAddress(CString proc);
 
         // Function @ SDL_video.h:1845:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_GL_UnloadLibrary();
 
         // Function @ SDL_video.h:1866:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_GL_ExtensionSupported(CString extension);
 
         // Function @ SDL_video.h:1877:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_GL_ResetAttributes();
 
         // Function @ SDL_video.h:1897:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GL_SetAttribute(SDL_GLattr attr, int value);
 
         // Function @ SDL_video.h:1912:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GL_GetAttribute(SDL_GLattr attr, long* value);
 
         // Function @ SDL_video.h:1934:39
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_GLContext SDL_GL_CreateContext(SDL_Window* window);
 
         // Function @ SDL_video.h:1951:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GL_MakeCurrent(SDL_Window* window, SDL_GLContext context);
 
         // Function @ SDL_video.h:1962:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Window* SDL_GL_GetCurrentWindow();
 
         // Function @ SDL_video.h:1974:39
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_GLContext SDL_GL_GetCurrentContext();
 
         // Function @ SDL_video.h:1996:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_GL_GetDrawableSize(SDL_Window* window, long* w, long* h);
 
         // Function @ SDL_video.h:2031:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GL_SetSwapInterval(int interval);
 
         // Function @ SDL_video.h:2048:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GL_GetSwapInterval();
 
         // Function @ SDL_video.h:2064:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_GL_SwapWindow(SDL_Window* window);
 
         // Function @ SDL_video.h:2075:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_GL_DeleteContext(SDL_GLContext context);
 
         // Function @ SDL_keyboard.h:64:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Window* SDL_GetKeyboardFocus();
 
         // Function @ SDL_keyboard.h:94:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern byte* SDL_GetKeyboardState(long* numkeys);
 
         // Function @ SDL_keyboard.h:107:36
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Keymod SDL_GetModState();
 
         // Function @ SDL_keyboard.h:126:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_SetModState(SDL_Keymod modstate);
 
         // Function @ SDL_keyboard.h:142:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Keycode SDL_GetKeyFromScancode(SDL_Scancode scancode);
 
         // Function @ SDL_keyboard.h:158:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Scancode SDL_GetScancodeFromKey(SDL_Keycode key);
 
         // Function @ SDL_keyboard.h:183:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GetScancodeName(SDL_Scancode scancode);
 
         // Function @ SDL_keyboard.h:198:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Scancode SDL_GetScancodeFromName(CString name);
 
         // Function @ SDL_keyboard.h:217:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GetKeyName(SDL_Keycode key);
 
         // Function @ SDL_keyboard.h:232:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Keycode SDL_GetKeyFromName(CString name);
 
         // Function @ SDL_keyboard.h:249:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_StartTextInput();
 
         // Function @ SDL_keyboard.h:260:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_IsTextInputActive();
 
         // Function @ SDL_keyboard.h:269:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_StopTextInput();
 
         // Function @ SDL_keyboard.h:285:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_SetTextInputRect(SDL_Rect* rect);
 
         // Function @ SDL_keyboard.h:298:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_HasScreenKeyboardSupport();
 
         // Function @ SDL_keyboard.h:310:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_IsScreenKeyboardShown(SDL_Window* window);
 
         // Function @ SDL_mouse.h:81:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Window* SDL_GetMouseFocus();
 
         // Function @ SDL_mouse.h:104:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint SDL_GetMouseState(long* x, long* y);
 
         // Function @ SDL_mouse.h:133:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint SDL_GetGlobalMouseState(long* x, long* y);
 
         // Function @ SDL_mouse.h:152:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint SDL_GetRelativeMouseState(long* x, long* y);
 
         // Function @ SDL_mouse.h:171:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_WarpMouseInWindow(SDL_Window* window, int x, int y);
 
         // Function @ SDL_mouse.h:194:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_WarpMouseGlobal(int x, int y);
 
         // Function @ SDL_mouse.h:219:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetRelativeMouseMode(CBool enabled);
 
         // Function @ SDL_mouse.h:256:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_CaptureMouse(CBool enabled);
 
         // Function @ SDL_mouse.h:267:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_GetRelativeMouseMode();
 
         // Function @ SDL_mouse.h:310:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Cursor* SDL_CreateCursor(byte* data, byte* mask, int w, int h, int hot_x, int hot_y);
 
         // Function @ SDL_mouse.h:329:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Cursor* SDL_CreateColorCursor(SDL_Surface* surface, int hot_x, int hot_y);
 
         // Function @ SDL_mouse.h:344:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Cursor* SDL_CreateSystemCursor(SDL_SystemCursor id);
 
         // Function @ SDL_mouse.h:362:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_SetCursor(SDL_Cursor* cursor);
 
         // Function @ SDL_mouse.h:376:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Cursor* SDL_GetCursor();
 
         // Function @ SDL_mouse.h:387:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Cursor* SDL_GetDefaultCursor();
 
         // Function @ SDL_mouse.h:403:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_FreeCursor(SDL_Cursor* cursor);
 
         // Function @ SDL_mouse.h:425:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_ShowCursor(int toggle);
 
         // Function @ SDL_joystick.h:130:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_LockJoysticks();
 
         // Function @ SDL_joystick.h:145:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_UnlockJoysticks();
 
         // Function @ SDL_joystick.h:158:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_NumJoysticks();
 
         // Function @ SDL_joystick.h:175:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_JoystickNameForIndex(int device_index);
 
         // Function @ SDL_joystick.h:183:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_JoystickGetDevicePlayerIndex(int device_index);
 
         // Function @ SDL_joystick.h:201:42
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_JoystickGUID SDL_JoystickGetDeviceGUID(int device_index);
 
         // Function @ SDL_joystick.h:216:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ushort SDL_JoystickGetDeviceVendor(int device_index);
 
         // Function @ SDL_joystick.h:231:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ushort SDL_JoystickGetDeviceProduct(int device_index);
 
         // Function @ SDL_joystick.h:246:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ushort SDL_JoystickGetDeviceProductVersion(int device_index);
 
         // Function @ SDL_joystick.h:260:42
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_JoystickType SDL_JoystickGetDeviceType(int device_index);
 
         // Function @ SDL_joystick.h:275:40
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_JoystickID SDL_JoystickGetDeviceInstanceID(int device_index);
 
         // Function @ SDL_joystick.h:297:39
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Joystick* SDL_JoystickOpen(int device_index);
 
         // Function @ SDL_joystick.h:308:39
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Joystick* SDL_JoystickFromInstanceID(SDL_JoystickID instance_id);
 
         // Function @ SDL_joystick.h:319:39
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Joystick* SDL_JoystickFromPlayerIndex(int player_index);
 
         // Function @ SDL_joystick.h:328:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_JoystickAttachVirtual(SDL_JoystickType type, int naxes, int nbuttons, int nhats);
 
         // Function @ SDL_joystick.h:342:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_JoystickDetachVirtual(int device_index);
 
         // Function @ SDL_joystick.h:352:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_JoystickIsVirtual(int device_index);
 
         // Function @ SDL_joystick.h:370:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_JoystickSetVirtualAxis(SDL_Joystick* joystick, int axis, short value);
 
         // Function @ SDL_joystick.h:388:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_JoystickSetVirtualButton(SDL_Joystick* joystick, int button, byte value);
 
         // Function @ SDL_joystick.h:406:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_JoystickSetVirtualHat(SDL_Joystick* joystick, int hat, byte value);
 
         // Function @ SDL_joystick.h:420:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_JoystickName(SDL_Joystick* joystick);
 
         // Function @ SDL_joystick.h:433:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_JoystickGetPlayerIndex(SDL_Joystick* joystick);
 
         // Function @ SDL_joystick.h:443:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_JoystickSetPlayerIndex(SDL_Joystick* joystick, int player_index);
 
         // Function @ SDL_joystick.h:460:42
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_JoystickGUID SDL_JoystickGetGUID(SDL_Joystick* joystick);
 
         // Function @ SDL_joystick.h:472:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ushort SDL_JoystickGetVendor(SDL_Joystick* joystick);
 
         // Function @ SDL_joystick.h:484:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ushort SDL_JoystickGetProduct(SDL_Joystick* joystick);
 
         // Function @ SDL_joystick.h:496:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ushort SDL_JoystickGetProductVersion(SDL_Joystick* joystick);
 
         // Function @ SDL_joystick.h:509:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_JoystickGetSerial(SDL_Joystick* joystick);
 
         // Function @ SDL_joystick.h:519:42
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_JoystickType SDL_JoystickGetType(SDL_Joystick* joystick);
 
         // Function @ SDL_joystick.h:536:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_JoystickGetGUIDString(SDL_JoystickGUID guid, CString pszGUID, int cbGUID);
 
         // Function @ SDL_joystick.h:552:42
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_JoystickGUID SDL_JoystickGetGUIDFromString(CString pchGUID);
 
         // Function @ SDL_joystick.h:566:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_JoystickGetAttached(SDL_Joystick* joystick);
 
         // Function @ SDL_joystick.h:579:40
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_JoystickID SDL_JoystickInstanceID(SDL_Joystick* joystick);
 
         // Function @ SDL_joystick.h:598:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_JoystickNumAxes(SDL_Joystick* joystick);
 
         // Function @ SDL_joystick.h:616:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_JoystickNumBalls(SDL_Joystick* joystick);
 
         // Function @ SDL_joystick.h:630:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_JoystickNumHats(SDL_Joystick* joystick);
 
         // Function @ SDL_joystick.h:644:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_JoystickNumButtons(SDL_Joystick* joystick);
 
         // Function @ SDL_joystick.h:656:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_JoystickUpdate();
 
         // Function @ SDL_joystick.h:681:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_JoystickEventState(int state);
 
         // Function @ SDL_joystick.h:708:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern short SDL_JoystickGetAxis(SDL_Joystick* joystick, int axis);
 
         // Function @ SDL_joystick.h:725:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_JoystickGetAxisInitialState(SDL_Joystick* joystick, int axis, short* state);
 
         // Function @ SDL_joystick.h:766:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern byte SDL_JoystickGetHat(SDL_Joystick* joystick, int hat);
 
         // Function @ SDL_joystick.h:788:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_JoystickGetBall(SDL_Joystick* joystick, int ball, long* dx, long* dy);
 
         // Function @ SDL_joystick.h:803:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern byte SDL_JoystickGetButton(SDL_Joystick* joystick, int button);
 
         // Function @ SDL_joystick.h:824:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_JoystickRumble(SDL_Joystick* joystick, ushort low_frequency_rumble, ushort high_frequency_rumble, uint duration_ms);
 
         // Function @ SDL_joystick.h:849:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_JoystickRumbleTriggers(SDL_Joystick* joystick, ushort left_rumble, ushort right_rumble, uint duration_ms);
 
         // Function @ SDL_joystick.h:862:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_JoystickHasLED(SDL_Joystick* joystick);
 
         // Function @ SDL_joystick.h:874:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_JoystickHasRumble(SDL_Joystick* joystick);
 
         // Function @ SDL_joystick.h:886:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_JoystickHasRumbleTriggers(SDL_Joystick* joystick);
 
         // Function @ SDL_joystick.h:902:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_JoystickSetLED(SDL_Joystick* joystick, byte red, byte green, byte blue);
 
         // Function @ SDL_joystick.h:914:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_JoystickSendEffect(SDL_Joystick* joystick, void* data, int size);
 
         // Function @ SDL_joystick.h:925:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_JoystickClose(SDL_Joystick* joystick);
 
         // Function @ SDL_joystick.h:936:48
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_JoystickPowerLevel SDL_JoystickCurrentPowerLevel(SDL_Joystick* joystick);
 
         // Function @ SDL_sensor.h:139:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_LockSensors();
 
         // Function @ SDL_sensor.h:140:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_UnlockSensors();
 
         // Function @ SDL_sensor.h:149:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_NumSensors();
 
         // Function @ SDL_sensor.h:159:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_SensorGetDeviceName(int device_index);
 
         // Function @ SDL_sensor.h:170:40
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_SensorType SDL_SensorGetDeviceType(int device_index);
 
         // Function @ SDL_sensor.h:181:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SensorGetDeviceNonPortableType(int device_index);
 
         // Function @ SDL_sensor.h:191:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_SensorID SDL_SensorGetDeviceInstanceID(int device_index);
 
         // Function @ SDL_sensor.h:201:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Sensor* SDL_SensorOpen(int device_index);
 
         // Function @ SDL_sensor.h:211:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Sensor* SDL_SensorFromInstanceID(SDL_SensorID instance_id);
 
         // Function @ SDL_sensor.h:221:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_SensorGetName(SDL_Sensor* sensor);
 
         // Function @ SDL_sensor.h:232:40
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_SensorType SDL_SensorGetType(SDL_Sensor* sensor);
 
         // Function @ SDL_sensor.h:242:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SensorGetNonPortableType(SDL_Sensor* sensor);
 
         // Function @ SDL_sensor.h:252:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_SensorID SDL_SensorGetInstanceID(SDL_Sensor* sensor);
 
         // Function @ SDL_sensor.h:266:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SensorGetData(SDL_Sensor* sensor, float* data, int num_values);
 
         // Function @ SDL_sensor.h:275:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_SensorClose(SDL_Sensor* sensor);
 
         // Function @ SDL_sensor.h:288:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_SensorUpdate();
 
         // Function @ SDL_gamecontroller.h:161:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GameControllerAddMappingsFromRW(SDL_RWops* rw, int freerw);
 
         // Function @ SDL_gamecontroller.h:197:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GameControllerAddMapping(CString mappingString);
 
         // Function @ SDL_gamecontroller.h:206:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GameControllerNumMappings();
 
         // Function @ SDL_gamecontroller.h:216:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GameControllerMappingForIndex(int mapping_index);
 
         // Function @ SDL_gamecontroller.h:232:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GameControllerMappingForGUID(SDL_JoystickGUID guid);
 
         // Function @ SDL_gamecontroller.h:251:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GameControllerMapping(SDL_GameController* gamecontroller);
 
         // Function @ SDL_gamecontroller.h:269:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_IsGameController(int joystick_index);
 
         // Function @ SDL_gamecontroller.h:290:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GameControllerNameForIndex(int joystick_index);
 
         // Function @ SDL_gamecontroller.h:303:48
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_GameControllerType SDL_GameControllerTypeForIndex(int joystick_index);
 
         // Function @ SDL_gamecontroller.h:317:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GameControllerMappingForDeviceIndex(int joystick_index);
 
         // Function @ SDL_gamecontroller.h:341:45
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_GameController* SDL_GameControllerOpen(int joystick_index);
 
         // Function @ SDL_gamecontroller.h:352:45
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_GameController* SDL_GameControllerFromInstanceID(SDL_JoystickID joyid);
 
         // Function @ SDL_gamecontroller.h:369:45
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_GameController* SDL_GameControllerFromPlayerIndex(int player_index);
 
         // Function @ SDL_gamecontroller.h:387:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GameControllerName(SDL_GameController* gamecontroller);
 
         // Function @ SDL_gamecontroller.h:400:48
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_GameControllerType SDL_GameControllerGetType(SDL_GameController* gamecontroller);
 
         // Function @ SDL_gamecontroller.h:412:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GameControllerGetPlayerIndex(SDL_GameController* gamecontroller);
 
         // Function @ SDL_gamecontroller.h:422:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_GameControllerSetPlayerIndex(SDL_GameController* gamecontroller, int player_index);
 
         // Function @ SDL_gamecontroller.h:434:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ushort SDL_GameControllerGetVendor(SDL_GameController* gamecontroller);
 
         // Function @ SDL_gamecontroller.h:446:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ushort SDL_GameControllerGetProduct(SDL_GameController* gamecontroller);
 
         // Function @ SDL_gamecontroller.h:458:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ushort SDL_GameControllerGetProductVersion(SDL_GameController* gamecontroller);
 
         // Function @ SDL_gamecontroller.h:471:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GameControllerGetSerial(SDL_GameController* gamecontroller);
 
         // Function @ SDL_gamecontroller.h:486:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_GameControllerGetAttached(SDL_GameController* gamecontroller);
 
         // Function @ SDL_gamecontroller.h:507:39
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Joystick* SDL_GameControllerGetJoystick(SDL_GameController* gamecontroller);
 
         // Function @ SDL_gamecontroller.h:527:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GameControllerEventState(int state);
 
         // Function @ SDL_gamecontroller.h:538:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_GameControllerUpdate();
 
         // Function @ SDL_gamecontroller.h:582:48
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_GameControllerAxis SDL_GameControllerGetAxisFromString(CString str);
 
         // Function @ SDL_gamecontroller.h:598:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GameControllerGetStringForAxis(SDL_GameControllerAxis axis);
 
         // Function @ SDL_gamecontroller.h:614:1
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_GameControllerButtonBind SDL_GameControllerGetBindForAxis(SDL_GameController* gamecontroller, SDL_GameControllerAxis axis);
 
         // Function @ SDL_gamecontroller.h:630:1
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_GameControllerHasAxis(SDL_GameController* gamecontroller, SDL_GameControllerAxis axis);
 
         // Function @ SDL_gamecontroller.h:650:1
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern short SDL_GameControllerGetAxis(SDL_GameController* gamecontroller, SDL_GameControllerAxis axis);
 
         // Function @ SDL_gamecontroller.h:696:50
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_GameControllerButton SDL_GameControllerGetButtonFromString(CString str);
 
         // Function @ SDL_gamecontroller.h:712:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GameControllerGetStringForButton(SDL_GameControllerButton button);
 
         // Function @ SDL_gamecontroller.h:728:1
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_GameControllerButtonBind SDL_GameControllerGetBindForButton(SDL_GameController* gamecontroller, SDL_GameControllerButton button);
 
         // Function @ SDL_gamecontroller.h:743:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_GameControllerHasButton(SDL_GameController* gamecontroller, SDL_GameControllerButton button);
 
         // Function @ SDL_gamecontroller.h:758:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern byte SDL_GameControllerGetButton(SDL_GameController* gamecontroller, SDL_GameControllerButton button);
 
         // Function @ SDL_gamecontroller.h:766:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GameControllerGetNumTouchpads(SDL_GameController* gamecontroller);
 
         // Function @ SDL_gamecontroller.h:774:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GameControllerGetNumTouchpadFingers(SDL_GameController* gamecontroller, int touchpad);
 
         // Function @ SDL_gamecontroller.h:781:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GameControllerGetTouchpadFinger(SDL_GameController* gamecontroller, int touchpad, int finger, byte* state, float* x, float* y, float* pressure);
 
         // Function @ SDL_gamecontroller.h:792:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_GameControllerHasSensor(SDL_GameController* gamecontroller, SDL_SensorType type);
 
         // Function @ SDL_gamecontroller.h:804:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GameControllerSetSensorEnabled(SDL_GameController* gamecontroller, SDL_SensorType type, CBool enabled);
 
         // Function @ SDL_gamecontroller.h:815:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_GameControllerIsSensorEnabled(SDL_GameController* gamecontroller, SDL_SensorType type);
 
         // Function @ SDL_gamecontroller.h:827:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_GameControllerGetSensorDataRate(SDL_GameController* gamecontroller, SDL_SensorType type);
 
         // Function @ SDL_gamecontroller.h:843:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GameControllerGetSensorData(SDL_GameController* gamecontroller, SDL_SensorType type, float* data, int num_values);
 
         // Function @ SDL_gamecontroller.h:863:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GameControllerRumble(SDL_GameController* gamecontroller, ushort low_frequency_rumble, ushort high_frequency_rumble, uint duration_ms);
 
-        // Function @ SDL_gamecontroller.h:887:29
-        [DllImport(LibraryName)]
+        // Function @ SDL_gamecontroller.h:888:29
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GameControllerRumbleTriggers(SDL_GameController* gamecontroller, ushort left_rumble, ushort right_rumble, uint duration_ms);
 
-        // Function @ SDL_gamecontroller.h:898:34
-        [DllImport(LibraryName)]
+        // Function @ SDL_gamecontroller.h:899:34
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_GameControllerHasLED(SDL_GameController* gamecontroller);
 
-        // Function @ SDL_gamecontroller.h:911:34
-        [DllImport(LibraryName)]
+        // Function @ SDL_gamecontroller.h:912:34
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_GameControllerHasRumble(SDL_GameController* gamecontroller);
 
-        // Function @ SDL_gamecontroller.h:924:34
-        [DllImport(LibraryName)]
+        // Function @ SDL_gamecontroller.h:925:34
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_GameControllerHasRumbleTriggers(SDL_GameController* gamecontroller);
 
-        // Function @ SDL_gamecontroller.h:937:29
-        [DllImport(LibraryName)]
+        // Function @ SDL_gamecontroller.h:938:29
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GameControllerSetLED(SDL_GameController* gamecontroller, byte red, byte green, byte blue);
 
-        // Function @ SDL_gamecontroller.h:950:29
-        [DllImport(LibraryName)]
+        // Function @ SDL_gamecontroller.h:951:29
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GameControllerSendEffect(SDL_GameController* gamecontroller, void* data, int size);
 
-        // Function @ SDL_gamecontroller.h:962:30
-        [DllImport(LibraryName)]
+        // Function @ SDL_gamecontroller.h:963:30
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_GameControllerClose(SDL_GameController* gamecontroller);
 
-        // Function @ SDL_gamecontroller.h:976:37
-        [DllImport(LibraryName)]
+        // Function @ SDL_gamecontroller.h:977:37
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GameControllerGetAppleSFSymbolsNameForButton(SDL_GameController* gamecontroller, SDL_GameControllerButton button);
 
-        // Function @ SDL_gamecontroller.h:990:37
-        [DllImport(LibraryName)]
+        // Function @ SDL_gamecontroller.h:991:37
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GameControllerGetAppleSFSymbolsNameForAxis(SDL_GameController* gamecontroller, SDL_GameControllerAxis axis);
 
         // Function @ SDL_touch.h:83:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetNumTouchDevices();
 
         // Function @ SDL_touch.h:96:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_TouchID SDL_GetTouchDevice(int index);
 
         // Function @ SDL_touch.h:104:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GetTouchName(int index);
 
         // Function @ SDL_touch.h:111:45
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_TouchDeviceType SDL_GetTouchDeviceType(SDL_TouchID touchID);
 
         // Function @ SDL_touch.h:124:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetNumTouchFingers(SDL_TouchID touchID);
 
         // Function @ SDL_touch.h:140:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Finger* SDL_GetTouchFinger(SDL_TouchID touchID, int index);
 
         // Function @ SDL_gesture.h:61:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RecordGesture(SDL_TouchID touchId);
 
         // Function @ SDL_gesture.h:76:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SaveAllDollarTemplates(SDL_RWops* dst);
 
         // Function @ SDL_gesture.h:91:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SaveDollarTemplate(SDL_GestureID gestureId, SDL_RWops* dst);
 
         // Function @ SDL_gesture.h:107:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_LoadDollarTemplates(SDL_TouchID touchId, SDL_RWops* src);
 
         // Function @ SDL_events.h:672:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_PumpEvents();
 
         // Function @ SDL_events.h:720:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_PeepEvents(SDL_Event* events, int numevents, SDL_eventaction action, uint minType, uint maxType);
 
         // Function @ SDL_events.h:739:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_HasEvent(uint type);
 
         // Function @ SDL_events.h:758:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_HasEvents(uint minType, uint maxType);
 
         // Function @ SDL_events.h:780:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_FlushEvent(uint type);
 
         // Function @ SDL_events.h:805:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_FlushEvents(uint minType, uint maxType);
 
         // Function @ SDL_events.h:852:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_PollEvent(SDL_Event* @event);
 
         // Function @ SDL_events.h:874:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_WaitEvent(SDL_Event* @event);
 
         // Function @ SDL_events.h:900:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_WaitEventTimeout(SDL_Event* @event, int timeout);
 
         // Function @ SDL_events.h:935:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_PushEvent(SDL_Event* @event);
 
         // Function @ SDL_events.h:993:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_SetEventFilter(SDL_EventFilter filter, void* userdata);
 
         // Function @ SDL_events.h:1011:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_GetEventFilter(SDL_EventFilter* filter, void** userdata);
 
         // Function @ SDL_events.h:1040:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_AddEventWatch(SDL_EventFilter filter, void* userdata);
 
         // Function @ SDL_events.h:1056:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_DelEventWatch(SDL_EventFilter filter, void* userdata);
 
         // Function @ SDL_events.h:1075:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_FilterEvents(SDL_EventFilter filter, void* userdata);
 
         // Function @ SDL_events.h:1103:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern byte SDL_EventState(uint type, int state);
 
         // Function @ SDL_events.h:1125:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint SDL_RegisterEvents(int numevents);
 
         // Function @ SDL_filesystem.h:78:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GetBasePath();
 
         // Function @ SDL_filesystem.h:135:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GetPrefPath(CString org, CString app);
 
         // Function @ SDL_haptic.h:834:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_NumHaptics();
 
         // Function @ SDL_haptic.h:850:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_HapticName(int device_index);
 
         // Function @ SDL_haptic.h:877:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Haptic* SDL_HapticOpen(int device_index);
 
         // Function @ SDL_haptic.h:891:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_HapticOpened(int device_index);
 
         // Function @ SDL_haptic.h:905:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_HapticIndex(SDL_Haptic* haptic);
 
         // Function @ SDL_haptic.h:916:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_MouseIsHaptic();
 
         // Function @ SDL_haptic.h:929:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Haptic* SDL_HapticOpenFromMouse();
 
         // Function @ SDL_haptic.h:943:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_JoystickIsHaptic(SDL_Joystick* joystick);
 
         // Function @ SDL_haptic.h:966:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Haptic* SDL_HapticOpenFromJoystick(SDL_Joystick* joystick);
 
         // Function @ SDL_haptic.h:978:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_HapticClose(SDL_Haptic* haptic);
 
         // Function @ SDL_haptic.h:996:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_HapticNumEffects(SDL_Haptic* haptic);
 
         // Function @ SDL_haptic.h:1013:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_HapticNumEffectsPlaying(SDL_Haptic* haptic);
 
         // Function @ SDL_haptic.h:1027:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint SDL_HapticQuery(SDL_Haptic* haptic);
 
         // Function @ SDL_haptic.h:1042:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_HapticNumAxes(SDL_Haptic* haptic);
 
         // Function @ SDL_haptic.h:1058:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_HapticEffectSupported(SDL_Haptic* haptic, SDL_HapticEffect* effect);
 
         // Function @ SDL_haptic.h:1077:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_HapticNewEffect(SDL_Haptic* haptic, SDL_HapticEffect* effect);
 
         // Function @ SDL_haptic.h:1101:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_HapticUpdateEffect(SDL_Haptic* haptic, int effect, SDL_HapticEffect* data);
 
         // Function @ SDL_haptic.h:1127:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_HapticRunEffect(SDL_Haptic* haptic, int effect, uint iterations);
 
         // Function @ SDL_haptic.h:1146:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_HapticStopEffect(SDL_Haptic* haptic, int effect);
 
         // Function @ SDL_haptic.h:1162:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_HapticDestroyEffect(SDL_Haptic* haptic, int effect);
 
         // Function @ SDL_haptic.h:1180:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_HapticGetEffectStatus(SDL_Haptic* haptic, int effect);
 
         // Function @ SDL_haptic.h:1202:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_HapticSetGain(SDL_Haptic* haptic, int gain);
 
         // Function @ SDL_haptic.h:1221:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_HapticSetAutocenter(SDL_Haptic* haptic, int autocenter);
 
         // Function @ SDL_haptic.h:1241:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_HapticPause(SDL_Haptic* haptic);
 
         // Function @ SDL_haptic.h:1256:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_HapticUnpause(SDL_Haptic* haptic);
 
         // Function @ SDL_haptic.h:1267:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_HapticStopAll(SDL_Haptic* haptic);
 
         // Function @ SDL_haptic.h:1283:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_HapticRumbleSupported(SDL_Haptic* haptic);
 
         // Function @ SDL_haptic.h:1299:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_HapticRumbleInit(SDL_Haptic* haptic);
 
         // Function @ SDL_haptic.h:1316:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_HapticRumblePlay(SDL_Haptic* haptic, float strength, uint length);
 
         // Function @ SDL_haptic.h:1331:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_HapticRumbleStop(SDL_Haptic* haptic);
 
         // Function @ SDL_hidapi.h:142:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_hid_init();
 
         // Function @ SDL_hidapi.h:156:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_hid_exit();
 
         // Function @ SDL_hidapi.h:177:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint SDL_hid_device_change_count();
 
         // Function @ SDL_hidapi.h:199:47
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_hid_device_info* SDL_hid_enumerate(ushort vendor_id, ushort product_id);
 
         // Function @ SDL_hidapi.h:211:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_hid_free_enumeration(SDL_hid_device_info* devs);
 
         // Function @ SDL_hidapi.h:229:42
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_hid_device* SDL_hid_open(ushort vendor_id, ushort product_id, CStringWide serial_number);
 
         // Function @ SDL_hidapi.h:243:42
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_hid_device* SDL_hid_open_path(CString path, int bExclusive);
 
         // Function @ SDL_hidapi.h:269:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_hid_write(SDL_hid_device* dev, ulong* data, ulong length);
 
         // Function @ SDL_hidapi.h:290:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_hid_read_timeout(SDL_hid_device* dev, ulong* data, ulong length, int milliseconds);
 
         // Function @ SDL_hidapi.h:310:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_hid_read(SDL_hid_device* dev, ulong* data, ulong length);
 
         // Function @ SDL_hidapi.h:328:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_hid_set_nonblocking(SDL_hid_device* dev, int nonblock);
 
         // Function @ SDL_hidapi.h:352:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_hid_send_feature_report(SDL_hid_device* dev, ulong* data, ulong length);
 
         // Function @ SDL_hidapi.h:374:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_hid_get_feature_report(SDL_hid_device* dev, ulong* data, ulong length);
 
         // Function @ SDL_hidapi.h:383:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_hid_close(SDL_hid_device* dev);
 
         // Function @ SDL_hidapi.h:395:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_hid_get_manufacturer_string(SDL_hid_device* dev, CStringWide @string, ulong maxlen);
 
         // Function @ SDL_hidapi.h:407:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_hid_get_product_string(SDL_hid_device* dev, CStringWide @string, ulong maxlen);
 
         // Function @ SDL_hidapi.h:419:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_hid_get_serial_number_string(SDL_hid_device* dev, CStringWide @string, ulong maxlen);
 
         // Function @ SDL_hidapi.h:432:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_hid_get_indexed_string(SDL_hid_device* dev, int string_index, CStringWide @string, ulong maxlen);
 
         // Function @ SDL_hidapi.h:441:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_hid_ble_scan(CBool active);
 
         // Function @ SDL_hints.h:1913:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_SetHintWithPriority(CString name, CString value, SDL_HintPriority priority);
 
         // Function @ SDL_hints.h:1933:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_SetHint(CString name, CString value);
 
         // Function @ SDL_hints.h:1947:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GetHint(CString name);
 
         // Function @ SDL_hints.h:1962:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_GetHintBoolean(CString name, CBool default_value);
 
         // Function @ SDL_hints.h:1986:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_AddHintCallback(CString name, SDL_HintCallback callback, void* userdata);
 
         // Function @ SDL_hints.h:2002:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_DelHintCallback(CString name, SDL_HintCallback callback, void* userdata);
 
         // Function @ SDL_hints.h:2013:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_ClearHints();
 
         // Function @ SDL_loadso.h:65:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_LoadObject(CString sofile);
 
         // Function @ SDL_loadso.h:92:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_LoadFunction(void* handle, CString name);
 
         // Function @ SDL_loadso.h:105:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_UnloadObject(void* handle);
 
         // Function @ SDL_log.h:123:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_LogSetAllPriority(SDL_LogPriority priority);
 
         // Function @ SDL_log.h:136:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_LogSetPriority(int category, SDL_LogPriority priority);
 
         // Function @ SDL_log.h:149:41
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_LogPriority SDL_LogGetPriority(int category);
 
         // Function @ SDL_log.h:161:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_LogResetPriorities();
 
         // Function @ SDL_log.h:182:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_Log(CString fmt);
 
         // Function @ SDL_log.h:203:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_LogVerbose(int category, CString fmt);
 
         // Function @ SDL_log.h:224:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_LogDebug(int category, CString fmt);
 
         // Function @ SDL_log.h:245:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_LogInfo(int category, CString fmt);
 
         // Function @ SDL_log.h:266:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_LogWarn(int category, CString fmt);
 
         // Function @ SDL_log.h:287:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_LogError(int category, CString fmt);
 
         // Function @ SDL_log.h:308:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_LogCritical(int category, CString fmt);
 
         // Function @ SDL_log.h:330:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_LogMessage(int category, SDL_LogPriority priority, CString fmt);
 
         // Function @ SDL_log.h:353:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_LogMessageV(int category, SDL_LogPriority priority, CString fmt, nint ap);
 
         // Function @ SDL_log.h:381:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_LogGetOutputFunction(SDL_LogOutputFunction* callback, void** userdata);
 
         // Function @ SDL_log.h:393:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_LogSetOutputFunction(SDL_LogOutputFunction callback, void* userdata);
 
         // Function @ SDL_messagebox.h:140:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_ShowMessageBox(SDL_MessageBoxData* messageboxdata, long* buttonid);
 
         // Function @ SDL_messagebox.h:182:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_ShowSimpleMessageBox(uint flags, CString title, CString message, SDL_Window* window);
 
         // Function @ SDL_metal.h:66:39
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_MetalView SDL_Metal_CreateView(SDL_Window* window);
 
         // Function @ SDL_metal.h:78:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_Metal_DestroyView(SDL_MetalView view);
 
         // Function @ SDL_metal.h:87:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_Metal_GetLayer(SDL_MetalView view);
 
         // Function @ SDL_metal.h:101:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_Metal_GetDrawableSize(SDL_Window* window, long* w, long* h);
 
         // Function @ SDL_power.h:78:40
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_PowerState SDL_GetPowerInfo(long* secs, long* pct);
 
         // Function @ SDL_render.h:169:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetNumRenderDrivers();
 
         // Function @ SDL_render.h:185:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetRenderDriverInfo(int index, SDL_RendererInfo* info);
 
         // Function @ SDL_render.h:205:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_CreateWindowAndRenderer(int width, int height, uint window_flags, SDL_Window** window, SDL_Renderer** renderer);
 
         // Function @ SDL_render.h:227:40
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Renderer* SDL_CreateRenderer(SDL_Window* window, int index, uint flags);
 
         // Function @ SDL_render.h:249:40
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Renderer* SDL_CreateSoftwareRenderer(SDL_Surface* surface);
 
         // Function @ SDL_render.h:262:40
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Renderer* SDL_GetRenderer(SDL_Window* window);
 
         // Function @ SDL_render.h:277:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetRendererInfo(SDL_Renderer* renderer, SDL_RendererInfo* info);
 
         // Function @ SDL_render.h:297:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetRendererOutputSize(SDL_Renderer* renderer, long* w, long* h);
 
         // Function @ SDL_render.h:322:39
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Texture* SDL_CreateTexture(SDL_Renderer* renderer, uint format, int access, int w, int h);
 
         // Function @ SDL_render.h:351:39
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Texture* SDL_CreateTextureFromSurface(SDL_Renderer* renderer, SDL_Surface* surface);
 
         // Function @ SDL_render.h:375:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_QueryTexture(SDL_Texture* texture, uint* format, long* access, long* w, long* h);
 
         // Function @ SDL_render.h:403:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetTextureColorMod(SDL_Texture* texture, byte r, byte g, byte b);
 
         // Function @ SDL_render.h:422:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetTextureColorMod(SDL_Texture* texture, byte* r, byte* g, byte* b);
 
         // Function @ SDL_render.h:447:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetTextureAlphaMod(SDL_Texture* texture, byte alpha);
 
         // Function @ SDL_render.h:463:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetTextureAlphaMod(SDL_Texture* texture, byte* alpha);
 
         // Function @ SDL_render.h:482:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetTextureBlendMode(SDL_Texture* texture, SDL_BlendMode blendMode);
 
         // Function @ SDL_render.h:497:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetTextureBlendMode(SDL_Texture* texture, SDL_BlendMode* blendMode);
 
         // Function @ SDL_render.h:513:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetTextureScaleMode(SDL_Texture* texture, SDL_ScaleMode scaleMode);
 
         // Function @ SDL_render.h:527:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetTextureScaleMode(SDL_Texture* texture, SDL_ScaleMode* scaleMode);
 
         // Function @ SDL_render.h:541:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetTextureUserData(SDL_Texture* texture, void* userdata);
 
         // Function @ SDL_render.h:555:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_GetTextureUserData(SDL_Texture* texture);
 
         // Function @ SDL_render.h:586:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_UpdateTexture(SDL_Texture* texture, SDL_Rect* rect, void* pixels, int pitch);
 
         // Function @ SDL_render.h:617:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_UpdateYUVTexture(SDL_Texture* texture, SDL_Rect* rect, byte* Yplane, int Ypitch, byte* Uplane, int Upitch, byte* Vplane, int Vpitch);
 
         // Function @ SDL_render.h:643:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_UpdateNVTexture(SDL_Texture* texture, SDL_Rect* rect, byte* Yplane, int Ypitch, byte* UVplane, int UVpitch);
 
         // Function @ SDL_render.h:675:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_LockTexture(SDL_Texture* texture, SDL_Rect* rect, void** pixels, long* pitch);
 
         // Function @ SDL_render.h:711:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_LockTextureToSurface(SDL_Texture* texture, SDL_Rect* rect, SDL_Surface** surface);
 
         // Function @ SDL_render.h:732:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_UnlockTexture(SDL_Texture* texture);
 
         // Function @ SDL_render.h:744:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_RenderTargetSupported(SDL_Renderer* renderer);
 
         // Function @ SDL_render.h:768:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetRenderTarget(SDL_Renderer* renderer, SDL_Texture* texture);
 
         // Function @ SDL_render.h:784:39
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Texture* SDL_GetRenderTarget(SDL_Renderer* renderer);
 
         // Function @ SDL_render.h:812:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderSetLogicalSize(SDL_Renderer* renderer, int w, int h);
 
         // Function @ SDL_render.h:829:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_RenderGetLogicalSize(SDL_Renderer* renderer, long* w, long* h);
 
         // Function @ SDL_render.h:848:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderSetIntegerScale(SDL_Renderer* renderer, CBool enable);
 
         // Function @ SDL_render.h:862:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_RenderGetIntegerScale(SDL_Renderer* renderer);
 
         // Function @ SDL_render.h:880:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderSetViewport(SDL_Renderer* renderer, SDL_Rect* rect);
 
         // Function @ SDL_render.h:893:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_RenderGetViewport(SDL_Renderer* renderer, SDL_Rect* rect);
 
         // Function @ SDL_render.h:911:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderSetClipRect(SDL_Renderer* renderer, SDL_Rect* rect);
 
         // Function @ SDL_render.h:927:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_RenderGetClipRect(SDL_Renderer* renderer, SDL_Rect* rect);
 
         // Function @ SDL_render.h:942:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_RenderIsClipEnabled(SDL_Renderer* renderer);
 
         // Function @ SDL_render.h:967:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderSetScale(SDL_Renderer* renderer, float scaleX, float scaleY);
 
         // Function @ SDL_render.h:981:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_RenderGetScale(SDL_Renderer* renderer, float* scaleX, float* scaleY);
 
         // Function @ SDL_render.h:1005:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_RenderWindowToLogical(SDL_Renderer* renderer, int windowX, int windowY, float* logicalX, float* logicalY);
 
         // Function @ SDL_render.h:1027:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_RenderLogicalToWindow(SDL_Renderer* renderer, float logicalX, float logicalY, long* windowX, long* windowY);
 
         // Function @ SDL_render.h:1060:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetRenderDrawColor(SDL_Renderer* renderer, byte r, byte g, byte b, byte a);
 
         // Function @ SDL_render.h:1083:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetRenderDrawColor(SDL_Renderer* renderer, byte* r, byte* g, byte* b, byte* a);
 
         // Function @ SDL_render.h:1109:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetRenderDrawBlendMode(SDL_Renderer* renderer, SDL_BlendMode blendMode);
 
         // Function @ SDL_render.h:1124:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetRenderDrawBlendMode(SDL_Renderer* renderer, SDL_BlendMode* blendMode);
 
         // Function @ SDL_render.h:1141:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderClear(SDL_Renderer* renderer);
 
         // Function @ SDL_render.h:1168:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderDrawPoint(SDL_Renderer* renderer, int x, int y);
 
         // Function @ SDL_render.h:1194:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderDrawPoints(SDL_Renderer* renderer, SDL_Point* points, int count);
 
         // Function @ SDL_render.h:1225:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderDrawLine(SDL_Renderer* renderer, int x1, int y1, int x2, int y2);
 
         // Function @ SDL_render.h:1251:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderDrawLines(SDL_Renderer* renderer, SDL_Point* points, int count);
 
         // Function @ SDL_render.h:1277:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderDrawRect(SDL_Renderer* renderer, SDL_Rect* rect);
 
         // Function @ SDL_render.h:1303:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderDrawRects(SDL_Renderer* renderer, SDL_Rect* rects, int count);
 
         // Function @ SDL_render.h:1333:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderFillRect(SDL_Renderer* renderer, SDL_Rect* rect);
 
         // Function @ SDL_render.h:1358:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderFillRects(SDL_Renderer* renderer, SDL_Rect* rects, int count);
 
         // Function @ SDL_render.h:1390:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderCopy(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect* srcrect, SDL_Rect* dstrect);
 
         // Function @ SDL_render.h:1434:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderCopyEx(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect* srcrect, SDL_Rect* dstrect, double angle, SDL_Point* center, SDL_RendererFlip flip);
 
         // Function @ SDL_render.h:1453:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderDrawPointF(SDL_Renderer* renderer, float x, float y);
 
         // Function @ SDL_render.h:1466:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderDrawPointsF(SDL_Renderer* renderer, SDL_FPoint* points, int count);
 
         // Function @ SDL_render.h:1482:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderDrawLineF(SDL_Renderer* renderer, float x1, float y1, float x2, float y2);
 
         // Function @ SDL_render.h:1496:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderDrawLinesF(SDL_Renderer* renderer, SDL_FPoint* points, int count);
 
         // Function @ SDL_render.h:1510:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderDrawRectF(SDL_Renderer* renderer, SDL_FRect* rect);
 
         // Function @ SDL_render.h:1524:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderDrawRectsF(SDL_Renderer* renderer, SDL_FRect* rects, int count);
 
         // Function @ SDL_render.h:1539:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderFillRectF(SDL_Renderer* renderer, SDL_FRect* rect);
 
         // Function @ SDL_render.h:1553:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderFillRectsF(SDL_Renderer* renderer, SDL_FRect* rects, int count);
 
         // Function @ SDL_render.h:1571:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderCopyF(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect* srcrect, SDL_FRect* dstrect);
 
         // Function @ SDL_render.h:1597:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderCopyExF(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect* srcrect, SDL_FRect* dstrect, double angle, SDL_FPoint* center, SDL_RendererFlip flip);
 
         // Function @ SDL_render.h:1624:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderGeometry(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Vertex* vertices, int num_vertices, long* indices, int num_indices);
 
         // Function @ SDL_render.h:1653:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderGeometryRaw(SDL_Renderer* renderer, SDL_Texture* texture, float* xy, int xy_stride, SDL_Color* color, int color_stride, float* uv, int uv_stride, int num_vertices, void* indices, int num_indices, int size_indices);
 
         // Function @ SDL_render.h:1686:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderReadPixels(SDL_Renderer* renderer, SDL_Rect* rect, uint format, void* pixels, int pitch);
 
         // Function @ SDL_render.h:1726:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_RenderPresent(SDL_Renderer* renderer);
 
         // Function @ SDL_render.h:1741:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_DestroyTexture(SDL_Texture* texture);
 
         // Function @ SDL_render.h:1752:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_DestroyRenderer(SDL_Renderer* renderer);
 
         // Function @ SDL_render.h:1783:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderFlush(SDL_Renderer* renderer);
 
         // Function @ SDL_render.h:1821:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GL_BindTexture(SDL_Texture* texture, float* texw, float* texh);
 
         // Function @ SDL_render.h:1836:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GL_UnbindTexture(SDL_Texture* texture);
 
         // Function @ SDL_render.h:1852:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_RenderGetMetalLayer(SDL_Renderer* renderer);
 
         // Function @ SDL_render.h:1873:31
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_RenderGetMetalCommandEncoder(SDL_Renderer* renderer);
 
         // Function @ SDL_render.h:1884:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderSetVSync(SDL_Renderer* renderer, int vsync);
 
         // Function @ SDL_shape.h:69:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Window* SDL_CreateShapedWindow(CString title, uint x, uint y, uint w, uint h, uint flags);
 
         // Function @ SDL_shape.h:82:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_IsShapedWindow(SDL_Window* window);
 
         // Function @ SDL_shape.h:128:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetWindowShape(SDL_Window* window, SDL_Surface* shape, SDL_WindowShapeMode* shape_mode);
 
         // Function @ SDL_shape.h:147:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetShapedWindowMode(SDL_Window* window, SDL_WindowShapeMode* shape_mode);
 
         // Function @ SDL_timer.h:58:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint SDL_GetTicks();
 
         // Function @ SDL_timer.h:82:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_GetTicks64();
 
         // Function @ SDL_timer.h:123:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_GetPerformanceCounter();
 
         // Function @ SDL_timer.h:134:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_GetPerformanceFrequency();
 
         // Function @ SDL_timer.h:147:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_Delay(uint ms);
 
         // Function @ SDL_timer.h:196:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_TimerID SDL_AddTimer(uint interval, SDL_TimerCallback callback, void* param);
 
         // Function @ SDL_timer.h:211:34
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_RemoveTimer(SDL_TimerID id);
 
         // Function @ SDL_version.h:125:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_GetVersion(SDL_version* ver);
 
         // Function @ SDL_version.h:154:37
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GetRevision();
 
         // Function @ SDL_version.h:177:44
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetRevisionNumber();
 
         // Function @ SDL_locale.h:91:38
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Locale* SDL_GetPreferredLocales();
 
         // Function @ SDL_misc.h:69:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_OpenURL(CString url);
 
         // Function @ SDL.h:143:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_Init(uint flags);
 
         // Function @ SDL.h:160:29
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_InitSubSystem(uint flags);
 
         // Function @ SDL.h:182:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_QuitSubSystem(uint flags);
 
         // Function @ SDL.h:198:32
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint SDL_WasInit(uint flags);
 
         // Function @ SDL.h:222:30
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_Quit();
 
         // FunctionPointer @ SDL_stdinc.h:411:25
