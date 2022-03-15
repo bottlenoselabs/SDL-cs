@@ -710,7 +710,7 @@ namespace bottlenoselabs
 
         // Function @ SDL_thread.h:357:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern void SDL_WaitThread(SDL_Thread* thread, long* status);
+        public static extern void SDL_WaitThread(SDL_Thread* thread, int* status);
 
         // Function @ SDL_thread.h:393:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
@@ -1094,7 +1094,7 @@ namespace bottlenoselabs
 
         // Function @ SDL_pixels.h:379:34
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern CBool SDL_PixelFormatEnumToMasks(uint format, long* bpp, uint* Rmask, uint* Gmask, uint* Bmask, uint* Amask);
+        public static extern CBool SDL_PixelFormatEnumToMasks(uint format, int* bpp, uint* Rmask, uint* Gmask, uint* Bmask, uint* Amask);
 
         // Function @ SDL_pixels.h:403:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
@@ -1162,7 +1162,7 @@ namespace bottlenoselabs
 
         // Function @ SDL_rect.h:211:34
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern CBool SDL_IntersectRectAndLine(SDL_Rect* rect, long* X1, long* Y1, long* X2, long* Y2);
+        public static extern CBool SDL_IntersectRectAndLine(SDL_Rect* rect, int* X1, int* Y1, int* X2, int* Y2);
 
         // Function @ SDL_blendmode.h:185:39
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
@@ -1454,7 +1454,7 @@ namespace bottlenoselabs
 
         // Function @ SDL_video.h:916:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern void SDL_GetWindowPosition(SDL_Window* window, long* x, long* y);
+        public static extern void SDL_GetWindowPosition(SDL_Window* window, int* x, int* y);
 
         // Function @ SDL_video.h:941:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
@@ -1462,11 +1462,11 @@ namespace bottlenoselabs
 
         // Function @ SDL_video.h:968:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern void SDL_GetWindowSize(SDL_Window* window, long* w, long* h);
+        public static extern void SDL_GetWindowSize(SDL_Window* window, int* w, int* h);
 
         // Function @ SDL_video.h:1003:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern int SDL_GetWindowBordersSize(SDL_Window* window, long* top, long* left, long* bottom, long* right);
+        public static extern int SDL_GetWindowBordersSize(SDL_Window* window, int* top, int* left, int* bottom, int* right);
 
         // Function @ SDL_video.h:1019:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
@@ -1474,7 +1474,7 @@ namespace bottlenoselabs
 
         // Function @ SDL_video.h:1036:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern void SDL_GetWindowMinimumSize(SDL_Window* window, long* w, long* h);
+        public static extern void SDL_GetWindowMinimumSize(SDL_Window* window, int* w, int* h);
 
         // Function @ SDL_video.h:1051:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
@@ -1482,7 +1482,7 @@ namespace bottlenoselabs
 
         // Function @ SDL_video.h:1068:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern void SDL_GetWindowMaximumSize(SDL_Window* window, long* w, long* h);
+        public static extern void SDL_GetWindowMaximumSize(SDL_Window* window, int* w, int* h);
 
         // Function @ SDL_video.h:1087:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
@@ -1654,7 +1654,7 @@ namespace bottlenoselabs
 
         // Function @ SDL_video.h:1912:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern int SDL_GL_GetAttribute(SDL_GLattr attr, long* value);
+        public static extern int SDL_GL_GetAttribute(SDL_GLattr attr, int* value);
 
         // Function @ SDL_video.h:1934:39
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
@@ -1674,7 +1674,7 @@ namespace bottlenoselabs
 
         // Function @ SDL_video.h:1996:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern void SDL_GL_GetDrawableSize(SDL_Window* window, long* w, long* h);
+        public static extern void SDL_GL_GetDrawableSize(SDL_Window* window, int* w, int* h);
 
         // Function @ SDL_video.h:2031:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
@@ -1698,7 +1698,7 @@ namespace bottlenoselabs
 
         // Function @ SDL_keyboard.h:94:38
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern byte* SDL_GetKeyboardState(long* numkeys);
+        public static extern byte* SDL_GetKeyboardState(int* numkeys);
 
         // Function @ SDL_keyboard.h:107:36
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
@@ -1770,15 +1770,15 @@ namespace bottlenoselabs
 
         // Function @ SDL_mouse.h:104:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern uint SDL_GetMouseState(long* x, long* y);
+        public static extern uint SDL_GetMouseState(int* x, int* y);
 
         // Function @ SDL_mouse.h:133:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern uint SDL_GetGlobalMouseState(long* x, long* y);
+        public static extern uint SDL_GetGlobalMouseState(int* x, int* y);
 
         // Function @ SDL_mouse.h:152:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern uint SDL_GetRelativeMouseState(long* x, long* y);
+        public static extern uint SDL_GetRelativeMouseState(int* x, int* y);
 
         // Function @ SDL_mouse.h:171:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
@@ -2002,7 +2002,7 @@ namespace bottlenoselabs
 
         // Function @ SDL_joystick.h:788:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern int SDL_JoystickGetBall(SDL_Joystick* joystick, int ball, long* dx, long* dy);
+        public static extern int SDL_JoystickGetBall(SDL_Joystick* joystick, int ball, int* dx, int* dy);
 
         // Function @ SDL_joystick.h:803:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
@@ -2586,15 +2586,15 @@ namespace bottlenoselabs
 
         // Function @ SDL_hidapi.h:269:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern int SDL_hid_write(SDL_hid_device* dev, ulong* data, ulong length);
+        public static extern int SDL_hid_write(SDL_hid_device* dev, byte* data, ulong length);
 
         // Function @ SDL_hidapi.h:290:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern int SDL_hid_read_timeout(SDL_hid_device* dev, ulong* data, ulong length, int milliseconds);
+        public static extern int SDL_hid_read_timeout(SDL_hid_device* dev, byte* data, ulong length, int milliseconds);
 
         // Function @ SDL_hidapi.h:310:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern int SDL_hid_read(SDL_hid_device* dev, ulong* data, ulong length);
+        public static extern int SDL_hid_read(SDL_hid_device* dev, byte* data, ulong length);
 
         // Function @ SDL_hidapi.h:328:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
@@ -2602,11 +2602,11 @@ namespace bottlenoselabs
 
         // Function @ SDL_hidapi.h:352:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern int SDL_hid_send_feature_report(SDL_hid_device* dev, ulong* data, ulong length);
+        public static extern int SDL_hid_send_feature_report(SDL_hid_device* dev, byte* data, ulong length);
 
         // Function @ SDL_hidapi.h:374:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern int SDL_hid_get_feature_report(SDL_hid_device* dev, ulong* data, ulong length);
+        public static extern int SDL_hid_get_feature_report(SDL_hid_device* dev, byte* data, ulong length);
 
         // Function @ SDL_hidapi.h:383:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
@@ -2734,7 +2734,7 @@ namespace bottlenoselabs
 
         // Function @ SDL_messagebox.h:140:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern int SDL_ShowMessageBox(SDL_MessageBoxData* messageboxdata, long* buttonid);
+        public static extern int SDL_ShowMessageBox(SDL_MessageBoxData* messageboxdata, int* buttonid);
 
         // Function @ SDL_messagebox.h:182:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
@@ -2754,11 +2754,11 @@ namespace bottlenoselabs
 
         // Function @ SDL_metal.h:101:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern void SDL_Metal_GetDrawableSize(SDL_Window* window, long* w, long* h);
+        public static extern void SDL_Metal_GetDrawableSize(SDL_Window* window, int* w, int* h);
 
         // Function @ SDL_power.h:78:40
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern SDL_PowerState SDL_GetPowerInfo(long* secs, long* pct);
+        public static extern SDL_PowerState SDL_GetPowerInfo(int* secs, int* pct);
 
         // Function @ SDL_render.h:169:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
@@ -2790,7 +2790,7 @@ namespace bottlenoselabs
 
         // Function @ SDL_render.h:297:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern int SDL_GetRendererOutputSize(SDL_Renderer* renderer, long* w, long* h);
+        public static extern int SDL_GetRendererOutputSize(SDL_Renderer* renderer, int* w, int* h);
 
         // Function @ SDL_render.h:322:39
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
@@ -2802,7 +2802,7 @@ namespace bottlenoselabs
 
         // Function @ SDL_render.h:375:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern int SDL_QueryTexture(SDL_Texture* texture, uint* format, long* access, long* w, long* h);
+        public static extern int SDL_QueryTexture(SDL_Texture* texture, uint* format, int* access, int* w, int* h);
 
         // Function @ SDL_render.h:403:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
@@ -2858,7 +2858,7 @@ namespace bottlenoselabs
 
         // Function @ SDL_render.h:675:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern int SDL_LockTexture(SDL_Texture* texture, SDL_Rect* rect, void** pixels, long* pitch);
+        public static extern int SDL_LockTexture(SDL_Texture* texture, SDL_Rect* rect, void** pixels, int* pitch);
 
         // Function @ SDL_render.h:711:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
@@ -2886,7 +2886,7 @@ namespace bottlenoselabs
 
         // Function @ SDL_render.h:829:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern void SDL_RenderGetLogicalSize(SDL_Renderer* renderer, long* w, long* h);
+        public static extern void SDL_RenderGetLogicalSize(SDL_Renderer* renderer, int* w, int* h);
 
         // Function @ SDL_render.h:848:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
@@ -2930,7 +2930,7 @@ namespace bottlenoselabs
 
         // Function @ SDL_render.h:1027:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern void SDL_RenderLogicalToWindow(SDL_Renderer* renderer, float logicalX, float logicalY, long* windowX, long* windowY);
+        public static extern void SDL_RenderLogicalToWindow(SDL_Renderer* renderer, float logicalX, float logicalY, int* windowX, int* windowY);
 
         // Function @ SDL_render.h:1060:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
@@ -3034,7 +3034,7 @@ namespace bottlenoselabs
 
         // Function @ SDL_render.h:1624:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern int SDL_RenderGeometry(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Vertex* vertices, int num_vertices, long* indices, int num_indices);
+        public static extern int SDL_RenderGeometry(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Vertex* vertices, int num_vertices, int* indices, int num_indices);
 
         // Function @ SDL_render.h:1653:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
