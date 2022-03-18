@@ -28,487 +28,487 @@ namespace bottlenoselabs
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GetPlatform();
 
-        // Function @ SDL_stdinc.h:406:31
+        // Function @ SDL_stdinc.h:412:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_malloc(ulong size);
 
-        // Function @ SDL_stdinc.h:407:31
+        // Function @ SDL_stdinc.h:413:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_calloc(ulong nmemb, ulong size);
 
-        // Function @ SDL_stdinc.h:408:31
+        // Function @ SDL_stdinc.h:414:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_realloc(void* mem, ulong size);
 
-        // Function @ SDL_stdinc.h:409:30
+        // Function @ SDL_stdinc.h:415:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_free(void* mem);
 
-        // Function @ SDL_stdinc.h:421:30
+        // Function @ SDL_stdinc.h:427:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_GetMemoryFunctions(SDL_malloc_func* malloc_func, SDL_calloc_func* calloc_func, SDL_realloc_func* realloc_func, SDL_free_func* free_func);
 
-        // Function @ SDL_stdinc.h:431:29
+        // Function @ SDL_stdinc.h:437:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetMemoryFunctions(SDL_malloc_func malloc_func, SDL_calloc_func calloc_func, SDL_realloc_func realloc_func, SDL_free_func free_func);
 
-        // Function @ SDL_stdinc.h:441:29
+        // Function @ SDL_stdinc.h:447:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetNumAllocations();
 
-        // Function @ SDL_stdinc.h:443:31
+        // Function @ SDL_stdinc.h:449:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_getenv(CString name);
 
-        // Function @ SDL_stdinc.h:444:29
+        // Function @ SDL_stdinc.h:450:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_setenv(CString name, CString value, int overwrite);
 
-        // Function @ SDL_stdinc.h:446:30
+        // Function @ SDL_stdinc.h:452:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_qsort(void* @base, ulong nmemb, ulong size, FnPtr_VoidPtr_VoidPtr_Int compare);
 
-        // Function @ SDL_stdinc.h:448:29
+        // Function @ SDL_stdinc.h:454:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_abs(int x);
 
-        // Function @ SDL_stdinc.h:455:29
+        // Function @ SDL_stdinc.h:461:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_isalpha(int x);
 
-        // Function @ SDL_stdinc.h:456:29
+        // Function @ SDL_stdinc.h:462:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_isalnum(int x);
 
-        // Function @ SDL_stdinc.h:457:29
+        // Function @ SDL_stdinc.h:463:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_isblank(int x);
 
-        // Function @ SDL_stdinc.h:458:29
+        // Function @ SDL_stdinc.h:464:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_iscntrl(int x);
 
-        // Function @ SDL_stdinc.h:459:29
+        // Function @ SDL_stdinc.h:465:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_isdigit(int x);
 
-        // Function @ SDL_stdinc.h:460:29
+        // Function @ SDL_stdinc.h:466:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_isxdigit(int x);
 
-        // Function @ SDL_stdinc.h:461:29
+        // Function @ SDL_stdinc.h:467:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_ispunct(int x);
 
-        // Function @ SDL_stdinc.h:462:29
+        // Function @ SDL_stdinc.h:468:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_isspace(int x);
 
-        // Function @ SDL_stdinc.h:463:29
+        // Function @ SDL_stdinc.h:469:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_isupper(int x);
 
-        // Function @ SDL_stdinc.h:464:29
+        // Function @ SDL_stdinc.h:470:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_islower(int x);
 
-        // Function @ SDL_stdinc.h:465:29
+        // Function @ SDL_stdinc.h:471:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_isprint(int x);
 
-        // Function @ SDL_stdinc.h:466:29
+        // Function @ SDL_stdinc.h:472:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_isgraph(int x);
 
-        // Function @ SDL_stdinc.h:467:29
+        // Function @ SDL_stdinc.h:473:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_toupper(int x);
 
-        // Function @ SDL_stdinc.h:468:29
+        // Function @ SDL_stdinc.h:474:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_tolower(int x);
 
-        // Function @ SDL_stdinc.h:470:32
+        // Function @ SDL_stdinc.h:476:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint SDL_crc32(uint crc, void* data, ulong len);
 
-        // Function @ SDL_stdinc.h:472:31
+        // Function @ SDL_stdinc.h:478:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_memset(void* dst, int c, ulong len);
 
-        // Function @ SDL_stdinc.h:509:31
+        // Function @ SDL_stdinc.h:515:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_memcpy(void* dst, void* src, ulong len);
 
-        // Function @ SDL_stdinc.h:511:31
+        // Function @ SDL_stdinc.h:517:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_memmove(void* dst, void* src, ulong len);
 
-        // Function @ SDL_stdinc.h:512:29
+        // Function @ SDL_stdinc.h:518:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_memcmp(void* s1, void* s2, ulong len);
 
-        // Function @ SDL_stdinc.h:514:32
+        // Function @ SDL_stdinc.h:520:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_wcslen(CStringWide wstr);
 
-        // Function @ SDL_stdinc.h:515:32
+        // Function @ SDL_stdinc.h:521:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_wcslcpy(CStringWide dst, CStringWide src, ulong maxlen);
 
-        // Function @ SDL_stdinc.h:516:32
+        // Function @ SDL_stdinc.h:522:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_wcslcat(CStringWide dst, CStringWide src, ulong maxlen);
 
-        // Function @ SDL_stdinc.h:517:34
+        // Function @ SDL_stdinc.h:523:34
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CStringWide SDL_wcsdup(CStringWide wstr);
 
-        // Function @ SDL_stdinc.h:518:34
+        // Function @ SDL_stdinc.h:524:34
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CStringWide SDL_wcsstr(CStringWide haystack, CStringWide needle);
 
-        // Function @ SDL_stdinc.h:520:29
+        // Function @ SDL_stdinc.h:526:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_wcscmp(CStringWide str1, CStringWide str2);
 
-        // Function @ SDL_stdinc.h:521:29
+        // Function @ SDL_stdinc.h:527:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_wcsncmp(CStringWide str1, CStringWide str2, ulong maxlen);
 
-        // Function @ SDL_stdinc.h:522:29
+        // Function @ SDL_stdinc.h:528:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_wcscasecmp(CStringWide str1, CStringWide str2);
 
-        // Function @ SDL_stdinc.h:523:29
+        // Function @ SDL_stdinc.h:529:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_wcsncasecmp(CStringWide str1, CStringWide str2, ulong len);
 
-        // Function @ SDL_stdinc.h:525:32
+        // Function @ SDL_stdinc.h:531:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_strlen(CString str);
 
-        // Function @ SDL_stdinc.h:526:32
+        // Function @ SDL_stdinc.h:532:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_strlcpy(CString dst, CString src, ulong maxlen);
 
-        // Function @ SDL_stdinc.h:527:32
+        // Function @ SDL_stdinc.h:533:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_utf8strlcpy(CString dst, CString src, ulong dst_bytes);
 
-        // Function @ SDL_stdinc.h:528:32
+        // Function @ SDL_stdinc.h:534:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_strlcat(CString dst, CString src, ulong maxlen);
 
-        // Function @ SDL_stdinc.h:529:31
+        // Function @ SDL_stdinc.h:535:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_strdup(CString str);
 
-        // Function @ SDL_stdinc.h:530:31
+        // Function @ SDL_stdinc.h:536:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_strrev(CString str);
 
-        // Function @ SDL_stdinc.h:531:31
+        // Function @ SDL_stdinc.h:537:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_strupr(CString str);
 
-        // Function @ SDL_stdinc.h:532:31
+        // Function @ SDL_stdinc.h:538:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_strlwr(CString str);
 
-        // Function @ SDL_stdinc.h:533:31
+        // Function @ SDL_stdinc.h:539:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_strchr(CString str, int c);
 
-        // Function @ SDL_stdinc.h:534:31
+        // Function @ SDL_stdinc.h:540:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_strrchr(CString str, int c);
 
-        // Function @ SDL_stdinc.h:535:31
+        // Function @ SDL_stdinc.h:541:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_strstr(CString haystack, CString needle);
 
-        // Function @ SDL_stdinc.h:536:31
+        // Function @ SDL_stdinc.h:542:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_strtokr(CString s1, CString s2, CString* saveptr);
 
-        // Function @ SDL_stdinc.h:537:32
+        // Function @ SDL_stdinc.h:543:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_utf8strlen(CString str);
 
-        // Function @ SDL_stdinc.h:539:31
+        // Function @ SDL_stdinc.h:545:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_itoa(int value, CString str, int radix);
 
-        // Function @ SDL_stdinc.h:540:31
+        // Function @ SDL_stdinc.h:546:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_uitoa(uint value, CString str, int radix);
 
-        // Function @ SDL_stdinc.h:541:31
+        // Function @ SDL_stdinc.h:547:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_ltoa(long value, CString str, int radix);
 
-        // Function @ SDL_stdinc.h:542:31
+        // Function @ SDL_stdinc.h:548:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_ultoa(ulong value, CString str, int radix);
 
-        // Function @ SDL_stdinc.h:543:31
+        // Function @ SDL_stdinc.h:549:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_lltoa(long value, CString str, int radix);
 
-        // Function @ SDL_stdinc.h:544:31
+        // Function @ SDL_stdinc.h:550:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_ulltoa(ulong value, CString str, int radix);
 
-        // Function @ SDL_stdinc.h:546:29
+        // Function @ SDL_stdinc.h:552:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_atoi(CString str);
 
-        // Function @ SDL_stdinc.h:547:32
+        // Function @ SDL_stdinc.h:553:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_atof(CString str);
 
-        // Function @ SDL_stdinc.h:548:30
+        // Function @ SDL_stdinc.h:554:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern long SDL_strtol(CString str, CString* endp, int @base);
 
-        // Function @ SDL_stdinc.h:549:39
+        // Function @ SDL_stdinc.h:555:39
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_strtoul(CString str, CString* endp, int @base);
 
-        // Function @ SDL_stdinc.h:550:32
+        // Function @ SDL_stdinc.h:556:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern long SDL_strtoll(CString str, CString* endp, int @base);
 
-        // Function @ SDL_stdinc.h:551:32
+        // Function @ SDL_stdinc.h:557:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_strtoull(CString str, CString* endp, int @base);
 
-        // Function @ SDL_stdinc.h:552:32
+        // Function @ SDL_stdinc.h:558:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_strtod(CString str, CString* endp);
 
-        // Function @ SDL_stdinc.h:554:29
+        // Function @ SDL_stdinc.h:560:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_strcmp(CString str1, CString str2);
 
-        // Function @ SDL_stdinc.h:555:29
+        // Function @ SDL_stdinc.h:561:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_strncmp(CString str1, CString str2, ulong maxlen);
 
-        // Function @ SDL_stdinc.h:556:29
+        // Function @ SDL_stdinc.h:562:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_strcasecmp(CString str1, CString str2);
 
-        // Function @ SDL_stdinc.h:557:29
+        // Function @ SDL_stdinc.h:563:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_strncasecmp(CString str1, CString str2, ulong len);
 
-        // Function @ SDL_stdinc.h:559:29
+        // Function @ SDL_stdinc.h:565:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_sscanf(CString text, CString fmt);
 
-        // Function @ SDL_stdinc.h:560:29
+        // Function @ SDL_stdinc.h:566:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_vsscanf(CString text, CString fmt, nint ap);
 
-        // Function @ SDL_stdinc.h:561:29
+        // Function @ SDL_stdinc.h:567:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_snprintf(CString text, ulong maxlen, CString fmt);
 
-        // Function @ SDL_stdinc.h:562:29
+        // Function @ SDL_stdinc.h:568:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_vsnprintf(CString text, ulong maxlen, CString fmt, nint ap);
 
-        // Function @ SDL_stdinc.h:563:29
+        // Function @ SDL_stdinc.h:569:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_asprintf(CString* strp, CString fmt);
 
-        // Function @ SDL_stdinc.h:564:29
+        // Function @ SDL_stdinc.h:570:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_vasprintf(CString* strp, CString fmt, nint ap);
 
-        // Function @ SDL_stdinc.h:586:32
+        // Function @ SDL_stdinc.h:592:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_acos(double x);
 
-        // Function @ SDL_stdinc.h:587:31
+        // Function @ SDL_stdinc.h:593:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_acosf(float x);
 
-        // Function @ SDL_stdinc.h:588:32
+        // Function @ SDL_stdinc.h:594:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_asin(double x);
 
-        // Function @ SDL_stdinc.h:589:31
+        // Function @ SDL_stdinc.h:595:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_asinf(float x);
 
-        // Function @ SDL_stdinc.h:590:32
+        // Function @ SDL_stdinc.h:596:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_atan(double x);
 
-        // Function @ SDL_stdinc.h:591:31
+        // Function @ SDL_stdinc.h:597:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_atanf(float x);
 
-        // Function @ SDL_stdinc.h:592:32
+        // Function @ SDL_stdinc.h:598:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_atan2(double y, double x);
 
-        // Function @ SDL_stdinc.h:593:31
+        // Function @ SDL_stdinc.h:599:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_atan2f(float y, float x);
 
-        // Function @ SDL_stdinc.h:594:32
+        // Function @ SDL_stdinc.h:600:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_ceil(double x);
 
-        // Function @ SDL_stdinc.h:595:31
+        // Function @ SDL_stdinc.h:601:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_ceilf(float x);
 
-        // Function @ SDL_stdinc.h:596:32
+        // Function @ SDL_stdinc.h:602:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_copysign(double x, double y);
 
-        // Function @ SDL_stdinc.h:597:31
+        // Function @ SDL_stdinc.h:603:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_copysignf(float x, float y);
 
-        // Function @ SDL_stdinc.h:598:32
+        // Function @ SDL_stdinc.h:604:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_cos(double x);
 
-        // Function @ SDL_stdinc.h:599:31
+        // Function @ SDL_stdinc.h:605:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_cosf(float x);
 
-        // Function @ SDL_stdinc.h:600:32
+        // Function @ SDL_stdinc.h:606:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_exp(double x);
 
-        // Function @ SDL_stdinc.h:601:31
+        // Function @ SDL_stdinc.h:607:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_expf(float x);
 
-        // Function @ SDL_stdinc.h:602:32
+        // Function @ SDL_stdinc.h:608:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_fabs(double x);
 
-        // Function @ SDL_stdinc.h:603:31
+        // Function @ SDL_stdinc.h:609:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_fabsf(float x);
 
-        // Function @ SDL_stdinc.h:604:32
+        // Function @ SDL_stdinc.h:610:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_floor(double x);
 
-        // Function @ SDL_stdinc.h:605:31
+        // Function @ SDL_stdinc.h:611:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_floorf(float x);
 
-        // Function @ SDL_stdinc.h:606:32
+        // Function @ SDL_stdinc.h:612:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_trunc(double x);
 
-        // Function @ SDL_stdinc.h:607:31
+        // Function @ SDL_stdinc.h:613:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_truncf(float x);
 
-        // Function @ SDL_stdinc.h:608:32
+        // Function @ SDL_stdinc.h:614:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_fmod(double x, double y);
 
-        // Function @ SDL_stdinc.h:609:31
+        // Function @ SDL_stdinc.h:615:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_fmodf(float x, float y);
 
-        // Function @ SDL_stdinc.h:610:32
+        // Function @ SDL_stdinc.h:616:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_log(double x);
 
-        // Function @ SDL_stdinc.h:611:31
+        // Function @ SDL_stdinc.h:617:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_logf(float x);
 
-        // Function @ SDL_stdinc.h:612:32
+        // Function @ SDL_stdinc.h:618:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_log10(double x);
 
-        // Function @ SDL_stdinc.h:613:31
+        // Function @ SDL_stdinc.h:619:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_log10f(float x);
 
-        // Function @ SDL_stdinc.h:614:32
+        // Function @ SDL_stdinc.h:620:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_pow(double x, double y);
 
-        // Function @ SDL_stdinc.h:615:31
+        // Function @ SDL_stdinc.h:621:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_powf(float x, float y);
 
-        // Function @ SDL_stdinc.h:616:32
+        // Function @ SDL_stdinc.h:622:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_round(double x);
 
-        // Function @ SDL_stdinc.h:617:31
+        // Function @ SDL_stdinc.h:623:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_roundf(float x);
 
-        // Function @ SDL_stdinc.h:618:30
+        // Function @ SDL_stdinc.h:624:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern long SDL_lround(double x);
 
-        // Function @ SDL_stdinc.h:619:30
+        // Function @ SDL_stdinc.h:625:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern long SDL_lroundf(float x);
 
-        // Function @ SDL_stdinc.h:620:32
+        // Function @ SDL_stdinc.h:626:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_scalbn(double x, int n);
 
-        // Function @ SDL_stdinc.h:621:31
+        // Function @ SDL_stdinc.h:627:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_scalbnf(float x, int n);
 
-        // Function @ SDL_stdinc.h:622:32
+        // Function @ SDL_stdinc.h:628:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_sin(double x);
 
-        // Function @ SDL_stdinc.h:623:31
+        // Function @ SDL_stdinc.h:629:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_sinf(float x);
 
-        // Function @ SDL_stdinc.h:624:32
+        // Function @ SDL_stdinc.h:630:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_sqrt(double x);
 
-        // Function @ SDL_stdinc.h:625:31
+        // Function @ SDL_stdinc.h:631:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_sqrtf(float x);
 
-        // Function @ SDL_stdinc.h:626:32
+        // Function @ SDL_stdinc.h:632:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double SDL_tan(double x);
 
-        // Function @ SDL_stdinc.h:627:31
+        // Function @ SDL_stdinc.h:633:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern float SDL_tanf(float x);
 
-        // Function @ SDL_stdinc.h:637:37
+        // Function @ SDL_stdinc.h:643:37
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_iconv_t SDL_iconv_open(CString tocode, CString fromcode);
 
-        // Function @ SDL_stdinc.h:639:29
+        // Function @ SDL_stdinc.h:645:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_iconv_close(SDL_iconv_t cd);
 
-        // Function @ SDL_stdinc.h:640:32
+        // Function @ SDL_stdinc.h:646:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong SDL_iconv(SDL_iconv_t cd, CString* inbuf, ulong* inbytesleft, CString* outbuf, ulong* outbytesleft);
 
-        // Function @ SDL_stdinc.h:650:31
+        // Function @ SDL_stdinc.h:656:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_iconv_string(CString tocode, CString fromcode, CString inbuf, ulong inbytesleft);
 
@@ -2632,31 +2632,31 @@ namespace bottlenoselabs
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_hid_ble_scan(CBool active);
 
-        // Function @ SDL_hints.h:1924:34
+        // Function @ SDL_hints.h:1946:34
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_SetHintWithPriority(CString name, CString value, SDL_HintPriority priority);
 
-        // Function @ SDL_hints.h:1944:34
+        // Function @ SDL_hints.h:1966:34
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_SetHint(CString name, CString value);
 
-        // Function @ SDL_hints.h:1958:38
+        // Function @ SDL_hints.h:1980:38
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GetHint(CString name);
 
-        // Function @ SDL_hints.h:1973:34
+        // Function @ SDL_hints.h:1995:34
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_GetHintBoolean(CString name, CBool default_value);
 
-        // Function @ SDL_hints.h:1997:30
+        // Function @ SDL_hints.h:2019:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_AddHintCallback(CString name, SDL_HintCallback callback, void* userdata);
 
-        // Function @ SDL_hints.h:2013:30
+        // Function @ SDL_hints.h:2035:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_DelHintCallback(CString name, SDL_HintCallback callback, void* userdata);
 
-        // Function @ SDL_hints.h:2024:30
+        // Function @ SDL_hints.h:2046:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_ClearHints();
 
@@ -3164,35 +3164,35 @@ namespace bottlenoselabs
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_Quit();
 
-        // FunctionPointer @ SDL_stdinc.h:411:25
+        // FunctionPointer @ SDL_stdinc.h:417:25
         [StructLayout(LayoutKind.Sequential)]
         public struct SDL_malloc_func
         {
             public delegate* unmanaged<ulong, void*> Pointer;
         }
 
-        // FunctionPointer @ SDL_stdinc.h:412:25
+        // FunctionPointer @ SDL_stdinc.h:418:25
         [StructLayout(LayoutKind.Sequential)]
         public struct SDL_calloc_func
         {
             public delegate* unmanaged<ulong, ulong, void*> Pointer;
         }
 
-        // FunctionPointer @ SDL_stdinc.h:413:25
+        // FunctionPointer @ SDL_stdinc.h:419:25
         [StructLayout(LayoutKind.Sequential)]
         public struct SDL_realloc_func
         {
             public delegate* unmanaged<void*, ulong, void*> Pointer;
         }
 
-        // FunctionPointer @ SDL_stdinc.h:414:24
+        // FunctionPointer @ SDL_stdinc.h:420:24
         [StructLayout(LayoutKind.Sequential)]
         public struct SDL_free_func
         {
             public delegate* unmanaged<void*, void> Pointer;
         }
 
-        // FunctionPointer @ SDL_stdinc.h:446:85
+        // FunctionPointer @ SDL_stdinc.h:452:85
         [StructLayout(LayoutKind.Sequential)]
         public struct FnPtr_VoidPtr_VoidPtr_Int
         {
@@ -3234,7 +3234,7 @@ namespace bottlenoselabs
             public delegate* unmanaged<void*, SDL_Event*, int> Pointer;
         }
 
-        // FunctionPointer @ SDL_hints.h:1983:24
+        // FunctionPointer @ SDL_hints.h:2005:24
         [StructLayout(LayoutKind.Sequential)]
         public struct SDL_HintCallback
         {
@@ -5252,7 +5252,7 @@ namespace bottlenoselabs
         {
         }
 
-        // OpaqueType @ SDL_stdinc.h:636:16
+        // OpaqueType @ SDL_stdinc.h:642:16
         [StructLayout(LayoutKind.Sequential)]
         public struct _SDL_iconv_t
         {
@@ -5270,7 +5270,7 @@ namespace bottlenoselabs
         {
         }
 
-        // Typedef @ SDL_stdinc.h:636:30
+        // Typedef @ SDL_stdinc.h:642:30
         [StructLayout(LayoutKind.Explicit, Size = 8, Pack = 8)]
         public struct SDL_iconv_t
         {
@@ -5967,7 +5967,7 @@ namespace bottlenoselabs
             SDL_GETEVENT = 2
         }
 
-        // Enum @ SDL_hints.h:1904:3
+        // Enum @ SDL_hints.h:1926:3
         public enum SDL_HintPriority : int
         {
             SDL_HINT_DEFAULT = 0,
@@ -6046,7 +6046,7 @@ namespace bottlenoselabs
             ShapeModeColorKey = 3
         }
 
-        // Pseudo enum 'SDL_DUMMY_ENUM' @ SDL_stdinc.h:382:9
+        // Pseudo enum 'SDL_DUMMY_ENUM' @ SDL_stdinc.h:388:9
         public const int DUMMY_ENUM_VALUE = 0;
 
         // Pseudo enum 'SDL_PixelType' @ SDL_pixels.h:51:9
@@ -6586,7 +6586,7 @@ namespace bottlenoselabs
         public const int SDL_TEXTUREMODULATE_COLOR = 1;
         public const int SDL_TEXTUREMODULATE_ALPHA = 2;
 
-        // MacroDefinition @ SDL_stdinc.h:568:9
+        // MacroDefinition @ SDL_stdinc.h:574:9
         public const double M_PI = 3.14159265358979323846264338327950288;
 
         // MacroDefinition @ SDL_mutex.h:44:9
@@ -7204,91 +7204,97 @@ namespace bottlenoselabs
         // MacroDefinition @ SDL_hints.h:1454:9
         public const string SDL_HINT_VIDEO_WINDOW_SHARE_PIXEL_FORMAT = "SDL_VIDEO_WINDOW_SHARE_PIXEL_FORMAT";
 
-        // MacroDefinition @ SDL_hints.h:1470:9
+        // MacroDefinition @ SDL_hints.h:1465:9
+        public const string SDL_HINT_VIDEO_FOREIGN_WINDOW_OPENGL = "SDL_VIDEO_FOREIGN_WINDOW_OPENGL";
+
+        // MacroDefinition @ SDL_hints.h:1476:9
+        public const string SDL_HINT_VIDEO_FOREIGN_WINDOW_VULKAN = "SDL_VIDEO_FOREIGN_WINDOW_VULKAN";
+
+        // MacroDefinition @ SDL_hints.h:1492:9
         public const string SDL_HINT_VIDEO_WIN_D3DCOMPILER = "SDL_VIDEO_WIN_D3DCOMPILER";
 
-        // MacroDefinition @ SDL_hints.h:1481:9
+        // MacroDefinition @ SDL_hints.h:1503:9
         public const string SDL_HINT_VIDEO_X11_FORCE_EGL = "SDL_VIDEO_X11_FORCE_EGL";
 
-        // MacroDefinition @ SDL_hints.h:1493:9
+        // MacroDefinition @ SDL_hints.h:1515:9
         public const string SDL_HINT_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR = "SDL_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR";
 
-        // MacroDefinition @ SDL_hints.h:1507:9
+        // MacroDefinition @ SDL_hints.h:1529:9
         public const string SDL_HINT_VIDEO_X11_NET_WM_PING = "SDL_VIDEO_X11_NET_WM_PING";
 
-        // MacroDefinition @ SDL_hints.h:1513:9
+        // MacroDefinition @ SDL_hints.h:1535:9
         public const string SDL_HINT_VIDEO_X11_WINDOW_VISUALID = "SDL_VIDEO_X11_WINDOW_VISUALID";
 
-        // MacroDefinition @ SDL_hints.h:1524:9
+        // MacroDefinition @ SDL_hints.h:1546:9
         public const string SDL_HINT_VIDEO_X11_XINERAMA = "SDL_VIDEO_X11_XINERAMA";
 
-        // MacroDefinition @ SDL_hints.h:1535:9
+        // MacroDefinition @ SDL_hints.h:1557:9
         public const string SDL_HINT_VIDEO_X11_XRANDR = "SDL_VIDEO_X11_XRANDR";
 
-        // MacroDefinition @ SDL_hints.h:1546:9
+        // MacroDefinition @ SDL_hints.h:1568:9
         public const string SDL_HINT_VIDEO_X11_XVIDMODE = "SDL_VIDEO_X11_XVIDMODE";
 
-        // MacroDefinition @ SDL_hints.h:1573:9
+        // MacroDefinition @ SDL_hints.h:1595:9
         public const string SDL_HINT_WAVE_FACT_CHUNK = "SDL_WAVE_FACT_CHUNK";
 
-        // MacroDefinition @ SDL_hints.h:1594:9
+        // MacroDefinition @ SDL_hints.h:1616:9
         public const string SDL_HINT_WAVE_RIFF_CHUNK_SIZE = "SDL_WAVE_RIFF_CHUNK_SIZE";
 
-        // MacroDefinition @ SDL_hints.h:1610:9
+        // MacroDefinition @ SDL_hints.h:1632:9
         public const string SDL_HINT_WAVE_TRUNCATION = "SDL_WAVE_TRUNCATION";
 
-        // MacroDefinition @ SDL_hints.h:1626:9
+        // MacroDefinition @ SDL_hints.h:1648:9
         public const string SDL_HINT_WINDOWS_DISABLE_THREAD_NAMING = "SDL_WINDOWS_DISABLE_THREAD_NAMING";
 
-        // MacroDefinition @ SDL_hints.h:1637:9
+        // MacroDefinition @ SDL_hints.h:1659:9
         public const string SDL_HINT_WINDOWS_ENABLE_MESSAGELOOP = "SDL_WINDOWS_ENABLE_MESSAGELOOP";
 
-        // MacroDefinition @ SDL_hints.h:1651:9
+        // MacroDefinition @ SDL_hints.h:1673:9
         public const string SDL_HINT_WINDOWS_FORCE_MUTEX_CRITICAL_SECTIONS = "SDL_WINDOWS_FORCE_MUTEX_CRITICAL_SECTIONS";
 
-        // MacroDefinition @ SDL_hints.h:1667:9
+        // MacroDefinition @ SDL_hints.h:1689:9
         public const string SDL_HINT_WINDOWS_FORCE_SEMAPHORE_KERNEL = "SDL_WINDOWS_FORCE_SEMAPHORE_KERNEL";
 
-        // MacroDefinition @ SDL_hints.h:1672:9
+        // MacroDefinition @ SDL_hints.h:1694:9
         public const string SDL_HINT_WINDOWS_INTRESOURCE_ICON = "SDL_WINDOWS_INTRESOURCE_ICON";
 
-        // MacroDefinition @ SDL_hints.h:1673:9
+        // MacroDefinition @ SDL_hints.h:1695:9
         public const string SDL_HINT_WINDOWS_INTRESOURCE_ICON_SMALL = "SDL_WINDOWS_INTRESOURCE_ICON_SMALL";
 
-        // MacroDefinition @ SDL_hints.h:1682:9
+        // MacroDefinition @ SDL_hints.h:1704:9
         public const string SDL_HINT_WINDOWS_NO_CLOSE_ON_ALT_F4 = "SDL_WINDOWS_NO_CLOSE_ON_ALT_F4";
 
-        // MacroDefinition @ SDL_hints.h:1702:9
+        // MacroDefinition @ SDL_hints.h:1724:9
         public const string SDL_HINT_WINDOWS_USE_D3D9EX = "SDL_WINDOWS_USE_D3D9EX";
 
-        // MacroDefinition @ SDL_hints.h:1713:9
+        // MacroDefinition @ SDL_hints.h:1735:9
         public const string SDL_HINT_WINDOW_FRAME_USABLE_WHILE_CURSOR_HIDDEN = "SDL_WINDOW_FRAME_USABLE_WHILE_CURSOR_HIDDEN";
 
-        // MacroDefinition @ SDL_hints.h:1724:9
+        // MacroDefinition @ SDL_hints.h:1746:9
         public const string SDL_HINT_WINDOW_NO_ACTIVATION_WHEN_SHOWN = "SDL_WINDOW_NO_ACTIVATION_WHEN_SHOWN";
 
-        // MacroDefinition @ SDL_hints.h:1776:9
+        // MacroDefinition @ SDL_hints.h:1798:9
         public const string SDL_HINT_WINRT_HANDLE_BACK_BUTTON = "SDL_WINRT_HANDLE_BACK_BUTTON";
 
-        // MacroDefinition @ SDL_hints.h:1797:9
+        // MacroDefinition @ SDL_hints.h:1819:9
         public const string SDL_HINT_WINRT_PRIVACY_POLICY_LABEL = "SDL_WINRT_PRIVACY_POLICY_LABEL";
 
-        // MacroDefinition @ SDL_hints.h:1823:9
+        // MacroDefinition @ SDL_hints.h:1845:9
         public const string SDL_HINT_WINRT_PRIVACY_POLICY_URL = "SDL_WINRT_PRIVACY_POLICY_URL";
 
-        // MacroDefinition @ SDL_hints.h:1835:9
+        // MacroDefinition @ SDL_hints.h:1857:9
         public const string SDL_HINT_X11_FORCE_OVERRIDE_REDIRECT = "SDL_X11_FORCE_OVERRIDE_REDIRECT";
 
-        // MacroDefinition @ SDL_hints.h:1844:9
+        // MacroDefinition @ SDL_hints.h:1866:9
         public const string SDL_HINT_XINPUT_ENABLED = "SDL_XINPUT_ENABLED";
 
-        // MacroDefinition @ SDL_hints.h:1853:9
+        // MacroDefinition @ SDL_hints.h:1875:9
         public const string SDL_HINT_XINPUT_USE_OLD_JOYSTICK_MAPPING = "SDL_XINPUT_USE_OLD_JOYSTICK_MAPPING";
 
-        // MacroDefinition @ SDL_hints.h:1872:9
+        // MacroDefinition @ SDL_hints.h:1894:9
         public const string SDL_HINT_AUDIO_INCLUDE_MONITORS = "SDL_AUDIO_INCLUDE_MONITORS";
 
-        // MacroDefinition @ SDL_hints.h:1893:9
+        // MacroDefinition @ SDL_hints.h:1915:9
         public const string SDL_HINT_X11_WINDOW_TYPE = "SDL_X11_WINDOW_TYPE";
 
         // MacroDefinition @ SDL_log.h:54:9
