@@ -1144,25 +1144,45 @@ namespace bottlenoselabs
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_CalculateGammaRamp(float gamma, ushort* ramp);
 
-        // Function @ SDL_rect.h:135:34
+        // Function @ SDL_rect.h:140:34
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_HasIntersection(SDL_Rect* A, SDL_Rect* B);
 
-        // Function @ SDL_rect.h:153:34
+        // Function @ SDL_rect.h:158:34
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_IntersectRect(SDL_Rect* A, SDL_Rect* B, SDL_Rect* result);
 
-        // Function @ SDL_rect.h:167:30
+        // Function @ SDL_rect.h:172:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_UnionRect(SDL_Rect* A, SDL_Rect* B, SDL_Rect* result);
 
-        // Function @ SDL_rect.h:188:34
+        // Function @ SDL_rect.h:193:34
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_EnclosePoints(SDL_Point* points, int count, SDL_Rect* clip, SDL_Rect* result);
 
-        // Function @ SDL_rect.h:211:34
+        // Function @ SDL_rect.h:216:34
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_IntersectRectAndLine(SDL_Rect* rect, int* X1, int* Y1, int* X2, int* Y2);
+
+        // Function @ SDL_rect.h:261:34
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
+        public static extern CBool SDL_HasIntersectionF(SDL_FRect* A, SDL_FRect* B);
+
+        // Function @ SDL_rect.h:277:34
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
+        public static extern CBool SDL_IntersectFRect(SDL_FRect* A, SDL_FRect* B, SDL_FRect* result);
+
+        // Function @ SDL_rect.h:289:30
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void SDL_UnionFRect(SDL_FRect* A, SDL_FRect* B, SDL_FRect* result);
+
+        // Function @ SDL_rect.h:308:34
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
+        public static extern CBool SDL_EncloseFPoints(SDL_FPoint* points, int count, SDL_FRect* clip, SDL_FRect* result);
+
+        // Function @ SDL_rect.h:329:34
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
+        public static extern CBool SDL_IntersectFRectAndLine(SDL_FRect* rect, float* X1, float* Y1, float* X2, float* Y2);
 
         // Function @ SDL_blendmode.h:185:39
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
@@ -2632,31 +2652,31 @@ namespace bottlenoselabs
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_hid_ble_scan(CBool active);
 
-        // Function @ SDL_hints.h:1946:34
+        // Function @ SDL_hints.h:1975:34
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_SetHintWithPriority(CString name, CString value, SDL_HintPriority priority);
 
-        // Function @ SDL_hints.h:1966:34
+        // Function @ SDL_hints.h:1995:34
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_SetHint(CString name, CString value);
 
-        // Function @ SDL_hints.h:1980:38
+        // Function @ SDL_hints.h:2009:38
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GetHint(CString name);
 
-        // Function @ SDL_hints.h:1995:34
+        // Function @ SDL_hints.h:2024:34
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_GetHintBoolean(CString name, CBool default_value);
 
-        // Function @ SDL_hints.h:2019:30
+        // Function @ SDL_hints.h:2048:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_AddHintCallback(CString name, SDL_HintCallback callback, void* userdata);
 
-        // Function @ SDL_hints.h:2035:30
+        // Function @ SDL_hints.h:2064:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_DelHintCallback(CString name, SDL_HintCallback callback, void* userdata);
 
-        // Function @ SDL_hints.h:2046:30
+        // Function @ SDL_hints.h:2075:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_ClearHints();
 
@@ -3040,43 +3060,43 @@ namespace bottlenoselabs
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderGeometryRaw(SDL_Renderer* renderer, SDL_Texture* texture, float* xy, int xy_stride, SDL_Color* color, int color_stride, float* uv, int uv_stride, int num_vertices, void* indices, int num_indices, int size_indices);
 
-        // Function @ SDL_render.h:1686:29
+        // Function @ SDL_render.h:1687:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderReadPixels(SDL_Renderer* renderer, SDL_Rect* rect, uint format, void* pixels, int pitch);
 
-        // Function @ SDL_render.h:1726:30
+        // Function @ SDL_render.h:1727:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_RenderPresent(SDL_Renderer* renderer);
 
-        // Function @ SDL_render.h:1741:30
+        // Function @ SDL_render.h:1742:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_DestroyTexture(SDL_Texture* texture);
 
-        // Function @ SDL_render.h:1752:30
+        // Function @ SDL_render.h:1753:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_DestroyRenderer(SDL_Renderer* renderer);
 
-        // Function @ SDL_render.h:1783:29
+        // Function @ SDL_render.h:1784:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderFlush(SDL_Renderer* renderer);
 
-        // Function @ SDL_render.h:1821:29
+        // Function @ SDL_render.h:1822:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GL_BindTexture(SDL_Texture* texture, float* texw, float* texh);
 
-        // Function @ SDL_render.h:1836:29
+        // Function @ SDL_render.h:1837:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GL_UnbindTexture(SDL_Texture* texture);
 
-        // Function @ SDL_render.h:1852:31
+        // Function @ SDL_render.h:1853:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_RenderGetMetalLayer(SDL_Renderer* renderer);
 
-        // Function @ SDL_render.h:1873:31
+        // Function @ SDL_render.h:1874:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_RenderGetMetalCommandEncoder(SDL_Renderer* renderer);
 
-        // Function @ SDL_render.h:1884:29
+        // Function @ SDL_render.h:1885:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderSetVSync(SDL_Renderer* renderer, int vsync);
 
@@ -3234,7 +3254,7 @@ namespace bottlenoselabs
             public delegate* unmanaged<void*, SDL_Event*, int> Pointer;
         }
 
-        // FunctionPointer @ SDL_hints.h:2005:24
+        // FunctionPointer @ SDL_hints.h:2034:24
         [StructLayout(LayoutKind.Sequential)]
         public struct SDL_HintCallback
         {
@@ -3495,7 +3515,7 @@ namespace bottlenoselabs
             public byte a;
         }
 
-        // Struct @ SDL_rect.h:81:3
+        // Struct @ SDL_rect.h:86:3
         [StructLayout(LayoutKind.Explicit, Size = 16, Pack = 4)]
         public struct SDL_Rect
         {
@@ -3521,6 +3541,34 @@ namespace bottlenoselabs
 
             [FieldOffset(4)] // size = 4, padding = 0
             public int y;
+        }
+
+        // Struct @ SDL_rect.h:98:3
+        [StructLayout(LayoutKind.Explicit, Size = 16, Pack = 4)]
+        public struct SDL_FRect
+        {
+            [FieldOffset(0)] // size = 4, padding = 0
+            public float x;
+
+            [FieldOffset(4)] // size = 4, padding = 0
+            public float y;
+
+            [FieldOffset(8)] // size = 4, padding = 0
+            public float w;
+
+            [FieldOffset(12)] // size = 4, padding = 0
+            public float h;
+        }
+
+        // Struct @ SDL_rect.h:69:3
+        [StructLayout(LayoutKind.Explicit, Size = 8, Pack = 4)]
+        public struct SDL_FPoint
+        {
+            [FieldOffset(0)] // size = 4, padding = 0
+            public float x;
+
+            [FieldOffset(4)] // size = 4, padding = 0
+            public float y;
         }
 
         // Struct @ SDL_surface.h:95:3
@@ -3902,34 +3950,6 @@ namespace bottlenoselabs
 
             [FieldOffset(84)] // size = 4, padding = 0
             public int max_texture_height;
-        }
-
-        // Struct @ SDL_rect.h:64:3
-        [StructLayout(LayoutKind.Explicit, Size = 8, Pack = 4)]
-        public struct SDL_FPoint
-        {
-            [FieldOffset(0)] // size = 4, padding = 0
-            public float x;
-
-            [FieldOffset(4)] // size = 4, padding = 0
-            public float y;
-        }
-
-        // Struct @ SDL_rect.h:93:3
-        [StructLayout(LayoutKind.Explicit, Size = 16, Pack = 4)]
-        public struct SDL_FRect
-        {
-            [FieldOffset(0)] // size = 4, padding = 0
-            public float x;
-
-            [FieldOffset(4)] // size = 4, padding = 0
-            public float y;
-
-            [FieldOffset(8)] // size = 4, padding = 0
-            public float w;
-
-            [FieldOffset(12)] // size = 4, padding = 0
-            public float h;
         }
 
         // Struct @ SDL_render.h:96:3
@@ -5967,7 +5987,7 @@ namespace bottlenoselabs
             SDL_GETEVENT = 2
         }
 
-        // Enum @ SDL_hints.h:1926:3
+        // Enum @ SDL_hints.h:1955:3
         public enum SDL_HintPriority : int
         {
             SDL_HINT_DEFAULT = 0,
@@ -7090,211 +7110,217 @@ namespace bottlenoselabs
         // MacroDefinition @ SDL_hints.h:934:9
         public const string SDL_HINT_MOUSE_NORMAL_SPEED_SCALE = "SDL_MOUSE_NORMAL_SPEED_SCALE";
 
-        // MacroDefinition @ SDL_hints.h:945:9
-        public const string SDL_HINT_MOUSE_RELATIVE_MODE_WARP = "SDL_MOUSE_RELATIVE_MODE_WARP";
-
-        // MacroDefinition @ SDL_hints.h:956:9
-        public const string SDL_HINT_MOUSE_RELATIVE_SCALING = "SDL_MOUSE_RELATIVE_SCALING";
+        // MacroDefinition @ SDL_hints.h:950:9
+        public const string SDL_HINT_MOUSE_RELATIVE_MODE_CENTER = "SDL_MOUSE_RELATIVE_MODE_CENTER";
 
         // MacroDefinition @ SDL_hints.h:961:9
+        public const string SDL_HINT_MOUSE_RELATIVE_MODE_WARP = "SDL_MOUSE_RELATIVE_MODE_WARP";
+
+        // MacroDefinition @ SDL_hints.h:972:9
+        public const string SDL_HINT_MOUSE_RELATIVE_SCALING = "SDL_MOUSE_RELATIVE_SCALING";
+
+        // MacroDefinition @ SDL_hints.h:977:9
         public const string SDL_HINT_MOUSE_RELATIVE_SPEED_SCALE = "SDL_MOUSE_RELATIVE_SPEED_SCALE";
 
-        // MacroDefinition @ SDL_hints.h:970:9
+        // MacroDefinition @ SDL_hints.h:986:9
         public const string SDL_HINT_MOUSE_TOUCH_EVENTS = "SDL_MOUSE_TOUCH_EVENTS";
 
-        // MacroDefinition @ SDL_hints.h:983:9
+        // MacroDefinition @ SDL_hints.h:999:9
+        public const string SDL_HINT_MOUSE_AUTO_CAPTURE = "SDL_MOUSE_AUTO_CAPTURE";
+
+        // MacroDefinition @ SDL_hints.h:1012:9
         public const string SDL_HINT_NO_SIGNAL_HANDLERS = "SDL_NO_SIGNAL_HANDLERS";
 
-        // MacroDefinition @ SDL_hints.h:1014:9
+        // MacroDefinition @ SDL_hints.h:1043:9
         public const string SDL_HINT_OPENGL_ES_DRIVER = "SDL_OPENGL_ES_DRIVER";
 
-        // MacroDefinition @ SDL_hints.h:1025:9
+        // MacroDefinition @ SDL_hints.h:1054:9
         public const string SDL_HINT_ORIENTATIONS = "SDL_IOS_ORIENTATIONS";
 
-        // MacroDefinition @ SDL_hints.h:1041:9
+        // MacroDefinition @ SDL_hints.h:1070:9
         public const string SDL_HINT_POLL_SENTINEL = "SDL_POLL_SENTINEL";
 
-        // MacroDefinition @ SDL_hints.h:1055:9
+        // MacroDefinition @ SDL_hints.h:1084:9
         public const string SDL_HINT_PREFERRED_LOCALES = "SDL_PREFERRED_LOCALES";
 
-        // MacroDefinition @ SDL_hints.h:1072:9
+        // MacroDefinition @ SDL_hints.h:1101:9
         public const string SDL_HINT_QTWAYLAND_CONTENT_ORIENTATION = "SDL_QTWAYLAND_CONTENT_ORIENTATION";
 
-        // MacroDefinition @ SDL_hints.h:1083:9
+        // MacroDefinition @ SDL_hints.h:1112:9
         public const string SDL_HINT_QTWAYLAND_WINDOW_FLAGS = "SDL_QTWAYLAND_WINDOW_FLAGS";
 
-        // MacroDefinition @ SDL_hints.h:1107:9
+        // MacroDefinition @ SDL_hints.h:1136:9
         public const string SDL_HINT_RENDER_BATCHING = "SDL_RENDER_BATCHING";
 
-        // MacroDefinition @ SDL_hints.h:1120:9
+        // MacroDefinition @ SDL_hints.h:1149:9
         public const string SDL_HINT_RENDER_LINE_METHOD = "SDL_RENDER_LINE_METHOD";
 
-        // MacroDefinition @ SDL_hints.h:1133:9
+        // MacroDefinition @ SDL_hints.h:1162:9
         public const string SDL_HINT_RENDER_DIRECT3D11_DEBUG = "SDL_RENDER_DIRECT3D11_DEBUG";
 
-        // MacroDefinition @ SDL_hints.h:1144:9
+        // MacroDefinition @ SDL_hints.h:1173:9
         public const string SDL_HINT_RENDER_DIRECT3D_THREADSAFE = "SDL_RENDER_DIRECT3D_THREADSAFE";
 
-        // MacroDefinition @ SDL_hints.h:1164:9
+        // MacroDefinition @ SDL_hints.h:1193:9
         public const string SDL_HINT_RENDER_DRIVER = "SDL_RENDER_DRIVER";
 
-        // MacroDefinition @ SDL_hints.h:1175:9
+        // MacroDefinition @ SDL_hints.h:1204:9
         public const string SDL_HINT_RENDER_LOGICAL_SIZE_MODE = "SDL_RENDER_LOGICAL_SIZE_MODE";
 
-        // MacroDefinition @ SDL_hints.h:1186:9
+        // MacroDefinition @ SDL_hints.h:1215:9
         public const string SDL_HINT_RENDER_OPENGL_SHADERS = "SDL_RENDER_OPENGL_SHADERS";
 
-        // MacroDefinition @ SDL_hints.h:1198:9
+        // MacroDefinition @ SDL_hints.h:1227:9
         public const string SDL_HINT_RENDER_SCALE_QUALITY = "SDL_RENDER_SCALE_QUALITY";
 
-        // MacroDefinition @ SDL_hints.h:1209:9
+        // MacroDefinition @ SDL_hints.h:1238:9
         public const string SDL_HINT_RENDER_VSYNC = "SDL_RENDER_VSYNC";
 
-        // MacroDefinition @ SDL_hints.h:1221:9
+        // MacroDefinition @ SDL_hints.h:1250:9
         public const string SDL_HINT_RETURN_KEY_HIDES_IME = "SDL_RETURN_KEY_HIDES_IME";
 
-        // MacroDefinition @ SDL_hints.h:1229:9
+        // MacroDefinition @ SDL_hints.h:1258:9
         public const string SDL_HINT_RPI_VIDEO_LAYER = "SDL_RPI_VIDEO_LAYER";
 
-        // MacroDefinition @ SDL_hints.h:1249:9
+        // MacroDefinition @ SDL_hints.h:1278:9
         public const string SDL_HINT_SCREENSAVER_INHIBIT_ACTIVITY_NAME = "SDL_SCREENSAVER_INHIBIT_ACTIVITY_NAME";
 
-        // MacroDefinition @ SDL_hints.h:1268:9
+        // MacroDefinition @ SDL_hints.h:1297:9
         public const string SDL_HINT_THREAD_FORCE_REALTIME_TIME_CRITICAL = "SDL_THREAD_FORCE_REALTIME_TIME_CRITICAL";
 
-        // MacroDefinition @ SDL_hints.h:1285:9
+        // MacroDefinition @ SDL_hints.h:1314:9
         public const string SDL_HINT_THREAD_PRIORITY_POLICY = "SDL_THREAD_PRIORITY_POLICY";
 
-        // MacroDefinition @ SDL_hints.h:1299:9
+        // MacroDefinition @ SDL_hints.h:1328:9
         public const string SDL_HINT_THREAD_STACK_SIZE = "SDL_THREAD_STACK_SIZE";
 
-        // MacroDefinition @ SDL_hints.h:1315:9
+        // MacroDefinition @ SDL_hints.h:1344:9
         public const string SDL_HINT_TIMER_RESOLUTION = "SDL_TIMER_RESOLUTION";
 
-        // MacroDefinition @ SDL_hints.h:1326:9
+        // MacroDefinition @ SDL_hints.h:1355:9
         public const string SDL_HINT_TOUCH_MOUSE_EVENTS = "SDL_TOUCH_MOUSE_EVENTS";
 
-        // MacroDefinition @ SDL_hints.h:1336:9
+        // MacroDefinition @ SDL_hints.h:1365:9
         public const string SDL_HINT_TV_REMOTE_AS_JOYSTICK = "SDL_TV_REMOTE_AS_JOYSTICK";
 
-        // MacroDefinition @ SDL_hints.h:1347:9
+        // MacroDefinition @ SDL_hints.h:1376:9
         public const string SDL_HINT_VIDEO_ALLOW_SCREENSAVER = "SDL_VIDEO_ALLOW_SCREENSAVER";
 
-        // MacroDefinition @ SDL_hints.h:1366:9
+        // MacroDefinition @ SDL_hints.h:1395:9
         public const string SDL_HINT_VIDEO_DOUBLE_BUFFER = "SDL_VIDEO_DOUBLE_BUFFER";
 
-        // MacroDefinition @ SDL_hints.h:1377:9
+        // MacroDefinition @ SDL_hints.h:1406:9
         public const string SDL_HINT_VIDEO_EGL_ALLOW_TRANSPARENCY = "SDL_VIDEO_EGL_ALLOW_TRANSPARENCY";
 
-        // MacroDefinition @ SDL_hints.h:1392:9
+        // MacroDefinition @ SDL_hints.h:1421:9
         public const string SDL_HINT_VIDEO_EXTERNAL_CONTEXT = "SDL_VIDEO_EXTERNAL_CONTEXT";
 
-        // MacroDefinition @ SDL_hints.h:1397:9
+        // MacroDefinition @ SDL_hints.h:1426:9
         public const string SDL_HINT_VIDEO_HIGHDPI_DISABLED = "SDL_VIDEO_HIGHDPI_DISABLED";
 
-        // MacroDefinition @ SDL_hints.h:1416:9
+        // MacroDefinition @ SDL_hints.h:1445:9
         public const string SDL_HINT_VIDEO_MAC_FULLSCREEN_SPACES = "SDL_VIDEO_MAC_FULLSCREEN_SPACES";
 
-        // MacroDefinition @ SDL_hints.h:1424:9
+        // MacroDefinition @ SDL_hints.h:1453:9
         public const string SDL_HINT_VIDEO_MINIMIZE_ON_FOCUS_LOSS = "SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS";
 
-        // MacroDefinition @ SDL_hints.h:1435:9
+        // MacroDefinition @ SDL_hints.h:1464:9
         public const string SDL_HINT_VIDEO_WAYLAND_ALLOW_LIBDECOR = "SDL_VIDEO_WAYLAND_ALLOW_LIBDECOR";
 
-        // MacroDefinition @ SDL_hints.h:1454:9
+        // MacroDefinition @ SDL_hints.h:1483:9
         public const string SDL_HINT_VIDEO_WINDOW_SHARE_PIXEL_FORMAT = "SDL_VIDEO_WINDOW_SHARE_PIXEL_FORMAT";
 
-        // MacroDefinition @ SDL_hints.h:1465:9
+        // MacroDefinition @ SDL_hints.h:1494:9
         public const string SDL_HINT_VIDEO_FOREIGN_WINDOW_OPENGL = "SDL_VIDEO_FOREIGN_WINDOW_OPENGL";
 
-        // MacroDefinition @ SDL_hints.h:1476:9
+        // MacroDefinition @ SDL_hints.h:1505:9
         public const string SDL_HINT_VIDEO_FOREIGN_WINDOW_VULKAN = "SDL_VIDEO_FOREIGN_WINDOW_VULKAN";
 
-        // MacroDefinition @ SDL_hints.h:1492:9
+        // MacroDefinition @ SDL_hints.h:1521:9
         public const string SDL_HINT_VIDEO_WIN_D3DCOMPILER = "SDL_VIDEO_WIN_D3DCOMPILER";
 
-        // MacroDefinition @ SDL_hints.h:1503:9
+        // MacroDefinition @ SDL_hints.h:1532:9
         public const string SDL_HINT_VIDEO_X11_FORCE_EGL = "SDL_VIDEO_X11_FORCE_EGL";
 
-        // MacroDefinition @ SDL_hints.h:1515:9
+        // MacroDefinition @ SDL_hints.h:1544:9
         public const string SDL_HINT_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR = "SDL_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR";
 
-        // MacroDefinition @ SDL_hints.h:1529:9
+        // MacroDefinition @ SDL_hints.h:1558:9
         public const string SDL_HINT_VIDEO_X11_NET_WM_PING = "SDL_VIDEO_X11_NET_WM_PING";
 
-        // MacroDefinition @ SDL_hints.h:1535:9
+        // MacroDefinition @ SDL_hints.h:1564:9
         public const string SDL_HINT_VIDEO_X11_WINDOW_VISUALID = "SDL_VIDEO_X11_WINDOW_VISUALID";
 
-        // MacroDefinition @ SDL_hints.h:1546:9
+        // MacroDefinition @ SDL_hints.h:1575:9
         public const string SDL_HINT_VIDEO_X11_XINERAMA = "SDL_VIDEO_X11_XINERAMA";
 
-        // MacroDefinition @ SDL_hints.h:1557:9
+        // MacroDefinition @ SDL_hints.h:1586:9
         public const string SDL_HINT_VIDEO_X11_XRANDR = "SDL_VIDEO_X11_XRANDR";
 
-        // MacroDefinition @ SDL_hints.h:1568:9
+        // MacroDefinition @ SDL_hints.h:1597:9
         public const string SDL_HINT_VIDEO_X11_XVIDMODE = "SDL_VIDEO_X11_XVIDMODE";
 
-        // MacroDefinition @ SDL_hints.h:1595:9
+        // MacroDefinition @ SDL_hints.h:1624:9
         public const string SDL_HINT_WAVE_FACT_CHUNK = "SDL_WAVE_FACT_CHUNK";
 
-        // MacroDefinition @ SDL_hints.h:1616:9
+        // MacroDefinition @ SDL_hints.h:1645:9
         public const string SDL_HINT_WAVE_RIFF_CHUNK_SIZE = "SDL_WAVE_RIFF_CHUNK_SIZE";
 
-        // MacroDefinition @ SDL_hints.h:1632:9
+        // MacroDefinition @ SDL_hints.h:1661:9
         public const string SDL_HINT_WAVE_TRUNCATION = "SDL_WAVE_TRUNCATION";
 
-        // MacroDefinition @ SDL_hints.h:1648:9
+        // MacroDefinition @ SDL_hints.h:1677:9
         public const string SDL_HINT_WINDOWS_DISABLE_THREAD_NAMING = "SDL_WINDOWS_DISABLE_THREAD_NAMING";
 
-        // MacroDefinition @ SDL_hints.h:1659:9
+        // MacroDefinition @ SDL_hints.h:1688:9
         public const string SDL_HINT_WINDOWS_ENABLE_MESSAGELOOP = "SDL_WINDOWS_ENABLE_MESSAGELOOP";
 
-        // MacroDefinition @ SDL_hints.h:1673:9
+        // MacroDefinition @ SDL_hints.h:1702:9
         public const string SDL_HINT_WINDOWS_FORCE_MUTEX_CRITICAL_SECTIONS = "SDL_WINDOWS_FORCE_MUTEX_CRITICAL_SECTIONS";
 
-        // MacroDefinition @ SDL_hints.h:1689:9
+        // MacroDefinition @ SDL_hints.h:1718:9
         public const string SDL_HINT_WINDOWS_FORCE_SEMAPHORE_KERNEL = "SDL_WINDOWS_FORCE_SEMAPHORE_KERNEL";
 
-        // MacroDefinition @ SDL_hints.h:1694:9
+        // MacroDefinition @ SDL_hints.h:1723:9
         public const string SDL_HINT_WINDOWS_INTRESOURCE_ICON = "SDL_WINDOWS_INTRESOURCE_ICON";
 
-        // MacroDefinition @ SDL_hints.h:1695:9
+        // MacroDefinition @ SDL_hints.h:1724:9
         public const string SDL_HINT_WINDOWS_INTRESOURCE_ICON_SMALL = "SDL_WINDOWS_INTRESOURCE_ICON_SMALL";
 
-        // MacroDefinition @ SDL_hints.h:1704:9
+        // MacroDefinition @ SDL_hints.h:1733:9
         public const string SDL_HINT_WINDOWS_NO_CLOSE_ON_ALT_F4 = "SDL_WINDOWS_NO_CLOSE_ON_ALT_F4";
 
-        // MacroDefinition @ SDL_hints.h:1724:9
+        // MacroDefinition @ SDL_hints.h:1753:9
         public const string SDL_HINT_WINDOWS_USE_D3D9EX = "SDL_WINDOWS_USE_D3D9EX";
 
-        // MacroDefinition @ SDL_hints.h:1735:9
+        // MacroDefinition @ SDL_hints.h:1764:9
         public const string SDL_HINT_WINDOW_FRAME_USABLE_WHILE_CURSOR_HIDDEN = "SDL_WINDOW_FRAME_USABLE_WHILE_CURSOR_HIDDEN";
 
-        // MacroDefinition @ SDL_hints.h:1746:9
+        // MacroDefinition @ SDL_hints.h:1775:9
         public const string SDL_HINT_WINDOW_NO_ACTIVATION_WHEN_SHOWN = "SDL_WINDOW_NO_ACTIVATION_WHEN_SHOWN";
 
-        // MacroDefinition @ SDL_hints.h:1798:9
+        // MacroDefinition @ SDL_hints.h:1827:9
         public const string SDL_HINT_WINRT_HANDLE_BACK_BUTTON = "SDL_WINRT_HANDLE_BACK_BUTTON";
 
-        // MacroDefinition @ SDL_hints.h:1819:9
+        // MacroDefinition @ SDL_hints.h:1848:9
         public const string SDL_HINT_WINRT_PRIVACY_POLICY_LABEL = "SDL_WINRT_PRIVACY_POLICY_LABEL";
 
-        // MacroDefinition @ SDL_hints.h:1845:9
+        // MacroDefinition @ SDL_hints.h:1874:9
         public const string SDL_HINT_WINRT_PRIVACY_POLICY_URL = "SDL_WINRT_PRIVACY_POLICY_URL";
 
-        // MacroDefinition @ SDL_hints.h:1857:9
+        // MacroDefinition @ SDL_hints.h:1886:9
         public const string SDL_HINT_X11_FORCE_OVERRIDE_REDIRECT = "SDL_X11_FORCE_OVERRIDE_REDIRECT";
 
-        // MacroDefinition @ SDL_hints.h:1866:9
+        // MacroDefinition @ SDL_hints.h:1895:9
         public const string SDL_HINT_XINPUT_ENABLED = "SDL_XINPUT_ENABLED";
 
-        // MacroDefinition @ SDL_hints.h:1875:9
+        // MacroDefinition @ SDL_hints.h:1904:9
         public const string SDL_HINT_XINPUT_USE_OLD_JOYSTICK_MAPPING = "SDL_XINPUT_USE_OLD_JOYSTICK_MAPPING";
 
-        // MacroDefinition @ SDL_hints.h:1894:9
+        // MacroDefinition @ SDL_hints.h:1923:9
         public const string SDL_HINT_AUDIO_INCLUDE_MONITORS = "SDL_AUDIO_INCLUDE_MONITORS";
 
-        // MacroDefinition @ SDL_hints.h:1915:9
+        // MacroDefinition @ SDL_hints.h:1944:9
         public const string SDL_HINT_X11_WINDOW_TYPE = "SDL_X11_WINDOW_TYPE";
 
         // MacroDefinition @ SDL_log.h:54:9
