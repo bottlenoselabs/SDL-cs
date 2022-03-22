@@ -1164,23 +1164,23 @@ namespace bottlenoselabs
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_IntersectRectAndLine(SDL_Rect* rect, int* X1, int* Y1, int* X2, int* Y2);
 
-        // Function @ SDL_rect.h:261:34
+        // Function @ SDL_rect.h:263:34
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_HasIntersectionF(SDL_FRect* A, SDL_FRect* B);
 
-        // Function @ SDL_rect.h:277:34
+        // Function @ SDL_rect.h:281:34
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_IntersectFRect(SDL_FRect* A, SDL_FRect* B, SDL_FRect* result);
 
-        // Function @ SDL_rect.h:289:30
+        // Function @ SDL_rect.h:295:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_UnionFRect(SDL_FRect* A, SDL_FRect* B, SDL_FRect* result);
 
-        // Function @ SDL_rect.h:308:34
+        // Function @ SDL_rect.h:317:34
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_EncloseFPoints(SDL_FPoint* points, int count, SDL_FRect* clip, SDL_FRect* result);
 
-        // Function @ SDL_rect.h:329:34
+        // Function @ SDL_rect.h:341:34
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_IntersectFRectAndLine(SDL_FRect* rect, float* X1, float* Y1, float* X2, float* Y2);
 
