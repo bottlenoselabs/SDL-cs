@@ -2804,299 +2804,303 @@ namespace bottlenoselabs
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Renderer* SDL_GetRenderer(SDL_Window* window);
 
-        // Function @ SDL_render.h:277:29
+        // Function @ SDL_render.h:273:38
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
+        public static extern SDL_Window* SDL_RenderGetWindow(SDL_Renderer* renderer);
+
+        // Function @ SDL_render.h:288:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetRendererInfo(SDL_Renderer* renderer, SDL_RendererInfo* info);
 
-        // Function @ SDL_render.h:297:29
+        // Function @ SDL_render.h:308:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetRendererOutputSize(SDL_Renderer* renderer, int* w, int* h);
 
-        // Function @ SDL_render.h:322:39
+        // Function @ SDL_render.h:333:39
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Texture* SDL_CreateTexture(SDL_Renderer* renderer, uint format, int access, int w, int h);
 
-        // Function @ SDL_render.h:351:39
+        // Function @ SDL_render.h:362:39
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Texture* SDL_CreateTextureFromSurface(SDL_Renderer* renderer, SDL_Surface* surface);
 
-        // Function @ SDL_render.h:375:29
+        // Function @ SDL_render.h:386:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_QueryTexture(SDL_Texture* texture, uint* format, int* access, int* w, int* h);
 
-        // Function @ SDL_render.h:403:29
+        // Function @ SDL_render.h:414:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetTextureColorMod(SDL_Texture* texture, byte r, byte g, byte b);
 
-        // Function @ SDL_render.h:422:29
+        // Function @ SDL_render.h:433:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetTextureColorMod(SDL_Texture* texture, byte* r, byte* g, byte* b);
 
-        // Function @ SDL_render.h:447:29
+        // Function @ SDL_render.h:458:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetTextureAlphaMod(SDL_Texture* texture, byte alpha);
 
-        // Function @ SDL_render.h:463:29
+        // Function @ SDL_render.h:474:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetTextureAlphaMod(SDL_Texture* texture, byte* alpha);
 
-        // Function @ SDL_render.h:482:29
+        // Function @ SDL_render.h:493:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetTextureBlendMode(SDL_Texture* texture, SDL_BlendMode blendMode);
 
-        // Function @ SDL_render.h:497:29
+        // Function @ SDL_render.h:508:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetTextureBlendMode(SDL_Texture* texture, SDL_BlendMode* blendMode);
 
-        // Function @ SDL_render.h:513:29
+        // Function @ SDL_render.h:524:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetTextureScaleMode(SDL_Texture* texture, SDL_ScaleMode scaleMode);
 
-        // Function @ SDL_render.h:527:29
+        // Function @ SDL_render.h:538:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetTextureScaleMode(SDL_Texture* texture, SDL_ScaleMode* scaleMode);
 
-        // Function @ SDL_render.h:541:29
+        // Function @ SDL_render.h:552:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetTextureUserData(SDL_Texture* texture, void* userdata);
 
-        // Function @ SDL_render.h:555:32
+        // Function @ SDL_render.h:566:32
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_GetTextureUserData(SDL_Texture* texture);
 
-        // Function @ SDL_render.h:586:29
+        // Function @ SDL_render.h:597:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_UpdateTexture(SDL_Texture* texture, SDL_Rect* rect, void* pixels, int pitch);
 
-        // Function @ SDL_render.h:617:29
+        // Function @ SDL_render.h:628:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_UpdateYUVTexture(SDL_Texture* texture, SDL_Rect* rect, byte* Yplane, int Ypitch, byte* Uplane, int Upitch, byte* Vplane, int Vpitch);
 
-        // Function @ SDL_render.h:643:29
+        // Function @ SDL_render.h:654:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_UpdateNVTexture(SDL_Texture* texture, SDL_Rect* rect, byte* Yplane, int Ypitch, byte* UVplane, int UVpitch);
 
-        // Function @ SDL_render.h:675:29
+        // Function @ SDL_render.h:686:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_LockTexture(SDL_Texture* texture, SDL_Rect* rect, void** pixels, int* pitch);
 
-        // Function @ SDL_render.h:711:29
+        // Function @ SDL_render.h:722:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_LockTextureToSurface(SDL_Texture* texture, SDL_Rect* rect, SDL_Surface** surface);
 
-        // Function @ SDL_render.h:732:30
+        // Function @ SDL_render.h:743:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_UnlockTexture(SDL_Texture* texture);
 
-        // Function @ SDL_render.h:744:34
+        // Function @ SDL_render.h:755:34
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_RenderTargetSupported(SDL_Renderer* renderer);
 
-        // Function @ SDL_render.h:768:29
+        // Function @ SDL_render.h:779:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetRenderTarget(SDL_Renderer* renderer, SDL_Texture* texture);
 
-        // Function @ SDL_render.h:784:39
+        // Function @ SDL_render.h:795:39
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern SDL_Texture* SDL_GetRenderTarget(SDL_Renderer* renderer);
 
-        // Function @ SDL_render.h:812:29
+        // Function @ SDL_render.h:823:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderSetLogicalSize(SDL_Renderer* renderer, int w, int h);
 
-        // Function @ SDL_render.h:829:30
+        // Function @ SDL_render.h:840:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_RenderGetLogicalSize(SDL_Renderer* renderer, int* w, int* h);
 
-        // Function @ SDL_render.h:848:29
+        // Function @ SDL_render.h:859:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderSetIntegerScale(SDL_Renderer* renderer, CBool enable);
 
-        // Function @ SDL_render.h:862:34
+        // Function @ SDL_render.h:873:34
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_RenderGetIntegerScale(SDL_Renderer* renderer);
 
-        // Function @ SDL_render.h:880:29
+        // Function @ SDL_render.h:891:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderSetViewport(SDL_Renderer* renderer, SDL_Rect* rect);
 
-        // Function @ SDL_render.h:893:30
+        // Function @ SDL_render.h:904:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_RenderGetViewport(SDL_Renderer* renderer, SDL_Rect* rect);
 
-        // Function @ SDL_render.h:911:29
+        // Function @ SDL_render.h:922:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderSetClipRect(SDL_Renderer* renderer, SDL_Rect* rect);
 
-        // Function @ SDL_render.h:927:30
+        // Function @ SDL_render.h:938:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_RenderGetClipRect(SDL_Renderer* renderer, SDL_Rect* rect);
 
-        // Function @ SDL_render.h:942:34
+        // Function @ SDL_render.h:953:34
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_RenderIsClipEnabled(SDL_Renderer* renderer);
 
-        // Function @ SDL_render.h:967:29
+        // Function @ SDL_render.h:978:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderSetScale(SDL_Renderer* renderer, float scaleX, float scaleY);
 
-        // Function @ SDL_render.h:981:30
+        // Function @ SDL_render.h:992:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_RenderGetScale(SDL_Renderer* renderer, float* scaleX, float* scaleY);
 
-        // Function @ SDL_render.h:1005:30
+        // Function @ SDL_render.h:1016:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_RenderWindowToLogical(SDL_Renderer* renderer, int windowX, int windowY, float* logicalX, float* logicalY);
 
-        // Function @ SDL_render.h:1027:30
+        // Function @ SDL_render.h:1038:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_RenderLogicalToWindow(SDL_Renderer* renderer, float logicalX, float logicalY, int* windowX, int* windowY);
 
-        // Function @ SDL_render.h:1060:29
+        // Function @ SDL_render.h:1071:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetRenderDrawColor(SDL_Renderer* renderer, byte r, byte g, byte b, byte a);
 
-        // Function @ SDL_render.h:1083:29
+        // Function @ SDL_render.h:1094:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetRenderDrawColor(SDL_Renderer* renderer, byte* r, byte* g, byte* b, byte* a);
 
-        // Function @ SDL_render.h:1109:29
+        // Function @ SDL_render.h:1120:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_SetRenderDrawBlendMode(SDL_Renderer* renderer, SDL_BlendMode blendMode);
 
-        // Function @ SDL_render.h:1124:29
+        // Function @ SDL_render.h:1135:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GetRenderDrawBlendMode(SDL_Renderer* renderer, SDL_BlendMode* blendMode);
 
-        // Function @ SDL_render.h:1141:29
+        // Function @ SDL_render.h:1152:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderClear(SDL_Renderer* renderer);
 
-        // Function @ SDL_render.h:1168:29
+        // Function @ SDL_render.h:1179:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderDrawPoint(SDL_Renderer* renderer, int x, int y);
 
-        // Function @ SDL_render.h:1194:29
+        // Function @ SDL_render.h:1205:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderDrawPoints(SDL_Renderer* renderer, SDL_Point* points, int count);
 
-        // Function @ SDL_render.h:1225:29
+        // Function @ SDL_render.h:1236:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderDrawLine(SDL_Renderer* renderer, int x1, int y1, int x2, int y2);
 
-        // Function @ SDL_render.h:1251:29
+        // Function @ SDL_render.h:1262:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderDrawLines(SDL_Renderer* renderer, SDL_Point* points, int count);
 
-        // Function @ SDL_render.h:1277:29
+        // Function @ SDL_render.h:1288:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderDrawRect(SDL_Renderer* renderer, SDL_Rect* rect);
 
-        // Function @ SDL_render.h:1303:29
+        // Function @ SDL_render.h:1314:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderDrawRects(SDL_Renderer* renderer, SDL_Rect* rects, int count);
 
-        // Function @ SDL_render.h:1333:29
+        // Function @ SDL_render.h:1344:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderFillRect(SDL_Renderer* renderer, SDL_Rect* rect);
 
-        // Function @ SDL_render.h:1358:29
+        // Function @ SDL_render.h:1369:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderFillRects(SDL_Renderer* renderer, SDL_Rect* rects, int count);
 
-        // Function @ SDL_render.h:1390:29
+        // Function @ SDL_render.h:1401:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderCopy(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect* srcrect, SDL_Rect* dstrect);
 
-        // Function @ SDL_render.h:1434:29
+        // Function @ SDL_render.h:1445:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderCopyEx(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect* srcrect, SDL_Rect* dstrect, double angle, SDL_Point* center, SDL_RendererFlip flip);
 
-        // Function @ SDL_render.h:1453:29
+        // Function @ SDL_render.h:1464:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderDrawPointF(SDL_Renderer* renderer, float x, float y);
 
-        // Function @ SDL_render.h:1466:29
+        // Function @ SDL_render.h:1477:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderDrawPointsF(SDL_Renderer* renderer, SDL_FPoint* points, int count);
 
-        // Function @ SDL_render.h:1482:29
+        // Function @ SDL_render.h:1493:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderDrawLineF(SDL_Renderer* renderer, float x1, float y1, float x2, float y2);
 
-        // Function @ SDL_render.h:1496:29
+        // Function @ SDL_render.h:1507:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderDrawLinesF(SDL_Renderer* renderer, SDL_FPoint* points, int count);
 
-        // Function @ SDL_render.h:1510:29
+        // Function @ SDL_render.h:1521:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderDrawRectF(SDL_Renderer* renderer, SDL_FRect* rect);
 
-        // Function @ SDL_render.h:1524:29
+        // Function @ SDL_render.h:1535:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderDrawRectsF(SDL_Renderer* renderer, SDL_FRect* rects, int count);
 
-        // Function @ SDL_render.h:1539:29
+        // Function @ SDL_render.h:1550:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderFillRectF(SDL_Renderer* renderer, SDL_FRect* rect);
 
-        // Function @ SDL_render.h:1553:29
+        // Function @ SDL_render.h:1564:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderFillRectsF(SDL_Renderer* renderer, SDL_FRect* rects, int count);
 
-        // Function @ SDL_render.h:1571:29
+        // Function @ SDL_render.h:1582:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderCopyF(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect* srcrect, SDL_FRect* dstrect);
 
-        // Function @ SDL_render.h:1597:29
+        // Function @ SDL_render.h:1608:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderCopyExF(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect* srcrect, SDL_FRect* dstrect, double angle, SDL_FPoint* center, SDL_RendererFlip flip);
 
-        // Function @ SDL_render.h:1624:29
+        // Function @ SDL_render.h:1635:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderGeometry(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Vertex* vertices, int num_vertices, int* indices, int num_indices);
 
-        // Function @ SDL_render.h:1653:29
+        // Function @ SDL_render.h:1664:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderGeometryRaw(SDL_Renderer* renderer, SDL_Texture* texture, float* xy, int xy_stride, SDL_Color* color, int color_stride, float* uv, int uv_stride, int num_vertices, void* indices, int num_indices, int size_indices);
 
-        // Function @ SDL_render.h:1687:29
+        // Function @ SDL_render.h:1698:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderReadPixels(SDL_Renderer* renderer, SDL_Rect* rect, uint format, void* pixels, int pitch);
 
-        // Function @ SDL_render.h:1727:30
+        // Function @ SDL_render.h:1738:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_RenderPresent(SDL_Renderer* renderer);
 
-        // Function @ SDL_render.h:1742:30
+        // Function @ SDL_render.h:1753:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_DestroyTexture(SDL_Texture* texture);
 
-        // Function @ SDL_render.h:1753:30
+        // Function @ SDL_render.h:1764:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_DestroyRenderer(SDL_Renderer* renderer);
 
-        // Function @ SDL_render.h:1784:29
+        // Function @ SDL_render.h:1795:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderFlush(SDL_Renderer* renderer);
 
-        // Function @ SDL_render.h:1822:29
+        // Function @ SDL_render.h:1833:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GL_BindTexture(SDL_Texture* texture, float* texw, float* texh);
 
-        // Function @ SDL_render.h:1837:29
+        // Function @ SDL_render.h:1848:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_GL_UnbindTexture(SDL_Texture* texture);
 
-        // Function @ SDL_render.h:1853:31
+        // Function @ SDL_render.h:1864:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_RenderGetMetalLayer(SDL_Renderer* renderer);
 
-        // Function @ SDL_render.h:1874:31
+        // Function @ SDL_render.h:1885:31
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* SDL_RenderGetMetalCommandEncoder(SDL_Renderer* renderer);
 
-        // Function @ SDL_render.h:1885:29
+        // Function @ SDL_render.h:1896:29
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_RenderSetVSync(SDL_Renderer* renderer, int vsync);
 
