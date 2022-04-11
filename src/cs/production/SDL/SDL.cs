@@ -2652,31 +2652,31 @@ namespace bottlenoselabs
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_hid_ble_scan(CBool active);
 
-        // Function @ SDL_hints.h:2011:34
+        // Function @ SDL_hints.h:2010:34
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_SetHintWithPriority(CString name, CString value, SDL_HintPriority priority);
 
-        // Function @ SDL_hints.h:2031:34
+        // Function @ SDL_hints.h:2030:34
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_SetHint(CString name, CString value);
 
-        // Function @ SDL_hints.h:2045:38
+        // Function @ SDL_hints.h:2044:38
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString SDL_GetHint(CString name);
 
-        // Function @ SDL_hints.h:2060:34
+        // Function @ SDL_hints.h:2059:34
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool SDL_GetHintBoolean(CString name, CBool default_value);
 
-        // Function @ SDL_hints.h:2084:30
+        // Function @ SDL_hints.h:2083:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_AddHintCallback(CString name, SDL_HintCallback callback, void* userdata);
 
-        // Function @ SDL_hints.h:2100:30
+        // Function @ SDL_hints.h:2099:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_DelHintCallback(CString name, SDL_HintCallback callback, void* userdata);
 
-        // Function @ SDL_hints.h:2111:30
+        // Function @ SDL_hints.h:2110:30
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_ClearHints();
 
@@ -3258,7 +3258,7 @@ namespace bottlenoselabs
             public delegate* unmanaged<void*, SDL_Event*, int> Pointer;
         }
 
-        // FunctionPointer @ SDL_hints.h:2070:24
+        // FunctionPointer @ SDL_hints.h:2069:24
         [StructLayout(LayoutKind.Sequential)]
         public struct SDL_HintCallback
         {
@@ -5991,7 +5991,7 @@ namespace bottlenoselabs
             SDL_GETEVENT = 2
         }
 
-        // Enum @ SDL_hints.h:1991:3
+        // Enum @ SDL_hints.h:1990:3
         public enum SDL_HintPriority : int
         {
             SDL_HINT_DEFAULT = 0,
@@ -7327,10 +7327,10 @@ namespace bottlenoselabs
         // MacroDefinition @ SDL_hints.h:1935:9
         public const string SDL_HINT_AUDIO_INCLUDE_MONITORS = "SDL_AUDIO_INCLUDE_MONITORS";
 
-        // MacroDefinition @ SDL_hints.h:1956:9
+        // MacroDefinition @ SDL_hints.h:1955:9
         public const string SDL_HINT_X11_WINDOW_TYPE = "SDL_X11_WINDOW_TYPE";
 
-        // MacroDefinition @ SDL_hints.h:1980:9
+        // MacroDefinition @ SDL_hints.h:1979:9
         public const string SDL_HINT_QUIT_ON_LAST_WINDOW_CLOSE = "SDL_QUIT_ON_LAST_WINDOW_CLOSE";
 
         // MacroDefinition @ SDL_log.h:54:9
@@ -7352,7 +7352,7 @@ namespace bottlenoselabs
         public const int SDL_MINOR_VERSION = 0;
 
         // MacroDefinition @ SDL_version.h:62:9
-        public const int SDL_PATCHLEVEL = 21;
+        public const int SDL_PATCHLEVEL = 22;
 
         // MacroDefinition @ SDL.h:81:9
         public const uint SDL_INIT_TIMER = 0x00000001u;
