@@ -1,29 +1,7 @@
 {
-    "inputFilePath": "ext/SDL/include/SDL.h",
-    "excludedHeaderFiles": [
-      "begin_code.h",
-      "end_code.h",
-      "SDL_endian.h",
-      "SDL_config_android.h",
-      "SDL_config_emscripten.h",
-      "SDL_config_iphoneos.h",
-      "SDL_config_macosx.h",
-      "SDL_config_minimal.h",
-      "SDL_config_os2.h",
-      "SDL_config_pandora.h",
-      "SDL_config_psp.h",
-      "SDL_config_windows.h",
-      "SDL_config_winrt.h",
-      "SDL_config_wiz.h",
-      "SDL_config.h",
-      "SDL_system.h"
-    ],
-    "outputFilePath": "src/cs/production/SDL/SDL.cs",
-    "libraryName": "SDL2",
-    "namespaceName": "bottlenoselabs",
-    "machineBitWidth": 64,
-    "headerCodeRegionFilePath": null,
-    "footerCodeRegionFilePath": null,
+  "directory": "./ast",
+  "c": {
+    "input_file": "./ext/SDL/include/SDL.h",
     "defines": [
       "SDL_DISABLE_IMMINTRIN_H",
       "SDL_DISABLE_MMINTRIN_H",
@@ -31,7 +9,16 @@
       "SDL_DISABLE_EMMINTRIN_H",
       "SDL_DISABLE_PMMINTRIN_H"
     ],
-    "mappedTypeNames": [
+    "opaque_types": [
+      "SDL_RWops"
+    ],
+    "is_enabled_enums_dangling": true
+  },
+  "cs": {
+    "output_file": "./src/cs/production/SDL/SDL.cs",
+    "namespace": "bottlenoselabs",
+    "library_name": "SDL2",
+    "mapped_names": [
       {
         "source": "SDL_bool",
         "target": "CBool"
@@ -69,7 +56,7 @@
         "target": "long"
       } 
     ],
-    "ignoredTypeNames": [
+    "ignored_names": [
       "SDL_bool",
       "SDL_PRIs64",
       "SDL_PRIu64",
@@ -105,9 +92,6 @@
       "SDL_MIN_SINT64",
       "SDL_MAX_UINT64",
       "SDL_MIN_UINT64"
-    ],
-    "opaqueTypeNames": [
-      "SDL_RWops"
-    ],
-    "clangArguments": null
+    ]
   }
+}

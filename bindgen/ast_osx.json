@@ -1,0 +1,22 @@
+{
+  "$schema": "https://raw.githubusercontent.com/bottlenoselabs/c2cs/main/schema.json",
+  "directory": "./ast",
+  "c": {
+    "input_file": "./ext/SDL/include/SDL.h",
+    "defines": [
+      "SDL_DISABLE_IMMINTRIN_H",
+      "SDL_DISABLE_MMINTRIN_H",
+      "SDL_DISABLE_XMMINTRIN_H",
+      "SDL_DISABLE_EMMINTRIN_H",
+      "SDL_DISABLE_PMMINTRIN_H"
+    ],
+    "opaque_types": [
+      "SDL_RWops"
+    ],
+    "is_enabled_enums_dangling": true,
+    "platforms": {
+      "aarch64-apple-darwin": {},
+      "x86_64-apple-darwin": {}
+    }
+  }
+}

@@ -1,6 +1,7 @@
-name: "build+deploy"
+name: "Build .NET solution"
 
 on:
+  workflow_call:
   push:
     tags:
       - v*
@@ -12,7 +13,7 @@ on:
 jobs:
 
   native-job:
-    name: "Native libraries: ${{ matrix.platform.rid }}"
+    name: "Build native libraries: ${{ matrix.platform.rid }}"
     runs-on: ${{ matrix.platform.os }}
     strategy:
       fail-fast: false
@@ -28,21 +29,37 @@ jobs:
         with:
           submodules: "recursive"
 
+      - name: "Cache native libraries"
+        id: cache-libs
+        uses: actions/cache@v3
+        with:
+          path: "./lib"
+          key: "libs-${{ matrix.platform.rid }}-${{ hashFiles('ext/SDL/**/*') }}"
+
+      - name: "Install macOS dependencies"
+        if: runner.os == 'macOS'
+        run: |
+          brew install ninja
+
       - name: "Build native libraries"
+        if: steps.cache-libs.outputs.cache-hit != 'true'
         shell: bash
         run: ./library.sh
 
       - name: "Upload native libraries"
         uses: actions/upload-artifact@v2
         with:
-          name: "native-libraries-${{ matrix.platform.rid }}"
           path: "./lib"
+          name: "native-libraries-${{ matrix.platform.rid }}"
 
   dotnet-job:
-    name: ".NET"
+    name: "Build .NET solution"
     needs: [native-job]
     runs-on: ubuntu-latest
     steps:
+
+      - name: "Clone Git repository"
+        uses: actions/checkout@master
 
       - name: "Download native libraries (win-x64)"
         uses: actions/download-artifact@v1
@@ -62,7 +79,13 @@ jobs:
           name: "native-libraries-linux-x64"
           path: "./lib"
 
-      - uses: bottlenoselabs/github-actions-dotnet@v2
+      - name: "Download generated C# code"
+        uses: actions/download-artifact@v1
+        continue-on-error: true
         with:
-          repository: '${{ github.repository }}'
-          dotnet-sdk-version: '6.0.x'
+          name: "bindgen-cs"
+          path: "./src/cs/production/SDL"
+
+      - name: ".NET Build"
+        run: dotnet build
+          

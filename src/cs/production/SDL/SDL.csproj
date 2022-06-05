@@ -8,6 +8,12 @@
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Compile Update="SDL.cs">
+        <Visible>false</Visible>
+      </Compile>
+    </ItemGroup>
+
     <Import Project="$(MSBuildThisFileDirectory)/../../../../SDL.props" />
 
 </Project>

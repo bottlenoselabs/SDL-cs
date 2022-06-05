@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{9E1476CE-E22E-44FD-ABC4-93625DDBBA99}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{9E1476CE-E22E-44FD-ABC4-93625DDBBA99}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "src\cs\samples\HelloWorld\HelloWorld.csproj", "{A3C2CCD0-3D6E-4356-916D-B67E220646F7}"
 EndProject
