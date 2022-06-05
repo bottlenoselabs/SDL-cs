@@ -3,9 +3,9 @@
 #if defined(__APPLE__)
     #if __has_include("AvailabilityMacros.h")
         #include <AvailabilityMacros.h>
-    #else
-        #define MAC_OS_X_VERSION_MIN_REQUIRED 1070
     #endif
+#else
+    #define MAC_OS_X_VERSION_MIN_REQUIRED 1070
 #endif
 
 #define SDL_DISABLE_IMMINTRIN_H

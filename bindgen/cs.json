@@ -43,6 +43,7 @@
           } 
         ],
         "ignored_names": [
+          "MAC_OS_X_VERSION_MIN_REQUIRED",
           "SDL_bool",
           "SDL_PRIs64",
           "SDL_PRIu64",
