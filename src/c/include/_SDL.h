@@ -4,16 +4,11 @@
 #define STR(x) #x
 #define ABC 1
 
-#if defined(__APPLE__)
-    #if __has_include("AvailabilityMacros.h")
-        #include <AvailabilityMacros.h>
-        # error "Test1"
-    #else
-        # error "Test2"
-    #endif
-
+#if defined(__APPLE__) && __has_include("AvailabilityMacros.h")
+    #include <AvailabilityMacros.h>
     #if MAC_OS_X_VERSION_MIN_REQUIRED < 1060
-        # error "Test3"
+        #undef MAC_OS_X_VERSION_MIN_REQUIRED
+        #define MAC_OS_X_VERSION_MIN_REQUIRED MAC_OS_X_VERSION_10_7
     #endif
 #endif
 
