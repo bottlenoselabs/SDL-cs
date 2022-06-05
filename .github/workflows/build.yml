@@ -36,6 +36,11 @@ jobs:
           path: "./lib"
           key: "libs-${{ matrix.platform.rid }}-${{ hashFiles('ext/SDL/**/*') }}"
 
+      - name: "Install Windows dependencies"
+        if: runner.os == 'Windows'
+        run: |
+          choco install ninja
+
       - name: "Install macOS dependencies"
         if: runner.os == 'macOS'
         run: |
