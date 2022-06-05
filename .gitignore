@@ -11,13 +11,8 @@
 # Native libraries
 /lib/
 
-# C2CS
-/C2CS
-/C2CS.exe
-/libclang.dll
-/libclang.dylib
-/libclang.so
-/ast/
+# Bindgen
+/bindgen/ast/
 
 # macOS
 .DS_store

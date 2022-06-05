@@ -1,9 +1,5 @@
 #pragma once
 
-#define XSTR(x) STR(x)
-#define STR(x) #x
-#define ABC 1
-
 #if defined(__APPLE__) && __has_include("AvailabilityMacros.h")
     #include <AvailabilityMacros.h>
     #if MAC_OS_X_VERSION_MIN_REQUIRED < 1060
