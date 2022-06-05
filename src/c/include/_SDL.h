@@ -1,7 +1,11 @@
 #pragma once
 
-#if defined(__APPLE__) && __has_include("AvailabilityMacros.h")
-    #include <AvailabilityMacros.h>
+#if defined(__APPLE__)
+    #if __has_include("AvailabilityMacros.h")
+        #include <AvailabilityMacros.h>
+    #else
+        #define MAC_OS_X_VERSION_MIN_REQUIRED 1070
+    #endif
 #endif
 
 #define SDL_DISABLE_IMMINTRIN_H
