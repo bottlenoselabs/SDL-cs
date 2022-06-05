@@ -7,15 +7,13 @@
 #if defined(__APPLE__)
     #if __has_include("AvailabilityMacros.h")
         #include <AvailabilityMacros.h>
+        # error "Test1"
+    #else
+        # error "Test2"
     #endif
 
     #if MAC_OS_X_VERSION_MIN_REQUIRED < 1060
-        # error "Test1"
-    #endif
-#else
-    #define MAC_OS_X_VERSION_MIN_REQUIRED 1070
-    #if MAC_OS_X_VERSION_MIN_REQUIRED < 1060
-        # error "Test2"
+        # error "Test3"
     #endif
 #endif
 
