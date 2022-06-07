@@ -1,4 +1,5 @@
 {
+    "$schema": "https://raw.githubusercontent.com/bottlenoselabs/c2cs/main/schema.json",
     "directory": "./ast",
     "cs": {
         "output_file": "../src/cs/production/SDL/SDL.cs",

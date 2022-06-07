@@ -7,6 +7,7 @@
       "../ext/SDL/include"
     ],
     "opaque_types": [
+      "SDL_AudioCVT",
       "SDL_RWops"
     ],
     "is_enabled_enums_dangling": true,
