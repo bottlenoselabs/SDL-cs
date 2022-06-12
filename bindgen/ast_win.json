@@ -6,6 +6,10 @@
     "user_include_directories": [
       "../ext/SDL/include"
     ],
+    "header_files_blocked": [
+      "SDL_thread.h",
+      "SDL_stdinc.h"
+    ],
     "opaque_types": [
       "SDL_AudioCVT",
       "SDL_RWops"
