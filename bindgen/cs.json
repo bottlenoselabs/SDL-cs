@@ -2,7 +2,7 @@
     "$schema": "https://raw.githubusercontent.com/bottlenoselabs/c2cs/main/schema.json",
     "directory": "./ast",
     "cs": {
-        "output_file": "../src/cs/production/SDL/SDL.cs",
+        "output_file": "../SDL.cs",
         "namespace": "bottlenoselabs",
         "library_name": "SDL2",
         "mapped_names": [
