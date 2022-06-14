@@ -96,7 +96,7 @@ jobs:
         continue-on-error: true
         with:
           name: "bindgen-cs"
-          path: "./src/cs/production/SDL"
+          path: "./"
 
       - name: ".NET Build"
         run: dotnet build

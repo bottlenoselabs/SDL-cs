@@ -22,7 +22,7 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: "bindgen-cs"
-          path: "./src/cs/production/SDL"
+          path: "./"
 
       - name: "Add + commit + push (if necessary)"
         uses: EndBug/add-and-commit@v7
