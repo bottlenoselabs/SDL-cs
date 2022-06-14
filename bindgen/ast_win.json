@@ -18,6 +18,17 @@
     "platforms": {
       "aarch64-pc-windows-msvc": {},
       "x86_64-pc-windows-msvc": {}
-    }
+    },
+    "pass_through_types": [
+      "SDL_bool",
+      "Uint8",
+      "Uint16",
+      "Uint32",
+      "Uint64",
+      "Sint8",
+      "Sint16",
+      "Sint32",
+      "Sint64"
+    ]
   }
 } 
