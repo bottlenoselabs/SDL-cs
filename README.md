@@ -1,4 +1,4 @@
-# sdl-cs
+# SDL-cs
 
 Automatically updated C# bindings for https://github.com/libsdl-org/SDL with native dynamic link libraries.
 
