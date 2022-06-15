@@ -10,6 +10,11 @@
       "SDL_thread.h",
       "SDL_stdinc.h"
     ],
+    "functions_blocked": [
+      "SDL_PointInRect",
+      "SDL_RectEmpty",
+      "SDL_RectEquals"
+    ],
     "opaque_types": [
       "SDL_AudioCVT",
       "SDL_RWops"
