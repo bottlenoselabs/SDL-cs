@@ -1,4 +1,4 @@
-name: "Build .NET solution"
+name: "Build"
 
 on:
   workflow_call:
