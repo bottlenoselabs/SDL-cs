@@ -16,3 +16,7 @@
 
 # macOS
 .DS_store
+
+# scripts
+/build
+/ext/scripts

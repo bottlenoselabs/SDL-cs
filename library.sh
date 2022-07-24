@@ -1,6 +1,12 @@
 #!/bin/bash
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-. $DIR/ext/scripts/utility.sh
+DIRECTORY="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+if [[ -z $SCRIPTS_DIRECTORY ]]; then
+    SCRIPTS_DIRECTORY="$DIRECTORY/ext/scripts"
+    git clone "https://github.com/bottlenoselabs/scripts" "$SCRIPTS_DIRECTORY" 2> /dev/null 1> /dev/null || git -C "$SCRIPTS_DIRECTORY" pull 1> /dev/null
+fi
+
+SCRIPTS_DIRECTORY="$DIRECTORY/ext/scripts"
+. $SCRIPTS_DIRECTORY/utility.sh
 
 if [[ ! -z "$1" ]]; then
     TARGET_BUILD_OS="$1"
@@ -8,9 +14,11 @@ if [[ ! -z "$1" ]]; then
 else
     TARGET_BUILD_OS="host"
 fi
+
 if [[ "$TARGET_BUILD_OS" == "host" ]]; then
     OS="$(get_operating_system)"
 fi
+
 if [[ "$OS" == "windows" ]]; then
     LIBRARY_NAME="SDL2"
 else
@@ -24,9 +32,10 @@ else
 fi
 LIBRARY_NAME_PINVOKE="SDL2"
 
-$DIR/ext/scripts/c/library/main.sh \
-    $DIR/ext/SDL \
-    $DIR/lib \
+$SCRIPTS_DIRECTORY/c/library/main.sh \
+    $DIRECTORY/ext/SDL \
+    $DIRECTORY/build \
+    $DIRECTORY/lib \
     $LIBRARY_NAME \
     $LIBRARY_NAME_PINVOKE \
     $TARGET_BUILD_OS \
