@@ -1,6 +1,3 @@
 [submodule "ext/SDL"]
 	path = ext/SDL
 	url = https://github.com/libsdl-org/SDL
-[submodule "ext/scripts"]
-	path = ext/scripts
-	url = https://github.com/bottlenoselabs/scripts
