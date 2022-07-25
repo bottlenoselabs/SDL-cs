@@ -5,12 +5,11 @@ if [[ -z $SCRIPTS_DIRECTORY ]]; then
     git clone "https://github.com/bottlenoselabs/scripts" "$SCRIPTS_DIRECTORY" 2> /dev/null 1> /dev/null || git -C "$SCRIPTS_DIRECTORY" pull 1> /dev/null
 fi
 
-SCRIPTS_DIRECTORY="$DIRECTORY/ext/scripts"
 . $SCRIPTS_DIRECTORY/utility.sh
 
 if [[ ! -z "$1" ]]; then
     TARGET_BUILD_OS="$1"
-    OS="$_TARGET_BUILD_OS"
+    OS="$TARGET_BUILD_OS"
 else
     TARGET_BUILD_OS="host"
 fi
