@@ -30,7 +30,7 @@ jobs:
 
       - name: "Install C2CS"
         shell: bash
-        run: dotnet tool install --global bottlenoselabs.C2CS
+        run: dotnet tool install --global bottlenoselabs.C2CS.Tool
 
       - name: "Read C code: Linux dependencies"
         if: runner.os == 'Linux'
