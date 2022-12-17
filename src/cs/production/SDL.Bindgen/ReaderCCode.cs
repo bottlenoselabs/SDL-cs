@@ -19,7 +19,11 @@ public class ReaderCCode : IReaderCCode
     {
         options.InputHeaderFilePath =
             "../src/c/production/SDL/include/SDL_pinvoke.h";
-        options.UserIncludeDirectories = new[] { "../ext/SDL/include" }.ToImmutableArray();
+        options.UserIncludeDirectories = new[]
+        {
+	        "../ext/SDL/include",
+	        "../ext/SDL/include/SDL3"
+        }.ToImmutableArray();
         options.OutputAbstractSyntaxTreesFileDirectory =
             "./ast";
 
@@ -28,8 +32,14 @@ public class ReaderCCode : IReaderCCode
 
     private static void ConfigurePlatforms(ReaderCCodeOptions options)
     {
-	    options.HeaderFilesBlocked = new[] { "SDL_thread.h", "SDL_stdinc.h" }.ToImmutableArray();
-	    options.OpaqueTypeNames = new[] { "SDL_AudioCVT", "SDL_RWops" }.ToImmutableArray();
+	    options.HeaderFilesBlocked = new[]
+	    {
+		    "SDL_thread.h", "SDL_stdinc.h"
+	    }.ToImmutableArray();
+	    options.OpaqueTypeNames = new[]
+	    {
+		    "SDL_AudioCVT", "SDL_RWops"
+	    }.ToImmutableArray();
 	    options.IsEnabledEnumsDangling = true;
 	    options.PassThroughTypeNames = new[]
 	    {
