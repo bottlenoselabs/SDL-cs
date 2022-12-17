@@ -38,7 +38,7 @@ jobs:
 
       - name: "Read C code"
         shell: bash
-        run: c2cs c --configurationFilePath "./bindgen/ast_${{ matrix.platform.rid }}.json"
+        run: cd ./bindgen && ./read_c_code.sh
 
       - name: "Upload C code abstract syntax trees"
         uses: actions/upload-artifact@v2
@@ -87,7 +87,7 @@ jobs:
 
       - name: "Generate C# code"
         shell: bash
-        run: c2cs cs --configurationFilePath "./bindgen/cs.json"
+        run: cd ./bindgen && ./write_csharp_code.sh
 
       - name: "Upload generated C# code"
         uses: actions/upload-artifact@v2
