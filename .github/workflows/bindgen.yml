@@ -78,12 +78,12 @@ jobs:
       - name: "Install .NET"
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '6.0.x'
+          dotnet-version: '7.0.x'
           include-prerelease: true
 
       - name: "Install C2CS"
         shell: bash
-        run: dotnet tool install --global bottlenoselabs.C2CS
+        run: dotnet tool install --global bottlenoselabs.C2CS.Tool
 
       - name: "Generate C# code"
         shell: bash

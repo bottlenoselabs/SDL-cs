@@ -2,11 +2,15 @@
 
     <!-- MSBuild settings -->
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <RootNamespace />
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
+    <ItemGroup>
+      <Compile Remove="SDL.cs" />
+      <None Include="SDL.cs" />
+    </ItemGroup>
 
     <Import Project="$(MSBuildThisFileDirectory)/../../../../SDL.props" />
 

@@ -55,7 +55,7 @@ namespace HelloWorld
         private static void CreateWindow()
         {
             _state.Window = SDL_CreateWindow(
-                "SDL2: Hello, world!",
+                (Runtime.CString)"SDL2: Hello, world!",
                 100,
                 100,
                 800,
@@ -107,8 +107,8 @@ namespace HelloWorld
                 return;
             }
 
-            string error = SDL_GetError();
-            Console.Error.WriteLine($"SDL2 error: {error}");
+            var error = SDL_GetError();
+            Console.Error.WriteLine($"SDL2 error: {error.ToString()}");
             Environment.Exit(1);
         }
     }

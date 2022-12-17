@@ -10,10 +10,6 @@
 
   <!-- C# source code-->
   <ItemGroup>
-    <Compile Include="$(_GitDirectoryPath)/SDL.cs">
-      <Pack>false</Pack>
-      <Link>$(_LinkDirectoryPath)/%(RecursiveDir)%(Filename)%(Extension)</Link>
-    </Compile>
     <Compile Include="$(_SourceCodeDirectoryPath)/**/*.cs" >
       <Pack>false</Pack>
       <Link>$(_LinkDirectoryPath)/%(RecursiveDir)%(Filename)%(Extension)</Link>
