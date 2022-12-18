@@ -34,11 +34,7 @@ public class ReaderCCode : IReaderCCode
     {
 	    options.HeaderFilesBlocked = new[]
 	    {
-		    "SDL_thread.h", "SDL_stdinc.h", "SDL_audio.h"
-	    }.ToImmutableArray();
-	    options.OpaqueTypeNames = new[]
-	    {
-		    "SDL_RWops"
+		    "SDL_thread.h", "SDL_stdinc.h", "SDL_audio.h", "SDL_rwops.h"
 	    }.ToImmutableArray();
 	    options.IsEnabledEnumsDangling = true;
 	    options.PassThroughTypeNames = new[]
