@@ -32,11 +32,6 @@ public class ReaderCCode : IReaderCCode
 
     private static void ConfigurePlatforms(ReaderCCodeOptions options)
     {
-	    options.HeaderFilesBlocked = new[]
-	    {
-		    "SDL_thread.h", "SDL_stdinc.h", "SDL_audio.h", "SDL_rwops.h", "SDL_surface.h"
-	    }.ToImmutableArray();
-	    options.IsEnabledEnumsDangling = true;
 	    options.PassThroughTypeNames = new[]
 	    {
 		    "SDL_bool", "Uint8", "Uint16", "Uint32", "Uint64", "Sint8", "Sint16", "Sint32", "Sint64"
