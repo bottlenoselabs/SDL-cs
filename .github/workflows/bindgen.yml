@@ -30,7 +30,7 @@ jobs:
 
       - name: "Install C2CS"
         shell: bash
-        run: dotnet tool install --global bottlenoselabs.C2CS.Tool --version 4.1.0-pre
+        run: dotnet tool install --global bottlenoselabs.C2CS.Tool
 
       - name: "Read C code: Linux dependencies"
         if: runner.os == 'Linux'
@@ -83,7 +83,7 @@ jobs:
 
       - name: "Install C2CS"
         shell: bash
-        run: dotnet tool install --global bottlenoselabs.C2CS.Tool --version 4.1.0-pre
+        run: dotnet tool install --global bottlenoselabs.C2CS.Tool
 
       - name: "Generate C# code"
         shell: bash
@@ -93,4 +93,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: "bindgen-cs"
-          path: "./SDL.cs"
+          path: "./src/cs/production/SDL/SDL.cs"

@@ -21,7 +21,7 @@ public class WriterCSharpCode : IWriterCSharpCode
 
 		options.OutputCSharpCodeFilePath = "../src/cs/production/SDL/SDL.cs";
 		options.NamespaceName = "bottlenoselabs";
-		options.LibraryName = "SDL2";
+		options.LibraryName = "SDL3";
 		options.MappedNames = new[]
 		{
 			new WriterCSharpCodeOptionsMappedName
