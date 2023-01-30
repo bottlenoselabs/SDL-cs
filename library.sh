@@ -19,9 +19,9 @@ if [[ "$TARGET_BUILD_OS" == "host" ]]; then
 fi
 
 if [[ "$OS" == "windows" ]]; then
-    LIBRARY_NAME="SDL2"
+    LIBRARY_NAME="SDL3"
 else
-    LIBRARY_NAME="SDL2-2.0"
+    LIBRARY_NAME="SDL3"
 fi
 
 if [[ ! -z "$2" ]]; then
@@ -29,7 +29,7 @@ if [[ ! -z "$2" ]]; then
 else
     TARGET_BUILD_ARCH="default"
 fi
-LIBRARY_NAME_PINVOKE="SDL2"
+LIBRARY_NAME_PINVOKE="SDL3"
 
 $SCRIPTS_DIRECTORY/c/library/main.sh \
     $DIRECTORY/ext/SDL \
