@@ -6,15 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
-<!--    <ItemGroup>-->
-<!--      <ProjectReference Include="..\..\..\..\..\..\..\..\..\c2cs\src\cs\production\libraries\C2CS.Plugin\C2CS.Plugin.csproj">-->
-<!--				<Private>false</Private>-->
-<!--				<ExcludeAssets>true</ExcludeAssets>-->
-<!--			</ProjectReference>-->
-<!--    </ItemGroup>-->
-
     <ItemGroup>
-      <PackageReference Include="bottlenoselabs.C2CS.Plugin" Version="4.1.0-pre" >
+      <PackageReference Include="bottlenoselabs.C2CS.Plugin" Version="4.0.12" >
 				<Private>false</Private>
 				<ExcludeAssets>runtime</ExcludeAssets>
 			</PackageReference>
