@@ -30,7 +30,7 @@ jobs:
 
       - name: "Install C2CS"
         shell: bash
-        run: dotnet tool install --global bottlenoselabs.C2CS.Tool
+        run: dotnet tool install --global bottlenoselabs.C2CS.Tool --version 4.1.9
 
       - name: "Read C code: Linux dependencies"
         if: runner.os == 'Linux'
@@ -83,7 +83,7 @@ jobs:
 
       - name: "Install C2CS"
         shell: bash
-        run: dotnet tool install --global bottlenoselabs.C2CS.Tool
+        run: dotnet tool install --global bottlenoselabs.C2CS.Tool --version 4.1.9
 
       - name: "Generate C# code"
         shell: bash
