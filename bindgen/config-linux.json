@@ -1,0 +1,11 @@
+{
+  "inputFilePath": "./../src/c/production/SDL/include/SDL_pinvoke.h",
+  "userIncludeDirectories": [
+    "./../src/c/production/SDL/include",
+    "./../ext/SDL/include"
+  ],
+  "platforms": {
+    "x86_64-unknown-linux-gnu": {},
+    "aarch64-unknown-linux-gnu": {}
+  }
+}

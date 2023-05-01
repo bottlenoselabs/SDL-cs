@@ -8,8 +8,8 @@
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
     <ItemGroup>
-      <Compile Remove="SDL.cs" />
-      <None Include="SDL.cs" />
+      <Compile Remove="SDL.gen.cs" />
+      <None Include="SDL.gen.cs" />
     </ItemGroup>
 
     <Import Project="$(MSBuildThisFileDirectory)/../../../../SDL.props" />

@@ -13,7 +13,7 @@
 
 # Bindgen
 /bindgen/ast/
-/bindgen/plugins/
+/bindgen/x-ast/
 
 # macOS
 .DS_store

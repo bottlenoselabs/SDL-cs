@@ -14,4 +14,4 @@
 #define SDL_DISABLE_EMMINTRIN_H
 #define SDL_DISABLE_PMMINTRIN_H
 
-#include "SDL.h"
+#include "SDL3/SDL.h"

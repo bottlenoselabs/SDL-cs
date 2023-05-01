@@ -17,7 +17,7 @@ namespace HelloWorld
 
         private static int Main()
         {
-            var errorCode = SDL_Init(SDL_INIT_VIDEO);
+            var errorCode = SDL_Init((uint)SDL_InitFlags.SDL_INIT_VIDEO);
             CheckError(errorCode);
             CreateWindow();
 
@@ -29,7 +29,7 @@ namespace HelloWorld
                 {
                     Frame();
 
-                    if (e.type == (ulong)SDL_EventType.SDL_QUIT)
+                    if (e.type == (ulong)SDL_EventType.SDL_EVENT_QUIT)
                     {
                         // Break out of the loop on quit
                         break;
@@ -46,7 +46,7 @@ namespace HelloWorld
         private static void Frame()
         {
             var screenSurface = SDL_GetWindowSurface(_state.Window);
-            var errorCode = SDL_FillRect(screenSurface, default, SDL_MapRGB(screenSurface->format, 0xFF, 0x00, 0x00));
+            var errorCode = SDL_FillSurfaceRect(screenSurface, default, SDL_MapRGB(screenSurface->format, 0xFF, 0x00, 0x00));
             CheckError(errorCode);
             errorCode = SDL_UpdateWindowSurface(_state.Window);
             CheckError(errorCode);
@@ -55,12 +55,12 @@ namespace HelloWorld
         private static void CreateWindow()
         {
             _state.Window = SDL_CreateWindow(
-                (Runtime.CString)"SDL2: Hello, world!",
+                (Runtime.CString)"SDL: Hello, world!",
                 100,
                 100,
                 800,
                 600,
-                (uint)(SDL_WindowFlags.SDL_WINDOW_SHOWN | SDL_WindowFlags.SDL_WINDOW_RESIZABLE));
+                (uint)SDL_WindowFlags.SDL_WINDOW_RESIZABLE);
 
             if (_state.Window == null)
             {
@@ -77,7 +77,6 @@ namespace HelloWorld
 
             Console.WriteLine(@$"Window: ""Fullscreen"" = {(windowFlags & (ulong)SDL_WindowFlags.SDL_WINDOW_FULLSCREEN) != 0}");
             Console.WriteLine(@$"WindowL ""OpenGL"" = {(windowFlags & (ulong)SDL_WindowFlags.SDL_WINDOW_OPENGL) != 0}");
-            Console.WriteLine(@$"Window: ""Shown"" = {(windowFlags & (ulong)SDL_WindowFlags.SDL_WINDOW_SHOWN) != 0}");
             Console.WriteLine(@$"Window: ""Hidden"" = {(windowFlags & (ulong)SDL_WindowFlags.SDL_WINDOW_HIDDEN) != 0}");
             Console.WriteLine(@$"Window: ""Borderless"" = {(windowFlags & (ulong)SDL_WindowFlags.SDL_WINDOW_BORDERLESS) != 0}");
             Console.WriteLine(@$"Window: ""Resizeable"" = {(windowFlags & (ulong)SDL_WindowFlags.SDL_WINDOW_RESIZABLE) != 0}");
@@ -86,9 +85,7 @@ namespace HelloWorld
             Console.WriteLine(@$"Window: ""Mouse grabbed"" = {(windowFlags & (ulong)SDL_WindowFlags.SDL_WINDOW_MOUSE_GRABBED) != 0}");
             Console.WriteLine(@$"Window: ""Input focus"" = {(windowFlags & (ulong)SDL_WindowFlags.SDL_WINDOW_INPUT_FOCUS) != 0}");
             Console.WriteLine(@$"Window: ""Mouse focus"" = {(windowFlags & (ulong)SDL_WindowFlags.SDL_WINDOW_MOUSE_FOCUS) != 0}");
-            Console.WriteLine(@$"Window: ""Fullscreen desktop"" = {(windowFlags & (ulong)SDL_WindowFlags.SDL_WINDOW_FULLSCREEN_DESKTOP) != 0}");
             Console.WriteLine(@$"Window: ""Foreign"" = {(windowFlags & (ulong)SDL_WindowFlags.SDL_WINDOW_FOREIGN) != 0}");
-            Console.WriteLine(@$"Window: ""Allow high dots per inch"" = {(windowFlags & (ulong)SDL_WindowFlags.SDL_WINDOW_ALLOW_HIGHDPI) != 0}");
             Console.WriteLine(@$"Window: ""Mouse capture"" = {(windowFlags & (ulong)SDL_WindowFlags.SDL_WINDOW_MOUSE_CAPTURE) != 0}");
             Console.WriteLine(@$"Window: ""Always on top"" = {(windowFlags & (ulong)SDL_WindowFlags.SDL_WINDOW_ALWAYS_ON_TOP) != 0}");
             Console.WriteLine(@$"Window: ""Skip taskbar"" = {(windowFlags & (ulong)SDL_WindowFlags.SDL_WINDOW_SKIP_TASKBAR) != 0}");
