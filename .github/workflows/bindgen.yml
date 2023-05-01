@@ -85,7 +85,7 @@ jobs:
 
   bindgen-cs-job:
     name: "Bindgen C#"
-    needs: [bindgen-ast-job]
+    needs: [bindgen-cross-platform-ast-job]
     runs-on: ubuntu-latest
 
     steps:
