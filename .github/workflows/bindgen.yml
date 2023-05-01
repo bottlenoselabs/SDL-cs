@@ -32,7 +32,7 @@ jobs:
 
       - name: "Read C code: extract ${{ matrix.platform.rid }}"
         shell: bash
-        run: cd ./bindgen && ./extract.sh"
+        run: cd ./bindgen && ./extract.sh
 
       - name: "Upload C code platform abstract syntax trees"
         uses: actions/upload-artifact@v2
