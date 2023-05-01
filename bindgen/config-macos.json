@@ -4,6 +4,9 @@
     "./../src/c/production/SDL/include",
     "./../ext/SDL/include"
   ],
+  "opaqueTypeNames": [
+    "SDL_RWops"
+  ],
   "platforms": {
     "aarch64-apple-darwin": {},
     "x86_64-apple-darwin": {}
