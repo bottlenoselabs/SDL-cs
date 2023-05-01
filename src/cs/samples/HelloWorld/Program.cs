@@ -56,9 +56,7 @@ namespace HelloWorld
         {
             _state.Window = SDL_CreateWindow(
                 (Runtime.CString)"SDL: Hello, world!",
-                100,
-                100,
-                800,
+                800, 
                 600,
                 (uint)SDL_WindowFlags.SDL_WINDOW_RESIZABLE);
 
