@@ -53,6 +53,10 @@ jobs:
           sudo apt-get install \
             ninja-build
 
+      - name: "Install C2CS"
+        shell: bash
+        run: dotnet tool install --global bottlenoselabs.C2CS.Tool
+
       - name: "Build native libraries"
         if: steps.cache-libs.outputs.cache-hit != 'true'
         shell: bash
