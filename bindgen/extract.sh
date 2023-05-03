@@ -20,11 +20,11 @@ function get_host_operating_system() {
 OS="$(get_host_operating_system)"
 
 if [[ "$OS" == "windows" ]]; then
-    CASTFFI_CONFIG_FILE_PATH="$DIRECTORY/config-windows.json"
+    CASTFFI_CONFIG_FILE_PATH="$DIRECTORY/config-extract-windows.json"
 elif [[ "$OS" == "macos" ]]; then
-    CASTFFI_CONFIG_FILE_PATH="$DIRECTORY/config-macos.json"
+    CASTFFI_CONFIG_FILE_PATH="$DIRECTORY/config-extract-macos.json"
 elif [[ "$OS" == "linux" ]]; then
-    CASTFFI_CONFIG_FILE_PATH="$DIRECTORY/config-linux.json"
+    CASTFFI_CONFIG_FILE_PATH="$DIRECTORY/config-extract-linux.json"
 else
     echo "Error: Unknown operating system '$OS'" >&2
     exit 1

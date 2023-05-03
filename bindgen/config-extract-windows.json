@@ -1,5 +1,5 @@
 {
-  "inputFilePath": "./../src/c/production/SDL/include/SDL_pinvoke.h",
+  "inputFilePath": "./../src/c/production/SDL/include/SDL_bindgen.h",
   "userIncludeDirectories": [
     "./../src/c/production/SDL/include",
     "./../ext/SDL/include"
@@ -8,7 +8,7 @@
     "SDL_RWops"
   ],
   "platforms": {
-    "x86_64-unknown-linux-gnu": {},
-    "aarch64-unknown-linux-gnu": {}
+    "x86_64-pc-windows-msvc": {},
+    "aarch64-pc-windows-msvc": {}
   }
 }
