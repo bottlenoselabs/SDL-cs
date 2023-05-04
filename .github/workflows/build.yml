@@ -60,7 +60,7 @@ jobs:
       - name: "Build native libraries"
         if: steps.cache-libs.outputs.cache-hit != 'true'
         shell: bash
-        run: ./library.sh
+        run: ./library.sh "auto"
 
       - name: "Upload native libraries"
         uses: actions/upload-artifact@v2
