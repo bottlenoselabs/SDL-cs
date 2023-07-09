@@ -3,6 +3,8 @@
 
 # C# build artifacts
 /artifacts/
+bin/
+obj/
 
 # C# packages
 /nupkg/
