@@ -28,5 +28,5 @@ jobs:
         uses: EndBug/add-and-commit@v7
         with:
           author_name: 'lithiumtoast'
-          author_email: 'lithiumtoast@users.noreply.github.com'
+          author_email: '519592+lithiumtoast@users.noreply.github.com'
           message: "Update C# bindings"
