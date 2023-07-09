@@ -1,17 +1,36 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <!-- MSBuild settings -->
-    <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <RootNamespace />
-        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    </PropertyGroup>
-    <ItemGroup>
-      <Compile Remove="SDL.gen.cs" />
-      <None Include="SDL.gen.cs" />
-    </ItemGroup>
+  <!-- MSBuild settings -->
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace />
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
 
-    <Import Project="$(MSBuildThisFileDirectory)/../../../../SDL.props" />
+  <!-- Dynamic link libraries -->
+  <ItemGroup>
+    <Content Include="$(GitRepositoryPath)/lib/*.dll">
+      <Link>%(Filename)%(Extension)</Link>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(GitRepositoryPath)/lib/*.dylib">
+      <Link>%(Filename)%(Extension)</Link>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(GitRepositoryPath)/lib/*.so">
+      <Link>%(Filename)%(Extension)</Link>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="bottlenoselabs.Common.Tools" Version="1.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
 
 </Project>

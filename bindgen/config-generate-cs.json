@@ -1,6 +1,6 @@
 {
   "inputFilePath": "./x-ast/ast-cross-platform.json",
-  "outputFilePath": "./../src/cs/production/SDL/SDL.gen.cs",
+  "outputFileDirectory": "./../src/cs/production/SDL/Generated",
   "namespaceName": "bottlenoselabs",
   "className": "SDL",
   "libraryName": "SDL3",

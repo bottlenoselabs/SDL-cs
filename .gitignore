@@ -2,8 +2,7 @@
 .idea/
 
 # C# build artifacts
-/bin/
-/obj/
+/artifacts/
 
 # C# packages
 /nupkg/
@@ -17,7 +16,3 @@
 
 # macOS
 .DS_store
-
-# scripts
-/build
-/ext/scripts

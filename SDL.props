@@ -8,16 +8,6 @@
     <_LinkDirectoryPath>bottlenoselabs/$(_LibraryName)/</_LinkDirectoryPath>
   </PropertyGroup>
 
-  <!-- C# source code-->
-  <ItemGroup>
-    <Compile Include="$(_SourceCodeDirectoryPath)/**/*.cs" >
-      <Pack>false</Pack>
-      <Link>$(_LinkDirectoryPath)/%(RecursiveDir)%(Filename)%(Extension)</Link>
-    </Compile>
-    <Compile Remove="$(_SourceCodeDirectoryPath)/obj/**/*.cs" />
-    <Compile Remove="$(_SourceCodeDirectoryPath)/bin/**/*.cs" />
-  </ItemGroup>
-
   <!-- Dynamic link libraries -->
   <ItemGroup>
     <Content Include="$(_LibraryDirectoryPath)/*.dll">
