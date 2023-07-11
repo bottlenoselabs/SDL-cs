@@ -14,5 +14,6 @@
     { "source": "Sint16", "target": "short" },
     { "source": "Sint32", "target": "int" },
     { "source": "Sint64", "target": "long" }
-  ]
+  ],
+  "isEnabledGeneratingRuntimeCode": false
 }

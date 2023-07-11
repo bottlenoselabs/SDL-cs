@@ -2,7 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the Git repository root directory for full license information.
 
 using System;
-using bottlenoselabs.C2CS;
+using bottlenoselabs.C2CS.Runtime;
 using static bottlenoselabs.SDL;
 
 namespace HelloWorld;
@@ -56,7 +56,7 @@ internal static unsafe class Program
     private static void CreateWindow()
     {
         _state.Window = SDL_CreateWindow(
-            (Runtime.CString)"SDL: Hello, world!",
+            (CString)"SDL: Hello, world!",
             800,
             600,
             (uint)SDL_WindowFlags.SDL_WINDOW_RESIZABLE);

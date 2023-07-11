@@ -11,13 +11,12 @@
 #nullable enable
 #pragma warning disable CS1591
 #pragma warning disable CS8981
+global using bottlenoselabs.C2CS.Runtime;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
-using bottlenoselabs.C2CS;
-using static bottlenoselabs.C2CS.Runtime;
 #endregion
 
 #if NET7_0_OR_GREATER

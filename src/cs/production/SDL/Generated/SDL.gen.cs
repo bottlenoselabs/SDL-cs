@@ -11,13 +11,12 @@
 #nullable enable
 #pragma warning disable CS1591
 #pragma warning disable CS8981
+global using bottlenoselabs.C2CS.Runtime;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
-using bottlenoselabs.C2CS;
-using static bottlenoselabs.C2CS.Runtime;
 #endregion
 
 namespace bottlenoselabs;
@@ -3464,11 +3463,11 @@ public static unsafe partial class SDL
         {
             get
             {
-                return Runtime.CString.ToString(_condition);
+                return CString.ToString(_condition);
             }
             set
             {
-                _condition = Runtime.CString.FromString(value);
+                _condition = CString.FromString(value);
             }
         }
 
@@ -3479,11 +3478,11 @@ public static unsafe partial class SDL
         {
             get
             {
-                return Runtime.CString.ToString(_filename);
+                return CString.ToString(_filename);
             }
             set
             {
-                _filename = Runtime.CString.FromString(value);
+                _filename = CString.FromString(value);
             }
         }
 
@@ -3497,11 +3496,11 @@ public static unsafe partial class SDL
         {
             get
             {
-                return Runtime.CString.ToString(_function);
+                return CString.ToString(_function);
             }
             set
             {
-                _function = Runtime.CString.FromString(value);
+                _function = CString.FromString(value);
             }
         }
 
@@ -3674,11 +3673,11 @@ public static unsafe partial class SDL
         {
             get
             {
-                return Runtime.CString.ToString(_file);
+                return CString.ToString(_file);
             }
             set
             {
-                _file = Runtime.CString.FromString(value);
+                _file = CString.FromString(value);
             }
         }
 
@@ -4570,11 +4569,11 @@ public static unsafe partial class SDL
         {
             get
             {
-                return Runtime.CString.ToString(_language);
+                return CString.ToString(_language);
             }
             set
             {
-                _language = Runtime.CString.FromString(value);
+                _language = CString.FromString(value);
             }
         }
 
@@ -4585,11 +4584,11 @@ public static unsafe partial class SDL
         {
             get
             {
-                return Runtime.CString.ToString(_country);
+                return CString.ToString(_country);
             }
             set
             {
-                _country = Runtime.CString.FromString(value);
+                _country = CString.FromString(value);
             }
         }
     }
@@ -4611,11 +4610,11 @@ public static unsafe partial class SDL
         {
             get
             {
-                return Runtime.CString.ToString(_text);
+                return CString.ToString(_text);
             }
             set
             {
-                _text = Runtime.CString.FromString(value);
+                _text = CString.FromString(value);
             }
         }
     }
@@ -4672,11 +4671,11 @@ public static unsafe partial class SDL
         {
             get
             {
-                return Runtime.CString.ToString(_title);
+                return CString.ToString(_title);
             }
             set
             {
-                _title = Runtime.CString.FromString(value);
+                _title = CString.FromString(value);
             }
         }
 
@@ -4687,11 +4686,11 @@ public static unsafe partial class SDL
         {
             get
             {
-                return Runtime.CString.ToString(_message);
+                return CString.ToString(_message);
             }
             set
             {
-                _message = Runtime.CString.FromString(value);
+                _message = CString.FromString(value);
             }
         }
 
@@ -4957,11 +4956,11 @@ public static unsafe partial class SDL
         {
             get
             {
-                return Runtime.CString.ToString(_name);
+                return CString.ToString(_name);
             }
             set
             {
-                _name = Runtime.CString.FromString(value);
+                _name = CString.FromString(value);
             }
         }
 
@@ -5106,7 +5105,7 @@ public static unsafe partial class SDL
                 {
                     var pointer = &@this->_text[0];
                     var cString = new CString(pointer);
-                    return Runtime.CString.ToString(cString);
+                    return CString.ToString(cString);
                 }
             }
         }
@@ -5138,11 +5137,11 @@ public static unsafe partial class SDL
         {
             get
             {
-                return Runtime.CString.ToString(_text);
+                return CString.ToString(_text);
             }
             set
             {
-                _text = Runtime.CString.FromString(value);
+                _text = CString.FromString(value);
             }
         }
 
@@ -5177,7 +5176,7 @@ public static unsafe partial class SDL
                 {
                     var pointer = &@this->_text[0];
                     var cString = new CString(pointer);
-                    return Runtime.CString.ToString(cString);
+                    return CString.ToString(cString);
                 }
             }
         }
@@ -5296,11 +5295,11 @@ public static unsafe partial class SDL
         {
             get
             {
-                return Runtime.CString.ToString(_name);
+                return CString.ToString(_name);
             }
             set
             {
-                _name = Runtime.CString.FromString(value);
+                _name = CString.FromString(value);
             }
         }
 
@@ -5379,11 +5378,11 @@ public static unsafe partial class SDL
         {
             get
             {
-                return Runtime.CString.ToString(_path);
+                return CString.ToString(_path);
             }
             set
             {
-                _path = Runtime.CString.FromString(value);
+                _path = CString.FromString(value);
             }
         }
 

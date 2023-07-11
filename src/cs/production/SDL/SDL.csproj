@@ -26,5 +26,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="bottlenoselabs.C2CS.Runtime" Version="6.0.3" />
+  </ItemGroup>
 
 </Project>
