@@ -13,23 +13,4 @@
     <PackageReference Include="bottlenoselabs.C2CS.Runtime" Version="6.0.3" />
   </ItemGroup>
 
-  <!-- Dynamic link libraries -->
-  <ItemGroup>
-    <Content Include="$(GitRepositoryPath)/lib/*.dll">
-      <Link>%(Filename)%(Extension)</Link>
-      <Pack>false</Pack>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="$(GitRepositoryPath)/lib/*.dylib">
-      <Link>%(Filename)%(Extension)</Link>
-      <Pack>false</Pack>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="$(GitRepositoryPath)/lib/*.so">
-      <Link>%(Filename)%(Extension)</Link>
-      <Pack>false</Pack>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
 </Project>

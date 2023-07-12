@@ -1,19 +1,49 @@
 <Project>
 
+  <!-- Implicit global usings-->
+  <ItemGroup Condition=" '$(ImplicitUsings)' == 'true' ">
+    <Using Include="System.Runtime.InteropServices" />
+    <Using Include="bottlenoselabs.C2CS" />
+  </ItemGroup>
+
+  <!-- .NET8: Use artifacts path for bin/obj output folders -->
   <PropertyGroup>
     <UseArtifactsOutput>true</UseArtifactsOutput>
     <ArtifactsPath>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildProjectDirectory), .gitignore))/artifacts</ArtifactsPath>
   </PropertyGroup>
 
+  <!-- NuGet package references -->
   <ItemGroup>
     <PackageReference Include="bottlenoselabs.Common.Tools" Version="*">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    
     <PackageReference Include="StyleCop.Analyzers.Unstable" Version="*">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <!-- Dynamic link libraries -->
+  <PropertyGroup>
+    <LibraryName>SDL</LibraryName>
+    <LibraryDirectoryPath>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory),.gitignore))/lib</LibraryDirectoryPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="$(LibraryDirectoryPath)/*.dll">
+      <Link>%(Filename)%(Extension)</Link>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(LibraryDirectoryPath)/*.dylib">
+      <Link>%(Filename)%(Extension)</Link>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(LibraryDirectoryPath)/*.so">
+      <Link>%(Filename)%(Extension)</Link>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

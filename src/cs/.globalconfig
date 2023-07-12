@@ -1,0 +1,5 @@
+is_global = true
+
+# StyleCop Rules
+## Description: StyleCop code analysis rules for C# projects.
+dotnet_diagnostic.SA1600.severity = none
