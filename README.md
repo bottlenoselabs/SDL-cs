@@ -1,6 +1,6 @@
 # SDL-cs
 
-Automatically updated C# bindings for https://github.com/libsdl-org/SDL with native dynamic link libraries.
+Automatically updated C# bindings for `https://github.com/libsdl-org/SDL`, on the `main` branch for v3, with native dynamic link libraries. For v2 of SDL, please see `https://github.com/bottlenoselabs/SDL2-cs`.
 
 ## How to use
 
