@@ -25,7 +25,6 @@
 
   <!-- Dynamic link libraries -->
   <PropertyGroup>
-    <LibraryName>SDL</LibraryName>
     <LibraryDirectoryPath>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory),.gitignore))/lib</LibraryDirectoryPath>
   </PropertyGroup>
   <ItemGroup>
