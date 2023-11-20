@@ -36,23 +36,6 @@ jobs:
           path: "./lib"
           key: "libs-${{ matrix.platform.rid }}-${{ hashFiles('ext/SDL/**/*') }}-${{ hashFiles('src/c/**/*') }}"
 
-      - name: "Install Windows dependencies"
-        if: runner.os == 'Windows'
-        run: |
-          choco install ninja
-
-      - name: "Install macOS dependencies"
-        if: runner.os == 'macOS'
-        run: |
-          brew install ninja
-
-      - name: Setup Linux dependencies
-        if: runner.os == 'Linux'
-        run: |
-          sudo apt-get update
-          sudo apt-get install \
-            ninja-build
-
       - name: "Install C2CS"
         shell: bash
         run: dotnet tool install --global bottlenoselabs.C2CS.Tool
@@ -102,6 +85,11 @@ jobs:
           name: "bindgen-cs"
           path: "./src/cs/production/SDL/Generated"
 
-      - name: ".NET Build"
+      - name: "Setup .NET"
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.x'
+
+      - name: "Build .NET solution"
         run: dotnet build "./src/cs"
           

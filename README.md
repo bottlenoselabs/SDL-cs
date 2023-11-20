@@ -1,14 +1,14 @@
 # SDL-cs
 
-Automatically updated C# bindings for `https://github.com/libsdl-org/SDL`, on the `main` branch for v3, with native dynamic link libraries. For v2 of SDL, please see `https://github.com/bottlenoselabs/SDL2-cs`.
+Automatically updated C# bindings for `https://github.com/libsdl-org/SDL`, on the `main` branch for v3, with native dynamic link libraries.
 
 ## How to use
 
 ### From source
 
-1. Download and install [.NET 7](https://dotnet.microsoft.com/download).
+1. Download and install [.NET 8](https://dotnet.microsoft.com/download).
 2. Fork the repository using GitHub or clone the repository manually with submodules: `git clone --recurse-submodules https://github.com/bottlenoselabs/SDL-cs`.
-3. Build the native library by running `library.sh`. To execute `.sh` scripts on Windows, use Git Bash which can be installed with Git itself: https://git-scm.com/download/win. The `library.sh` script requires that CMake and Ninja is installed and in your path.
+3. Build the native library by running `library.sh`. To execute `.sh` scripts on Windows, use Git Bash which can be installed with Git itself: https://git-scm.com/download/win. The `library.sh` script requires that CMake is installed and in your environment variable `PATH`.
 4. Add the `src/cs/production/SDL/SDL.csproj` C# project to your solution as an existing project and then reference it within your own solution.
 
 ## Developers: Documentation

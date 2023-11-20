@@ -6,10 +6,9 @@
     <Using Include="bottlenoselabs.C2CS" />
   </ItemGroup>
 
-  <!-- .NET8: Use artifacts path for bin/obj output folders -->
+  <!-- Use artifacts path for bin/obj output folders -->
   <PropertyGroup>
     <UseArtifactsOutput>true</UseArtifactsOutput>
-    <ArtifactsPath>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildProjectDirectory), .gitignore))/artifacts</ArtifactsPath>
   </PropertyGroup>
 
   <!-- NuGet package references -->
