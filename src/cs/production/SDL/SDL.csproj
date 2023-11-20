@@ -2,7 +2,7 @@
 
   <!-- MSBuild settings -->
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace />
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>

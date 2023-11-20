@@ -26,7 +26,7 @@ internal static unsafe class Program
         {
             // Get the next event
             SDL_Event e;
-            if (SDL_PollEvent(&e) != 0)
+            if (SDL_PollEvent(&e))
             {
                 Frame();
 
@@ -84,7 +84,6 @@ internal static unsafe class Program
         Console.WriteLine(@$"Window: ""Mouse grabbed"" = {(windowFlags & (ulong)SDL_WindowFlags.SDL_WINDOW_MOUSE_GRABBED) != 0}");
         Console.WriteLine(@$"Window: ""Input focus"" = {(windowFlags & (ulong)SDL_WindowFlags.SDL_WINDOW_INPUT_FOCUS) != 0}");
         Console.WriteLine(@$"Window: ""Mouse focus"" = {(windowFlags & (ulong)SDL_WindowFlags.SDL_WINDOW_MOUSE_FOCUS) != 0}");
-        Console.WriteLine(@$"Window: ""Foreign"" = {(windowFlags & (ulong)SDL_WindowFlags.SDL_WINDOW_FOREIGN) != 0}");
         Console.WriteLine(@$"Window: ""Mouse capture"" = {(windowFlags & (ulong)SDL_WindowFlags.SDL_WINDOW_MOUSE_CAPTURE) != 0}");
         Console.WriteLine(@$"Window: ""Always on top"" = {(windowFlags & (ulong)SDL_WindowFlags.SDL_WINDOW_ALWAYS_ON_TOP) != 0}");
         Console.WriteLine(@$"Window: ""Utility"" = {(windowFlags & (ulong)SDL_WindowFlags.SDL_WINDOW_UTILITY) != 0}");
