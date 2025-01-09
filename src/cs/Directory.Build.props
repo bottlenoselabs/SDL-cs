@@ -1,47 +1,32 @@
 <Project>
 
-  <!-- Implicit global usings-->
-  <ItemGroup Condition=" '$(ImplicitUsings)' == 'true' ">
-    <Using Include="System.Runtime.InteropServices" />
-    <Using Include="bottlenoselabs.C2CS" />
-  </ItemGroup>
+  <!-- Custom variables -->
+  <PropertyGroup>
+    <GitRepositoryPath>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory),.gitignore))</GitRepositoryPath>
+  </PropertyGroup>
 
-  <!-- Use artifacts path for bin/obj output folders -->
+  <!-- Use and change artifacts folder -->
   <PropertyGroup>
     <UseArtifactsOutput>true</UseArtifactsOutput>
+    <ArtifactsPath>$([System.IO.Path]::Combine($(GitRepositoryPath),artifacts))</ArtifactsPath>
+  </PropertyGroup>
+
+  <!-- Show generated files -->
+  <PropertyGroup>
+    <EmitCompilerGeneratedFiles>false</EmitCompilerGeneratedFiles>
+    <CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>
   </PropertyGroup>
 
   <!-- NuGet package references -->
   <ItemGroup>
-    <PackageReference Include="bottlenoselabs.Common.Tools" Version="*">
+    <PackageReference Include="bottlenoselabs.MSBuild.Extensions" Version="2024.9.18">
       <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="StyleCop.Analyzers.Unstable" Version="*">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-  </ItemGroup>
-
-  <!-- Dynamic link libraries -->
-  <PropertyGroup>
-    <LibraryDirectoryPath>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory),.gitignore))/lib</LibraryDirectoryPath>
-  </PropertyGroup>
-  <ItemGroup>
-    <Content Include="$(LibraryDirectoryPath)/*.dll">
-      <Link>%(Filename)%(Extension)</Link>
-      <Pack>false</Pack>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="$(LibraryDirectoryPath)/*.dylib">
-      <Link>%(Filename)%(Extension)</Link>
-      <Pack>false</Pack>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="$(LibraryDirectoryPath)/*.so">
-      <Link>%(Filename)%(Extension)</Link>
-      <Pack>false</Pack>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
 
 </Project>
