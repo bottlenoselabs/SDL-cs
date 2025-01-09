@@ -1,7 +1,8 @@
 {
-  "inputFilePath": "./x-ast/ast-cross-platform.json",
-  "outputFileDirectory": "./../src/cs/production/SDL/Generated",
-  "namespaceName": "bottlenoselabs",
+  "targetFrameworkMoniker": "net9.0",
+  "inputFilePath": "./ffi-x/cross-platform.json",
+  "outputFileDirectory": "./../src/cs/production/Interop.SDL/Generated",
+  "namespaceName": "Interop",
   "className": "SDL",
   "libraryName": "SDL3",
   "mappedNames": [
@@ -15,5 +16,6 @@
     { "source": "Sint32", "target": "int" },
     { "source": "Sint64", "target": "long" }
   ],
-  "isEnabledGeneratingRuntimeCode": false
+  "isEnabledGeneratingRuntimeCode": true,
+  "isEnabledVerifyCSharpCodeCompiles": false
 }

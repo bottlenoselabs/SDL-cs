@@ -13,8 +13,8 @@ obj/
 /lib/
 
 # Bindgen
-/bindgen/ast/
-/bindgen/x-ast/
+/bindgen/ffi/
+/bindgen/ffi-x/
 
 # macOS
 .DS_store
