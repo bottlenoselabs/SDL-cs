@@ -2,11 +2,12 @@ name: "Bindgen"
 
 on:
   workflow_call:
+  workflow_dispatch:
 
 jobs:
 
-  bindgen-ast-job:
-    name: "Bindgen AST"
+  bindgen-ffi-job:
+    name: "Bindgen FFI"
     runs-on: ${{ matrix.platform.os }}
     strategy:
       fail-fast: false
@@ -18,98 +19,134 @@ jobs:
 
     steps:
       - name: "Clone Git repository"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           submodules: 'true'
 
-      - name: "Install CAstFfi"
+      - name: "Setup .NET"
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '9.x'
+
+      - name: "Install c2ffi"
         shell: bash
-        run: dotnet tool install --global bottlenoselabs.CAstFfi.Tool
+        run: dotnet tool install -g bottlenoselabs.c2ffi.Tool
+
+      - name: "Get c2ffi version"
+        id: get-version-c2ffi
+        shell: bash
+        run: |
+          VERSION="$(c2ffi --version)"
+          echo "VERSION=$VERSION"
+          echo "VERSION=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: "Cache bindgen extract FFI"
+        id: cache-ffi
+        uses: actions/cache@v4
+        with:
+          path: "./bindgen/ffi"
+          key: "ffi-${{ matrix.platform.rid }}-${{ hashFiles('bindgen/config-extract.json') }}-${{ hashFiles('ext/SDL/**/*') }}-${{ steps.get-version-c2ffi.outputs.VERSION }}"
 
       - name: "Read C code: Linux dependencies"
-        if: runner.os == 'Linux'
+        if: runner.os == 'Linux' && steps.cache-ffi.outputs.cache-hit != 'true'
         run: sudo apt-get install gcc-aarch64-linux-gnu
 
-      - name: "Read C code: extract ${{ matrix.platform.rid }}"
+      - name: "Read C code: extract FFI ${{ matrix.platform.name }}"
         shell: bash
-        run: cd ./bindgen && ./extract.sh
+        if: steps.cache-ffi.outputs.cache-hit != 'true'
+        run: cd ./bindgen && ./bindgen-01-extract.sh
 
-      - name: "Upload C code platform abstract syntax trees"
-        uses: actions/upload-artifact@v2
+      - name: "Upload FFIs"
+        uses: actions/upload-artifact@v4
         with:
-          name: "ast-${{ matrix.platform.rid }}"
-          path: "./bindgen/ast"
+          name: "ffi-${{ matrix.platform.rid }}"
+          path: "./bindgen/ffi"
 
-  bindgen-cross-platform-ast-job:
-    name: "Bindgen AST cross-platform"
-    needs: [bindgen-ast-job]
+  bindgen-cross-platform-ffi-job:
+    name: "Bindgen FFI cross-platform"
+    needs: [bindgen-ffi-job]
     runs-on: ubuntu-latest
 
     steps:
       - name: "Clone Git repository"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           submodules: 'false'
 
-      - name: "Download C code platform abstract syntax trees (win)"
-        uses: actions/download-artifact@v1
+      - name: "Setup .NET"
+        uses: actions/setup-dotnet@v3
         with:
-          name: "ast-win"
-          path: "./bindgen/ast"
+          dotnet-version: '9.x'
 
-      - name: "Download C code platform abstract syntax trees (osx)"
-        uses: actions/download-artifact@v1
+      - name: "Download FFI (win)"
+        uses: actions/download-artifact@v4
         with:
-          name: "ast-osx"
-          path: "./bindgen/ast"
+          name: "ffi-win"
+          path: "./bindgen/ffi"
 
-      - name: "Download C code platform abstract syntax trees (linux)"
-        uses: actions/download-artifact@v1
+      - name: "Download FFI (osx)"
+        uses: actions/download-artifact@v4
         with:
-          name: "ast-linux"
-          path: "./bindgen/ast"
+          name: "ffi-osx"
+          path: "./bindgen/ffi"
 
-      - name: "Install CAstFfi"
+      - name: "Download FFI (linux)"
+        uses: actions/download-artifact@v4
+        with:
+          name: "ffi-linux"
+          path: "./bindgen/ffi"
+
+      - name: "Install c2ffi"
         shell: bash
-        run: dotnet tool install --global bottlenoselabs.CAstFfi.Tool
+        run: dotnet tool install -g bottlenoselabs.c2ffi.Tool
 
-      - name: "Generate cross-platform AST"
+      - name: "Generate cross-platform FFI"
         shell: bash
-        run: cd ./bindgen && ./merge.sh
+        run: cd ./bindgen && ./bindgen-02-merge.sh
 
-      - name: "Upload cross-platform AST"
-        uses: actions/upload-artifact@v2
+      - name: "Upload cross-platform FFI"
+        uses: actions/upload-artifact@v4
         with:
-          name: "ast-cross-platform"
-          path: "./bindgen/x-ast/ast-cross-platform.json"
+          name: "ffi-x"
+          path: "./bindgen/ffi-x/cross-platform.json"
 
   bindgen-cs-job:
     name: "Bindgen C#"
-    needs: [bindgen-cross-platform-ast-job]
+    needs: [bindgen-cross-platform-ffi-job]
     runs-on: ubuntu-latest
 
     steps:
       - name: "Clone Git repository"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           submodules: 'false'
 
-      - name: "Download C code cross-platform abstract syntax tree"
-        uses: actions/download-artifact@v1
+      - name: "Setup .NET"
+        uses: actions/setup-dotnet@v3
         with:
-          name: "ast-cross-platform"
-          path: "./bindgen/x-ast"
+          dotnet-version: '9.x'
 
-      - name: "Install C2CS"
+      - name: "Download C code cross-platform FFI"
+        uses: actions/download-artifact@v4
+        with:
+          name: "ffi-x"
+          path: "./bindgen/ffi-x"
+
+      - name: "Install c2cs"
         shell: bash
-        run: dotnet tool install --global bottlenoselabs.C2CS.Tool
+        run: dotnet tool install -g bottlenoselabs.c2cs.Tool
 
       - name: "Generate C# code"
         shell: bash
-        run: cd ./bindgen && ./generate.sh
+        run: cd ./bindgen && ./bindgen-03-generate.sh
 
       - name: "Upload generated C# code"
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
-          name: "bindgen-cs"
-          path: "./src/cs/production/SDL/Generated"
+          name: "generated-cs"
+          path: "./src/cs/production/Interop.SDL/Generated"
+
+  bindgen-build-dotnet-job:
+    name: "Build"
+    needs: [bindgen-cs-job]
+    uses: "./.github/workflows/build.yml"
