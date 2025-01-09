@@ -1,3 +1,4 @@
+# Moved to https://github.com/bottlenoselabs/SDL3-cs
 # SDL-cs
 
 Automatically updated C# bindings for `https://github.com/libsdl-org/SDL`, on the `main` branch for v3, with native dynamic link libraries.
