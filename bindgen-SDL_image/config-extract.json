@@ -1,0 +1,28 @@
+{
+  "inputFilePath": "./../src/c/production/SDL_image/include/SDL_image_bindgen.h",
+  "userIncludeDirectories": [
+    "./../src/c/production/SDL_image/include",
+    "./../ext/SDL_image/include",
+    "./../ext/SDL/include"
+  ],
+  "ignoredIncludeDirectories": [
+    "./../ext/SDL/include"
+  ],
+  "opaqueTypeNames": [
+    "SDL_RWops"
+  ],
+  "targetPlatforms": {
+    "windows": {
+        "x86_64-pc-windows-msvc": {},
+        "aarch64-pc-windows-msvc": {}
+    },
+    "macos": {
+        "aarch64-apple-darwin": {},
+        "x86_64-apple-darwin": {}
+    },
+    "linux": {
+        "x86_64-unknown-linux-gnu": {},
+        "aarch64-unknown-linux-gnu": {}
+    }
+}
+}

@@ -1,0 +1,11 @@
+{
+  "cMakeDirectoryPath": "../ext/SDL",
+  "outputDirectoryPath": "../lib",
+  "deleteBuildFiles": true,
+  "cMakeArguments": [
+    "-DSDL_STATIC=OFF",
+    "-DSDL_TEST=OFF",
+    "-DCMAKE_OSX_DEPLOYMENT_TARGET=10.9",
+    "-DSDL_DISABLE_INSTALL=1"
+  ]
+}

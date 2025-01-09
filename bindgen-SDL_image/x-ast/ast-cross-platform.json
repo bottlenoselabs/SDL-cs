@@ -1,0 +1,2344 @@
+{
+  "platforms": [
+    "aarch64-apple-darwin",
+    "x86_64-apple-darwin"
+  ],
+  "macroObjects": {
+    "SDL_IMAGE_MAJOR_VERSION": {
+      "type": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4
+      },
+      "value": "3"
+    },
+    "USER_ADDR_NULL": {
+      "type": {
+        "name": "user_addr_t",
+        "kind": "typeAlias",
+        "sizeOf": 8
+      },
+      "value": "0"
+    },
+    "SDL_IMAGE_MINOR_VERSION": {
+      "type": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4
+      },
+      "value": "0"
+    },
+    "SDL_IMAGE_PATCHLEVEL": {
+      "type": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4
+      },
+      "value": "0"
+    }
+  },
+  "variables": {},
+  "functions": {
+    "IMG_LoadXPM_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load a XPM image directly.\n *\n * If you know you definitely have a XPM image, you can call this function,\n * which will skip SDL_image\u0027s file format detection routines. Generally it\u0027s\n * better to use the abstract interfaces; also, there is only an SDL_RWops\n * interface available here.\n *\n * \\param src an SDL_RWops to load image data from.\n * \\returns SDL surface, or NULL on error\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadAVIF_RW\n * \\sa IMG_LoadICO_RW\n * \\sa IMG_LoadCUR_RW\n * \\sa IMG_LoadBMP_RW\n * \\sa IMG_LoadGIF_RW\n * \\sa IMG_LoadJPG_RW\n * \\sa IMG_LoadJXL_RW\n * \\sa IMG_LoadLBM_RW\n * \\sa IMG_LoadPCX_RW\n * \\sa IMG_LoadPNG_RW\n * \\sa IMG_LoadPNM_RW\n * \\sa IMG_LoadSVG_RW\n * \\sa IMG_LoadQOI_RW\n * \\sa IMG_LoadTGA_RW\n * \\sa IMG_LoadTIF_RW\n * \\sa IMG_LoadXCF_RW\n * \\sa IMG_LoadXV_RW\n * \\sa IMG_LoadWEBP_RW\n */"
+    },
+    "IMG_isPNG": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4,
+        "alignOf": 4
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Detect PNG image data on a readable/seekable SDL_RWops.\n *\n * This function attempts to determine if a file is a given filetype, reading\n * the least amount possible from the SDL_RWops (usually a few bytes).\n *\n * There is no distinction made between \u0022not the filetype in question\u0022 and\n * basic i/o errors.\n *\n * This function will always attempt to seek the RWops back to where it\n * started when this function was called, but it will not report any errors in\n * doing so, but assuming seeking works, this means you can immediately use\n * this with a different IMG_isTYPE function, or load the image without\n * further seeking.\n *\n * You do not need to call this function to load data; SDL_image can work to\n * determine file type in many cases in its standard load functions.\n *\n * \\param src a seekable/readable SDL_RWops to provide image data.\n * \\returns non-zero if this is PNG data, zero otherwise.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_isAVIF\n * \\sa IMG_isICO\n * \\sa IMG_isCUR\n * \\sa IMG_isBMP\n * \\sa IMG_isGIF\n * \\sa IMG_isJPG\n * \\sa IMG_isJXL\n * \\sa IMG_isLBM\n * \\sa IMG_isPCX\n * \\sa IMG_isPNM\n * \\sa IMG_isSVG\n * \\sa IMG_isQOI\n * \\sa IMG_isTIF\n * \\sa IMG_isXCF\n * \\sa IMG_isXPM\n * \\sa IMG_isXV\n * \\sa IMG_isWEBP\n */"
+    },
+    "IMG_isLBM": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4,
+        "alignOf": 4
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Detect LBM image data on a readable/seekable SDL_RWops.\n *\n * This function attempts to determine if a file is a given filetype, reading\n * the least amount possible from the SDL_RWops (usually a few bytes).\n *\n * There is no distinction made between \u0022not the filetype in question\u0022 and\n * basic i/o errors.\n *\n * This function will always attempt to seek the RWops back to where it\n * started when this function was called, but it will not report any errors in\n * doing so, but assuming seeking works, this means you can immediately use\n * this with a different IMG_isTYPE function, or load the image without\n * further seeking.\n *\n * You do not need to call this function to load data; SDL_image can work to\n * determine file type in many cases in its standard load functions.\n *\n * \\param src a seekable/readable SDL_RWops to provide image data.\n * \\returns non-zero if this is LBM data, zero otherwise.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_isAVIF\n * \\sa IMG_isICO\n * \\sa IMG_isCUR\n * \\sa IMG_isBMP\n * \\sa IMG_isGIF\n * \\sa IMG_isJPG\n * \\sa IMG_isJXL\n * \\sa IMG_isPCX\n * \\sa IMG_isPNG\n * \\sa IMG_isPNM\n * \\sa IMG_isSVG\n * \\sa IMG_isQOI\n * \\sa IMG_isTIF\n * \\sa IMG_isXCF\n * \\sa IMG_isXPM\n * \\sa IMG_isXV\n * \\sa IMG_isWEBP\n */"
+    },
+    "IMG_Load_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        },
+        {
+          "name": "freesrc",
+          "type": {
+            "name": "SDL_bool",
+            "kind": "typeAlias",
+            "sizeOf": 4,
+            "alignOf": 4,
+            "innerType": {
+              "name": "unsigned int",
+              "kind": "primitive",
+              "sizeOf": 4,
+              "alignOf": 4
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load an image from an SDL data source into a software surface.\n *\n * An SDL_Surface is a buffer of pixels in memory accessible by the CPU. Use\n * this if you plan to hand the data to something else or manipulate it\n * further in code.\n *\n * There are no guarantees about what format the new SDL_Surface data will be;\n * in many cases, SDL_image will attempt to supply a surface that exactly\n * matches the provided image, but in others it might have to convert (either\n * because the image is in a format that SDL doesn\u0027t directly support or\n * because it\u0027s compressed data that could reasonably uncompress to various\n * formats and SDL_image had to pick one). You can inspect an SDL_Surface for\n * its specifics, and use SDL_ConvertSurface to then migrate to any supported\n * format.\n *\n * If the image format supports a transparent pixel, SDL will set the colorkey\n * for the surface. You can enable RLE acceleration on the surface afterwards\n * by calling: SDL_SetSurfaceColorKey(image, SDL_RLEACCEL,\n * image-\u003Eformat-\u003Ecolorkey);\n *\n * If \u0060freesrc\u0060 is non-zero, the RWops will be closed before returning,\n * whether this function succeeds or not. SDL_image reads everything it needs\n * from the RWops during this call in any case.\n *\n * There is a separate function to read files from disk without having to deal\n * with SDL_RWops: \u0060IMG_Load(\u0022filename.jpg\u0022)\u0060 will call this function and\n * manage those details for you, determining the file type from the filename\u0027s\n * extension.\n *\n * There is also IMG_LoadTyped_RW(), which is equivalent to this function\n * except a file extension (like \u0022BMP\u0022, \u0022JPG\u0022, etc) can be specified, in case\n * SDL_image cannot autodetect the file format.\n *\n * If you are using SDL\u0027s 2D rendering API, there is an equivalent call to\n * load images directly into an SDL_Texture for use by the GPU without using a\n * software surface: call IMG_LoadTexture_RW() instead.\n *\n * When done with the returned surface, the app should dispose of it with a\n * call to SDL_DestroySurface().\n *\n * \\param src an SDL_RWops that data will be read from.\n * \\param freesrc non-zero to close/free the SDL_RWops before returning, zero\n *                to leave it open.\n * \\returns a new SDL surface, or NULL on error.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_Load\n * \\sa IMG_LoadTyped_RW\n * \\sa SDL_DestroySurface\n */"
+    },
+    "IMG_SavePNG": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4,
+        "alignOf": 4
+      },
+      "parameters": [
+        {
+          "name": "surface",
+          "type": {
+            "name": "SDL_Surface*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_Surface",
+              "kind": "typeAlias",
+              "sizeOf": 88,
+              "alignOf": 8,
+              "innerType": {
+                "name": "SDL_Surface",
+                "kind": "struct",
+                "sizeOf": 88,
+                "alignOf": 8
+              }
+            }
+          }
+        },
+        {
+          "name": "file",
+          "type": {
+            "name": "const char*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "const char",
+              "kind": "primitive",
+              "sizeOf": 1,
+              "alignOf": 1,
+              "isConst": true
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Save an SDL_Surface into a PNG image file.\n *\n * If the file already exists, it will be overwritten.\n *\n * \\param surface the SDL surface to save\n * \\param file path on the filesystem to write new file to.\n * \\returns 0 if successful, -1 on error\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_SavePNG_RW\n * \\sa IMG_SaveJPG\n * \\sa IMG_SaveJPG_RW\n */"
+    },
+    "IMG_LoadJPG_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load a JPG image directly.\n *\n * If you know you definitely have a JPG image, you can call this function,\n * which will skip SDL_image\u0027s file format detection routines. Generally it\u0027s\n * better to use the abstract interfaces; also, there is only an SDL_RWops\n * interface available here.\n *\n * \\param src an SDL_RWops to load image data from.\n * \\returns SDL surface, or NULL on error\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadAVIF_RW\n * \\sa IMG_LoadICO_RW\n * \\sa IMG_LoadCUR_RW\n * \\sa IMG_LoadBMP_RW\n * \\sa IMG_LoadGIF_RW\n * \\sa IMG_LoadJXL_RW\n * \\sa IMG_LoadLBM_RW\n * \\sa IMG_LoadPCX_RW\n * \\sa IMG_LoadPNG_RW\n * \\sa IMG_LoadPNM_RW\n * \\sa IMG_LoadSVG_RW\n * \\sa IMG_LoadQOI_RW\n * \\sa IMG_LoadTGA_RW\n * \\sa IMG_LoadTIF_RW\n * \\sa IMG_LoadXCF_RW\n * \\sa IMG_LoadXPM_RW\n * \\sa IMG_LoadXV_RW\n * \\sa IMG_LoadWEBP_RW\n */"
+    },
+    "IMG_Linked_Version": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_version*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_version",
+          "kind": "typeAlias",
+          "sizeOf": 3,
+          "alignOf": 1,
+          "isConst": true,
+          "innerType": {
+            "name": "SDL_version",
+            "kind": "struct",
+            "sizeOf": 3,
+            "alignOf": 1
+          }
+        }
+      },
+      "parameters": [],
+      "comment": "/**\n * This function gets the version of the dynamically linked SDL_image library.\n *\n * it should NOT be used to fill a version structure, instead you should use\n * the SDL_IMAGE_VERSION() macro.\n *\n * \\returns SDL_image version\n */"
+    },
+    "IMG_isXCF": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4,
+        "alignOf": 4
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Detect XCF image data on a readable/seekable SDL_RWops.\n *\n * This function attempts to determine if a file is a given filetype, reading\n * the least amount possible from the SDL_RWops (usually a few bytes).\n *\n * There is no distinction made between \u0022not the filetype in question\u0022 and\n * basic i/o errors.\n *\n * This function will always attempt to seek the RWops back to where it\n * started when this function was called, but it will not report any errors in\n * doing so, but assuming seeking works, this means you can immediately use\n * this with a different IMG_isTYPE function, or load the image without\n * further seeking.\n *\n * You do not need to call this function to load data; SDL_image can work to\n * determine file type in many cases in its standard load functions.\n *\n * \\param src a seekable/readable SDL_RWops to provide image data.\n * \\returns non-zero if this is XCF data, zero otherwise.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_isAVIF\n * \\sa IMG_isICO\n * \\sa IMG_isCUR\n * \\sa IMG_isBMP\n * \\sa IMG_isGIF\n * \\sa IMG_isJPG\n * \\sa IMG_isJXL\n * \\sa IMG_isLBM\n * \\sa IMG_isPCX\n * \\sa IMG_isPNG\n * \\sa IMG_isPNM\n * \\sa IMG_isSVG\n * \\sa IMG_isQOI\n * \\sa IMG_isTIF\n * \\sa IMG_isXPM\n * \\sa IMG_isXV\n * \\sa IMG_isWEBP\n */"
+    },
+    "IMG_LoadAVIF_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load a AVIF image directly.\n *\n * If you know you definitely have a AVIF image, you can call this function,\n * which will skip SDL_image\u0027s file format detection routines. Generally it\u0027s\n * better to use the abstract interfaces; also, there is only an SDL_RWops\n * interface available here.\n *\n * \\param src an SDL_RWops to load image data from.\n * \\returns SDL surface, or NULL on error\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadICO_RW\n * \\sa IMG_LoadCUR_RW\n * \\sa IMG_LoadBMP_RW\n * \\sa IMG_LoadGIF_RW\n * \\sa IMG_LoadJPG_RW\n * \\sa IMG_LoadJXL_RW\n * \\sa IMG_LoadLBM_RW\n * \\sa IMG_LoadPCX_RW\n * \\sa IMG_LoadPNG_RW\n * \\sa IMG_LoadPNM_RW\n * \\sa IMG_LoadSVG_RW\n * \\sa IMG_LoadQOI_RW\n * \\sa IMG_LoadTGA_RW\n * \\sa IMG_LoadTIF_RW\n * \\sa IMG_LoadXCF_RW\n * \\sa IMG_LoadXPM_RW\n * \\sa IMG_LoadXV_RW\n * \\sa IMG_LoadWEBP_RW\n */"
+    },
+    "IMG_isXPM": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4,
+        "alignOf": 4
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Detect XPM image data on a readable/seekable SDL_RWops.\n *\n * This function attempts to determine if a file is a given filetype, reading\n * the least amount possible from the SDL_RWops (usually a few bytes).\n *\n * There is no distinction made between \u0022not the filetype in question\u0022 and\n * basic i/o errors.\n *\n * This function will always attempt to seek the RWops back to where it\n * started when this function was called, but it will not report any errors in\n * doing so, but assuming seeking works, this means you can immediately use\n * this with a different IMG_isTYPE function, or load the image without\n * further seeking.\n *\n * You do not need to call this function to load data; SDL_image can work to\n * determine file type in many cases in its standard load functions.\n *\n * \\param src a seekable/readable SDL_RWops to provide image data.\n * \\returns non-zero if this is XPM data, zero otherwise.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_isAVIF\n * \\sa IMG_isICO\n * \\sa IMG_isCUR\n * \\sa IMG_isBMP\n * \\sa IMG_isGIF\n * \\sa IMG_isJPG\n * \\sa IMG_isJXL\n * \\sa IMG_isLBM\n * \\sa IMG_isPCX\n * \\sa IMG_isPNG\n * \\sa IMG_isPNM\n * \\sa IMG_isSVG\n * \\sa IMG_isQOI\n * \\sa IMG_isTIF\n * \\sa IMG_isXCF\n * \\sa IMG_isXV\n * \\sa IMG_isWEBP\n */"
+    },
+    "IMG_isPCX": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4,
+        "alignOf": 4
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Detect PCX image data on a readable/seekable SDL_RWops.\n *\n * This function attempts to determine if a file is a given filetype, reading\n * the least amount possible from the SDL_RWops (usually a few bytes).\n *\n * There is no distinction made between \u0022not the filetype in question\u0022 and\n * basic i/o errors.\n *\n * This function will always attempt to seek the RWops back to where it\n * started when this function was called, but it will not report any errors in\n * doing so, but assuming seeking works, this means you can immediately use\n * this with a different IMG_isTYPE function, or load the image without\n * further seeking.\n *\n * You do not need to call this function to load data; SDL_image can work to\n * determine file type in many cases in its standard load functions.\n *\n * \\param src a seekable/readable SDL_RWops to provide image data.\n * \\returns non-zero if this is PCX data, zero otherwise.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_isAVIF\n * \\sa IMG_isICO\n * \\sa IMG_isCUR\n * \\sa IMG_isBMP\n * \\sa IMG_isGIF\n * \\sa IMG_isJPG\n * \\sa IMG_isJXL\n * \\sa IMG_isLBM\n * \\sa IMG_isPNG\n * \\sa IMG_isPNM\n * \\sa IMG_isSVG\n * \\sa IMG_isQOI\n * \\sa IMG_isTIF\n * \\sa IMG_isXCF\n * \\sa IMG_isXPM\n * \\sa IMG_isXV\n * \\sa IMG_isWEBP\n */"
+    },
+    "IMG_ReadXPMFromArray": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "xpm",
+          "type": {
+            "name": "char**",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "char*",
+              "kind": "pointer",
+              "sizeOf": 8,
+              "alignOf": 8,
+              "innerType": {
+                "name": "char",
+                "kind": "primitive",
+                "sizeOf": 1,
+                "alignOf": 1
+              }
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load an XPM image from a memory array.\n *\n * The returned surface will be an 8bpp indexed surface, if possible,\n * otherwise it will be 32bpp. If you always want 32-bit data, use\n * IMG_ReadXPMFromArrayToRGB888() instead.\n *\n * When done with the returned surface, the app should dispose of it with a\n * call to SDL_DestroySurface().\n *\n * \\param xpm a null-terminated array of strings that comprise XPM data.\n * \\returns a new SDL surface, or NULL on error.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_ReadXPMFromArrayToRGB888\n */"
+    },
+    "IMG_LoadXV_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load a XV image directly.\n *\n * If you know you definitely have a XV image, you can call this function,\n * which will skip SDL_image\u0027s file format detection routines. Generally it\u0027s\n * better to use the abstract interfaces; also, there is only an SDL_RWops\n * interface available here.\n *\n * \\param src an SDL_RWops to load image data from.\n * \\returns SDL surface, or NULL on error\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadAVIF_RW\n * \\sa IMG_LoadICO_RW\n * \\sa IMG_LoadCUR_RW\n * \\sa IMG_LoadBMP_RW\n * \\sa IMG_LoadGIF_RW\n * \\sa IMG_LoadJPG_RW\n * \\sa IMG_LoadJXL_RW\n * \\sa IMG_LoadLBM_RW\n * \\sa IMG_LoadPCX_RW\n * \\sa IMG_LoadPNG_RW\n * \\sa IMG_LoadPNM_RW\n * \\sa IMG_LoadSVG_RW\n * \\sa IMG_LoadQOI_RW\n * \\sa IMG_LoadTGA_RW\n * \\sa IMG_LoadTIF_RW\n * \\sa IMG_LoadXCF_RW\n * \\sa IMG_LoadXPM_RW\n * \\sa IMG_LoadWEBP_RW\n */"
+    },
+    "IMG_LoadAnimation_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "IMG_Animation*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "IMG_Animation",
+          "kind": "typeAlias",
+          "sizeOf": 32,
+          "alignOf": 8,
+          "innerType": {
+            "name": "IMG_Animation",
+            "kind": "struct",
+            "sizeOf": 32,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        },
+        {
+          "name": "freesrc",
+          "type": {
+            "name": "SDL_bool",
+            "kind": "typeAlias",
+            "sizeOf": 4,
+            "alignOf": 4,
+            "innerType": {
+              "name": "unsigned int",
+              "kind": "primitive",
+              "sizeOf": 4,
+              "alignOf": 4
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load an animation from an SDL_RWops.\n *\n * If \u0060freesrc\u0060 is non-zero, the RWops will be closed before returning,\n * whether this function succeeds or not. SDL_image reads everything it needs\n * from the RWops during this call in any case.\n *\n * When done with the returned animation, the app should dispose of it with a\n * call to IMG_FreeAnimation().\n *\n * \\param src an SDL_RWops that data will be read from.\n * \\param freesrc non-zero to close/free the SDL_RWops before returning, zero\n *                to leave it open.\n * \\returns a new IMG_Animation, or NULL on error.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_FreeAnimation\n */"
+    },
+    "IMG_isSVG": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4,
+        "alignOf": 4
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Detect SVG image data on a readable/seekable SDL_RWops.\n *\n * This function attempts to determine if a file is a given filetype, reading\n * the least amount possible from the SDL_RWops (usually a few bytes).\n *\n * There is no distinction made between \u0022not the filetype in question\u0022 and\n * basic i/o errors.\n *\n * This function will always attempt to seek the RWops back to where it\n * started when this function was called, but it will not report any errors in\n * doing so, but assuming seeking works, this means you can immediately use\n * this with a different IMG_isTYPE function, or load the image without\n * further seeking.\n *\n * You do not need to call this function to load data; SDL_image can work to\n * determine file type in many cases in its standard load functions.\n *\n * \\param src a seekable/readable SDL_RWops to provide image data.\n * \\returns non-zero if this is SVG data, zero otherwise.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_isAVIF\n * \\sa IMG_isICO\n * \\sa IMG_isCUR\n * \\sa IMG_isBMP\n * \\sa IMG_isGIF\n * \\sa IMG_isJPG\n * \\sa IMG_isJXL\n * \\sa IMG_isLBM\n * \\sa IMG_isPCX\n * \\sa IMG_isPNG\n * \\sa IMG_isPNM\n * \\sa IMG_isQOI\n * \\sa IMG_isTIF\n * \\sa IMG_isXCF\n * \\sa IMG_isXPM\n * \\sa IMG_isXV\n * \\sa IMG_isWEBP\n */"
+    },
+    "IMG_LoadTexture_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Texture*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Texture",
+          "kind": "opaqueType"
+        }
+      },
+      "parameters": [
+        {
+          "name": "renderer",
+          "type": {
+            "name": "SDL_Renderer*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_Renderer",
+              "kind": "opaqueType"
+            }
+          }
+        },
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        },
+        {
+          "name": "freesrc",
+          "type": {
+            "name": "SDL_bool",
+            "kind": "typeAlias",
+            "sizeOf": 4,
+            "alignOf": 4,
+            "innerType": {
+              "name": "unsigned int",
+              "kind": "primitive",
+              "sizeOf": 4,
+              "alignOf": 4
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load an image from an SDL data source into a GPU texture.\n *\n * An SDL_Texture represents an image in GPU memory, usable by SDL\u0027s 2D Render\n * API. This can be significantly more efficient than using a CPU-bound\n * SDL_Surface if you don\u0027t need to manipulate the image directly after\n * loading it.\n *\n * If the loaded image has transparency or a colorkey, a texture with an alpha\n * channel will be created. Otherwise, SDL_image will attempt to create an\n * SDL_Texture in the most format that most reasonably represents the image\n * data (but in many cases, this will just end up being 32-bit RGB or 32-bit\n * RGBA).\n *\n * If \u0060freesrc\u0060 is non-zero, the RWops will be closed before returning,\n * whether this function succeeds or not. SDL_image reads everything it needs\n * from the RWops during this call in any case.\n *\n * There is a separate function to read files from disk without having to deal\n * with SDL_RWops: \u0060IMG_LoadTexture(renderer, \u0022filename.jpg\u0022)\u0060 will call this\n * function and manage those details for you, determining the file type from\n * the filename\u0027s extension.\n *\n * There is also IMG_LoadTextureTyped_RW(), which is equivalent to this\n * function except a file extension (like \u0022BMP\u0022, \u0022JPG\u0022, etc) can be specified,\n * in case SDL_image cannot autodetect the file format.\n *\n * If you would rather decode an image to an SDL_Surface (a buffer of pixels\n * in CPU memory), call IMG_Load() instead.\n *\n * When done with the returned texture, the app should dispose of it with a\n * call to SDL_DestroyTexture().\n *\n * \\param renderer the SDL_Renderer to use to create the GPU texture.\n * \\param src an SDL_RWops that data will be read from.\n * \\param freesrc non-zero to close/free the SDL_RWops before returning, zero\n *                to leave it open.\n * \\returns a new texture, or NULL on error.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadTexture\n * \\sa IMG_LoadTextureTyped_RW\n * \\sa SDL_DestroyTexture\n */"
+    },
+    "IMG_isCUR": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4,
+        "alignOf": 4
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Detect CUR image data on a readable/seekable SDL_RWops.\n *\n * This function attempts to determine if a file is a given filetype, reading\n * the least amount possible from the SDL_RWops (usually a few bytes).\n *\n * There is no distinction made between \u0022not the filetype in question\u0022 and\n * basic i/o errors.\n *\n * This function will always attempt to seek the RWops back to where it\n * started when this function was called, but it will not report any errors in\n * doing so, but assuming seeking works, this means you can immediately use\n * this with a different IMG_isTYPE function, or load the image without\n * further seeking.\n *\n * You do not need to call this function to load data; SDL_image can work to\n * determine file type in many cases in its standard load functions.\n *\n * \\param src a seekable/readable SDL_RWops to provide image data.\n * \\returns non-zero if this is CUR data, zero otherwise.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_isAVIF\n * \\sa IMG_isICO\n * \\sa IMG_isBMP\n * \\sa IMG_isGIF\n * \\sa IMG_isJPG\n * \\sa IMG_isJXL\n * \\sa IMG_isLBM\n * \\sa IMG_isPCX\n * \\sa IMG_isPNG\n * \\sa IMG_isPNM\n * \\sa IMG_isSVG\n * \\sa IMG_isQOI\n * \\sa IMG_isTIF\n * \\sa IMG_isXCF\n * \\sa IMG_isXPM\n * \\sa IMG_isXV\n * \\sa IMG_isWEBP\n */"
+    },
+    "IMG_isJXL": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4,
+        "alignOf": 4
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Detect JXL image data on a readable/seekable SDL_RWops.\n *\n * This function attempts to determine if a file is a given filetype, reading\n * the least amount possible from the SDL_RWops (usually a few bytes).\n *\n * There is no distinction made between \u0022not the filetype in question\u0022 and\n * basic i/o errors.\n *\n * This function will always attempt to seek the RWops back to where it\n * started when this function was called, but it will not report any errors in\n * doing so, but assuming seeking works, this means you can immediately use\n * this with a different IMG_isTYPE function, or load the image without\n * further seeking.\n *\n * You do not need to call this function to load data; SDL_image can work to\n * determine file type in many cases in its standard load functions.\n *\n * \\param src a seekable/readable SDL_RWops to provide image data.\n * \\returns non-zero if this is JXL data, zero otherwise.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_isAVIF\n * \\sa IMG_isICO\n * \\sa IMG_isCUR\n * \\sa IMG_isBMP\n * \\sa IMG_isGIF\n * \\sa IMG_isJPG\n * \\sa IMG_isLBM\n * \\sa IMG_isPCX\n * \\sa IMG_isPNG\n * \\sa IMG_isPNM\n * \\sa IMG_isSVG\n * \\sa IMG_isQOI\n * \\sa IMG_isTIF\n * \\sa IMG_isXCF\n * \\sa IMG_isXPM\n * \\sa IMG_isXV\n * \\sa IMG_isWEBP\n */"
+    },
+    "IMG_LoadPNG_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load a PNG image directly.\n *\n * If you know you definitely have a PNG image, you can call this function,\n * which will skip SDL_image\u0027s file format detection routines. Generally it\u0027s\n * better to use the abstract interfaces; also, there is only an SDL_RWops\n * interface available here.\n *\n * \\param src an SDL_RWops to load image data from.\n * \\returns SDL surface, or NULL on error\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadAVIF_RW\n * \\sa IMG_LoadICO_RW\n * \\sa IMG_LoadCUR_RW\n * \\sa IMG_LoadBMP_RW\n * \\sa IMG_LoadGIF_RW\n * \\sa IMG_LoadJPG_RW\n * \\sa IMG_LoadJXL_RW\n * \\sa IMG_LoadLBM_RW\n * \\sa IMG_LoadPCX_RW\n * \\sa IMG_LoadPNM_RW\n * \\sa IMG_LoadSVG_RW\n * \\sa IMG_LoadQOI_RW\n * \\sa IMG_LoadTGA_RW\n * \\sa IMG_LoadTIF_RW\n * \\sa IMG_LoadXCF_RW\n * \\sa IMG_LoadXPM_RW\n * \\sa IMG_LoadXV_RW\n * \\sa IMG_LoadWEBP_RW\n */"
+    },
+    "IMG_LoadWEBP_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load a WEBP image directly.\n *\n * If you know you definitely have a WEBP image, you can call this function,\n * which will skip SDL_image\u0027s file format detection routines. Generally it\u0027s\n * better to use the abstract interfaces; also, there is only an SDL_RWops\n * interface available here.\n *\n * \\param src an SDL_RWops to load image data from.\n * \\returns SDL surface, or NULL on error\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadAVIF_RW\n * \\sa IMG_LoadICO_RW\n * \\sa IMG_LoadCUR_RW\n * \\sa IMG_LoadBMP_RW\n * \\sa IMG_LoadGIF_RW\n * \\sa IMG_LoadJPG_RW\n * \\sa IMG_LoadJXL_RW\n * \\sa IMG_LoadLBM_RW\n * \\sa IMG_LoadPCX_RW\n * \\sa IMG_LoadPNG_RW\n * \\sa IMG_LoadPNM_RW\n * \\sa IMG_LoadSVG_RW\n * \\sa IMG_LoadQOI_RW\n * \\sa IMG_LoadTGA_RW\n * \\sa IMG_LoadTIF_RW\n * \\sa IMG_LoadXCF_RW\n * \\sa IMG_LoadXPM_RW\n * \\sa IMG_LoadXV_RW\n */"
+    },
+    "IMG_LoadLBM_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load a LBM image directly.\n *\n * If you know you definitely have a LBM image, you can call this function,\n * which will skip SDL_image\u0027s file format detection routines. Generally it\u0027s\n * better to use the abstract interfaces; also, there is only an SDL_RWops\n * interface available here.\n *\n * \\param src an SDL_RWops to load image data from.\n * \\returns SDL surface, or NULL on error\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadAVIF_RW\n * \\sa IMG_LoadICO_RW\n * \\sa IMG_LoadCUR_RW\n * \\sa IMG_LoadBMP_RW\n * \\sa IMG_LoadGIF_RW\n * \\sa IMG_LoadJPG_RW\n * \\sa IMG_LoadJXL_RW\n * \\sa IMG_LoadPCX_RW\n * \\sa IMG_LoadPNG_RW\n * \\sa IMG_LoadPNM_RW\n * \\sa IMG_LoadSVG_RW\n * \\sa IMG_LoadQOI_RW\n * \\sa IMG_LoadTGA_RW\n * \\sa IMG_LoadTIF_RW\n * \\sa IMG_LoadXCF_RW\n * \\sa IMG_LoadXPM_RW\n * \\sa IMG_LoadXV_RW\n * \\sa IMG_LoadWEBP_RW\n */"
+    },
+    "IMG_LoadTexture": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Texture*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Texture",
+          "kind": "opaqueType"
+        }
+      },
+      "parameters": [
+        {
+          "name": "renderer",
+          "type": {
+            "name": "SDL_Renderer*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_Renderer",
+              "kind": "opaqueType"
+            }
+          }
+        },
+        {
+          "name": "file",
+          "type": {
+            "name": "const char*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "const char",
+              "kind": "primitive",
+              "sizeOf": 1,
+              "alignOf": 1,
+              "isConst": true
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load an image from a filesystem path into a GPU texture.\n *\n * An SDL_Texture represents an image in GPU memory, usable by SDL\u0027s 2D Render\n * API. This can be significantly more efficient than using a CPU-bound\n * SDL_Surface if you don\u0027t need to manipulate the image directly after\n * loading it.\n *\n * If the loaded image has transparency or a colorkey, a texture with an alpha\n * channel will be created. Otherwise, SDL_image will attempt to create an\n * SDL_Texture in the most format that most reasonably represents the image\n * data (but in many cases, this will just end up being 32-bit RGB or 32-bit\n * RGBA).\n *\n * There is a separate function to read files from an SDL_RWops, if you need\n * an i/o abstraction to provide data from anywhere instead of a simple\n * filesystem read; that function is IMG_LoadTexture_RW().\n *\n * If you would rather decode an image to an SDL_Surface (a buffer of pixels\n * in CPU memory), call IMG_Load() instead.\n *\n * When done with the returned texture, the app should dispose of it with a\n * call to SDL_DestroyTexture().\n *\n * \\param renderer the SDL_Renderer to use to create the GPU texture.\n * \\param file a path on the filesystem to load an image from.\n * \\returns a new texture, or NULL on error.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadTextureTyped_RW\n * \\sa IMG_LoadTexture_RW\n */"
+    },
+    "IMG_SavePNG_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4,
+        "alignOf": 4
+      },
+      "parameters": [
+        {
+          "name": "surface",
+          "type": {
+            "name": "SDL_Surface*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_Surface",
+              "kind": "typeAlias",
+              "sizeOf": 88,
+              "alignOf": 8,
+              "innerType": {
+                "name": "SDL_Surface",
+                "kind": "struct",
+                "sizeOf": 88,
+                "alignOf": 8
+              }
+            }
+          }
+        },
+        {
+          "name": "dst",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        },
+        {
+          "name": "freedst",
+          "type": {
+            "name": "int",
+            "kind": "primitive",
+            "sizeOf": 4,
+            "alignOf": 4
+          }
+        }
+      ],
+      "comment": "/**\n * Save an SDL_Surface into PNG image data, via an SDL_RWops.\n *\n * If you just want to save to a filename, you can use IMG_SavePNG() instead.\n *\n * \\param surface the SDL surface to save\n * \\param dst the SDL_RWops to save the image data to.\n * \\returns 0 if successful, -1 on error.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_SavePNG\n * \\sa IMG_SaveJPG\n * \\sa IMG_SaveJPG_RW\n */"
+    },
+    "IMG_LoadTGA_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load a TGA image directly.\n *\n * If you know you definitely have a TGA image, you can call this function,\n * which will skip SDL_image\u0027s file format detection routines. Generally it\u0027s\n * better to use the abstract interfaces; also, there is only an SDL_RWops\n * interface available here.\n *\n * \\param src an SDL_RWops to load image data from.\n * \\returns SDL surface, or NULL on error\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadAVIF_RW\n * \\sa IMG_LoadICO_RW\n * \\sa IMG_LoadCUR_RW\n * \\sa IMG_LoadBMP_RW\n * \\sa IMG_LoadGIF_RW\n * \\sa IMG_LoadJPG_RW\n * \\sa IMG_LoadJXL_RW\n * \\sa IMG_LoadLBM_RW\n * \\sa IMG_LoadPCX_RW\n * \\sa IMG_LoadPNG_RW\n * \\sa IMG_LoadPNM_RW\n * \\sa IMG_LoadSVG_RW\n * \\sa IMG_LoadQOI_RW\n * \\sa IMG_LoadTIF_RW\n * \\sa IMG_LoadXCF_RW\n * \\sa IMG_LoadXPM_RW\n * \\sa IMG_LoadXV_RW\n * \\sa IMG_LoadWEBP_RW\n */"
+    },
+    "IMG_isQOI": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4,
+        "alignOf": 4
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Detect QOI image data on a readable/seekable SDL_RWops.\n *\n * This function attempts to determine if a file is a given filetype, reading\n * the least amount possible from the SDL_RWops (usually a few bytes).\n *\n * There is no distinction made between \u0022not the filetype in question\u0022 and\n * basic i/o errors.\n *\n * This function will always attempt to seek the RWops back to where it\n * started when this function was called, but it will not report any errors in\n * doing so, but assuming seeking works, this means you can immediately use\n * this with a different IMG_isTYPE function, or load the image without\n * further seeking.\n *\n * You do not need to call this function to load data; SDL_image can work to\n * determine file type in many cases in its standard load functions.\n *\n * \\param src a seekable/readable SDL_RWops to provide image data.\n * \\returns non-zero if this is QOI data, zero otherwise.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_isAVIF\n * \\sa IMG_isICO\n * \\sa IMG_isCUR\n * \\sa IMG_isBMP\n * \\sa IMG_isGIF\n * \\sa IMG_isJPG\n * \\sa IMG_isJXL\n * \\sa IMG_isLBM\n * \\sa IMG_isPCX\n * \\sa IMG_isPNG\n * \\sa IMG_isPNM\n * \\sa IMG_isSVG\n * \\sa IMG_isTIF\n * \\sa IMG_isXCF\n * \\sa IMG_isXPM\n * \\sa IMG_isXV\n * \\sa IMG_isWEBP\n */"
+    },
+    "IMG_LoadPNM_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load a PNM image directly.\n *\n * If you know you definitely have a PNM image, you can call this function,\n * which will skip SDL_image\u0027s file format detection routines. Generally it\u0027s\n * better to use the abstract interfaces; also, there is only an SDL_RWops\n * interface available here.\n *\n * \\param src an SDL_RWops to load image data from.\n * \\returns SDL surface, or NULL on error\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadAVIF_RW\n * \\sa IMG_LoadICO_RW\n * \\sa IMG_LoadCUR_RW\n * \\sa IMG_LoadBMP_RW\n * \\sa IMG_LoadGIF_RW\n * \\sa IMG_LoadJPG_RW\n * \\sa IMG_LoadJXL_RW\n * \\sa IMG_LoadLBM_RW\n * \\sa IMG_LoadPCX_RW\n * \\sa IMG_LoadPNG_RW\n * \\sa IMG_LoadSVG_RW\n * \\sa IMG_LoadQOI_RW\n * \\sa IMG_LoadTGA_RW\n * \\sa IMG_LoadTIF_RW\n * \\sa IMG_LoadXCF_RW\n * \\sa IMG_LoadXPM_RW\n * \\sa IMG_LoadXV_RW\n * \\sa IMG_LoadWEBP_RW\n */"
+    },
+    "IMG_Load": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "file",
+          "type": {
+            "name": "const char*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "const char",
+              "kind": "primitive",
+              "sizeOf": 1,
+              "alignOf": 1,
+              "isConst": true
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load an image from a filesystem path into a software surface.\n *\n * An SDL_Surface is a buffer of pixels in memory accessible by the CPU. Use\n * this if you plan to hand the data to something else or manipulate it\n * further in code.\n *\n * There are no guarantees about what format the new SDL_Surface data will be;\n * in many cases, SDL_image will attempt to supply a surface that exactly\n * matches the provided image, but in others it might have to convert (either\n * because the image is in a format that SDL doesn\u0027t directly support or\n * because it\u0027s compressed data that could reasonably uncompress to various\n * formats and SDL_image had to pick one). You can inspect an SDL_Surface for\n * its specifics, and use SDL_ConvertSurface to then migrate to any supported\n * format.\n *\n * If the image format supports a transparent pixel, SDL will set the colorkey\n * for the surface. You can enable RLE acceleration on the surface afterwards\n * by calling: SDL_SetSurfaceColorKey(image, SDL_RLEACCEL,\n * image-\u003Eformat-\u003Ecolorkey);\n *\n * There is a separate function to read files from an SDL_RWops, if you need\n * an i/o abstraction to provide data from anywhere instead of a simple\n * filesystem read; that function is IMG_Load_RW().\n *\n * If you are using SDL\u0027s 2D rendering API, there is an equivalent call to\n * load images directly into an SDL_Texture for use by the GPU without using a\n * software surface: call IMG_LoadTexture() instead.\n *\n * When done with the returned surface, the app should dispose of it with a\n * call to SDL_DestroySurface().\n *\n * \\param file a path on the filesystem to load an image from.\n * \\returns a new SDL surface, or NULL on error.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadTyped_RW\n * \\sa IMG_Load_RW\n * \\sa SDL_DestroySurface\n */"
+    },
+    "IMG_LoadJXL_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load a JXL image directly.\n *\n * If you know you definitely have a JXL image, you can call this function,\n * which will skip SDL_image\u0027s file format detection routines. Generally it\u0027s\n * better to use the abstract interfaces; also, there is only an SDL_RWops\n * interface available here.\n *\n * \\param src an SDL_RWops to load image data from.\n * \\returns SDL surface, or NULL on error\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadAVIF_RW\n * \\sa IMG_LoadICO_RW\n * \\sa IMG_LoadCUR_RW\n * \\sa IMG_LoadBMP_RW\n * \\sa IMG_LoadGIF_RW\n * \\sa IMG_LoadJPG_RW\n * \\sa IMG_LoadLBM_RW\n * \\sa IMG_LoadPCX_RW\n * \\sa IMG_LoadPNG_RW\n * \\sa IMG_LoadPNM_RW\n * \\sa IMG_LoadSVG_RW\n * \\sa IMG_LoadQOI_RW\n * \\sa IMG_LoadTGA_RW\n * \\sa IMG_LoadTIF_RW\n * \\sa IMG_LoadXCF_RW\n * \\sa IMG_LoadXPM_RW\n * \\sa IMG_LoadXV_RW\n * \\sa IMG_LoadWEBP_RW\n */"
+    },
+    "IMG_LoadPCX_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load a PCX image directly.\n *\n * If you know you definitely have a PCX image, you can call this function,\n * which will skip SDL_image\u0027s file format detection routines. Generally it\u0027s\n * better to use the abstract interfaces; also, there is only an SDL_RWops\n * interface available here.\n *\n * \\param src an SDL_RWops to load image data from.\n * \\returns SDL surface, or NULL on error\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadAVIF_RW\n * \\sa IMG_LoadICO_RW\n * \\sa IMG_LoadCUR_RW\n * \\sa IMG_LoadBMP_RW\n * \\sa IMG_LoadGIF_RW\n * \\sa IMG_LoadJPG_RW\n * \\sa IMG_LoadJXL_RW\n * \\sa IMG_LoadLBM_RW\n * \\sa IMG_LoadPNG_RW\n * \\sa IMG_LoadPNM_RW\n * \\sa IMG_LoadSVG_RW\n * \\sa IMG_LoadQOI_RW\n * \\sa IMG_LoadTGA_RW\n * \\sa IMG_LoadTIF_RW\n * \\sa IMG_LoadXCF_RW\n * \\sa IMG_LoadXPM_RW\n * \\sa IMG_LoadXV_RW\n * \\sa IMG_LoadWEBP_RW\n */"
+    },
+    "IMG_isPNM": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4,
+        "alignOf": 4
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Detect PNM image data on a readable/seekable SDL_RWops.\n *\n * This function attempts to determine if a file is a given filetype, reading\n * the least amount possible from the SDL_RWops (usually a few bytes).\n *\n * There is no distinction made between \u0022not the filetype in question\u0022 and\n * basic i/o errors.\n *\n * This function will always attempt to seek the RWops back to where it\n * started when this function was called, but it will not report any errors in\n * doing so, but assuming seeking works, this means you can immediately use\n * this with a different IMG_isTYPE function, or load the image without\n * further seeking.\n *\n * You do not need to call this function to load data; SDL_image can work to\n * determine file type in many cases in its standard load functions.\n *\n * \\param src a seekable/readable SDL_RWops to provide image data.\n * \\returns non-zero if this is PNM data, zero otherwise.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_isAVIF\n * \\sa IMG_isICO\n * \\sa IMG_isCUR\n * \\sa IMG_isBMP\n * \\sa IMG_isGIF\n * \\sa IMG_isJPG\n * \\sa IMG_isJXL\n * \\sa IMG_isLBM\n * \\sa IMG_isPCX\n * \\sa IMG_isPNG\n * \\sa IMG_isSVG\n * \\sa IMG_isQOI\n * \\sa IMG_isTIF\n * \\sa IMG_isXCF\n * \\sa IMG_isXPM\n * \\sa IMG_isXV\n * \\sa IMG_isWEBP\n */"
+    },
+    "IMG_LoadTextureTyped_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Texture*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Texture",
+          "kind": "opaqueType"
+        }
+      },
+      "parameters": [
+        {
+          "name": "renderer",
+          "type": {
+            "name": "SDL_Renderer*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_Renderer",
+              "kind": "opaqueType"
+            }
+          }
+        },
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        },
+        {
+          "name": "freesrc",
+          "type": {
+            "name": "SDL_bool",
+            "kind": "typeAlias",
+            "sizeOf": 4,
+            "alignOf": 4,
+            "innerType": {
+              "name": "unsigned int",
+              "kind": "primitive",
+              "sizeOf": 4,
+              "alignOf": 4
+            }
+          }
+        },
+        {
+          "name": "type",
+          "type": {
+            "name": "const char*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "const char",
+              "kind": "primitive",
+              "sizeOf": 1,
+              "alignOf": 1,
+              "isConst": true
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load an image from an SDL data source into a GPU texture.\n *\n * An SDL_Texture represents an image in GPU memory, usable by SDL\u0027s 2D Render\n * API. This can be significantly more efficient than using a CPU-bound\n * SDL_Surface if you don\u0027t need to manipulate the image directly after\n * loading it.\n *\n * If the loaded image has transparency or a colorkey, a texture with an alpha\n * channel will be created. Otherwise, SDL_image will attempt to create an\n * SDL_Texture in the most format that most reasonably represents the image\n * data (but in many cases, this will just end up being 32-bit RGB or 32-bit\n * RGBA).\n *\n * If \u0060freesrc\u0060 is non-zero, the RWops will be closed before returning,\n * whether this function succeeds or not. SDL_image reads everything it needs\n * from the RWops during this call in any case.\n *\n * Even though this function accepts a file type, SDL_image may still try\n * other decoders that are capable of detecting file type from the contents of\n * the image data, but may rely on the caller-provided type string for formats\n * that it cannot autodetect. If \u0060type\u0060 is NULL, SDL_image will rely solely on\n * its ability to guess the format.\n *\n * There is a separate function to read files from disk without having to deal\n * with SDL_RWops: \u0060IMG_LoadTexture(\u0022filename.jpg\u0022)\u0060 will call this function\n * and manage those details for you, determining the file type from the\n * filename\u0027s extension.\n *\n * There is also IMG_LoadTexture_RW(), which is equivalent to this function\n * except that it will rely on SDL_image to determine what type of data it is\n * loading, much like passing a NULL for type.\n *\n * If you would rather decode an image to an SDL_Surface (a buffer of pixels\n * in CPU memory), call IMG_LoadTyped_RW() instead.\n *\n * When done with the returned texture, the app should dispose of it with a\n * call to SDL_DestroyTexture().\n *\n * \\param renderer the SDL_Renderer to use to create the GPU texture.\n * \\param src an SDL_RWops that data will be read from.\n * \\param freesrc non-zero to close/free the SDL_RWops before returning, zero\n *                to leave it open.\n * \\param type a filename extension that represent this data (\u0022BMP\u0022, \u0022GIF\u0022,\n *             \u0022PNG\u0022, etc).\n * \\returns a new texture, or NULL on error.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadTexture\n * \\sa IMG_LoadTexture_RW\n * \\sa SDL_DestroyTexture\n */"
+    },
+    "IMG_LoadTIF_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load a TIFF image directly.\n *\n * If you know you definitely have a TIFF image, you can call this function,\n * which will skip SDL_image\u0027s file format detection routines. Generally it\u0027s\n * better to use the abstract interfaces; also, there is only an SDL_RWops\n * interface available here.\n *\n * \\param src an SDL_RWops to load image data from.\n * \\returns SDL surface, or NULL on error\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadAVIF_RW\n * \\sa IMG_LoadICO_RW\n * \\sa IMG_LoadCUR_RW\n * \\sa IMG_LoadBMP_RW\n * \\sa IMG_LoadGIF_RW\n * \\sa IMG_LoadJPG_RW\n * \\sa IMG_LoadJXL_RW\n * \\sa IMG_LoadLBM_RW\n * \\sa IMG_LoadPCX_RW\n * \\sa IMG_LoadPNG_RW\n * \\sa IMG_LoadPNM_RW\n * \\sa IMG_LoadSVG_RW\n * \\sa IMG_LoadQOI_RW\n * \\sa IMG_LoadTGA_RW\n * \\sa IMG_LoadXCF_RW\n * \\sa IMG_LoadXPM_RW\n * \\sa IMG_LoadXV_RW\n * \\sa IMG_LoadWEBP_RW\n */"
+    },
+    "IMG_isBMP": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4,
+        "alignOf": 4
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Detect BMP image data on a readable/seekable SDL_RWops.\n *\n * This function attempts to determine if a file is a given filetype, reading\n * the least amount possible from the SDL_RWops (usually a few bytes).\n *\n * There is no distinction made between \u0022not the filetype in question\u0022 and\n * basic i/o errors.\n *\n * This function will always attempt to seek the RWops back to where it\n * started when this function was called, but it will not report any errors in\n * doing so, but assuming seeking works, this means you can immediately use\n * this with a different IMG_isTYPE function, or load the image without\n * further seeking.\n *\n * You do not need to call this function to load data; SDL_image can work to\n * determine file type in many cases in its standard load functions.\n *\n * \\param src a seekable/readable SDL_RWops to provide image data.\n * \\returns non-zero if this is BMP data, zero otherwise.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_isAVIF\n * \\sa IMG_isICO\n * \\sa IMG_isCUR\n * \\sa IMG_isGIF\n * \\sa IMG_isJPG\n * \\sa IMG_isJXL\n * \\sa IMG_isLBM\n * \\sa IMG_isPCX\n * \\sa IMG_isPNG\n * \\sa IMG_isPNM\n * \\sa IMG_isSVG\n * \\sa IMG_isQOI\n * \\sa IMG_isTIF\n * \\sa IMG_isXCF\n * \\sa IMG_isXPM\n * \\sa IMG_isXV\n * \\sa IMG_isWEBP\n */"
+    },
+    "IMG_isTIF": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4,
+        "alignOf": 4
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Detect TIFF image data on a readable/seekable SDL_RWops.\n *\n * This function attempts to determine if a file is a given filetype, reading\n * the least amount possible from the SDL_RWops (usually a few bytes).\n *\n * There is no distinction made between \u0022not the filetype in question\u0022 and\n * basic i/o errors.\n *\n * This function will always attempt to seek the RWops back to where it\n * started when this function was called, but it will not report any errors in\n * doing so, but assuming seeking works, this means you can immediately use\n * this with a different IMG_isTYPE function, or load the image without\n * further seeking.\n *\n * You do not need to call this function to load data; SDL_image can work to\n * determine file type in many cases in its standard load functions.\n *\n * \\param src a seekable/readable SDL_RWops to provide image data.\n * \\returns non-zero if this is TIFF data, zero otherwise.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_isAVIF\n * \\sa IMG_isICO\n * \\sa IMG_isCUR\n * \\sa IMG_isBMP\n * \\sa IMG_isGIF\n * \\sa IMG_isJPG\n * \\sa IMG_isJXL\n * \\sa IMG_isLBM\n * \\sa IMG_isPCX\n * \\sa IMG_isPNG\n * \\sa IMG_isPNM\n * \\sa IMG_isSVG\n * \\sa IMG_isQOI\n * \\sa IMG_isXCF\n * \\sa IMG_isXPM\n * \\sa IMG_isXV\n * \\sa IMG_isWEBP\n */"
+    },
+    "IMG_LoadAnimation": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "IMG_Animation*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "IMG_Animation",
+          "kind": "typeAlias",
+          "sizeOf": 32,
+          "alignOf": 8,
+          "innerType": {
+            "name": "IMG_Animation",
+            "kind": "struct",
+            "sizeOf": 32,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "file",
+          "type": {
+            "name": "const char*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "const char",
+              "kind": "primitive",
+              "sizeOf": 1,
+              "alignOf": 1,
+              "isConst": true
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load an animation from a file.\n *\n * When done with the returned animation, the app should dispose of it with a\n * call to IMG_FreeAnimation().\n *\n * \\param file path on the filesystem containing an animated image.\n * \\returns a new IMG_Animation, or NULL on error.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_FreeAnimation\n */"
+    },
+    "IMG_isAVIF": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4,
+        "alignOf": 4
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Detect AVIF image data on a readable/seekable SDL_RWops.\n *\n * This function attempts to determine if a file is a given filetype, reading\n * the least amount possible from the SDL_RWops (usually a few bytes).\n *\n * There is no distinction made between \u0022not the filetype in question\u0022 and\n * basic i/o errors.\n *\n * This function will always attempt to seek the RWops back to where it\n * started when this function was called, but it will not report any errors in\n * doing so, but assuming seeking works, this means you can immediately use\n * this with a different IMG_isTYPE function, or load the image without\n * further seeking.\n *\n * You do not need to call this function to load data; SDL_image can work to\n * determine file type in many cases in its standard load functions.\n *\n * \\param src a seekable/readable SDL_RWops to provide image data.\n * \\returns non-zero if this is AVIF data, zero otherwise.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_isAVIF\n * \\sa IMG_isICO\n * \\sa IMG_isCUR\n * \\sa IMG_isBMP\n * \\sa IMG_isGIF\n * \\sa IMG_isJPG\n * \\sa IMG_isJXL\n * \\sa IMG_isLBM\n * \\sa IMG_isPCX\n * \\sa IMG_isPNG\n * \\sa IMG_isPNM\n * \\sa IMG_isSVG\n * \\sa IMG_isQOI\n * \\sa IMG_isTIF\n * \\sa IMG_isXCF\n * \\sa IMG_isXPM\n * \\sa IMG_isXV\n * \\sa IMG_isWEBP\n */"
+    },
+    "IMG_LoadAnimationTyped_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "IMG_Animation*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "IMG_Animation",
+          "kind": "typeAlias",
+          "sizeOf": 32,
+          "alignOf": 8,
+          "innerType": {
+            "name": "IMG_Animation",
+            "kind": "struct",
+            "sizeOf": 32,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        },
+        {
+          "name": "freesrc",
+          "type": {
+            "name": "SDL_bool",
+            "kind": "typeAlias",
+            "sizeOf": 4,
+            "alignOf": 4,
+            "innerType": {
+              "name": "unsigned int",
+              "kind": "primitive",
+              "sizeOf": 4,
+              "alignOf": 4
+            }
+          }
+        },
+        {
+          "name": "type",
+          "type": {
+            "name": "const char*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "const char",
+              "kind": "primitive",
+              "sizeOf": 1,
+              "alignOf": 1,
+              "isConst": true
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load an animation from an SDL datasource\n *\n * Even though this function accepts a file type, SDL_image may still try\n * other decoders that are capable of detecting file type from the contents of\n * the image data, but may rely on the caller-provided type string for formats\n * that it cannot autodetect. If \u0060type\u0060 is NULL, SDL_image will rely solely on\n * its ability to guess the format.\n *\n * If \u0060freesrc\u0060 is non-zero, the RWops will be closed before returning,\n * whether this function succeeds or not. SDL_image reads everything it needs\n * from the RWops during this call in any case.\n *\n * When done with the returned animation, the app should dispose of it with a\n * call to IMG_FreeAnimation().\n *\n * \\param src an SDL_RWops that data will be read from.\n * \\param freesrc non-zero to close/free the SDL_RWops before returning, zero\n *                to leave it open.\n * \\param type a filename extension that represent this data (\u0022GIF\u0022, etc).\n * \\returns a new IMG_Animation, or NULL on error.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadAnimation\n * \\sa IMG_LoadAnimation_RW\n * \\sa IMG_FreeAnimation\n */"
+    },
+    "IMG_LoadBMP_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load a BMP image directly.\n *\n * If you know you definitely have a BMP image, you can call this function,\n * which will skip SDL_image\u0027s file format detection routines. Generally it\u0027s\n * better to use the abstract interfaces; also, there is only an SDL_RWops\n * interface available here.\n *\n * \\param src an SDL_RWops to load image data from.\n * \\returns SDL surface, or NULL on error\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadAVIF_RW\n * \\sa IMG_LoadICO_RW\n * \\sa IMG_LoadCUR_RW\n * \\sa IMG_LoadGIF_RW\n * \\sa IMG_LoadJPG_RW\n * \\sa IMG_LoadJXL_RW\n * \\sa IMG_LoadLBM_RW\n * \\sa IMG_LoadPCX_RW\n * \\sa IMG_LoadPNG_RW\n * \\sa IMG_LoadPNM_RW\n * \\sa IMG_LoadSVG_RW\n * \\sa IMG_LoadQOI_RW\n * \\sa IMG_LoadTGA_RW\n * \\sa IMG_LoadTIF_RW\n * \\sa IMG_LoadXCF_RW\n * \\sa IMG_LoadXPM_RW\n * \\sa IMG_LoadXV_RW\n * \\sa IMG_LoadWEBP_RW\n */"
+    },
+    "IMG_LoadXCF_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load a XCF image directly.\n *\n * If you know you definitely have a XCF image, you can call this function,\n * which will skip SDL_image\u0027s file format detection routines. Generally it\u0027s\n * better to use the abstract interfaces; also, there is only an SDL_RWops\n * interface available here.\n *\n * \\param src an SDL_RWops to load image data from.\n * \\returns SDL surface, or NULL on error\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadAVIF_RW\n * \\sa IMG_LoadICO_RW\n * \\sa IMG_LoadCUR_RW\n * \\sa IMG_LoadBMP_RW\n * \\sa IMG_LoadGIF_RW\n * \\sa IMG_LoadJPG_RW\n * \\sa IMG_LoadJXL_RW\n * \\sa IMG_LoadLBM_RW\n * \\sa IMG_LoadPCX_RW\n * \\sa IMG_LoadPNG_RW\n * \\sa IMG_LoadPNM_RW\n * \\sa IMG_LoadSVG_RW\n * \\sa IMG_LoadQOI_RW\n * \\sa IMG_LoadTGA_RW\n * \\sa IMG_LoadTIF_RW\n * \\sa IMG_LoadXPM_RW\n * \\sa IMG_LoadXV_RW\n * \\sa IMG_LoadWEBP_RW\n */"
+    },
+    "IMG_LoadCUR_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load a CUR image directly.\n *\n * If you know you definitely have a CUR image, you can call this function,\n * which will skip SDL_image\u0027s file format detection routines. Generally it\u0027s\n * better to use the abstract interfaces; also, there is only an SDL_RWops\n * interface available here.\n *\n * \\param src an SDL_RWops to load image data from.\n * \\returns SDL surface, or NULL on error\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadAVIF_RW\n * \\sa IMG_LoadICO_RW\n * \\sa IMG_LoadBMP_RW\n * \\sa IMG_LoadGIF_RW\n * \\sa IMG_LoadJPG_RW\n * \\sa IMG_LoadJXL_RW\n * \\sa IMG_LoadLBM_RW\n * \\sa IMG_LoadPCX_RW\n * \\sa IMG_LoadPNG_RW\n * \\sa IMG_LoadPNM_RW\n * \\sa IMG_LoadSVG_RW\n * \\sa IMG_LoadQOI_RW\n * \\sa IMG_LoadTGA_RW\n * \\sa IMG_LoadTIF_RW\n * \\sa IMG_LoadXCF_RW\n * \\sa IMG_LoadXPM_RW\n * \\sa IMG_LoadXV_RW\n * \\sa IMG_LoadWEBP_RW\n */"
+    },
+    "IMG_LoadSizedSVG_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        },
+        {
+          "name": "width",
+          "type": {
+            "name": "int",
+            "kind": "primitive",
+            "sizeOf": 4,
+            "alignOf": 4
+          }
+        },
+        {
+          "name": "height",
+          "type": {
+            "name": "int",
+            "kind": "primitive",
+            "sizeOf": 4,
+            "alignOf": 4
+          }
+        }
+      ],
+      "comment": "/**\n * Load an SVG image, scaled to a specific size.\n *\n * Since SVG files are resolution-independent, you specify the size you would\n * like the output image to be and it will be generated at those dimensions.\n *\n * Either width or height may be 0 and the image will be auto-sized to\n * preserve aspect ratio.\n *\n * When done with the returned surface, the app should dispose of it with a\n * call to SDL_DestroySurface().\n *\n * \\param src an SDL_RWops to load SVG data from.\n * \\param width desired width of the generated surface, in pixels.\n * \\param height desired height of the generated surface, in pixels.\n * \\returns a new SDL surface, or NULL on error.\n *\n * \\since This function is available since SDL_image 3.0.0.\n */"
+    },
+    "IMG_isGIF": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4,
+        "alignOf": 4
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Detect GIF image data on a readable/seekable SDL_RWops.\n *\n * This function attempts to determine if a file is a given filetype, reading\n * the least amount possible from the SDL_RWops (usually a few bytes).\n *\n * There is no distinction made between \u0022not the filetype in question\u0022 and\n * basic i/o errors.\n *\n * This function will always attempt to seek the RWops back to where it\n * started when this function was called, but it will not report any errors in\n * doing so, but assuming seeking works, this means you can immediately use\n * this with a different IMG_isTYPE function, or load the image without\n * further seeking.\n *\n * You do not need to call this function to load data; SDL_image can work to\n * determine file type in many cases in its standard load functions.\n *\n * \\param src a seekable/readable SDL_RWops to provide image data.\n * \\returns non-zero if this is GIF data, zero otherwise.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_isAVIF\n * \\sa IMG_isICO\n * \\sa IMG_isCUR\n * \\sa IMG_isBMP\n * \\sa IMG_isJPG\n * \\sa IMG_isJXL\n * \\sa IMG_isLBM\n * \\sa IMG_isPCX\n * \\sa IMG_isPNG\n * \\sa IMG_isPNM\n * \\sa IMG_isSVG\n * \\sa IMG_isQOI\n * \\sa IMG_isTIF\n * \\sa IMG_isXCF\n * \\sa IMG_isXPM\n * \\sa IMG_isXV\n * \\sa IMG_isWEBP\n */"
+    },
+    "IMG_Init": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4,
+        "alignOf": 4
+      },
+      "parameters": [
+        {
+          "name": "flags",
+          "type": {
+            "name": "int",
+            "kind": "primitive",
+            "sizeOf": 4,
+            "alignOf": 4
+          }
+        }
+      ],
+      "comment": "/**\n * Initialize SDL_image.\n *\n * This function loads dynamic libraries that SDL_image needs, and prepares\n * them for use. This must be the first function you call in SDL_image, and if\n * it fails you should not continue with the library.\n *\n * Flags should be one or more flags from IMG_InitFlags OR\u0027d together. It\n * returns the flags successfully initialized, or 0 on failure.\n *\n * Currently, these flags are:\n *\n * - \u0060IMG_INIT_JPG\u0060\n * - \u0060IMG_INIT_PNG\u0060\n * - \u0060IMG_INIT_TIF\u0060\n * - \u0060IMG_INIT_WEBP\u0060\n * - \u0060IMG_INIT_JXL\u0060\n * - \u0060IMG_INIT_AVIF\u0060\n *\n * More flags may be added in a future SDL_image release.\n *\n * This function may need to load external shared libraries to support various\n * codecs, which means this function can fail to initialize that support on an\n * otherwise-reasonable system if the library isn\u0027t available; this is not\n * just a question of exceptional circumstances like running out of memory at\n * startup!\n *\n * Note that you may call this function more than once to initialize with\n * additional flags. The return value will reflect both new flags that\n * successfully initialized, and also include flags that had previously been\n * initialized as well.\n *\n * As this will return previously-initialized flags, it\u0027s legal to call this\n * with zero (no flags set). This is a safe no-op that can be used to query\n * the current initialization state without changing it at all.\n *\n * Since this returns previously-initialized flags as well as new ones, and\n * you can call this with zero, you should not check for a zero return value\n * to determine an error condition. Instead, you should check to make sure all\n * the flags you require are set in the return value. If you have a game with\n * data in a specific format, this might be a fatal error. If you\u0027re a generic\n * image displaying app, perhaps you are fine with only having JPG and PNG\n * support and can live without WEBP, even if you request support for\n * everything.\n *\n * Unlike other SDL satellite libraries, calls to IMG_Init do not stack; a\n * single call to IMG_Quit() will deinitialize everything and does not have to\n * be paired with a matching IMG_Init call. For that reason, it\u0027s considered\n * best practices to have a single IMG_Init and IMG_Quit call in your program.\n * While this isn\u0027t required, be aware of the risks of deviating from that\n * behavior.\n *\n * After initializing SDL_image, the app may begin to load images into\n * SDL_Surfaces or SDL_Textures.\n *\n * \\param flags initialization flags, OR\u0027d together.\n * \\returns all currently initialized flags.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_Quit\n */"
+    },
+    "IMG_ReadXPMFromArrayToRGB888": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "xpm",
+          "type": {
+            "name": "char**",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "char*",
+              "kind": "pointer",
+              "sizeOf": 8,
+              "alignOf": 8,
+              "innerType": {
+                "name": "char",
+                "kind": "primitive",
+                "sizeOf": 1,
+                "alignOf": 1
+              }
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load an XPM image from a memory array.\n *\n * The returned surface will always be a 32-bit RGB surface. If you want 8-bit\n * indexed colors (and the XPM data allows it), use IMG_ReadXPMFromArray()\n * instead.\n *\n * When done with the returned surface, the app should dispose of it with a\n * call to SDL_DestroySurface().\n *\n * \\param xpm a null-terminated array of strings that comprise XPM data.\n * \\returns a new SDL surface, or NULL on error.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_ReadXPMFromArray\n */"
+    },
+    "IMG_LoadGIF_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load a GIF image directly.\n *\n * If you know you definitely have a GIF image, you can call this function,\n * which will skip SDL_image\u0027s file format detection routines. Generally it\u0027s\n * better to use the abstract interfaces; also, there is only an SDL_RWops\n * interface available here.\n *\n * \\param src an SDL_RWops to load image data from.\n * \\returns SDL surface, or NULL on error\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadAVIF_RW\n * \\sa IMG_LoadICO_RW\n * \\sa IMG_LoadCUR_RW\n * \\sa IMG_LoadBMP_RW\n * \\sa IMG_LoadJPG_RW\n * \\sa IMG_LoadJXL_RW\n * \\sa IMG_LoadLBM_RW\n * \\sa IMG_LoadPCX_RW\n * \\sa IMG_LoadPNG_RW\n * \\sa IMG_LoadPNM_RW\n * \\sa IMG_LoadSVG_RW\n * \\sa IMG_LoadQOI_RW\n * \\sa IMG_LoadTGA_RW\n * \\sa IMG_LoadTIF_RW\n * \\sa IMG_LoadXCF_RW\n * \\sa IMG_LoadXPM_RW\n * \\sa IMG_LoadXV_RW\n * \\sa IMG_LoadWEBP_RW\n */"
+    },
+    "IMG_isICO": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4,
+        "alignOf": 4
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Detect ICO image data on a readable/seekable SDL_RWops.\n *\n * This function attempts to determine if a file is a given filetype, reading\n * the least amount possible from the SDL_RWops (usually a few bytes).\n *\n * There is no distinction made between \u0022not the filetype in question\u0022 and\n * basic i/o errors.\n *\n * This function will always attempt to seek the RWops back to where it\n * started when this function was called, but it will not report any errors in\n * doing so, but assuming seeking works, this means you can immediately use\n * this with a different IMG_isTYPE function, or load the image without\n * further seeking.\n *\n * You do not need to call this function to load data; SDL_image can work to\n * determine file type in many cases in its standard load functions.\n *\n * \\param src a seekable/readable SDL_RWops to provide image data.\n * \\returns non-zero if this is ICO data, zero otherwise.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_isAVIF\n * \\sa IMG_isCUR\n * \\sa IMG_isBMP\n * \\sa IMG_isGIF\n * \\sa IMG_isJPG\n * \\sa IMG_isJXL\n * \\sa IMG_isLBM\n * \\sa IMG_isPCX\n * \\sa IMG_isPNG\n * \\sa IMG_isPNM\n * \\sa IMG_isSVG\n * \\sa IMG_isQOI\n * \\sa IMG_isTIF\n * \\sa IMG_isXCF\n * \\sa IMG_isXPM\n * \\sa IMG_isXV\n * \\sa IMG_isWEBP\n */"
+    },
+    "IMG_isXV": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4,
+        "alignOf": 4
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Detect XV image data on a readable/seekable SDL_RWops.\n *\n * This function attempts to determine if a file is a given filetype, reading\n * the least amount possible from the SDL_RWops (usually a few bytes).\n *\n * There is no distinction made between \u0022not the filetype in question\u0022 and\n * basic i/o errors.\n *\n * This function will always attempt to seek the RWops back to where it\n * started when this function was called, but it will not report any errors in\n * doing so, but assuming seeking works, this means you can immediately use\n * this with a different IMG_isTYPE function, or load the image without\n * further seeking.\n *\n * You do not need to call this function to load data; SDL_image can work to\n * determine file type in many cases in its standard load functions.\n *\n * \\param src a seekable/readable SDL_RWops to provide image data.\n * \\returns non-zero if this is XV data, zero otherwise.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_isAVIF\n * \\sa IMG_isICO\n * \\sa IMG_isCUR\n * \\sa IMG_isBMP\n * \\sa IMG_isGIF\n * \\sa IMG_isJPG\n * \\sa IMG_isJXL\n * \\sa IMG_isLBM\n * \\sa IMG_isPCX\n * \\sa IMG_isPNG\n * \\sa IMG_isPNM\n * \\sa IMG_isSVG\n * \\sa IMG_isQOI\n * \\sa IMG_isTIF\n * \\sa IMG_isXCF\n * \\sa IMG_isXPM\n * \\sa IMG_isWEBP\n */"
+    },
+    "IMG_LoadICO_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load a ICO image directly.\n *\n * If you know you definitely have a ICO image, you can call this function,\n * which will skip SDL_image\u0027s file format detection routines. Generally it\u0027s\n * better to use the abstract interfaces; also, there is only an SDL_RWops\n * interface available here.\n *\n * \\param src an SDL_RWops to load image data from.\n * \\returns SDL surface, or NULL on error\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadAVIF_RW\n * \\sa IMG_LoadCUR_RW\n * \\sa IMG_LoadBMP_RW\n * \\sa IMG_LoadGIF_RW\n * \\sa IMG_LoadJPG_RW\n * \\sa IMG_LoadJXL_RW\n * \\sa IMG_LoadLBM_RW\n * \\sa IMG_LoadPCX_RW\n * \\sa IMG_LoadPNG_RW\n * \\sa IMG_LoadPNM_RW\n * \\sa IMG_LoadSVG_RW\n * \\sa IMG_LoadQOI_RW\n * \\sa IMG_LoadTGA_RW\n * \\sa IMG_LoadTIF_RW\n * \\sa IMG_LoadXCF_RW\n * \\sa IMG_LoadXPM_RW\n * \\sa IMG_LoadXV_RW\n * \\sa IMG_LoadWEBP_RW\n */"
+    },
+    "IMG_isWEBP": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4,
+        "alignOf": 4
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Detect WEBP image data on a readable/seekable SDL_RWops.\n *\n * This function attempts to determine if a file is a given filetype, reading\n * the least amount possible from the SDL_RWops (usually a few bytes).\n *\n * There is no distinction made between \u0022not the filetype in question\u0022 and\n * basic i/o errors.\n *\n * This function will always attempt to seek the RWops back to where it\n * started when this function was called, but it will not report any errors in\n * doing so, but assuming seeking works, this means you can immediately use\n * this with a different IMG_isTYPE function, or load the image without\n * further seeking.\n *\n * You do not need to call this function to load data; SDL_image can work to\n * determine file type in many cases in its standard load functions.\n *\n * \\param src a seekable/readable SDL_RWops to provide image data.\n * \\returns non-zero if this is WEBP data, zero otherwise.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_isAVIF\n * \\sa IMG_isICO\n * \\sa IMG_isCUR\n * \\sa IMG_isBMP\n * \\sa IMG_isGIF\n * \\sa IMG_isJPG\n * \\sa IMG_isJXL\n * \\sa IMG_isLBM\n * \\sa IMG_isPCX\n * \\sa IMG_isPNG\n * \\sa IMG_isPNM\n * \\sa IMG_isSVG\n * \\sa IMG_isQOI\n * \\sa IMG_isTIF\n * \\sa IMG_isXCF\n * \\sa IMG_isXPM\n * \\sa IMG_isXV\n */"
+    },
+    "IMG_SaveJPG_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4,
+        "alignOf": 4
+      },
+      "parameters": [
+        {
+          "name": "surface",
+          "type": {
+            "name": "SDL_Surface*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_Surface",
+              "kind": "typeAlias",
+              "sizeOf": 88,
+              "alignOf": 8,
+              "innerType": {
+                "name": "SDL_Surface",
+                "kind": "struct",
+                "sizeOf": 88,
+                "alignOf": 8
+              }
+            }
+          }
+        },
+        {
+          "name": "dst",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        },
+        {
+          "name": "freedst",
+          "type": {
+            "name": "int",
+            "kind": "primitive",
+            "sizeOf": 4,
+            "alignOf": 4
+          }
+        },
+        {
+          "name": "quality",
+          "type": {
+            "name": "int",
+            "kind": "primitive",
+            "sizeOf": 4,
+            "alignOf": 4
+          }
+        }
+      ],
+      "comment": "/**\n * Save an SDL_Surface into JPEG image data, via an SDL_RWops.\n *\n * If you just want to save to a filename, you can use IMG_SaveJPG() instead.\n *\n * \\param surface the SDL surface to save\n * \\param dst the SDL_RWops to save the image data to.\n * \\returns 0 if successful, -1 on error.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_SaveJPG\n * \\sa IMG_SavePNG\n * \\sa IMG_SavePNG_RW\n */"
+    },
+    "IMG_SaveJPG": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4,
+        "alignOf": 4
+      },
+      "parameters": [
+        {
+          "name": "surface",
+          "type": {
+            "name": "SDL_Surface*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_Surface",
+              "kind": "typeAlias",
+              "sizeOf": 88,
+              "alignOf": 8,
+              "innerType": {
+                "name": "SDL_Surface",
+                "kind": "struct",
+                "sizeOf": 88,
+                "alignOf": 8
+              }
+            }
+          }
+        },
+        {
+          "name": "file",
+          "type": {
+            "name": "const char*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "const char",
+              "kind": "primitive",
+              "sizeOf": 1,
+              "alignOf": 1,
+              "isConst": true
+            }
+          }
+        },
+        {
+          "name": "quality",
+          "type": {
+            "name": "int",
+            "kind": "primitive",
+            "sizeOf": 4,
+            "alignOf": 4
+          }
+        }
+      ],
+      "comment": "/**\n * Save an SDL_Surface into a JPEG image file.\n *\n * If the file already exists, it will be overwritten.\n *\n * \\param surface the SDL surface to save\n * \\param file path on the filesystem to write new file to.\n * \\param quality [0; 33] is Lowest quality, [34; 66] is Middle quality, [67;\n *                100] is Highest quality\n * \\returns 0 if successful, -1 on error\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_SaveJPG_RW\n * \\sa IMG_SavePNG\n * \\sa IMG_SavePNG_RW\n */"
+    },
+    "IMG_LoadTyped_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        },
+        {
+          "name": "freesrc",
+          "type": {
+            "name": "SDL_bool",
+            "kind": "typeAlias",
+            "sizeOf": 4,
+            "alignOf": 4,
+            "innerType": {
+              "name": "unsigned int",
+              "kind": "primitive",
+              "sizeOf": 4,
+              "alignOf": 4
+            }
+          }
+        },
+        {
+          "name": "type",
+          "type": {
+            "name": "const char*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "const char",
+              "kind": "primitive",
+              "sizeOf": 1,
+              "alignOf": 1,
+              "isConst": true
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load an image from an SDL data source into a software surface.\n *\n * An SDL_Surface is a buffer of pixels in memory accessible by the CPU. Use\n * this if you plan to hand the data to something else or manipulate it\n * further in code.\n *\n * There are no guarantees about what format the new SDL_Surface data will be;\n * in many cases, SDL_image will attempt to supply a surface that exactly\n * matches the provided image, but in others it might have to convert (either\n * because the image is in a format that SDL doesn\u0027t directly support or\n * because it\u0027s compressed data that could reasonably uncompress to various\n * formats and SDL_image had to pick one). You can inspect an SDL_Surface for\n * its specifics, and use SDL_ConvertSurface to then migrate to any supported\n * format.\n *\n * If the image format supports a transparent pixel, SDL will set the colorkey\n * for the surface. You can enable RLE acceleration on the surface afterwards\n * by calling: SDL_SetSurfaceColorKey(image, SDL_RLEACCEL,\n * image-\u003Eformat-\u003Ecolorkey);\n *\n * If \u0060freesrc\u0060 is non-zero, the RWops will be closed before returning,\n * whether this function succeeds or not. SDL_image reads everything it needs\n * from the RWops during this call in any case.\n *\n * Even though this function accepts a file type, SDL_image may still try\n * other decoders that are capable of detecting file type from the contents of\n * the image data, but may rely on the caller-provided type string for formats\n * that it cannot autodetect. If \u0060type\u0060 is NULL, SDL_image will rely solely on\n * its ability to guess the format.\n *\n * There is a separate function to read files from disk without having to deal\n * with SDL_RWops: \u0060IMG_Load(\u0022filename.jpg\u0022)\u0060 will call this function and\n * manage those details for you, determining the file type from the filename\u0027s\n * extension.\n *\n * There is also IMG_Load_RW(), which is equivalent to this function except\n * that it will rely on SDL_image to determine what type of data it is\n * loading, much like passing a NULL for type.\n *\n * If you are using SDL\u0027s 2D rendering API, there is an equivalent call to\n * load images directly into an SDL_Texture for use by the GPU without using a\n * software surface: call IMG_LoadTextureTyped_RW() instead.\n *\n * When done with the returned surface, the app should dispose of it with a\n * call to SDL_DestroySurface().\n *\n * \\param src an SDL_RWops that data will be read from.\n * \\param freesrc non-zero to close/free the SDL_RWops before returning, zero\n *                to leave it open.\n * \\param type a filename extension that represent this data (\u0022BMP\u0022, \u0022GIF\u0022,\n *             \u0022PNG\u0022, etc).\n * \\returns a new SDL surface, or NULL on error.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_Load\n * \\sa IMG_Load_RW\n * \\sa SDL_DestroySurface\n */"
+    },
+    "IMG_LoadGIFAnimation_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "IMG_Animation*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "IMG_Animation",
+          "kind": "typeAlias",
+          "sizeOf": 32,
+          "alignOf": 8,
+          "innerType": {
+            "name": "IMG_Animation",
+            "kind": "struct",
+            "sizeOf": 32,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load a GIF animation directly.\n *\n * If you know you definitely have a GIF image, you can call this function,\n * which will skip SDL_image\u0027s file format detection routines. Generally it\u0027s\n * better to use the abstract interfaces; also, there is only an SDL_RWops\n * interface available here.\n *\n * \\param src an SDL_RWops that data will be read from.\n * \\returns a new IMG_Animation, or NULL on error.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadAnimation\n * \\sa IMG_LoadAnimation_RW\n * \\sa IMG_LoadAnimationTyped_RW\n * \\sa IMG_FreeAnimation\n */"
+    },
+    "IMG_FreeAnimation": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "void",
+        "kind": "primitive"
+      },
+      "parameters": [
+        {
+          "name": "anim",
+          "type": {
+            "name": "IMG_Animation*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "IMG_Animation",
+              "kind": "typeAlias",
+              "sizeOf": 32,
+              "alignOf": 8,
+              "innerType": {
+                "name": "IMG_Animation",
+                "kind": "struct",
+                "sizeOf": 32,
+                "alignOf": 8
+              }
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Dispose of an IMG_Animation and free its resources.\n *\n * The provided \u0060anim\u0060 pointer is not valid once this call returns.\n *\n * \\param anim IMG_Animation to dispose of.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadAnimation\n * \\sa IMG_LoadAnimation_RW\n * \\sa IMG_LoadAnimationTyped_RW\n */"
+    },
+    "IMG_isJPG": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "int",
+        "kind": "primitive",
+        "sizeOf": 4,
+        "alignOf": 4
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Detect JPG image data on a readable/seekable SDL_RWops.\n *\n * This function attempts to determine if a file is a given filetype, reading\n * the least amount possible from the SDL_RWops (usually a few bytes).\n *\n * There is no distinction made between \u0022not the filetype in question\u0022 and\n * basic i/o errors.\n *\n * This function will always attempt to seek the RWops back to where it\n * started when this function was called, but it will not report any errors in\n * doing so, but assuming seeking works, this means you can immediately use\n * this with a different IMG_isTYPE function, or load the image without\n * further seeking.\n *\n * You do not need to call this function to load data; SDL_image can work to\n * determine file type in many cases in its standard load functions.\n *\n * \\param src a seekable/readable SDL_RWops to provide image data.\n * \\returns non-zero if this is JPG data, zero otherwise.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_isAVIF\n * \\sa IMG_isICO\n * \\sa IMG_isCUR\n * \\sa IMG_isBMP\n * \\sa IMG_isGIF\n * \\sa IMG_isJXL\n * \\sa IMG_isLBM\n * \\sa IMG_isPCX\n * \\sa IMG_isPNG\n * \\sa IMG_isPNM\n * \\sa IMG_isSVG\n * \\sa IMG_isQOI\n * \\sa IMG_isTIF\n * \\sa IMG_isXCF\n * \\sa IMG_isXPM\n * \\sa IMG_isXV\n * \\sa IMG_isWEBP\n */"
+    },
+    "IMG_LoadSVG_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load a SVG image directly.\n *\n * If you know you definitely have a SVG image, you can call this function,\n * which will skip SDL_image\u0027s file format detection routines. Generally it\u0027s\n * better to use the abstract interfaces; also, there is only an SDL_RWops\n * interface available here.\n *\n * \\param src an SDL_RWops to load image data from.\n * \\returns SDL surface, or NULL on error\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadAVIF_RW\n * \\sa IMG_LoadICO_RW\n * \\sa IMG_LoadCUR_RW\n * \\sa IMG_LoadBMP_RW\n * \\sa IMG_LoadGIF_RW\n * \\sa IMG_LoadJPG_RW\n * \\sa IMG_LoadJXL_RW\n * \\sa IMG_LoadLBM_RW\n * \\sa IMG_LoadPCX_RW\n * \\sa IMG_LoadPNG_RW\n * \\sa IMG_LoadPNM_RW\n * \\sa IMG_LoadQOI_RW\n * \\sa IMG_LoadTGA_RW\n * \\sa IMG_LoadTIF_RW\n * \\sa IMG_LoadXCF_RW\n * \\sa IMG_LoadXPM_RW\n * \\sa IMG_LoadXV_RW\n * \\sa IMG_LoadWEBP_RW\n */"
+    },
+    "IMG_Quit": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "void",
+        "kind": "primitive"
+      },
+      "parameters": [],
+      "comment": "/**\n * Deinitialize SDL_image.\n *\n * This should be the last function you call in SDL_image, after freeing all\n * other resources. This will unload any shared libraries it is using for\n * various codecs.\n *\n * After this call, a call to IMG_Init(0) will return 0 (no codecs loaded).\n *\n * You can safely call IMG_Init() to reload various codec support after this\n * call.\n *\n * Unlike other SDL satellite libraries, calls to IMG_Init do not stack; a\n * single call to IMG_Quit() will deinitialize everything and does not have to\n * be paired with a matching IMG_Init call. For that reason, it\u0027s considered\n * best practices to have a single IMG_Init and IMG_Quit call in your program.\n * While this isn\u0027t required, be aware of the risks of deviating from that\n * behavior.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_Init\n */"
+    },
+    "IMG_LoadWEBPAnimation_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "IMG_Animation*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "IMG_Animation",
+          "kind": "typeAlias",
+          "sizeOf": 32,
+          "alignOf": 8,
+          "innerType": {
+            "name": "IMG_Animation",
+            "kind": "struct",
+            "sizeOf": 32,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load a WEBP animation directly.\n *\n * If you know you definitely have a WEBP image, you can call this function,\n * which will skip SDL_image\u0027s file format detection routines. Generally it\u0027s\n * better to use the abstract interfaces; also, there is only an SDL_RWops\n * interface available here.\n *\n * \\param src an SDL_RWops that data will be read from.\n * \\returns a new IMG_Animation, or NULL on error.\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadAnimation\n * \\sa IMG_LoadAnimation_RW\n * \\sa IMG_LoadAnimationTyped_RW\n * \\sa IMG_FreeAnimation\n */"
+    },
+    "IMG_LoadQOI_RW": {
+      "callingConvention": "cdecl",
+      "returnType": {
+        "name": "SDL_Surface*",
+        "kind": "pointer",
+        "sizeOf": 8,
+        "alignOf": 8,
+        "innerType": {
+          "name": "SDL_Surface",
+          "kind": "typeAlias",
+          "sizeOf": 88,
+          "alignOf": 8,
+          "innerType": {
+            "name": "SDL_Surface",
+            "kind": "struct",
+            "sizeOf": 88,
+            "alignOf": 8
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "src",
+          "type": {
+            "name": "SDL_RWops*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_RWops",
+              "kind": "opaqueType"
+            }
+          }
+        }
+      ],
+      "comment": "/**\n * Load a QOI image directly.\n *\n * If you know you definitely have a QOI image, you can call this function,\n * which will skip SDL_image\u0027s file format detection routines. Generally it\u0027s\n * better to use the abstract interfaces; also, there is only an SDL_RWops\n * interface available here.\n *\n * \\param src an SDL_RWops to load image data from.\n * \\returns SDL surface, or NULL on error\n *\n * \\since This function is available since SDL_image 3.0.0.\n *\n * \\sa IMG_LoadAVIF_RW\n * \\sa IMG_LoadICO_RW\n * \\sa IMG_LoadCUR_RW\n * \\sa IMG_LoadBMP_RW\n * \\sa IMG_LoadGIF_RW\n * \\sa IMG_LoadJPG_RW\n * \\sa IMG_LoadJXL_RW\n * \\sa IMG_LoadLBM_RW\n * \\sa IMG_LoadPCX_RW\n * \\sa IMG_LoadPNG_RW\n * \\sa IMG_LoadPNM_RW\n * \\sa IMG_LoadSVG_RW\n * \\sa IMG_LoadTGA_RW\n * \\sa IMG_LoadTIF_RW\n * \\sa IMG_LoadXCF_RW\n * \\sa IMG_LoadXPM_RW\n * \\sa IMG_LoadXV_RW\n * \\sa IMG_LoadWEBP_RW\n */"
+    }
+  },
+  "records": {
+    "IMG_Animation": {
+      "size_of": 32,
+      "align_of": 8,
+      "fields": [
+        {
+          "name": "w",
+          "type": {
+            "name": "int",
+            "kind": "primitive",
+            "sizeOf": 4,
+            "alignOf": 4
+          }
+        },
+        {
+          "name": "h",
+          "type": {
+            "name": "int",
+            "kind": "primitive",
+            "sizeOf": 4,
+            "alignOf": 4
+          },
+          "offset_of": 4
+        },
+        {
+          "name": "count",
+          "type": {
+            "name": "int",
+            "kind": "primitive",
+            "sizeOf": 4,
+            "alignOf": 4
+          },
+          "offset_of": 8
+        },
+        {
+          "name": "frames",
+          "type": {
+            "name": "SDL_Surface**",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "SDL_Surface*",
+              "kind": "pointer",
+              "sizeOf": 8,
+              "alignOf": 8,
+              "innerType": {
+                "name": "SDL_Surface",
+                "kind": "typeAlias",
+                "sizeOf": 88,
+                "alignOf": 8,
+                "innerType": {
+                  "name": "SDL_Surface",
+                  "kind": "struct",
+                  "sizeOf": 88,
+                  "alignOf": 8
+                }
+              }
+            }
+          },
+          "offset_of": 16
+        },
+        {
+          "name": "delays",
+          "type": {
+            "name": "int*",
+            "kind": "pointer",
+            "sizeOf": 8,
+            "alignOf": 8,
+            "innerType": {
+              "name": "int",
+              "kind": "primitive",
+              "sizeOf": 4,
+              "alignOf": 4
+            }
+          },
+          "offset_of": 24
+        }
+      ],
+      "comment": "/**\n * Animated image support\n * Currently only animated GIFs are supported.\n */"
+    }
+  },
+  "enums": {
+    "IMG_InitFlags": {
+      "typeInteger": {
+        "name": "unsigned int",
+        "kind": "primitive",
+        "sizeOf": 4,
+        "alignOf": 4
+      },
+      "values": [
+        {
+          "name": "IMG_INIT_JPG",
+          "value": 1
+        },
+        {
+          "name": "IMG_INIT_PNG",
+          "value": 2
+        },
+        {
+          "name": "IMG_INIT_TIF",
+          "value": 4
+        },
+        {
+          "name": "IMG_INIT_WEBP",
+          "value": 8
+        },
+        {
+          "name": "IMG_INIT_JXL",
+          "value": 16
+        },
+        {
+          "name": "IMG_INIT_AVIF",
+          "value": 32
+        }
+      ],
+      "comment": "/**\n * Initialization flags\n */"
+    }
+  },
+  "typeAliases": {},
+  "opaqueTypes": {},
+  "functionPointers": {},
+  "enumConstants": {}
+}

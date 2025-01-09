@@ -6,25 +6,43 @@
     <Using Include="bottlenoselabs.C2CS" />
   </ItemGroup>
 
-  <!-- Use artifacts path for bin/obj output folders -->
+  <!-- Use and change artifacts folder -->
   <PropertyGroup>
     <UseArtifactsOutput>true</UseArtifactsOutput>
+    <ArtifactsPath>
+      $([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildProjectDirectory),.gitignore))/artifacts</ArtifactsPath>
+  </PropertyGroup>
+
+  <!-- Show generated files -->
+  <PropertyGroup>
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>
   </PropertyGroup>
 
   <!-- NuGet package references -->
   <ItemGroup>
-    <PackageReference Include="bottlenoselabs.Common.Tools" Version="*">
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
+    <ItemGroup>
+      <PackageReference Include="bottlenoselabs.MSBuild.Extensions" Version="*">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
     <PackageReference Include="StyleCop.Analyzers.Unstable" Version="*">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
 
+  <!-- bottlenoselabs.MSBuild.Extensions settings -->
+  <PropertyGroup>
+    <IsEnabledAnalyzers>true</IsEnabledAnalyzers>
+    <IsEnabledAnalyzersStyleCop>true</IsEnabledAnalyzersStyleCop>
+  </PropertyGroup>
+
   <!-- Dynamic link libraries -->
   <PropertyGroup>
-    <LibraryDirectoryPath>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory),.gitignore))/lib</LibraryDirectoryPath>
+    <LibraryDirectoryPath>
+      $([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory),.gitignore))/lib</LibraryDirectoryPath>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="$(LibraryDirectoryPath)/*.dll">

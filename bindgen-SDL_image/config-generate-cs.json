@@ -1,0 +1,20 @@
+{
+  "inputFilePath": "./x-ast/ast-cross-platform.json",
+  "outputFileDirectory": "./../src/cs/production/SDL_image/Generated",
+  "namespaceName": "bottlenoselabs",
+  "className": "SDL_image",
+  "libraryName": "SDL_image",
+  "mappedNames": [
+    { "source": "SDL_bool", "target": "CBool" },
+    { "source": "Uint8", "target": "byte" },
+    { "source": "Uint16", "target": "ushort" },
+    { "source": "Uint32", "target": "uint" },
+    { "source": "Uint64", "target": "ulong" },
+    { "source": "Sint8", "target": "sbyte" },
+    { "source": "Sint16", "target": "short" },
+    { "source": "Sint32", "target": "int" },
+    { "source": "Sint64", "target": "long" }
+  ],
+  "isEnabledGeneratingRuntimeCode": false,
+  "headerCodeRegionFilePath": "./header.cs"
+}
