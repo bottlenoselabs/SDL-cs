@@ -1,23 +1,22 @@
-#
-# Configure line ending normalisation for this repository.
-# See http://schacon.github.io/git/gitattributes.html for more information.
-#
-# Also each developer should configure the old style normalisation on her workstation
-# (see http://timclem.wordpress.com/2012/03/01/mind-the-end-of-your-line/):
-#
-# Windows user should use: git config --global core.autocrlf = true
-# Unix/Linux users should use: git config --global core.autocrlf = input
-#
+# See https://git-scm.com/docs/gitattributes for more information.
 
-# Auto detect text files and perform LF normalization
-*           text=auto
+# All files
+* text=auto
 
-*.md        text
-*.cs        text diff=cs
-*.sln       text merge=union
-*.csproj    text merge=union
-*.xml       text diff=xml
+# Markdown files
+*.md text
+
+# .NET files: C#
+*.cs text diff=csharp
+# .NET files: XML
+*.csproj text
+*.props text
+*.targets text
+
+# Image files
+*.bmp binary
+
 # Shell scripts require LF
-*.sh        text eol=lf
+*.sh text eol=lf
 # Batch scripts require CRLF
-*.bat       text eol=crlf
+*.bat text eol=crlf
