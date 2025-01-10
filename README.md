@@ -6,10 +6,11 @@ Used primarily for internal use at `bottlenoselabs` with the following goals:
 
 - Use the latest released .NET version: currently `.NET 9`.
 - All C functions and types intended for export found in SDL3 are automatically generated using [`c2cs`](https://github.com/bottlenoselabs/c2cs). This happens via GitHub Action workflows in this repository starting from [Dependabot](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/about-dependabot-version-updates#) to create the pull request. Minimal to zero human interaction is the goal for *writing* native interopability C# code.
-- Follows [best practices](https://learn.microsoft.com/en-us/dotnet/standard/native-interop/best-practices) for P/Invoke including using only blittable types and C# function pointers for callbacks. C# types are 1-1 to C types. This includes naming conventions. However, in some cases, C# types (e.g. `CBool`, `CString`, `Span<T>`) may be perferred over raw C type equivalents in C#.
-- Runtime marshaling is [disabled](https://learn.microsoft.com/en-us/dotnet/standard/native-interop/disabled-marshalling). C# functions are 1-1 to C functions using [P/Invoke source generation](https://learn.microsoft.com/en-us/dotnet/standard/native-interop/pinvoke-source-generation). There are no overloads.
+- Follows [best practices](https://learn.microsoft.com/en-us/dotnet/standard/native-interop/best-practices) for P/Invoke including using only blittable types and C# function pointers for callbacks. C# types are 1-1 to C types. This includes naming conventions. This includes enabling and using `unsafe` code in C#. However, in some cases, C# types (e.g. `CBool`, `CString`, `Span<T>`) may be perferred over raw C type equivalents in C# for performance or idiomatic reasons.
+- Runtime marshalling is [disabled](https://learn.microsoft.com/en-us/dotnet/standard/native-interop/disabled-marshalling). C# functions are 1-1 to C functions using [P/Invoke source generation](https://learn.microsoft.com/en-us/dotnet/standard/native-interop/pinvoke-source-generation). There are no overloads.
 
 These goals might not align to your goals or your organization's goals to which I recommend looking at other similiar bindings for `SDL3` in C#:
+
 - https://github.com/dotnet/Silk.NET
 - https://github.com/flibitijibibo/SDL3-CS
 - https://github.com/ppy/SDL3-CS
