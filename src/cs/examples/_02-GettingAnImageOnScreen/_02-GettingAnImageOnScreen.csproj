@@ -6,7 +6,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <ImplicitUsings>true</ImplicitUsings>
     <RootNamespace>SDL.Examples</RootNamespace>
-    <AssemblyName>01-GettingAnImageOnScreen</AssemblyName>
+    <AssemblyName>02-GettingAnImageOnScreen</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
