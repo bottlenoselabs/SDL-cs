@@ -6,24 +6,23 @@ using System.Runtime.CompilerServices;
 using Interop.Runtime;
 using static Interop.SDL;
 
-#pragma warning disable IDE0008
-#pragma warning disable IDE0160
-#pragma warning disable IDE0210
 [assembly: DisableRuntimeMarshalling]
 
-namespace SDL.Samples;
+namespace SDL.Examples;
 
 internal static unsafe class Program
 {
+    // https://lazyfoo.net/tutorials/SDL/01_hello_SDL/index2.php
+
     private static int Main()
     {
         if (!SDL_Init(SDL_INIT_VIDEO))
         {
-            Console.Error.WriteLine("Failed to initialize SDL. Message: " + SDL_GetError());
+            Console.Error.WriteLine("Failed to initialize SDL. SDL_Error: " + SDL_GetError());
             Environment.Exit(1);
         }
 
-        var windowNameC = (CString)"SDL Sample: Hello world!"u8;
+        var windowNameC = (CString)"SDL Tutorial: Hello world!"u8;
         var window = SDL_CreateWindow(
             windowNameC,
             800,
@@ -31,15 +30,13 @@ internal static unsafe class Program
             0);
         if (window == null)
         {
-            Console.Error.WriteLine("Failed to create window. Message: " + SDL_GetError());
+            Console.Error.WriteLine("Failed to create window. SDL_Error: " + SDL_GetError());
             Environment.Exit(1);
         }
 
         var screenSurface = SDL_GetWindowSurface(window);
         var (r, g, b) = (100, 149, 237);
-        var pixelFormat = SDL_GetWindowPixelFormat(window);
-        var details = SDL_GetPixelFormatDetails(pixelFormat);
-        var color = SDL_MapRGB(details, null, (byte)r, (byte)g, (byte)b);
+        var color = SDL_MapSurfaceRGB(screenSurface, (byte)r, (byte)g, (byte)b);
         _ = SDL_FillSurfaceRect(screenSurface, default, color);
         _ = SDL_UpdateWindowSurface(window);
 
