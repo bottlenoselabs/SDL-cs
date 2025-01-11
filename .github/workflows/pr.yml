@@ -10,18 +10,35 @@ on:
 
 jobs:
 
-  dependabot-job:
-    name: "Dependabot"
+  dependabot-metadata-job:
+    name: "Dependabot metadata"
     runs-on: ubuntu-latest
     if: github.event.pull_request.user.login == 'dependabot[bot]' && github.repository == 'libsdl-org/SDL'
     steps:
-      - name: "Dependabot metadata"
+      - name: "Dependabot get metadata"
         id: "dependabot-metadata"
-        uses: dependabot/fetch-metadata@v2
+        uses: dependabot/fetch-metadata@dbb049abf0d677abbd7f7eee0375145b417fdd34 # v2.2.0
+
+      - name: "Dependabot print metadata"
+        shell: bash
+        run: |
+          echo "$PR_URL \n"
+          echo "$DEPENDENCY_NAMES \n"
+          echo "$DEPENDENCY_TYPE \n"
+          echo "$PREVIOUS_VERSION \n"
+          echo "$NEW_VERSION \n"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          DEPENDENCY_NAMES: ${{ steps.dependabot-metadata.outputs.dependency-names }}
+          DEPENDENCY_TYPE: ${{ steps.dependabot-metadata.outputs.dependency-type }}
+          UPDATE_TYPE: ${{ steps.dependabot-metadata.outputs.update-type }}
+          UPDATED_DEPENDENCIES_JSON: ${{ steps.dependabot-metadata.outputs.updated-dependencies-json }}
+          PREVIOUS_VERSION: ${{ steps.dependabot-metadata.outputs.previous-version }}
+          NEW_VERSION: ${{ steps.dependabot-metadata.outputs.new-version }}
 
   dependabot-bindgen-job:
     name: "Dependabot Bindgen"
-    needs: [dependabot-job]
+    needs: [dependabot-metadata-job]
     uses: "./.github/workflows/bindgen.yml"
 
   dependabot-commit-job:
