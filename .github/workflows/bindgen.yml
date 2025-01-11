@@ -47,7 +47,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: "./bindgen/ffi"
-          key: "ffi-${{ matrix.platform.rid }}-${{ hashFiles('bindgen/config-extract.json') }}-${{ hashFiles('ext/SDL/**/*') }}-${{ steps.get-version-c2ffi.outputs.VERSION }}"
+          key: "ffi-${{ matrix.platform.rid }}_${{ hashFiles('bindgen/**/*') }}_${{ hashFiles('ext/SDL/**/*') }}_${{ steps.get-version-c2ffi.outputs.VERSION }}"
 
       - name: "Read C code: Linux dependencies"
         if: runner.os == 'Linux' && steps.cache-ffi.outputs.cache-hit != 'true'
