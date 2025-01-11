@@ -5,7 +5,7 @@ namespace SDL.Examples;
 
 public static unsafe class Program
 {
-    // https://lazyfoo.net/tutorials/SDL/03_event_driven_programming/index.php
+    // https://lazyfoo.net/tutorials/SDL/04_key_presses/index.php
 
     public static readonly ProgramState State = new();
 
