@@ -403,6 +403,14 @@ namespace Interop
 {
     public static unsafe partial class SDL
     {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_ClickTrayEntry", ExactSpelling = true)]
+        public static extern partial void SDL_ClickTrayEntry(global::Interop.SDL.SDL_TrayEntry* entry);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_CloseAsyncIO", ExactSpelling = true)]
         public static extern partial global::Interop.Runtime.CBool SDL_CloseAsyncIO(global::Interop.SDL.SDL_AsyncIO* asyncio, global::Interop.Runtime.CBool flush, global::Interop.SDL.SDL_AsyncIOQueue* queue, void* userdata);
     }
