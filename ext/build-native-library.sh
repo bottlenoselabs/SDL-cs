@@ -46,7 +46,7 @@ if [[ ! -z $BUILD_TYPE ]]; then
     elif [[ $BUILD_TYPE == 'release' ]]; then
         CMAKE_BUILD_TYPE="Release"
     else
-        echo "Build type '$BUILD_TYPE' is not known or can't be used when building native libraries. Please use one of the following: 'debug', 'release'"
+        echo "Build type '$BUILD_TYPE' is not known or can't be used when building native libraries. Please use one of the following: 'debug', 'release'" >&2
         exit 1
     fi
 else
@@ -61,25 +61,25 @@ if [[ ! -z $DESIRED_RID ]]; then
         if [[ $RID == 'win-x64' || $RID == 'win-arm64' ]]; then
             RID="$DESIRED_RID"
         else
-            echo "RID '$DESIRED_RID' is not known or can not be be used when building native libraries for Windows. Please use one of the following for Windows: 'win-x64', 'win-arm64'"
+            echo "RID '$DESIRED_RID' is not known or can not be be used when building native libraries for Windows. Please use one of the following for Windows: 'win-x64', 'win-arm64'" >&2
             exit 1
         fi
     elif [[ $DESIRED_RID == 'osx-x64' || $DESIRED_RID == 'osx-arm64' ]]; then
         if [[ $RID == 'osx-x64' || $RID == 'osx-arm64' ]]; then
             RID="$DESIRED_RID"
         else
-            echo "RID '$DESIRED_RID' is not known or can not be be used when building native libraries for macOS. Please use one of the following for macOS: 'osx-x64', 'osx-arm64'"
+            echo "RID '$DESIRED_RID' is not known or can not be be used when building native libraries for macOS. Please use one of the following for macOS: 'osx-x64', 'osx-arm64'" >&2
             exit 1
         fi
     elif [[ $DESIRED_RID == 'linux-x64' || $DESIRED_RID == 'linux-arm64' ]]; then
         if [[ $RID == 'linux-x64' || $RID == 'linux-arm64' ]]; then
             RID="$DESIRED_RID"
         else
-            echo "RID '$DESIRED_RID' is not known or can not be be used when building native libraries for Linux. Please use one of the following for Linux: 'linux-x64', 'linux-arm64'"
+            echo "RID '$DESIRED_RID' is not known or can not be be used when building native libraries for Linux. Please use one of the following for Linux: 'linux-x64', 'linux-arm64'" >&2
             exit 1
         fi
     else
-        echo "RID '$DESIRED_RID' is not known for building native libraries. Please use one of the following for the appropriate operating system: 'win-x64', 'win-arm64', 'osx-x64', 'osx-arm64', 'linux-x64', 'linux-arm64'"
+        echo "RID '$DESIRED_RID' is not known for building native libraries. Please use one of the following for the appropriate operating system: 'win-x64', 'win-arm64', 'osx-x64', 'osx-arm64', 'linux-x64', 'linux-arm64'" >&2
         exit 1
     fi
 fi
