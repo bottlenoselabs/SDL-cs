@@ -13,7 +13,7 @@ jobs:
   dependabot-metadata-job:
     name: "Dependabot metadata"
     runs-on: ubuntu-latest
-    if: github.event.pull_request.user.login == 'dependabot[bot]' && github.repository == 'libsdl-org/SDL'
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
     steps:
       - name: "Dependabot get metadata"
         id: "dependabot-metadata"
@@ -22,12 +22,14 @@ jobs:
       - name: "Dependabot print metadata"
         shell: bash
         run: |
+          echo "$GITHUB_REPOSITORY \n"
           echo "$PR_URL \n"
           echo "$DEPENDENCY_NAMES \n"
           echo "$DEPENDENCY_TYPE \n"
           echo "$PREVIOUS_VERSION \n"
           echo "$NEW_VERSION \n"
         env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
           PR_URL: ${{ github.event.pull_request.html_url }}
           DEPENDENCY_NAMES: ${{ steps.dependabot-metadata.outputs.dependency-names }}
           DEPENDENCY_TYPE: ${{ steps.dependabot-metadata.outputs.dependency-type }}
