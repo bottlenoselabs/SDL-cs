@@ -63,6 +63,7 @@ jobs:
         with:
           name: "ffi-${{ matrix.platform.rid }}"
           path: "./bindgen/ffi"
+          if-no-files-found: error
 
   bindgen-cross-platform-ffi-job:
     name: "Bindgen FFI cross-platform"
@@ -111,6 +112,7 @@ jobs:
         with:
           name: "ffi-x"
           path: "./bindgen/ffi-x/cross-platform.json"
+          if-no-files-found: error
 
   bindgen-cs-job:
     name: "Bindgen C#"
@@ -147,6 +149,7 @@ jobs:
         with:
           name: "generated-cs"
           path: "./src/cs/production/Interop.SDL/Generated"
+          if-no-files-found: error
 
   bindgen-build-dotnet-job:
     name: "Build"
