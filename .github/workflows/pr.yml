@@ -1,4 +1,6 @@
 name: "Pull Request"
+permissions:
+  contents: read
 
 on:
   pull_request:
@@ -15,5 +17,4 @@ jobs:
   commit-job:
     name: "Commit"
     needs: [bindgen-job]
-    if: github.actor == 'dependabot[bot]'
     uses: "./.github/workflows/commit.yml"

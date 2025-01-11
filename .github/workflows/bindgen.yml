@@ -1,4 +1,6 @@
 name: "Bindgen"
+permissions:
+  contents: read
 
 on:
   workflow_call:

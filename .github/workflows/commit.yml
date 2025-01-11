@@ -1,4 +1,6 @@
 name: "Commit Generated Code"
+permissions:
+  contents: read
 
 on:
   workflow_call:
@@ -8,7 +10,6 @@ jobs:
   commit-job:
     name: "Commit generated C# code"
     runs-on: ubuntu-latest
-    if: github.actor == 'dependabot[bot]'
     permissions: write-all
 
     steps:
@@ -25,10 +26,10 @@ jobs:
           path: "./src/cs/production/Interop.SDL/Generated"
 
       - name: "Add + commit + push (if necessary)"
-        uses: EndBug/add-and-commit@v9
+        uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
         with:
           author_name: 'lithiumtoast'
           author_email: '519592+lithiumtoast@users.noreply.github.com'
-          committer_name: 'dependabot[bot]'
-          committer_email: '49699333+dependabot[bot]@users.noreply.github.com'
+          committer_name: '${{ github.actor_id }}'
+          committer_email: '${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com'
           message: "Update C# bindings"
