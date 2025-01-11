@@ -5,7 +5,7 @@ namespace SDL.Examples;
 
 public static unsafe class Program
 {
-    // https://lazyfoo.net/tutorials/SDL/04_key_presses/index.php
+    // https://lazyfoo.net/tutorials/SDL/05_optimized_surface_loading_and_soft_stretching/index.php
 
     public static readonly ProgramState State = new();
 
@@ -27,7 +27,7 @@ public static unsafe class Program
         }
 
         State.Window = SDL_CreateWindow(
-            (CString)"SDL Example: Event driven programming"u8, 640, 480, 0);
+            (CString)"SDL Example: Event driven programming"u8, State.ScreenWidth, State.ScreenHeight, 0);
         if (State.Window == null)
         {
             Console.Error.WriteLine("Failed to create window. SDL error: " + SDL_GetError());
@@ -39,11 +39,8 @@ public static unsafe class Program
 
     private static void Close()
     {
-        for (var i = 0; i < State.KeyPressSurfaces.Length; i++)
-        {
-            SDL_DestroySurface(State.KeyPressSurfaces[i]);
-            State.KeyPressSurfaces[i] = null;
-        }
+        SDL_DestroySurface(State.UserSurface);
+        State.UserSurface = null;
 
         SDL_DestroyWindow(State.Window);
         State.Window = null;
@@ -77,36 +74,31 @@ public static unsafe class Program
             return true;
         }
 
-        if (e.type == (ulong)SDL_EventType.SDL_EVENT_KEY_DOWN)
-        {
-            var keyPressSurface = e.key.scancode switch
-            {
-                SDL_Scancode.SDL_SCANCODE_UP => KeyPressSurfaceIndex.Up,
-                SDL_Scancode.SDL_SCANCODE_DOWN => KeyPressSurfaceIndex.Down,
-                SDL_Scancode.SDL_SCANCODE_LEFT => KeyPressSurfaceIndex.Left,
-                SDL_Scancode.SDL_SCANCODE_RIGHT => KeyPressSurfaceIndex.Right,
-                _ => KeyPressSurfaceIndex.Press
-            };
-
-            State.CurrentKeyPressSurface = State.KeyPressSurfaces[(int)keyPressSurface];
-        }
-
         return false;
     }
 
     private static void Frame()
     {
-        _ = SDL_BlitSurface(State.CurrentKeyPressSurface, default, State.ScreenSurface, default);
-        _ = SDL_UpdateWindowSurface(State.Window); // flip back and front buffer
+        // Apply the image stretched
+        SDL_Rect stretchRectangle;
+        stretchRectangle.x = 0;
+        stretchRectangle.y = 0;
+        stretchRectangle.w = State.ScreenWidth;
+        stretchRectangle.h = State.ScreenHeight;
+        _ = SDL_BlitSurfaceScaled(
+            State.UserSurface,
+            default,
+            State.ScreenSurface,
+            &stretchRectangle,
+            SDL_ScaleMode.SDL_SCALEMODE_NEAREST);
+
+        // flip back and front buffer
+        _ = SDL_UpdateWindowSurface(State.Window);
     }
 
     private static void TryLoadMedia()
     {
-        State.CurrentKeyPressSurface = State.KeyPressSurfaces[(int)KeyPressSurfaceIndex.Press] = TryLoadSurface("press.bmp");
-        State.KeyPressSurfaces[(int)KeyPressSurfaceIndex.Up] = TryLoadSurface("up.bmp");
-        State.KeyPressSurfaces[(int)KeyPressSurfaceIndex.Down] = TryLoadSurface("down.bmp");
-        State.KeyPressSurfaces[(int)KeyPressSurfaceIndex.Left] = TryLoadSurface("left.bmp");
-        State.KeyPressSurfaces[(int)KeyPressSurfaceIndex.Right] = TryLoadSurface("right.bmp");
+        State.UserSurface = TryLoadSurface("stretch.bmp");
     }
 
     private static SDL_Surface* TryLoadSurface(string fileName)
@@ -114,13 +106,22 @@ public static unsafe class Program
         var filePath = Path.Combine(AppContext.BaseDirectory, fileName);
 
         using var filePathC = (CString)fileName;
-        var result = SDL_LoadBMP(filePathC);
-        if (result != null)
+        var loadedSurface = SDL_LoadBMP(filePathC);
+        if (loadedSurface == null)
         {
-            return result;
+            Console.Error.WriteLine("Failed to load image '{0}'. SDL error: {1}", filePath, SDL_GetError());
+            return null;
         }
 
-        Console.Error.WriteLine("Failed to load image '{0}'. SDL error: {1}", filePath, SDL_GetError());
-        return null;
+        var screenSurface = State.ScreenSurface->format;
+        var optimizedSurface = SDL_ConvertSurface(loadedSurface, screenSurface);
+        if (optimizedSurface == null)
+        {
+            Console.Error.WriteLine("Failed to optimize image '{0}'. SDL Error: {1}", filePath, SDL_GetError());
+        }
+
+        SDL_DestroySurface(loadedSurface);
+
+        return optimizedSurface;
     }
 }
