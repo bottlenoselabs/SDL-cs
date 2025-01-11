@@ -1,5 +1,5 @@
 {
-  "inputFilePath": "../ext/SDL/include/SDL3/SDL.h",
+  "inputFilePath": "./SDL_bindgen.h",
   "userIncludeDirectories": [
     "../ext/SDL/include"
   ],
