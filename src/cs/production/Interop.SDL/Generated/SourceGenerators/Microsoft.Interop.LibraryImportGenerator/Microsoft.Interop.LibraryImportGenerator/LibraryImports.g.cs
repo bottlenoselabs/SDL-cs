@@ -1163,6 +1163,14 @@ namespace Interop
 {
     public static unsafe partial class SDL
     {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_EnterAppMainCallbacks", ExactSpelling = true)]
+        public static extern partial int SDL_EnterAppMainCallbacks(int argc, global::Interop.Runtime.CString* argv, global::Interop.SDL.SDL_AppInit_func appinit, global::Interop.SDL.SDL_AppIterate_func appiter, global::Interop.SDL.SDL_AppEvent_func appevent, global::Interop.SDL.SDL_AppQuit_func appquit);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_EnumerateDirectory", ExactSpelling = true)]
         public static extern partial global::Interop.Runtime.CBool SDL_EnumerateDirectory(global::Interop.Runtime.CString path, global::Interop.SDL.SDL_EnumerateDirectoryCallback callback, void* userdata);
     }
@@ -1325,6 +1333,14 @@ namespace Interop
     {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_GamepadSensorEnabled", ExactSpelling = true)]
         public static extern partial global::Interop.Runtime.CBool SDL_GamepadSensorEnabled(global::Interop.SDL.SDL_Gamepad* gamepad, global::Interop.SDL.SDL_SensorType type);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_GDKSuspendComplete", ExactSpelling = true)]
+        public static extern partial void SDL_GDKSuspendComplete();
     }
 }
 namespace Interop
@@ -5891,6 +5907,14 @@ namespace Interop
 {
     public static unsafe partial class SDL
     {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_RunApp", ExactSpelling = true)]
+        public static extern partial int SDL_RunApp(int argc, global::Interop.Runtime.CString* argv, global::Interop.SDL.SDL_main_func mainFunction, void* reserved);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_RunHapticEffect", ExactSpelling = true)]
         public static extern partial global::Interop.Runtime.CBool SDL_RunHapticEffect(global::Interop.SDL.SDL_Haptic* haptic, int effect, uint iterations);
     }
@@ -6325,6 +6349,14 @@ namespace Interop
     {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_SetLogPriorityPrefix", ExactSpelling = true)]
         public static extern partial global::Interop.Runtime.CBool SDL_SetLogPriorityPrefix(global::Interop.SDL.SDL_LogPriority priority, global::Interop.Runtime.CString prefix);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_SetMainReady", ExactSpelling = true)]
+        public static extern partial void SDL_SetMainReady();
     }
 }
 namespace Interop
