@@ -41,7 +41,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: "./lib"
-          key: "native-library-SDL3-${{ matrix.platform.rid }}-${{ hashFiles('ext/SDL/**/*') }}"
+          key: "native-library-SDL3_${{ matrix.platform.rid }}_${{ hashFiles('ext/SDL/**/*') }}"
 
       # https://wiki.libsdl.org/SDL3/README/linux#build-dependencies
       - name: "Install dependencies linux-x64"
