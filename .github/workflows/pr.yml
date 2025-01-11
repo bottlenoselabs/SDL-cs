@@ -17,4 +17,6 @@ jobs:
   commit-job:
     name: "Commit"
     needs: [bindgen-job]
+    permissions:
+      contents: write
     uses: "./.github/workflows/commit.yml"

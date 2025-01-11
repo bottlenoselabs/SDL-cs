@@ -10,7 +10,8 @@ jobs:
   commit-job:
     name: "Commit generated C# code"
     runs-on: ubuntu-latest
-    permissions: write-all
+    permissions:
+      contents: write
 
     steps:
       - name: "Clone Git repository"
