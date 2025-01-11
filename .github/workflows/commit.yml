@@ -23,7 +23,7 @@ jobs:
       - name: "Download changes to commit"
         uses: actions/download-artifact@v4
         with:
-          name: "generated-cs"
+          name: "generated-cs-with-source-generators"
           path: "./src/cs/production/Interop.SDL/Generated"
 
       - name: "Add + commit + push (if necessary)"

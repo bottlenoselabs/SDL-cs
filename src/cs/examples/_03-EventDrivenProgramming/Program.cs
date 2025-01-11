@@ -5,19 +5,14 @@ namespace SDL.Examples;
 
 public static unsafe class Program
 {
-    // https://lazyfoo.net/tutorials/SDL/02_getting_an_image_on_the_screen/index.php
+    // https://lazyfoo.net/tutorials/SDL/03_event_driven_programming/index.php
 
     public static readonly ProgramState State = new();
 
     private static int Main()
     {
         Initialize();
-
-        if (LoadMedia())
-        {
-            _ = SDL_BlitSurface(State.UserSurface, default, State.ScreenSurface, default);
-            _ = SDL_UpdateWindowSurface(State.Window); // flip back and front buffer
-        }
+        TryLoadMedia();
 
         Loop();
         Close();
@@ -34,10 +29,7 @@ public static unsafe class Program
         }
 
         State.Window = SDL_CreateWindow(
-            (CString)"SDL Sample: Getting an image on screen"u8,
-            640,
-            480,
-            SDL_WINDOW_RESIZABLE);
+            (CString)"SDL Example: Event driven programming"u8, 640, 480, 0);
         if (State.Window == null)
         {
             Console.Error.WriteLine("Failed to create window. SDL error: " + SDL_GetError());
@@ -62,32 +54,49 @@ public static unsafe class Program
     {
         while (true)
         {
-            SDL_Event e;
-            if (!SDL_PollEvent(&e))
-            {
-                continue;
-            }
-
-            if (e.type == (ulong)SDL_EventType.SDL_EVENT_QUIT)
+            if (HandleEvents())
             {
                 break;
             }
+
+            Frame();
         }
     }
 
-    private static bool LoadMedia()
+    private static bool HandleEvents()
     {
-        var filePath = AppContext.BaseDirectory + "/hello_world.bmp";
+        SDL_Event e;
+        if (!SDL_PollEvent(&e))
+        {
+            return false;
+        }
+
+        if (e.type == (ulong)SDL_EventType.SDL_EVENT_QUIT)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    private static void Frame()
+    {
+        _ = SDL_BlitSurface(State.UserSurface, default, State.ScreenSurface, default);
+        _ = SDL_UpdateWindowSurface(State.Window); // flip back and front buffer
+    }
+
+    private static void TryLoadMedia()
+    {
+        var filePath = AppContext.BaseDirectory + "/x.bmp";
         using var filePathC = (CString)filePath;
         State.UserSurface = SDL_LoadBMP(filePathC);
 
         if (State.UserSurface == null)
         {
             Console.Error.WriteLine("Failed to load image '{0}'. SDL error: {1}", filePath, SDL_GetError());
-            Console.WriteLine("Failed to load media.");
-            return false;
-        }
 
-        return true;
+            Console.WriteLine("Failed to load media.");
+            Environment.Exit(1);
+        }
     }
 }
