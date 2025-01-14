@@ -1,6 +1,6 @@
 # README
 
-Bindgen Bash scripts and configuration files.
+Bindgen bash scripts and configuration files.
 
 See `.github/workflows/bindgen.yml` in the root of the repository for execution.
 

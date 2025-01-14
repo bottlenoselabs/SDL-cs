@@ -1,7 +1,7 @@
 {
   "inputFilePath": "./SDL_bindgen.h",
   "userIncludeDirectories": [
-    "../ext/SDL/include"
+    "../../ext/SDL/include"
   ],
   "defines": {
     "SDL_DECLSPEC": "__attribute__ ((visibility(\"default\")))",
@@ -9,17 +9,17 @@
     "SDL_DISABLE_ALLOCA": "1"
   },
   "ignoredIncludeFiles": [
-    "../ext/SDL/include/SDL3/SDL_atomic.h",
-    "../ext/SDL/include/SDL3/SDL_audio.h",
-    "../ext/SDL/include/SDL3/SDL_begin_code.h",
-    "../ext/SDL/include/SDL3/SDL_bits.h",
-    "../ext/SDL/include/SDL3/SDL_endian.h",
-    "../ext/SDL/include/SDL3/SDL_mutex.h",
-    "../ext/SDL/include/SDL3/SDL_oldnames.h",
-    "../ext/SDL/include/SDL3/SDL_platform_defines.h",
-    "../ext/SDL/include/SDL3/SDL_system.h",
-    "../ext/SDL/include/SDL3/SDL_thread.h",
-    "../ext/SDL/include/SDL3/SDL_quit.h"
+    "../../ext/SDL/include/SDL3/SDL_atomic.h",
+    "../../ext/SDL/include/SDL3/SDL_audio.h",
+    "../../ext/SDL/include/SDL3/SDL_begin_code.h",
+    "../../ext/SDL/include/SDL3/SDL_bits.h",
+    "../../ext/SDL/include/SDL3/SDL_endian.h",
+    "../../ext/SDL/include/SDL3/SDL_mutex.h",
+    "../../ext/SDL/include/SDL3/SDL_oldnames.h",
+    "../../ext/SDL/include/SDL3/SDL_platform_defines.h",
+    "../../ext/SDL/include/SDL3/SDL_system.h",
+    "../../ext/SDL/include/SDL3/SDL_thread.h",
+    "../../ext/SDL/include/SDL3/SDL_quit.h"
   ],
   "ignoredMacroObjects": [
     "^_.*$",
