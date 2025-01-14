@@ -2,3 +2,6 @@
 	path = ext/SDL
 	url = https://github.com/libsdl-org/SDL
     branch = main
+[submodule "ext/SDL_image"]
+	path = ext/SDL_image
+	url = https://github.com/libsdl-org/SDL_image
