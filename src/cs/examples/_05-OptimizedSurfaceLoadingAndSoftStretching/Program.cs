@@ -27,7 +27,7 @@ public static unsafe class Program
         }
 
         State.Window = SDL_CreateWindow(
-            (CString)"SDL Example: Event driven programming"u8, State.ScreenWidth, State.ScreenHeight, 0);
+            (CString)"SDL Example: Optimized surface loading and soft stretching"u8, State.ScreenWidth, State.ScreenHeight, 0);
         if (State.Window == null)
         {
             Console.Error.WriteLine("Failed to create window. SDL error: " + SDL_GetError());
@@ -110,6 +110,7 @@ public static unsafe class Program
         if (loadedSurface == null)
         {
             Console.Error.WriteLine("Failed to load image '{0}'. SDL error: {1}", filePath, SDL_GetError());
+            Environment.Exit(1);
             return null;
         }
 
@@ -118,6 +119,7 @@ public static unsafe class Program
         if (optimizedSurface == null)
         {
             Console.Error.WriteLine("Failed to optimize image '{0}'. SDL Error: {1}", filePath, SDL_GetError());
+            Environment.Exit(1);
         }
 
         SDL_DestroySurface(loadedSurface);

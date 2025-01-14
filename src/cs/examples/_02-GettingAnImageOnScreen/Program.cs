@@ -84,7 +84,7 @@ public static unsafe class Program
         if (State.UserSurface == null)
         {
             Console.Error.WriteLine("Failed to load image '{0}'. SDL error: {1}", filePath, SDL_GetError());
-            Console.WriteLine("Failed to load media.");
+            Environment.Exit(1);
             return false;
         }
 
