@@ -5,3 +5,4 @@
 [submodule "ext/SDL_image"]
 	path = ext/SDL_image
 	url = https://github.com/libsdl-org/SDL_image
+    branch = main
