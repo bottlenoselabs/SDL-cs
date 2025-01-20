@@ -3,6 +3,30 @@ namespace Interop
 {
     public static unsafe partial class SDL
     {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_abs", ExactSpelling = true)]
+        public static extern partial int SDL_abs(int x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_acos", ExactSpelling = true)]
+        public static extern partial double SDL_acos(double x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_acosf", ExactSpelling = true)]
+        public static extern partial float SDL_acosf(float x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_AcquireCameraFrame", ExactSpelling = true)]
         public static extern partial global::Interop.SDL.SDL_Surface* SDL_AcquireCameraFrame(global::Interop.SDL.SDL_Camera* camera, ulong* timestampNS);
     }
@@ -115,8 +139,80 @@ namespace Interop
 {
     public static unsafe partial class SDL
     {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_asin", ExactSpelling = true)]
+        public static extern partial double SDL_asin(double x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_asinf", ExactSpelling = true)]
+        public static extern partial float SDL_asinf(float x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_asprintf", ExactSpelling = true)]
+        public static extern partial int SDL_asprintf(global::Interop.Runtime.CString* strp, global::Interop.Runtime.CString fmt);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_AsyncIOFromFile", ExactSpelling = true)]
         public static extern partial global::Interop.SDL.SDL_AsyncIO* SDL_AsyncIOFromFile(global::Interop.Runtime.CString file, global::Interop.Runtime.CString mode);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_atan", ExactSpelling = true)]
+        public static extern partial double SDL_atan(double x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_atan2", ExactSpelling = true)]
+        public static extern partial double SDL_atan2(double y, double x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_atan2f", ExactSpelling = true)]
+        public static extern partial float SDL_atan2f(float y, float x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_atanf", ExactSpelling = true)]
+        public static extern partial float SDL_atanf(float x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_atof", ExactSpelling = true)]
+        public static extern partial double SDL_atof(global::Interop.Runtime.CString str);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_atoi", ExactSpelling = true)]
+        public static extern partial int SDL_atoi(global::Interop.Runtime.CString str);
     }
 }
 namespace Interop
@@ -323,6 +419,22 @@ namespace Interop
 {
     public static unsafe partial class SDL
     {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_bsearch", ExactSpelling = true)]
+        public static extern partial void* SDL_bsearch(void* key, void* @base, ulong nmemb, ulong size, global::Interop.SDL.SDL_CompareCallback compare);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_bsearch_r", ExactSpelling = true)]
+        public static extern partial void* SDL_bsearch_r(void* key, void* @base, ulong nmemb, ulong size, global::Interop.SDL.SDL_CompareCallback_r compare, void* userdata);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_CalculateGPUTextureFormatSize", ExactSpelling = true)]
         public static extern partial uint SDL_CalculateGPUTextureFormatSize(global::Interop.SDL.SDL_GPUTextureFormat format, uint width, uint height, uint depth_or_layer_count);
     }
@@ -349,6 +461,22 @@ namespace Interop
     {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_CaptureMouse", ExactSpelling = true)]
         public static extern partial global::Interop.Runtime.CBool SDL_CaptureMouse(global::Interop.Runtime.CBool enabled);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_ceil", ExactSpelling = true)]
+        public static extern partial double SDL_ceil(double x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_ceilf", ExactSpelling = true)]
+        public static extern partial float SDL_ceilf(float x);
     }
 }
 namespace Interop
@@ -555,8 +683,56 @@ namespace Interop
 {
     public static unsafe partial class SDL
     {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_copysign", ExactSpelling = true)]
+        public static extern partial double SDL_copysign(double x, double y);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_copysignf", ExactSpelling = true)]
+        public static extern partial float SDL_copysignf(float x, float y);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_CopyStorageFile", ExactSpelling = true)]
         public static extern partial global::Interop.Runtime.CBool SDL_CopyStorageFile(global::Interop.SDL.SDL_Storage* storage, global::Interop.Runtime.CString oldpath, global::Interop.Runtime.CString newpath);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_cos", ExactSpelling = true)]
+        public static extern partial double SDL_cos(double x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_cosf", ExactSpelling = true)]
+        public static extern partial float SDL_cosf(float x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_crc16", ExactSpelling = true)]
+        public static extern partial ushort SDL_crc16(ushort crc, void* data, ulong len);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_crc32", ExactSpelling = true)]
+        public static extern partial uint SDL_crc32(uint crc, void* data, ulong len);
     }
 }
 namespace Interop
@@ -1211,6 +1387,30 @@ namespace Interop
 {
     public static unsafe partial class SDL
     {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_exp", ExactSpelling = true)]
+        public static extern partial double SDL_exp(double x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_expf", ExactSpelling = true)]
+        public static extern partial float SDL_expf(float x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_fabs", ExactSpelling = true)]
+        public static extern partial double SDL_fabs(double x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_fabsf", ExactSpelling = true)]
         public static extern partial float SDL_fabsf(float x);
     }
@@ -1259,6 +1459,22 @@ namespace Interop
 {
     public static unsafe partial class SDL
     {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_floor", ExactSpelling = true)]
+        public static extern partial double SDL_floor(double x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_floorf", ExactSpelling = true)]
+        public static extern partial float SDL_floorf(float x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_FlushEvent", ExactSpelling = true)]
         public static extern partial void SDL_FlushEvent(uint type);
     }
@@ -1285,6 +1501,22 @@ namespace Interop
     {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_FlushRenderer", ExactSpelling = true)]
         public static extern partial global::Interop.Runtime.CBool SDL_FlushRenderer(global::Interop.SDL.SDL_Renderer* renderer);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_fmod", ExactSpelling = true)]
+        public static extern partial double SDL_fmod(double x, double y);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_fmodf", ExactSpelling = true)]
+        public static extern partial float SDL_fmodf(float x, float y);
     }
 }
 namespace Interop
@@ -4547,6 +4779,38 @@ namespace Interop
 {
     public static unsafe partial class SDL
     {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_iconv", ExactSpelling = true)]
+        public static extern partial ulong SDL_iconv(global::Interop.SDL.SDL_iconv_t cd, global::Interop.Runtime.CString* inbuf, ulong* inbytesleft, global::Interop.Runtime.CString* outbuf, ulong* outbytesleft);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_iconv_close", ExactSpelling = true)]
+        public static extern partial int SDL_iconv_close(global::Interop.SDL.SDL_iconv_t cd);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_iconv_open", ExactSpelling = true)]
+        public static extern partial global::Interop.SDL.SDL_iconv_t SDL_iconv_open(global::Interop.Runtime.CString tocode, global::Interop.Runtime.CString fromcode);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_iconv_string", ExactSpelling = true)]
+        public static extern partial global::Interop.Runtime.CString SDL_iconv_string(global::Interop.Runtime.CString tocode, global::Interop.Runtime.CString fromcode, global::Interop.Runtime.CString inbuf, ulong inbytesleft);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_Init", ExactSpelling = true)]
         public static extern partial global::Interop.Runtime.CBool SDL_Init(global::Interop.SDL.SDL_InitFlags flags);
     }
@@ -4611,8 +4875,80 @@ namespace Interop
 {
     public static unsafe partial class SDL
     {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_IOprintf", ExactSpelling = true)]
+        public static extern partial ulong SDL_IOprintf(global::Interop.SDL.SDL_IOStream* context, global::Interop.Runtime.CString fmt);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_isalnum", ExactSpelling = true)]
+        public static extern partial int SDL_isalnum(int x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_isalpha", ExactSpelling = true)]
+        public static extern partial int SDL_isalpha(int x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_isblank", ExactSpelling = true)]
+        public static extern partial int SDL_isblank(int x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_iscntrl", ExactSpelling = true)]
+        public static extern partial int SDL_iscntrl(int x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_isdigit", ExactSpelling = true)]
+        public static extern partial int SDL_isdigit(int x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_IsGamepad", ExactSpelling = true)]
         public static extern partial global::Interop.Runtime.CBool SDL_IsGamepad(global::Interop.SDL.SDL_JoystickID instance_id);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_isgraph", ExactSpelling = true)]
+        public static extern partial int SDL_isgraph(int x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_isinf", ExactSpelling = true)]
+        public static extern partial int SDL_isinf(double x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_isinff", ExactSpelling = true)]
+        public static extern partial int SDL_isinff(float x);
     }
 }
 namespace Interop
@@ -4635,6 +4971,14 @@ namespace Interop
 {
     public static unsafe partial class SDL
     {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_islower", ExactSpelling = true)]
+        public static extern partial int SDL_islower(int x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_IsMainThread", ExactSpelling = true)]
         public static extern partial global::Interop.Runtime.CBool SDL_IsMainThread();
     }
@@ -4645,6 +4989,70 @@ namespace Interop
     {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_IsMouseHaptic", ExactSpelling = true)]
         public static extern partial global::Interop.Runtime.CBool SDL_IsMouseHaptic();
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_isnan", ExactSpelling = true)]
+        public static extern partial int SDL_isnan(double x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_isnanf", ExactSpelling = true)]
+        public static extern partial int SDL_isnanf(float x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_isprint", ExactSpelling = true)]
+        public static extern partial int SDL_isprint(int x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_ispunct", ExactSpelling = true)]
+        public static extern partial int SDL_ispunct(int x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_isspace", ExactSpelling = true)]
+        public static extern partial int SDL_isspace(int x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_isupper", ExactSpelling = true)]
+        public static extern partial int SDL_isupper(int x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_isxdigit", ExactSpelling = true)]
+        public static extern partial int SDL_isxdigit(int x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_itoa", ExactSpelling = true)]
+        public static extern partial global::Interop.Runtime.CString SDL_itoa(int value, global::Interop.Runtime.CString str, int radix);
     }
 }
 namespace Interop
@@ -4669,6 +5077,14 @@ namespace Interop
     {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_KillProcess", ExactSpelling = true)]
         public static extern partial global::Interop.Runtime.CBool SDL_KillProcess(global::Interop.SDL.SDL_Process* process, global::Interop.Runtime.CBool force);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_lltoa", ExactSpelling = true)]
+        public static extern partial global::Interop.Runtime.CString SDL_lltoa(long value, global::Interop.Runtime.CString str, int radix);
     }
 }
 namespace Interop
@@ -4771,6 +5187,14 @@ namespace Interop
 {
     public static unsafe partial class SDL
     {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_log", ExactSpelling = true)]
+        public static extern partial double SDL_log(double x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_Log", ExactSpelling = true)]
         public static extern partial void SDL_Log(global::Interop.Runtime.CString fmt);
     }
@@ -4813,6 +5237,14 @@ namespace Interop
     {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_LogError", ExactSpelling = true)]
         public static extern partial void SDL_LogError(int category, global::Interop.Runtime.CString fmt);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_logf", ExactSpelling = true)]
+        public static extern partial float SDL_logf(float x);
     }
 }
 namespace Interop
@@ -4987,6 +5419,22 @@ namespace Interop
 {
     public static unsafe partial class SDL
     {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_modf", ExactSpelling = true)]
+        public static extern partial double SDL_modf(double x, double* y);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_modff", ExactSpelling = true)]
+        public static extern partial float SDL_modff(float x, float* y);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_murmur3_32", ExactSpelling = true)]
         public static extern partial uint SDL_murmur3_32(void* data, ulong len, uint seed);
     }
@@ -5147,6 +5595,22 @@ namespace Interop
 {
     public static unsafe partial class SDL
     {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_pow", ExactSpelling = true)]
+        public static extern partial double SDL_pow(double x, double y);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_powf", ExactSpelling = true)]
+        public static extern partial float SDL_powf(float x, float y);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_PremultiplyAlpha", ExactSpelling = true)]
         public static extern partial global::Interop.Runtime.CBool SDL_PremultiplyAlpha(int width, int height, global::Interop.SDL.SDL_PixelFormat src_format, void* src, int src_pitch, global::Interop.SDL.SDL_PixelFormat dst_format, void* dst, int dst_pitch, global::Interop.Runtime.CBool linear);
     }
@@ -5205,6 +5669,22 @@ namespace Interop
     {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_PushGPUVertexUniformData", ExactSpelling = true)]
         public static extern partial void SDL_PushGPUVertexUniformData(global::Interop.SDL.SDL_GPUCommandBuffer* command_buffer, uint slot_index, void* data, uint length);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_qsort", ExactSpelling = true)]
+        public static extern partial void SDL_qsort(void* @base, ulong nmemb, ulong size, global::Interop.SDL.SDL_CompareCallback compare);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_qsort_r", ExactSpelling = true)]
+        public static extern partial void SDL_qsort_r(void* @base, ulong nmemb, ulong size, global::Interop.SDL.SDL_CompareCallback_r compare, void* userdata);
     }
 }
 namespace Interop
@@ -5883,6 +6363,22 @@ namespace Interop
 {
     public static unsafe partial class SDL
     {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_round", ExactSpelling = true)]
+        public static extern partial double SDL_round(double x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_roundf", ExactSpelling = true)]
+        public static extern partial float SDL_roundf(float x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_RumbleGamepad", ExactSpelling = true)]
         public static extern partial global::Interop.Runtime.CBool SDL_RumbleGamepad(global::Interop.SDL.SDL_Gamepad* gamepad, ushort low_frequency_rumble, ushort high_frequency_rumble, uint duration_ms);
     }
@@ -5965,6 +6461,22 @@ namespace Interop
     {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_SaveFile_IO", ExactSpelling = true)]
         public static extern partial global::Interop.Runtime.CBool SDL_SaveFile_IO(global::Interop.SDL.SDL_IOStream* src, void* data, ulong datasize, global::Interop.Runtime.CBool closeio);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_scalbn", ExactSpelling = true)]
+        public static extern partial double SDL_scalbn(double x, int n);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_scalbnf", ExactSpelling = true)]
+        public static extern partial float SDL_scalbnf(float x, int n);
     }
 }
 namespace Interop
@@ -6955,8 +7467,56 @@ namespace Interop
 {
     public static unsafe partial class SDL
     {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_sin", ExactSpelling = true)]
+        public static extern partial double SDL_sin(double x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_sinf", ExactSpelling = true)]
+        public static extern partial float SDL_sinf(float x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_snprintf", ExactSpelling = true)]
+        public static extern partial int SDL_snprintf(global::Interop.Runtime.CString text, ulong maxlen, global::Interop.Runtime.CString fmt);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_sqrt", ExactSpelling = true)]
+        public static extern partial double SDL_sqrt(double x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_sqrtf", ExactSpelling = true)]
+        public static extern partial float SDL_sqrtf(float x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_srand", ExactSpelling = true)]
         public static extern partial void SDL_srand(ulong seed);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_sscanf", ExactSpelling = true)]
+        public static extern partial int SDL_sscanf(global::Interop.Runtime.CString text, global::Interop.Runtime.CString fmt);
     }
 }
 namespace Interop
@@ -7035,8 +7595,192 @@ namespace Interop
 {
     public static unsafe partial class SDL
     {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_strcasecmp", ExactSpelling = true)]
+        public static extern partial int SDL_strcasecmp(global::Interop.Runtime.CString str1, global::Interop.Runtime.CString str2);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_strcasestr", ExactSpelling = true)]
+        public static extern partial global::Interop.Runtime.CString SDL_strcasestr(global::Interop.Runtime.CString haystack, global::Interop.Runtime.CString needle);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_strchr", ExactSpelling = true)]
+        public static extern partial global::Interop.Runtime.CString SDL_strchr(global::Interop.Runtime.CString str, int c);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_strcmp", ExactSpelling = true)]
+        public static extern partial int SDL_strcmp(global::Interop.Runtime.CString str1, global::Interop.Runtime.CString str2);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_strdup", ExactSpelling = true)]
+        public static extern partial global::Interop.Runtime.CString SDL_strdup(global::Interop.Runtime.CString str);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_StringToGUID", ExactSpelling = true)]
         public static extern partial global::Interop.SDL.SDL_GUID SDL_StringToGUID(global::Interop.Runtime.CString pchGUID);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_strlcat", ExactSpelling = true)]
+        public static extern partial ulong SDL_strlcat(global::Interop.Runtime.CString dst, global::Interop.Runtime.CString src, ulong maxlen);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_strlcpy", ExactSpelling = true)]
+        public static extern partial ulong SDL_strlcpy(global::Interop.Runtime.CString dst, global::Interop.Runtime.CString src, ulong maxlen);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_strlen", ExactSpelling = true)]
+        public static extern partial ulong SDL_strlen(global::Interop.Runtime.CString str);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_strlwr", ExactSpelling = true)]
+        public static extern partial global::Interop.Runtime.CString SDL_strlwr(global::Interop.Runtime.CString str);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_strncasecmp", ExactSpelling = true)]
+        public static extern partial int SDL_strncasecmp(global::Interop.Runtime.CString str1, global::Interop.Runtime.CString str2, ulong maxlen);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_strncmp", ExactSpelling = true)]
+        public static extern partial int SDL_strncmp(global::Interop.Runtime.CString str1, global::Interop.Runtime.CString str2, ulong maxlen);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_strndup", ExactSpelling = true)]
+        public static extern partial global::Interop.Runtime.CString SDL_strndup(global::Interop.Runtime.CString str, ulong maxlen);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_strnlen", ExactSpelling = true)]
+        public static extern partial ulong SDL_strnlen(global::Interop.Runtime.CString str, ulong maxlen);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_strnstr", ExactSpelling = true)]
+        public static extern partial global::Interop.Runtime.CString SDL_strnstr(global::Interop.Runtime.CString haystack, global::Interop.Runtime.CString needle, ulong maxlen);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_strpbrk", ExactSpelling = true)]
+        public static extern partial global::Interop.Runtime.CString SDL_strpbrk(global::Interop.Runtime.CString str, global::Interop.Runtime.CString breakset);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_strrchr", ExactSpelling = true)]
+        public static extern partial global::Interop.Runtime.CString SDL_strrchr(global::Interop.Runtime.CString str, int c);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_strrev", ExactSpelling = true)]
+        public static extern partial global::Interop.Runtime.CString SDL_strrev(global::Interop.Runtime.CString str);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_strstr", ExactSpelling = true)]
+        public static extern partial global::Interop.Runtime.CString SDL_strstr(global::Interop.Runtime.CString haystack, global::Interop.Runtime.CString needle);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_strtod", ExactSpelling = true)]
+        public static extern partial double SDL_strtod(global::Interop.Runtime.CString str, global::Interop.Runtime.CString* endp);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_strtok_r", ExactSpelling = true)]
+        public static extern partial global::Interop.Runtime.CString SDL_strtok_r(global::Interop.Runtime.CString str, global::Interop.Runtime.CString delim, global::Interop.Runtime.CString* saveptr);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_strtoll", ExactSpelling = true)]
+        public static extern partial long SDL_strtoll(global::Interop.Runtime.CString str, global::Interop.Runtime.CString* endp, int @base);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_strtoull", ExactSpelling = true)]
+        public static extern partial ulong SDL_strtoull(global::Interop.Runtime.CString str, global::Interop.Runtime.CString* endp, int @base);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_strupr", ExactSpelling = true)]
+        public static extern partial global::Interop.Runtime.CString SDL_strupr(global::Interop.Runtime.CString str);
     }
 }
 namespace Interop
@@ -7083,8 +7827,32 @@ namespace Interop
 {
     public static unsafe partial class SDL
     {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_swprintf", ExactSpelling = true)]
+        public static extern partial int SDL_swprintf(global::Interop.Runtime.CStringWide text, ulong maxlen, global::Interop.Runtime.CStringWide fmt);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_SyncWindow", ExactSpelling = true)]
         public static extern partial global::Interop.Runtime.CBool SDL_SyncWindow(global::Interop.SDL.SDL_Window* window);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_tan", ExactSpelling = true)]
+        public static extern partial double SDL_tan(double x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_tanf", ExactSpelling = true)]
+        public static extern partial float SDL_tanf(float x);
     }
 }
 namespace Interop
@@ -7131,8 +7899,56 @@ namespace Interop
 {
     public static unsafe partial class SDL
     {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_tolower", ExactSpelling = true)]
+        public static extern partial int SDL_tolower(int x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_toupper", ExactSpelling = true)]
+        public static extern partial int SDL_toupper(int x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_trunc", ExactSpelling = true)]
+        public static extern partial double SDL_trunc(double x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_truncf", ExactSpelling = true)]
+        public static extern partial float SDL_truncf(float x);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_UCS4ToUTF8", ExactSpelling = true)]
         public static extern partial global::Interop.Runtime.CString SDL_UCS4ToUTF8(uint codepoint, global::Interop.Runtime.CString dst);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_uitoa", ExactSpelling = true)]
+        public static extern partial global::Interop.Runtime.CString SDL_uitoa(uint value, global::Interop.Runtime.CString str, int radix);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_ulltoa", ExactSpelling = true)]
+        public static extern partial global::Interop.Runtime.CString SDL_ulltoa(ulong value, global::Interop.Runtime.CString str, int radix);
     }
 }
 namespace Interop
@@ -7291,6 +8107,30 @@ namespace Interop
 {
     public static unsafe partial class SDL
     {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_utf8strlcpy", ExactSpelling = true)]
+        public static extern partial ulong SDL_utf8strlcpy(global::Interop.Runtime.CString dst, global::Interop.Runtime.CString src, ulong dst_bytes);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_utf8strlen", ExactSpelling = true)]
+        public static extern partial ulong SDL_utf8strlen(global::Interop.Runtime.CString str);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_utf8strnlen", ExactSpelling = true)]
+        public static extern partial ulong SDL_utf8strnlen(global::Interop.Runtime.CString str, ulong bytes);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_WaitAndAcquireGPUSwapchainTexture", ExactSpelling = true)]
         public static extern partial global::Interop.Runtime.CBool SDL_WaitAndAcquireGPUSwapchainTexture(global::Interop.SDL.SDL_GPUCommandBuffer* command_buffer, global::Interop.SDL.SDL_Window* window, global::Interop.SDL.SDL_GPUTexture** swapchain_texture, uint* swapchain_texture_width, uint* swapchain_texture_height);
     }
@@ -7373,6 +8213,94 @@ namespace Interop
     {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_WasInit", ExactSpelling = true)]
         public static extern partial global::Interop.SDL.SDL_InitFlags SDL_WasInit(global::Interop.SDL.SDL_InitFlags flags);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_wcscasecmp", ExactSpelling = true)]
+        public static extern partial int SDL_wcscasecmp(global::Interop.Runtime.CStringWide str1, global::Interop.Runtime.CStringWide str2);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_wcscmp", ExactSpelling = true)]
+        public static extern partial int SDL_wcscmp(global::Interop.Runtime.CStringWide str1, global::Interop.Runtime.CStringWide str2);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_wcsdup", ExactSpelling = true)]
+        public static extern partial global::Interop.Runtime.CStringWide SDL_wcsdup(global::Interop.Runtime.CStringWide wstr);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_wcslcat", ExactSpelling = true)]
+        public static extern partial ulong SDL_wcslcat(global::Interop.Runtime.CStringWide dst, global::Interop.Runtime.CStringWide src, ulong maxlen);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_wcslcpy", ExactSpelling = true)]
+        public static extern partial ulong SDL_wcslcpy(global::Interop.Runtime.CStringWide dst, global::Interop.Runtime.CStringWide src, ulong maxlen);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_wcslen", ExactSpelling = true)]
+        public static extern partial ulong SDL_wcslen(global::Interop.Runtime.CStringWide wstr);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_wcsncasecmp", ExactSpelling = true)]
+        public static extern partial int SDL_wcsncasecmp(global::Interop.Runtime.CStringWide str1, global::Interop.Runtime.CStringWide str2, ulong maxlen);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_wcsncmp", ExactSpelling = true)]
+        public static extern partial int SDL_wcsncmp(global::Interop.Runtime.CStringWide str1, global::Interop.Runtime.CStringWide str2, ulong maxlen);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_wcsnlen", ExactSpelling = true)]
+        public static extern partial ulong SDL_wcsnlen(global::Interop.Runtime.CStringWide wstr, ulong maxlen);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_wcsnstr", ExactSpelling = true)]
+        public static extern partial global::Interop.Runtime.CStringWide SDL_wcsnstr(global::Interop.Runtime.CStringWide haystack, global::Interop.Runtime.CStringWide needle, ulong maxlen);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_wcsstr", ExactSpelling = true)]
+        public static extern partial global::Interop.Runtime.CStringWide SDL_wcsstr(global::Interop.Runtime.CStringWide haystack, global::Interop.Runtime.CStringWide needle);
     }
 }
 namespace Interop
