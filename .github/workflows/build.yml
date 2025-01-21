@@ -56,13 +56,13 @@ jobs:
       - name: "Build"
         if: steps.cache-libs.outputs.cache-hit != 'true'
         shell: bash
-        run: ./ext/build-native-library.sh release ${{ matrix.platform.rid }}
+        run: ./ext/build-native-libraries.sh release ${{ matrix.platform.rid }}
 
       - name: "Upload"
         uses: actions/upload-artifact@v4
         with:
-          name: "native-library-SDL3-${{ matrix.platform.rid }}"
-          path: "./lib"
+          name: "native-libraries-${{ matrix.platform.rid }}"
+          path: "./ext/.build-native-libraries/out/${{ matrix.platform.rid }}-release/lib"
           if-no-files-found: error
 
   build-dotnet-job:
