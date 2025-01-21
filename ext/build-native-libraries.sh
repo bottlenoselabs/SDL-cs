@@ -223,11 +223,26 @@ function copy_files() {
 
     DIRECTORY_LIB_BUILD="$DIRECTORY_OUTPUT/lib"
     DIRECTORY_LIB="$DIRECTORY/../lib/$RID"
-    if [[ ! -d "$DIRECTORY_LIB" ]]; then
-        rm -r $DIRECTORY_LIB
+    if [[ -d "$DIRECTORY_LIB" ]]; then
+        rm -r "$DIRECTORY_LIB"
     fi
-    mkdir -p $DIRECTORY_LIB
-    rsync -av --include="*.dll" --include="*.dylib" --include="*.so" --include=".a" --include=".lib" --exclude="*" "$DIRECTORY_LIB_BUILD/" $DIRECTORY_LIB
+    mkdir -p "$DIRECTORY_LIB"
+
+    find "$DIRECTORY_LIB_BUILD" -type f \( -name "*.dll" -o -name "*.dylib" -o -name "*.so" \) | while read -r FILE_PATH; do
+        RELATIVE_PATH="${FILE_PATH#$DIRECTORY_LIB_BUILD/}"
+        TARGET_FILE_PATH="$DIRECTORY_LIB/$RELATIVE_PATH"
+        mkdir -p "$(dirname "$TARGET_FILE_PATH")"
+        echo "Copying file '$FILE_PATH' to '$TARGET_FILE_PATH'"
+        cp -p "$FILE_PATH" "$TARGET_FILE_PATH"
+    done
+
+    find "$DIRECTORY_LIB_BUILD" -type l \( -name "*.dll" -o -name "*.dylib" -o -name "*.so" \) | while read -r FILE_PATH; do
+        RELATIVE_PATH="${FILE_PATH#$DIRECTORY_LIB_BUILD/}"
+        TARGET_FILE_PATH="$DIRECTORY_LIB/$RELATIVE_PATH"
+        mkdir -p "$(dirname "$TARGET_FILE_PATH")"
+        echo "Copying symlink '$FILE_PATH' to '$TARGET_FILE_PATH'"
+        cp -p "$FILE_PATH" "$TARGET_FILE_PATH"
+    done
 
     echo "Copying files... done"
 }
