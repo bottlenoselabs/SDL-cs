@@ -128,8 +128,8 @@ jobs:
           if-no-files-found: error
 
       - name: "Upload generated C# code with source generators: SDL_image"
-          uses: actions/upload-artifact@v4
-          with:
-            name: "generated-cs-SDL_image-with-source-generators"
-            path: "./src/cs/production/Interop.SDL_image/Generated"
-            if-no-files-found: error
+        uses: actions/upload-artifact@v4
+        with:
+          name: "generated-cs-SDL_image-with-source-generators"
+          path: "./src/cs/production/Interop.SDL_image/Generated"
+          if-no-files-found: error
