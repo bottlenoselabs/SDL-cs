@@ -12,7 +12,7 @@
   <!-- C# Source Generators -->
   <PropertyGroup>
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
-    <CompilerGeneratedFilesOutputPath>Generated/SourceGenerators</CompilerGeneratedFilesOutputPath>
+    <CompilerGeneratedFilesOutputPath>$(MSBuildProjectDirectory)/Generated/SourceGenerators</CompilerGeneratedFilesOutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="$(CompilerGeneratedFilesOutputPath)/**/*.cs" />
@@ -24,22 +24,22 @@
     <LibraryDirectoryPath>$([System.IO.Path]::Combine($(GitRepositoryPath),lib))</LibraryDirectoryPath>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="$(LibraryDirectoryPath)/SDL3*.dll"
-             Exclude="$(LibraryDirectoryPath)/SDL3_image*.dll"
+    <Content Include="$(LibraryDirectoryPath)/win*/SDL3*.dll"
+             Exclude="$(LibraryDirectoryPath)/win*/SDL3_image*.dll"
              Condition="$([System.OperatingSystem]::IsWindows())">
       <Link>%(Filename)%(Extension)</Link>
       <Pack>false</Pack>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="$(LibraryDirectoryPath)/libSDL3*.dylib"
-             Exclude="$(LibraryDirectoryPath)/libSDL3_image*.dylib"
+    <Content Include="$(LibraryDirectoryPath)/osx*/libSDL3*.dylib"
+             Exclude="$(LibraryDirectoryPath)/osx*/libSDL3_image*.dylib"
              Condition="$([System.OperatingSystem]::IsMacOs())">
       <Link>%(Filename)%(Extension)</Link>
       <Pack>false</Pack>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="$(LibraryDirectoryPath)/libSDL3*.so"
-             Exclude="$(LibraryDirectoryPath)/libSDL3_image*.so"
+    <Content Include="$(LibraryDirectoryPath)/linux*/libSDL3*.so"
+             Exclude="$(LibraryDirectoryPath)/linux*/libSDL3_image*.so"
              Condition="$([System.OperatingSystem]::IsLinux())">
       <Link>%(Filename)%(Extension)</Link>
       <Pack>false</Pack>
