@@ -4915,46 +4915,6 @@ namespace Interop
 {
     public static unsafe partial class SDL
     {
-        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_memcmp", ExactSpelling = true)]
-        public static extern partial int SDL_memcmp(void* s1, void* s2, ulong len);
-    }
-}
-namespace Interop
-{
-    public static unsafe partial class SDL
-    {
-        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_memcpy", ExactSpelling = true)]
-        public static extern partial void* SDL_memcpy(void* dst, void* src, ulong len);
-    }
-}
-namespace Interop
-{
-    public static unsafe partial class SDL
-    {
-        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_memmove", ExactSpelling = true)]
-        public static extern partial void* SDL_memmove(void* dst, void* src, ulong len);
-    }
-}
-namespace Interop
-{
-    public static unsafe partial class SDL
-    {
-        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_memset", ExactSpelling = true)]
-        public static extern partial void* SDL_memset(void* dst, int c, ulong len);
-    }
-}
-namespace Interop
-{
-    public static unsafe partial class SDL
-    {
-        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_memset4", ExactSpelling = true)]
-        public static extern partial void* SDL_memset4(void* dst, uint val, ulong dwords);
-    }
-}
-namespace Interop
-{
-    public static unsafe partial class SDL
-    {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_Metal_CreateView", ExactSpelling = true)]
         public static extern partial global::Interop.SDL.SDL_MetalView SDL_Metal_CreateView(global::Interop.SDL.SDL_Window* window);
     }
@@ -7245,6 +7205,14 @@ namespace Interop
     {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_UpdateTexture", ExactSpelling = true)]
         public static extern partial global::Interop.Runtime.CBool SDL_UpdateTexture(global::Interop.SDL.SDL_Texture* texture, global::Interop.SDL.SDL_Rect* rect, void* pixels, int pitch);
+    }
+}
+namespace Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_UpdateTrays", ExactSpelling = true)]
+        public static extern partial void SDL_UpdateTrays();
     }
 }
 namespace Interop
