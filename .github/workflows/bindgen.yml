@@ -38,9 +38,9 @@ jobs:
         uses: actions/cache@v4
         with:
           path: "./bindgen/ffi"
-          key: "ffi-${{ matrix.platform.rid }}_${{ hashFiles('bindgen/**/*') }}_${{ hashFiles('ext/SDL/**/*') }}_${{ steps.get-version-c2ffi.outputs.VERSION }}"
+          key: "ffi-${{ matrix.platform.rid }}_${{ hashFiles('bindgen/**/*') }}_${{ hashFiles('ext/SDL/**/*') }}__${{ hashFiles('ext/SDL_image/**/*') }}_${{ steps.get-version-c2ffi.outputs.VERSION }}"
 
-      - name: "Read C code: Linux dependencies"
+      - name: "Install Linux dependencies"
         if: matrix.platform.rid == 'linux' # && steps.cache-ffi.outputs.cache-hit != 'true'
         run: sudo apt-get install gcc-aarch64-linux-gnu
 
@@ -153,7 +153,7 @@ jobs:
       - name: "Upload cross-platform FFI: SDL_image"
         uses: actions/upload-artifact@v4
         with:
-          name: "ffi-x-SDL"
+          name: "ffi-x-SDL_image"
           path: "./bindgen/SDL_image/ffi-x/cross-platform.json"
           if-no-files-found: error
 
