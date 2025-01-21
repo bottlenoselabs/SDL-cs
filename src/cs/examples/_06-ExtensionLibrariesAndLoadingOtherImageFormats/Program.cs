@@ -1,11 +1,14 @@
 // Copyright (c) Bottlenose Labs Inc. (https://github.com/bottlenoselabs). All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the Git repository root directory for full license information.
 
+using Interop;
+
 namespace SDL.Examples;
 
 public static unsafe class Program
 {
-    // https://lazyfoo.net/tutorials/SDL/05_optimized_surface_loading_and_soft_stretching/index.php
+    // https://lazyfoo.net/tutorials/SDL/06_extension_libraries_and_loading_other_image_formats/index.php
+    // https://lazyfoo.net/tutorials/SDL/06_extension_libraries_and_loading_other_image_formats/index2.php
 
     public static readonly ProgramState State = new();
 
@@ -27,7 +30,7 @@ public static unsafe class Program
         }
 
         State.Window = SDL_CreateWindow(
-            (CString)"SDL Example: Optimized surface loading and soft stretching"u8, State.ScreenWidth, State.ScreenHeight, 0);
+            (CString)"SDL Example: Extension libraries and loading other image formats"u8, State.ScreenWidth, State.ScreenHeight, 0);
         if (State.Window == null)
         {
             Console.Error.WriteLine("Failed to create window. SDL error: " + SDL_GetError());
@@ -98,32 +101,20 @@ public static unsafe class Program
 
     private static void TryLoadMedia()
     {
-        State.UserSurface = TryLoadSurface("stretch.bmp");
+        State.UserSurface = TryLoadSurface("loaded.png");
     }
 
     private static SDL_Surface* TryLoadSurface(string fileName)
     {
         var filePath = Path.Combine(AppContext.BaseDirectory, fileName);
-
-        using var filePathC = (CString)fileName;
-        var loadedSurface = SDL_LoadBMP(filePathC);
+        using var filePathC = (CString)filePath;
+        var loadedSurface = IMG_Load(filePathC);
         if (loadedSurface == null)
         {
             Console.Error.WriteLine("Failed to load image '{0}'. SDL error: {1}", filePath, SDL_GetError());
             Environment.Exit(1);
-            return null;
         }
 
-        var screenSurface = State.ScreenSurface->format;
-        var optimizedSurface = SDL_ConvertSurface(loadedSurface, screenSurface);
-        if (optimizedSurface == null)
-        {
-            Console.Error.WriteLine("Failed to optimize image '{0}'. SDL Error: {1}", filePath, SDL_GetError());
-            Environment.Exit(1);
-        }
-
-        SDL_DestroySurface(loadedSurface);
-
-        return optimizedSurface;
+        return loadedSurface;
     }
 }

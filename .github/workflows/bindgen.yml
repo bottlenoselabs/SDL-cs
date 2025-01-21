@@ -41,30 +41,42 @@ jobs:
           key: "ffi-${{ matrix.platform.rid }}_${{ hashFiles('bindgen/**/*') }}_${{ hashFiles('ext/SDL/**/*') }}_${{ steps.get-version-c2ffi.outputs.VERSION }}"
 
       - name: "Read C code: Linux dependencies"
-        if: matrix.platform.rid == 'linux' && steps.cache-ffi.outputs.cache-hit != 'true'
+        if: matrix.platform.rid == 'linux' # && steps.cache-ffi.outputs.cache-hit != 'true'
         run: sudo apt-get install gcc-aarch64-linux-gnu
 
       - name: "Setup .NET"
         uses: actions/setup-dotnet@v3
-        if: steps.cache-ffi.outputs.cache-hit != 'true'
+        # if: steps.cache-ffi.outputs.cache-hit != 'true'
         with:
           dotnet-version: '9.x'
 
       - name: "Install c2ffi"
-        if: steps.cache-ffi.outputs.cache-hit != 'true'
+        # if: steps.cache-ffi.outputs.cache-hit != 'true'
         shell: bash
-        run: dotnet tool install -g bottlenoselabs.c2ffi.Tool
+        run: dotnet tool install -g bottlenoselabs.c2ffi.tool
 
-      - name: "Read C code: extract FFI ${{ matrix.platform.name }}"
+      - name: "Extract FFI ${{ matrix.platform.name }}: SDL"
         shell: bash
-        if: steps.cache-ffi.outputs.cache-hit != 'true'
-        run: cd ./bindgen && ./bindgen-01-extract.sh
+        # if: steps.cache-ffi.outputs.cache-hit != 'true'
+        run: cd ./bindgen/SDL && ./bindgen-01-extract.sh
 
-      - name: "Upload FFIs"
+      - name: "Extract FFI ${{ matrix.platform.name }}: SDL_image"
+        shell: bash
+        # if: steps.cache-ffi.outputs.cache-hit != 'true'
+        run: cd ./bindgen/SDL_image && ./bindgen-01-extract.sh
+
+      - name: "Upload FFIs: SDL"
         uses: actions/upload-artifact@v4
         with:
-          name: "ffi-${{ matrix.platform.rid }}"
-          path: "./bindgen/ffi"
+          name: "ffi-${{ matrix.platform.rid }}-SDL"
+          path: "./bindgen/SDL/ffi"
+          if-no-files-found: error
+
+      - name: "Upload FFIs: SDL_image"
+        uses: actions/upload-artifact@v4
+        with:
+          name: "ffi-${{ matrix.platform.rid }}-SDL_image"
+          path: "./bindgen/SDL_image/ffi"
           if-no-files-found: error
 
   bindgen-cross-platform-ffi-job:
@@ -83,37 +95,66 @@ jobs:
         with:
           dotnet-version: '9.x'
 
-      - name: "Download FFI (win)"
+      - name: "Download FFI (win): SDL"
         uses: actions/download-artifact@v4
         with:
-          name: "ffi-win"
-          path: "./bindgen/ffi"
+          name: "ffi-win-SDL"
+          path: "./bindgen/SDL/ffi"
 
-      - name: "Download FFI (osx)"
+      - name: "Download FFI (osx): SDL"
         uses: actions/download-artifact@v4
         with:
-          name: "ffi-osx"
-          path: "./bindgen/ffi"
+          name: "ffi-osx-SDL"
+          path: "./bindgen/SDL/ffi"
 
-      - name: "Download FFI (linux)"
+      - name: "Download FFI (linux): SDL"
         uses: actions/download-artifact@v4
         with:
-          name: "ffi-linux"
-          path: "./bindgen/ffi"
+          name: "ffi-linux-SDL"
+          path: "./bindgen/SDL/ffi"
+
+      - name: "Download FFI (win): SDL_image"
+        uses: actions/download-artifact@v4
+        with:
+          name: "ffi-win-SDL_image"
+          path: "./bindgen/SDL/ffi"
+
+      - name: "Download FFI (osx): SDL_image"
+        uses: actions/download-artifact@v4
+        with:
+          name: "ffi-osx-SDL_image"
+          path: "./bindgen/SDL/ffi"
+
+      - name: "Download FFI (linux): SDL_image"
+        uses: actions/download-artifact@v4
+        with:
+          name: "ffi-linux-SDL_image"
+          path: "./bindgen/SDL/ffi"
 
       - name: "Install c2ffi"
         shell: bash
-        run: dotnet tool install -g bottlenoselabs.c2ffi.Tool
+        run: dotnet tool install -g bottlenoselabs.c2ffi.tool
 
-      - name: "Generate cross-platform FFI"
+      - name: "Generate cross-platform FFI: SDL"
         shell: bash
-        run: cd ./bindgen && ./bindgen-02-merge.sh
+        run: cd ./bindgen/SDL && ./bindgen-02-merge.sh
 
-      - name: "Upload cross-platform FFI"
+      - name: "Generate cross-platform FFI: SDL_image"
+        shell: bash
+        run: cd ./bindgen/SDL_image && ./bindgen-02-merge.sh
+
+      - name: "Upload cross-platform FFI: SDL"
         uses: actions/upload-artifact@v4
         with:
-          name: "ffi-x"
-          path: "./bindgen/ffi-x/cross-platform.json"
+          name: "ffi-x-SDL"
+          path: "./bindgen/SDL/ffi-x/cross-platform.json"
+          if-no-files-found: error
+
+      - name: "Upload cross-platform FFI: SDL_image"
+        uses: actions/upload-artifact@v4
+        with:
+          name: "ffi-x-SDL"
+          path: "./bindgen/SDL_image/ffi-x/cross-platform.json"
           if-no-files-found: error
 
   bindgen-cs-job:
@@ -132,25 +173,42 @@ jobs:
         with:
           dotnet-version: '9.x'
 
-      - name: "Download C code cross-platform FFI"
+      - name: "Download C code cross-platform FFI: SDL"
         uses: actions/download-artifact@v4
         with:
-          name: "ffi-x"
-          path: "./bindgen/ffi-x"
+          name: "ffi-x-SDL"
+          path: "./bindgen/SDL/ffi-x"
+
+      - name: "Download C code cross-platform FFI: SDL_image"
+        uses: actions/download-artifact@v4
+        with:
+          name: "ffi-x-SDL_image"
+          path: "./bindgen/SDL_image/ffi-x"
 
       - name: "Install c2cs"
         shell: bash
         run: dotnet tool install -g bottlenoselabs.c2cs.Tool
 
-      - name: "Generate C# code"
+      - name: "Generate C# code: SDL"
         shell: bash
-        run: cd ./bindgen && ./bindgen-03-generate.sh
+        run: cd ./bindgen/SDL && ./bindgen-03-generate.sh
 
-      - name: "Upload generated C# code"
+      - name: "Generate C# code: SDL_image"
+        shell: bash
+        run: cd ./bindgen/SDL_image && ./bindgen-03-generate.sh
+
+      - name: "Upload generated C# code: SDL"
         uses: actions/upload-artifact@v4
         with:
-          name: "generated-cs"
+          name: "generated-cs-SDL"
           path: "./src/cs/production/Interop.SDL/Generated"
+          if-no-files-found: error
+
+      - name: "Upload generated C# code: SDL_image"
+        uses: actions/upload-artifact@v4
+        with:
+          name: "generated-cs-SDL_image"
+          path: "./src/cs/production/Interop.SDL_image/Generated"
           if-no-files-found: error
 
   bindgen-build-dotnet-job:

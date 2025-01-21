@@ -1,12 +1,13 @@
 # External Git submodules
 
-Run `./build-native-library.sh [debug|release] [RID]` Bash script to build all the native libraries that are external Git submodules **locally**.
+Run `./build-native-libraries.sh [debug|release] [RID]` Bash script to build all the native libraries for SDL and SDL extensions.
 
-e.g. `./build-native-library.sh debug osx-64`.
-
-If you omit the first parameter `[debug|release]`, `release` is used as the default.
-If you omit the second parameter `[RID]` is the same as host operating system.
+e.g. `./build-native-libraries.sh debug osx-64`.
 
 ## SDL
 
 SDL3 on `main` branch. Updated using Dependabot for automatic pull requests in [`.github/dependabot.yml`](../.github/dependabot.yml). Note that Dependabot respects the branch set in [`.gitmodules`](../.gitmodules).
+
+## SDL_image
+
+SDL3_image on `main` branch. Updated using Dependabot for automatic pull requests in [`.github/dependabot.yml`](../.github/dependabot.yml). Note that Dependabot respects the branch set in [`.gitmodules`](../.gitmodules).

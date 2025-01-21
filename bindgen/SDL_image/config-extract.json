@@ -1,0 +1,38 @@
+{
+  "inputFilePath": "../../ext/SDL_image/include/SDL3_image/SDL_image.h",
+  "userIncludeDirectories": [
+    "../../ext/SDL/include",
+    "../../ext/SDL_image/include"
+  ],
+  "defines": {
+    "SDL_DECLSPEC": "__attribute__ ((visibility(\"default\")))"
+  },
+  "ignoredIncludeFiles": [
+    "../../ext/SDL/include/SDL3/SDL.h",
+    "../../ext/SDL/include/SDL3/SDL_begin_code.h"
+  ],
+  "allowedNames": [
+    "^IMG_.*$",
+    "^SDL_IMAGE_.*$",
+    "COMMENT: Function Pointers",
+    ".* (.*)$"
+  ],
+  "blockedNames": [
+    "^.*_[hH]_$",
+    "^(struct |enum )?SDL_(?!IMAGE_).*$"
+  ],
+  "targetPlatforms": {
+    "windows": {
+      "x86_64-pc-windows-msvc": {},
+      "aarch64-pc-windows-msvc": {}
+    },
+    "macos": {
+      "x86_64-apple-darwin": {},
+      "aarch64-apple-darwin": {}
+    },
+    "linux": {
+      "x86_64-unknown-linux-gnu": {},
+      "aarch64-unknown-linux-gnu": {}
+    }
+  }
+}

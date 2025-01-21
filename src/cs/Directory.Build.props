@@ -11,12 +11,6 @@
     <ArtifactsPath>$([System.IO.Path]::Combine($(GitRepositoryPath),artifacts))</ArtifactsPath>
   </PropertyGroup>
 
-  <!-- Show generated files -->
-  <PropertyGroup>
-    <EmitCompilerGeneratedFiles>false</EmitCompilerGeneratedFiles>
-    <CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>
-  </PropertyGroup>
-
   <!-- NuGet package references -->
   <ItemGroup>
     <PackageReference Include="bottlenoselabs.MSBuild.Extensions" Version="2024.9.18">

@@ -1,10 +1,10 @@
 {
   "targetFrameworkMoniker": "net9.0",
   "inputFilePath": "./ffi-x/cross-platform.json",
-  "outputFileDirectory": "./../src/cs/production/Interop.SDL/Generated",
+  "outputFileDirectory": "./../../src/cs/production/Interop.SDL_image/Generated",
   "namespaceName": "Interop",
-  "className": "SDL",
-  "libraryName": "SDL3",
+  "className": "SDL_image",
+  "libraryName": "SDL3_image",
   "mappedNames": [
     { "source": "SDL_bool", "target": "CBool" },
     { "source": "Uint8", "target": "byte" },
@@ -16,6 +16,12 @@
     { "source": "Sint32", "target": "int" },
     { "source": "Sint64", "target": "long" }
   ],
-  "isEnabledGeneratingRuntimeCode": true,
-  "isEnabledVerifyCSharpCodeCompiles": false
+  "isEnabledGeneratingRuntimeCode": false,
+  "isEnabledVerifyCSharpCodeCompiles": false,
+  "ignoredNames": [
+    "SDL_IOStream",
+    "SDL_Renderer",
+    "SDL_SurfaceFlags"
+  ],
+  "headerCodeRegionFilePath": "./header.cs"
 }

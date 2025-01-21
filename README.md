@@ -1,6 +1,9 @@
 # SDL3-cs
 
-Automatically updated C# bindings for `https://github.com/libsdl-org/SDL`, on the `main` branch for v3.
+Automatically updated C# bindings for SDL and extensions on the `main` branch for v3:
+
+-  https://github.com/libsdl-org/SDL (`main` branch)
+-  https://github.com/libsdl-org/SDL_image (`main` branch)
 
 Used primarily for internal use at `bottlenoselabs` with the following goals:
 
@@ -22,7 +25,7 @@ These goals might not align to your goals or your organization's goals to which 
 
 1. Download and install [.NET 9](https://dotnet.microsoft.com/download).
 2. Fork the repository using GitHub or clone the repository manually with submodules: `git clone --recurse-submodules https://github.com/bottlenoselabs/SDL3-cs`.
-3. Build the native library by running [`ext/build-native-library.sh`](./ext/build-native-library.sh). To execute `.sh` (Bash) scripts on Windows, use Git Bash which can be installed with Git itself: https://git-scm.com/download/win. The `build-native-library.sh` script requires that CMake and SDL build dependencies ([see Linux docs for required packages](https://wiki.libsdl.org/SDL3/README/linux)) are installed and in your environment variable `PATH`.
+3. Build the native shared libraries (SDL and SDL extensions) by running [`ext/build-native-libraries.sh`](./ext/build-native-libraries.sh). To execute `.sh` (Bash) scripts on Windows, use Git Bash which can be installed with Git itself: https://git-scm.com/download/win. The `build-native-libraries.sh` script requires that CMake and SDL build dependencies ([see Linux docs for required packages](https://wiki.libsdl.org/SDL3/README/linux)) are installed and in your environment variable `PATH`.
 4. Add the `src/cs/production/Interop.SDL/Interop.SDL.csproj` C# project to your solution as an existing project and then reference it within your own solution.
 
 ## Developers: Documentation

@@ -24,8 +24,8 @@ jobs:
         platform:
           - { name: Windows (x64), os: windows-2025, rid: win-x64 }
           - { name: Windows (arm64), os: windows-2025, rid: win-arm64 }
-          - { name: macOS (x64), os: macos-latest, rid: osx-x64 }
-          - { name: macOS (arm64), os: macos-latest, rid: osx-arm64 }
+          - { name: macOS (x64), os: macos-latest-large, rid: osx-x64 } # 'macos-latest-large' is X64
+          - { name: macOS (arm64), os: macos-latest, rid: osx-arm64 } # 'macos-latest' is ARM64
           - { name: Linux (x64), os: ubuntu-latest, rid: linux-x64 }
           # Disabled building for `linux-arm64` until GitHub Actions runner images are generally available. See: https://github.com/orgs/community/discussions/19197
           # - { name: Linux (arm64), os: ubuntu-latest, rid: linux-arm64 }
@@ -56,13 +56,13 @@ jobs:
       - name: "Build"
         if: steps.cache-libs.outputs.cache-hit != 'true'
         shell: bash
-        run: ./ext/build-native-library.sh release ${{ matrix.platform.rid }}
+        run: ./ext/build-native-libraries.sh release ${{ matrix.platform.rid }}
 
       - name: "Upload"
         uses: actions/upload-artifact@v4
         with:
-          name: "native-library-SDL3-${{ matrix.platform.rid }}"
-          path: "./lib"
+          name: "native-libraries-${{ matrix.platform.rid }}"
+          path: "./ext/.build-native-libraries/out/${{ matrix.platform.rid }}-release/lib"
           if-no-files-found: error
 
   build-dotnet-job:
@@ -120,9 +120,16 @@ jobs:
       - name: "Build .NET solution"
         run: dotnet build "./src/cs"
 
-      - name: "Upload generated C# code with source generators"
+      - name: "Upload generated C# code with source generators: SDL"
         uses: actions/upload-artifact@v4
         with:
-          name: "generated-cs-with-source-generators"
+          name: "generated-cs-SDL-with-source-generators"
           path: "./src/cs/production/Interop.SDL/Generated"
           if-no-files-found: error
+
+      - name: "Upload generated C# code with source generators: SDL_image"
+          uses: actions/upload-artifact@v4
+          with:
+            name: "generated-cs-SDL_image-with-source-generators"
+            path: "./src/cs/production/Interop.SDL_image/Generated"
+            if-no-files-found: error

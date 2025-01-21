@@ -121,6 +121,7 @@ public static unsafe class Program
         }
 
         Console.Error.WriteLine("Failed to load image '{0}'. SDL error: {1}", filePath, SDL_GetError());
+        Environment.Exit(1);
         return null;
     }
 }
