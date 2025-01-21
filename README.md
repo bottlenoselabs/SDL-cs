@@ -1,6 +1,9 @@
 # SDL3-cs
 
-Automatically updated C# bindings for `https://github.com/libsdl-org/SDL`, on the `main` branch for v3.
+Automatically updated C# bindings for SDL and extensions on the `main` branch for v3:
+
+-  https://github.com/libsdl-org/SDL (`main` branch)
+-  https://github.com/libsdl-org/SDL_image (`main` branch)
 
 Used primarily for internal use at `bottlenoselabs` with the following goals:
 
