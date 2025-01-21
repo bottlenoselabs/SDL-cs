@@ -41,7 +41,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: "./lib"
-          key: "native-libraries_${{ matrix.platform.rid }}_${{ hashFiles('ext/**/*') }} }}"
+          key: "native-libraries_${{ matrix.platform.rid }}_${{ hashFiles('ext/**/*') }}"
 
       # https://wiki.libsdl.org/SDL3/README/linux#build-dependencies
       - name: "Install dependencies linux-x64"
