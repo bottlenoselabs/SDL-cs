@@ -38,9 +38,9 @@ jobs:
         uses: actions/cache@v4
         with:
           path: "./bindgen/ffi"
-          key: "ffi-${{ matrix.platform.rid }}_${{ hashFiles('bindgen/**/*') }}_${{ hashFiles('ext/SDL/**/*') }}_${{ steps.get-version-c2ffi.outputs.VERSION }}"
+          key: "ffi-${{ matrix.platform.rid }}_${{ hashFiles('bindgen/**/*') }}_${{ hashFiles('ext/SDL/**/*') }}__${{ hashFiles('ext/SDL_image/**/*') }}_${{ steps.get-version-c2ffi.outputs.VERSION }}"
 
-      - name: "Read C code: Linux dependencies"
+      - name: "Install Linux dependencies"
         if: matrix.platform.rid == 'linux' # && steps.cache-ffi.outputs.cache-hit != 'true'
         run: sudo apt-get install gcc-aarch64-linux-gnu
 
@@ -60,17 +60,17 @@ jobs:
         # if: steps.cache-ffi.outputs.cache-hit != 'true'
         run: cd ./bindgen/SDL && ./bindgen-01-extract.sh
 
-      - name: "Extract FFI ${{ matrix.platform.name }}: SDL_image"
-        shell: bash
-        # if: steps.cache-ffi.outputs.cache-hit != 'true'
-        run: cd ./bindgen/SDL_image && ./bindgen-01-extract.sh
-
       - name: "Upload FFIs: SDL"
         uses: actions/upload-artifact@v4
         with:
           name: "ffi-${{ matrix.platform.rid }}-SDL"
           path: "./bindgen/SDL/ffi"
           if-no-files-found: error
+
+      - name: "Extract FFI ${{ matrix.platform.name }}: SDL_image"
+        shell: bash
+        # if: steps.cache-ffi.outputs.cache-hit != 'true'
+        run: cd ./bindgen/SDL_image && ./bindgen-01-extract.sh
 
       - name: "Upload FFIs: SDL_image"
         uses: actions/upload-artifact@v4
@@ -83,6 +83,12 @@ jobs:
     name: "Bindgen FFI cross-platform"
     needs: [bindgen-ffi-job]
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        project:
+          - { name: SDL }
+          - { name: SDL_image }
 
     steps:
       - name: "Clone Git repository"
@@ -95,72 +101,49 @@ jobs:
         with:
           dotnet-version: '9.x'
 
-      - name: "Download FFI (win): SDL"
-        uses: actions/download-artifact@v4
-        with:
-          name: "ffi-win-SDL"
-          path: "./bindgen/SDL/ffi"
-
-      - name: "Download FFI (osx): SDL"
-        uses: actions/download-artifact@v4
-        with:
-          name: "ffi-osx-SDL"
-          path: "./bindgen/SDL/ffi"
-
-      - name: "Download FFI (linux): SDL"
-        uses: actions/download-artifact@v4
-        with:
-          name: "ffi-linux-SDL"
-          path: "./bindgen/SDL/ffi"
-
-      - name: "Download FFI (win): SDL_image"
-        uses: actions/download-artifact@v4
-        with:
-          name: "ffi-win-SDL_image"
-          path: "./bindgen/SDL/ffi"
-
-      - name: "Download FFI (osx): SDL_image"
-        uses: actions/download-artifact@v4
-        with:
-          name: "ffi-osx-SDL_image"
-          path: "./bindgen/SDL/ffi"
-
-      - name: "Download FFI (linux): SDL_image"
-        uses: actions/download-artifact@v4
-        with:
-          name: "ffi-linux-SDL_image"
-          path: "./bindgen/SDL/ffi"
-
       - name: "Install c2ffi"
         shell: bash
         run: dotnet tool install -g bottlenoselabs.c2ffi.tool
 
-      - name: "Generate cross-platform FFI: SDL"
-        shell: bash
-        run: cd ./bindgen/SDL && ./bindgen-02-merge.sh
+      - name: "Download FFI (win): ${{ matrix.project.name }}"
+        uses: actions/download-artifact@v4
+        with:
+          name: "ffi-win-${{ matrix.project.name }}"
+          path: "./bindgen/${{ matrix.project.name }}/ffi"
 
-      - name: "Generate cross-platform FFI: SDL_image"
-        shell: bash
-        run: cd ./bindgen/SDL_image && ./bindgen-02-merge.sh
+      - name: "Download FFI (osx): ${{ matrix.project.name }}"
+        uses: actions/download-artifact@v4
+        with:
+          name: "ffi-osx-${{ matrix.project.name }}"
+          path: "./bindgen/${{ matrix.project.name }}/ffi"
 
-      - name: "Upload cross-platform FFI: SDL"
+      - name: "Download FFI (linux): ${{ matrix.project.name }}"
+        uses: actions/download-artifact@v4
+        with:
+          name: "ffi-linux-${{ matrix.project.name }}"
+          path: "./bindgen/${{ matrix.project.name }}/ffi"
+
+      - name: "Generate cross-platform FFI: ${{ matrix.project.name }}"
+        shell: bash
+        run: cd ./bindgen/${{ matrix.project.name }} && ./bindgen-02-merge.sh
+
+      - name: "Upload cross-platform FFI: ${{ matrix.project.name }}"
         uses: actions/upload-artifact@v4
         with:
-          name: "ffi-x-SDL"
-          path: "./bindgen/SDL/ffi-x/cross-platform.json"
-          if-no-files-found: error
-
-      - name: "Upload cross-platform FFI: SDL_image"
-        uses: actions/upload-artifact@v4
-        with:
-          name: "ffi-x-SDL"
-          path: "./bindgen/SDL_image/ffi-x/cross-platform.json"
+          name: "ffi-x-${{ matrix.project.name }}"
+          path: "./bindgen/${{ matrix.project.name }}/ffi-x/cross-platform.json"
           if-no-files-found: error
 
   bindgen-cs-job:
     name: "Bindgen C#"
     needs: [bindgen-cross-platform-ffi-job]
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        project:
+          - { name: SDL }
+          - { name: SDL_image }
 
     steps:
       - name: "Clone Git repository"
@@ -173,42 +156,25 @@ jobs:
         with:
           dotnet-version: '9.x'
 
-      - name: "Download C code cross-platform FFI: SDL"
-        uses: actions/download-artifact@v4
-        with:
-          name: "ffi-x-SDL"
-          path: "./bindgen/SDL/ffi-x"
-
-      - name: "Download C code cross-platform FFI: SDL_image"
-        uses: actions/download-artifact@v4
-        with:
-          name: "ffi-x-SDL_image"
-          path: "./bindgen/SDL_image/ffi-x"
-
       - name: "Install c2cs"
         shell: bash
         run: dotnet tool install -g bottlenoselabs.c2cs.Tool
 
-      - name: "Generate C# code: SDL"
-        shell: bash
-        run: cd ./bindgen/SDL && ./bindgen-03-generate.sh
+      - name: "Download C code cross-platform FFI: ${{ matrix.project.name }}"
+        uses: actions/download-artifact@v4
+        with:
+          name: "ffi-x-${{ matrix.project.name }}"
+          path: "./bindgen/${{ matrix.project.name }}/ffi-x"
 
-      - name: "Generate C# code: SDL_image"
+      - name: "Generate C# code: ${{ matrix.project.name }}"
         shell: bash
-        run: cd ./bindgen/SDL_image && ./bindgen-03-generate.sh
+        run: cd ./bindgen/${{ matrix.project.name }} && ./bindgen-03-generate.sh
 
-      - name: "Upload generated C# code: SDL"
+      - name: "Upload generated C# code: ${{ matrix.project.name }}"
         uses: actions/upload-artifact@v4
         with:
-          name: "generated-cs-SDL"
-          path: "./src/cs/production/Interop.SDL/Generated"
-          if-no-files-found: error
-
-      - name: "Upload generated C# code: SDL_image"
-        uses: actions/upload-artifact@v4
-        with:
-          name: "generated-cs-SDL_image"
-          path: "./src/cs/production/Interop.SDL_image/Generated"
+          name: "generated-cs-${{ matrix.project.name }}"
+          path: "./src/cs/production/Interop.${{ matrix.project.name }}/Generated"
           if-no-files-found: error
 
   bindgen-build-dotnet-job:
