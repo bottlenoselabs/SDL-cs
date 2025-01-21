@@ -35,8 +35,8 @@ jobs:
       - name: "Add + commit + push (if necessary)"
         uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
         with:
-          author_name: '${{ github.actor_id }}'
-          author_email: '${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com'
+          author_name: '${{ github.event.pull_request.user.login }}'
+          author_email: '${{ github.event.pull_request.user.id }}+${{ github.event.pull_request.user.login }}@users.noreply.github.com'
           committer_name: 'github-actions[bot]'
           committer_email: '41898282+github-actions[bot]@users.noreply.github.com'
           message: "Update C# bindings"
