@@ -40,7 +40,7 @@ jobs:
         id: cache-libs
         uses: actions/cache@v3
         with:
-          path: "./lib"
+          path: "./lib/${{ matrix.platform.rid }}"
           key: "native-libraries_${{ matrix.platform.rid }}_${{ hashFiles('ext/**/*') }}"
 
       # https://wiki.libsdl.org/SDL3/README/linux#build-dependencies
