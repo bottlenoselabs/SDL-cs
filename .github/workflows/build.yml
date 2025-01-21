@@ -120,9 +120,16 @@ jobs:
       - name: "Build .NET solution"
         run: dotnet build "./src/cs"
 
-      - name: "Upload generated C# code with source generators"
+      - name: "Upload generated C# code with source generators: SDL"
         uses: actions/upload-artifact@v4
         with:
-          name: "generated-cs-with-source-generators"
+          name: "generated-cs-SDL-with-source-generators"
           path: "./src/cs/production/Interop.SDL/Generated"
           if-no-files-found: error
+
+      - name: "Upload generated C# code with source generators: SDL_image"
+          uses: actions/upload-artifact@v4
+          with:
+            name: "generated-cs-SDL_image-with-source-generators"
+            path: "./src/cs/production/Interop.SDL_image/Generated"
+            if-no-files-found: error
