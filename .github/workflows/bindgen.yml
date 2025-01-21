@@ -117,19 +117,19 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: "ffi-win-SDL_image"
-          path: "./bindgen/SDL/ffi"
+          path: "./bindgen/SDL_image/ffi"
 
       - name: "Download FFI (osx): SDL_image"
         uses: actions/download-artifact@v4
         with:
           name: "ffi-osx-SDL_image"
-          path: "./bindgen/SDL/ffi"
+          path: "./bindgen/SDL_image/ffi"
 
       - name: "Download FFI (linux): SDL_image"
         uses: actions/download-artifact@v4
         with:
           name: "ffi-linux-SDL_image"
-          path: "./bindgen/SDL/ffi"
+          path: "./bindgen/SDL_image/ffi"
 
       - name: "Install c2ffi"
         shell: bash
