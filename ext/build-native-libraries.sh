@@ -169,7 +169,7 @@ function build_library_cmake() {
 
     local CMAKE_FLAGS_BUILD_TYPE="-D CMAKE_BUILD_TYPE=$CMAKE_BUILD_TYPE"
     local CMAKE_FLAGS_OUTPUT="-D CMAKE_INSTALL_PREFIX=$DIRECTORY_OUTPUT"
-    cmake -S "$LIB_DIRECTORY_SOURCE" -B "$LIB_DIRECTORY_BUILD" $LIB_CMAKE_FLAGS $CMAKE_FLAGS_OUTPUT $CMAKE_FLAGS_ARCH $CMAKE_FLAGS_BUILD_TYPE -DCMAKE_SHARED_LIBRARY_SOVERSION="" -DCMAKE_SHARED_LIBRARY_VERSION="" -DSO_VERSION_MAJOR="" -DSO_VERSION="" -DDYLIB_COMPAT_VERSION="" -DDYLIB_CURRENT_VERSION=""
+    cmake -S "$LIB_DIRECTORY_SOURCE" -B "$LIB_DIRECTORY_BUILD" $LIB_CMAKE_FLAGS $CMAKE_FLAGS_OUTPUT $CMAKE_FLAGS_ARCH $CMAKE_FLAGS_BUILD_TYPE
     if [[ $? -ne 0 ]]; then
         echo "Building library '$LIB_NAME' ($BUILD_TYPE) failed: CMake was not able to generate build files" >&2
         exit 1
@@ -221,24 +221,32 @@ function build_SDL3_image() {
 function copy_files() {
     echo "Copying files..."
 
-    DIRECTORY_LIB_BUILD="$DIRECTORY_OUTPUT/lib"
-    DIRECTORY_LIB="$DIRECTORY/../lib/$RID"
-    if [[ -d "$DIRECTORY_LIB" ]]; then
-        rm -r "$DIRECTORY_LIB"
-    fi
-    mkdir -p "$DIRECTORY_LIB"
+    case $RID in
+        win*)
+            local DIRECTORY_COPY_SOURCE="$DIRECTORY_OUTPUT/bin"
+            ;;
+        *)
+            local DIRECTORY_COPY_SOURCE="$DIRECTORY_OUTPUT/lib"
+            ;;
+    esac
 
-    find "$DIRECTORY_LIB_BUILD" -type f \( -name "*.dll" -o -name "*.dylib" -o -name "*.so" \) | while read -r FILE_PATH; do
-        RELATIVE_PATH="${FILE_PATH#$DIRECTORY_LIB_BUILD/}"
-        TARGET_FILE_PATH="$DIRECTORY_LIB/$RELATIVE_PATH"
+    local DIRECTORY_COPY_DESTINATION="$DIRECTORY/../lib/$RID"
+    if [[ -d "$DIRECTORY_COPY_DESTINATION" ]]; then
+        rm -r "$DIRECTORY_COPY_DESTINATION"
+    fi
+    mkdir -p "$DIRECTORY_COPY_DESTINATION"
+
+    find "$DIRECTORY_COPY_SOURCE" -type f \( -name "*.dll" -o -name "*.dylib" -o -name "*.so" \) | while read -r FILE_PATH; do
+        local RELATIVE_PATH="${FILE_PATH#$DIRECTORY_COPY_SOURCE/}"
+        local TARGET_FILE_PATH="$DIRECTORY_COPY_DESTINATION/$RELATIVE_PATH"
         mkdir -p "$(dirname "$TARGET_FILE_PATH")"
         echo "Copying file '$FILE_PATH' to '$TARGET_FILE_PATH'"
         cp -p "$FILE_PATH" "$TARGET_FILE_PATH"
     done
 
-    find "$DIRECTORY_LIB_BUILD" -type l \( -name "*.dll" -o -name "*.dylib" -o -name "*.so" \) | while read -r FILE_PATH; do
-        RELATIVE_PATH="${FILE_PATH#$DIRECTORY_LIB_BUILD/}"
-        TARGET_FILE_PATH="$DIRECTORY_LIB/$RELATIVE_PATH"
+    find "$DIRECTORY_COPY_SOURCE" -type l \( -name "*.dll" -o -name "*.dylib" -o -name "*.so" \) | while read -r FILE_PATH; do
+        local RELATIVE_PATH="${FILE_PATH#$DIRECTORY_COPY_SOURCE/}"
+        local TARGET_FILE_PATH="$DIRECTORY_COPY_DESTINATION/$RELATIVE_PATH"
         mkdir -p "$(dirname "$TARGET_FILE_PATH")"
         echo "Copying symlink '$FILE_PATH' to '$TARGET_FILE_PATH'"
         cp -p "$FILE_PATH" "$TARGET_FILE_PATH"
