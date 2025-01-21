@@ -11,8 +11,16 @@
     "../../ext/SDL/include/SDL3/SDL.h",
     "../../ext/SDL/include/SDL3/SDL_begin_code.h"
   ],
-  "ignoredMacroObjects": [],
-  "ignoredFunctions": [],
+  "allowedNames": [
+    "^IMG_.*$",
+    "^SDL_IMAGE_.*$",
+    "COMMENT: Function Pointers",
+    ".* (.*)$"
+  ],
+  "blockedNames": [
+    "^.*_[hH]_$",
+    "^(struct |enum )?SDL_(?!IMAGE_).*$"
+  ],
   "targetPlatforms": {
     "windows": {
       "x86_64-pc-windows-msvc": {},

@@ -41,23 +41,23 @@ jobs:
           key: "ffi-${{ matrix.platform.rid }}_${{ hashFiles('bindgen/**/*') }}_${{ hashFiles('ext/SDL/**/*') }}_${{ steps.get-version-c2ffi.outputs.VERSION }}"
 
       - name: "Read C code: Linux dependencies"
-        if: matrix.platform.rid == 'linux' && steps.cache-ffi.outputs.cache-hit != 'true'
+        if: matrix.platform.rid == 'linux' # && steps.cache-ffi.outputs.cache-hit != 'true'
         run: sudo apt-get install gcc-aarch64-linux-gnu
 
       - name: "Setup .NET"
         uses: actions/setup-dotnet@v3
-        if: steps.cache-ffi.outputs.cache-hit != 'true'
+        # if: steps.cache-ffi.outputs.cache-hit != 'true'
         with:
           dotnet-version: '9.x'
 
       - name: "Install c2ffi"
-        if: steps.cache-ffi.outputs.cache-hit != 'true'
+        # if: steps.cache-ffi.outputs.cache-hit != 'true'
         shell: bash
-        run: dotnet tool install -g bottlenoselabs.c2ffi.Tool
+        run: dotnet tool install -g bottlenoselabs.c2ffi.tool
 
       - name: "Read C code: extract FFI ${{ matrix.platform.name }}"
         shell: bash
-        if: steps.cache-ffi.outputs.cache-hit != 'true'
+        # if: steps.cache-ffi.outputs.cache-hit != 'true'
         run: cd ./bindgen && ./bindgen-01-extract.sh
 
       - name: "Upload FFIs"
@@ -103,7 +103,7 @@ jobs:
 
       - name: "Install c2ffi"
         shell: bash
-        run: dotnet tool install -g bottlenoselabs.c2ffi.Tool
+        run: dotnet tool install -g bottlenoselabs.c2ffi.tool
 
       - name: "Generate cross-platform FFI"
         shell: bash
