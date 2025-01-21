@@ -67,7 +67,7 @@ jobs:
 
   build-dotnet-job:
     name: "Build .NET solution"
-    needs: [build-native-library-job]
+    needs: [build-native-libraries-job]
     runs-on: ubuntu-latest
     steps:
 
