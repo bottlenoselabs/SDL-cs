@@ -8,6 +8,9 @@
     <RootNamespace>bottlenoselabs.SDL.Interop</RootNamespace>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="Interop.SDL_image" />
+  </ItemGroup>
 
   <!-- C# Source Generators -->
   <PropertyGroup>

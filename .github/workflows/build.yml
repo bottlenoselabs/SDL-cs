@@ -40,15 +40,15 @@ jobs:
         id: cache-libs
         uses: actions/cache@v3
         with:
-          path: "./lib"
-          key: "native-libraries_${{ matrix.platform.rid }}_${{ hashFiles('ext/**/*') }} }}"
+          path: "./lib/${{ matrix.platform.rid }}"
+          key: "native-libraries_${{ matrix.platform.rid }}_${{ hashFiles('ext/**/*') }}"
 
       # https://wiki.libsdl.org/SDL3/README/linux#build-dependencies
-      - name: "Install dependencies linux-x64"
+      - name: "Install dependencies: linux-x64"
         if: matrix.platform.rid == 'linux-x64' && steps.cache-libs.outputs.cache-hit != 'true'
         run: sudo apt-get install build-essential git make pkg-config cmake ninja-build nasm gnome-desktop-testing libasound2-dev libpulse-dev libaudio-dev libjack-dev libsndio-dev libx11-dev libxext-dev libxrandr-dev libxcursor-dev libxfixes-dev libxi-dev libxss-dev libxkbcommon-dev libdrm-dev libgbm-dev libgl1-mesa-dev libgles2-mesa-dev libegl1-mesa-dev libdbus-1-dev libibus-1.0-dev libudev-dev fcitx-libs-dev libpipewire-0.3-dev libwayland-dev libdecor-0-dev liburing-dev
 
-      - name: "Install dependencies osx-x64"
+      - name: "Install dependencies: osx-x64"
         if: matrix.platform.rid == 'osx-x64' && steps.cache-libs.outputs.cache-hit != 'true'
         run: brew install nasm
 
@@ -78,25 +78,31 @@ jobs:
       - name: "Clone Git repository"
         uses: actions/checkout@master
 
-      - name: "Download native library SDL3 (win-x64)"
+      - name: "Download native libraries: win-x64"
         uses: actions/download-artifact@v4
         with:
           name: "native-libraries-win-x64"
           path: "./lib/win-x64"
 
-      - name: "Download native library SDL (osx-x64)"
+      - name: "Download native libraries: win-arm64"
+        uses: actions/download-artifact@v4
+        with:
+          name: "native-libraries-win-arm64"
+          path: "./lib/win-arm64"
+
+      - name: "Download native libraries: osx-x64"
         uses: actions/download-artifact@v4
         with:
           name: "native-libraries-osx-x64"
           path: "./lib/osx-x64"
 
-      - name: "Download native library SDL (osx-arm64)"
+      - name: "Download native libraries: osx-arm64"
         uses: actions/download-artifact@v4
         with:
           name: "native-libraries-osx-arm64"
           path: "./lib/osx-arm64"
 
-      - name: "Download native library SDL (linux-x64)"
+      - name: "Download native libraries: linux-x64"
         uses: actions/download-artifact@v4
         with:
           name: "native-libraries-linux-x64"

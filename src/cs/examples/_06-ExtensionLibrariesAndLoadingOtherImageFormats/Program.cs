@@ -14,6 +14,9 @@ public static unsafe class Program
 
     private static int Main()
     {
+        Interop.SDL.Initialize();
+        Interop.SDL_image.Initialize();
+
         Initialize();
         TryLoadMedia();
         Loop();
