@@ -11,6 +11,8 @@ public static unsafe class Program
 
     private static int Main()
     {
+        Interop.SDL.Initialize();
+
         Initialize();
         TryLoadMedia();
         Loop();
@@ -105,7 +107,7 @@ public static unsafe class Program
     {
         var filePath = Path.Combine(AppContext.BaseDirectory, fileName);
 
-        using var filePathC = (CString)fileName;
+        using var filePathC = (CString)filePath;
         var loadedSurface = SDL_LoadBMP(filePathC);
         if (loadedSurface == null)
         {

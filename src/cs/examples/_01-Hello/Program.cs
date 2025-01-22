@@ -2,11 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the Git repository root directory for full license information.
 
 using System;
-using System.Runtime.CompilerServices;
-using Interop.Runtime;
-using static Interop.SDL;
-
-[assembly: DisableRuntimeMarshalling]
 
 namespace SDL.Examples;
 
@@ -16,6 +11,8 @@ internal static unsafe class Program
 
     private static int Main()
     {
+        Initialize();
+
         if (!SDL_Init(SDL_INIT_VIDEO))
         {
             Console.Error.WriteLine("Failed to initialize SDL. SDL_Error: " + SDL_GetError());
@@ -59,5 +56,4 @@ internal static unsafe class Program
 
         return 0;
     }
-#pragma warning restore IDE0210
 }
