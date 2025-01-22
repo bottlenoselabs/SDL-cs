@@ -21,7 +21,7 @@ function get_dotnet_rid() {
         *)              local RID_OS="UNKNOWN:${UNAME_OS_STRING}"
     esac
     local UNAME_ARCH_STRING="$(uname -m)"
-        case "${UNAME_ARCH_STRING}" in
+    case "${UNAME_ARCH_STRING}" in
         x86_64)         local RID_ARCH="x64";;
         arm64)          local RID_ARCH="arm64";;
         *)              local RID_ARCH="UNKNOWN:${UNAME_ARCH_STRING}"
@@ -251,6 +251,19 @@ function copy_files() {
         echo "Copying symlink '$FILE_PATH' to '$TARGET_FILE_PATH'"
         cp -p "$FILE_PATH" "$TARGET_FILE_PATH"
     done
+
+    # NOTE: SDL for macOS has some unwanted version suffixes
+    if [[ $RID == 'osx-x64' || $RID == 'osx-arm64' ]]; then
+        rm "$DIRECTORY_COPY_DESTINATION/libSDL3.dylib"
+        mv "$DIRECTORY_COPY_DESTINATION/libSDL3.0.dylib" "$DIRECTORY_COPY_DESTINATION/libSDL3.dylib"
+        install_name_tool -id @rpath/libSDL3.dylib $DIRECTORY_COPY_DESTINATION/libSDL3.dylib
+
+        rm "$DIRECTORY_COPY_DESTINATION/libSDL3_image.dylib"
+        rm "$DIRECTORY_COPY_DESTINATION/libSDL3_image.0.dylib"
+        mv "$DIRECTORY_COPY_DESTINATION/libSDL3_image.0.1.0.dylib" "$DIRECTORY_COPY_DESTINATION/libSDL3_image.dylib"
+        install_name_tool -id @rpath/libSDL3_image.dylib $DIRECTORY_COPY_DESTINATION/libSDL3_image.dylib
+        install_name_tool -change @rpath/libSDL3.0.dylib @rpath/libSDL3.dylib $DIRECTORY_COPY_DESTINATION/libSDL3_image.dylib
+    fi
 
     echo "Copying files... done"
 }
