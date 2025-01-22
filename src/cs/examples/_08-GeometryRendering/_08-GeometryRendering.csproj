@@ -6,18 +6,11 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <ImplicitUsings>true</ImplicitUsings>
     <RootNamespace>SDL.Examples</RootNamespace>
-    <AssemblyName>07-TextureLoadingAndRendering</AssemblyName>
+    <AssemblyName>08-GeometryRendering</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\production\Interop.SDL\Interop.SDL.csproj" />
-    <ProjectReference Include="..\..\production\Interop.SDL_image\Interop.SDL_image.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="*.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>
