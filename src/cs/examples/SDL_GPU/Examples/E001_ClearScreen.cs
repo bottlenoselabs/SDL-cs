@@ -7,7 +7,7 @@ namespace SDL_GPU.Examples;
 
 [UsedImplicitly]
 // ReSharper disable once InconsistentNaming
-public unsafe sealed class E001_ClearScreen : ExampleGpu
+public sealed unsafe class E001_ClearScreen : ExampleGpu
 {
     public E001_ClearScreen()
         : base("1 - Clear Screen")
