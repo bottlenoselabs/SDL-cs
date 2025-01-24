@@ -15,6 +15,7 @@
 
 # Image files
 *.bmp binary
+*.png binary
 
 # Shell scripts require LF
 *.sh text eol=lf
