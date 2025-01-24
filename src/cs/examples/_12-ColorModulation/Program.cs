@@ -5,7 +5,7 @@ namespace SDL.Examples;
 
 public static class Program
 {
-    // https://lazyfoo.net/tutorials/SDL/10_color_keying/index.php
+    // https://lazyfoo.net/tutorials/SDL/12_color_modulation/index.php
 
     private static int Main()
     {
