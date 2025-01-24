@@ -18,6 +18,11 @@ public sealed unsafe class E001_ClearScreenMultipleWindow : ExampleGpu
 
     public override bool Initialize()
     {
+        if (!base.Initialize())
+        {
+            return false;
+        }
+
         using var windowNameCString = (CString)$"{Name} (2)";
         _secondWindow = SDL_CreateWindow(windowNameCString, 640, 480, 0);
         if (_secondWindow == null)
