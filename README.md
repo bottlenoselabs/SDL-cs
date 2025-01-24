@@ -26,7 +26,7 @@ These goals might not align to your goals or your organization's goals to which 
 1. Download and install [.NET 9](https://dotnet.microsoft.com/download).
 2. Fork the repository using GitHub or clone the repository manually with submodules: `git clone --recurse-submodules https://github.com/bottlenoselabs/SDL3-cs`.
 3. Build the native shared libraries (SDL and SDL extensions) by running [`ext/build-native-libraries.sh`](./ext/build-native-libraries.sh). To execute `.sh` (Bash) scripts on Windows, use Git Bash which can be installed with Git itself: https://git-scm.com/download/win. The `build-native-libraries.sh` script requires that CMake and SDL build dependencies ([see Linux docs for required packages](https://wiki.libsdl.org/SDL3/README/linux)) are installed and in your environment variable `PATH`.
-4. Run the Hello example to test basic usage: `dotnet run --project ./src/cs/examples/_01-Hello/_01-Hello.csproj`. You can find more examples in [`./src/cs/examples/`](./src/cs/examples/).
+4. Run the `SDL_GPU` example suite to test basic usage: `dotnet run --project ./src/cs/examples/SDL_GPU/SDL_GPU.csproj`. Use '1' and '2' on your keyboard to move between examples in the suite. You can find more suite of examples in [`./src/cs/examples/`](./src/cs/examples/) both for LazyFoo and `SDL_GPU`.
 5. Add the following C# projects to your solution and reference them in one of your C# projects:
     - `src/cs/production/Interop.SDL/Interop.SDL.csproj`
     - `src/cs/production/Interop.SDL_image/Interop.SDL_image.csproj`
