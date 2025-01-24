@@ -11,8 +11,8 @@ public sealed unsafe class App : IDisposable
     public SDL_Window* Window = null;
     public SDL_Renderer* Renderer = null;
 
-    public Texture TextureFoo = null!;
-    public Texture TextureBackground = null!;
+    public Texture TextureSpriteSheet = null!;
+    public SDL_Rect[] SpriteSourceRectangles = new SDL_Rect[4];
 
     public void Run()
     {
@@ -24,8 +24,7 @@ public sealed unsafe class App : IDisposable
 
     public void Dispose()
     {
-        TextureFoo.Dispose();
-        TextureBackground.Dispose();
+        TextureSpriteSheet.Dispose();
 
         SDL_DestroyRenderer(Renderer);
         Renderer = null;
@@ -45,7 +44,7 @@ public sealed unsafe class App : IDisposable
         SDL_Window* window;
         SDL_Renderer* renderer;
         if (!SDL_CreateWindowAndRenderer(
-                (CString)"SDL Example: Color Keying"u8,
+                (CString)"SDL Example: Clip Rendering and Sprite Sheets"u8,
                 ScreenWidth,
                 ScreenHeight,
                 0,
@@ -62,11 +61,36 @@ public sealed unsafe class App : IDisposable
 
     private void LoadMedia()
     {
-        TextureFoo = new Texture(Renderer);
-        TextureFoo.LoadFromFile("foo.png");
+        TextureSpriteSheet = new Texture(Renderer);
+        TextureSpriteSheet.LoadFromFile("dots.png");
 
-        TextureBackground = new Texture(Renderer);
-        TextureBackground.LoadFromFile("background.png");
+        // Set top left sprite
+        ref var topLeftSprite = ref SpriteSourceRectangles[0];
+        topLeftSprite.x = 0;
+        topLeftSprite.y = 0;
+        topLeftSprite.w = 100;
+        topLeftSprite.h = 100;
+
+        // Set top right sprite
+        ref var topRightSprite = ref SpriteSourceRectangles[1];
+        topRightSprite.x = 100;
+        topRightSprite.y = 0;
+        topRightSprite.w = 100;
+        topRightSprite.h = 100;
+
+        // Set bottom left sprite
+        ref var bottomLeftSprite = ref SpriteSourceRectangles[2];
+        bottomLeftSprite.x = 0;
+        bottomLeftSprite.y = 100;
+        bottomLeftSprite.w = 100;
+        bottomLeftSprite.h = 100;
+
+        // Set bottom right sprite
+        ref var bottomRightSprite = ref SpriteSourceRectangles[3];
+        bottomRightSprite.x = 100;
+        bottomRightSprite.y = 100;
+        bottomRightSprite.w = 100;
+        bottomRightSprite.h = 100;
     }
 
     private void Loop()
@@ -97,11 +121,29 @@ public sealed unsafe class App : IDisposable
         SDL_SetRenderDrawColor(Renderer, 0xFF, 0xFF, 0xFF, 0xFF);
         SDL_RenderClear(Renderer);
 
-        // Render background texture to screen
-        TextureBackground.Render(0, 0);
+        // Render top left sprite
+        TextureSpriteSheet.Render(
+            0,
+            0,
+            SpriteSourceRectangles[0]);
 
-        // Render Foo' to the screen
-        TextureFoo.Render(240, 190);
+        // Render top right sprite
+        TextureSpriteSheet.Render(
+            ScreenWidth - SpriteSourceRectangles[1].w,
+            0,
+            SpriteSourceRectangles[1]);
+
+        // Render bottom left sprite
+        TextureSpriteSheet.Render(
+            0,
+            ScreenHeight - SpriteSourceRectangles[2].h,
+            SpriteSourceRectangles[2]);
+
+        // Render bottom right sprite
+        TextureSpriteSheet.Render(
+            ScreenWidth - SpriteSourceRectangles[3].w,
+            ScreenHeight - SpriteSourceRectangles[3].h,
+            SpriteSourceRectangles[3]);
 
         // Update screen
         SDL_RenderPresent(Renderer);
