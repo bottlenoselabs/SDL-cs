@@ -15,7 +15,7 @@ public sealed unsafe class Texture : IDisposable
     public int Height { get; private set; }
 
     public bool LoadFromFile(
-        SDL_Renderer* renderer, string assetsDirectory, string fileName, SDL_Color? colorKey = null)
+        SDL_Renderer* renderer, string assetsDirectory, string fileName, Rgba8U? colorKey = null)
     {
         var filePath = Path.Combine(assetsDirectory, fileName);
         using var filePathC = (CString)filePath;
@@ -31,7 +31,7 @@ public sealed unsafe class Texture : IDisposable
         {
             var colorKey1 = colorKey.Value;
             SDL_SetSurfaceColorKey(
-                surface, true, SDL_MapSurfaceRGB(surface, colorKey1.r, colorKey1.g, colorKey1.b));
+                surface, true, SDL_MapSurfaceRGB(surface, colorKey1.R, colorKey1.G, colorKey1.B));
         }
 
         var texture = SDL_CreateTextureFromSurface(renderer, surface);

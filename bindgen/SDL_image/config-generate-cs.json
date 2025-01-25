@@ -2,7 +2,7 @@
   "targetFrameworkMoniker": "net9.0",
   "inputFilePath": "./ffi-x/cross-platform.json",
   "outputFileDirectory": "./../../src/cs/production/Interop.SDL_image/Generated",
-  "namespaceName": "Interop",
+  "namespaceName": "bottlenoselabs.Interop",
   "className": "SDL_image",
   "libraryName": "SDL3_image",
   "mappedNames": [
@@ -14,14 +14,11 @@
     { "source": "Sint8", "target": "sbyte" },
     { "source": "Sint16", "target": "short" },
     { "source": "Sint32", "target": "int" },
-    { "source": "Sint64", "target": "long" }
+    { "source": "Sint64", "target": "long" },
+    { "source": "SDL_Color", "target": "Rgba8U" },
+    { "source": "SDL_FColor", "target": "Rgba32F" }
   ],
   "isEnabledGeneratingRuntimeCode": false,
   "isEnabledVerifyCSharpCodeCompiles": false,
-  "ignoredNames": [
-    "SDL_IOStream",
-    "SDL_Renderer",
-    "SDL_SurfaceFlags"
-  ],
   "headerCodeRegionFilePath": "./header.cs"
 }

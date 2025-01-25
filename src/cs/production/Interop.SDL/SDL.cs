@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 
 // ReSharper disable once CheckNamespace
-namespace Interop;
+namespace bottlenoselabs.Interop;
 
 // ReSharper disable once InconsistentNaming
 public static partial class SDL

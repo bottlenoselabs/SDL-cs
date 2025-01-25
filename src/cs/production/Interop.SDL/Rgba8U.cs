@@ -5,7 +5,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using JetBrains.Annotations;
 
-namespace bottlenoselabs.SDL.Interop;
+namespace bottlenoselabs.Interop;
 
 /// <inheritdoc />
 /// <summary>

@@ -45,6 +45,8 @@
     "^SDL_LogMessageV$",
     "COMMENT: MacroObjects @ SDL/include/SDL3/SDL_pixels.h",
     "^SDL_F?Colour$",
+    "COMMENT: Structs @ SDL/include/SDL3/SDL_pixels.h",
+    "^(struct )?SDL_F?Color$",
     "COMMENT: MacroObjects @ SDL/include/SDL3/SDL_pen.h",
     "^SDL_PEN_.*_MASKS?$",
     "COMMENT: MacroObjects @ SDL/include/SDL3/SDL_stdinc.h",

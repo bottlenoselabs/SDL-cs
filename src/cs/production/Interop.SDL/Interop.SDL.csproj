@@ -5,7 +5,7 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <RootNamespace>bottlenoselabs.SDL.Interop</RootNamespace>
+    <RootNamespace>bottlenoselabs.Interop</RootNamespace>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   
@@ -23,6 +23,9 @@
   <ItemGroup>
     <Compile Update="Rgba8U.Colors.cs">
       <DependentUpon>Rgba8U.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Rgba32F.Colors.cs">
+      <DependentUpon>Rgba32F.cs</DependentUpon>
     </Compile>
   </ItemGroup>
 

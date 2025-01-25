@@ -48,7 +48,7 @@ public sealed unsafe class E001_ClearScreen : ExampleGpu
         {
             SDL_GPUColorTargetInfo colorTargetInfo = default;
             colorTargetInfo.texture = textureSwapchain;
-            colorTargetInfo.clear_color = new SDL_FColor { r = 0.58f, g = 0.80f, b = 0.92f, a = 1.0f };
+            colorTargetInfo.clear_color = new Rgba32F { R = 0.58f, G = 0.80f, B = 0.92f, A = 1.0f };
             colorTargetInfo.load_op = SDL_GPULoadOp.SDL_GPU_LOADOP_CLEAR;
             colorTargetInfo.store_op = SDL_GPUStoreOp.SDL_GPU_STOREOP_STORE;
 
