@@ -43,29 +43,10 @@ function get_dotnet_rid() {
 
 function validate_rid {
     if [[ ! -z $DESIRED_RID ]]; then
-        if [[ $DESIRED_RID == 'win-x64' || $DESIRED_RID == 'win-arm64' ]]; then
-            if [[ $RID == 'win-x64' || $RID == 'win-arm64' ]]; then
-                RID="$DESIRED_RID"
-            else
-                echo "RID '$DESIRED_RID' is not known or can not be be used for Windows. Please use one of the following for Windows: 'win-x64', 'win-arm64'" >&2
-                exit 1
-            fi
-        elif [[ $DESIRED_RID == 'osx-x64' || $DESIRED_RID == 'osx-arm64' ]]; then
-            if [[ $RID == 'osx-x64' || $RID == 'osx-arm64' ]]; then
-                RID="$DESIRED_RID"
-            else
-                echo "RID '$DESIRED_RID' is not known or can not be be used for macOS. Please use one of the following for macOS: 'osx-x64', 'osx-arm64'" >&2
-                exit 1
-            fi
-        elif [[ $DESIRED_RID == 'linux-x64' || $DESIRED_RID == 'linux-arm64' ]]; then
-            if [[ $RID == 'linux-x64' || $RID == 'linux-arm64' ]]; then
-                RID="$DESIRED_RID"
-            else
-                echo "RID '$DESIRED_RID' is not known or can not be be used for Linux. Please use one of the following for Linux: 'linux-x64', 'linux-arm64'" >&2
-                exit 1
-            fi
+        if [[ $DESIRED_RID == 'win-x64' || $DESIRED_RID == 'win-arm64' || $DESIRED_RID == 'osx-x64' || $DESIRED_RID == 'osx-arm64' || $DESIRED_RID == 'linux-x64' || $DESIRED_RID == 'linux-arm64' ]]; then
+            RID="$DESIRED_RID"
         else
-            echo "RID '$DESIRED_RID' is not known. Please use one of the following for the appropriate operating system: 'win-x64', 'win-arm64', 'osx-x64', 'osx-arm64', 'linux-x64', 'linux-arm64'" >&2
+            echo "RID '$DESIRED_RID' is not known. Please use one of the following: 'win-x64', 'win-arm64', 'osx-x64', 'osx-arm64', 'linux-x64', 'linux-arm64'" >&2
             exit 1
         fi
     fi
@@ -112,10 +93,34 @@ gh api \
 # rm "$TEMP_FILE_PATH_JSON_ARTIFACTS"
 # rm "$TEMP_FILE_PATH_ARCHIVE_MACOS"
 
+
 function download {
     echo "Downloading shadercross archive ($RID)..."
 
-    if [[ $RID == 'osx-x64' || $RID == 'osx-arm64' ]]; then
+    if [[ $RID == 'win-arm64' ]]; then
+        echo "There is no win-arm64 download for shadercross yet." >&2
+        exit 1
+    fi
+
+    if [[ $RID == 'win-x64' ]]; then
+        FILE_PATH_ARCHIVE="$DIRECTORY_CONTAINER_ARCHIVES/SDL3_shadercross-3.0.0-windows-VC-x64.zip"
+
+        if [[ ! -f "$FILE_PATH_ARCHIVE" ]]; then
+            cd "$DIRECTORY_CONTAINER_ARCHIVES"
+            gh run download 12958770530 -n "SDL3_shadercross-VC-x64" --repo "libsdl-org/SDL_shadercross"
+            cd "$DIRECTORY_CURRENT"
+
+            if [[ ! -f "$FILE_PATH_ARCHIVE" ]]; then
+                echo "Downloading shadercross archive ($RID)... failed" >&2
+                exit 1
+            else
+                echo "Downloading shadercross archive ($RID)... done"
+            fi
+        else
+            echo "Downloading shadercross archive ($RID)... skipped"
+        fi
+
+    elif [[ $RID == 'osx-x64' || $RID == 'osx-arm64' ]]; then
         FILE_PATH_ARCHIVE="$DIRECTORY_CONTAINER_ARCHIVES/SDL3_shadercross-3.0.0-darwin-arm64-x64.tar.gz"
 
         if [[ ! -f "$FILE_PATH_ARCHIVE" ]]; then
@@ -125,13 +130,16 @@ function download {
 
             if [[ ! -f "$FILE_PATH_ARCHIVE" ]]; then
                 echo "Downloading shadercross archive ($RID)... failed" >&2
-            exit 1
+                exit 1
             else
                 echo "Downloading shadercross archive ($RID)... done"
             fi
         else
             echo "Downloading shadercross archive ($RID)... skipped"
         fi
+    elif [[ $RID == 'linux-x64' || $RID == 'linux-arm64' ]]; then
+        echo "Not yet implemented." >&2
+        exit 1
     fi
 }
 
@@ -165,7 +173,13 @@ function copy_files() {
     mkdir -p "$DIRECTORY_COPY_DESTINATION"
 
     cd "$DIRECTORY_COPY_SOURCE_LIB"
-    if [[ $RID == 'osx-x64' || $RID == 'osx-arm64' ]]; then
+    if [[ $RID == 'win-x64' || $RID == 'win-arm64' ]]; then
+        cp "$DIRECTORY_COPY_SOURCE_BIN/shadercross.exe" "$DIRECTORY_COPY_DESTINATION/shadercross.exe"
+        cp "$DIRECTORY_COPY_SOURCE_BIN/dxil.dll" "$DIRECTORY_COPY_DESTINATION/dxil.dll"
+        cp "$DIRECTORY_COPY_SOURCE_BIN/dxcompiler.dll" "$DIRECTORY_COPY_DESTINATION/dxcompiler.dll"
+        cp "$DIRECTORY_COPY_SOURCE_BIN/spirv-cross-c-shared.dll" "$DIRECTORY_COPY_DESTINATION/spirv-cross-c-shared.dll"
+        cp "$DIRECTORY_COPY_SOURCE_BIN/SDL3_shadercross.dll" "$DIRECTORY_COPY_DESTINATION/SDL3_shadercross.dll"
+    elif [[ $RID == 'osx-x64' || $RID == 'osx-arm64' ]]; then
         cp "$DIRECTORY_COPY_SOURCE_BIN/shadercross" "$DIRECTORY_COPY_DESTINATION/shadercross"
         install_name_tool -rpath @executable_path/../lib @executable_path "$DIRECTORY_COPY_DESTINATION/shadercross"
 
@@ -193,6 +207,9 @@ function copy_files() {
             lipo "$DIRECTORY_COPY_DESTINATION/libspirv-cross-c-shared.dylib" -remove x86_64 -output "$DIRECTORY_COPY_DESTINATION/libspirv-cross-c-shared.dylib"
             lipo "$DIRECTORY_COPY_DESTINATION/libdxcompiler.dylib" -remove x86_64 -output "$DIRECTORY_COPY_DESTINATION/libdxcompiler.dylib"
         fi
+    elif [[ $RID == 'linux-x64' || $RID == 'linux-arm64' ]]; then
+        echo "Not yet implemented." >&2
+        exit 1
     fi
     cd "$DIRECTORY_CURRENT"
 
