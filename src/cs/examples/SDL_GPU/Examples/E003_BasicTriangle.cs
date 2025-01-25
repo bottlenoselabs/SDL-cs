@@ -26,11 +26,6 @@ public sealed unsafe class E003_BasicTriangle : ExampleGpu
     private bool _isEnabledSmallViewport;
     private bool _isEnabledScissorRectangle;
 
-    public E003_BasicTriangle()
-        : base("3 - Basic Triangle")
-    {
-    }
-
     public override bool Initialize()
     {
         if (!base.Initialize())

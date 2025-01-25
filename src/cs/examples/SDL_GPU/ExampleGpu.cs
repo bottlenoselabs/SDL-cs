@@ -1,17 +1,27 @@
 // Copyright (c) Bottlenose Labs Inc. (https://github.com/bottlenoselabs). All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the Git repository root directory for full license information.
 
+using System.Text.RegularExpressions;
 using Common;
 
 namespace SDL_GPU;
 
-public abstract unsafe class ExampleGpu : ExampleBase
+public abstract unsafe partial class ExampleGpu : ExampleBase
 {
     public SDL_GPUDevice* Device { get; private set; }
 
-    protected ExampleGpu(string name, WindowOptions? windowOptions = null)
-        : base(name, windowOptions)
+    protected ExampleGpu(WindowOptions? windowOptions = null)
+        : base(windowOptions)
     {
+        Name = RegexExampleTypeName().Replace(GetType().Name, match =>
+        {
+            var number = match.Groups[1].Value.TrimStart('0');
+
+            // Insert spaces between camel case
+            var words = RegexWords().Replace(match.Groups[2].Value, "$1 $2");
+            return $"{number} - {words}";
+        });
+
         AssetsDirectory = Path.Combine(AppContext.BaseDirectory, "Assets");
     }
 
@@ -131,4 +141,10 @@ public abstract unsafe class ExampleGpu : ExampleBase
         shaderInfo._entrypoint.Dispose();
         return shader;
     }
+
+    [GeneratedRegex(@"E(\d+)_(\w+)")]
+    private static partial Regex RegexExampleTypeName();
+
+    [GeneratedRegex("([a-z])([A-Z])")]
+    private static partial Regex RegexWords();
 }

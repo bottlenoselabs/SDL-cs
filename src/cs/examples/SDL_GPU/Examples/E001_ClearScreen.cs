@@ -9,11 +9,6 @@ namespace SDL_GPU.Examples;
 // ReSharper disable once InconsistentNaming
 public sealed unsafe class E001_ClearScreen : ExampleGpu
 {
-    public E001_ClearScreen()
-        : base("1 - Clear Screen")
-    {
-    }
-
     public override void KeyboardEvent(SDL_KeyboardEvent e)
     {
     }
@@ -48,7 +43,7 @@ public sealed unsafe class E001_ClearScreen : ExampleGpu
         {
             SDL_GPUColorTargetInfo colorTargetInfo = default;
             colorTargetInfo.texture = textureSwapchain;
-            colorTargetInfo.clear_color = new Rgba32F { R = 0.58f, G = 0.80f, B = 0.92f, A = 1.0f };
+            colorTargetInfo.clear_color = Rgba32F.CornflowerBlue;
             colorTargetInfo.load_op = SDL_GPULoadOp.SDL_GPU_LOADOP_CLEAR;
             colorTargetInfo.store_op = SDL_GPUStoreOp.SDL_GPU_STOREOP_STORE;
 
