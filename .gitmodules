@@ -6,3 +6,7 @@
 	path = ext/SDL_image
 	url = https://github.com/libsdl-org/SDL_image
     branch = main
+[submodule "ext/SDL_shadercross"]
+	path = ext/SDL_shadercross
+	url = https://github.com/libsdl-org/SDL_shadercross.git
+    branch = main
