@@ -63,9 +63,7 @@ public sealed unsafe class E010_ColorKeying : ExampleLazyFoo
 
     private bool LoadAssets()
     {
-        var colorKey = new SDL_Color { r = 0, g = 0xFF, b = 0xFF };
-
-        if (!_textureFoo.LoadFromFile(Renderer, AssetsDirectory, "foo.png", colorKey))
+        if (!_textureFoo.LoadFromFile(Renderer, AssetsDirectory, "foo.png", Rgba8U.Cyan))
         {
             return false;
         }

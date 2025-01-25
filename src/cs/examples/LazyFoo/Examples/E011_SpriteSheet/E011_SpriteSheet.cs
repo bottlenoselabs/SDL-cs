@@ -80,9 +80,7 @@ public sealed unsafe class E011_SpriteSheet : ExampleLazyFoo
 
     private bool LoadAssets()
     {
-        var colorKey = new SDL_Color { r = 0, g = 0xFF, b = 0xFF };
-
-        if (!_textureDots.LoadFromFile(Renderer, AssetsDirectory, "dots.png", colorKey))
+        if (!_textureDots.LoadFromFile(Renderer, AssetsDirectory, "dots.png", Rgba8U.Cyan))
         {
             return false;
         }

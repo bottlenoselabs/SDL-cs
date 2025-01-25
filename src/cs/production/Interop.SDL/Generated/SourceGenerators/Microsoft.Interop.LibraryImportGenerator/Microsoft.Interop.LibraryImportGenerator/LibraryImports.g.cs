@@ -5660,7 +5660,7 @@ namespace bottlenoselabs.Interop
     public static unsafe partial class SDL
     {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_RenderGeometryRaw", ExactSpelling = true)]
-        public static extern partial global::Interop.Runtime.CBool SDL_RenderGeometryRaw(global::bottlenoselabs.Interop.SDL.SDL_Renderer* renderer, global::bottlenoselabs.Interop.SDL.SDL_Texture* texture, float* xy, int xy_stride, global::bottlenoselabs.Interop.SDL.SDL_FColor* color, int color_stride, float* uv, int uv_stride, int num_vertices, void* indices, int num_indices, int size_indices);
+        public static extern partial global::Interop.Runtime.CBool SDL_RenderGeometryRaw(global::bottlenoselabs.Interop.SDL.SDL_Renderer* renderer, global::bottlenoselabs.Interop.SDL.SDL_Texture* texture, float* xy, int xy_stride, global::bottlenoselabs.Interop.Rgba32F* color, int color_stride, float* uv, int uv_stride, int num_vertices, void* indices, int num_indices, int size_indices);
     }
 }
 namespace bottlenoselabs.Interop
@@ -6140,7 +6140,7 @@ namespace bottlenoselabs.Interop
     public static unsafe partial class SDL
     {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_SetGPUBlendants", ExactSpelling = true)]
-        public static extern partial void SDL_SetGPUBlendants(global::bottlenoselabs.Interop.SDL.SDL_GPURenderPass* render_pass, global::bottlenoselabs.Interop.SDL.SDL_FColor blend_constants);
+        public static extern partial void SDL_SetGPUBlendants(global::bottlenoselabs.Interop.SDL.SDL_GPURenderPass* render_pass, global::bottlenoselabs.Interop.Rgba32F blend_constants);
     }
 }
 namespace bottlenoselabs.Interop
@@ -6356,7 +6356,7 @@ namespace bottlenoselabs.Interop
     public static unsafe partial class SDL
     {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_SetPaletteColors", ExactSpelling = true)]
-        public static extern partial global::Interop.Runtime.CBool SDL_SetPaletteColors(global::bottlenoselabs.Interop.SDL.SDL_Palette* palette, global::bottlenoselabs.Interop.SDL.SDL_Color* colors, int firstcolor, int ncolors);
+        public static extern partial global::Interop.Runtime.CBool SDL_SetPaletteColors(global::bottlenoselabs.Interop.SDL.SDL_Palette* palette, global::bottlenoselabs.Interop.Rgba8U* colors, int firstcolor, int ncolors);
     }
 }
 namespace bottlenoselabs.Interop
