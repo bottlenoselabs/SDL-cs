@@ -8,8 +8,22 @@
     <RootNamespace>bottlenoselabs.SDL.Interop</RootNamespace>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
+  
+  <!-- Project references -->
   <ItemGroup>
     <InternalsVisibleTo Include="Interop.SDL_image" />
+  </ItemGroup>
+
+  <!-- NuGet package references -->
+  <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="2024.3.0" />
+  </ItemGroup>
+  
+  <!-- C# code file dependencies -->
+  <ItemGroup>
+    <Compile Update="Rgba8U.Colors.cs">
+      <DependentUpon>Rgba8U.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <!-- C# Source Generators -->
