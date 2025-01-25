@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the Git repository root directory for full license information.
 
 using System.Numerics;
-using bottlenoselabs.SDL.Interop;
 
 namespace SDL_GPU;
 

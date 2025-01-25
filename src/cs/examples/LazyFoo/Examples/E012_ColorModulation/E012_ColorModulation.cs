@@ -83,9 +83,7 @@ public sealed unsafe class E012_ColorModulation : ExampleLazyFoo
 
     private bool LoadAssets()
     {
-        var colorKey = new SDL_Color { r = 0, g = 0xFF, b = 0xFF };
-
-        if (!_texture.LoadFromFile(Renderer, AssetsDirectory, "colors.png", colorKey))
+        if (!_texture.LoadFromFile(Renderer, AssetsDirectory, "colors.png", Rgba8U.Cyan))
         {
             return false;
         }

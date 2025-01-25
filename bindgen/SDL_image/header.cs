@@ -1,1 +1,1 @@
-using static Interop.SDL;
+using static bottlenoselabs.Interop.SDL;

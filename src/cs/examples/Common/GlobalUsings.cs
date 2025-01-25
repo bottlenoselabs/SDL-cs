@@ -2,5 +2,5 @@
 // Licensed under the MIT license. See LICENSE file in the Git repository root directory for full license information.
 
 global using Interop.Runtime;
-global using static Interop.SDL;
-global using static Interop.SDL_image;
+global using static bottlenoselabs.Interop.SDL;
+global using static bottlenoselabs.Interop.SDL_image;

@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the Git repository root directory for full license information.
 
 using System.Numerics;
-using bottlenoselabs.SDL.Interop;
 using JetBrains.Annotations;
 
 namespace SDL_GPU.Examples;
@@ -97,7 +96,7 @@ public sealed unsafe class E004_BasicVertexBuffer : ExampleGpu
 
         var colorTargetInfo = default(SDL_GPUColorTargetInfo);
         colorTargetInfo.texture = textureSwapchain;
-        colorTargetInfo.clear_color = new SDL_FColor { r = 0f, g = 0f, b = 0f, a = 1.0f };
+        colorTargetInfo.clear_color = Rgba32F.White;
         colorTargetInfo.load_op = SDL_GPULoadOp.SDL_GPU_LOADOP_CLEAR;
         colorTargetInfo.store_op = SDL_GPUStoreOp.SDL_GPU_STOREOP_STORE;
 

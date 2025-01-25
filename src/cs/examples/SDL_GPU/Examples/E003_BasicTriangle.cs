@@ -140,7 +140,7 @@ public sealed unsafe class E003_BasicTriangle : ExampleGpu
         {
             SDL_GPUColorTargetInfo colorTargetInfo = default;
             colorTargetInfo.texture = textureSwapchain;
-            colorTargetInfo.clear_color = new SDL_FColor { r = 0f, g = 0f, b = 0f, a = 1.0f };
+            colorTargetInfo.clear_color = Rgba32F.Black;
             colorTargetInfo.load_op = SDL_GPULoadOp.SDL_GPU_LOADOP_CLEAR;
             colorTargetInfo.store_op = SDL_GPUStoreOp.SDL_GPU_STOREOP_STORE;
 
