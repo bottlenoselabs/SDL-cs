@@ -13,8 +13,16 @@
     <ProjectReference Include="..\Common\Common.csproj" />
   </ItemGroup>
 
+  <!-- Assets: images -->
   <ItemGroup>
-    <None Update="*.png">
+    <None Update="**/*.bmp;**/*.png;**/*.hdr;**/*.astc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <!-- Assets: compiled shaders -->
+  <ItemGroup>
+    <None Update="**/*.spv;**/*.msl;**/*.dxil">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
