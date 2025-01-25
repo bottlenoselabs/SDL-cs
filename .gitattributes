@@ -14,18 +14,26 @@
 *.targets text
 
 # Image files
-*.bmp   binary  # Bitmap Raster Image
-*.png   binary  # Portable Network Graphics Image
-*.hdr   binary  # High Dynamic Range Image
-*.astc  binary  # Adaptive Scalable Texture Compression Image
+## Bitmap Raster Image
+*.bmp   binary
+## Portable Network Graphics Image
+*.png   binary
+## High Dynamic Range Image
+*.hdr   binary
+## Adaptive Scalable Texture Compression Image
+*.astc  binary
 
 # Source shader files
-*.hlsl  text    # High-level shader language (DirectX)
+## High-level shader language (DirectX)
+*.hlsl  text
 
 # Compiled shader files
-*.dxil  binary  # DirectX intermediate language (GPU shader)
- *.msl  binary  # Metal shading language (GPU shader)
-*.spv   binary  # Standard portable intermediate representation (GPU shader)
+## DirectX intermediate language (GPU shader)
+*.dxil  binary
+## Metal shading language (GPU shader)
+*.msl   binary
+## Standard portable intermediate representation (GPU shader)
+*.spv   binary
 
 # Shell scripts require LF
 *.sh text eol=lf
