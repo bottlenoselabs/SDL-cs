@@ -181,6 +181,18 @@ function copy_files() {
         install_name_tool -id @rpath/libSDL3_shadercross.dylib $DIRECTORY_COPY_DESTINATION/libSDL3_shadercross.dylib
         install_name_tool -change @rpath/libSDL3.0.dylib @rpath/libSDL3.dylib $DIRECTORY_COPY_DESTINATION/libSDL3_shadercross.dylib
         install_name_tool -change @rpath/libspirv-cross-c-shared.0.dylib @rpath/libspirv-cross-c-shared.dylib $DIRECTORY_COPY_DESTINATION/libSDL3_shadercross.dylib
+
+        if [[ $RID == 'osx-x64' ]]; then
+            lipo "$DIRECTORY_COPY_DESTINATION/shadercross" -remove arm64 -output "$DIRECTORY_COPY_DESTINATION/shadercross"
+            lipo "$DIRECTORY_COPY_DESTINATION/libSDL3_shadercross.dylib" -remove arm64 -output "$DIRECTORY_COPY_DESTINATION/libSDL3_shadercross.dylib"
+            lipo "$DIRECTORY_COPY_DESTINATION/libspirv-cross-c-shared.dylib" -remove arm64 -output "$DIRECTORY_COPY_DESTINATION/libspirv-cross-c-shared.dylib"
+            lipo "$DIRECTORY_COPY_DESTINATION/libdxcompiler.dylib" -remove arm64 -output "$DIRECTORY_COPY_DESTINATION/libdxcompiler.dylib"
+        elif [[ $RID == 'osx-arm64' ]]; then
+            lipo "$DIRECTORY_COPY_DESTINATION/shadercross" -remove x86_64 -output "$DIRECTORY_COPY_DESTINATION/shadercross"
+            lipo "$DIRECTORY_COPY_DESTINATION/libSDL3_shadercross.dylib" -remove x86_64 -output "$DIRECTORY_COPY_DESTINATION/libSDL3_shadercross.dylib"
+            lipo "$DIRECTORY_COPY_DESTINATION/libspirv-cross-c-shared.dylib" -remove x86_64 -output "$DIRECTORY_COPY_DESTINATION/libspirv-cross-c-shared.dylib"
+            lipo "$DIRECTORY_COPY_DESTINATION/libdxcompiler.dylib" -remove x86_64 -output "$DIRECTORY_COPY_DESTINATION/libdxcompiler.dylib"
+        fi
     fi
     cd "$DIRECTORY_CURRENT"
 
