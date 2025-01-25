@@ -13,15 +13,14 @@ public abstract unsafe class ExampleBase
 
     private bool _hasQuit;
 
-    public string Name { get; }
+    public string Name { get; protected set; } = string.Empty;
 
     public int ScreenWidth { get; private set; }
 
     public int ScreenHeight { get; private set; }
 
-    protected ExampleBase(string name, WindowOptions? windowOptions = null)
+    protected ExampleBase(WindowOptions? windowOptions = null)
     {
-        Name = name;
         AssetsDirectory = AppContext.BaseDirectory;
         WindowOptions = windowOptions ?? new WindowOptions
         {

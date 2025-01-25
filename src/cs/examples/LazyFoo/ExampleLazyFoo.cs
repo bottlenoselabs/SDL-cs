@@ -7,7 +7,7 @@ namespace LazyFoo;
 
 public abstract unsafe class ExampleLazyFoo : ExampleBase
 {
-    private bool _createRenderer;
+    private readonly bool _createRenderer;
 
     public SDL_Renderer* Renderer { get; private set; }
 
@@ -15,8 +15,9 @@ public abstract unsafe class ExampleLazyFoo : ExampleBase
         string name,
         bool createRenderer = true,
         WindowOptions? windowOptions = null)
-        : base(name, windowOptions)
+        : base(windowOptions)
     {
+        Name = name;
         _createRenderer = createRenderer;
         AssetsDirectory = Path.Combine(AppContext.BaseDirectory, "Examples", GetType().Name);
     }

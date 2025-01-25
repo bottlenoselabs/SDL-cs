@@ -7,14 +7,9 @@ namespace SDL_GPU.Examples;
 
 [UsedImplicitly]
 // ReSharper disable once InconsistentNaming
-public sealed unsafe class E001_ClearScreenMultipleWindow : ExampleGpu
+public sealed unsafe class E002_ClearScreenMultipleWindow : ExampleGpu
 {
     private SDL_Window* _secondWindow;
-
-    public E001_ClearScreenMultipleWindow()
-        : base("2 - Clear Screen Multiple Window")
-    {
-    }
 
     public override bool Initialize()
     {
@@ -83,7 +78,7 @@ public sealed unsafe class E001_ClearScreenMultipleWindow : ExampleGpu
         {
             SDL_GPUColorTargetInfo colorTargetInfo = default;
             colorTargetInfo.texture = textureSwapchain;
-            colorTargetInfo.clear_color = new Rgba32F { R = 0.58f, G = 0.80f, B = 0.92f, A = 1.0f };
+            colorTargetInfo.clear_color = Rgba32F.CornflowerBlue;
             colorTargetInfo.load_op = SDL_GPULoadOp.SDL_GPU_LOADOP_CLEAR;
             colorTargetInfo.store_op = SDL_GPUStoreOp.SDL_GPU_STOREOP_STORE;
 
@@ -107,7 +102,7 @@ public sealed unsafe class E001_ClearScreenMultipleWindow : ExampleGpu
         {
             SDL_GPUColorTargetInfo colorTargetInfo = default;
             colorTargetInfo.texture = textureSwapchain;
-            colorTargetInfo.clear_color = new Rgba32F { R = 1.0f, G = 0.5f, B = 0.6f, A = 1.0f };
+            colorTargetInfo.clear_color = Rgba32F.Indigo;
             colorTargetInfo.load_op = SDL_GPULoadOp.SDL_GPU_LOADOP_CLEAR;
             colorTargetInfo.store_op = SDL_GPUStoreOp.SDL_GPU_STOREOP_STORE;
 
