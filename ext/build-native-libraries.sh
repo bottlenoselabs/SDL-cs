@@ -2,8 +2,8 @@
 # https://google.github.io/styleguide/shellguide.html
 
 if ! [[ -x "$(command -v cmake)" ]]; then
-  echo "Error: 'cmake' is not installed" >&2
-  exit 1
+    echo "Error: 'cmake' is not installed" >&2
+    exit 1
 fi
 
 # Get the .NET runtime identifier (RID) for the current operating system
@@ -74,6 +74,7 @@ function validate_rid {
 }
 
 function initialize() {
+    DIRECTORY_CURRENT=`pwd`
     # Get the directory where this script exists so that this script can be run from anywhere (e.g. doesn't have to be executed in the same directory)
     DIRECTORY="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
@@ -111,6 +112,12 @@ function build_library_cmake() {
         local LIB_DIRECTORY_BUILD="$DIRECTORY_CONTAINER_BUILDS/$LIB_NAME-$LIB_VERSION-$RID-$BUILD_TYPE"
     fi
 
+    if [ -d "$LIB_DIRECTORY_BUILD" ]; then
+        rm -r $LIB_DIRECTORY_BUILD
+    fi
+
+    mkdir -p $LIB_DIRECTORY_BUILD
+
     # Make the variables usable outside this function with unique names
     eval "LIB_${LIB_NAME_UPPERCASE}_DIRECTORY_BUILD=\"$LIB_DIRECTORY_BUILD\""
 
@@ -135,10 +142,6 @@ function build_library_cmake() {
         exit 1
     fi
 
-    if [ -d "$LIB_DIRECTORY_BUILD" ]; then
-        rm -r $LIB_DIRECTORY_BUILD
-    fi
-
     if [[ $BUILD_TYPE == 'debug' ]]; then
         local CMAKE_BUILD_TYPE="Debug"
     elif [[ $BUILD_TYPE == 'release' ]]; then
@@ -153,10 +156,10 @@ function build_library_cmake() {
     elif [[ $RID == 'win-arm64' ]]; then
         local CMAKE_FLAGS_ARCH="-A ARM64"
     elif [[ $RID == 'osx-x64' ]]; then
-        local CMAKE_FLAGS_ARCH="-D CMAKE_SYSTEM_NAME=Darwin -D CMAKE_OSX_ARCHITECTURES=x86_64 -D CMAKE_OSX_DEPLOYMENT_TARGET=10.11"
+        local CMAKE_FLAGS_ARCH="-D CMAKE_SYSTEM_NAME=Darwin -D CMAKE_OSX_ARCHITECTURES=x86_64 -D CMAKE_OSX_DEPLOYMENT_TARGET=13.0 -D CMAKE_C_FLAGS=-mmacosx-version-min=13.0 -D CMAKE_CXX_FLAGS=-mmacosx-version-min=13.0"
     elif [[ $RID == 'osx-arm64' ]]; then
         # https://en.wikipedia.org/wiki/MacOS_version_history says Apple Silicon is only supported on 11.0 or later
-        local CMAKE_FLAGS_ARCH="-D CMAKE_SYSTEM_NAME=Darwin -D CMAKE_OSX_ARCHITECTURES=arm64 -D CMAKE_OSX_DEPLOYMENT_TARGET=11.0"
+        local CMAKE_FLAGS_ARCH="-D CMAKE_SYSTEM_NAME=Darwin -D CMAKE_OSX_ARCHITECTURES=arm64 -D CMAKE_OSX_DEPLOYMENT_TARGET=13.0 -D CMAKE_C_FLAGS=-mmacosx-version-min=13.0 -D CMAKE_CXX_FLAGS=-mmacosx-version-min=13.0"
     elif [[ $RID == 'linux-x64' ]]; then
         local CMAKE_FLAGS_ARCH="-D CMAKE_SYSTEM_NAME=Linux -D CMAKE_SYSTEM_PROCESSOR=x86_64 -D CMAKE_C_COMPILER=gcc -D CMAKE_CXX_COMPILER=g++ -D CMAKE_C_FLAGS=-m64 -D CMAKE_CXX_FLAGS=-m64"
     elif [[ $RID == 'linux-arm64' ]]; then
@@ -190,7 +193,7 @@ function build_library_cmake() {
     echo "Building library '$LIB_NAME' ($BUILD_TYPE) using CMake... done"
 }
 
-function build_SDL3() {
+function build_SDL() {
     local DIRECTORY_SOURCE="$DIRECTORY/SDL"
     local CMAKE_BUILD_FLAGS="
         -D SDL_SHARED=ON
@@ -203,7 +206,7 @@ function build_SDL3() {
     build_library_cmake "SDL3" "" "$DIRECTORY_SOURCE" "$CMAKE_BUILD_FLAGS"
 }
 
-function build_SDL3_image() {
+function build_SDL_image() {
     local DIRECTORY_SOURCE="$DIRECTORY/SDL_image"
     local CMAKE_BUILD_FLAGS="
         -D SDL3_DIR=$LIB_SDL3_DIRECTORY_BUILD
@@ -231,9 +234,6 @@ function copy_files() {
     esac
 
     local DIRECTORY_COPY_DESTINATION="$DIRECTORY/../lib/$RID"
-    if [[ -d "$DIRECTORY_COPY_DESTINATION" ]]; then
-        rm -r "$DIRECTORY_COPY_DESTINATION"
-    fi
     mkdir -p "$DIRECTORY_COPY_DESTINATION"
 
     find "$DIRECTORY_COPY_SOURCE" -type f \( -name "*.dll" -o -name "*.dylib" -o -name "*.so" \) | while read -r FILE_PATH; do
@@ -252,17 +252,17 @@ function copy_files() {
         cp -p "$FILE_PATH" "$TARGET_FILE_PATH"
     done
 
-    # NOTE: SDL for macOS has some unwanted version suffixes
+    cd "$DIRECTORY_COPY_DESTINATION"
     if [[ $RID == 'osx-x64' || $RID == 'osx-arm64' ]]; then
-        rm "$DIRECTORY_COPY_DESTINATION/libSDL3.dylib"
-        mv "$DIRECTORY_COPY_DESTINATION/libSDL3.0.dylib" "$DIRECTORY_COPY_DESTINATION/libSDL3.dylib"
-        install_name_tool -id @rpath/libSDL3.dylib $DIRECTORY_COPY_DESTINATION/libSDL3.dylib
+        rm libSDL3.dylib
+        mv libSDL3.0.dylib libSDL3.dylib
+        install_name_tool -id @rpath/libSDL3.dylib libSDL3.dylib
 
-        rm "$DIRECTORY_COPY_DESTINATION/libSDL3_image.dylib"
-        rm "$DIRECTORY_COPY_DESTINATION/libSDL3_image.0.dylib"
-        mv "$DIRECTORY_COPY_DESTINATION/libSDL3_image.0.1.0.dylib" "$DIRECTORY_COPY_DESTINATION/libSDL3_image.dylib"
-        install_name_tool -id @rpath/libSDL3_image.dylib $DIRECTORY_COPY_DESTINATION/libSDL3_image.dylib
-        install_name_tool -change @rpath/libSDL3.0.dylib @rpath/libSDL3.dylib $DIRECTORY_COPY_DESTINATION/libSDL3_image.dylib
+        rm libSDL3_image.dylib
+        rm libSDL3_image.0.dylib
+        mv libSDL3_image.*.*.*.dylib libSDL3_image.dylib
+        install_name_tool -id @rpath/libSDL3_image.dylib libSDL3_image.dylib
+        install_name_tool -change @rpath/libSDL3.0.dylib @rpath/libSDL3.dylib libSDL3_image.dylib
     fi
 
     echo "Copying files... done"
@@ -276,6 +276,6 @@ RID=`get_dotnet_rid`
 validate_rid
 
 initialize
-build_SDL3
-build_SDL3_image
+build_SDL
+build_SDL_image
 copy_files
