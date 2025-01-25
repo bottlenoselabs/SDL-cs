@@ -20,9 +20,3 @@ obj/
 # macOS
 .DS_store
 
-# Assets compiled
-## Shaders compiled
-*.dxil
-*.msl
-*.spv
-
