@@ -5,17 +5,17 @@ using System.Numerics;
 
 namespace SDL_GPU;
 
-public struct PositionColorVertex : IEquatable<PositionColorVertex>
+public struct VertexPositionColor : IEquatable<VertexPositionColor>
 {
     public Vector3 Position;
     public Rgba8U Color;
 
     public override bool Equals(object? obj)
     {
-        return obj is PositionColorVertex other && Equals(other);
+        return obj is VertexPositionColor other && Equals(other);
     }
 
-    public bool Equals(PositionColorVertex other)
+    public bool Equals(VertexPositionColor other)
     {
         return Position == other.Position && Color == other.Color;
     }
@@ -25,12 +25,12 @@ public struct PositionColorVertex : IEquatable<PositionColorVertex>
         return HashCode.Combine(Position, Color);
     }
 
-    public static bool operator ==(PositionColorVertex left, PositionColorVertex right)
+    public static bool operator ==(VertexPositionColor left, VertexPositionColor right)
     {
         return left.Equals(right);
     }
 
-    public static bool operator !=(PositionColorVertex left, PositionColorVertex right)
+    public static bool operator !=(VertexPositionColor left, VertexPositionColor right)
     {
         return !(left == right);
     }

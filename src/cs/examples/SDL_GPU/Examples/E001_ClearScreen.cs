@@ -49,6 +49,7 @@ public sealed unsafe class E001_ClearScreen : ExampleGpu
 
             var renderPass = SDL_BeginGPURenderPass(
                 commandBuffer, &colorTargetInfo, 1, null);
+            // No rendering in this example!
             SDL_EndGPURenderPass(renderPass);
         }
 

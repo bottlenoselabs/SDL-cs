@@ -1,10 +1,15 @@
 // Copyright (c) Bottlenose Labs Inc. (https://github.com/bottlenoselabs). All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the Git repository root directory for full license information.
 
+using bottlenoselabs.Interop;
+
 namespace Common;
 
 public abstract unsafe class ExampleBase
 {
+    // NOTE: It's important that this memory is allocated ONLY ONCE FOR THE LIFETIME OF THE APP or else the application can crash with exit code 137 (out of memory).
+    private static readonly ArenaAllocator GlobalInitializeAllocator = new((int)Math.Pow(1024, 2)); // 1 KB should be plenty of space for initialization related memory such as various "createinfo" data structures
+
     public SDL_Window* Window { get; private set; }
 
     public string AssetsDirectory { get; set; }
@@ -29,7 +34,7 @@ public abstract unsafe class ExampleBase
         };
     }
 
-    public abstract bool Initialize();
+    public abstract bool Initialize(IAllocator allocator);
 
     public abstract void Quit();
 
@@ -41,8 +46,8 @@ public abstract unsafe class ExampleBase
 
     internal void QuitInternal()
     {
-        var hasQuit = Interlocked.Exchange(ref _hasQuit, true);
-        if (hasQuit)
+        var hasAlreadyQuit = Interlocked.CompareExchange(ref _hasQuit, true, false);
+        if (hasAlreadyQuit)
         {
             return;
         }
@@ -73,6 +78,8 @@ public abstract unsafe class ExampleBase
         ScreenWidth = windowWidth;
         ScreenHeight = windowHeight;
 
-        return Initialize();
+        var isInitialized = Initialize(GlobalInitializeAllocator);
+        GlobalInitializeAllocator.Reset();
+        return isInitialized;
     }
 }

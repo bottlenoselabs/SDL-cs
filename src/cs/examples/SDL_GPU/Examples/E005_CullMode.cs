@@ -25,31 +25,48 @@ public sealed unsafe class E005_CullMode : ExampleGpu
     private SDL_GPUBuffer* _vertexBufferCw;
     private SDL_GPUBuffer* _vertexBufferCcw;
 
-    public override bool Initialize()
+    public override bool Initialize(IAllocator allocator)
     {
-        if (!base.Initialize())
+        if (!base.Initialize(allocator))
         {
             return false;
         }
 
-        var vertexShader = LoadShader(Device, "PositionColor.vert");
+        var vertexShader = CreateShader("PositionColor.vert");
         if (vertexShader == null)
         {
             Console.Error.WriteLine("Failed to create vertex shader!");
             return false;
         }
 
-        var fragmentShader = LoadShader(Device, "SolidColor.frag");
+        var fragmentShader = CreateShader("SolidColor.frag");
         if (fragmentShader == null)
         {
             Console.Error.WriteLine("Failed to create fragment shader!");
             return false;
         }
 
-        _pipelines = CreatePipelines(vertexShader, fragmentShader);
-        foreach (var pipeline in _pipelines)
+        // Create pipelines
+        var pipelineCreateInfo = default(SDL_GPUGraphicsPipelineCreateInfo);
+        pipelineCreateInfo.primitive_type = SDL_GPUPrimitiveType.SDL_GPU_PRIMITIVETYPE_TRIANGLELIST;
+        pipelineCreateInfo.vertex_shader = vertexShader;
+        pipelineCreateInfo.fragment_shader = fragmentShader;
+        pipelineCreateInfo.rasterizer_state.fill_mode = SDL_GPUFillMode.SDL_GPU_FILLMODE_FILL;
+        FillGraphicsPipelineSwapchainColorTarget(allocator, ref pipelineCreateInfo.target_info);
+        FillGraphicsPipelineVertexAttributes<VertexPositionColor>(allocator, ref pipelineCreateInfo.vertex_input_state);
+        FillGraphicsPipelineVertexBuffer<VertexPositionColor>(allocator, ref pipelineCreateInfo.vertex_input_state);
+
+        var pipelineCount = ModeNames.Length;
+        _pipelines = new SDL_GPUGraphicsPipeline*[pipelineCount];
+        for (var i = 0; i < pipelineCount; i += 1)
         {
-            if (pipeline == null)
+            pipelineCreateInfo.rasterizer_state.cull_mode = (SDL_GPUCullMode)(i % 3);
+            pipelineCreateInfo.rasterizer_state.front_face = i > 2 ?
+                SDL_GPUFrontFace.SDL_GPU_FRONTFACE_CLOCKWISE :
+                SDL_GPUFrontFace.SDL_GPU_FRONTFACE_COUNTER_CLOCKWISE;
+
+            _pipelines[i] = SDL_CreateGPUGraphicsPipeline(Device, &pipelineCreateInfo);
+            if (_pipelines[i] == null)
             {
                 Console.Error.WriteLine("Failed to create pipeline!");
                 return false;
@@ -61,18 +78,81 @@ public sealed unsafe class E005_CullMode : ExampleGpu
         SDL_ReleaseGPUShader(Device, fragmentShader);
 
         // Create the vertex buffers. They're the same except for the vertex order.
-        CreateVertexBuffers(out _vertexBufferCw, out _vertexBufferCcw);
+        _vertexBufferCw = CreateVertexBuffer<VertexPositionColor>(3);
+        _vertexBufferCcw = CreateVertexBuffer<VertexPositionColor>(3);
         if (_vertexBufferCw == null || _vertexBufferCcw == null)
         {
-            Console.Error.WriteLine("Failed to create vertex buffer!");
+            Console.Error.WriteLine("Failed to create vertex buffer(s)!");
             return false;
         }
+
+        // To get data into the vertex buffer, we have to use a transfer buffer
+        var transferBuffer = CreateTransferBuffer<VertexPositionColor>(
+            6, static data =>
+            {
+                data[0].Position = new Vector3(-1, -1, 0);
+                data[0].Color = Rgba8U.Red;
+
+                data[1].Position = new Vector3(1, -1, 0);
+                data[1].Color = Rgba8U.Lime;
+
+                data[2].Position = new Vector3(0, 1, 0);
+                data[2].Color = Rgba8U.Blue;
+
+                data[3].Position = new Vector3(0, 1, 0);
+                data[3].Color = Rgba8U.Red;
+
+                data[4].Position = new Vector3(1, -1, 0);
+                data[4].Color = Rgba8U.Lime;
+
+                data[5].Position = new Vector3(-1, -1, 0);
+                data[5].Color = Rgba8U.Blue;
+            });
+
+        // Upload the transfer data to the vertex buffers
+        var uploadCommandBuffer = SDL_AcquireGPUCommandBuffer(Device);
+        var copyPass = SDL_BeginGPUCopyPass(uploadCommandBuffer);
+
+        var bufferSourceCw = default(SDL_GPUTransferBufferLocation);
+        bufferSourceCw.transfer_buffer = transferBuffer;
+        bufferSourceCw.offset = 0;
+        var bufferDestinationCw = default(SDL_GPUBufferRegion);
+        bufferDestinationCw.buffer = _vertexBufferCw;
+        bufferDestinationCw.offset = 0;
+        bufferDestinationCw.size = (uint)(sizeof(VertexPositionColor) * 3);
+        SDL_UploadToGPUBuffer(copyPass, &bufferSourceCw, &bufferDestinationCw, false);
+
+        var bufferSourceCww = default(SDL_GPUTransferBufferLocation);
+        bufferSourceCww.transfer_buffer = transferBuffer;
+        bufferSourceCww.offset = (uint)(sizeof(VertexPositionColor) * 3);
+        var bufferDestinationCcw = default(SDL_GPUBufferRegion);
+        bufferDestinationCcw.buffer = _vertexBufferCcw;
+        bufferDestinationCcw.offset = 0;
+        bufferDestinationCcw.size = (uint)(sizeof(VertexPositionColor) * 3);
+        SDL_UploadToGPUBuffer(copyPass, &bufferSourceCww, &bufferDestinationCcw, false);
+
+        SDL_EndGPUCopyPass(copyPass);
+        SDL_SubmitGPUCommandBuffer(uploadCommandBuffer);
+        SDL_ReleaseGPUTransferBuffer(Device, transferBuffer);
 
         // Finally, print instructions!
         Console.WriteLine("Press Left/Right to switch between modes");
         Console.WriteLine("Current Mode: " + ModeNames[0]);
 
         return true;
+    }
+
+    public override void Quit()
+    {
+        foreach (var pipeline in _pipelines)
+        {
+            SDL_ReleaseGPUGraphicsPipeline(Device, pipeline);
+        }
+
+        SDL_ReleaseGPUBuffer(Device, _vertexBufferCw);
+        SDL_ReleaseGPUBuffer(Device, _vertexBufferCcw);
+
+        base.Quit();
     }
 
     public override void KeyboardEvent(SDL_KeyboardEvent e)
@@ -122,8 +202,8 @@ public sealed unsafe class E005_CullMode : ExampleGpu
 
         if (textureSwapchain == null)
         {
-            Console.Error.WriteLine("Texture swapchain null!");
-            return false;
+            SDL_SubmitGPUCommandBuffer(commandBuffer);
+            return true;
         }
 
         var colorTargetInfo = default(SDL_GPUColorTargetInfo);
@@ -155,126 +235,5 @@ public sealed unsafe class E005_CullMode : ExampleGpu
         SDL_EndGPURenderPass(renderPass);
         SDL_SubmitGPUCommandBuffer(commandBuffer);
         return true;
-    }
-
-    private SDL_GPUGraphicsPipeline*[] CreatePipelines(SDL_GPUShader* vertexShader, SDL_GPUShader* fragmentShader)
-    {
-        var colorTargetDescriptions = stackalloc SDL_GPUColorTargetDescription[1];
-        ref var colorTargetDescription1 = ref colorTargetDescriptions[0];
-        colorTargetDescription1.format = SDL_GetGPUSwapchainTextureFormat(Device, Window);
-
-        SDL_GPUGraphicsPipelineCreateInfo pipelineCreateInfo = default;
-        pipelineCreateInfo.target_info.num_color_targets = 1;
-        pipelineCreateInfo.target_info.color_target_descriptions = colorTargetDescriptions;
-
-        ref var vertexInputState = ref pipelineCreateInfo.vertex_input_state;
-
-        vertexInputState.num_vertex_buffers = 1;
-        var vertexBufferDescriptions = stackalloc SDL_GPUVertexBufferDescription[1];
-        vertexInputState.vertex_buffer_descriptions = vertexBufferDescriptions;
-        ref var vertexBufferDescription = ref vertexBufferDescriptions[0];
-        vertexBufferDescription.slot = 0;
-        vertexBufferDescription.input_rate = SDL_GPUVertexInputRate.SDL_GPU_VERTEXINPUTRATE_VERTEX;
-        vertexBufferDescription.instance_step_rate = 0;
-        vertexBufferDescription.pitch = (uint)sizeof(PositionColorVertex);
-
-        vertexInputState.num_vertex_attributes = 2;
-        var vertexAttributes = stackalloc SDL_GPUVertexAttribute[2];
-        vertexInputState.vertex_attributes = vertexAttributes;
-
-        ref var vertexAttribute1 = ref vertexAttributes[0];
-        vertexAttribute1.buffer_slot = 0;
-        vertexAttribute1.format = SDL_GPUVertexElementFormat.SDL_GPU_VERTEXELEMENTFORMAT_FLOAT3;
-        vertexAttribute1.location = 0;
-        vertexAttribute1.offset = 0;
-
-        ref var vertexAttribute2 = ref vertexAttributes[1];
-        vertexAttribute2.buffer_slot = 0;
-        vertexAttribute2.format = SDL_GPUVertexElementFormat.SDL_GPU_VERTEXELEMENTFORMAT_UBYTE4_NORM;
-        vertexAttribute2.location = 1;
-        vertexAttribute2.offset = (uint)sizeof(Vector3);
-
-        pipelineCreateInfo.primitive_type = SDL_GPUPrimitiveType.SDL_GPU_PRIMITIVETYPE_TRIANGLELIST;
-        pipelineCreateInfo.vertex_shader = vertexShader;
-        pipelineCreateInfo.fragment_shader = fragmentShader;
-
-        pipelineCreateInfo.rasterizer_state.fill_mode = SDL_GPUFillMode.SDL_GPU_FILLMODE_FILL;
-
-        var pipelineCount = ModeNames.Length;
-        var pipelines = new SDL_GPUGraphicsPipeline*[pipelineCount];
-        for (var i = 0; i < pipelineCount; i += 1)
-        {
-            pipelineCreateInfo.rasterizer_state.cull_mode = (SDL_GPUCullMode)(i % 3);
-            pipelineCreateInfo.rasterizer_state.front_face = i > 2 ?
-                SDL_GPUFrontFace.SDL_GPU_FRONTFACE_CLOCKWISE :
-                SDL_GPUFrontFace.SDL_GPU_FRONTFACE_COUNTER_CLOCKWISE;
-
-            pipelines[i] = SDL_CreateGPUGraphicsPipeline(Device, &pipelineCreateInfo);
-        }
-
-        return pipelines;
-    }
-
-    private void CreateVertexBuffers(out SDL_GPUBuffer* vertexBufferCw, out SDL_GPUBuffer* vertexBufferCcw)
-    {
-        var vertexBufferCreateInfo = default(SDL_GPUBufferCreateInfo);
-        vertexBufferCreateInfo.usage = SDL_GPU_BUFFERUSAGE_VERTEX;
-        vertexBufferCreateInfo.size = (uint)(sizeof(PositionColorVertex) * 3);
-        vertexBufferCw = SDL_CreateGPUBuffer(Device, &vertexBufferCreateInfo);
-        vertexBufferCcw = SDL_CreateGPUBuffer(Device, &vertexBufferCreateInfo);
-
-        // To get data into the vertex buffer, we have to use a transfer buffer
-        var transferBufferCreateInfo = default(SDL_GPUTransferBufferCreateInfo);
-        transferBufferCreateInfo.usage = SDL_GPUTransferBufferUsage.SDL_GPU_TRANSFERBUFFERUSAGE_UPLOAD;
-        transferBufferCreateInfo.size = (uint)(sizeof(PositionColorVertex) * 6);
-        var transferBuffer = SDL_CreateGPUTransferBuffer(Device, &transferBufferCreateInfo);
-
-        var transferData = (PositionColorVertex*)SDL_MapGPUTransferBuffer(Device, transferBuffer, false);
-
-        transferData[0].Position = new Vector3(-1, -1, 0);
-        transferData[0].Color = Rgba8U.Red;
-
-        transferData[1].Position = new Vector3(1, -1, 0);
-        transferData[1].Color = Rgba8U.Lime;
-
-        transferData[2].Position = new Vector3(0, 1, 0);
-        transferData[2].Color = Rgba8U.Blue;
-
-        transferData[3].Position = new Vector3(0, 1, 0);
-        transferData[3].Color = Rgba8U.Red;
-
-        transferData[4].Position = new Vector3(1, -1, 0);
-        transferData[4].Color = Rgba8U.Lime;
-
-        transferData[5].Position = new Vector3(-1, -1, 0);
-        transferData[5].Color = Rgba8U.Blue;
-
-        SDL_UnmapGPUTransferBuffer(Device, transferBuffer);
-
-        // Upload the transfer data to the vertex buffer
-        var uploadCommandBuffer = SDL_AcquireGPUCommandBuffer(Device);
-        var copyPass = SDL_BeginGPUCopyPass(uploadCommandBuffer);
-
-        var bufferSourceCw = default(SDL_GPUTransferBufferLocation);
-        bufferSourceCw.transfer_buffer = transferBuffer;
-        bufferSourceCw.offset = 0;
-        var bufferDestinationCw = default(SDL_GPUBufferRegion);
-        bufferDestinationCw.buffer = vertexBufferCw;
-        bufferDestinationCw.offset = 0;
-        bufferDestinationCw.size = (uint)(sizeof(PositionColorVertex) * 3);
-        SDL_UploadToGPUBuffer(copyPass, &bufferSourceCw, &bufferDestinationCw, false);
-
-        var bufferSourceCww = default(SDL_GPUTransferBufferLocation);
-        bufferSourceCww.transfer_buffer = transferBuffer;
-        bufferSourceCww.offset = (uint)(sizeof(PositionColorVertex) * 3);
-        var bufferDestinationCcw = default(SDL_GPUBufferRegion);
-        bufferDestinationCcw.buffer = vertexBufferCcw;
-        bufferDestinationCcw.offset = 0;
-        bufferDestinationCcw.size = (uint)(sizeof(PositionColorVertex) * 3);
-        SDL_UploadToGPUBuffer(copyPass, &bufferSourceCww, &bufferDestinationCcw, false);
-
-        SDL_EndGPUCopyPass(copyPass);
-        SDL_SubmitGPUCommandBuffer(uploadCommandBuffer);
-        SDL_ReleaseGPUTransferBuffer(Device, transferBuffer);
     }
 }

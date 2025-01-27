@@ -22,7 +22,7 @@ public abstract unsafe class ExampleLazyFoo : ExampleBase
         AssetsDirectory = Path.Combine(AppContext.BaseDirectory, "Examples", GetType().Name);
     }
 
-    public override bool Initialize()
+    public override bool Initialize(IAllocator allocator)
     {
         if (_createRenderer)
         {

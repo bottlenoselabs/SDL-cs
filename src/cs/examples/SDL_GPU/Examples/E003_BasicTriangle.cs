@@ -1,7 +1,6 @@
 // Copyright (c) Bottlenose Labs Inc. (https://github.com/bottlenoselabs). All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the Git repository root directory for full license information.
 
-using System.Runtime.CompilerServices;
 using JetBrains.Annotations;
 
 namespace SDL_GPU.Examples;
@@ -26,40 +25,36 @@ public sealed unsafe class E003_BasicTriangle : ExampleGpu
     private bool _isEnabledSmallViewport;
     private bool _isEnabledScissorRectangle;
 
-    public override bool Initialize()
+    public override bool Initialize(IAllocator allocator)
     {
-        if (!base.Initialize())
+        if (!base.Initialize(allocator))
         {
             return false;
         }
 
         // Create the shaders
-        var vertexShader = LoadShader(Device, "RawTriangle.vert");
+        var vertexShader = CreateShader("RawTriangle.vert");
         if (vertexShader == null)
         {
             Console.Error.WriteLine("Failed to create vertex shader!");
             return false;
         }
 
-        var fragmentShader = LoadShader(Device, "SolidColor.frag");
+        var fragmentShader = CreateShader("SolidColor.frag");
         if (fragmentShader == null)
         {
             Console.Error.WriteLine("Failed to create fragment shader!");
             return false;
         }
 
-        // Create the pipelines
-        SDL_GPUColorTargetDescription targetDescription = default;
-        targetDescription.format = SDL_GetGPUSwapchainTextureFormat(Device, Window);
-
+        // Create the pipeline
         SDL_GPUGraphicsPipelineCreateInfo pipelineCreateInfo = default;
-        pipelineCreateInfo.target_info.num_color_targets = 1;
-        pipelineCreateInfo.target_info.color_target_descriptions = &targetDescription;
         pipelineCreateInfo.primitive_type = SDL_GPUPrimitiveType.SDL_GPU_PRIMITIVETYPE_TRIANGLELIST;
         pipelineCreateInfo.vertex_shader = vertexShader;
         pipelineCreateInfo.fragment_shader = fragmentShader;
-
         pipelineCreateInfo.rasterizer_state.fill_mode = SDL_GPUFillMode.SDL_GPU_FILLMODE_FILL;
+        FillGraphicsPipelineSwapchainColorTarget(allocator, ref pipelineCreateInfo.target_info);
+
         _pipelineFill = SDL_CreateGPUGraphicsPipeline(Device, &pipelineCreateInfo);
         if (_pipelineFill == null)
         {
@@ -85,6 +80,14 @@ public sealed unsafe class E003_BasicTriangle : ExampleGpu
         Console.WriteLine("Press Right to toggle scissor rect");
 
         return true;
+    }
+
+    public override void Quit()
+    {
+        SDL_ReleaseGPUGraphicsPipeline(Device, _pipelineFill);
+        SDL_ReleaseGPUGraphicsPipeline(Device, _pipelineLine);
+
+        base.Quit();
     }
 
     public override void KeyboardEvent(SDL_KeyboardEvent e)
@@ -131,32 +134,35 @@ public sealed unsafe class E003_BasicTriangle : ExampleGpu
             return false;
         }
 
-        if (textureSwapchain != null)
+        if (textureSwapchain == null)
         {
-            SDL_GPUColorTargetInfo colorTargetInfo = default;
-            colorTargetInfo.texture = textureSwapchain;
-            colorTargetInfo.clear_color = Rgba32F.Black;
-            colorTargetInfo.load_op = SDL_GPULoadOp.SDL_GPU_LOADOP_CLEAR;
-            colorTargetInfo.store_op = SDL_GPUStoreOp.SDL_GPU_STOREOP_STORE;
-
-            var renderPass = SDL_BeginGPURenderPass(
-                commandBuffer, &colorTargetInfo, 1, null);
-            SDL_BindGPUGraphicsPipeline(renderPass, _isEnabledWireframeMode ? _pipelineLine : _pipelineFill);
-            if (_isEnabledSmallViewport)
-            {
-                ref var viewportSmall = ref _viewportSmall;
-                SDL_SetGPUViewport(renderPass, (SDL_GPUViewport*)Unsafe.AsPointer(ref viewportSmall));
-            }
-
-            if (_isEnabledScissorRectangle)
-            {
-                ref var rectangleScissor = ref _rectangleScissor;
-                SDL_SetGPUScissor(renderPass, (SDL_Rect*)Unsafe.AsPointer(ref rectangleScissor));
-            }
-
-            SDL_DrawGPUPrimitives(renderPass, 3, 1, 0, 0);
-            SDL_EndGPURenderPass(renderPass);
+            SDL_SubmitGPUCommandBuffer(commandBuffer);
+            return true;
         }
+
+        SDL_GPUColorTargetInfo colorTargetInfo = default;
+        colorTargetInfo.texture = textureSwapchain;
+        colorTargetInfo.clear_color = Rgba32F.Black;
+        colorTargetInfo.load_op = SDL_GPULoadOp.SDL_GPU_LOADOP_CLEAR;
+        colorTargetInfo.store_op = SDL_GPUStoreOp.SDL_GPU_STOREOP_STORE;
+
+        var renderPass = SDL_BeginGPURenderPass(
+            commandBuffer, &colorTargetInfo, 1, null);
+        SDL_BindGPUGraphicsPipeline(renderPass, _isEnabledWireframeMode ? _pipelineLine : _pipelineFill);
+        if (_isEnabledSmallViewport)
+        {
+            ref var viewportSmall = ref _viewportSmall;
+            SDL_SetGPUViewport(renderPass, (SDL_GPUViewport*)Unsafe.AsPointer(ref viewportSmall));
+        }
+
+        if (_isEnabledScissorRectangle)
+        {
+            ref var rectangleScissor = ref _rectangleScissor;
+            SDL_SetGPUScissor(renderPass, (SDL_Rect*)Unsafe.AsPointer(ref rectangleScissor));
+        }
+
+        SDL_DrawGPUPrimitives(renderPass, 3, 1, 0, 0);
+        SDL_EndGPURenderPass(renderPass);
 
         SDL_SubmitGPUCommandBuffer(commandBuffer);
         return true;
