@@ -11,9 +11,9 @@ public sealed unsafe class E002_ClearScreenMultipleWindow : ExampleGpu
 {
     private SDL_Window* _secondWindow;
 
-    public override bool Initialize()
+    public override bool Initialize(IAllocator allocator)
     {
-        if (!base.Initialize())
+        if (!base.Initialize(allocator))
         {
             return false;
         }
@@ -42,6 +42,8 @@ public sealed unsafe class E002_ClearScreenMultipleWindow : ExampleGpu
         SDL_ReleaseWindowFromGPUDevice(Device, _secondWindow);
         SDL_DestroyWindow(_secondWindow);
         _secondWindow = null;
+
+        base.Quit();
     }
 
     public override void KeyboardEvent(SDL_KeyboardEvent e)
@@ -62,11 +64,11 @@ public sealed unsafe class E002_ClearScreenMultipleWindow : ExampleGpu
             return false;
         }
 
-        SDL_GPUTexture* textureSwapchain;
+        SDL_GPUTexture* textureSwapchainMainWindow;
         if (!SDL_WaitAndAcquireGPUSwapchainTexture(
                 commandBuffer,
                 Window,
-                &textureSwapchain,
+                &textureSwapchainMainWindow,
                 null,
                 null))
         {
@@ -74,23 +76,25 @@ public sealed unsafe class E002_ClearScreenMultipleWindow : ExampleGpu
             return false;
         }
 
-        if (textureSwapchain != null)
+        if (textureSwapchainMainWindow != null)
         {
             SDL_GPUColorTargetInfo colorTargetInfo = default;
-            colorTargetInfo.texture = textureSwapchain;
+            colorTargetInfo.texture = textureSwapchainMainWindow;
             colorTargetInfo.clear_color = Rgba32F.CornflowerBlue;
             colorTargetInfo.load_op = SDL_GPULoadOp.SDL_GPU_LOADOP_CLEAR;
             colorTargetInfo.store_op = SDL_GPUStoreOp.SDL_GPU_STOREOP_STORE;
 
             var renderPass = SDL_BeginGPURenderPass(
                 commandBuffer, &colorTargetInfo, 1, null);
+            // No rendering in this example!
             SDL_EndGPURenderPass(renderPass);
         }
 
+        SDL_GPUTexture* textureSwapchainSecondWindow;
         if (!SDL_WaitAndAcquireGPUSwapchainTexture(
                 commandBuffer,
                 _secondWindow,
-                &textureSwapchain,
+                &textureSwapchainSecondWindow,
                 null,
                 null))
         {
@@ -98,10 +102,10 @@ public sealed unsafe class E002_ClearScreenMultipleWindow : ExampleGpu
             return false;
         }
 
-        if (textureSwapchain != null)
+        if (textureSwapchainSecondWindow != null)
         {
             SDL_GPUColorTargetInfo colorTargetInfo = default;
-            colorTargetInfo.texture = textureSwapchain;
+            colorTargetInfo.texture = textureSwapchainSecondWindow;
             colorTargetInfo.clear_color = Rgba32F.Indigo;
             colorTargetInfo.load_op = SDL_GPULoadOp.SDL_GPU_LOADOP_CLEAR;
             colorTargetInfo.store_op = SDL_GPUStoreOp.SDL_GPU_STOREOP_STORE;

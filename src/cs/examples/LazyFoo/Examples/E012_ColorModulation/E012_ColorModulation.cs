@@ -20,9 +20,9 @@ public sealed unsafe class E012_ColorModulation : ExampleLazyFoo
     {
     }
 
-    public override bool Initialize()
+    public override bool Initialize(IAllocator allocator)
     {
-        if (!base.Initialize())
+        if (!base.Initialize(allocator))
         {
             return false;
         }

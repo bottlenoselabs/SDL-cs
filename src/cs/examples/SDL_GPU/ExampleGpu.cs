@@ -1,6 +1,9 @@
 // Copyright (c) Bottlenose Labs Inc. (https://github.com/bottlenoselabs). All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the Git repository root directory for full license information.
 
+using System.Collections.Immutable;
+using System.Numerics;
+using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using Common;
 
@@ -25,7 +28,7 @@ public abstract unsafe partial class ExampleGpu : ExampleBase
         AssetsDirectory = Path.Combine(AppContext.BaseDirectory, "Assets");
     }
 
-    public override bool Initialize()
+    public override bool Initialize(IAllocator allocator)
     {
         Device = SDL_CreateGPUDevice(
             SDL_GPU_SHADERFORMAT_SPIRV | SDL_GPU_SHADERFORMAT_DXIL | SDL_GPU_SHADERFORMAT_MSL,
@@ -53,8 +56,7 @@ public abstract unsafe partial class ExampleGpu : ExampleBase
         SDL_DestroyGPUDevice(Device);
     }
 
-    protected SDL_GPUShader* LoadShader(
-        SDL_GPUDevice* device,
+    protected SDL_GPUShader* CreateShader(
         string fileName,
         uint samplerCount = 0,
         uint uniformBufferCount = 0,
@@ -78,7 +80,7 @@ public abstract unsafe partial class ExampleGpu : ExampleBase
             return null;
         }
 
-        var backendFormats = SDL_GetGPUShaderFormats(device);
+        var backendFormats = SDL_GetGPUShaderFormats(Device);
         SDL_GPUShaderFormat format;
         string entryPoint;
         string filePath;
@@ -128,7 +130,7 @@ public abstract unsafe partial class ExampleGpu : ExampleBase
         shaderInfo.num_storage_buffers = storageBufferCount;
         shaderInfo.num_storage_textures = storageTextureCount;
 
-        var shader = SDL_CreateGPUShader(device, &shaderInfo);
+        var shader = SDL_CreateGPUShader(Device, &shaderInfo);
         if (shader == null)
         {
             Console.Error.WriteLine("Failed to create shader!");
@@ -140,6 +142,117 @@ public abstract unsafe partial class ExampleGpu : ExampleBase
         SDL_free(code);
         shaderInfo._entrypoint.Dispose();
         return shader;
+    }
+
+    protected SDL_GPUBuffer* CreateVertexBuffer<TVertex>(int elementCount)
+        where TVertex : unmanaged
+    {
+        var vertexBufferCreateInfo = default(SDL_GPUBufferCreateInfo);
+        vertexBufferCreateInfo.usage = SDL_GPU_BUFFERUSAGE_VERTEX;
+        vertexBufferCreateInfo.size = (uint)(sizeof(TVertex) * elementCount);
+        var vertexBuffer = SDL_CreateGPUBuffer(Device, &vertexBufferCreateInfo);
+        return vertexBuffer;
+    }
+
+    protected SDL_GPUTransferBuffer* CreateTransferBuffer<TElement>(int elementCount, Action<Span<TElement>> map)
+        where TElement : unmanaged
+    {
+        var transferBufferCreateInfo = default(SDL_GPUTransferBufferCreateInfo);
+        transferBufferCreateInfo.usage = SDL_GPUTransferBufferUsage.SDL_GPU_TRANSFERBUFFERUSAGE_UPLOAD;
+        transferBufferCreateInfo.size = (uint)(sizeof(TElement) * elementCount);
+        var transferBuffer = SDL_CreateGPUTransferBuffer(Device, &transferBufferCreateInfo);
+
+        var dataPointer = (TElement*)SDL_MapGPUTransferBuffer(Device, transferBuffer, false);
+        var data = new Span<TElement>(dataPointer, elementCount);
+        map(data);
+        SDL_UnmapGPUTransferBuffer(Device, transferBuffer);
+
+        return transferBuffer;
+    }
+
+    protected void FillGraphicsPipelineSwapchainColorTarget(
+        IAllocator allocator,
+        ref SDL_GPUGraphicsPipelineTargetInfo targetInfo)
+    {
+        targetInfo.num_color_targets = 1;
+        targetInfo.color_target_descriptions = allocator
+            .AllocateArray<SDL_GPUColorTargetDescription>(1);
+
+        ref var colorTargetDescription = ref targetInfo.color_target_descriptions[0];
+        colorTargetDescription.format = SDL_GetGPUSwapchainTextureFormat(Device, Window);
+    }
+
+    protected void FillGraphicsPipelineVertexAttributes<TVertex>(
+        IAllocator allocator,
+        ref SDL_GPUVertexInputState vertexInputState)
+        where TVertex : unmanaged
+    {
+        var vertexType = typeof(TVertex);
+        var vertexFields = vertexType.GetFields().ToImmutableArray();
+
+        vertexInputState.num_vertex_attributes = (uint)vertexFields.Length;
+        vertexInputState.vertex_attributes = allocator.AllocateArray<SDL_GPUVertexAttribute>(vertexFields.Length);
+
+        for (var i = 0; i < vertexFields.Length; i++)
+        {
+            var vertexField = vertexFields[i];
+            ref var vertexAttribute = ref vertexInputState.vertex_attributes[i];
+            vertexAttribute.location = (uint)i;
+
+            if (vertexField.FieldType == typeof(Vector3))
+            {
+                vertexAttribute.format = SDL_GPUVertexElementFormat.SDL_GPU_VERTEXELEMENTFORMAT_FLOAT3;
+            }
+            else if (vertexField.FieldType == typeof(Rgba8U))
+            {
+                vertexAttribute.format = SDL_GPUVertexElementFormat.SDL_GPU_VERTEXELEMENTFORMAT_UBYTE4_NORM;
+            }
+            else
+            {
+                throw new NotImplementedException();
+            }
+
+            vertexAttribute.offset = (uint)Marshal.OffsetOf(vertexType, vertexField.Name);
+        }
+    }
+
+    protected void FillGraphicsPipelineVertexBuffer<TVertex>(
+        IAllocator allocator,
+        ref SDL_GPUVertexInputState vertexInputState)
+        where TVertex : unmanaged
+    {
+        vertexInputState.num_vertex_buffers = 1;
+        vertexInputState.vertex_buffer_descriptions = allocator
+            .AllocateArray<SDL_GPUVertexBufferDescription>(1);
+
+        ref var vertexBufferDescription = ref vertexInputState.vertex_buffer_descriptions[0];
+        vertexBufferDescription.slot = 0;
+        vertexBufferDescription.input_rate = SDL_GPUVertexInputRate.SDL_GPU_VERTEXINPUTRATE_VERTEX;
+        vertexBufferDescription.instance_step_rate = 0;
+        vertexBufferDescription.pitch = (uint)sizeof(TVertex);
+    }
+
+    protected SDL_GPUTextureFormat GetSupportedDepthStencilFormat()
+    {
+        if (SDL_GPUTextureSupportsFormat(
+                Device,
+                SDL_GPUTextureFormat.SDL_GPU_TEXTUREFORMAT_D24_UNORM_S8_UINT,
+                SDL_GPUTextureType.SDL_GPU_TEXTURETYPE_2D,
+                SDL_GPU_TEXTUREUSAGE_DEPTH_STENCIL_TARGET))
+        {
+            return SDL_GPUTextureFormat.SDL_GPU_TEXTUREFORMAT_D24_UNORM_S8_UINT;
+        }
+
+        if (SDL_GPUTextureSupportsFormat(
+                Device,
+                SDL_GPUTextureFormat.SDL_GPU_TEXTUREFORMAT_D32_FLOAT_S8_UINT,
+                SDL_GPUTextureType.SDL_GPU_TEXTURETYPE_2D,
+                SDL_GPU_TEXTUREUSAGE_DEPTH_STENCIL_TARGET))
+        {
+            return SDL_GPUTextureFormat.SDL_GPU_TEXTUREFORMAT_D32_FLOAT_S8_UINT;
+        }
+
+        return SDL_GPUTextureFormat.SDL_GPU_TEXTUREFORMAT_INVALID;
     }
 
     [GeneratedRegex(@"E(\d+)_(\w+)")]
