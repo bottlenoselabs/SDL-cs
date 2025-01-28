@@ -143,6 +143,40 @@ public abstract unsafe partial class ExampleGpu : ExampleBase
         return shader;
     }
 
+    protected SDL_Surface* CreateImage(INativeAllocator allocator, string fileName, int desiredChannels)
+    {
+        SDL_PixelFormat format;
+
+        var filePath = Path.Combine(AssetsDirectory, "Images", fileName);
+        var filePathC = allocator.AllocateCString(filePath);
+        var surface = IMG_Load(filePathC);
+        if (surface == null)
+        {
+            Console.Error.WriteLine("Failed to load image: " + SDL_GetError());
+            return null;
+        }
+
+        if (desiredChannels == 4)
+        {
+            format = SDL_PixelFormat.SDL_PIXELFORMAT_ABGR8888;
+        }
+        else
+        {
+            Console.Error.WriteLine("Unexpected desired channels");
+            SDL_DestroySurface(surface);
+            return null;
+        }
+
+        if (surface->format != format)
+        {
+            var convertedSurface = SDL_ConvertSurface(surface, format);
+            SDL_DestroySurface(surface);
+            surface = convertedSurface;
+        }
+
+        return surface;
+    }
+
     protected SDL_GPUBuffer* CreateVertexBuffer<TVertex>(int elementCount)
         where TVertex : unmanaged
     {
@@ -208,7 +242,11 @@ public abstract unsafe partial class ExampleGpu : ExampleBase
             ref var vertexAttribute = ref vertexInputState.vertex_attributes[i];
             vertexAttribute.location = (uint)i;
 
-            if (vertexField.FieldType == typeof(Vector3))
+            if (vertexField.FieldType == typeof(Vector2))
+            {
+                vertexAttribute.format = SDL_GPUVertexElementFormat.SDL_GPU_VERTEXELEMENTFORMAT_FLOAT2;
+            }
+            else if (vertexField.FieldType == typeof(Vector3))
             {
                 vertexAttribute.format = SDL_GPUVertexElementFormat.SDL_GPU_VERTEXELEMENTFORMAT_FLOAT3;
             }
