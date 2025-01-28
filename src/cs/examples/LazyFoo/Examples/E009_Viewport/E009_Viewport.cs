@@ -17,14 +17,14 @@ public sealed unsafe class E009_Viewport : ExampleLazyFoo
     {
     }
 
-    public override bool Initialize(IAllocator allocator)
+    public override bool Initialize(INativeAllocator allocator)
     {
         if (!base.Initialize(allocator))
         {
             return false;
         }
 
-        return LoadAssets();
+        return LoadAssets(allocator);
     }
 
     public override void Quit()
@@ -84,16 +84,16 @@ public sealed unsafe class E009_Viewport : ExampleLazyFoo
         return true;
     }
 
-    private bool LoadAssets()
+    private bool LoadAssets(INativeAllocator allocator)
     {
-        _texture = LoadTexture("viewport.png");
+        _texture = LoadTexture(allocator, "viewport.png");
         return _texture != null;
     }
 
-    private SDL_Texture* LoadTexture(string fileName)
+    private SDL_Texture* LoadTexture(INativeAllocator allocator, string fileName)
     {
         var filePath = Path.Combine(AssetsDirectory, fileName);
-        using var filePathC = (CString)filePath;
+        var filePathC = allocator.AllocateCString(filePath);
         var surface = IMG_Load(filePathC);
         if (surface == null)
         {

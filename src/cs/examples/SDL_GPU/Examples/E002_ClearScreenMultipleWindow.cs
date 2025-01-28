@@ -11,14 +11,14 @@ public sealed unsafe class E002_ClearScreenMultipleWindow : ExampleGpu
 {
     private SDL_Window* _secondWindow;
 
-    public override bool Initialize(IAllocator allocator)
+    public override bool Initialize(INativeAllocator allocator)
     {
         if (!base.Initialize(allocator))
         {
             return false;
         }
 
-        using var windowNameCString = (CString)$"{Name} (2)";
+        var windowNameCString = allocator.AllocateCString($"{Name} (2)");
         _secondWindow = SDL_CreateWindow(windowNameCString, 640, 480, 0);
         if (_secondWindow == null)
         {

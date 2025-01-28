@@ -19,14 +19,14 @@ public sealed unsafe class E013_AlphaBlending : ExampleLazyFoo
     {
     }
 
-    public override bool Initialize(IAllocator allocator)
+    public override bool Initialize(INativeAllocator allocator)
     {
         if (!base.Initialize(allocator))
         {
             return false;
         }
 
-        return LoadAssets();
+        return LoadAssets(allocator);
     }
 
     public override void Quit()
@@ -87,16 +87,16 @@ public sealed unsafe class E013_AlphaBlending : ExampleLazyFoo
         return true;
     }
 
-    private bool LoadAssets()
+    private bool LoadAssets(INativeAllocator allocator)
     {
-        if (!_textureFadeout.LoadFromFile(Renderer, AssetsDirectory, "fadeout.png"))
+        if (!_textureFadeout.LoadFromFile(allocator, Renderer, AssetsDirectory, "fadeout.png"))
         {
             return false;
         }
 
         _textureFadeout.SetBlendMode(SDL_BLENDMODE_BLEND);
 
-        if (!_textureFadein.LoadFromFile(Renderer, AssetsDirectory, "fadein.png"))
+        if (!_textureFadein.LoadFromFile(allocator, Renderer, AssetsDirectory, "fadein.png"))
         {
             return false;
         }

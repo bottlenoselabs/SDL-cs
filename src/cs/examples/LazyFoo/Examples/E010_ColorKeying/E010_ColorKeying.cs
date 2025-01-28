@@ -18,14 +18,14 @@ public sealed unsafe class E010_ColorKeying : ExampleLazyFoo
     {
     }
 
-    public override bool Initialize(IAllocator allocator)
+    public override bool Initialize(INativeAllocator allocator)
     {
         if (!base.Initialize(allocator))
         {
             return false;
         }
 
-        return LoadAssets();
+        return LoadAssets(allocator);
     }
 
     public override void Quit()
@@ -61,14 +61,14 @@ public sealed unsafe class E010_ColorKeying : ExampleLazyFoo
         return true;
     }
 
-    private bool LoadAssets()
+    private bool LoadAssets(INativeAllocator allocator)
     {
-        if (!_textureFoo.LoadFromFile(Renderer, AssetsDirectory, "foo.png", Rgba8U.Cyan))
+        if (!_textureFoo.LoadFromFile(allocator, Renderer, AssetsDirectory, "foo.png", Rgba8U.Cyan))
         {
             return false;
         }
 
-        if (!_textureBackground.LoadFromFile(Renderer, AssetsDirectory, "background.png"))
+        if (!_textureBackground.LoadFromFile(allocator, Renderer, AssetsDirectory, "background.png"))
         {
             return false;
         }

@@ -9,6 +9,8 @@ namespace SDL_GPU.Examples;
 // ReSharper disable once InconsistentNaming
 public sealed unsafe class E001_ClearScreen : ExampleGpu
 {
+    public static readonly ThreadLocal<ArenaNativeAllocator> Allocator = new(() => new(1024 * 1024));
+
     public override void KeyboardEvent(SDL_KeyboardEvent e)
     {
     }

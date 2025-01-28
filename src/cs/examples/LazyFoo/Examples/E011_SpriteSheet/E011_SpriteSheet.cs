@@ -18,14 +18,14 @@ public sealed unsafe class E011_SpriteSheet : ExampleLazyFoo
     {
     }
 
-    public override bool Initialize(IAllocator allocator)
+    public override bool Initialize(INativeAllocator allocator)
     {
         if (!base.Initialize(allocator))
         {
             return false;
         }
 
-        return LoadAssets();
+        return LoadAssets(allocator);
     }
 
     public override void Quit()
@@ -78,9 +78,9 @@ public sealed unsafe class E011_SpriteSheet : ExampleLazyFoo
         return true;
     }
 
-    private bool LoadAssets()
+    private bool LoadAssets(INativeAllocator allocator)
     {
-        if (!_textureDots.LoadFromFile(Renderer, AssetsDirectory, "dots.png", Rgba8U.Cyan))
+        if (!_textureDots.LoadFromFile(allocator, Renderer, AssetsDirectory, "dots.png", Rgba8U.Cyan))
         {
             return false;
         }

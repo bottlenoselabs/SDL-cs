@@ -16,7 +16,7 @@ public sealed unsafe class E006_BasicStencil : ExampleGpu
     private SDL_GPUBuffer* _vertexBuffer;
     private SDL_GPUTexture* _textureDepthStencilTarget;
 
-    public override bool Initialize(IAllocator allocator)
+    public override bool Initialize(INativeAllocator allocator)
     {
         if (!base.Initialize(allocator))
         {
@@ -49,14 +49,14 @@ public sealed unsafe class E006_BasicStencil : ExampleGpu
             return false;
         }
 
-        var vertexShader = CreateShader("PositionColor.vert");
+        var vertexShader = CreateShader(allocator, "PositionColor.vert");
         if (vertexShader == null)
         {
             Console.Error.WriteLine("Failed to create vertex shader!");
             return false;
         }
 
-        var fragmentShader = CreateShader("SolidColor.frag");
+        var fragmentShader = CreateShader(allocator, "SolidColor.frag");
         if (fragmentShader == null)
         {
             Console.Error.WriteLine("Failed to create fragment shader!");

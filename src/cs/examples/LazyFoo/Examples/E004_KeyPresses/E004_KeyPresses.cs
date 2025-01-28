@@ -19,14 +19,14 @@ public sealed unsafe class E004_KeyPresses : ExampleLazyFoo
     {
     }
 
-    public override bool Initialize(IAllocator allocator)
+    public override bool Initialize(INativeAllocator allocator)
     {
         if (!base.Initialize(allocator))
         {
             return false;
         }
 
-        if (!LoadAssets())
+        if (!LoadAssets(allocator))
         {
             return false;
         }
@@ -75,13 +75,14 @@ public sealed unsafe class E004_KeyPresses : ExampleLazyFoo
         return true;
     }
 
-    private bool LoadAssets()
+    private bool LoadAssets(INativeAllocator allocator)
     {
-        _currentKeyPressSurface = _keyPressSurfaces[(int)KeyPressSurfaceIndex.Press] = LoadSurface("press.bmp");
-        _keyPressSurfaces[(int)KeyPressSurfaceIndex.Up] = LoadSurface("up.bmp");
-        _keyPressSurfaces[(int)KeyPressSurfaceIndex.Down] = LoadSurface("down.bmp");
-        _keyPressSurfaces[(int)KeyPressSurfaceIndex.Left] = LoadSurface("left.bmp");
-        _keyPressSurfaces[(int)KeyPressSurfaceIndex.Right] = LoadSurface("right.bmp");
+        _currentKeyPressSurface = _keyPressSurfaces[(int)KeyPressSurfaceIndex.Press] =
+            LoadSurface(allocator, "press.bmp");
+        _keyPressSurfaces[(int)KeyPressSurfaceIndex.Up] = LoadSurface(allocator, "up.bmp");
+        _keyPressSurfaces[(int)KeyPressSurfaceIndex.Down] = LoadSurface(allocator, "down.bmp");
+        _keyPressSurfaces[(int)KeyPressSurfaceIndex.Left] = LoadSurface(allocator, "left.bmp");
+        _keyPressSurfaces[(int)KeyPressSurfaceIndex.Right] = LoadSurface(allocator, "right.bmp");
 
         foreach (var keyPressSurface in _keyPressSurfaces)
         {
@@ -94,10 +95,10 @@ public sealed unsafe class E004_KeyPresses : ExampleLazyFoo
         return true;
     }
 
-    private SDL_Surface* LoadSurface(string fileName)
+    private SDL_Surface* LoadSurface(INativeAllocator allocator, string fileName)
     {
         var filePath = Path.Combine(AssetsDirectory, fileName);
-        using var filePathC = (CString)filePath;
+        var filePathC = allocator.AllocateCString(filePath);
         var surface = SDL_LoadBMP(filePathC);
         if (surface == null)
         {

@@ -8,7 +8,7 @@
     <RootNamespace>bottlenoselabs.Interop</RootNamespace>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
-  
+
   <!-- Project references -->
   <ItemGroup>
     <InternalsVisibleTo Include="Interop.SDL_image" />
@@ -18,7 +18,7 @@
   <ItemGroup>
     <PackageReference Include="JetBrains.Annotations" Version="2024.3.0" />
   </ItemGroup>
-  
+
   <!-- C# code file dependencies -->
   <ItemGroup>
     <Compile Update="Rgba8U.Colors.cs">
@@ -44,22 +44,19 @@
     <LibraryDirectoryPath>$([System.IO.Path]::Combine($(GitRepositoryPath),lib))</LibraryDirectoryPath>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="$(LibraryDirectoryPath)/win*/SDL3*.dll"
-             Exclude="$(LibraryDirectoryPath)/win*/SDL3_image*.dll"
+    <Content Include="$(LibraryDirectoryPath)/win*/SDL3.dll"
              Condition="$([System.OperatingSystem]::IsWindows())">
       <Link>%(Filename)%(Extension)</Link>
       <Pack>false</Pack>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="$(LibraryDirectoryPath)/osx*/libSDL3*.dylib"
-             Exclude="$(LibraryDirectoryPath)/osx*/libSDL3_image*.dylib"
+    <Content Include="$(LibraryDirectoryPath)/osx*/libSDL3.dylib"
              Condition="$([System.OperatingSystem]::IsMacOs())">
       <Link>%(Filename)%(Extension)</Link>
       <Pack>false</Pack>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="$(LibraryDirectoryPath)/linux*/libSDL3*.so"
-             Exclude="$(LibraryDirectoryPath)/linux*/libSDL3_image*.so"
+    <Content Include="$(LibraryDirectoryPath)/linux*/libSDL3.so"
              Condition="$([System.OperatingSystem]::IsLinux())">
       <Link>%(Filename)%(Extension)</Link>
       <Pack>false</Pack>
