@@ -4420,7 +4420,7 @@ namespace bottlenoselabs.Interop
     public static unsafe partial class SDL
     {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_hid_get_indexed_string", ExactSpelling = true)]
-        public static extern partial int SDL_hid_get_indexed_string(global::bottlenoselabs.Interop.SDL.SDL_hid_device* dev, int string_index, global::bottlenoselabs.Interop.CStringWide @string, ulong maxlen);
+        public static extern partial int SDL_hid_get_indexed_string(global::bottlenoselabs.Interop.SDL.SDL_hid_device* dev, int string_index, nint @string, ulong maxlen);
     }
 }
 namespace bottlenoselabs.Interop
@@ -4436,7 +4436,7 @@ namespace bottlenoselabs.Interop
     public static unsafe partial class SDL
     {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_hid_get_manufacturer_string", ExactSpelling = true)]
-        public static extern partial int SDL_hid_get_manufacturer_string(global::bottlenoselabs.Interop.SDL.SDL_hid_device* dev, global::bottlenoselabs.Interop.CStringWide @string, ulong maxlen);
+        public static extern partial int SDL_hid_get_manufacturer_string(global::bottlenoselabs.Interop.SDL.SDL_hid_device* dev, nint @string, ulong maxlen);
     }
 }
 namespace bottlenoselabs.Interop
@@ -4444,7 +4444,7 @@ namespace bottlenoselabs.Interop
     public static unsafe partial class SDL
     {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_hid_get_product_string", ExactSpelling = true)]
-        public static extern partial int SDL_hid_get_product_string(global::bottlenoselabs.Interop.SDL.SDL_hid_device* dev, global::bottlenoselabs.Interop.CStringWide @string, ulong maxlen);
+        public static extern partial int SDL_hid_get_product_string(global::bottlenoselabs.Interop.SDL.SDL_hid_device* dev, nint @string, ulong maxlen);
     }
 }
 namespace bottlenoselabs.Interop
@@ -4460,7 +4460,7 @@ namespace bottlenoselabs.Interop
     public static unsafe partial class SDL
     {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_hid_get_serial_number_string", ExactSpelling = true)]
-        public static extern partial int SDL_hid_get_serial_number_string(global::bottlenoselabs.Interop.SDL.SDL_hid_device* dev, global::bottlenoselabs.Interop.CStringWide @string, ulong maxlen);
+        public static extern partial int SDL_hid_get_serial_number_string(global::bottlenoselabs.Interop.SDL.SDL_hid_device* dev, nint @string, ulong maxlen);
     }
 }
 namespace bottlenoselabs.Interop
@@ -4476,7 +4476,7 @@ namespace bottlenoselabs.Interop
     public static unsafe partial class SDL
     {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_hid_open", ExactSpelling = true)]
-        public static extern partial global::bottlenoselabs.Interop.SDL.SDL_hid_device* SDL_hid_open(ushort vendor_id, ushort product_id, global::bottlenoselabs.Interop.CStringWide serial_number);
+        public static extern partial global::bottlenoselabs.Interop.SDL.SDL_hid_device* SDL_hid_open(ushort vendor_id, ushort product_id, nint serial_number);
     }
 }
 namespace bottlenoselabs.Interop
