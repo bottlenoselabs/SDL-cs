@@ -13,21 +13,21 @@ public sealed unsafe class E004_BasicVertexBuffer : ExampleGpu
     private SDL_GPUGraphicsPipeline* _pipeline;
     private SDL_GPUBuffer* _vertexBuffer;
 
-    public override bool Initialize(IAllocator allocator)
+    public override bool Initialize(INativeAllocator allocator)
     {
         if (!base.Initialize(allocator))
         {
             return false;
         }
 
-        var vertexShader = CreateShader("PositionColor.vert");
+        var vertexShader = CreateShader(allocator, "PositionColor.vert");
         if (vertexShader == null)
         {
             Console.Error.WriteLine("Failed to create vertex shader!");
             return false;
         }
 
-        var fragmentShader = CreateShader("SolidColor.frag");
+        var fragmentShader = CreateShader(allocator, "SolidColor.frag");
         if (fragmentShader == null)
         {
             Console.Error.WriteLine("Failed to create fragment shader!");

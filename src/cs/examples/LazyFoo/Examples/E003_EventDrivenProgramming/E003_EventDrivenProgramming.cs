@@ -18,14 +18,14 @@ public sealed unsafe class E003_EventDrivenProgramming : ExampleLazyFoo
     {
     }
 
-    public override bool Initialize(IAllocator allocator)
+    public override bool Initialize(INativeAllocator allocator)
     {
         if (!base.Initialize(allocator))
         {
             return false;
         }
 
-        if (!LoadAssets())
+        if (!LoadAssets(allocator))
         {
             return false;
         }
@@ -56,13 +56,13 @@ public sealed unsafe class E003_EventDrivenProgramming : ExampleLazyFoo
         return true;
     }
 
-    private bool LoadAssets()
+    private bool LoadAssets(INativeAllocator allocator)
     {
         var assetsDirectory = Path.Combine(
             AppContext.BaseDirectory, "Examples", nameof(E003_EventDrivenProgramming));
 
         var filePath = Path.Combine(assetsDirectory, "x.bmp");
-        using var filePathC = (CString)filePath;
+        var filePathC = allocator.AllocateCString(filePath);
         _surface = SDL_LoadBMP(filePathC);
         if (_surface == null)
         {

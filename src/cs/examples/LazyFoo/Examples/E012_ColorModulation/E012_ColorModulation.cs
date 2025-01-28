@@ -20,14 +20,14 @@ public sealed unsafe class E012_ColorModulation : ExampleLazyFoo
     {
     }
 
-    public override bool Initialize(IAllocator allocator)
+    public override bool Initialize(INativeAllocator allocator)
     {
         if (!base.Initialize(allocator))
         {
             return false;
         }
 
-        return LoadAssets();
+        return LoadAssets(allocator);
     }
 
     public override void Quit()
@@ -81,9 +81,9 @@ public sealed unsafe class E012_ColorModulation : ExampleLazyFoo
         return true;
     }
 
-    private bool LoadAssets()
+    private bool LoadAssets(INativeAllocator allocator)
     {
-        if (!_texture.LoadFromFile(Renderer, AssetsDirectory, "colors.png", Rgba8U.Cyan))
+        if (!_texture.LoadFromFile(allocator, Renderer, AssetsDirectory, "colors.png", Rgba8U.Cyan))
         {
             return false;
         }

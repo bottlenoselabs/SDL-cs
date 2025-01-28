@@ -17,14 +17,14 @@ public sealed unsafe class E002_ImageOnScreen : ExampleLazyFoo
     {
     }
 
-    public override bool Initialize(IAllocator allocator)
+    public override bool Initialize(INativeAllocator allocator)
     {
         if (!base.Initialize(allocator))
         {
             return false;
         }
 
-        if (!LoadAssets())
+        if (!LoadAssets(allocator))
         {
             return false;
         }
@@ -56,12 +56,12 @@ public sealed unsafe class E002_ImageOnScreen : ExampleLazyFoo
         return true;
     }
 
-    private bool LoadAssets()
+    private bool LoadAssets(INativeAllocator allocator)
     {
         var assetsDirectory = Path.Combine(AppContext.BaseDirectory, "Examples", nameof(E002_ImageOnScreen));
 
         var filePath = Path.Combine(assetsDirectory, "hello_world.bmp");
-        using var filePathC = (CString)filePath;
+        var filePathC = allocator.AllocateCString(filePath);
         _surface = SDL_LoadBMP(filePathC);
         if (_surface == null)
         {

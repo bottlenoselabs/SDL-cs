@@ -28,7 +28,7 @@ public abstract unsafe partial class ExampleGpu : ExampleBase
         AssetsDirectory = Path.Combine(AppContext.BaseDirectory, "Assets");
     }
 
-    public override bool Initialize(IAllocator allocator)
+    public override bool Initialize(INativeAllocator allocator)
     {
         Device = SDL_CreateGPUDevice(
             SDL_GPU_SHADERFORMAT_SPIRV | SDL_GPU_SHADERFORMAT_DXIL | SDL_GPU_SHADERFORMAT_MSL,
@@ -57,6 +57,7 @@ public abstract unsafe partial class ExampleGpu : ExampleBase
     }
 
     protected SDL_GPUShader* CreateShader(
+        INativeAllocator allocator,
         string fileName,
         uint samplerCount = 0,
         uint uniformBufferCount = 0,
@@ -110,7 +111,7 @@ public abstract unsafe partial class ExampleGpu : ExampleBase
         }
 
         ulong codeSize;
-        using var filePathC = (CString)filePath;
+        var filePathC = allocator.AllocateCString(filePath);
         var code = SDL_LoadFile(filePathC, &codeSize);
         if (code == null)
         {
@@ -122,7 +123,7 @@ public abstract unsafe partial class ExampleGpu : ExampleBase
 
         shaderInfo.code = (byte*)code;
         shaderInfo.code_size = codeSize;
-        shaderInfo.entrypoint = entryPoint;
+        shaderInfo.entrypoint = allocator.AllocateCString(entryPoint);
         shaderInfo.format = format;
         shaderInfo.stage = stage;
         shaderInfo.num_samplers = samplerCount;
@@ -135,12 +136,10 @@ public abstract unsafe partial class ExampleGpu : ExampleBase
         {
             Console.Error.WriteLine("Failed to create shader!");
             SDL_free(code);
-            shaderInfo._entrypoint.Dispose();
             return null;
         }
 
         SDL_free(code);
-        shaderInfo._entrypoint.Dispose();
         return shader;
     }
 
@@ -171,7 +170,7 @@ public abstract unsafe partial class ExampleGpu : ExampleBase
     }
 
     protected void FillGraphicsPipelineSwapchainColorTarget(
-        IAllocator allocator,
+        INativeAllocator allocator,
         ref SDL_GPUGraphicsPipelineTargetInfo targetInfo)
     {
         targetInfo.num_color_targets = 1;
@@ -183,7 +182,7 @@ public abstract unsafe partial class ExampleGpu : ExampleBase
     }
 
     protected void FillGraphicsPipelineVertexAttributes<TVertex>(
-        IAllocator allocator,
+        INativeAllocator allocator,
         ref SDL_GPUVertexInputState vertexInputState)
         where TVertex : unmanaged
     {
@@ -217,7 +216,7 @@ public abstract unsafe partial class ExampleGpu : ExampleBase
     }
 
     protected void FillGraphicsPipelineVertexBuffer<TVertex>(
-        IAllocator allocator,
+        INativeAllocator allocator,
         ref SDL_GPUVertexInputState vertexInputState)
         where TVertex : unmanaged
     {

@@ -15,10 +15,14 @@ public sealed unsafe class Texture : IDisposable
     public int Height { get; private set; }
 
     public bool LoadFromFile(
-        SDL_Renderer* renderer, string assetsDirectory, string fileName, Rgba8U? colorKey = null)
+        INativeAllocator allocator,
+        SDL_Renderer* renderer,
+        string assetsDirectory,
+        string fileName,
+        Rgba8U? colorKey = null)
     {
         var filePath = Path.Combine(assetsDirectory, fileName);
-        using var filePathC = (CString)filePath;
+        var filePathC = allocator.AllocateCString(filePath);
         var surface = IMG_Load(filePathC);
         if (surface == null)
         {

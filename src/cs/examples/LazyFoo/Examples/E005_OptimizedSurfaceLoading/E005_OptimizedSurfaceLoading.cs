@@ -18,14 +18,14 @@ public sealed unsafe class E005_OptimizedSurfaceLoading : ExampleLazyFoo
     {
     }
 
-    public override bool Initialize(IAllocator allocator)
+    public override bool Initialize(INativeAllocator allocator)
     {
         if (!base.Initialize(allocator))
         {
             return false;
         }
 
-        if (!LoadAssets())
+        if (!LoadAssets(allocator))
         {
             return false;
         }
@@ -69,16 +69,16 @@ public sealed unsafe class E005_OptimizedSurfaceLoading : ExampleLazyFoo
         return true;
     }
 
-    private bool LoadAssets()
+    private bool LoadAssets(INativeAllocator allocator)
     {
-        _surface = LoadSurface("stretch.bmp");
+        _surface = LoadSurface(allocator, "stretch.bmp");
         return _surface != null;
     }
 
-    private SDL_Surface* LoadSurface(string fileName)
+    private SDL_Surface* LoadSurface(INativeAllocator allocator, string fileName)
     {
         var filePath = Path.Combine(AssetsDirectory, fileName);
-        using var filePathC = (CString)filePath;
+        var filePathC = allocator.AllocateCString(filePath);
         var surface = SDL_LoadBMP(filePathC);
         if (surface == null)
         {
