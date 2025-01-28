@@ -153,6 +153,16 @@ public abstract unsafe partial class ExampleGpu : ExampleBase
         return vertexBuffer;
     }
 
+    protected SDL_GPUBuffer* CreateIndexBuffer<TVertex>(int elementCount)
+        where TVertex : unmanaged
+    {
+        var vertexBufferCreateInfo = default(SDL_GPUBufferCreateInfo);
+        vertexBufferCreateInfo.usage = SDL_GPU_BUFFERUSAGE_INDEX;
+        vertexBufferCreateInfo.size = (uint)(sizeof(TVertex) * elementCount);
+        var vertexBuffer = SDL_CreateGPUBuffer(Device, &vertexBufferCreateInfo);
+        return vertexBuffer;
+    }
+
     protected SDL_GPUTransferBuffer* CreateTransferBuffer<TElement>(int elementCount, Action<Span<TElement>> map)
         where TElement : unmanaged
     {

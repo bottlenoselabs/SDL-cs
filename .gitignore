@@ -6,6 +6,9 @@
 bin/
 obj/
 
+# C# user files
+*.DotSettings.user
+
 # C# packages
 /nupkg/
 
