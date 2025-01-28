@@ -64,7 +64,7 @@ public sealed unsafe class E007_InstancedIndex : ExampleGpu
             return false;
         }
 
-        _indexBuffer = CreateIndexBuffer<VertexPositionColor>(6);
+        _indexBuffer = CreateIndexBuffer<ushort>(6);
         if (_indexBuffer == null)
         {
             Console.Error.WriteLine("Failed to create index buffer!");
