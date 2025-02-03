@@ -1484,7 +1484,7 @@ namespace bottlenoselabs.Interop
     public static unsafe partial class SDL
     {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_GetCameraSupportedFormats", ExactSpelling = true)]
-        public static extern partial global::bottlenoselabs.Interop.SDL.SDL_CameraSpec** SDL_GetCameraSupportedFormats(global::bottlenoselabs.Interop.SDL.SDL_CameraID devid, int* count);
+        public static extern partial global::bottlenoselabs.Interop.SDL.SDL_CameraSpec** SDL_GetCameraSupportedFormats(global::bottlenoselabs.Interop.SDL.SDL_CameraID instance_id, int* count);
     }
 }
 namespace bottlenoselabs.Interop
@@ -6909,6 +6909,14 @@ namespace bottlenoselabs.Interop
     {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_SignalAsyncIOQueue", ExactSpelling = true)]
         public static extern partial void SDL_SignalAsyncIOQueue(global::bottlenoselabs.Interop.SDL.SDL_AsyncIOQueue* queue);
+    }
+}
+namespace bottlenoselabs.Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_SoftStretch", ExactSpelling = true)]
+        public static extern partial global::Interop.Runtime.CBool SDL_SoftStretch(global::bottlenoselabs.Interop.SDL.SDL_Surface* src, global::bottlenoselabs.Interop.SDL.SDL_Rect* srcrect, global::bottlenoselabs.Interop.SDL.SDL_Surface* dst, global::bottlenoselabs.Interop.SDL.SDL_Rect* dstrect, global::bottlenoselabs.Interop.SDL.SDL_ScaleMode scaleMode);
     }
 }
 namespace bottlenoselabs.Interop
