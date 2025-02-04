@@ -6915,14 +6915,6 @@ namespace bottlenoselabs.Interop
 {
     public static unsafe partial class SDL
     {
-        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_SoftStretch", ExactSpelling = true)]
-        public static extern partial global::Interop.Runtime.CBool SDL_SoftStretch(global::bottlenoselabs.Interop.SDL.SDL_Surface* src, global::bottlenoselabs.Interop.SDL.SDL_Rect* srcrect, global::bottlenoselabs.Interop.SDL.SDL_Surface* dst, global::bottlenoselabs.Interop.SDL.SDL_Rect* dstrect, global::bottlenoselabs.Interop.SDL.SDL_ScaleMode scaleMode);
-    }
-}
-namespace bottlenoselabs.Interop
-{
-    public static unsafe partial class SDL
-    {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_srand", ExactSpelling = true)]
         public static extern partial void SDL_srand(ulong seed);
     }
@@ -6997,6 +6989,14 @@ namespace bottlenoselabs.Interop
     {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_StorageReady", ExactSpelling = true)]
         public static extern partial global::Interop.Runtime.CBool SDL_StorageReady(global::bottlenoselabs.Interop.SDL.SDL_Storage* storage);
+    }
+}
+namespace bottlenoselabs.Interop
+{
+    public static unsafe partial class SDL
+    {
+        [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_StretchSurface", ExactSpelling = true)]
+        public static extern partial global::Interop.Runtime.CBool SDL_StretchSurface(global::bottlenoselabs.Interop.SDL.SDL_Surface* src, global::bottlenoselabs.Interop.SDL.SDL_Rect* srcrect, global::bottlenoselabs.Interop.SDL.SDL_Surface* dst, global::bottlenoselabs.Interop.SDL.SDL_Rect* dstrect, global::bottlenoselabs.Interop.SDL.SDL_ScaleMode scaleMode);
     }
 }
 namespace bottlenoselabs.Interop
