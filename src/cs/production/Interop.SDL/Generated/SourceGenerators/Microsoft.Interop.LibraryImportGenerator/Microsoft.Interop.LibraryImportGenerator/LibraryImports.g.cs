@@ -3620,7 +3620,7 @@ namespace bottlenoselabs.Interop
     public static unsafe partial class SDL
     {
         [global::System.Runtime.InteropServices.DllImportAttribute("SDL3", EntryPoint = "SDL_GetTrayEntries", ExactSpelling = true)]
-        public static extern partial global::bottlenoselabs.Interop.SDL.SDL_TrayEntry** SDL_GetTrayEntries(global::bottlenoselabs.Interop.SDL.SDL_TrayMenu* menu, int* size);
+        public static extern partial global::bottlenoselabs.Interop.SDL.SDL_TrayEntry** SDL_GetTrayEntries(global::bottlenoselabs.Interop.SDL.SDL_TrayMenu* menu, int* count);
     }
 }
 namespace bottlenoselabs.Interop
